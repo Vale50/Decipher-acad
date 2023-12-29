@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .draggable {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      border: 1px solid #ccc;
+      cursor: grab;
+    }
+
+    #divA { background-color: lightblue; }
+    #divB { background-color: lightblue; }
+    #divC { background-color: lightblue; }
+  </style>
+</head>
+<body>
+
+  <div id="divA" class="draggable" draggable="true" ondragstart="drag(event)">A</div>
+  <div id="divB" class="draggable" draggable="true" ondragstart="drag(event)">B</div>
+  <div id="divC" class="draggable droppable" ondragover="allowDrop(event)" ondrop="drop(event)">C</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      var draggedElement = document.getElementById(data);
+      var dropTarget = $(ev.target);
+
+      // Reset colors
+      $(".droppable").css("background-color", "lightblue");
+
+      // Change color based on the dragged element
+      if (dropTarget.hasClass("droppable")) {
+        if (data === "divA") {
+          dropTarget.css("background-color", "red");
+        } else if (data === "divB") {
+          dropTarget.css("background-color", "green");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
