@@ -6,7 +6,7 @@
   <style>
     body {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       height: 100vh;
       margin: 0;
@@ -21,7 +21,7 @@
     }
 
     #divA { background-color: lightblue; }
-    #divC {background-color: lightblue; }
+    #divC { background-color: lightblue; }
     #divB { background-color: lightblue; }
    
   </style>
@@ -30,8 +30,9 @@
 
   <div id="divA" class="draggable" draggable="true" ondragstart="drag(event)">A</div>
   <div id="divB" class="draggable" draggable="true" ondragstart="drag(event)">B</div>
-  <div id="divC" class="droppable" ondragover="allowDrop(event)" ondrop="drop(event)">C</div>
+  <div id="divC" class="draggable droppable" ondragover="allowDrop(event)" ondrop="drop(event)">C</div>
 
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
     function drag(ev) {
       ev.dataTransfer.setData("text", ev.target.id);
@@ -45,17 +46,17 @@
       ev.preventDefault();
       var data = ev.dataTransfer.getData("text");
       var draggedElement = document.getElementById(data);
-      var dropTarget = ev.target;
+      var dropTarget = $(ev.target);
 
       // Reset colors
-      document.getElementById('divC').style.backgroundColor = 'lightblue';
+      $(".droppable").css("background-color", "lightblue");
 
       // Change color based on the dragged element
-      if (dropTarget.classList.contains("droppable")) {
+      if (dropTarget.hasClass("droppable")) {
         if (data === "divA") {
-          dropTarget.style.backgroundColor = "red";
+          dropTarget.css("background-color", "red");
         } else if (data === "divB") {
-          dropTarget.style.backgroundColor = "green";
+          dropTarget.css("background-color", "green");
         }
       }
     }
