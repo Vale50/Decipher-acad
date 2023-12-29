@@ -29,7 +29,7 @@
 
   <div id="divA" class="draggable" draggable="true" ondragstart="drag(event)">A</div>
   <div id="divB" class="draggable" draggable="true" ondragstart="drag(event)">B</div>
-  <div id="divC" class="draggable droppable" ondragover="allowDrop(event)" ondrop="drop(event)">C</div>
+  <div id="divC" class="droppable" ondragover="allowDrop(event)" ondrop="drop(event)">C</div>
 
   <script>
     function drag(ev) {
@@ -47,9 +47,7 @@
       var dropTarget = ev.target;
 
       // Reset colors
-      document.querySelectorAll('.droppable').forEach(function(element) {
-        element.style.backgroundColor = 'lightblue';
-      });
+      document.getElementById('divC').style.backgroundColor = 'lightblue';
 
       // Change color based on the dragged element
       if (dropTarget.classList.contains("droppable")) {
