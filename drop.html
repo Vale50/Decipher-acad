@@ -31,7 +31,6 @@
   <div id="divB" class="draggable" draggable="true" ondragstart="drag(event)">B</div>
   <div id="divC" class="draggable droppable" ondragover="allowDrop(event)" ondrop="drop(event)">C</div>
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
     function drag(ev) {
       ev.dataTransfer.setData("text", ev.target.id);
@@ -45,17 +44,19 @@
       ev.preventDefault();
       var data = ev.dataTransfer.getData("text");
       var draggedElement = document.getElementById(data);
-      var dropTarget = $(ev.target);
+      var dropTarget = ev.target;
 
       // Reset colors
-      $(".droppable").css("background-color", "lightblue");
+      document.querySelectorAll('.droppable').forEach(function(element) {
+        element.style.backgroundColor = 'lightblue';
+      });
 
       // Change color based on the dragged element
-      if (dropTarget.hasClass("droppable")) {
+      if (dropTarget.classList.contains("droppable")) {
         if (data === "divA") {
-          dropTarget.css("background-color", "red");
+          dropTarget.style.backgroundColor = "red";
         } else if (data === "divB") {
-          dropTarget.css("background-color", "green");
+          dropTarget.style.backgroundColor = "green";
         }
       }
     }
