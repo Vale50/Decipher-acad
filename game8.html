@@ -27,11 +27,11 @@
     }
 
     .correct {
-      background-color: ; /* Light green for correct pairs */
+      background-color: e; /* Light green for correct pairs */
     }
 
     .wrong {
-      background-color: ; /* Light red for wrong pairs */
+      background-color: 8e; /* Light red for wrong pairs */
     }
 
     #score {
@@ -120,6 +120,7 @@
   }
 
   function startGame() {
+    timer = 60; // Reset the timer to its initial value
     const currentDivision = divisions[divisionIndex];
     generatePairs(currentDivision);
     updateScore();
