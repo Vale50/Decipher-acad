@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math Pairs Game</title>
+  <title>Addition Pairs Game</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
       text-align: center;
       margin: 50px;
+    }
+
+    #gameInfo {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     #gameContainer {
@@ -27,11 +33,11 @@
     }
 
     .correct {
-      background-color:; /* Light green for correct pairs */
+      background-color: #8eff8e; /* Light green for correct pairs */
     }
 
     .wrong {
-      background-color: ; /* Light red for wrong pairs */
+      background-color: #ff8e8e; /* Light red for wrong pairs */
     }
 
     #score {
@@ -45,28 +51,42 @@
       font-weight: bold;
       margin-top: 10px;
     }
+
+    #nextBtn,
+    #prevBtn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
+<div id="gameInfo"></div>
 <div id="gameContainer"></div>
 <div id="score">Score: 0</div>
-<div id="timer">Time left: 120s</div>
+<div id="timer">Time left: 60s</div>
+<button id="prevBtn" onclick="changeSum(-1)" disabled>Previous</button>
+<button id="nextBtn" onclick="changeSum(1)">Next</button>
 
 <script>
   let score = 0;
-  let timer = 10000;
+  let timer = 60;
   let gameInterval;
+  let sumIndex = 10; // Start with sum = 10
+  const maxSum = 20;
 
-  function generatePairs() {
+  function generatePairs(sum) {
     const gameContainer = document.getElementById('gameContainer');
     gameContainer.innerHTML = '';
 
     const pairs = [];
 
     for (let i = 1; i <= 10; i++) {
-      pairs.push({ value: `${i} + ${10 - i}`, isCorrect: true });
-      pairs.push({ value: `${i} + ${i + 1}`, isCorrect: false });
+      pairs.push({ value: `${i} + ${sum - i}`, isCorrect: true });
+      pairs.push({ value: `${i + 1} + ${sum - i - 1}`, isCorrect: false });
     }
 
     // Randomly shuffle pairs
@@ -107,14 +127,32 @@
   }
 
   function startGame() {
-    generatePairs();
+    timer = 60; // Reset the timer to its initial value
+    generatePairs(sumIndex);
     updateScore();
     updateTimer();
+
+    document.getElementById('gameInfo').textContent = `Choose the correct pair where the sum = ${sumIndex}`;
 
     gameInterval = setInterval(() => {
       timer--;
       updateTimer();
     }, 1000);
+  }
+
+  function changeSum(change) {
+    sumIndex += change;
+
+    if (sumIndex < 10) {
+      sumIndex = 10;
+    } else if (sumIndex > maxSum) {
+      sumIndex = maxSum;
+    }
+
+    document.getElementById('nextBtn').disabled = sumIndex === maxSum;
+    document.getElementById('prevBtn').disabled = sumIndex === 10;
+
+    startGame();
   }
 
   // Start the game when the page loads
