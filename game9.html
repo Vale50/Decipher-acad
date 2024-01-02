@@ -32,7 +32,7 @@
 
             let snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
             let direction = "right";
-            let food = generateFood();
+            let foodPair = generateFoodPair();
             let score = 0;
             let isGameOver = false;
 
@@ -40,7 +40,7 @@
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
                 drawSnake();
-                drawFood();
+                drawFoodPair();
 
                 if (!isGameOver) {
                     move();
@@ -62,9 +62,12 @@
                 });
             }
 
-            function drawFood() {
+            function drawFoodPair() {
                 ctx.fillStyle = "#FF0000";
-                ctx.fillRect(food.x, food.y, SNAKE_SIZE, SNAKE_SIZE);
+                ctx.fillRect(foodPair.even.x, foodPair.even.y, SNAKE_SIZE, SNAKE_SIZE);
+
+                ctx.fillStyle = "#0000FF";
+                ctx.fillRect(foodPair.odd.x, foodPair.odd.y, SNAKE_SIZE, SNAKE_SIZE);
             }
 
             function move() {
@@ -110,17 +113,44 @@
             function checkEating() {
                 const head = snake[0];
 
-                if (head.x === food.x && head.y === food.y) {
-                    snake.push({});
-                    food = generateFood();
-                    score += 1;
+                if (head.x === foodPair.even.x && head.y === foodPair.even.y) {
+                    handleFoodEaten("even");
+                } else if (head.x === foodPair.odd.x && head.y === foodPair.odd.y) {
+                    handleFoodEaten("odd");
                 }
             }
 
-            function generateFood() {
+            function handleFoodEaten(chosenType) {
+                const expectedType = isEven(foodPair.even.number) ? "even" : "odd";
+
+                if (chosenType === expectedType) {
+                    snake.push({});
+                    foodPair = generateFoodPair();
+                    score += 1;
+                } else {
+                    gameOver();
+                }
+            }
+
+            function generateFoodPair() {
+                const even = generateFood("even");
+                const odd = generateFood("odd");
+                return { even, odd };
+            }
+
+            function generateFood(type) {
                 const x = Math.floor(Math.random() * (canvas.width / GRID_SIZE)) * GRID_SIZE;
                 const y = Math.floor(Math.random() * (canvas.height / GRID_SIZE)) * GRID_SIZE;
-                return { x, y };
+                const number = generateRandomNumber();
+                return { x, y, number, type };
+            }
+
+            function generateRandomNumber() {
+                return Math.floor(Math.random() * 10) * 2; // Generate even numbers between 0 and 18
+            }
+
+            function isEven(num) {
+                return num % 2 === 0;
             }
 
             function drawScore() {
