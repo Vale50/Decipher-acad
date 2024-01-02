@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Skipping Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #sequence {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #answer {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #result {
+      font-size: 18px;
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sequence"></div>
+<input type="number" id="answer" placeholder="Enter your answer">
+<button onclick="checkAnswer()">Check Answer</button>
+<div id="result"></div>
+<div id="score">Score: 0</div>
+
+<script>
+  let score = 0;
+
+  function generateSequence() {
+    const length = Math.floor(Math.random() * 5) + 5; // Random sequence length between 5 and 9
+    const skipIndex = Math.floor(Math.random() * length);
+    let sequence = '';
+
+    for (let i = 1; i <= length; i++) {
+      if (i !== skipIndex + 1) {
+        sequence += i + ' ';
+      } else {
+        sequence += '_ ';
+      }
+    }
+
+    document.getElementById('sequence').textContent = sequence.trim();
+  }
+
+  function checkAnswer() {
+    const userAnswer = parseInt(document.getElementById('answer').value);
+    const sequenceParts = document.getElementById('sequence').textContent.split(' ');
+    const correctAnswer = sequenceParts.indexOf('_') + 1; // Find the position of the missing number
+
+    const resultElement = document.getElementById('result');
+    if (userAnswer === correctAnswer) {
+      resultElement.textContent = 'Correct!';
+      resultElement.style.color = 'green';
+      score++;
+    } else {
+      resultElement.textContent = `Incorrect. The correct answer is ${correctAnswer}. Try again!`;
+      resultElement.style.color = 'red';
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+    generateSequence();
+    document.getElementById('answer').value = '';
+  }
+
+  // Initial sequence generation
+  generateSequence();
+</script>
+
+</body>
+</html>
