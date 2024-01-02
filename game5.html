@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Pairs Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #gameContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pair {
+      width: 80px;
+      height: 40px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #timer {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="gameContainer"></div>
+<div id="score">Score: 0</div>
+<div id="timer">Time left: 60s</div>
+
+<script>
+  let score = 0;
+  let timer = 60;
+  let gameInterval;
+
+  function generatePairs() {
+    const gameContainer = document.getElementById('gameContainer');
+    gameContainer.innerHTML = '';
+
+    for (let i = 1; i <= 10; i++) {
+      const correctPair = document.createElement('div');
+      correctPair.classList.add('pair', 'correct');
+      correctPair.textContent = `${i} + ${10 - i}`;
+      correctPair.addEventListener('click', () => handlePairClick(true));
+      gameContainer.appendChild(correctPair);
+
+      const wrongPair = document.createElement('div');
+      wrongPair.classList.add('pair', 'wrong');
+      wrongPair.textContent = `${i} + ${i + 1}`;
+      wrongPair.addEventListener('click', () => handlePairClick(false));
+      gameContainer.appendChild(wrongPair);
+    }
+  }
+
+  function handlePairClick(isCorrect) {
+    if (isCorrect) {
+      score++;
+    } else {
+      score--;
+    }
+
+    updateScore();
+  }
+
+  function updateScore() {
+    document.getElementById('score').textContent = `Score: ${score}`;
+  }
+
+  function updateTimer() {
+    document.getElementById('timer').textContent = `Time left: ${timer}s`;
+
+    if (timer === 0) {
+      clearInterval(gameInterval);
+      alert(`Game Over! Your final score is ${score}`);
+    }
+  }
+
+  function startGame() {
+    generatePairs();
+    updateScore();
+    updateTimer();
+
+    gameInterval = setInterval(() => {
+      timer--;
+      updateTimer();
+    }, 1000);
+  }
+
+  // Start the game when the page loads
+  startGame();
+</script>
+
+</body>
+</html>
