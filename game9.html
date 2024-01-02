@@ -87,6 +87,9 @@
                 }
 
                 snake.unshift(head);
+
+                // Only keep one segment
+                snake = snake.slice(0, 1);
             }
 
             function checkCollision() {
@@ -120,7 +123,6 @@
                 const isTargetEven = isEven(targetNumber);
 
                 if ((isTargetEven && direction === "right") || (!isTargetEven && direction === "left")) {
-                    snake.push({});
                     targetNumber = generateRandomNumber();
                     score += 1;
                 } else {
