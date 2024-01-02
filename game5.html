@@ -62,19 +62,23 @@
     const gameContainer = document.getElementById('gameContainer');
     gameContainer.innerHTML = '';
 
-    for (let i = 1; i <= 10; i++) {
-      const correctPair = document.createElement('div');
-      correctPair.classList.add('pair', 'correct');
-      correctPair.textContent = `${i} + ${10 - i}`;
-      correctPair.addEventListener('click', () => handlePairClick(true, correctPair));
-      gameContainer.appendChild(correctPair);
+    const pairs = [];
 
-      const wrongPair = document.createElement('div');
-      wrongPair.classList.add('pair', 'wrong');
-      wrongPair.textContent = `${i} + ${i + 1}`;
-      wrongPair.addEventListener('click', () => handlePairClick(false, wrongPair));
-      gameContainer.appendChild(wrongPair);
+    for (let i = 1; i <= 10; i++) {
+      pairs.push({ value: `${i} + ${10 - i}`, isCorrect: true });
+      pairs.push({ value: `${i} + ${i + 1}`, isCorrect: false });
     }
+
+    // Randomly shuffle pairs
+    pairs.sort(() => Math.random() - 0.5);
+
+    pairs.forEach(pair => {
+      const pairElement = document.createElement('div');
+      pairElement.classList.add('pair', pair.isCorrect ? 'correct' : 'wrong');
+      pairElement.textContent = pair.value;
+      pairElement.addEventListener('click', () => handlePairClick(pair.isCorrect, pairElement));
+      gameContainer.appendChild(pairElement);
+    });
   }
 
   function handlePairClick(isCorrect, pairElement) {
