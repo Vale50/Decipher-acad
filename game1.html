@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #problem {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #answer {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #result {
+      font-size: 18px;
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="problem"></div>
+<input type="text" id="answer" placeholder="Enter your answer">
+<button onclick="checkAnswer()">Check Answer</button>
+<div id="result"></div>
+<div id="score">Score: 0</div>
+
+<script>
+  let score = 0;
+
+  function generateProblem() {
+    const operators = ['+', '-'];
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+    let num1, num2;
+
+    if (operator === '+') {
+      num1 = getRandomNumber();
+      num2 = getRandomNumber();
+    } else {
+      num1 = getRandomNumber();
+      num2 = getRandomNumber();
+      // Ensure num1 is greater than num2 for subtraction
+      if (num1 < num2) {
+        const temp = num1;
+        num1 = num2;
+        num2 = temp;
+      }
+    }
+
+    document.getElementById('problem').textContent = `${num1} ${operator} ${num2}`;
+  }
+
+  function getRandomNumber() {
+    const isDecimal = Math.random() < 0.5;
+    if (isDecimal) {
+      return parseFloat((Math.random() * 10).toFixed(2));
+    } else {
+      return Math.floor(Math.random() * 10);
+    }
+  }
+
+  function checkAnswer() {
+    const userAnswer = parseFloat(document.getElementById('answer').value);
+    const [num1, operator, num2] = document.getElementById('problem').textContent.split(' ');
+
+    let correctAnswer;
+    if (operator === '+') {
+      correctAnswer = parseFloat(num1) + parseFloat(num2);
+    } else {
+      correctAnswer = parseFloat(num1) - parseFloat(num2);
+    }
+
+    const resultElement = document.getElementById('result');
+    if (userAnswer === correctAnswer) {
+      resultElement.textContent = 'Correct!';
+      resultElement.style.color = 'green';
+      score++;
+    } else {
+      resultElement.textContent = 'Incorrect. Try again!';
+      resultElement.style.color = 'red';
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+    generateProblem();
+    document.getElementById('answer').value = '';
+  }
+
+  // Initial problem generation
+  generateProblem();
+</script>
+
+</body>
+</html>
