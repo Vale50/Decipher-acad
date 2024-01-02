@@ -89,7 +89,7 @@
       const randomNum2 = sum - randomNum1;
 
       const correctPair = `${randomNum1} + ${randomNum2}`;
-      const wrongPair = `${randomNum1 + Math.floor(Math.random() * 9) + 1} + ${randomNum2 - Math.floor(Math.random() * 9) - 1}`;
+      const wrongPair = `${randomNum1 + Math.floor(Math.random() * (sum - randomNum1)) + 1} + ${randomNum2 - Math.floor(Math.random() * (sum - randomNum1)) - 1}`;
 
       pairs.push({ value: correctPair, isCorrect: true });
       pairs.push({ value: wrongPair, isCorrect: false });
@@ -118,6 +118,13 @@
     }
 
     updateScore();
+
+    const remainingCorrectPairs = document.querySelectorAll('.pair.correct:not(.clicked)').length;
+
+    if (remainingCorrectPairs === 0) {
+      clearInterval(gameInterval);
+      alert(`Game Over! Your final score is ${score}`);
+    }
   }
 
   function updateScore() {
