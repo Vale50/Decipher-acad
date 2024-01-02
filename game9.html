@@ -28,11 +28,12 @@
 
             const GRID_SIZE = 20;
             const SNAKE_SIZE = GRID_SIZE;
+            const BALL_SIZE = GRID_SIZE;
             const SPEED = 200;
 
             let snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
             let direction = "right";
-            let targetNumber = generateRandomNumber();
+            let balls = generateBalls();
             let score = 0;
             let isGameOver = false;
 
@@ -40,7 +41,7 @@
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
                 drawSnake();
-                drawNumber();
+                drawBalls();
 
                 if (!isGameOver) {
                     move();
@@ -62,10 +63,17 @@
                 });
             }
 
-            function drawNumber() {
-                ctx.fillStyle = isEven(targetNumber) ? "#0000FF" : "#FF0000";
-                ctx.font = "20px Arial";
-                ctx.fillText(targetNumber, canvas.width / 2, canvas.height / 2);
+            function drawBalls() {
+                balls.forEach(ball => {
+                    ctx.fillStyle = ball.color;
+                    ctx.beginPath();
+                    ctx.arc(ball.x + BALL_SIZE / 2, ball.y + BALL_SIZE / 2, BALL_SIZE / 2, 0, 2 * Math.PI);
+                    ctx.fill();
+                    ctx.closePath();
+                    ctx.fillStyle = "#000";
+                    ctx.font = "12px Arial";
+                    ctx.fillText(ball.number.toString(), ball.x + BALL_SIZE / 2 - 5, ball.y + BALL_SIZE / 2 + 5);
+                });
             }
 
             function move() {
@@ -114,20 +122,43 @@
             function checkEating() {
                 const head = snake[0];
 
-                if (head.x === canvas.width / 2 && head.y === canvas.height / 2) {
-                    handleEating();
-                }
+                balls.forEach((ball, index) => {
+                    if (
+                        head.x < ball.x + BALL_SIZE &&
+                        head.x + SNAKE_SIZE > ball.x &&
+                        head.y < ball.y + BALL_SIZE &&
+                        head.y + SNAKE_SIZE > ball.y
+                    ) {
+                        handleEating(index);
+                    }
+                });
             }
 
-            function handleEating() {
-                const isTargetEven = isEven(targetNumber);
+            function handleEating(ballIndex) {
+                const isTargetEven = isEven(balls[ballIndex].number);
 
                 if ((isTargetEven && direction === "right") || (!isTargetEven && direction === "left")) {
-                    targetNumber = generateRandomNumber();
+                    snake.push({});
+                    balls.splice(ballIndex, 1);
+                    balls.push(generateBall());
                     score += 1;
                 } else {
                     gameOver();
                 }
+            }
+
+            function generateBalls() {
+                const evenBall = generateBall("even");
+                const oddBall = generateBall("odd");
+                return [evenBall, oddBall];
+            }
+
+            function generateBall(type) {
+                const x = Math.floor(Math.random() * (canvas.width / GRID_SIZE)) * GRID_SIZE;
+                const y = Math.floor(Math.random() * (canvas.height / GRID_SIZE)) * GRID_SIZE;
+                const number = generateRandomNumber();
+                const color = isEven(number) ? "#0000FF" : "#FF0000";
+                return { x, y, number, color };
             }
 
             function generateRandomNumber() {
