@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Numbers</title>
+  <style>
+    .container {
+      perspective: 800px;
+      width: 300px;
+      height: 200px;
+      margin: 50px auto;
+      position: relative;
+      border: 1px solid #ccc;
+    }
+
+    .numbers {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+
+    .number {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 128, 255, 0.8);
+      border: 2px solid #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      opacity: 1;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="numbers" id="numberContainer"></div>
+  <button onclick="showNumbers()">Show Numbers</button>
+</div>
+
+<script>
+  function generateRandomNumbers() {
+    const numbersContainer = document.getElementById('numberContainer');
+    numbersContainer.innerHTML = '';
+
+    for (let i = 0; i < 10; i++) {
+      const randomNumber = Math.floor(Math.random() * 100);
+      const numberElement = document.createElement('div');
+      numberElement.className = 'number';
+      numberElement.textContent = randomNumber;
+      numbersContainer.appendChild(numberElement);
+    }
+  }
+
+  function showNumbers() {
+    generateRandomNumbers();
+
+    setTimeout(() => {
+      const numberElements = document.querySelectorAll('.number');
+      numberElements.forEach((element) => {
+        element.style.opacity = 0;
+      });
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
