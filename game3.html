@@ -11,6 +11,10 @@
       margin: 50px;
     }
 
+    #gameContainer {
+      position: relative;
+    }
+
     #sequence {
       font-size: 24px;
       margin-bottom: 20px;
@@ -37,18 +41,38 @@
       font-size: 16px;
       cursor: pointer;
     }
+
+    /* Celebration animation */
+    .celebration {
+      animation: celebrate 0.8s ease-out;
+    }
+
+    @keyframes celebrate {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 <body>
 
-<div id="sequence"></div>
-<input type="number" id="answer" placeholder="Enter your answer">
-<button onclick="checkAnswer()">Check Answer</button>
-<div id="result"></div>
-<div id="score">Score: 0</div>
+<div id="gameContainer">
+  <div id="sequence"></div>
+  <input type="number" id="answer" placeholder="Enter your answer">
+  <button onclick="checkAnswer()">Check Answer</button>
+  <div id="result"></div>
+  <div id="score">Score: 0</div>
+</div>
 
 <script>
   let score = 0;
+  let correctStreak = 0;
   let isEvenSequence;
 
   function generateSequence() {
@@ -74,13 +98,25 @@
     const correctAnswer = isEvenSequence ? 2 * (sequenceParts.indexOf('_') + 1) : 2 * (sequenceParts.indexOf('_') + 1) - 1;
 
     const resultElement = document.getElementById('result');
+    const gameContainer = document.getElementById('gameContainer');
+
     if (userAnswer === correctAnswer) {
       resultElement.textContent = 'Correct!';
       resultElement.style.color = 'green';
       score++;
+      correctStreak++;
+
+      if (correctStreak === 3) {
+        gameContainer.classList.add('celebration');
+        setTimeout(() => {
+          gameContainer.classList.remove('celebration');
+        }, 800);
+        correctStreak = 0; // Reset streak after celebration
+      }
     } else {
       resultElement.textContent = `Incorrect. The correct answer is ${correctAnswer}. Try again!`;
       resultElement.style.color = 'red';
+      correctStreak = 0; // Reset streak after incorrect answer
     }
 
     document.getElementById('score').textContent = `Score: ${score}`;
