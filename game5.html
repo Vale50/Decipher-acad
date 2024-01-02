@@ -37,7 +37,7 @@
     }
 
     .wrong {
-      background-color: ; /* Light red for wrong pairs */
+      background-color:; /* Light red for wrong pairs */
     }
 
     #score {
@@ -86,7 +86,7 @@
 
     for (let i = 1; i <= 10; i++) {
       pairs.push({ value: `${i} + ${sum - i}`, isCorrect: true });
-      pairs.push({ value: `${i + Math.floor(Math.random() * 9) + 1} + ${sum - i - Math.floor(Math.random() * 9) - 1}`, isCorrect: false });
+      pairs.push({ value: `${i + Math.floor(Math.random() * (sum - i))} + ${sum - i - Math.floor(Math.random() * (sum - i))}`, isCorrect: false });
     }
 
     // Randomly shuffle pairs
