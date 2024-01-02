@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Division Pairs Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #gameContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pair {
+      width: 80px;
+      height: 40px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .correct {
+      background-color: ; /* Light green for correct pairs */
+    }
+
+    .wrong {
+      background-color: ; /* Light red for wrong pairs */
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #timer {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #nextBtn,
+    #prevBtn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="gameContainer"></div>
+<div id="score">Score: 0</div>
+<div id="timer">Time left: 60s</div>
+<button id="prevBtn" onclick="changeDivision(-1)" disabled>Previous</button>
+<button id="nextBtn" onclick="changeDivision(1)">Next</button>
+
+<script>
+  let score = 0;
+  let timer = 60;
+  let gameInterval;
+  let divisionIndex = 0;
+  const divisions = [2, 3, 4, 5];
+
+  function generatePairs(division) {
+    const gameContainer = document.getElementById('gameContainer');
+    gameContainer.innerHTML = '';
+
+    const pairs = [];
+
+    for (let i = 1; i <= 10; i++) {
+      pairs.push({ value: `${i * division} ÷ ${i}`, isCorrect: true });
+      pairs.push({ value: `${i * division} ÷ ${i + 1}`, isCorrect: false });
+    }
+
+    // Randomly shuffle pairs
+    pairs.sort(() => Math.random() - 0.5);
+
+    pairs.forEach(pair => {
+      const pairElement = document.createElement('div');
+      pairElement.classList.add('pair', pair.isCorrect ? 'correct' : 'wrong');
+      pairElement.textContent = pair.value;
+      pairElement.addEventListener('click', () => handlePairClick(pair.isCorrect, pairElement));
+      gameContainer.appendChild(pairElement);
+    });
+  }
+
+  function handlePairClick(isCorrect, pairElement) {
+    if (isCorrect) {
+      score++;
+      pairElement.style.backgroundColor = '#4CAF50'; /* Dark green for correct pair clicked */
+    } else {
+      score--;
+      pairElement.style.backgroundColor = '#f44336'; /* Dark red for wrong pair clicked */
+    }
+
+    updateScore();
+  }
+
+  function updateScore() {
+    document.getElementById('score').textContent = `Score: ${score}`;
+  }
+
+  function updateTimer() {
+    document.getElementById('timer').textContent = `Time left: ${timer}s`;
+
+    if (timer === 0) {
+      clearInterval(gameInterval);
+      alert(`Game Over! Your final score is ${score}`);
+    }
+  }
+
+  function startGame() {
+    const currentDivision = divisions[divisionIndex];
+    generatePairs(currentDivision);
+    updateScore();
+    updateTimer();
+
+    gameInterval = setInterval(() => {
+      timer--;
+      updateTimer();
+    }, 1000);
+  }
+
+  function changeDivision(change) {
+    divisionIndex += change;
+
+    if (divisionIndex < 0) {
+      divisionIndex = 0;
+    } else if (divisionIndex >= divisions.length) {
+      divisionIndex = divisions.length - 1;
+    }
+
+    document.getElementById('nextBtn').disabled = divisionIndex === divisions.length - 1;
+    document.getElementById('prevBtn').disabled = divisionIndex === 0;
+
+    startGame();
+  }
+
+  // Start the game when the page loads
+  startGame();
+</script>
+
+</body>
+</html>
