@@ -39,12 +39,8 @@
       opacity: 1;
     }
 
-    button {
-      display: block;
-      margin: 20px auto;
-      padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
+    .hide {
+      opacity: 0;
     }
   </style>
 </head>
@@ -52,7 +48,6 @@
 
 <div class="container">
   <div class="numbers" id="numberContainer"></div>
-  <button onclick="showNumbers()">Show Numbers</button>
 </div>
 
 <script>
@@ -67,18 +62,17 @@
       numberElement.textContent = randomNumber;
       numbersContainer.appendChild(numberElement);
     }
-  }
-
-  function showNumbers() {
-    generateRandomNumbers();
 
     setTimeout(() => {
       const numberElements = document.querySelectorAll('.number');
       numberElements.forEach((element) => {
-        element.style.opacity = 0;
+        element.classList.add('hide');
       });
     }, 5000);
   }
+
+  // Initial generation
+  generateRandomNumbers();
 </script>
 
 </body>
