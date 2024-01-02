@@ -26,6 +26,14 @@
       cursor: pointer;
     }
 
+    .correct {
+      background-color: #8eff8e; /* Light green for correct pairs */
+    }
+
+    .wrong {
+      background-color: #ff8e8e; /* Light red for wrong pairs */
+    }
+
     #score {
       font-size: 20px;
       font-weight: bold;
@@ -58,22 +66,24 @@
       const correctPair = document.createElement('div');
       correctPair.classList.add('pair', 'correct');
       correctPair.textContent = `${i} + ${10 - i}`;
-      correctPair.addEventListener('click', () => handlePairClick(true));
+      correctPair.addEventListener('click', () => handlePairClick(true, correctPair));
       gameContainer.appendChild(correctPair);
 
       const wrongPair = document.createElement('div');
       wrongPair.classList.add('pair', 'wrong');
       wrongPair.textContent = `${i} + ${i + 1}`;
-      wrongPair.addEventListener('click', () => handlePairClick(false));
+      wrongPair.addEventListener('click', () => handlePairClick(false, wrongPair));
       gameContainer.appendChild(wrongPair);
     }
   }
 
-  function handlePairClick(isCorrect) {
+  function handlePairClick(isCorrect, pairElement) {
     if (isCorrect) {
       score++;
+      pairElement.style.backgroundColor = '#4CAF50'; /* Dark green for correct pair clicked */
     } else {
       score--;
+      pairElement.style.backgroundColor = '#f44336'; /* Dark red for wrong pair clicked */
     }
 
     updateScore();
