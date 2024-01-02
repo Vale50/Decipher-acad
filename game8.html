@@ -11,6 +11,12 @@
       margin: 50px;
     }
 
+    #gameInfo {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
     #gameContainer {
       display: flex;
       flex-wrap: wrap;
@@ -27,11 +33,11 @@
     }
 
     .correct {
-      background-color: e; /* Light green for correct pairs */
+      background-color: ; /* Light green for correct pairs */
     }
 
     .wrong {
-      background-color: 8e; /* Light red for wrong pairs */
+      background-color: ; /* Light red for wrong pairs */
     }
 
     #score {
@@ -58,6 +64,7 @@
 </head>
 <body>
 
+<div id="gameInfo"></div>
 <div id="gameContainer"></div>
 <div id="score">Score: 0</div>
 <div id="timer">Time left: 60s</div>
@@ -125,6 +132,8 @@
     generatePairs(currentDivision);
     updateScore();
     updateTimer();
+
+    document.getElementById('gameInfo').textContent = `Choose the correct pair where the result = ${currentDivision}`;
 
     gameInterval = setInterval(() => {
       timer--;
