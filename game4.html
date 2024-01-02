@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firework Celebration</title>
+  <title>Advanced Number Skipping Game</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -104,7 +104,8 @@
 
   function generateSequence() {
     const length = Math.floor(Math.random() * 5) + 5; // Random sequence length between 5 and 9
-    const skipIndices = Array.from({ length: 3 }, () => Math.floor(Math.random() * length));
+    const allIndices = Array.from({ length }, (_, index) => index);
+    const skipIndices = getRandomElements(allIndices, 3);
     isEvenSequence = Math.random() < 0.5; // Randomly determine if the sequence is even or odd
     let sequence = '';
 
@@ -119,6 +120,22 @@
     }
 
     document.getElementById('sequence').textContent = sequence.trim();
+  }
+
+  function getRandomElements(arr, num) {
+    const shuffled = arr.slice(0);
+    let i = arr.length;
+    let temp;
+    let index;
+
+    while (i--) {
+      index = Math.floor((i + 1) * Math.random());
+      temp = shuffled[index];
+      shuffled[index] = shuffled[i];
+      shuffled[i] = temp;
+    }
+
+    return shuffled.slice(0, num);
   }
 
   function checkAnswers() {
@@ -137,7 +154,7 @@
       score++;
       correctStreak++;
 
-      if (correctStreak === 2) {
+      if (correctStreak === 3) {
         gameContainer.classList.add('celebration');
         setTimeout(() => {
           gameContainer.classList.remove('celebration');
