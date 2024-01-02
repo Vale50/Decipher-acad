@@ -7,8 +7,8 @@
   <style>
     .container {
       perspective: 800px;
-      width: 300px;
-      height: 200px;
+      width: 500px;
+      height: 100px;
       margin: 50px auto;
       position: relative;
       border: 1px solid #ccc;
@@ -60,12 +60,11 @@
 </head>
 <body>
 
+<div class="countdown" id="countdown">5</div>
 <div class="container">
   <div class="numbers" id="numberContainer"></div>
-  <div class="countdown" id="countdown">5</div>
-  <button onclick="showNumbers()">Show Numbers</button>
 </div>
-
+<button onclick="showNumbers()">Show Numbers</button>
 <script>
   let storedNumbers = [];
 
