@@ -33,11 +33,11 @@
     }
 
     .correct {
-      background-color: ; /* Light green for correct pairs */
+      background-color: #8eff8e; /* Light green for correct pairs */
     }
 
     .wrong {
-      background-color: ; /* Light red for wrong pairs */
+      background-color: #ff8e8e; /* Light red for wrong pairs */
     }
 
     #score {
@@ -86,7 +86,7 @@
 
     for (let i = 1; i <= 10; i++) {
       pairs.push({ value: `${i} + ${sum - i}`, isCorrect: true });
-      pairs.push({ value: `${i + 1} + ${sum - i - 1}`, isCorrect: false });
+      pairs.push({ value: `${i - 1} + ${sum - i + 1}`, isCorrect: false });
     }
 
     // Randomly shuffle pairs
