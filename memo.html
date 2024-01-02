@@ -42,12 +42,19 @@
     .hide {
       opacity: 0;
     }
+
+    .countdown {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
   <div class="numbers" id="numberContainer"></div>
+  <div class="countdown" id="countdown">5</div>
 </div>
 
 <script>
@@ -63,12 +70,26 @@
       numbersContainer.appendChild(numberElement);
     }
 
-    setTimeout(() => {
-      const numberElements = document.querySelectorAll('.number');
-      numberElements.forEach((element) => {
-        element.classList.add('hide');
-      });
-    }, 5000);
+    let countdown = 5;
+    const countdownElement = document.getElementById('countdown');
+
+    const countdownInterval = setInterval(() => {
+      countdownElement.textContent = countdown;
+      countdown--;
+
+      if (countdown < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.style.display = 'none';
+        hideNumbers();
+      }
+    }, 1000);
+  }
+
+  function hideNumbers() {
+    const numberElements = document.querySelectorAll('.number');
+    numberElements.forEach((element) => {
+      element.classList.add('hide');
+    });
   }
 
   // Initial generation
