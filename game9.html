@@ -140,9 +140,9 @@
             }
 
             function handleEating(ballIndex) {
-                const isTargetEven = isEven(balls[ballIndex].number);
+                const isTargetOdd = isOdd(balls[ballIndex].number);
 
-                if ((isTargetEven && direction === "right") || (!isTargetEven && direction === "left")) {
+                if ((isTargetOdd && direction === "right") || (!isTargetOdd && direction === "left")) {
                     balls = generateBalls();
                     score += 1;
                 } else {
@@ -160,7 +160,7 @@
                 const x = Math.floor(Math.random() * (canvas.width / GRID_SIZE)) * GRID_SIZE;
                 const y = Math.floor(Math.random() * (canvas.height / GRID_SIZE)) * GRID_SIZE;
                 const number = type === "even" ? generateRandomEvenNumber() : generateRandomOddNumber();
-                const color = isEven(number) ? "#0000FF" : "#FF0000";
+                const color = isOdd(number) ? "#FF0000" : "#0000FF";
                 return { x, y, number, color };
             }
 
@@ -172,8 +172,8 @@
                 return Math.floor(Math.random() * 10) * 2 + 1; // Generate odd numbers between 1 and 19
             }
 
-            function isEven(num) {
-                return num % 2 === 0;
+            function isOdd(num) {
+                return num % 2 !== 0;
             }
 
             function drawScore() {
