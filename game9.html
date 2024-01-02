@@ -96,8 +96,13 @@
 
                 snake.unshift(head);
 
-                // Only keep one segment
-                snake = snake.slice(0, 1);
+                // Increase snake length as score increases
+                while (snake.length <= score) {
+                    snake.push({});
+                }
+
+                // Remove the tail if it exceeds the score
+                snake = snake.slice(0, score + 1);
             }
 
             function checkCollision() {
@@ -138,9 +143,7 @@
                 const isTargetEven = isEven(balls[ballIndex].number);
 
                 if ((isTargetEven && direction === "right") || (!isTargetEven && direction === "left")) {
-                    snake.push({});
-                    balls.splice(ballIndex, 1);
-                    balls.push(generateBall());
+                    balls = generateBalls();
                     score += 1;
                 } else {
                     gameOver();
@@ -156,13 +159,17 @@
             function generateBall(type) {
                 const x = Math.floor(Math.random() * (canvas.width / GRID_SIZE)) * GRID_SIZE;
                 const y = Math.floor(Math.random() * (canvas.height / GRID_SIZE)) * GRID_SIZE;
-                const number = generateRandomNumber();
+                const number = type === "even" ? generateRandomEvenNumber() : generateRandomOddNumber();
                 const color = isEven(number) ? "#0000FF" : "#FF0000";
                 return { x, y, number, color };
             }
 
-            function generateRandomNumber() {
+            function generateRandomEvenNumber() {
                 return Math.floor(Math.random() * 10) * 2; // Generate even numbers between 0 and 18
+            }
+
+            function generateRandomOddNumber() {
+                return Math.floor(Math.random() * 10) * 2 + 1; // Generate odd numbers between 1 and 19
             }
 
             function isEven(num) {
