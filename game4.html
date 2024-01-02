@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Number Skipping Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #gameContainer {
+      position: relative;
+    }
+
+    .inputField {
+      width: 30px;
+      font-size: 18px;
+      margin: 0 5px;
+    }
+
+    #sequence {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #result {
+      font-size: 18px;
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    #score {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Celebration animation */
+    .celebration {
+      animation: celebrate 0.8s ease-out;
+    }
+
+    @keyframes celebrate {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="gameContainer">
+  <div id="sequence"></div>
+  <input type="number" class="inputField" id="answer1" placeholder="1">
+  <span id="separator">,</span>
+  <input type="number" class="inputField" id="answer2" placeholder="2">
+  <span id="separator">,</span>
+  <input type="number" class="inputField" id="answer3" placeholder="3">
+  <button onclick="checkAnswers()">Check Answers</button>
+  <div id="result"></div>
+  <div id="score">Score: 0</div>
+</div>
+
+<script>
+  let score = 0;
+  let correctStreak = 0;
+  let isEvenSequence;
+  let missingNumbers = [];
+
+  function generateSequence() {
+    const length = Math.floor(Math.random() * 5) + 5; // Random sequence length between 5 and 9
+    const skipIndices = Array.from({ length: 3 }, () => Math.floor(Math.random() * length));
+    isEvenSequence = Math.random() < 0.5; // Randomly determine if the sequence is even or odd
+    let sequence = '';
+
+    missingNumbers = [];
+    for (let i = 1; i <= length; i++) {
+      if (skipIndices.includes(i - 1)) {
+        sequence += '_ ';
+        missingNumbers.push(isEvenSequence ? 2 * i : 2 * i - 1);
+      } else {
+        sequence += (isEvenSequence ? 2 * i : 2 * i - 1) + ' ';
+      }
+    }
+
+    document.getElementById('sequence').textContent = sequence.trim();
+  }
+
+  function checkAnswers() {
+    const answer1 = parseInt(document.getElementById('answer1').value);
+    const answer2 = parseInt(document.getElementById('answer2').value);
+    const answer3 = parseInt(document.getElementById('answer3').value);
+
+    const resultElement = document.getElementById('result');
+    const gameContainer = document.getElementById('gameContainer');
+
+    const correctAnswers = missingNumbers[0] && missingNumbers[1] && missingNumbers[2];
+
+    if (answer1 === missingNumbers[0] && answer2 === missingNumbers[1] && answer3 === missingNumbers[2]) {
+      resultElement.textContent = 'Correct!';
+      resultElement.style.color = 'green';
+      score++;
+      correctStreak++;
+
+      if (correctStreak === 3) {
+        gameContainer.classList.add('celebration');
+        setTimeout(() => {
+          gameContainer.classList.remove('celebration');
+        }, 800);
+        correctStreak = 0; // Reset streak after celebration
+      }
+    } else {
+      resultElement.textContent = `Incorrect. The correct answers are ${correctAnswers}. Try again!`;
+      resultElement.style.color = 'red';
+      correctStreak = 0; // Reset streak after incorrect answer
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+    generateSequence();
+    document.getElementById('answer1').value = '';
+    document.getElementById('answer2').value = '';
+    document.getElementById('answer3').value = '';
+  }
+
+  // Initial sequence generation
+  generateSequence();
+</script>
+
+</body>
+</html>
