@@ -7,8 +7,8 @@
   <style>
     .container {
       perspective: 800px;
-      width: 500px;
-      height: 100px;
+      width: 300px;
+      height: 200px;
       margin: 50px auto;
       position: relative;
       border: 1px solid #ccc;
@@ -48,14 +48,22 @@
       font-weight: bold;
       text-align: center;
     }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-    <div class="countdown" id="countdown">5</div>
 <div class="container">
   <div class="numbers" id="numberContainer"></div>
-  
+  <div class="countdown" id="countdown">5</div>
+  <button onclick="showNumbers()">Show Numbers</button>
 </div>
 
 <script>
@@ -64,7 +72,7 @@
     numbersContainer.innerHTML = '';
 
     for (let i = 0; i < 10; i++) {
-      const randomNumber = Math.floor(Math.random() * 10);
+      const randomNumber = Math.floor(Math.random() * 10); // Generate random numbers between 0 and 9
       const numberElement = document.createElement('div');
       numberElement.className = 'number';
       numberElement.textContent = randomNumber;
@@ -91,6 +99,21 @@
     numberElements.forEach((element) => {
       element.classList.add('hide');
     });
+  }
+
+  function showNumbers() {
+    const numberElements = document.querySelectorAll('.number');
+    numberElements.forEach((element) => {
+      element.classList.remove('hide');
+    });
+
+    // Reset countdown
+    const countdownElement = document.getElementById('countdown');
+    countdownElement.textContent = '5';
+    countdownElement.style.display = 'block';
+
+    // Restart countdown
+    generateRandomNumbers();
   }
 
   // Initial generation
