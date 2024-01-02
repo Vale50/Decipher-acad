@@ -33,7 +33,7 @@
     }
 
     .correct {
-      background-color:; /* Light green for correct pairs */
+      background-color: ; /* Light green for correct pairs */
     }
 
     .wrong {
@@ -104,10 +104,10 @@
   function handlePairClick(isCorrect, pairElement) {
     if (isCorrect) {
       score++;
-      pairElement.style.backgroundColor = '#4CAF50'; /* Dark green for correct pair clicked */
+      pairElement.style.backgroundColor = '#8eff8e'; /* Light green for correct pair clicked */
     } else {
       score--;
-      pairElement.style.backgroundColor = '#f44336'; /* Dark red for wrong pair clicked */
+      pairElement.style.backgroundColor = '#ff8e8e'; /* Light red for wrong pair clicked */
     }
 
     updateScore();
