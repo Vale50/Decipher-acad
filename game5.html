@@ -140,37 +140,22 @@
     }
   }
 
-  function startGame() {
-    timer = 60; // Reset the timer to its initial value
-    generatePairs(sumIndex);
-    updateScore();
-    updateTimer();
-
-    document.getElementById('gameInfo').textContent = `Choose the correct pair where the sum = ${sumIndex}`;
-
-    gameInterval = setInterval(() => {
-      timer--;
-      updateTimer();
-    }, 1000);
-  }
-
   function changeSum(change) {
-    sumIndex += change;
+  clearInterval(gameInterval); // Clear the existing interval
+  sumIndex += change;
 
-    if (sumIndex < 10) {
-      sumIndex = 10;
-    } else if (sumIndex > maxSum) {
-      sumIndex = maxSum;
-    }
-
-    document.getElementById('nextBtn').disabled = sumIndex === maxSum;
-    document.getElementById('prevBtn').disabled = sumIndex === 10;
-
-    startGame();
+  if (sumIndex < 10) {
+    sumIndex = 10;
+  } else if (sumIndex > maxSum) {
+    sumIndex = maxSum;
   }
 
-  // Start the game when the page loads
-  startGame();
+  document.getElementById('nextBtn').disabled = sumIndex === maxSum;
+  document.getElementById('prevBtn').disabled = sumIndex === 10;
+
+  startGame(); // Restart the game with the new sumIndex
+}
+
 </script>
 
 </body>
