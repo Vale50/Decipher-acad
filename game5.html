@@ -33,7 +33,7 @@
     }
 
     .correct {
-      background-color: ; /* Light green for correct pairs */
+      background-color:; /* Light green for correct pairs */
     }
 
     .wrong {
@@ -84,12 +84,18 @@
 
     const pairs = [];
 
-    for (let i = 1; i <= 10; i++) {
-      pairs.push({ value: `${i} + ${sum - i}`, isCorrect: true });
-      pairs.push({ value: `${i + Math.floor(Math.random() * (sum - i))} + ${sum - i - Math.floor(Math.random() * (sum - i))}`, isCorrect: false });
+    while (pairs.length < 20) {
+      const randomNum1 = Math.floor(Math.random() * 10) + 1;
+      const randomNum2 = sum - randomNum1;
+
+      const correctPair = `${randomNum1} + ${randomNum2}`;
+      const wrongPair = `${randomNum1 + Math.floor(Math.random() * 9) + 1} + ${randomNum2 - Math.floor(Math.random() * 9) - 1}`;
+
+      pairs.push({ value: correctPair, isCorrect: true });
+      pairs.push({ value: wrongPair, isCorrect: false });
     }
 
-    // Randomly shuffle pairs
+    // Shuffle the pairs
     pairs.sort(() => Math.random() - 0.5);
 
     pairs.forEach(pair => {
@@ -102,10 +108,11 @@
   }
 
   function handlePairClick(isCorrect, pairElement) {
-    if (isCorrect) {
+    if (isCorrect && !pairElement.classList.contains('clicked')) {
       score++;
       pairElement.style.backgroundColor = '#8eff8e'; /* Light green for correct pair clicked */
-    } else {
+      pairElement.classList.add('clicked');
+    } else if (!isCorrect) {
       score--;
       pairElement.style.backgroundColor = '#ff8e8e'; /* Light red for wrong pair clicked */
     }
