@@ -71,8 +71,9 @@
                 optionsContainer.innerHTML = "";
 
                 const correctAnswer = result.toString();
-                const shuffledOptions = shuffleArray([correctAnswer, (result - 1).toString(), (result + 1).toString(), (result + 2).toString()]);
-                
+                const offsetOptions = [-2, -1, 1, 2];
+                const shuffledOptions = shuffleArray(offsetOptions.map(offset => (result + offset).toString()));
+
                 shuffledOptions.forEach(option => {
                     const optionElement = document.createElement("div");
                     optionElement.className = "option";
