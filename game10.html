@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .game-container {
+            text-align: center;
+        }
+
+        #equation {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .option {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #333;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .correct {
+            background-color: #00ff00;
+        }
+
+        .wrong {
+            background-color: #ff0000;
+        }
+    </style>
+    <title>Math Game</title>
+</head>
+<body>
+    <div class="game-container">
+        <div id="equation"></div>
+        <div id="score">Score: 0</div>
+        <div class="options" onclick="checkAnswer(event)"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let score = 0;
+
+            function generateEquation() {
+                const a = Math.floor(Math.random() * 10) + 1;
+                const b = Math.floor(Math.random() * 10) + 1;
+                const result = a + b;
+                const equationText = `${a} + ____ = ${result}`;
+                return { equationText, result };
+            }
+
+            function updateEquation() {
+                const { equationText, result } = generateEquation();
+                document.getElementById("equation").textContent = equationText;
+
+                const optionsContainer = document.querySelector(".options");
+                optionsContainer.innerHTML = "";
+
+                const shuffledOptions = shuffleArray([result, result - 1, result + 1, result + 2]);
+                shuffledOptions.forEach(option => {
+                    const optionElement = document.createElement("div");
+                    optionElement.className = "option";
+                    optionElement.textContent = option;
+                    optionsContainer.appendChild(optionElement);
+                });
+            }
+
+            function shuffleArray(array) {
+                return array.sort(() => Math.random() - 0.5);
+            }
+
+            function checkAnswer(event) {
+                const selectedOption = event.target.textContent;
+                const correctAnswer = document.getElementById("equation").textContent.split(" ")[4];
+
+                if (selectedOption === correctAnswer) {
+                    score++;
+                    event.target.classList.add("correct");
+                } else {
+                    event.target.classList.add("wrong");
+                }
+
+                setTimeout(() => {
+                    updateEquation();
+                    document.getElementById("score").textContent = `Score: ${score}`;
+                    document.querySelectorAll(".option").forEach(option => {
+                        option.classList.remove("correct", "wrong");
+                    });
+                }, 1000);
+            }
+
+            updateEquation();
+        });
+    </script>
+</body>
+</html>
