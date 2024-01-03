@@ -70,7 +70,9 @@
                 const optionsContainer = document.querySelector(".options");
                 optionsContainer.innerHTML = "";
 
-                const shuffledOptions = shuffleArray([result, result - 1, result + 1, result + 2]);
+                const correctAnswer = result.toString();
+                const shuffledOptions = shuffleArray([correctAnswer, (result - 1).toString(), (result + 1).toString(), (result + 2).toString()]);
+                
                 shuffledOptions.forEach(option => {
                     const optionElement = document.createElement("div");
                     optionElement.className = "option";
@@ -88,7 +90,7 @@
                 const selectedOption = event.target.textContent;
                 const correctAnswer = document.getElementById("equation").textContent.split(" ")[4];
 
-                if (selectedOption === correctAnswer) {
+                if (eval(selectedOption) === eval(correctAnswer)) {
                     score++;
                     event.target.classList.add("correct");
                 } else {
