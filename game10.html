@@ -63,10 +63,6 @@
                 return { equationText, result };
             }
 
-            function evaluateEquation(result) {
-                return result;
-            }
-
             function updateEquation() {
                 const { equationText, result } = generateEquation();
                 document.getElementById("equation").textContent = equationText;
@@ -74,7 +70,7 @@
                 const optionsContainer = document.querySelector(".options");
                 optionsContainer.innerHTML = "";
 
-                const correctAnswer = evaluateEquation(result).toString();
+                const correctAnswer = result.toString();
                 const options = [correctAnswer];
 
                 while (options.length < 4) {
@@ -101,7 +97,7 @@
 
             function checkAnswer(event) {
                 const selectedOption = event.target.textContent;
-                const correctAnswer = evaluateEquation(document.getElementById("equation").textContent.split(" ")[0]).toString();
+                const correctAnswer = document.getElementById("equation").textContent.split(" ")[4];
 
                 if (selectedOption === correctAnswer) {
                     score++;
