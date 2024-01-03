@@ -71,8 +71,15 @@
                 optionsContainer.innerHTML = "";
 
                 const correctAnswer = result.toString();
-                const offsetOptions = [-2, -1, 1, 2];
-                const shuffledOptions = shuffleArray(offsetOptions.map(offset => (result + offset).toString()));
+                const options = [correctAnswer];
+                while (options.length < 4) {
+                    const option = (result + Math.floor(Math.random() * 5) - 2).toString();
+                    if (!options.includes(option)) {
+                        options.push(option);
+                    }
+                }
+
+                const shuffledOptions = shuffleArray(options);
 
                 shuffledOptions.forEach(option => {
                     const optionElement = document.createElement("div");
