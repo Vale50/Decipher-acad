@@ -63,6 +63,10 @@
                 return { equationText, result };
             }
 
+            function evaluateEquation(result) {
+                return result;
+            }
+
             function updateEquation() {
                 const { equationText, result } = generateEquation();
                 document.getElementById("equation").textContent = equationText;
@@ -70,10 +74,11 @@
                 const optionsContainer = document.querySelector(".options");
                 optionsContainer.innerHTML = "";
 
-                const correctAnswer = result.toString();
+                const correctAnswer = evaluateEquation(result).toString();
                 const options = [correctAnswer];
+
                 while (options.length < 4) {
-                    const option = (result + Math.floor(Math.random() * 5) - 2).toString();
+                    const option = (result + Math.floor(Math.random() * 11) - 5).toString();
                     if (!options.includes(option)) {
                         options.push(option);
                     }
@@ -96,9 +101,9 @@
 
             function checkAnswer(event) {
                 const selectedOption = event.target.textContent;
-                const correctAnswer = document.getElementById("equation").textContent.split(" ")[4];
+                const correctAnswer = evaluateEquation(document.getElementById("equation").textContent.split(" ")[0]).toString();
 
-                if (eval(selectedOption) === eval(correctAnswer)) {
+                if (selectedOption === correctAnswer) {
                     score++;
                     event.target.classList.add("correct");
                 } else {
