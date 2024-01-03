@@ -49,7 +49,7 @@
     <div class="game-container">
         <div id="equation"></div>
         <div id="score">Score: 0</div>
-        <div class="options" onclick="checkAnswer(event)"></div>
+        <div class="options"></div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -75,6 +75,7 @@
                     const optionElement = document.createElement("div");
                     optionElement.className = "option";
                     optionElement.textContent = option;
+                    optionElement.addEventListener("click", checkAnswer);
                     optionsContainer.appendChild(optionElement);
                 });
             }
