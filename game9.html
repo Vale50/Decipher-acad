@@ -64,9 +64,9 @@
             const SNAKE_SIZE = GRID_SIZE;
             const BALL_SIZE = GRID_SIZE;
 
-            let snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
+            let snake;
+            let balls;
             let direction = "right";
-            let balls = generateBalls();
             let score = 0;
             let isGameOver = false;
             let isGamePaused = false;
@@ -246,10 +246,10 @@
                 isGameOver = false;
                 isGamePaused = false;
                 score = 0;
-                snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
                 currentLevel = 1;
                 document.getElementById("game-level").innerText = "Level 1";
                 balls = generateBalls();
+                snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
 
                 document.getElementById("start-button").disabled = true;
                 document.getElementById("pause-button").disabled = false;
