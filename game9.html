@@ -142,11 +142,11 @@
             function handleEating(ballIndex) {
                 const isTargetOdd = isOdd(balls[ballIndex].number);
 
-                if ((isTargetOdd && direction === "right") || (!isTargetOdd && direction === "left")) {
+                if (isTargetOdd) {
+                    gameOver();
+                } else {
                     balls = generateBalls();
                     score += 1;
-                } else {
-                    gameOver();
                 }
             }
 
