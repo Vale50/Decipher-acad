@@ -11,7 +11,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #00FF00; /* Green background color */
         }
 
         canvas {
@@ -20,7 +20,15 @@
     </style>
 </head>
 <body>
+    <label for="speed">Choose game speed:</label>
+    <select id="speed">
+        <option value="100">Slow</option>
+        <option value="200" selected>Medium</option>
+        <option value="300">Fast</option>
+    </select>
+
     <canvas id="snakeCanvas" width="400" height="400"></canvas>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const canvas = document.getElementById("snakeCanvas");
@@ -29,13 +37,13 @@
             const GRID_SIZE = 20;
             const SNAKE_SIZE = GRID_SIZE;
             const BALL_SIZE = GRID_SIZE;
-            const SPEED = 200;
 
             let snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
             let direction = "right";
             let balls = generateBalls();
             let score = 0;
             let isGameOver = false;
+            let gameSpeed = parseInt(document.getElementById("speed").value);
 
             function draw() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -52,7 +60,7 @@
                 drawScore();
 
                 if (!isGameOver) {
-                    setTimeout(draw, SPEED);
+                    setTimeout(draw, gameSpeed);
                 }
             }
 
@@ -189,6 +197,10 @@
                 ctx.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2 - 15);
                 ctx.fillText("Score: " + score, canvas.width / 2 - 50, canvas.height / 2 + 20);
             }
+
+            document.getElementById("speed").addEventListener("change", function() {
+                gameSpeed = parseInt(this.value);
+            });
 
             document.addEventListener("keydown", function(event) {
                 switch (event.key) {
