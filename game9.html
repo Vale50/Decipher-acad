@@ -64,14 +64,33 @@
             const SNAKE_SIZE = GRID_SIZE;
             const BALL_SIZE = GRID_SIZE;
 
-            let snake = [];
-            let balls = [];
-            let direction = "right";
-            let score = 0;
-            let isGameOver = false;
-            let isGamePaused = false;
-            let gameSpeed = parseInt(document.getElementById("speed").value);
-            let currentLevel = 1;
+            let snake;
+            let balls;
+            let direction;
+            let score;
+            let isGameOver;
+            let isGamePaused;
+            let gameSpeed;
+            let currentLevel;
+
+            function initialize() {
+                snake = [];
+                balls = [];
+                direction = "right";
+                score = 0;
+                isGameOver = false;
+                isGamePaused = false;
+                gameSpeed = parseInt(document.getElementById("speed").value);
+                currentLevel = 1;
+                document.getElementById("game-level").innerText = "Level 1";
+                balls = generateBalls();
+                snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
+
+                document.getElementById("start-button").disabled = true;
+                document.getElementById("pause-button").disabled = false;
+
+                draw();
+            }
 
             function draw() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -243,23 +262,11 @@
             }
 
             function startGame() {
-                isGameOver = false;
-                isGamePaused = false;
-                score = 0;
-                currentLevel = 1;
-                document.getElementById("game-level").innerText = "Level 1";
-                balls = generateBalls();
-                snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
-
-                document.getElementById("start-button").disabled = true;
-                document.getElementById("pause-button").disabled = false;
-
-                draw();
+                initialize();
             }
 
             function pauseGame() {
                 isGamePaused = true;
-
                 document.getElementById("start-button").disabled = false;
                 document.getElementById("pause-button").disabled = true;
             }
