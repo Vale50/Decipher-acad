@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+    <title>Level 1: Identify the Even Number</title>
     <style>
         body {
             display: flex;
@@ -31,7 +31,7 @@
 </head>
 <body>
     <div id="game-info">
-        <span id="game-name">Snake Game</span>
+        <span id="game-name">Level 1: Identify the Even Number</span>
         <span id="game-level">Level 1</span>
     </div>
 
@@ -43,13 +43,13 @@
     </select>
 
     <div id="buttons">
-        <button id="restart-button" onclick="restartGame()">
-            <img src="https://img.icons8.com/material-outlined/24/000000/restart--v1.png"/>
-            Restart
+        <button id="start-button" onclick="startGame()">
+            <img src="https://img.icons8.com/material-outlined/24/000000/play--v1.png"/>
+            Start
         </button>
-        <button id="next-button" onclick="nextLevel()" disabled>
-            <img src="https://img.icons8.com/material-outlined/24/000000/next.png"/>
-            Next Level
+        <button id="pause-button" onclick="pauseGame()" disabled>
+            <img src="https://img.icons8.com/material-outlined/24/000000/pause--v1.png"/>
+            Pause
         </button>
     </div>
 
@@ -69,6 +69,7 @@
             let direction;
             let score;
             let isGameOver;
+            let isGamePaused;
             let gameSpeed;
             let currentLevel;
 
@@ -78,13 +79,15 @@
                 direction = "right";
                 score = 0;
                 isGameOver = false;
+                isGamePaused = false;
                 gameSpeed = parseInt(document.getElementById("speed").value);
                 currentLevel = 1;
                 document.getElementById("game-level").innerText = "Level 1";
                 balls = generateBalls();
                 snake = [{ x: 2 * GRID_SIZE, y: 2 * GRID_SIZE }];
 
-                document.getElementById("next-button").disabled = true;
+                document.getElementById("start-button").disabled = true;
+                document.getElementById("pause-button").disabled = false;
 
                 draw();
             }
@@ -95,16 +98,15 @@
                 drawSnake();
                 drawBalls();
 
-                if (!isGameOver) {
+                if (!isGameOver && !isGamePaused) {
                     move();
                     checkCollision();
                     checkEating();
-                    checkLevelComplete();
                 }
 
                 drawScore();
 
-                if (!isGameOver) {
+                if (!isGameOver && !isGamePaused) {
                     setTimeout(draw, gameSpeed);
                 }
             }
@@ -193,28 +195,40 @@
             }
 
             function handleEating(ballIndex) {
-                balls.splice(ballIndex, 1); // Remove the eaten ball
-                score += 1;
-                checkLevelChange();
+                const isTargetOdd = isOdd(balls[ballIndex].number);
+
+                if (isTargetOdd) {
+                    gameOver();
+                } else {
+                    balls = generateBalls();
+                    score += 1;
+                    checkLevelChange();
+                }
             }
 
             function checkLevelChange() {
-                if (score >= 10 && currentLevel === 1) {
+                if (score >= 20 && currentLevel === 1) {
                     currentLevel = 2;
                     document.getElementById("game-level").innerText = "Level 2";
-                    document.getElementById("next-button").disabled = false;
+                    balls = generateBalls();
                 }
             }
 
             function generateBalls() {
                 const evenBall = generateBall("even");
                 const oddBall = generateBall("odd");
-                return [evenBall, oddBall];
+                const sameColorBall = generateBall("sameColor");
+                return [evenBall, oddBall, sameColorBall];
             }
 
             function generateBall(type) {
                 const x = Math.floor(Math.random() * (canvas.width / GRID_SIZE)) * GRID_SIZE;
                 const y = Math.floor(Math.random() * (canvas.height / GRID_SIZE)) * GRID_SIZE;
+
+                if (type === "sameColor") {
+                    const number = generateRandomEvenNumber(); // Same color for both odd and even in Level 2
+                    return { x, y, number, color: "#808080" };
+                }
 
                 const number = type === "even" ? generateRandomEvenNumber() : generateRandomOddNumber();
                 const color = isOdd(number) ? "#FF0000" : "#0000FF";
@@ -239,13 +253,6 @@
                 ctx.fillText("Score: " + score, 10, 30);
             }
 
-            function checkLevelComplete() {
-                if (score === 10 && currentLevel === 1) {
-                    document.getElementById("game-level").innerText = "Level 1 Complete";
-                    document.getElementById("next-button").disabled = false;
-                }
-            }
-
             function gameOver() {
                 isGameOver = true;
                 ctx.fillStyle = "#000";
@@ -254,16 +261,14 @@
                 ctx.fillText("Score: " + score, canvas.width / 2 - 50, canvas.height / 2 + 20);
             }
 
-            function restartGame() {
+            function startGame() {
                 initialize();
             }
 
-            function nextLevel() {
-                currentLevel = 2;
-                document.getElementById("game-level").innerText = "Level 2";
-                document.getElementById("next-button").disabled = true;
-                balls = generateBalls();
-                score = 0;
+            function pauseGame() {
+                isGamePaused = true;
+                document.getElementById("start-button").disabled = false;
+                document.getElementById("pause-button").disabled = true;
             }
 
             document.getElementById("speed").addEventListener("change", function() {
@@ -286,8 +291,6 @@
                         break;
                 }
             });
-
-            initialize(); // Start the game automatically when the page loads
         });
     </script>
 </body>
