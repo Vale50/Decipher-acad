@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Education</title>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">							
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">			
+    <link rel="stylesheet" href="css/jquery-ui.css">			
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+            background:#00bdef;
+        }
+        .header-top{
+            background:#00bdef;
+        }
+    </style>
+</head>
+<br>	
+  <header id="header" id="home">
+      <div class="header-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
+                      <ul>
+                        <p style="color:white" >DECIPHER-ACADEMY</p>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       
+                        
+                      </ul>			
+                  </div>
+                  <style>
+                    #div1{
+                        float:left;
+                    }
+                  </style>
+                  <div1 class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
+                      <a href="tel:+234 706 286 8732"><span class="lnr lnr-phone-handset"></span> <span class="text">+234 706 286 8732</span></a>
+                      <a href="mailto:decipher-academy.com"><span class="lnr lnr-envelope"></span> <span class="text">decipher-academy.com</span></a>			
+                  </div1>
+              </div>			  					
+          </div>
+    </div>
+    <div class="container main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+          <div id="logo">
+            <a href="index.html"><img src="img/LOGO 2b.png" height="100" alt="" title="" /></a>
+            
+          </div>
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact<
+                /a></li>
+              <li><a href="gallery.html">classrooms</a></li>
+              <li class="menu-has-children"><a href="">Blog</a>
+                <ul>
+                  <li><a href="blog-home.html">Blog Home</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>
+                </ul>
+              </li>	
+              <li class="menu-has-children"><a href="">Pages</a>
+                <ul>
+                      <li><a href="course-details.html">Course Details</a></li>		
+                      <li><a href="event-details.html">Event Details</a></li>		
+                    <li><a href="elements.html">Elements</a></li>
+                      <li class="menu-has-children"><a href="">Level 2 </a>
+                        <ul>
+                          <li><a href="#">Item One</a></li>
+                          <li><a href="#">Item Two</a></li>
+                        </ul>
+                      </li>					                		
+                </ul>
+              </li>					          					          		          
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav><!-- #nav-menu-container -->		    		
+        </div>
+    </div>
+  </header><!-- #header -->
+
+
+<script type="text/javascript">                                               
+    function buttonclicktutor() {                                             
+        alert('Check Timetable');                                                                                                   
+    }
+</script>    
+<script type="text/javascript">            
+    function buttonclicksite() {      
+        alert('go to site');    
+    }
+    
+</script>
+<script src="countdown.js"></script>
+</head>
+
+<p>You are about to Join a class</p>
+<input type="button" value="Schedule class with a Tutor" onclick="buttonclicktutor()"/> 
+<input type="button" value="Continue on site" onclick="buttonclicksite()"/> 
+
+<body>
+</div>
+<h2><i>Each lesson starts at the end of Timer</i> </h2>
+<h2 id="dema"></h2>
+<button onclick="myStopFunction()"><b>Class Timer </b></button>
+<a href="prclassrooms.html"><button> <b>Enter Classroom</b></button></a>
+<html>
+<head>
+<style>
+    body{
+        background-color: aqua;
+    }
+    .input{
+      width:250px;
+    }
+    img{
+      width:50%;
+      height:auto;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+</style>
+</head>
+<h1> WORKSHEET</h1>
+<body>
+   
+   <div class="row">
+    <div class="column">
+      <img src="fonts/MATHSFOLDER/A20.PNG" alt="" style="width:100%">
+      <div>
+       <img src="fonts/MATHSFOLDER/IMG-5517.jpg" style="width:100%">
+      </div>
+    </div>
+    <div class="column">
+
+        <form name="verb2" action="/pages/Success" method="POST" data-netlify="true"> 
+
+            1.    <input id="myInput1" type="text" name="numbers">
+          
+            <input id="myInput1" type="button" value="Check Answer" onclick="myFunction1()"></input>
+            
+            <p id="demo1"></p>
+            
+            <script>
+            function myFunction1() {
+              var text;
+              var answers = document.getElementById("myInput1").value;
+            
+              switch(answers) {
+                case "GAVE UP":
+                case “Gave up":
+                case “gave up":
+
+              
+                              
+                
+                  text = " GOOD JOB CHAMP!!  ";
+                break;
+                default:
+                text = "Oops! try again ...";
+              }
+              document.getElementById("demo1").innerHTML = text;
+            }
+            </script>
+          
+          </br>
+         
+            2.    <input id="myInput2" type="text" name="numbers">
+          
+            <input id="myInput2" type="button" value="Check Answer" onclick="myFunction2()"></input>
+          
+          <p id="demo2"></p>
+          
+          <script>
+          function myFunction2() {
+            var text;
+            var answers2 = document.getElementById("myInput2").value;
+          
+            switch(answers2) {
+              case "KIND":
+                case "Kind":
+                case "kind":
+
+
+           
+              
+                text = " EXCELLENT YOU ROCK!! ";
+              break;
+              default:
+              text = "Oops! try again...";
+            }
+            document.getElementById("demo2").innerHTML = text;
+          }
+          </script>
+          
+          </br>
+            3.<input id="myInput3" type="text" name="numbers">
+          
+            <input id="myInput3" type="button" value="Check Answer" onclick="myFunction3()"></input>
+            
+            <p id="demo3"></p>
+            
+            <script>
+            function myFunction3() {
+              var text;
+              var answers3 = document.getElementById("myInput3").value;
+            
+              switch(answers3) {
+                case "SUPPORT":
+                case "Support":
+                   case "support":              
+                
+                  text = "BRAVO YOU'RE A STAR!! ";
+                break;
+                default:
+                text = "Oops! try again...";
+              }
+              document.getElementById("demo3").innerHTML = text;
+            }
+            </script>
+          
+         
+          </br>
+            4. <input id="myInput4" type="text" name="numbers">
+          
+            <input id="myInput4" type="button" value="Check Answer" onclick="myFunction4()"></input>
+            
+            <p id="demo4"></p>
+            
+            <script>
+            function myFunction4() {
+              var text;
+              var answers4 = document.getElementById("myInput4").value;
+            
+              switch(answers4) {
+                case "DEDUCE":
+               case "Deduce":
+                 case "deduce":
+              
+                
+                
+                  text = " GREAT!! ";
+                break;
+                default:
+                text = "Oops! try again...";
+              }
+              document.getElementById("demo4").innerHTML = text;
+            }
+            </script>
+          
+          
+          </br>
+          5. <input id="myInput5" type="text" name="numbers">
+          
+          <input id="myInput5" type="button" value="Check Answer" onclick="myFunction5()"></input>
+          
+          <h1 id="demo5"></h1>
+          
+          <script>
+          function myFunction5() {
+            var text;
+            var answers5 = document.getElementById("myInput5").value;
+          
+            switch(answers5) {
+              case "CALL FORTH":
+                case "Call forth":
+                 case "call forth":
+
+               
+              
+                text = " GREAT JOB!! " ;
+              break;
+              default:
+              text = "Oops! try again...";
+            }
+            document.getElementById("demo5").innerHTML = text;
+          }
+          </script>
+        
+        
+        </br>
+        6. <input id="myInput6" type="text" name="numbers">
+          
+          <input id="myInput6" type="button" value="Check Answer" onclick="myFunction6()"></input>
+          
+          <h1 id="demo6"></h1>
+          
+          <script>
+          function myFunction6() {
+            var text;
+            var answers6 = document.getElementById("myInput6").value;
+          
+            switch(answers6) {
+              case "INFUSE":
+                case "Infuse":
+                 case "infuse":             
+              
+                text = " GREAT JOB!! " ;
+              break;
+              default:
+              text = "Oops! try again...";
+            }
+            document.getElementById("demo6").innerHTML = text;
+          }
+          </script>
+        
+        
+        </br>
+        7. <input id="myInput7" type="text" name="numbers">
+          
+          <input id="myInput7" type="button" value="Check Answer" onclick="myFunction7()"></input>
+          
+          <h1 id="demo7"></h1>
+          
+          <script>
+          function myFunction7() {
+            var text;
+            var answers7 = document.getElementById("myInput7").value;
+          
+            switch(answers7) {
+              case "MERRY":
+                case "Merry":
+                  case "merry":
+               
+              
+                text = " GREAT JOB!! " ;
+              break;
+              default:
+              text = "Oops! try again...";
+            }
+            document.getElementById("demo7").innerHTML = text;
+          }
+          </script>
+        
+        
+        </br>
+        8. <input id="myInput8" type="text" name="numbers">
+          
+          <input id="myInput8" type="button" value="Check Answer" onclick="myFunction8()"></input>
+          
+          <h1 id="demo8"></h1>
+          
+          <script>
+          function myFunction8() {
+            var text;
+            var answers8 = document.getElementById("myInput8").value;
+          
+            switch(answers8) {
+              case "DORMANT":
+                case "Dormant":
+                 case "dormant":
+               
+              
+                text = " GREAT JOB!! " ;
+              break;
+              default:
+              text = "Oops! try again...";
+            }
+            document.getElementById("demo8").innerHTML = text;
+          }
+          </script>
+        
+        
+        </br>
+        9. <input id="myInput9" type="text" name="numbers">
+          
+        <input id="myInput9" type="button" value="Check Answer" onclick="myFunction9()"></input>
+        
+        <h1 id="demo9"></h1>
+        
+        <script>
+        function myFunction9() {
+          var text;
+          var answers9 = document.getElementById("myInput9").value;
+        
+          switch(answers9) {
+            case "LAKE":
+                case "Lake":
+                case "lake":
+
+
+            
+              text = " GREAT JOB!! " ;
+            break;
+            default:
+            text = "Oops! try again...";
+          }
+          document.getElementById("demo9").innerHTML = text;
+        }
+        </script>
+      
+      
+      </br>
+      10. <input id="myInput10" type="text" name="numbers">
+        
+        <input id="myInput10" type="button" value="Check Answer" onclick="myFunction10()"></input>
+        
+        <h1 id="demo10"></h1>
+        
+        <script>
+        function myFunction10() {
+          var text;
+          var answers8 = document.getElementById("myInput10").value;
+        
+          switch(answers10) {
+            case "POSITIVE POLE":
+                case "Positive pole":
+               case "positive pole":
+
+                
+            
+              text = " GREAT JOB!! " ;
+            break;
+            default:
+            text = "Oops! try again...";
+          }
+          document.getElementById("demo10").innerHTML = text;
+        }
+        </script>
+      
+      
+      </br> 
+          
+            <h2>Done? Click the Submit button to submit and save your work</h2>
+          </br>
+          </br>
+            <button type="submit" value="Submit">Submit Work</button>
+          </br>
+          </br>
+          <h2><i>WELDONE!!  </i> </h2>
+          <div class="container">
+          </div>
+          </form>
+    </div>
+    <div class="column">
+      <img src="" alt="" style="width:100%">
+    </div>
+  </div>
+
+   <form name="angle" action="/pages/Success" method="POST" data-netlify="true"> 
+    <p>
+      <label>Your Name: <input type="text" name="name" /></label>
+    </p>
+    <p>
+      <label>Your Email: <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <label>Your Role: <select name="role[]" multiple>
+        <option value="leader">Leader</option>
+        <option value="follower">Follower</option>
+      </select></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message"></textarea></label>
+    </p>
+  
+  
+</body>
+<h2>Write your ANSWERS in the text box below</h2>
+
+
+
+</form>
+</html>
+</body>
+</html>
