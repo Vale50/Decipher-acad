@@ -14,8 +14,13 @@
     }
 
     .main-container {
-      display: flex;
       margin: 10px;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+
+    .row-container {
+      display: flex;
     }
 
     .main-div {
@@ -41,56 +46,66 @@
 </head>
 <body>
 
-  <!-- Row 1 -->
   <div class="main-container">
-    <div class="main-div red" onclick="changeColor(this)">A</div>
-    <div class="main-div red" onclick="changeColor(this)">B</div>
-    <div class="main-div green" onclick="changeColor(this)">C</div>
-    <div class="main-div red" onclick="changeColor(this)">D</div>
-  </div>
+    <!-- Row 1 -->
+    <div class="row-container">
+      <div class="main-div red" onclick="changeColor(this, 'row1')">A</div>
+      <div class="main-div red" onclick="changeColor(this, 'row1')">B</div>
+      <div class="main-div green" onclick="changeColor(this, 'row1')">C</div>
+      <div class="main-div red" onclick="changeColor(this, 'row1')">D</div>
+    </div>
 
-  <!-- Row 2 -->
-  <div class="main-container">
-    <div class="main-div red" onclick="changeColor(this)">A</div>
-    <div class="main-div red" onclick="changeColor(this)">B</div>
-    <div class="main-div red" onclick="changeColor(this)">C</div>
-    <div class="main-div red" onclick="changeColor(this)">D</div>
-  </div>
+    <!-- Row 2 -->
+    <div class="row-container">
+      <div class="main-div red" onclick="changeColor(this, 'row2')">A</div>
+      <div class="main-div red" onclick="changeColor(this, 'row2')">B</div>
+      <div class="main-div red" onclick="changeColor(this, 'row2')">C</div>
+      <div class="main-div red" onclick="changeColor(this, 'row2')">D</div>
+    </div>
 
-  <!-- Row 3 -->
-  <div class="main-container">
-    <div class="main-div red" onclick="changeColor(this)">A</div>
-    <div class="main-div red" onclick="changeColor(this)">B</div>
-    <div class="main-div red" onclick="changeColor(this)">C</div>
-    <div class="main-div red" onclick="changeColor(this)">D</div>
-  </div>
+    <!-- Row 3 -->
+    <div class="row-container">
+      <div class="main-div red" onclick="changeColor(this, 'row3')">A</div>
+      <div class="main-div red" onclick="changeColor(this, 'row3')">B</div>
+      <div class="main-div red" onclick="changeColor(this, 'row3')">C</div>
+      <div class="main-div green" onclick="changeColor(this, 'row3')">D</div>
+    </div>
 
-  <!-- Row 4 -->
-  <div class="main-container">
-    <div class="main-div red" onclick="changeColor(this)">A</div>
-    <div class="main-div red" onclick="changeColor(this)">B</div>
-    <div class="main-div red" onclick="changeColor(this)">C</div>
-    <div class="main-div red" onclick="changeColor(this)">D</div>
-  </div>
+    <!-- Row 4 -->
+    <div class="row-container">
+      <div class="main-div red" onclick="changeColor(this, 'row4')">A</div>
+      <div class="main-div red" onclick="changeColor(this, 'row4')">B</div>
+      <div class="main-div green" onclick="changeColor(this, 'row4')">C</div>
+      <div class="main-div red" onclick="changeColor(this, 'row4')">D</div>
+    </div>
 
-  <!-- Row 5 -->
-  <div class="main-container">
-    <div class="main-div red" onclick="changeColor(this)">A</div>
-    <div class="main-div red" onclick="changeColor(this)">B</div>
-    <div class="main-div red" onclick="changeColor(this)">C</div>
-    <div class="main-div red" onclick="changeColor(this)">D</div>
+    <!-- Row 5 -->
+    <div class="row-container">
+      <div class="main-div red" onclick="changeColor(this, 'row5')">A</div>
+      <div class="main-div green" onclick="changeColor(this, 'row5')">B</div>
+      <div class="main-div red" onclick="changeColor(this, 'row5')">C</div>
+      <div class="main-div red" onclick="changeColor(this, 'row5')">D</div>
+    </div>
   </div>
 
   <script>
-    function changeColor(element) {
+    function changeColor(element, row) {
       // Reset colors
-      document.querySelectorAll('.main-div').forEach(function(el) {
+      document.querySelectorAll(`.${row} .main-div`).forEach(function(el) {
         el.classList.remove('green');
         el.classList.add('red');
       });
 
       // Change color based on the clicked div
-      if (element.innerHTML === 'C') {
+      if (row === 'row1' && element.innerHTML === 'C') {
+        element.classList.add('green');
+      } else if (row === 'row2' && element.innerHTML === 'A') {
+        element.classList.add('green');
+      } else if (row === 'row3' && element.innerHTML === 'D') {
+        element.classList.add('green');
+      } else if (row === 'row4' && element.innerHTML === 'C') {
+        element.classList.add('green');
+      } else if (row === 'row5' && element.innerHTML === 'B') {
         element.classList.add('green');
       } else {
         element.classList.add('red');
