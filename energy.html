@@ -11,12 +11,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      background-color: deepskyblue;
+    }
+
+    header, footer {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
     }
 
     .main-container {
       margin: 10px;
       border: 1px solid #ccc;
       padding: 5px;
+      background-color: white;
     }
 
     .row-container {
@@ -37,6 +46,10 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Colorful Divs Page</h1>
+  </header>
 
   <div class="main-container">
     <!-- Row 1 -->
@@ -79,6 +92,10 @@
       <div class="main-div" onclick="changeColor(this, 'row5')">D</div>
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2023 Colorful Divs Page</p>
+  </footer>
 
   <script>
     function changeColor(element, row) {
