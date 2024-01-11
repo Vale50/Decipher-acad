@@ -34,14 +34,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-
-    .main-div.green {
-      background-color: green;
-    }
-
-    .main-div.red {
-      background-color: red;
-    }
   </style>
 </head>
 <body>
@@ -49,42 +41,42 @@
   <div class="main-container">
     <!-- Row 1 -->
     <div class="row-container">
-      <div class="main-div red" onclick="changeColor(this, 'row1')">A</div>
-      <div class="main-div red" onclick="changeColor(this, 'row1')">B</div>
-      <div class="main-div green" onclick="changeColor(this, 'row1')">C</div>
-      <div class="main-div red" onclick="changeColor(this, 'row1')">D</div>
+      <div class="main-div" onclick="changeColor(this, 'row1')">A</div>
+      <div class="main-div" onclick="changeColor(this, 'row1')">B</div>
+      <div class="main-div" onclick="changeColor(this, 'row1')">C</div>
+      <div class="main-div" onclick="changeColor(this, 'row1')">D</div>
     </div>
 
     <!-- Row 2 -->
     <div class="row-container">
-      <div class="main-div red" onclick="changeColor(this, 'row2')">A</div>
-      <div class="main-div red" onclick="changeColor(this, 'row2')">B</div>
-      <div class="main-div red" onclick="changeColor(this, 'row2')">C</div>
-      <div class="main-div red" onclick="changeColor(this, 'row2')">D</div>
+      <div class="main-div" onclick="changeColor(this, 'row2')">A</div>
+      <div class="main-div" onclick="changeColor(this, 'row2')">B</div>
+      <div class="main-div" onclick="changeColor(this, 'row2')">C</div>
+      <div class="main-div" onclick="changeColor(this, 'row2')">D</div>
     </div>
 
     <!-- Row 3 -->
     <div class="row-container">
-      <div class="main-div red" onclick="changeColor(this, 'row3')">A</div>
-      <div class="main-div red" onclick="changeColor(this, 'row3')">B</div>
-      <div class="main-div red" onclick="changeColor(this, 'row3')">C</div>
-      <div class="main-div green" onclick="changeColor(this, 'row3')">D</div>
+      <div class="main-div" onclick="changeColor(this, 'row3')">A</div>
+      <div class="main-div" onclick="changeColor(this, 'row3')">B</div>
+      <div class="main-div" onclick="changeColor(this, 'row3')">C</div>
+      <div class="main-div" onclick="changeColor(this, 'row3')">D</div>
     </div>
 
     <!-- Row 4 -->
     <div class="row-container">
-      <div class="main-div red" onclick="changeColor(this, 'row4')">A</div>
-      <div class="main-div red" onclick="changeColor(this, 'row4')">B</div>
-      <div class="main-div green" onclick="changeColor(this, 'row4')">C</div>
-      <div class="main-div red" onclick="changeColor(this, 'row4')">D</div>
+      <div class="main-div" onclick="changeColor(this, 'row4')">A</div>
+      <div class="main-div" onclick="changeColor(this, 'row4')">B</div>
+      <div class="main-div" onclick="changeColor(this, 'row4')">C</div>
+      <div class="main-div" onclick="changeColor(this, 'row4')">D</div>
     </div>
 
     <!-- Row 5 -->
     <div class="row-container">
-      <div class="main-div red" onclick="changeColor(this, 'row5')">A</div>
-      <div class="main-div green" onclick="changeColor(this, 'row5')">B</div>
-      <div class="main-div red" onclick="changeColor(this, 'row5')">C</div>
-      <div class="main-div red" onclick="changeColor(this, 'row5')">D</div>
+      <div class="main-div" onclick="changeColor(this, 'row5')">A</div>
+      <div class="main-div" onclick="changeColor(this, 'row5')">B</div>
+      <div class="main-div" onclick="changeColor(this, 'row5')">C</div>
+      <div class="main-div" onclick="changeColor(this, 'row5')">D</div>
     </div>
   </div>
 
@@ -92,23 +84,22 @@
     function changeColor(element, row) {
       // Reset colors
       document.querySelectorAll(`.${row} .main-div`).forEach(function(el) {
-        el.classList.remove('green');
-        el.classList.add('red');
+        el.style.backgroundColor = '';
       });
 
       // Change color based on the clicked div
       if (row === 'row1' && element.innerHTML === 'C') {
-        element.classList.add('green');
+        element.style.backgroundColor = 'green';
       } else if (row === 'row2' && element.innerHTML === 'A') {
-        element.classList.add('green');
+        element.style.backgroundColor = 'green';
       } else if (row === 'row3' && element.innerHTML === 'D') {
-        element.classList.add('green');
+        element.style.backgroundColor = 'green';
       } else if (row === 'row4' && element.innerHTML === 'C') {
-        element.classList.add('green');
+        element.style.backgroundColor = 'green';
       } else if (row === 'row5' && element.innerHTML === 'B') {
-        element.classList.add('green');
+        element.style.backgroundColor = 'green';
       } else {
-        element.classList.add('red');
+        element.style.backgroundColor = 'red';
       }
     }
   </script>
