@@ -42,77 +42,76 @@
       justify-content: center;
       font-weight: bold;
       cursor: pointer;
+      transition: all 0.3s ease; /* Smooth transition for size change */
+    }
+
+    .selected {
+      background-color: green;
+      transform: scale(1.2); /* Increase size when selected */
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Pattern IQ Test for Kids</h1>
+    <h1>Select One Option in Each Row</h1>
   </header>
 
   <div class="main-container">
     <!-- Row 1 -->
     <div class="row-container">
-      <div class="main-div" onclick="checkPattern(this, 'row1')">&#9679;</div> <!-- Circle -->
-      <div class="main-div" onclick="checkPattern(this, 'row1')">&#9632;</div> <!-- Square -->
-      <div class="main-div" onclick="checkPattern(this, 'row1')">&#9651;</div> <!-- Triangle -->
-      <div class="main-div" onclick="checkPattern(this, 'row1')">&#9633;</div> <!-- Rectangle -->
+      <div class="main-div" onclick="selectOption(this, 'row1')">&#9679;</div> <!-- Circle -->
+      <div class="main-div" onclick="selectOption(this, 'row1')">&#9632;</div> <!-- Square -->
+      <div class="main-div" onclick="selectOption(this, 'row1')">&#9651;</div> <!-- Triangle -->
+      <div class="main-div" onclick="selectOption(this, 'row1')">&#9633;</div> <!-- Rectangle -->
     </div>
 
     <!-- Row 2 -->
     <div class="row-container">
-      <div class="main-div" onclick="checkPattern(this, 'row2')">&#9654;</div> <!-- Right arrow -->
-      <div class="main-div" onclick="checkPattern(this, 'row2')">&#9650;</div> <!-- Up arrow -->
-      <div class="main-div" onclick="checkPattern(this, 'row2')">&#9660;</div> <!-- Down arrow -->
-      <div class="main-div" onclick="checkPattern(this, 'row2')">&#9664;</div> <!-- Left arrow -->
+      <div class="main-div" onclick="selectOption(this, 'row2')">&#9654;</div> <!-- Right arrow -->
+      <div class="main-div" onclick="selectOption(this, 'row2')">&#9650;</div> <!-- Up arrow -->
+      <div class="main-div" onclick="selectOption(this, 'row2')">&#9660;</div> <!-- Down arrow -->
+      <div class="main-div" onclick="selectOption(this, 'row2')">&#9664;</div> <!-- Left arrow -->
     </div>
 
     <!-- Row 3 -->
     <div class="row-container">
-      <div class="main-div" onclick="checkPattern(this, 'row3')">&#9733;</div> <!-- Star -->
-      <div class="main-div" onclick="checkPattern(this, 'row3')">&#9829;</div> <!-- Heart -->
-      <div class="main-div" onclick="checkPattern(this, 'row3')">&#9876;</div> <!-- Check mark -->
-      <div class="main-div" onclick="checkPattern(this, 'row3')">&#9776;</div> <!-- Hamburger menu -->
+      <div class="main-div" onclick="selectOption(this, 'row3')">&#9733;</div> <!-- Star -->
+      <div class="main-div" onclick="selectOption(this, 'row3')">&#9829;</div> <!-- Heart -->
+      <div class="main-div" onclick="selectOption(this, 'row3')">&#9876;</div> <!-- Check mark -->
+      <div class="main-div" onclick="selectOption(this, 'row3')">&#9776;</div> <!-- Hamburger menu -->
     </div>
 
     <!-- Row 4 -->
     <div class="row-container">
-      <div class="main-div" onclick="checkPattern(this, 'row4')">&#9724;</div> <!-- Circle with plus -->
-      <div class="main-div" onclick="checkPattern(this, 'row4')">&#9723;</div> <!-- Circle with minus -->
-      <div class="main-div" onclick="checkPattern(this, 'row4')">&#9744;</div> <!-- Empty square -->
-      <div class="main-div" onclick="checkPattern(this, 'row4')">&#9634;</div> <!-- Empty rectangle -->
+      <div class="main-div" onclick="selectOption(this, 'row4')">&#9724;</div> <!-- Circle with plus -->
+      <div class="main-div" onclick="selectOption(this, 'row4')">&#9723;</div> <!-- Circle with minus -->
+      <div class="main-div" onclick="selectOption(this, 'row4')">&#9744;</div> <!-- Empty square -->
+      <div class="main-div" onclick="selectOption(this, 'row4')">&#9634;</div> <!-- Empty rectangle -->
     </div>
 
     <!-- Row 5 -->
     <div class="row-container">
-      <div class="main-div" onclick="checkPattern(this, 'row5')">&#9729;</div> <!-- Snowflake -->
-      <div class="main-div" onclick="checkPattern(this, 'row5')">&#9730;</div> <!-- Sun -->
-      <div class="main-div" onclick="checkPattern(this, 'row5')">&#9731;</div> <!-- Cloud -->
-      <div class="main-div" onclick="checkPattern(this, 'row5')">&#9732;</div> <!-- Umbrella -->
+      <div class="main-div" onclick="selectOption(this, 'row5')">&#9729;</div> <!-- Snowflake -->
+      <div class="main-div" onclick="selectOption(this, 'row5')">&#9730;</div> <!-- Sun -->
+      <div class="main-div" onclick="selectOption(this, 'row5')">&#9731;</div> <!-- Cloud -->
+      <div class="main-div" onclick="selectOption(this, 'row5')">&#9732;</div> <!-- Umbrella -->
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2023 Pattern IQ Test for Kids</p>
+    <p>&copy; 2023 Select One Option in Each Row</p>
   </footer>
 
   <script>
-    function checkPattern(element, row) {
-      // Reset colors
+    function selectOption(element, row) {
+      // Reset styles in the row
       document.querySelectorAll(`.${row} .main-div`).forEach(function(el) {
-        el.style.backgroundColor = '';
+        el.classList.remove('selected');
       });
 
-      // Check if the pattern is odd and change color accordingly
-      const patterns = document.querySelectorAll(`.${row} .main-div`);
-      const selectedPatternIndex = Array.from(patterns).indexOf(element);
-
-      if (selectedPatternIndex % 2 !== 0) {
-        element.style.backgroundColor = 'green';
-      } else {
-        element.style.backgroundColor = 'red';
-      }
+      // Add selected class to the clicked element
+      element.classList.add('selected');
     }
   </script>
 
