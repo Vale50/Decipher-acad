@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        .shape {
+            position: absolute;
+            cursor: move;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 87px solid red;
+        }
+        .square, .rectangle {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shape triangle" onclick="duplicateShape(this)"></div>
+    <div class="shape square" onclick="duplicateShape(this)"></div>
+    <div class="shape circle" onclick="duplicateShape(this)"></div>
+    <div class="shape rectangle" onclick="duplicateShape(this)"></div>
+
+    <script>
+        $(function() {
+            $('.shape').draggable({
+                containment: 'body',
+                cursor: 'move',
+                stop: function(event, ui) {
+                    // Handle stop event (if needed)
+                }
+            }).resizable({
+                containment: 'parent',
+                handles: 'se',
+                stop: function(event, ui) {
+                    // Handle stop event (if needed)
+                }
+            });
+        });
+
+        function duplicateShape(original) {
+            var $original = $(original);
+            var $clone = $original.clone();
+            $clone.css({
+                top: parseInt($original.css('top')) + 20,
+                left: parseInt($original.css('left')) + 20
+            });
+            $('body').append($clone);
+            $clone.draggable({
+                containment: 'body',
+                cursor: 'move',
+                stop: function(event, ui) {
+                    // Handle stop event (if needed)
+                }
+            }).resizable({
+                containment: 'parent',
+                handles: 'se',
+                stop: function(event, ui) {
+                    // Handle stop event (if needed)
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
