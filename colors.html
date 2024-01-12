@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful House</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .house {
+      position: relative;
+    }
+
+    .roof {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 86.6px solid red; /* Height of equilateral triangle = sqrt(3)/2 * base */
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .rectangle {
+      width: 100px;
+      height: 80px;
+      background-color: blue;
+      position: absolute;
+      top: 86.6px; /* Height of equilateral triangle */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .window {
+      width: 30px;
+      height: 30px;
+      background-color: yellow;
+      position: absolute;
+      top: 30px;
+      left: 70px;
+    }
+
+    .door {
+      width: 40px;
+      height: 80px;
+      background-color: brown;
+      position: absolute;
+      top: 86.6px;
+      left: 30px;
+    }
+
+    .shape {
+      cursor: pointer;
+    }
+
+    .color-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .color-option {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="house">
+  <div class="roof shape" id="roof"></div>
+  <div class="rectangle shape" id="rectangle"></div>
+  <div class="window shape" id="window"></div>
+  <div class="door shape" id="door"></div>
+
+  <!-- Color Options -->
+  <div class="color-options" id="colorOptions">
+    <div class="color-option" style="background-color: red;" onclick="changeColor('red')"></div>
+    <div class="color-option" style="background-color: blue;" onclick="changeColor('blue')"></div>
+    <div class="color-option" style="background-color: yellow;" onclick="changeColor('yellow')"></div>
+    <div class="color-option" style="background-color: brown;" onclick="changeColor('brown')"></div>
+    <!-- Add more color options as needed -->
+  </div>
+</div>
+
+<script>
+  function changeColor(color) {
+    selectedShape.style.backgroundColor = color;
+    colorOptions.style.display = 'none';
+  }
+
+  let selectedShape;
+  let colorOptions = document.getElementById('colorOptions');
+
+  document.querySelectorAll('.shape').forEach(shape => {
+    shape.addEventListener('click', function () {
+      selectedShape = this;
+      colorOptions.style.display = 'block';
+      colorOptions.style.left = this.offsetLeft + 'px';
+      colorOptions.style.top = this.offsetTop + this.offsetHeight + 'px';
+    });
+  });
+</script>
+
+</body>
+</html>
