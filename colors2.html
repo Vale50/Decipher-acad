@@ -7,10 +7,19 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .shape {
             position: absolute;
             cursor: move;
         }
+
         .triangle {
             width: 0;
             height: 0;
@@ -18,11 +27,13 @@
             border-right: 50px solid transparent;
             border-bottom: 87px solid red;
         }
+
         .square, .rectangle {
             width: 100px;
             height: 100px;
             background-color: blue;
         }
+
         .circle {
             width: 100px;
             height: 100px;
@@ -52,6 +63,8 @@
                 stop: function(event, ui) {
                     // Handle stop event (if needed)
                 }
+            }).css({
+                'transform-origin': '50% 50%', // Set the transform origin to the center of the shape
             });
         });
 
@@ -60,7 +73,8 @@
             var $clone = $original.clone();
             $clone.css({
                 top: parseInt($original.css('top')) + 20,
-                left: parseInt($original.css('left')) + 20
+                left: parseInt($original.css('left')) + 20,
+                transform: $original.css('transform') // Copy the transform property
             });
             $('body').append($clone);
             $clone.draggable({
@@ -75,6 +89,8 @@
                 stop: function(event, ui) {
                     // Handle stop event (if needed)
                 }
+            }).css({
+                'transform-origin': '50% 50%', // Set the transform origin to the center of the shape
             });
         }
     </script>
