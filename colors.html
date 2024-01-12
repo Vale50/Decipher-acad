@@ -91,4 +91,35 @@
       offsetY = e.clientY - parseInt(shape.style.top);
     });
 
-    document.addEventListener('mousemove', function
+    document.addEventListener('mousemove', function (e) {
+      if (isDragging) {
+        shape.style.left = (e.clientX - offsetX) + 'px';
+        shape.style.top = (e.clientY - offsetY) + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', function () {
+      isDragging = false;
+    });
+  }
+
+  document.querySelectorAll('.color-option').forEach(option => {
+    option.addEventListener('click', function () {
+      let colorName = this.textContent;
+      changeColor(colorName.toLowerCase());
+    });
+  });
+
+  // Make shapes draggable
+  document.querySelectorAll('.shape').forEach(shape => {
+    makeShapeDraggable(shape);
+
+    // Make shapes duplicatable on double click
+    shape.addEventListener('dblclick', function () {
+      duplicateShape(this);
+    });
+  });
+</script>
+
+</body>
+</html>
