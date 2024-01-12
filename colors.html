@@ -17,48 +17,9 @@
       position: relative;
     }
 
-    .roof {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 86.6px solid red; /* Height of equilateral triangle = sqrt(3)/2 * base */
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .rectangle {
-      width: 100px;
-      height: 80px;
-      background-color: blue;
-      position: absolute;
-      top: 86.6px; /* Height of equilateral triangle */
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .window {
-      width: 30px;
-      height: 30px;
-      background-color: yellow;
-      position: absolute;
-      top: 30px;
-      left: 70px;
-    }
-
-    .door {
-      width: 40px;
-      height: 80px;
-      background-color: brown;
-      position: absolute;
-      top: 86.6px;
-      left: 30px;
-    }
-
     .shape {
-      cursor: pointer;
+      cursor: move;
+      user-select: none;
     }
 
     .color-options {
@@ -83,37 +44,84 @@
 </head>
 <body>
 
-<div class="house">
-  <div class="roof shape" id="roof"></div>
-  <div class="rectangle shape" id="rectangle"></div>
-  <div class="window shape" id="window"></div>
-  <div class="door shape" id="door"></div>
-
+<div class="house" id="house">
   <!-- Color Options -->
   <div class="color-options" id="colorOptions">
-    <div class="color-option" style="background-color: red;" onclick="changeColor('red')"></div>
-    <div class="color-option" style="background-color: blue;" onclick="changeColor('blue')"></div>
-    <div class="color-option" style="background-color: yellow;" onclick="changeColor('yellow')"></div>
-    <div class="color-option" style="background-color: brown;" onclick="changeColor('brown')"></div>
+    <div class="color-option" style="background-color: red;" onclick="changeColor('red')">Red</div>
+    <div class="color-option" style="background-color: blue;" onclick="changeColor('blue')">Blue</div>
+    <div class="color-option" style="background-color: yellow;" onclick="changeColor('yellow')">Yellow</div>
+    <div class="color-option" style="background-color: brown;" onclick="changeColor('brown')">Brown</div>
     <!-- Add more color options as needed -->
   </div>
 </div>
 
 <script>
+  let selectedShape;
+  let house = document.getElementById('house');
+  let colorOptions = document.getElementById('colorOptions');
+
   function changeColor(color) {
     selectedShape.style.backgroundColor = color;
     colorOptions.style.display = 'none';
   }
 
-  let selectedShape;
-  let colorOptions = document.getElementById('colorOptions');
+  function duplicateShape(originalShape) {
+    let duplicate = originalShape.cloneNode(true);
+    duplicate.style.left = (parseInt(originalShape.style.left) + 20) + 'px';
+    duplicate.style.top = (parseInt(originalShape.style.top) + 20) + 'px';
+    house.appendChild(duplicate);
 
-  document.querySelectorAll('.shape').forEach(shape => {
-    shape.addEventListener('click', function () {
-      selectedShape = this;
+    // Make the duplicated shape draggable
+    makeShapeDraggable(duplicate);
+  }
+
+  function makeShapeDraggable(shape) {
+    let offsetX, offsetY;
+    let isDragging = false;
+
+    shape.addEventListener('mousedown', function (e) {
+      isDragging = true;
+      offsetX = e.clientX - parseInt(shape.style.left);
+      offsetY = e.clientY - parseInt(shape.style.top);
+    });
+
+    document.addEventListener('mousemove', function (e) {
+      if (isDragging) {
+        shape.style.left = (e.clientX - offsetX) + 'px';
+        shape.style.top = (e.clientY - offsetY) + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', function () {
+      isDragging = false;
+    });
+  }
+
+  document.querySelectorAll('.color-option').forEach(option => {
+    option.addEventListener('click', function () {
+      let colorName = this.textContent;
+      changeColor(colorName.toLowerCase());
+    });
+  });
+
+  house.addEventListener('click', function (e) {
+    if (e.target.classList.contains('shape')) {
+      selectedShape = e.target;
       colorOptions.style.display = 'block';
-      colorOptions.style.left = this.offsetLeft + 'px';
-      colorOptions.style.top = this.offsetTop + this.offsetHeight + 'px';
+      colorOptions.style.left = e.target.offsetLeft + 'px';
+      colorOptions.style.top = e.target.offsetTop + e.target.offsetHeight + 'px';
+    } else {
+      colorOptions.style.display = 'none';
+    }
+  });
+
+  // Make shapes draggable
+  document.querySelectorAll('.shape').forEach(shape => {
+    makeShapeDraggable(shape);
+
+    // Make shapes duplicatable on double click
+    shape.addEventListener('dblclick', function () {
+      duplicateShape(this);
     });
   });
 </script>
