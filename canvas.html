@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .canvas-container {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: white;
+      position: relative;
+    }
+
+    .vertical-margin-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40px; /* Adjust the left margin position */
+      border-left: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 10px;
+    }
+
+    .horizontal-margin-line {
+      position: absolute;
+      top: 40px; /* Adjust the top margin position */
+      left: 0;
+      right: 0;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    .margin-number {
+      margin-bottom: 10px;
+    }
+
+    .text-input {
+      position: absolute;
+      top: 10px; /* Adjust the top position of the text input */
+      left: 60px; /* Adjust the left position of the text input */
+      width: calc(100% - 60px); /* Adjust the width of the text input */
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="canvas-container">
+    <div class="vertical-margin-line">
+      <!-- Numbers 1 to 10 in the left margin -->
+      <?php for ($i = 1; $i <= 10; $i++) { ?>
+        <div class="margin-number"><?php echo $i; ?></div>
+      <?php } ?>
+    </div>
+
+    <div class="horizontal-margin-line">
+      <!-- Text input at the top -->
+      <input type="text" class="text-input" placeholder="Type your text here">
+    </div>
+
+    <!-- Additional design or content can be added within the canvas container -->
+  </div>
+
+</body>
+</html>
