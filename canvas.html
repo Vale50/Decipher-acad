@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .equation {
+      margin-bottom: 20px;
+    }
+
+    .compound-input {
+      width: 30px;
+    }
+
+    .arrow {
+      margin: 0 10px;
+      font-size: 20px;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -67,31 +84,58 @@
 </head>
 <body>
 
-  <div class="worksheet-container">
-    <div class="worksheet-design"></div>
-
-    <div class="worksheet-header">
-      <p>Math Addition Worksheet</p>
+    <h2>Chemistry Worksheet - Balancing Equations</h2>
+    
+    <div class="equation">
+      <label for="question1"> 1:</label>
+    <h1><i> Combustion of hydrogen: </i></h1>
+      <input type="text" id="question1_lhs1" class="compound-input" placeholder="">H<sub>2</sub> +
+      <input type="text" id="question1_lhs2" class="compound-input" placeholder="">O<sub>2</sub>
+      <span class="arrow">&#8594;</span>
+      <input type="text" id="question1_rhs1" class="compound-input" placeholder="">H<sub>2</sub>O
+    
     </div>
-
-    <!-- Addition problems -->
-    <div class="addition-problem">
-      <div class="addend">42</div>
-      <div class="plus-sign">+</div>
-      <div class="addend">58</div>
-      <div class="sum"></div>
+    </br>
+    <div class="equation">
+      <label for="question2"> 2:</label>
+      <h1><i> Synthesis reaction: </i></h1>
+      <input type="text" id="question2_lhs1" class="compound-input" placeholder="">Ca + 
+      <input type="text" id="question2_lhs2" class="compound-input" placeholder=""> Cl
+      <span class="arrow">&#8594;</span>
+      <input type="text" id="question2_rhs1" class="compound-input" placeholder="">CaCl<sub>2</sub>
+      
     </div>
-
-    <div class="addition-problem">
-      <div class="addend">123</div>
-      <div class="plus-sign">+</div>
-      <div class="addend">456</div>
-      <div class="sum"></div>
+    </br>
+    
+    <div class="equation">
+      <label for="question3"> 3:</label>
+      <h1><i> Oxidation of Iron: </i></h1>
+      <input type="text" id="question3_lhs1" class="compound-input" placeholder="">Fe + 
+      <input type="text" id="question3_lhs2" class="compound-input" placeholder=""> O<sub>2</sub>
+      <span class="arrow">&#8594;</span>
+      <input type="text" id="question3_rhs1" class="compound-input" placeholder="">Fe<sub>2</sub>O<sub>3</sub>
+      <input type="text" id="question3_rhs2" class="compound-input" placeholder="">
     </div>
-
-    <!-- Add more problems as needed -->
-
-  </div>
-
-</body>
+    </br>
+    <div class="equation">
+      <label for="question4">4:</label>
+      <h1><i> Displacement of copper: </i></h1>
+      <input type="text" id="question4_lhs1" class="compound-input" placeholder="">Cu +
+      <input type="text" id="question4_lhs2" class="compound-input" placeholder="">AgNO<sub>3</sub>
+      <span class="arrow">&#8594;</span>
+      <input type="text" id="question4_rhs1" class="compound-input" placeholder="">Cu(NO<sub>3</sub>)<sub>2</sub> + 
+      <input type="text" id="question4_rhs2" class="compound-input" placeholder="">Ag
+    </div>
+    </br>
+    <div class="equation">
+      <label for="question5"> 5:</label>
+      <h1><i> Electrolysis of Water: </i></h1>
+      <input type="text" id="question5_lhs1" class="compound-input" placeholder="">H<sub>2</sub>O
+      
+      <span class="arrow">&#8594;</span>
+      <input type="text" id="question5_rhs1" class="compound-input" placeholder="">H<sub>2</sub>O + 
+      <input type="text" id="question5_rhs2" class="compound-input" placeholder="">O<sub>2</sub>
+    </div>
+    
+    </body>
 </html>
