@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odd or Even Game</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Odd or Even Game</h1>
+  <p>Click the button below to start the game:</p>
+  <button onclick="startGame()">Start Game</button>
+  <div id="game"></div>
+  <script>
+    function startGame() {
+      let score = 0;
+      let time = 10;
+      let intervalId;
+      const gameDiv = document.getElementById("game");
+      const questionDiv = document.createElement("div");
+      const answerDiv = document.createElement("div");
+      const timerDiv = document.createElement("div");
+      const scoreDiv = document.createElement("div");
+      const oddButton = document.createElement("button");
+      const evenButton = document.createElement("button");
+
+      function generateQuestion() {
+        const number = Math.floor(Math.random() * 100) + 1;
+        questionDiv.textContent = `Is ${number} odd or even?`;
+        answerDiv.textContent = "";
+        oddButton.disabled = false;
+        evenButton.disabled = false;
+        clearInterval(intervalId);
+        time = 10;
+        timerDiv.textContent = `Time remaining: ${time}`;
+        intervalId = setInterval(() => {
+          time--;
+          timerDiv.textContent = `Time remaining: ${time}`;
+          if (time === 0) {
+            clearInterval(intervalId);
+            oddButton.disabled = true;
+            evenButton.disabled = true;
+            answerDiv.textContent = `Time's up! The correct answer is ${
+              number % 2 === 0 ? "even" : "odd"
+            }.`;
+            setTimeout(generateQuestion, 2000);
+          }
+        }, 1000);
+      }
+
+      function checkAnswer(answer) {
+        clearInterval(intervalId);
+        oddButton.disabled = true;
+        evenButton.disabled = true;
+        const number = parseInt(questionDiv.textContent.split(" ")[1]);
+        if ((number % 2 === 0 && answer === "even") || (number % 2 !== 0 && answer === "odd")) {
+          answerDiv.textContent = "Correct!";
+          score++;
+        } else {
+          answerDiv.textContent = `Incorrect. The correct answer is ${
+            number % 2 === 0 ? "even" : "odd"
+          }.`;
+        }
+        setTimeout(generateQuestion, 2000);
+      }
+
+      questionDiv.style.fontSize = "24px";
+      questionDiv.style.marginBottom = "20px";
+      answerDiv.style.fontSize = "24px";
+      answerDiv.style.marginBottom = "20px";
+      oddButton.textContent = "Odd";
+      oddButton.style.marginRight = "10px";
+      oddButton.addEventListener("click", () => checkAnswer("odd"));
+      evenButton.textContent = "Even";
+      evenButton.addEventListener("click", () => checkAnswer("even"));
+      timerDiv.style.fontSize = "24px";
+      timerDiv.style.marginBottom = "20px";
+      scoreDiv.style.fontSize = "24px";
+      scoreDiv.style.marginBottom = "20px";
+      gameDiv.appendChild(questionDiv);
+      gameDiv.appendChild(answerDiv);
+      gameDiv.appendChild(oddButton);
+      gameDiv.appendChild(evenButton);
+      gameDiv.appendChild(timerDiv);
+      gameDiv.appendChild(scoreDiv);
+      generateQuestion();
+      intervalId = setInterval(() => {
+        scoreDiv.textContent = `Score: ${score}`;
+      }, 100);
+    }
+  </script>
+</body>
+</html>
