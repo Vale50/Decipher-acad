@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <!-- Write your CSS code here -->
+    <style>
+        #game-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        button {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="question">8 x 9</div>
+    
+    <button onclick="checkAnswer(this)" data-answer="6">6</button>
+    <button onclick="checkAnswer(this)" data-answer="9">9</button>
+    <!-- Add more buttons as needed -->
+    
+    <div id="feedback"></div>
+</div>
+
+<!-- Write your JS code here -->
+<script>
+    const correctAnswer = 72; // You can generate this dynamically
+
+    function checkAnswer(button) {
+        const userAnswer = button.getAttribute('data-answer');
+        
+        if(userAnswer == correctAnswer) {
+            button.style.backgroundColor = 'green';
+            document.getElementById('feedback').innerText = 'Correct!';
+        } else {
+            button.style.backgroundColor = 'red';
+            document.getElementById('feedback').innerText = 'Wrong!';
+        }
+    }
+</script>
+
+</body>
+</html>
