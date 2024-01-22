@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .worksheet-container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: white;
+      position: relative;
+      width: 600px; /* Adjust the width of the worksheet container */
+    }
+
+    .worksheet-header {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .addition-problem {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .addend {
+      font-size: 18px;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+      flex-grow: 1;
+    }
+
+    .plus-sign {
+      font-size: 18px;
+      margin: 0 10px;
+    }
+
+    .sum-input {
+      font-size: 18px;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+      flex-grow: 1;
+    }
+
+    .feedback-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+    }
+
+    .feedback-icon.correct {
+      color: green;
+    }
+
+    .feedback-icon.wrong {
+      color: red;
+    }
+
+    .worksheet-design {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: linear-gradient(to right, #4CAF50, #8BC34A); /* Gradient background */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="worksheet-container">
+    <div class="worksheet-design"></div>
+
+    <div class="worksheet-header">
+      <p>Math Addition Worksheet</p>
+    </div>
+
+    <!-- Addition problems -->
+    <div class="addition-problem">
+      <div class="addend">42</div>
+      <div class="plus-sign">+</div>
+      <input type="text" class="sum-input" data-answer="100">
+      <div class="feedback-icon"></div>
+    </div>
+
+    <div class="addition-problem">
+      <div class="addend">123</div>
+      <div class="plus-sign">+</div>
+      <input type="text" class="sum-input" data-answer="579">
+      <div class="feedback-icon"></div>
+    </div>
+
+    <!-- Add more problems as needed -->
+
+  </div>
+
+  <script>
+    // Function to check the answer when the input field is changed
+    function checkAnswer(input) {
+      const userAnswer = parseInt(input.value);
+      const correctAnswer = parseInt(input.dataset.answer);
+      const feedbackIcon = input.parentElement.querySelector('.feedback-icon');
+
+      if (userAnswer === correctAnswer) {
+        feedbackIcon.innerHTML = '✔';
+        feedbackIcon.classList.add('correct');
+        feedbackIcon.classList.remove('wrong');
+      } else {
+        feedbackIcon.innerHTML = '✘';
+        feedbackIcon.classList.add('wrong');
+        feedbackIcon.classList.remove('correct');
+      }
+    }
+
+    // Attach the checkAnswer function to the input fields' onchange event
+    const sumInputs = document.querySelectorAll('.sum-input');
+    sumInputs.forEach(function(input) {
+      input.addEventListener('input', function() {
+        checkAnswer(input);
+      });
+    });
+  </script>
+
+</body>
+</html>
