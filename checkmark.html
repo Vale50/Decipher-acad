@@ -3,117 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #f0f0f0;
-    }
+  <body>
+    <input type="text" id="input-field" onkeyup="checkInput()">
 
-    .worksheet-container {
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: white;
-      position: relative;
-      width: 600px; /* Adjust the width of the worksheet container */
-    }
+<script>
+function checkInput() {
+  var inputField = document.getElementById("input-field");
+  if (inputField.value == "correct") {
+    inputField.classList.remove("wrong");
+    inputField.classList.add("correct");
+  } else if (inputField.value == "wrong") {
+    inputField.classList.remove("correct");
+    inputField.classList.add("wrong");
+  } else {
+    inputField.classList.remove("correct");
+    inputField.classList.remove("wrong");
+  }
+}
+</script>
 
-    .worksheet-header {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+<style>
+input[type="text"] {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
 
-    .addition-problem {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
+input[type="text"]::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.5s ease-in-out;
+}
 
-    .addend {
-      font-size: 18px;
-      padding: 5px;
-      border-bottom: 1px solid #ccc;
-      flex-grow: 1;
-    }
+input[type="text"].correct::before {
+  background-color: green;
+}
 
-    .plus-sign {
-      font-size: 18px;
-      margin: 0 10px;
-    }
+input[type="text"].wrong::before {
+  background-color: red;
+}
+</style>
 
-    .sum-input {
-      font-size: 18px;
-      padding: 5px;
-      border-bottom: 1px solid #ccc;
-      flex-grow: 1;
-      position: relative;
-    }
-
-    .toggle-thumb::before {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: red;
-      top: 50%;
-      transform: translateY(-50%);
-      left: -25px;
-      transition: left 0.3s ease, background-color 0.3s ease;
-    }
-
-    .toggle-thumb.correct::before {
-      left: calc(100% + 5px);
-      background-color: green;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="worksheet-container">
-    <div class="worksheet-header">
-      <p>Math Addition Worksheet</p>
-    </div>
-
-    <!-- Addition problems -->
-    <div class="addition-problem">
-      <div class="addend">42</div>
-      <div class="plus-sign">+</div>
-      <input type="text" class="sum-input toggle-thumb" data-answer="100">
-    </div>
-
-    <div class="addition-problem">
-      <div class="addend">123</div>
-      <div class="plus-sign">+</div>
-      <input type="text" class="sum-input toggle-thumb" data-answer="579">
-    </div>
-
-    <!-- Add more problems as needed -->
-
-  </div>
-
-  <script>
-    const sumInputs = document.querySelectorAll('.sum-input');
-    sumInputs.forEach(function(input) {
-      input.addEventListener('input', function() {
-        const userAnswer = parseInt(input.value);
-        const correctAnswer = parseInt(input.dataset.answer);
-        const toggleThumb = input.classList;
-
-        if (userAnswer === correctAnswer) {
-          toggleThumb.add('correct');
-        } else {
-          toggleThumb.remove('correct');
-        }
-      });
-    });
-  </script>
-
-</body>
+  </body>
 </html>
