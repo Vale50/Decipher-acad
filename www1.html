@@ -14,7 +14,7 @@
       margin-top: 20px;
       padding: 10px;
       border: 1px solid #ccc;
-      position: relative;
+      white-space: pre-line; /* Preserve line breaks */
     }
 
     #childDiv {
@@ -82,10 +82,10 @@
 
     // Display and save the text in the container
     var displayContainer = document.getElementById('displayContainer');
-    displayContainer.innerText = enteredText;
+    displayContainer.innerText += enteredText + '\n';
 
     // Save the entered text to local storage
-    localStorage.setItem('enteredText', enteredText);
+    localStorage.setItem('enteredText', displayContainer.innerText);
 
     // Clear status in local storage
     localStorage.removeItem('status');
