@@ -24,7 +24,11 @@
       position: relative;
     }
 
-    #correctButton, #wrongButton {
+    #childInput {
+      margin-top: 10px;
+    }
+
+    #correctButton, #wrongButton, #childSubmitButton {
       margin-top: 10px;
       cursor: pointer;
     }
@@ -53,9 +57,13 @@
 <div id="displayContainer"></div>
 
 <div id="childDiv">
-  <button id="correctButton">Correct</button>
-  <button id="wrongButton">Wrong</button>
+  <label for="childInput">Enter Text in Child Div:</label>
+  <input type="text" id="childInput" name="childInput">
+  <button id="childSubmitButton">Submit in Child Div</button>
 </div>
+
+<button id="correctButton">Correct</button>
+<button id="wrongButton">Wrong</button>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -86,6 +94,21 @@
 
     // Save the entered text to local storage
     localStorage.setItem('enteredText', displayContainer.innerText);
+
+    // Clear status in local storage
+    localStorage.removeItem('status');
+  });
+
+  document.getElementById('childSubmitButton').addEventListener('click', function () {
+    // Get the entered text in the child div
+    var childInputText = document.getElementById('childInput').value;
+
+    // Display and save the text in the child div
+    var childDiv = document.getElementById('childDiv');
+    childDiv.innerText += childInputText + '\n';
+
+    // Save the entered text to local storage
+    localStorage.setItem('enteredText', childDiv.innerText);
 
     // Clear status in local storage
     localStorage.removeItem('status');
