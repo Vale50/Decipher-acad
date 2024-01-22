@@ -52,40 +52,31 @@
       padding: 5px;
       border-bottom: 1px solid #ccc;
       flex-grow: 1;
+      position: relative;
     }
 
-    .feedback-icon {
+    .toggle-thumb::before {
+      content: '';
       position: absolute;
-      right: 20px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 24px;
+      left: -25px;
+      transition: left 0.3s ease, background-color 0.3s ease;
     }
 
-    .feedback-icon.correct {
-      color: green;
-    }
-
-    .feedback-icon.wrong {
-      color: red;
-    }
-
-    .worksheet-design {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      background: linear-gradient(to right, #4CAF50, #8BC34A); /* Gradient background */
+    .toggle-thumb.correct::before {
+      left: calc(100% + 5px);
+      background-color: green;
     }
   </style>
 </head>
 <body>
 
   <div class="worksheet-container">
-    <div class="worksheet-design"></div>
-
     <div class="worksheet-header">
       <p>Math Addition Worksheet</p>
     </div>
@@ -94,15 +85,13 @@
     <div class="addition-problem">
       <div class="addend">42</div>
       <div class="plus-sign">+</div>
-      <input type="text" class="sum-input" data-answer="100">
-      <div class="feedback-icon"></div>
+      <input type="text" class="sum-input toggle-thumb" data-answer="100">
     </div>
 
     <div class="addition-problem">
       <div class="addend">123</div>
       <div class="plus-sign">+</div>
-      <input type="text" class="sum-input" data-answer="579">
-      <div class="feedback-icon"></div>
+      <input type="text" class="sum-input toggle-thumb" data-answer="579">
     </div>
 
     <!-- Add more problems as needed -->
@@ -110,28 +99,18 @@
   </div>
 
   <script>
-    // Function to check the answer when the input field is changed
-    function checkAnswer(input) {
-      const userAnswer = parseInt(input.value);
-      const correctAnswer = parseInt(input.dataset.answer);
-      const feedbackIcon = input.parentElement.querySelector('.feedback-icon');
-
-      if (userAnswer === correctAnswer) {
-        feedbackIcon.innerHTML = '✔';
-        feedbackIcon.classList.add('correct');
-        feedbackIcon.classList.remove('wrong');
-      } else {
-        feedbackIcon.innerHTML = '✘';
-        feedbackIcon.classList.add('wrong');
-        feedbackIcon.classList.remove('correct');
-      }
-    }
-
-    // Attach the checkAnswer function to the input fields' onchange event
     const sumInputs = document.querySelectorAll('.sum-input');
     sumInputs.forEach(function(input) {
       input.addEventListener('input', function() {
-        checkAnswer(input);
+        const userAnswer = parseInt(input.value);
+        const correctAnswer = parseInt(input.dataset.answer);
+        const toggleThumb = input.classList;
+
+        if (userAnswer === correctAnswer) {
+          toggleThumb.add('correct');
+        } else {
+          toggleThumb.remove('correct');
+        }
       });
     });
   </script>
