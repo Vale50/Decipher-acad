@@ -19,9 +19,8 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Get the text parameter from the URL
-    var urlParams = new URLSearchParams(window.location.search);
-    var enteredText = urlParams.get('text');
+    // Get the entered text from local storage
+    var enteredText = localStorage.getItem('enteredTextPreview');
 
     // Display the entered text
     var displayText = document.getElementById('displayText');

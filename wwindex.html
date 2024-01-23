@@ -19,6 +19,7 @@
   <label for="textInput">Enter Text:</label>
   <input type="text" id="textInput" name="textInput" required>
   <button type="button" onclick="submitForm()">Submit</button>
+  <button type="button" onclick="previewText()">Preview</button>
 </form>
 
 <div id="displayContainer"></div>
@@ -33,8 +34,26 @@
     // Get the entered text
     var enteredText = document.getElementById('textInput').value;
 
-    // Redirect to the display.html page with the entered text as a parameter
-    window.location.href = 'wwdisplay.html?text=' + encodeURIComponent(enteredText);
+    // Display and save the text in the container
+    var displayContainer = document.getElementById('displayContainer');
+    displayContainer.innerText += enteredText + '\n';
+
+    // Save the entered text to local storage
+    localStorage.setItem('enteredText', displayContainer.innerText);
+
+    // Clear status in local storage
+    localStorage.removeItem('status');
+  }
+
+  function previewText() {
+    // Get the entered text
+    var enteredText = document.getElementById('textInput').value;
+
+    // Save the entered text to local storage for preview page
+    localStorage.setItem('enteredTextPreview', enteredText);
+
+    // Redirect to the display.html page for preview
+    window.location.href = 'display.html';
   }
 
   document.addEventListener('DOMContentLoaded', function () {
