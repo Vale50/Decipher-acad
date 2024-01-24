@@ -16,19 +16,28 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: red;
 }
+#p{
+  display:none;
+}
 </style>
 </head>
 <body>
-<a href="ani.html"><h1>D</h1></a>
-<a href="ani.html"><h1>E</h1></a>
-<a href="ani.html"><h1>C</h1></a>
-<a href="ani.html"><h1>I</h1></a>
-<a href="ani.html"><h1>P</h1></a>
-<a href="ani.html"><h1>H</h1></a>
-<a href="ani.html"><h1>E</h1></a>
-<a href="ani.html"><h1>R</h1></a>
+  <button onclick="toggleVisibility()"><a><h1>D</h1></a></button>
+  <button onclick="toggleVisibility()"><a>E</h1></a></button>
+  <button onclick="toggleVisibility()"><a>C</h1></a></button>
+  <button onclick="toggleVisibility()"><a>I</h1></a></button>
+  <button onclick="toggleVisibility()"><a>P</h1></a></button>
+  <button onclick="toggleVisibility()"><a>H</h1></a></button>
+  <button onclick="toggleVisibility()"><a>E</h1></a></button>
+  <button onclick="toggleVisibility()"><a>R</h1></a></button>
 
 
+<script>
+  function toggleVisibility() {
+    var tag = document.getElementById('p');
+    tag.style.display=(tag.style.display ==='none' || tag.style.display ==='') ? 'block' : 'none';
+  }
+</script>
 
 </body>
 </br>
