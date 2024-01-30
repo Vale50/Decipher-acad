@@ -256,163 +256,164 @@ let questions = [
     answer: 2
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "Which U.S. president is associated with the establishment of the National Park system?",
+    choice1:"Theodore Roosevelt",
+    choice2: "Woodrow Wilson",
+    choice3: "William Howard Taft",
+    choice4: "Franklin D. Roosevelt",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Gulf of Tonkin Resolution, passed by Congress in 1964, played a significant role in the escalation of U.S. involvement in:",
+    choice1:"World War I",
+    choice2: "Korean War",
+    choice3: "Vietnam War",
+    choice4: "Gulf War",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The term 'Reconstruction' in U.S. history refers to the period following the:",
+    choice1:"American Revolution",
+    choice2: "Civil War",
+    choice3: "War of 1812",
+    choice4: "Mexican-American War",
+    answer: 2
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1944 G.I. Bill aimed to provide support to:",
+    choice1:"Veterans returning from World War II",
+    choice2: "Civil rights activists",
+    choice3: "Women entering the workforce",
+    choice4: "Native American communities",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The landmark case of Roe v. Wade (1973) addressed issues related to:",
+    choice1:"School desegregation ",
+    choice2: "Affirmative action",
+    choice3: "Abortion rightsg",
+    choice4: "Voting rights",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1920s in the United States are often referred to as the 'Roaring Twenties' due to:",
+    choice1:"Economic depression",
+    choice2: "Rapid industrialization",
+    choice3: "Social and cultural upheaval",
+    choice4: "Prohibition of alcohol",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1968 Democratic National Convention in Chicago became known for:
+    ",
+    choice1:"The nomination of Richard Nixon",
+    choice2: "Peaceful protests and unity",
+    choice3: "Violent clashes between protesters and police",
+    choice4: "The passage of civil rights legislation",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 'Star-Spangled Banner,'' the U.S. national anthem, was inspired by events during the:",
+    choice1:"American Revolution",
+    choice2: "War of 1812",
+    choice3: "Civil War",
+    choice4: "Mexican-American War",
+    answer: 2
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Marshall Plan, initiated after World War II, was designed to:",
+    choice1:"Rebuild European economies",
+    choice2: "Promote isolationist policies",
+    choice3: "Contain the spread of communism",
+    choice4: "Establish military alliances in Europe",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 18th Amendment to the U.S. Constitution, which was later repealed, dealt with the issue of:",
+    choice1:"Women's suffrage",
+    choice2: "Prohibition of alcohol",
+    choice3: " Abolition of slavery",
+    choice4: "Freedom of speech",
+    answer: 2
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
+    choice1:"Martin Luther King Jr.'s 'I Have a Dream' speech",
+    choice2: "The establishment of the Peace Corps",
+    choice3: "The signing of the Civil Rights Act",
+    choice4: "The formation of the Black Panther Party",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Wounded Knee Massacre in 1890 was a tragic event associated with the:",
+    choice1:"Indian Removal Act ",
+    choice2: "Trail of Tears",
+    choice3: "Ghost Dance movement",
+    choice4: "Battle of Little Bighorn",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Tet Offensive during the Vietnam War had a significant impact on public opinion in the United States by:",
+    choice1:"Strengthening support for the war",
+    choice2: "Demonstrating the success of U.S. military strategy",
+    choice3: "Shifting public opinion against the war",
+    choice4: "Isolating the conflict from Cold War tensions",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Harlem Renaissance of the 1920s was a cultural and artistic movement primarily associated with:",
+    choice1:"Jazz music ",
+    choice2: "Abstract expressionist painting",
+    choice3: "Beat poetry",
+    choice4: "Regionalist literature",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Progressive Era in the early 20th century was characterized by efforts to address social issues through:",
+    choice1:"Laissez-faire economic policies ",
+    choice2: "Limited government intervention",
+    choice3: "Reform and regulation",
+    choice4: "Expansion of imperialism",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1862 Homestead Act encouraged westward expansion by providing:",
+    choice1:" Financial aid to farmers ",
+    choice2: " Land grants to railroad companies",
+    choice3: "Free land to settlers who improved the property",
+    choice4: "Military protection to pioneers",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: " The 1912 presidential election featured a third-party candidate who advocated for progressive reforms. Who was this candidate?",
+    choice1:"Woodrow Wilson ",
+    choice2: "Theodore Roosevelt",
+    choice3: "William Howard Taft",
+    choice4: "Eugene V. Debs",
+    answer: 2
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: 'The "Bay of Pigs' invasion in 1961 was an unsuccessful attempt by the United States to overthrow the government of:",
+    choice1:"Cuba",
+    choice2: "Vietnam",
+    choice3: " Nicaragua",
+    choice4: "Iran",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
+    question: "The 1972 Watergate scandal led to the resignation of President Richard Nixon. What was the primary issue in the Watergate scandal?",
+    choice1:" Illegal wiretapping",
+    choice2: "Espionage against foreign governments",
+    choice3: "Bribery of foreign officials",
+    choice4: "Burglary and cover-up of political activities",
     answer: 4
   }, {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1906 Pure Food and Drug Act and the Meat Inspection Act were significant pieces of legislation aimed at:",
+    choice1:"Regulating labor practices",
+    choice2: " Improving public health and safety",
+    choice3: " Addressing racial segregation",
+    choice4: " Expanding women's rights",
+    answer: 2
   },
   {
     question: " I _____ to the park tomorrow with my friends.",
