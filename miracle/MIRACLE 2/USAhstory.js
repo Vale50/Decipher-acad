@@ -106,74 +106,74 @@ let questions = [
     answer: 2
   },
   {
-    question: " Mr Kelley ____________ to church every Sunday.?",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    answer: 4
-  },
-  {
-    question: " Jason and Roland were riding their bikes when it started to rain?",
-    choice1:"present progressive",
-    choice2: "past progressive",
-    choice3: "future progressive",
-    choice4: "none of the above",
+    question: " The Battle of Gettysburg, a crucial turning point in the American Civil War, took place in which state?",
+    choice1: "Virginia",
+    choice2: "Pennsylvania",
+    choice3: "Maryland",
+    choice4: "Ohio",
     answer: 2
   },
   {
-    question: " The scientist will be talking about his research at the next meeting",
-    choice1: "future progressive",
-    choice2: "past progressive",
-    choice3: "present progressive",
-    choice4: "all of the above",
+    question: "What was the primary cause of the Texas Revolution in 1836?",
+    choice1:"Dispute over border territories",
+    choice2: "Cultural differences with Mexico",
+    choice3: "Economic disagreements",
+    choice4: "Opposition to slavery",
+    answer: 2
+  },
+  {
+    question: "Who was the main architect of the Marshall Plan, a U.S. initiative to aid European countries in rebuilding after World War II?",
+    choice1: "Dwight D. Eisenhower",
+    choice2: "George C. Marshall",
+    choice3: "Harry S. Truman",
+    choice4: "aJohn F. Kennedy",
+    answer: 2
+  },
+  {
+    question: "The 26th Amendment to the U.S. Constitution lowered the voting age from 21 to:",
+    choice1:"18 ",
+    choice2: "19",
+    choice3: "20",
+    choice4: "22",
+    answer: 1
+  }, {
+    question: "What event led to the United States' acquisition of the territory known as the Gadsden Purchase in 1853?",
+    choice1:"Oregon Trail expansion",
+    choice2: "Mexican-American War",
+    choice3: "Gold Rush in California",
+    choice4: "Lewis and Clark Expedition",
+    answer: 2
+  },
+  {
+    question: "The Native American leader who led resistance against U.S. expansion in the 1870s and was killed at the Battle of the Little Bighorn was:",
+    choice1:"Chief Joseph ",
+    choice2: "Sitting Bull",
+    choice3: "Geronimo",
+    choice4: "Crazy Horse",
+    answer: 2
+  },
+  {
+    question: "Which amendment to the U.S. Constitution abolished slavery?",
+    choice1:"13th Amendment",
+    choice2: "14th Amendment",
+    choice3: "15th Amendment",
+    choice4: "16th Amendment",
+    answer: 1
+  }, {
+    question: "The slogan 54-40 or Fight! was associated with which U.S. territorial dispute in the 1840s?",
+    choice1:"Oregon Country",
+    choice2: "Mexican Cession",
+    choice3: " Louisiana Purchase",
+    choice4: "Texas Annexation",
     answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  }, {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  }, {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The Watergate scandal led to the resignation of which U.S. president?",
+    choice1:"Richard Nixon",
+    choice2: "Gerald Ford",
+    choice3: "Jimmy Carter",
+    choice4: "Ronald Reagan",
+    answer: 1
   },
   {
     question: " I _____ to the park tomorrow with my friends.",
