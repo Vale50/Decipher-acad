@@ -103,27 +103,28 @@ Who was the British Prime Minister at the beginning of World War II in 1939 ?",
     answer: 4
   },
   {
-    question: " Mr Kelley ____________ to church every Sunday.?",
-    choice1: "",
+    question: " 
+    The Battle of Naseby in 1645 was a decisive victory for which side in the English Civil War.?",
+    choice1: "Ralistsoy",
+    choice2: "Parliamentarians",
+    choice3: "Cavaliers",
+    choice4: "Roundheads",
+    answer: 2
+  },
+  {
+    question: "" Who was the British Prime Minister during the signing of the Treaty of Lisbon in 2007 .?",
+    choice1: "Tony Blair",
+    choice2: " Gordon Brown",
+    choice3: "David Cameron",
+    choice4: "Theresa May",
+    answer: 2
+  },
+  {
+    question: " ?",
+    choice1:"",
     choice2: "",
     choice3: "",
     choice4: "",
-    answer: 4
-  },
-  {
-    question: " Mr Kelley ____________ to church every Sunday.?",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    answer: 4
-  },
-  {
-    question: " Jason and Roland were riding their bikes when it started to rain?",
-    choice1:"present progressive",
-    choice2: "past progressive",
-    choice3: "future progressive",
-    choice4: "none of the above",
     answer: 2
   },
   {
