@@ -120,20 +120,22 @@ Who was the British Prime Minister at the beginning of World War II in 1939 ?",
     answer: 2
   },
   {
-    question: " ?",
-    choice1:"",
-    choice2: "",
-    choice3: "",
-    choice4: "",
+    question:  "The"Glorious Revolution" of 1688 resulted in the overthrow of which monarch?",
+    choice1:" Charles II",
+    choice2: "James II",
+    choice3: "William III",
+    choice4: "Anne",
     answer: 2
   },
   {
-    question: " The scientist will be talking about his research at the next meeting",
-    choice1: "future progressive",
-    choice2: "past progressive",
-    choice3: "present progressive",
-    choice4: "all of the above",
-    answer: 1
+    question: "
+    14. Who was the British monarch during the time of the Spanish Armada
+     ",
+    choice1: " Elizabeth I",
+    choice2: ") James I",
+    choice3: " Mary I ",
+    choice4: " Henry VIII",
+    answer:1 
   },
   {
     question: " I _____ to the park tomorrow with my friends.",
