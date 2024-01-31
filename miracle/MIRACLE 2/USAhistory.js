@@ -393,7 +393,7 @@ let questions = [
     answer: 2
   },
   {
-    question: 'The "Bay of Pigs' invasion in 1961 was an unsuccessful attempt by the United States to overthrow the government of:",
+    question: "The 'Bay of Pigs' invasion in 1961 was an unsuccessful attempt by the United States to overthrow the government of:",
     choice1:"Cuba",
     choice2: "Vietnam",
     choice3: " Nicaragua",
@@ -416,6 +416,134 @@ let questions = [
     answer: 2
   },
   {
+    question: "The 1964 Civil Rights Act aimed to end discrimination based on:",
+    choice1:"Gender",
+    choice2: "Religion",
+    choice3: "Race and color",
+    choice4: "Sexual orientation",
+    answer: 3
+  },
+  {
+    question: "The 1803 Louisiana Purchase, negotiated by President Thomas Jefferson, involved the acquisition of territory from:",
+    choice1:"France",
+    choice2: "Spain",
+    choice3: "Britain",
+    choice4: "Mexico",
+    answer: 1
+  },
+  {
+    question: " The 'Big Four' who played a crucial role in negotiating the Treaty of Versailles after World War I included leaders from:",
+    choice1:"United States, Germany, Britain, and France",
+    choice2: "France, Italy, Japan, and the Soviet Union",
+    choice3: "United States, Britain, France, and Italy",
+    choice4: "Germany, Britain, Russia, and Austria-Hungary",
+    answer: 3
+  },
+  {
+    question: "The 19th-century movement that sought to limit the consumption of alcoholic beverages and ultimately led to Prohibition in the United States was known as:",
+    choice1:"Temperance movement ",
+    choice2: " Suffrage movement",
+    choice3: "Abolitionist movement",
+    choice4: "Populist movement",
+    answer: 1
+  },
+  {
+    question: "The 1986 Challenger space shuttle disaster occurred during the presidency of:",
+    choice1:"Ronald Reagan",
+    choice2: "Jimmy Carter",
+    choice3: "George H.W. Bush",
+    choice4: "Bill Clinton",
+    answer: 1
+  },
+  {
+    question: "The Marshall Plan, initiated after World War II, was designed to provide economic aid primarily to:",
+    choice1:" Asian countries ",
+    choice2: "African countries",
+    choice3: "Eastern European countries",
+    choice4: "Western European countries",
+    answer: 4
+  },
+  {
+    question: "The 'Great Compromise' during the Constitutional Convention of 1787 resolved the issue of representation in the U.S. Congress by proposing a:",
+    choice1:"Proportional representation system",
+    choice2: "Equal representation system",
+    choice3: "Bicameral legislature",
+    choice4: "Unicameral legislature",
+    answer: 3
+  },
+  {
+    question: "The term 'Yellow Journalism' is associated with sensationalized and exaggerated reporting, particularly during the:",
+    choice1:"Civil War",
+    choice2: "Spanish-American War",
+    choice3: "World War I",
+    choice4: "Vietnam War",
+    answer: 2
+  },
+  {
+    question: "The 1965 Voting Rights Act aimed to eliminate barriers preventing African Americans from:",
+    choice1:"Owning property",
+    choice2: "Serving in the military",
+    choice3: "Voting",
+    choice4: "Attending schools",
+    answer: 3
+  },
+  {
+    question: "The Supreme Court case Brown v. Board of Education (1954) overturned the precedent set by which earlier case that allowed racial segregation in public schools?",
+    choice1:" Plessy v. Ferguson",
+    choice2: "Dred Scott v. Sandford",
+    choice3: "Marbury v. Madison",
+    choice4: " Gibbons v. Ogden",
+    answer: 1
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
     question: " I _____ to the park tomorrow with my friends.",
     choice1:"was going ",
     choice2: "is going",
@@ -479,13 +607,1582 @@ let questions = [
     choice4: "will be going",
     answer: 4
   },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+      },
+      {
+        question: " I _____ to the park tomorrow with my friends.",
+        choice1:"was going ",
+        choice2: "is going",
+        choice3: "are going",
+        choice4: "will be going",
+        answer: 4
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+        },
+        {
+          question: " I _____ to the park tomorrow with my friends.",
+          choice1:"was going ",
+          choice2: "is going",
+          choice3: "are going",
+          choice4: "will be going",
+          answer: 4
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+          },
+          {
+            question: " I _____ to the park tomorrow with my friends.",
+            choice1:"was going ",
+            choice2: "is going",
+            choice3: "are going",
+            choice4: "will be going",
+            answer: 4
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+              choice4: "will be going",
+              answer: 4
+            },
+            {
+              question: " I _____ to the park tomorrow with my friends.",
+              choice1:"was going ",
+              choice2: "is going",
+              choice3: "are going",
+             choice4: "will be going",
+              answer: 4
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+},
+{
+  question: " I _____ to the park tomorrow with my friends.",
+  choice1:"was going ",
+  choice2: "is going",
+  choice3: "are going",
+  choice4: "will be going",
+  answer: 4
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
+    },
+    {
+      question: " I _____ to the park tomorrow with my friends.",
+      choice1:"was going ",
+      choice2: "is going",
+      choice3: "are going",
+      choice4: "will be going",
+      answer: 4
 
+//CONSTANTS{
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
+  },
+  {
+    question: " I _____ to the park tomorrow with my friends.",
+    choice1:"was going ",
+    choice2: "is going",
+    choice3: "are going",
+    choice4: "will be going",
+    answer: 4
 
-
-];
-
-
-//CONSTANTS
 const CORRECT_BONUS = 5;
 const MAX_QUESTIONS = 15;
 
