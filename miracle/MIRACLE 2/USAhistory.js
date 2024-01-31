@@ -496,244 +496,244 @@ let questions = [
     answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
+    question: "The Neutrality Acts of the 1930s were aimed at preventing the United States from being drawn into conflicts by:",
+    choice1:"Banning the sale of arms to belligerent nations",
+    choice2: "Encouraging alliances with European powers",
+    choice3: "Promoting interventionist foreign policies",
+    choice4: "Supporting international peacekeeping efforts",
+    answer: 1
+  },
+  {
+    question: "The 1979 Iranian Revolution resulted in the overthrow of which leader, leading to the establishment of an Islamic republic in Iran?",
+    choice1:"Shah Mohammad Reza Pahlavi",
+    choice2: "Ayatollah Ruhollah Khomein",
+    choice3: "Saddam Hussein",
+    choice4: "Mahmoud Ahmadinejad",
+    answer: 1
+  },
+  {
+    question: "The 1944 Bretton Woods Conference laid the foundation for the establishment of",
+    choice1:"United Nations",
+    choice2: "International Monetary Fund (IMF)",
+    choice3: "European Union (EU)",
+    choice4: "North Atlantic Treaty Organization (NATO)",
+    answer: 2
+  },
+  {
+    question: "The 'War on Terror' initiated in the aftermath of the September 11, 2001 attacks led to U.S. military involvement in which countries?",
+    choice1:"Iraq and Afghanistan",
+    choice2: " Iran and Syria",
+    choice3: "Libya and Yemen",
+    choice4: "North Korea and Pakistan",
+    answer: 1
+  },
+  {
+    question: " The 1876 Battle of Little Bighorn, also known as Custer's Last Stand, involved conflict between the U.S. Army and:",
+    choice1:"Apache Indians",
+    choice2: " Lakota Sioux and Cheyenne tribes",
+    choice3: "Nez Perce Indians",
+    choice4: "Comanche Indians",
+    answer: 2
+  },
+  {
+    question: "The 'New Frontier' was a term associated with the domestic and foreign policies of which U.S. president?",
+    choice1:"John F. Kennedy ",
+    choice2: "Lyndon B. Johnson",
+    choice3: "Dwight D. Eisenhower",
+    choice4: "Richard Nixon",
+    answer: 1
+  },
+  {
+    question: "The 1898 Treaty of Paris concluded the Spanish-American War and resulted in the United States acquiring which territories?",
+    choice1:"Puerto Rico, Guam, and the Philippines",
+    choice2: "Cuba, Mexico, and Haiti",
+    choice3: " Alaska, Hawaii, and Samoa",
+    choice4: "Panama, Nicaragua, and Honduras",
+    answer: 11
+  },
+  {
+    question: "The 1836 Battle of the Alamo was a key event in which conflict for Texan independence?",
+    choice1:"Mexican-American War ",
+    choice2: "War of 1812",
+    choice3: "Texas Revolution",
+    choice4: " Civil War",
+    answer: 3
+  },
+  {
+    question: "The 1947 Truman Doctrine was a response to the spread of:",
+    choice1:"Communism",
+    choice2: "Fascism",
+    choice3: "Imperialism",
+    choice4: "Nationalism",
+    answer: 1
+  },
+  {
+    question: "The 1969 Apollo 11 mission achieved the first successful:",
+    choice1:"Spacewalk",
+    choice2: "Mars landing",
+    choice3: "Moon landing",
+    choice4: "Satellite launch",
+    answer: 3
+  },
+  {
+    question: "The 1901 assassination of President William McKinley led to the presidency of:",
+    choice1:"Theodore Roosevelt",
+    choice2: "Woodrow Wilson",
+    choice3: "William Howard Taft ",
+    choice4: "Franklin D. Roosevelt",
+    answer: 1
+  },
+  {
+    question: "The 1964 Gulf of Tonkin Resolution granted President Lyndon B. Johnson the authority to:",
+    choice1:"Declare war on North Vietnam",
+    choice2: "Mobilize U.S. troops in Vietnam",
+    choice3: "Negotiate a peace treaty with North Vietnam",
+    choice4: " Expand the draft for military service",
+    answer: 2
+  },
+  {
+    question: "The 19th-century concept of 'Manifest Destiny' was closely tied to the belief in the:",
+    choice1:"Right to bear arms",
+    choice2: "Abolition of slavery",
+    choice3: "Expansion of American territory to the Pacific",
+    choice4: "Separation of church and state",
+    answer: 3
+  },
+  {
+    question: "The 1980s economic policy of reducing government regulation and promoting free-market principles was commonly known as:",
+    choice1:"The Great Society",
+    choice2: "The New Deal",
+    choice3: "Reaganomics",
+    choice4: "The Square Deal",
+    answer: 3
+  },
+  {
+    question: "The 1894 Pullman Strike, a nationwide railroad strike, was a protest against:",
+    choice1:"Wage cuts and poor working conditions",
+    choice2: " High taxes on railroads",
+    choice3: "Government interference in labor disputes",
+    choice4: "Discrimination against immigrant workers",
+    answer: 1
+  },
+  {
+    question: "The 1919 Treaty of Versailles included the establishment of which international organization?",
+    choice1:"United Nations",
+    choice2: "League of Nations",
+    choice3: "NATO (North Atlantic Treaty Organization)",
+    choice4: "European Union",
+    answer: 2
+  },
+  {
+    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
+    choice1:" Martin Luther King Jr.'s 'I Have a Dream' speech",
+    choice2: "The establishment of the Peace Corps",
+    choice3: "The signing of the Civil Rights Act",
+    choice4: "The formation of the Black Panther Party",
+    answer: 1
+  },
+  {
+    question: "The 1892 Populist Party platform sought to address the concerns of:",
+    choice1:" Industrial workers",
+    choice2: "Farmers and laborers",
+    choice3: "Urban immigrants",
+    choice4: "Business owners",
+    answer: 2
+  },
+  {
+    question: "The 1927 execution of Italian immigrants Sacco and Vanzetti highlighted issues related to:",
+    choice1:"Labor strikes",
+    choice2: "Immigration quotas",
+    choice3: "Anarchism and nativism",
+    choice4: "Civil rights",
+    answer: 3
+  },
+  {
+    question: "The 1846 Oregon Trail migration was driven by the desire for:",
+    choice1:"Gold and wealth",
+    choice2: "Religious freedom",
+    choice3: "Agricultural opportunities",
+    choice4: "Fur trapping and trading opportunities",
+    answer: 3
+  },
+  {
+    question: "The 1965 Watts riots in Los Angeles were sparked by issues related to:",
+    choice1:"Racial tensions and police brutality",
+    choice2: "Economic inequality",
+    choice3: "Vietnam War protests",
+    choice4: "Anti-immigrant sentiments",
+    answer: 1
+  },
+  {
+    question: "The 1920s cultural and social movement known for challenging traditional norms and values was called the:",
+    choice1:"Harlem Renaissance",
+    choice2: "Beat Generation",
+    choice3: "Lost Generation",
+    choice4: "Jazz Age",
     answer: 4
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1969 Apollo 11 mission achieved the first successful:",
+    choice1:"Spacewalk",
+    choice2: "Mars landing",
+    choice3: " Moon landing",
+    choice4: " Satellite launch",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1954 Brown v. Board of Education decision declared that racial segregation in public schools was:",
+    choice1:" Legal ",
+    choice2: "Unconstitutional",
+    choice3: " Up to individual states",
+    choice4: "Temporary",
+    answer: 2
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1830 Indian Removal Act resulted in the forced relocation of Native American tribes, primarily the:",
+    choice1:"Cherokee",
+    choice2: "Sioux",
+    choice3: "Apache",
+    choice4: " Iroquoi",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1870 passage of the 15th Amendment to the U.S. Constitution granted voting rights to:",
+    choice1:" African American men",
+    choice2: "Women",
+    choice3: "Native Americans",
+    choice4: "All citizens regardless of race",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: " The 1968 Tet Offensive during the Vietnam War marked a turning point in public opinion against U.S. involvement, as it revealed:",
+    choice1:"Military success and progress",
+    choice2: "The effectiveness of U.S. counterinsurgency strategies",
+    choice3: "The influence of the media on shaping public perception",
+    choice4: "The stability of the South Vietnamese government",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1906 Pure Food and Drug Act and the Meat Inspection Act were responses to concerns raised by:",
+    choice1:" Labor unions",
+    choice2: "Environmental activists",
+    choice3: "Consumer advocates",
+    choice4: " Anti-imperialists",
+    answer: 3
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "The 1942 executive order that authorized the internment of Japanese Americans during World War II was issued by:",
+    choice1:"Franklin D. Roosevelt",
+    choice2: "Harry S. Truman",
+    choice3: " Dwight D. Eisenhower",
+    choice4: "Herbert Hoover",
+    answer: 1
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
-  },
-  {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: " The 1869 completion of the First Transcontinental Railroad was a significant achievement connecting the East and West coasts of the United States primarily through the efforts of:",
+    choice1:"Union Pacific and Central Pacific Railroad companies",
+    choice2: "Santa Fe and Southern Pacific Railroad companies",
+    choice3: "Baltimore and Ohio Railroad",
+    choice4: "Norfolk Southern and Canadian Pacific Railway",
+    answer: 1
   },
   {
     question: " I _____ to the park tomorrow with my friends.",
