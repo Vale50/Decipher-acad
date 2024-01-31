@@ -126,60 +126,59 @@ let questions = [
     answer:1 
   },
   {
-    question: "Who was the British monarch during the time of the Spanish Armada",
-    choice1: " Elizabeth I",
-    choice2: ") James I",
-    choice3: " Mary I ",
-    choice4: " Henry VIII",
-    answer:1 
+    question: " The Magna Carta was signed during the reign of which English king? ",
+    choice1: " Richard   ",
+    choice2: "John",
+    choice3: "  Henry II",
+    choice4: " Edward I",
+    answer:2
   },
   {
-    question: ".The Battle of Stamford Bridge in 1066 was fought between which two parties?",
-    choice1: "<England and Scotland>",
-    choice2: "<England and Frace >",
-    choice3: "<England and Vikings>", 
-    choice4: "<England and Normans>",
-    answer: 3
-  },
-  {
-    question:"Who was the British Prime Minister during the Falklands War in 1982.?",
-    choice1: "<Margaret Thatcher>"
-    choice2: "<Tony Blair>"
-    choice3: "<Harold Wilson>"
-    choice4: "<John Major >"
+    question: " Who was the British Prime Minister at the time of the Cuban (Missile Crisis in 1962? "
+    choice1: " Harold Macmillan",
+    choice2: "Harold Wilson",
+    choice3: "Anthony Eden", 
+    choice4: "Alec Douglas-Home ",
     answer: 1
   },
   {
-    question: " The Jarrow March of 1936 was a protest against what issue?"
-    choice1: "Unemployment  ",
-    choice2: " High taxes",
-    choice3: "Conscription",
-    choice4: " Civil rights",
-    answer: 1
+    question:" The Tolpuddle Martyrs were a group of workers from which profession??",
+    choice1: "Miners"
+    choice2: "Farmers"
+    choice3: "Dockworkers"
+    choice4: "Weavers"
+    answer:3 
   },
   {
-    question: "Who was the first female Member of Parliament (MP) in the UK?  ",
-    choice1: "Margaret Thatcher",
-    choice2: "Nancy Astor",
-    choice3: " Emmeline Pankhurst",
-    choice4: "Barbara Castle",
+    question: " Which British monarch was known as 'Good Queen Bess'?"
+    choice1: "Mary I ",
+    choice2: "Elizabeth I ",
+    choice3: "Victoria",
+    choice4: "Anne ",
     answer: 2
   },
   {
-    question: "Which British monarch was known as 'Bloody Mary'?." ,
-    choice1: "Mary I",
-    choice2: "Mary II",
-    choice3: "Elizabeth I",
-    choice4: " Ann ",
+    question: "The Battle of Trafalgar in 1805 secured British naval supremacy against which naval force??  ",
+    choice1: " French",
+    choice2: "Spanish",
+    choice3: "Dutch",
+    choice4: " Italian",
+    answer: 1
+  },
+  {
+    question: "The Domesday Book was commissioned by which English king? ?." ,
+    choice1: "William the Conqueror",
+    choice2: "Harold Godwinson",
+    choice3: " Edward the Confessor",
+    choice4: "  Henry II",
     answer:1
   },
   {
-    question: " The Battle of Boyne in 1690 was fought between which two sides?",
-    choice1: "Catholics and Protestants",
-    choice2: " England and Ireland ",
-    choice3: "Scotland and England",
-    choice4: " jacobites and Williamites ",
-    answer: 4
+    question: " ?",
+    choice1: "",
+    choice: "",
+    choice4: "  ",
+    answer: 
   },
   {
     question: "Who was the British Prime Minister at the beginning of World War II in 1939 ?",
