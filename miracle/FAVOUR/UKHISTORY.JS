@@ -138,12 +138,13 @@ Who was the British Prime Minister at the beginning of World War II in 1939 ?",
     answer:1 
   },
   {
-    question: " I _____ to the park tomorrow with my friends.",
-    choice1:"was going ",
-    choice2: "is going",
-    choice3: "are going",
-    choice4: "will be going",
-    answer: 4
+    question: "
+     The Magna Carta was signed during the reign of which English king ",
+    choice1:" Richard I ",
+    choice2: "John",
+    choice3: "Henry II ",
+    choice4: "Edward I",
+    answer: 2
   },
 ];
 
