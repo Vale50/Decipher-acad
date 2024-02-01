@@ -333,20 +333,20 @@ let questions = [
       answer: 1
     },
     {
-      question: "Who was the British Prime Minister during the signing of the Treaty of Lisbon in 2007 .?",
-      choice1: "Tony Blair",
-      choice2: " Gordon Brown",
-      choice3: "David Cameron",
-      choice4: "Theresa May",
-      answer: 2
+      question: ".?",
+      choice1: "",
+      choice2: " ",
+      choice3: "",
+      choice4: "",
+      answer: 
     },
     {
-      question:  "The 'Glorious Revolution' of 1688 resulted in the overthrow of which monarch?",
-      choice1:" Charles II",
-      choice2: "James II",
-      choice3: "William III",
-      choice4: "Anne",
-      answer: 2
+      question:  "?",
+      choice1:" ",
+      choice2: "",
+      choice3: "",
+      choice4: "",
+      answer: 
     },
     {
       {
