@@ -333,86 +333,85 @@ let questions = [
       answer: 1
     },
     {
-      question: ".?",
-      choice1: "",
-      choice2: " ",
-      choice3: "",
-      choice4: "",
-      answer: 
+      question: "The Peterloo Massacre in 1819 took place in which city.?",
+      choice1: "London",
+      choice2: " Manchester ",
+      choice3: " Birmingham      ",
+      choice4: "Liverpool",
+      answer:2 
     },
     {
-      question:  "?",
-      choice1:" ",
-      choice2: "",
-      choice3: "",
-      choice4: "",
-      answer: 
+      question:  " Who was the British  prime minister during the Suez Crisis in 1956?",
+      choice1:"Winston Churchill ",
+      choice2: " Anthony Eden",
+      choice3: " Harold Macmillan",
+      choice4: " Clement Attlee",
+      answer:2 
     },
     {
       {
-        question: "?",
-        choice1: "<>",
-    
-        choice2: "< >",
-        choice3: "<>", 
-        choice4: "<>",
-        answer: 
+        question: " The Reform Act of 1867 in the UK primarily aimed to extend voting rights to which group        ?",
+        choice1: "<Women>",
+        choice2: "< Property-owning men >",
+        choice3: "< Industrial workers >", 
+        choice4: "<Non-landowning me >",
+        answer: 4
       },
       {
-        question:"?",
-        choice1: "<>"
-        choice2: "<>"
-        choice3: "<>"
-        choice4: "<>"
-         answer: 
+        question:" Who was the British monarch during the American War of Independence?",
+        choice1: "<George I >"
+        choice2: "<George II>"
+        choice3: "<George III>"
+        choice4: "<George IV>"
+         answer: 3
       },
       {
-        question: " ?"
-        choice1: " ",
-        choice2: " ",
-        choice3: "",
-        choice4: " ",
-        answer: 
+        question: "The Battle of Bannockburn in 1314 was a significant victory for which nation ?"
+        choice1: "England        ",
+        choice2: " Scotland ",
+        choice3: "Wales",
+        choice4: " Ireland ",
+        answer: 2
       },
       {
-        question: " ?  "  
-        choice1: "",
-        choice2: "",
-        choice3: " ",
-        choice4: "",
-        answer: 
+        question: "Which Britsh monarch ws known as ‘Edward Longshanks’? ?  "  
+        choice1: "Edward I",
+        choice2: "Edward II",
+        choice3: "Edward III ",
+        choice4: "Edward Iv",
+        answer: 1
       },
       {
-        question: "?." ,
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "  ",
-        answer:
+        question: "The 'Tudor Rose' symbol represents the union of which two houses?." ,
+        choice1: "York and Lancaster",
+        choice2: "Tudor and Stuart",
+        choice3: "Plantagenet and Tudor",
+        choice4: "  Tudor and York ",
+        answer:1
       },
       {
-        question: " ?",
-        choice1: "",
-        choice2: " ",
-        choice3: "",
-        choice4: "  ",
-        answer: 
+        question: "Who was the British Prime Minister during the Falklands War in 1982 ?",
+        choice1: " Margaret Thatcher",
+        choice2: " Harold Wilson  ",
+        choice3: "James Callaghan",
+        choice4: "  Edward Heath",
+        answer: 1
       },
       {
-        question: " ?",
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "",
-        answer: 
+        question: " The Peterloo Massacre in 1819 resulted from a protest for what cause?",
+        choice1: "Women's suffrage",
+        choice2: " Workers' rights",
+        choice3: "Abolition of slavery",
+        choice4: " Land reform",
+        answer:2 
       },
       {
-        question: "?",
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: " ",
-        answer: 
+        question: "The battle of Hastings in 1066 was fought between which two parties?",
+        choice1: "England and France",
+        choice2: " England and Scotland",
+        choice3: "England and Normandy",
+        choice4: "England and Wales",
+        answer: 3
       },
       {
         question: " .",
@@ -447,12 +446,12 @@ let questions = [
         answer: 
       },
       {
-        question:  "The 'Glorious Revolution' of 1688 resulted in the overthrow of which monarch?",
-        choice1:" Charles II",
-        choice2: "James II",
-        choice3: "William III",
-        choice4: "Anne",
-        answer: 2
+        question:  "?",
+        choice1:" ",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: 
       },
       {
         question: "Who was the British monarch during the time of the Spanish Armada",
