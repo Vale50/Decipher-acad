@@ -350,105 +350,101 @@ let questions = [
     },
     {
       {
-        question: ".The Battle of Stamford Bridge in 1066 was fought between which two parties?
-        ??",
-        choice1: "<England and Scotland>",
+        question: "?",
+        choice1: "<>",
     
-        choice2: "<England and Frace >",
-        choice3: "<England and Vikings>", 
-        choice4: "<England and Normans>",
-        answer: 3
+        choice2: "< >",
+        choice3: "<>", 
+        choice4: "<>",
+        answer: 
       },
       {
-        question:
-          "Who was the British Prime Minister during the Falklands War in 1982.?",
-        choice1: "<Margaret Thatcher>"
-        choice2: "<Tony Blair>"
-        choice3: "<Harold Wilson>"
-        choice4: "<John Major >"
-    
-        answer: 1
+        question:"?",
+        choice1: "<>"
+        choice2: "<>"
+        choice3: "<>"
+        choice4: "<>"
+         answer: 
       },
       {
-        question: " The Jarrow March of 1936 was a protest against what issue?"
-        choice1: "Unemployment  ",
-        choice2: " High taxes",
-        choice3: "Conscription",
-        choice4: " Civil rights
-        ",
-        answer: 1
+        question: " ?"
+        choice1: " ",
+        choice2: " ",
+        choice3: "",
+        choice4: " ",
+        answer: 
       },
       {
-        question: " Who was the first female Member of Parliament (MP) in the UK?  "  
-        choice1: "Margaret Thatcher",
-        choice2: "Nancy Astor",
-        choice3: " Emmeline Pankhurst",
-        choice4: "Barbara Castle",
-        answer: 2
+        question: " ?  "  
+        choice1: "",
+        choice2: "",
+        choice3: " ",
+        choice4: "",
+        answer: 
       },
       {
-        question: "Which British monarch was known as 'Bloody Mary'?." ,
-        choice1: "Mary I",
-        choice2: "Mary II",
-        choice3: "Elizabeth I",
-        choice4: " Ann ",
-        answer:1
+        question: "?." ,
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "  ",
+        answer:
       },
       {
-        question: " The Battle of Boyne in 1690 was fought between which two sides?",
-        choice1: "Catholics and Protestants",
-        choice2: " England and Ireland ",
-        choice3: "Scotland and England",
-        choice4: " jacobites and Williamites ",
-        answer: 4
+        question: " ?",
+        choice1: "",
+        choice2: " ",
+        choice3: "",
+        choice4: "  ",
+        answer: 
       },
       {
-        question: "Who was the British Prime Minister at the beginning of World War II in 1939 ?",
-        choice1: "Neville Chamberlain",
-        choice2: "Winston Churchill",
-        choice3: "Clement Attlee",
-        choice4: "Stanley Baldwin",
-        answer: 1
+        question: " ?",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: 
       },
       {
-        question: "Which British monarch was nicknamed 'The Sun King'?",
-        choice1: "Henry VIII",
-        choice2: "Edward VII",
-        choice3: "Charles I",
-        choice4: " James I ",
-        answer: 3
+        question: "?",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: " ",
+        answer: 
       },
       {
-        question: "  The Corn Laws were primarily aimed at regulating the importation of what agricultural product.",
-        choice1: " Corn (grain)",
-        choice2: "Wheat ",
-        choice3: "Barley",
-        choice4: " Potatoes",
-        answer: 1
+        question: " .",
+        choice1: " ",
+        choice2: " ",
+        choice3: "",
+        choice4: " ",
+        answer: 
       },
       {
-        question: "Who was the last British monarch from the House of Hanover? ",
-        choice1: "George I",
-        choice2: "George II",
-        choice3: "George III",
-        choice4: "Victoria",
-        answer: 4
+        question: "? ",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: 
       },
       {
-        question: "The Battle of Naseby in 1645 was a decisive victory for which side in the English Civil War.?",
-        choice1: "Ralistsoy",
-        choice2: "Parliamentarians",
-        choice3: "Cavaliers",
-        choice4: "Roundheads",
-        answer: 2
+        question: "?",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: 
       },
       {
-        question: " Who was the British Prime Minister during the signing of the Treaty of Lisbon in 2007 .?",
-        choice1: "Tony Blair",
-        choice2: " Gordon Brown",
-        choice3: "David Cameron",
-        choice4: "Theresa May",
-        answer: 2
+        question: "  .?",
+        choice1: "",
+        choice2: " ",
+        choice3: "",
+        choice4: "",
+        answer: 
       },
       {
         question:  "The 'Glorious Revolution' of 1688 resulted in the overthrow of which monarch?",
