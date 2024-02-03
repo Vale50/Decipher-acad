@@ -431,83 +431,83 @@ let questions = [
     answer: 3
   },
   {
-    question: " The 'Big Four' who played a crucial role in negotiating the Treaty of Versailles after World War I included leaders from:",
-    choice1:"United States, Germany, Britain, and France",
-    choice2: "France, Italy, Japan, and the Soviet Union",
-    choice3: "United States, Britain, France, and Italy",
-    choice4: "Germany, Britain, Russia, and Austria-Hungary",
-    answer: 3
-  },
-  {
-    question: "The 19th-century movement that sought to limit the consumption of alcoholic beverages and ultimately led to Prohibition in the United States was known as:",
-    choice1:"Temperance movement ",
-    choice2: " Suffrage movement",
-    choice3: "Abolitionist movement",
-    choice4: "Populist movement",
-    answer: 1
-  },
-  {
-    question: "The 1986 Challenger space shuttle disaster occurred during the presidency of:",
-    choice1:"Ronald Reagan",
-    choice2: "Jimmy Carter",
-    choice3: "George H.W. Bush",
-    choice4: "Bill Clinton",
-    answer: 1
-  },
-  {
-    question: "The Marshall Plan, initiated after World War II, was designed to provide economic aid primarily to:",
-    choice1:" Asian countries ",
-    choice2: "African countries",
-    choice3: "Eastern European countries",
-    choice4: "Western European countries",
-    answer: 4
-  },
-  {
-    question: "The 'Great Compromise' during the Constitutional Convention of 1787 resolved the issue of representation in the U.S. Congress by proposing a:",
-    choice1:"Proportional representation system",
-    choice2: "Equal representation system",
-    choice3: "Bicameral legislature",
-    choice4: "Unicameral legislature",
-    answer: 3
-  },
-  {
-    question: "The term 'Yellow Journalism' is associated with sensationalized and exaggerated reporting, particularly during the:",
-    choice1:"Civil War",
-    choice2: "Spanish-American War",
-    choice3: "World War I",
-    choice4: "Vietnam War",
+    question: "Who was the first woman to become a governor in Nigeria?",
+    choice1: "Mrs. Funmilayo Kuti",
+    choice2: "Mrs. Virginia Etiaba",
+    choice3: "Mrs. Mo Abudu",
+    choice4: "Mrs. Ngozi Iweala",
     answer: 2
   },
   {
-    question: "The 1965 Voting Rights Act aimed to eliminate barriers preventing African Americans from:",
-    choice1:"Owning property",
-    choice2: "Serving in the military",
-    choice3: "Voting",
-    choice4: "Attending schools",
+    question: "Nigeria gain independence from British colonial rule in what year?",
+    choice1: "1957",
+    choice2: "1960",
+    choice3: "1963",
+    choice4: "1966",
+    answer: 2
+  },
+  {
+    question: "Which Nigerian musician is known as the "King of Juju Music"?",
+    choice1: "King Sunny Ade",
+    choice2: "Fela Kuti",
+    choice3: "Ebenezer Obey",
+    choice4: "Sir Shina Peters",
+    answer: 1
+  },
+  {
+    question: "The first political party in Nigeria was formed by who?",
+    choice1: "Wole Soyinka",
+    choice2: "Dr. Nnamdi Azikiwe",
+    choice3: "Herbert Macaulay",
+    choice4: "Lord Luggard",
     answer: 3
   },
   {
-    question: "The Supreme Court case Brown v. Board of Education (1954) overturned the precedent set by which earlier case that allowed racial segregation in public schools?",
-    choice1:" Plessy v. Ferguson",
-    choice2: "Dred Scott v. Sandford",
-    choice3: "Marbury v. Madison",
-    choice4: " Gibbons v. Ogden",
+    question: "Who was the first governor-general of colonial Nigeria?",
+    choice1: "Herbert Macaulay",
+    choice2: "Lord Luggard",
+    choice3: "Flora Shaw",
+    choice4: "Olusegun Obasanjo",
+    answer: 2
+  },
+  {
+    question: "There are how many ethnic groups in Nigeria:",
+    choice1: "144",
+    choice2: "157",
+    choice3: "36",
+    choice4: "250",
+    answer: 4
+  },
+  {
+    question: "Who is the current Chief Justice of Nigeria?",
+    choice1: "Olukayode Ariwoola",
+    choice2: "Tafawa Balewa",
+    choice3: "Justice Hammed Diya",
+    choice4: "Ibrahim Tanko Muhammed",
     answer: 1
   },
   {
-    question: "The Neutrality Acts of the 1930s were aimed at preventing the United States from being drawn into conflicts by:",
-    choice1:"Banning the sale of arms to belligerent nations",
-    choice2: "Encouraging alliances with European powers",
-    choice3: "Promoting interventionist foreign policies",
-    choice4: "Supporting international peacekeeping efforts",
-    answer: 1
+    question: "The second military coup d'etat in Nigeria took place on?"
+    choice1: "January 16, 1966",
+    choice2: "August 15, 1966",
+    choice3: "July 29, 1966",
+    choice4: "June 12, 1966",
+    answer: 3
   },
   {
-    question: "The 1979 Iranian Revolution resulted in the overthrow of which leader, leading to the establishment of an Islamic republic in Iran?",
-    choice1:"Shah Mohammad Reza Pahlavi",
-    choice2: "Ayatollah Ruhollah Khomein",
-    choice3: "Saddam Hussein",
-    choice4: "Mahmoud Ahmadinejad",
+    question: "Which Nigerian state is known as the "Coal City State”?"
+    choice1: "Lagos"
+    choice2: "Abuja"
+    choice3: "Port Harcourt",
+    choice4: "Enugu",
+    answer: 4
+  },
+  {
+    question: "Whose portrait is on the Nigeria 5 naira note?",
+    choice1: "Sir Tafawa Balewa",
+    choice2: "Alva Ikuku",
+    choice3: "Dr Nnamdi Azikiwe",
+    choice4: "Nenadi Usman",
     answer: 1
   },
   {
