@@ -14,46 +14,46 @@ let availableQuesions = [];
 
 let questions = [
   {
-    question: "Who was the first President of the United States?",
-    choice1: "<Thomas Jefferson>",
-    choice2: "< George Washington>",
-    choice3: "<John Adams>",
-    choice4: "<James Madison>",
+    question: "Who was the first Prime Minister of Nigeria?",
+    choice1: "<Nnamdi Azikiwe>",
+    choice2: "<Abubakar Tafawa Balewa>",
+    choice3: "<Obafemi Awolowo>",
+    choice4: "<Ahmadu Bello>",
     answer: 2
   },
   {
     question:
-      "What event marked the beginning of the American Revolutionary War?",
-    choice1: "<Boston Tea Party>",
-    choice2: "<Battle of Saratoga>",
-    choice3: "<Lexington and Concord>",
-    choice4: "<Treaty of Paris>",
-    answer: 3
-  },
-  {
-    question: " Which document outlined the principles of self-government and individual liberties in the American colonies?
-    ",
-    choice1: " Magna Carta",
-    choice2: "Declaration of Independence",
-    choice3: "Mayflower Compact",
-    choice4: "Articles of Confederation",
-    answer: 3
-  },
-  {
-    question: " The Emancipation Proclamation, issued during the Civil War, primarily aimed to:",
-    choice1: " End slavery in the Southern states",
-    choice2: " Establish civil rights for all Americans",
-    choice3: " Unify the Northern and Southern states",
-    choice4: "Expand westward territories",
+      " Who named Nigeria?",
+    choice1: "<Flora Shaw Luggard>",
+    choice2: "<Mary Slessor>",
+    choice3: "<Lord Luggard>",
+    choice4: "<Funmilayo Kuti
+    >",
     answer: 1
   },
   {
-    question: " What major event prompted the United States to enter World War II?
+    question: " Who was the first President of Nigeria? ",
+    choice1: "Olusegun Obasanjo",
+    choice2: "Ibrahim Babangida",
+    choice3: "Yakubu Gowon",
+    choice4: "Nnamdi Azikiwe",
+    answer: 4
+  },
+  {
+    question: "What was the name of the civil war that occurred in Nigeria from 1967 to 1970?",
+    choice1: "Biafran War",
+    choice2: "Yoruba War",
+    choice3: "Hausa-Fulani War",
+    choice4: "Niger Delta War",
+    answer: 1
+  },
+  {
+    question: "Which Nigerian leader was overthrown in a military coup in 1985?
     " ,
-    choice1: "Attack on Pearl Harbor",
-    choice2: "Invasion of Normandy",
-    choice3: "Bombing of Hiroshima",
-    choice4: "Signing of the Treaty of Versailles",
+    choice1: "Shehu Shagari",
+    choice2: "Muhammadu Buhari",
+    choice3: "Ibrahim Babangida",
+    choice4: "Sani Abacha",
     answer: 1
   },
   {
@@ -65,83 +65,84 @@ let questions = [
     answer: 3
   },
   {
-    question: "The Lewis and Clark Expedition was commissioned by:",
-    choice1: "President Andrew Jackson",
-    choice2: "President Thomas Jefferson",
-    choice3: "President James Monroe",
-    choice4: "President John Adams",
-    answer: 2
+    question: "Which Nigerian leader annulled the June 12, 1993, presidential election",
+    choice1: "Olusegun Obasanjo",
+    choice2: "Sani Abacha",
+    choice3: "Ibrahim Babangida",
+    choice4: " Goodluck Jonathan",
+    answer: 3
   },
   {
-    question: "What was the primary cause of the economic downturn in the United States during the 1930s?",
-    choice1: "The Vietnam War",
-    choice2: "The Great Depression",
-    choice3: "The Korean War",
-    choice4: "The Cold War",
-    answer: 2
+    question: "What year did Nigeria become a republic?",
+    choice1: "1960 ",
+    choice2: "1956",
+    choice3: "1963",
+    choice4: "1962",
+    answer: 3
   },
   {
-    question: "Which amendment to the U.S. Constitution granted women the right to vote?",
-    choice1: "18th Amendment",
-    choice2: "19th Amendment",
-    choice3: "20th Amendment",
-    choice4: "21st Amendment",
-    answer: 2
+    question: "Which Nigerian leader was impeached in 1993?",
+    choice1: "Olusegun Obasanjo",
+    choice2: "Ibrahim Babangida",
+    choice3: "Ernest Shonekan",
+    choice4: "Goodluck Jonathan",
+    answer: 3
   },
   {
-    question: "The Montgomery Bus Boycott was a pivotal event in the Civil Rights Movement, sparked by the arrest of:",
-    choice1: "Rosa Parks",
-    choice2: "Martin Luther King Jr.",
-    choice3: "Malcolm X",
-    choice4: "Thurgood Marshall",
+    question: "Who is the current President of Nigeria ?",
+    choice1: "Goodluck Jonathan",
+    choice2: "Muhammadu Buhari",
+    choice3: "Bola Ahmed Tinubu",
+    choice4: "Umaru Musa Yar'Adua",
+    answer: 3
+  },
+  {
+    question: " Which Nigerian political party won the first democratic elections in 1999?",
+    choice1: "People's Democratic Party (PDP)",
+    choice2: "All Progressives Congress (APC)",
+    choice3: "Social Democratic Party (SDP)",
+    choice4: "All Nigeria People's Party (ANPP)
+    ",
     answer: 1
   },
   {
-    question: " Which president is associated with the New Deal, a series of programs aimed at addressing the economic challenges during the Great Depression?",
-    choice1: "Herbert Hoover",
-    choice2: "Franklin D. Roosevelt",
-    choice3: "Calvin Coolidge",
-    choice4: "Harry S. Truman",
+    question: " Which Nigerian leader declared a war against indiscipline in the 1980s?",
+    choice1: "Ibrahim Babangida",
+    choice2: "Sani Abacha",
+    choice3: "Muhammadu Buhari",
+    choice4: "Olusegun Obasanjo",
+    answer: 3
+  },
+  {
+    question: "Who was the first military head of state of Nigeria?",
+    choice1: "Yakubu Gowon",
+    choice2: "Aguiyi Ironsi",
+    choice3: "Johnson Aguiyi-Ironsi",
+    choice4: "Murtala Mohammed",
+    answer: 3
+  },
+  {
+    question: "What is the capital city of Nigeria?",
+    choice1: "Lagos ",
+    choice2: "Abuja ",
+    choice3: "Kano",
+    choice4: "Port Harcourt",
     answer: 2
   },
   {
-    question: " The Battle of Gettysburg, a crucial turning point in the American Civil War, took place in which state?",
-    choice1: "Virginia",
-    choice2: "Pennsylvania",
-    choice3: "Maryland",
-    choice4: "Ohio",
-    answer: 2
-  },
-  {
-    question: "What was the primary cause of the Texas Revolution in 1836?",
-    choice1:"Dispute over border territories",
-    choice2: "Cultural differences with Mexico",
-    choice3: "Economic disagreements",
-    choice4: "Opposition to slavery",
-    answer: 2
-  },
-  {
-    question: "Who was the main architect of the Marshall Plan, a U.S. initiative to aid European countries in rebuilding after World War II?",
-    choice1: "Dwight D. Eisenhower",
-    choice2: "George C. Marshall",
-    choice3: "Harry S. Truman",
-    choice4: "aJohn F. Kennedy",
-    answer: 2
-  },
-  {
-    question: "The 26th Amendment to the U.S. Constitution lowered the voting age from 21 to:",
-    choice1:"18 ",
-    choice2: "19",
-    choice3: "20",
-    choice4: "22",
+    question: "Who was the Nigerian author of the novel "Things Fall Apart"?",
+    choice1: "Chinua Achebe",
+    choice2: "Wole Soyinka",
+    choice3: "Chimamanda Ngozi Adichie",
+    choice4: "Buchi Emecheta",
     answer: 1
   }, {
-    question: "What event led to the United States' acquisition of the territory known as the Gadsden Purchase in 1853?",
-    choice1:"Oregon Trail expansion",
-    choice2: "Mexican-American War",
-    choice3: "Gold Rush in California",
-    choice4: "Lewis and Clark Expedition",
-    answer: 2
+    question: "What is the name of the militant group that has been involved in insurgency in northeastern Nigeria?",
+    choice1: "Boko Haram",
+    choice2: "Niger Delta Avengers",
+    choice3: "Movement for the Emancipation of the Niger Delta (MEND)",
+    choice4: "Oodua People's Congress (OPC)",
+    answer: 1
   },
   {
     question: "The Native American leader who led resistance against U.S. expansion in the 1870s and was killed at the Battle of the Little Bighorn was:",
