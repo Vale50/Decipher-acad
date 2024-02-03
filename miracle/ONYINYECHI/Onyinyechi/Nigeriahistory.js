@@ -344,60 +344,60 @@ let questions = [
     answer: 1
   },
   {
-    question: "The Wounded Knee Massacre in 1890 was a tragic event associated with the:",
-    choice1:"Indian Removal Act ",
-    choice2: "Trail of Tears",
-    choice3: "Ghost Dance movement",
-    choice4: "Battle of Little Bighorn",
+    question: "Nigeria was suspended from the commonwealth in what year?",
+    choice1: "1993 ",
+    choice2: "1996",
+    choice3: "1990",
+    choice4: "1995",
+    answer: 4
+  },
+  {
+    question: "The Nigerian constitution that recognized local government as the third tier of government was that of?",
+    choice1: "The 1946 constitution",
+    choice2: "The 1960 constitution",
+    choice3: "The 1979 constitution",
+    choice4: "The 1960 constitution",
     answer: 3
   },
   {
-    question: "The Tet Offensive during the Vietnam War had a significant impact on public opinion in the United States by:",
-    choice1:"Strengthening support for the war",
-    choice2: "Demonstrating the success of U.S. military strategy",
-    choice3: "Shifting public opinion against the war",
-    choice4: "Isolating the conflict from Cold War tensions",
-    answer: 3
-  },
-  {
-    question: "The Harlem Renaissance of the 1920s was a cultural and artistic movement primarily associated with:",
-    choice1:"Jazz music ",
-    choice2: "Abstract expressionist painting",
-    choice3: "Beat poetry",
-    choice4: "Regionalist literature",
-    answer: 1
-  },
-  {
-    question: "The Progressive Era in the early 20th century was characterized by efforts to address social issues through:",
-    choice1:"Laissez-faire economic policies ",
-    choice2: "Limited government intervention",
-    choice3: "Reform and regulation",
-    choice4: "Expansion of imperialism",
-    answer: 3
-  },
-  {
-    question: "The 1862 Homestead Act encouraged westward expansion by providing:",
-    choice1:" Financial aid to farmers ",
-    choice2: " Land grants to railroad companies",
-    choice3: "Free land to settlers who improved the property",
-    choice4: "Military protection to pioneers",
-    answer: 3
-  },
-  {
-    question: " The 1912 presidential election featured a third-party candidate who advocated for progressive reforms. Who was this candidate?",
-    choice1:"Woodrow Wilson ",
-    choice2: "Theodore Roosevelt",
-    choice3: "William Howard Taft",
-    choice4: "Eugene V. Debs",
+    question: "When was the Central Bank of Nigeria established?",
+    choice1: "1960 ",
+    choice2: "1958",
+    choice3: "1965",
+    choice4: "1963",
     answer: 2
   },
   {
-    question: "The 'Bay of Pigs' invasion in 1961 was an unsuccessful attempt by the United States to overthrow the government of:",
-    choice1:"Cuba",
-    choice2: "Vietnam",
-    choice3: " Nicaragua",
-    choice4: "Iran",
+    question: "What is the motto of the Nigeria Police?",
+    choice1: "We are friends ",
+    choice2: "Fighting corruption",
+    choice3: "The police is your friend",
+    choice4: "Kick against indiscipline",
+    answer: 3
+  },
+  {
+    question: "The author of the critically acclaimed novel "Half of a Yellow Sun" is known as?",
+    choice1:" Chimamanda Ngozi Adichie ",
+    choice2: " Chinua Achebe",
+    choice3: "Wole Soyinka",
+    choice4: "Buchi Emecheta",
     answer: 1
+  },
+  {
+    question: "Where is the Kainji Dam in Nigeria located?",
+    choice1: "Edo state",
+    choice2: "Abeokuta",
+    choice3: "Niger state",
+    choice4: "Akwa-Ibom",
+    answer: 3
+  },
+  {
+    question: "The eagle on the Nigeria coat of arm depicts?",
+    choice1: "Power",
+    choice2: "Strength",
+    choice3: " Vision",
+    choice4: "Peace",
+    answer: 2
   },
   {
     question: "The 1972 Watergate scandal led to the resignation of President Richard Nixon. What was the primary issue in the Watergate scandal?",
@@ -407,12 +407,12 @@ let questions = [
     choice4: "Burglary and cover-up of political activities",
     answer: 4
   }, {
-    question: "The 1906 Pure Food and Drug Act and the Meat Inspection Act were significant pieces of legislation aimed at:",
-    choice1:"Regulating labor practices",
-    choice2: " Improving public health and safety",
-    choice3: " Addressing racial segregation",
-    choice4: " Expanding women's rights",
-    answer: 2
+    question: " What is the name of the Nigerian traditional attire often worn on special occasions?",
+    choice1: "Aso-Oke",
+    choice2: "Dashiki",
+    choice3: "Buba and Sokoto",
+    choice4: "Agbada",
+    answer: 4
   },
   {
     question: "The 1964 Civil Rights Act aimed to end discrimination based on:",
