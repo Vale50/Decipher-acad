@@ -414,28 +414,28 @@ let questions = [
         answer: 3
       },
       {
-        question: " .",
-        choice1: " ",
-        choice2: " ",
-        choice3: "",
-        choice4: " ",
-        answer: 
+        question: " Who was the British Prime Minister during the signing of the Treaty of Versailles in 1919?        .",
+        choice1: "  David Lloyd George",
+        choice2: "Herbert Asquith ",
+        choice3: "Neville Chamberlain",
+        choice4: " Stanley Baldwin ",
+        answer: 1
       },
       {
-        question: "? ",
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "",
-        answer: 
+        question: " The Battle of Trafalgar in 1805 was a naval battle fought against which country? ",
+        choice1: "France",
+        choice2: "Spain",
+        choice3: " Netherlands",
+        choice4: " Portugal",
+        answer:1 
       },
       {
-        question: "?",
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "",
-        answer: 
+        question: "Who was the British Prime Minister during the Indian Mutiny of 1857?",
+        choice1: "Benjamin Disraeli",
+        choice2: "William Gladstone",
+        choice3: " Lord palmerston",
+        choice4: " Lord Aberdeen",
+        answer: 3
       },
       {
         question: "  .?",
