@@ -438,293 +438,293 @@ let questions = [
         answer: 3
       },
       {
-        question: "  .?",
-        choice1: "",
-        choice2: " ",
-        choice3: "",
-        choice4: "",
-        answer: 
+        question: "  The Glorious Revolution of 1688 led to the accession of which monarch to the British throne .?",
+        choice1: " James II",
+        choice2: "William III and Mary II ",
+        choice3: "Charles II",
+        choice4: " Anne",
+        answer: 2
       },
       {
-        question:  "?",
-        choice1:" ",
-        choice2: "",
-        choice3: "",
-        choice4: "",
-        answer: 
+        question:  " Which British monarch was known as 'Good Queen Bess'?",
+        choice1:" Mary I",
+        choice2: "Elizabeth I",
+        choice3: "Victoria ",
+        choice4: "Anne",
+        answer: 2
       },
       {
-        question: "Who was the British monarch during the time of the Spanish Armada",
-        choice1: " Elizabeth I",
-        choice2: ") James I",
-        choice3: " Mary I ",
-        choice4: " Henry VIII",
-        answer:1   ,
+        question: " Who was the British Prime Minister during the Apollo 11 moon landing in 1969",
+        choice1: "Harold Wilson",
+        choice2: " Edward Heath",
+        choice3: " James Callaghan  ",
+        choice4: "Margaret Thatcher",
+        answer:  1 ,
         {
-          question: ".The Battle of Stamford Bridge in 1066 was fought between which two parties?",
-          choice1: "<England and Scotland>",
-          choice2: "<England and Frace >",
-          choice3: "<England and Vikings>", 
-          choice4: "<England and Normans>",
+          question: "The Peasants' Revolt of 1381 occurred during the reign of which English king?",
+          choice1: "< Richard II>",
+          choice2: "<Henry IV>",
+          choice3: "<Edward III>", 
+          choice4: "<Henry V >",
+          answer: 1
+        },
+        {
+          question:"The Act of Union in 1707 united England and which other nation?",
+          choice1: "<Ireland>"
+          choice2: "< Wales>"
+          choice3: "< Scotland>"
+          choice4: "< France >"
+          answer: 1
+        },
+        {
+          question: "Who was the British Prime Minister at the outbreak of World War I in 1914?"
+          choice1: " David Lloyd George ",
+          choice2: "  Herbert Asquith",
+          choice3: " Winston Churchill",
+          choice4: " Neville Chamberlain ",
           answer: 3
         },
         {
-          question:"Who was the British Prime Minister during the Falklands War in 1982.?",
-          choice1: "<Margaret Thatcher>"
-          choice2: "<Tony Blair>"
-          choice3: "<Harold Wilson>"
-          choice4: "<John Major >"
-          answer: 1
-        },
-        {
-          question: " The Jarrow March of 1936 was a protest against what issue?"
-          choice1: "Unemployment  ",
-          choice2: " High taxes",
-          choice3: "Conscription",
-          choice4: " Civil right",
-          answer: 1
-        },
-        {
-          question: "Who was the first female Member of Parliament (MP) in the UK?  ",  
-          choice1: "Margaret Thatcher",
-          choice2: "Nancy Astor",
-          choice3: " Emmeline Pankhurst",
-          choice4: "Barbara Castle",
+          question: "The Magna Carta was signed during the reign of which English king?  ",  
+          choice1: "Henry II",
+          choice2: "John ",
+          choice3: " Richard I  ",
+          choice4: " Edward I",
           answer: 2
         },
         {
-          question: "Which British monarch was known as 'Bloody Mary'?." ,
-          choice1: "Mary I",
-          choice2: "Mary II",
-          choice3: "Elizabeth I",
-          choice4: " Ann ",
+          question: " The British monarch who was executed following the English Civil War was:?." ,
+          choice1: " Charles I",
+          choice2: "Charles II",
+          choice3: " James I",
+          choice4: "  James II ",
           answer:1
         },
         {
-          question: " The Battle of Boyne in 1690 was fought between which two sides?",
-          choice1: "Catholics and Protestants",
-          choice2: " England and Ireland ",
-          choice3: "Scotland and England",
-          choice4: " jacobites and Williamites ",
-          answer: 4
-        },
-        {
-          question: "Who was the British Prime Minister at the beginning of World War II in 1939 ?",
-          choice1: "Neville Chamberlain",
-          choice2: "Winston Churchill",
-          choice3: "Clement Attlee",
-          choice4: "Stanley Baldwin",
-          answer: 1
-        },
-        {
-          question: "Which British monarch was nicknamed 'The Sun King'?",
-          choice1: "Henry VIII",
-          choice2: "Edward VII",
-          choice3: "Charles I",
-          choice4: " James I ",
-          answer: 3
-        },
-        {
-          question: " The Corn Laws were primarily aimed at regulating the importation of what agricultural product.",
-          choice1: " Corn (grain)",
-          choice2: "Wheat ",
-          choice3: "Barley",
-          choice4: " Potatoes",
-          answer: 1
-        },
-        {
-          question: "Who was the last British monarch from the House of Hanover? ",
-          choice1: "George I",
-          choice2: "George II",
-          choice3: "George III",
-          choice4: "Victoria",
-          answer: 4
-        },
-        {
-          question: "The Battle of Naseby in 1645 was a decisive victory for which side in the English Civil War.?",
-          choice1: "Ralistsoy",
-          choice2: "Parliamentarians",
-          choice3: "Cavaliers",
-          choice4: "Roundheads",
+          question: "The Battle of Bosworth Field in 1485 marked the end of which English dynasty ?",
+          choice1: "Tudor",
+          choice2: "Plantagenet",
+          choice3: " Stuart ",
+          choice4: " Lancaster  ",
           answer: 2
         },
         {
-          question: "Who was the British Prime Minister during the signing of the Treaty of Lisbon in 2007 .?",
-          choice1: "Tony Blair",
-          choice2: " Gordon Brown",
-          choice3: "David Cameron",
-          choice4: "Theresa May",
-          answer: 2
-        },
-        {
-          question:  "The 'Glorious Revolution' of 1688 resulted in the overthrow of which monarch?",
-          choice1:" Charles II",
-          choice2: "James II",
-          choice3: "William III",
-          choice4: "Anne",
-          answer: 2
-        },
-        {
-          question: " Who was the British monarch during the time of the Spanish Armada",
-          choice1: " Elizabeth I",
-          choice2: ") James I",
-          choice3: " Mary I ",
-          choice4: " Henry VIII",
-          answer:1 
-        },
-        {
-          question: "Who was the British monarch during the time of the Spanish Armada",
-          choice1: " Elizabeth I",
-          choice2: ") James I",
-          choice3: " Mary I ",
-          choice4: " Henry VIII",
-          answer:1 
-        },
-        {
-          question: ".The Battle of Stamford Bridge in 1066 was fought between which two parties?",
-          choice1: "<England and Scotland>",
-          choice2: "<England and Frace >",
-          choice3: "<England and Vikings>", 
-          choice4: "<England and Normans>",
-          answer: 3
-        },
-        {
-          question:"Who was the British Prime Minister during the Falklands War in 1982.?",
-          choice1: "<Margaret Thatcher>"
-          choice2: "<Tony Blair>"
-          choice3: "<Harold Wilson>"
-          choice4: "<John Major >"
+          question: "The 'Glorious Revolution' of 1688 resulted in the accession of?",
+          choice1: "William III and Mary II",
+          choice2: " James II",
+          choice3: "Charles II",
+          choice4: " Anne",
           answer: 1
         },
         {
-          question: " The Jarrow March of 1936 was a protest against what issue?"
-          choice1: "Unemployment  ",
-          choice2: " High taxes",
-          choice3: "Conscription",
-          choice4: " Civil rights",
+          question: " The founder of the British Red Cross, who served as a nurse during the Crimean War, was?",
+          choice1: "Florence Nightingale",
+          choice2: "Mary Seacole",
+          choice3: "Edith Cavell",
+          choice4: " Clara Barton ",
           answer: 1
         },
         {
-          question: "Who was the first female Member of Parliament (MP) in the UK?  ",
-          choice1: "Margaret Thatcher",
-          choice2: "Nancy Astor",
-          choice3: " Emmeline Pankhurst",
-          choice4: "Barbara Castle",
-          answer: 2
+          question: " The Domesday Book, commissioned by William the Conqueror, was primarily intended for: ",
+          choice1: "Recording land ownership and taxes ",
+          choice2: "Keeping track of births and deaths",
+          choice3: "Cataloguing religious artefacts",
+          choice4: "  Documenting legal disputes",
+          answer: 1
         },
         {
-          question: "Which British monarch was known as 'Bloody Mary'?." ,
-          choice1: "Mary I",
-          choice2: "Mary II",
-          choice3: "Elizabeth I",
-          choice4: " Ann ",
+          question: "The First Barons' War, which led to the sealing of the Magna Carta, was primarily a conflict between King John and
+          ? ",
+          choice1: "The English barons",
+          choice2: " The French monarchy",
+          choice3: " The Scottish lords",
+          choice4: "The Irish chieftains",
+          answer: 1
+        },
+        {
+          question: " The Corn Laws, which regulated the import and export of grain in Britain, primarily benefited:
+          ?",
+          choice1: " Landowners and farmers",
+          choice2: " Industrial workers",
+          choice3: " Merchants and traders",
+          choice4: " Consumers and urban dwellers",
+          answer: 1
+        },
+        {
+          question: "The author of 'On the Origin of Species' and a key figure in the theory of evolution was?",
+          choice1: "Charles Darwin ",
+          choice: " Alfred Russel Wallace",
+          choice3: "Thomas Huxley",
+          choice4: " Gregor Mendel",
+          answer: 1
+        },
+        {
+          question:  " The Peterloo Massacre in 1819 occurred during a protest for?",
+          choice1:" Workers' rights and political reform ",
+          choice2: "Women's suffrage",
+          choice3: "Religious freedom",
+          choice4: "Abolition of slavery",
+          answer: 1
+        },
+        {
+          question: " The 'Black Death,'' a devastating pandemic in the 14th century, was caused by",
+          choice1: "Bubonic plague",
+          choice2: "Smallpox",
+          choice3: "Influenza",
+          choice4: "Typhus",
           answer:1
         },
         {
-          question: " The Battle of Boyne in 1690 was fought between which two sides?",
-          choice1: "Catholics and Protestants",
-          choice2: " England and Ireland ",
-          choice3: "Scotland and England",
-          choice4: " jacobites and Williamites ",
-          answer: 4
+          question: "The Act of Union of 1707 merged the Parliaments of England and",
+          choice1: "Scotland ",
+          choice2: " Ireland",
+          choice3: " Wales ",
+          choice4: " France ",
+          answer:1
         },
         {
-          question: "Who was the British Prime Minister at the beginning of World War II in 1939 ?",
-          choice1: "Neville Chamberlain",
-          choice2: "Winston Churchill",
-          choice3: "Clement Attlee",
-          choice4: "Stanley Baldwin",
+          question: " The reign of Queen Victoria is often referred to as the:",
+          choice1: "<Victorian Era>",
+          choice2: "<Elizabethan Age>",
+          choice3: "<Georgian Period>", 
+          choice4: "<Edwardian Era>",
           answer: 1
         },
         {
-          question: "Which British monarch was nicknamed 'The Sun King'?",
-          choice1: "Henry VIII",
-          choice2: "Edward VII",
-          choice3: "Charles I",
-          choice4: " James I ",
+          question:" The Suffragette movement in the late 19th and early 20th centuries campaigned primarily for?",
+          choice1: "<Women's right to vote>"
+          choice2: "<Workers' rights>"
+          choice3: "<Racial equality>"
+          choice4: "<Religious freedom >"
+          answer: 1
+        },
+        {
+          question: "The War of the Spanish Succession, which lasted from 1701 to 1714, primarily involved conflicts over the:
+           ?"
+          choice1: "Succession to the Spanish throne ",
+          choice2: "Control of Mediterranean trade routes ",
+          choice3: " Colonisation of the Americas",
+          choice4: " Partition of Poland",
+          answer: 1
+        },
+        {
+          question: " The leader of the parliamentary forces during the English Civil War was: ",
+          choice1: " Oliver Cromwell",
+          choice2: "Thomas Fairfax",
+          choice3: " Charles I",
+          choice4: "Charles II",
+          answer: 1
+        },
+        {
+          question: "The Battle of Culloden in 1746 marked the defeat of the:" ,
+          choice1: " Jacobites ",
+          choice2: "Roundheads",
+          choice3: "Cavaliers  ",
+          choice4: "Covenanters   ",
+          answer:1
+        },
+        {
+          question: " The Indian Rebellion of 1857, also known as the Sepoy Mutiny, began in the town of:          ?",
+          choice1: "Meerut ",
+          choice2: " Delhi ",
+          choice3: "Lucknow ",
+          choice4: "Calcutta ",
+          answer:1 
+        },
+        {
+          question: "The last British monarch from the House of Hanover was: ",
+          choice1: "William IV ",
+          choice2: "Queen Anne",
+          choice3: "Victoria  ",
+          choice4: "George III ",
           answer: 3
         },
         {
-          question: " The Corn Laws were primarily aimed at regulating the importation of what agricultural product.",
-          choice1: " Corn (grain)",
-          choice2: "Wheat ",
-          choice3: "Barley",
-          choice4: " Potatoes",
+          question: " The Great Fire of London in 1666 started in a bakery on:",
+          choice1: "Pudding Lane   ",
+          choice2: "Baker Street",
+          choice3: "Fishmonger's Row",
+          choice4: "Bread Street ",
           answer: 1
         },
         {
-          question: "Who was the last British monarch from the House of Hanover? ",
-          choice1: "George I",
-          choice2: "George II",
-          choice3: "George III",
-          choice4: "Victoria",
-          answer: 4
+          question: " The first successful steam locomotive was developed by:  ",
+          choice1: " George Stephenson",
+          choice2: " Isambard Kingdom Brunel ",
+          choice3: "James Watt  ",
+          choice4: " Richard Trevithick",
+          answer: 1
         },
         {
-          question: "The Battle of Naseby in 1645 was a decisive victory for which side in the English Civil War.?",
-          choice1: "Ralistsoy",
-          choice2: "Parliamentarians",
-          choice3: "Cavaliers",
-          choice4: "Roundheads",
-          answer: 2
+          question: "? ",
+          choice1: "",
+          choice2: "",
+          choice3: "",
+          choice4: "",
+          answer: 
         },
         {
-          question: "Who was the British Prime Minister during the signing of the Treaty of Lisbon in 2007 .?",
-          choice1: "Tony Blair",
-          choice2: " Gordon Brown",
-          choice3: "David Cameron",
-          choice4: "Theresa May",
-          answer: 2
+          question: "?",
+          choice1: "",
+          choice2: "",
+          choice3: "",
+          choice4: "",
+          answer: 
         },
         {
-          question:  "The 'Glorious Revolution' of 1688 resulted in the overthrow of which monarch?",
-          choice1:" Charles II",
-          choice2: "James II",
-          choice3: "William III",
-          choice4: "Anne",
-          answer: 2
+          question: "?",
+          choice1: "",
+          choice2: " ",
+          choice3: "",
+          choice4: "",
+          answer: 
         },
         {
-          question: "Who was the British monarch during the time of the Spanish Armada
-           ",
-          choice1: " Elizabeth I",
-          choice2: ") James I",
-          choice3: " Mary I ",
-          choice4: " Henry VIII",
-          answer:1 
+          question:  "?",
+          choice1:"",
+          choice2: "",
+          choice3: "",
+          choice4: "",
+          answer: 
+        },
+        {
+          question: "  ",
+         choice1: " ",
+          choice2: "",
+          choice3: "  ",
+          choice4: " ",
+          answer: 
           {
-            question: ".The Battle of Stamford Bridge in 1066 was fought between which two parties?",
-            choice1: "<England and Scotland>",
-            choice2: "<England and Frace >",
-            choice3: "<England and Vikings>", 
-            choice4: "<England and Normans>",
-            answer: 3
+            question: "?",
+            choice1: "<>",
+            choice2: "<>",
+            choice3: "<>", 
+            choice4: "<>",
+            answer: 
           },
           {
-            question: "Who was the British Prime Minister during the Falklands War in 1982.?",
-            choice1: "<Margaret Thatcher>"
-            choice2: "<Tony Blair>"
-            choice3: "<Harold Wilson>"
-            choice4: "<John Major >"
-        
-            answer: 1
+            question: "?",
+            choice1: "<>"
+            choice2: "<>"
+            choice3: "<>"
+            choice4: "< >"
+             answer: 
           },
           {
-            question: " The Jarrow March of 1936 was a protest against what issue?"
-            choice1: "Unemployment  ",
-            choice2: " High taxes",
-            choice3: "Conscription",
-            choice4: " Civil rights
-            ",
-            answer: 1
+            question: " ?"
+            choice1: "  ",
+            choice2: " ",
+            choice3: "",
+            choice4: "  ",
+            answer: 
           },
           {
-            question: "Who was the first female Member of Parliament (MP) in the UK?  ",
-            choice1: "Margaret Thatcher",
-            choice2: "Nancy Astor",
-            choice3: " Emmeline Pankhurst",
-            choice4: "Barbara Castle",
-            answer: 2
+            question: "?  ",
+            choice1: "",
+            choice2: "",
+            choice3: " ",
+            choice4: "",
+            answer: 
           },
           {
             question: "Which British monarch was known as 'Bloody Mary'?." ,
