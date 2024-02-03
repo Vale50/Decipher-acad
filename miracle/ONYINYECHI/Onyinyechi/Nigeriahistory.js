@@ -511,12 +511,12 @@ let questions = [
     answer: 1
   },
   {
-    question: "The 1944 Bretton Woods Conference laid the foundation for the establishment of",
-    choice1:"United Nations",
-    choice2: "International Monetary Fund (IMF)",
-    choice3: "European Union (EU)",
-    choice4: "North Atlantic Treaty Organization (NATO)",
-    answer: 2
+    question: "When did Nigeria become a British colony?",
+    choice1: "1914 ",
+    choice2: "1915",
+    choice3: "1900",
+    choice4: "1912",
+    answer: 1
   },
   {
     question: "The 'War on Terror' initiated in the aftermath of the September 11, 2001 attacks led to U.S. military involvement in which countries?",
