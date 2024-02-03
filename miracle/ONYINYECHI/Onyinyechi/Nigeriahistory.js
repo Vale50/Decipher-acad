@@ -184,100 +184,100 @@ let questions = [
     answer: 3
   },
   {
-    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
-    choice1:"Martin Luther King Jr.'s 'I Have a Dream' speech",
-    choice2: "The establishment of the Peace Corps",
-    choice3: "The signing of the Civil Rights Act",
-    choice4: "The formation of the Black Panther Party",
-    answer: 1
+    question: "Who was the first President of Nigeria?",
+    choice1: "Nnamdi Azikiwe",
+    choice2: "Obafemi Awolowo",
+    choice3: "Ahmadu Bello",
+    choice4: "Tafawa Balewa",
+    answer: 4
   },
   {
-    question: "The Treaty of Guadalupe Hidalgo, ending the Mexican-American War, resulted in the United States gaining control of which present-day states?",
-    choice1:"California, Texas, Arizona ",
-    choice2: "New Mexico, Colorado, Utah",
-    choice3: "Nevada, Idaho, Oregon",
-    choice4: "Florida, Louisiana, Mississippi",
-    answer: 1
-  },
-  {
-    question: "Which U.S. president issued the Monroe Doctrine, asserting American influence in the Western Hemisphere and discouraging European colonization?",
-    choice1:"James Madison",
-    choice2: "James Monroe",
-    choice3: "John Quincy Adams",
-    choice4: " Andrew Jackson",
+    question: "Which year did Nigeria gain independence from British colonial rule?",
+    choice1: "1957",
+    choice2: "1960",
+    choice3: "1963",
+    choice4: "1966",
     answer: 2
   },
   {
-    question: "The Seneca Falls Convention in 1848 is often considered a milestone in the history of:",
-    choice1:"Women's suffrage ",
-    choice2: "Abolition of slavery",
-    choice3: "Labor rights",
-    choice4: "Native American rights",
+    question: "Who was the military ruler of Nigeria during the Nigerian Civil War (Biafran War)?",
+    choice1: "Yakubu Gowon",
+    choice2: "Aguiyi Ironsi",
+    choice3: "Murtala Mohammed",
+    choice4: "Olusegun Obasanjo",
     answer: 1
   },
   {
-    question: "The 'Great Migration' in the early 20th century refers to the movement of:",
-    choice1:"European immigrants to the United States ",
-    choice2: "African Americans from rural Southern states to Northern cities",
-    choice3: "Native American tribes to reservations",
-    choice4: "Mexican immigrants to the Southwest",
-    answer: 2
-  },
-  {
-    question: "The 1919 Amendment to the U.S. Constitution that granted women the right to vote is commonly known as the:",
-    choice1:"18th Amendment ",
-    choice2: "19th Amendment",
-    choice3: "20th Amendment",
-    choice4: "21st Amendment",
-    answer: 2
-  },
-  {
-    question: "The landmark Supreme Court case of Brown v. Board of Education (1954) dealt with issues related to:",
-    choice1:" Segregation in public schools",
-    choice2: " Affirmative action",
-    choice3: "Voting rights",
-    choice4: "Freedom of speech",
+    question: "What is the name of the river that forms a boundary between Nigeria and Cameroon",
+    choice1: "Benue River",
+    choice2: "Niger River",
+    choice3: "Cross River",
+    choice4: "Chad River",
     answer: 1
   },
   {
-    question: "The concept of 'checks and balances' in the U.S. government system is outlined in which part of the Constitution?",
-    choice1:"Preamble",
-    choice2: "Article I",
-    choice3: "Article II",
-    choice4: "Article III",
-    answer: 2
-  },
-  {
-    question: "The 'Red Scare' in the United States during the early 20th century was fueled by fears of:",
-    choice1:"Nuclear warfare",
-    choice2: "Communist infiltration",
-    choice3: "Economic recession",
-    choice4: "Racial tensions",
-    answer: 2
-  },
-  {
-    question: "Which U.S. president is associated with the establishment of the National Park system?",
-    choice1:"Theodore Roosevelt",
-    choice2: "Woodrow Wilson",
-    choice3: "William Howard Taft",
-    choice4: "Franklin D. Roosevelt",
+    question: "Which Nigerian leader was overthrown in a coup on December 31, 1983",
+    choice1: "Shehu Shagari",
+    choice2: "Ibrahim Babangida",
+    choice3: "Muhammadu Buhari",
+    choice4: "Sani Abacha",
     answer: 1
   },
   {
-    question: "The Gulf of Tonkin Resolution, passed by Congress in 1964, played a significant role in the escalation of U.S. involvement in:",
-    choice1:"World War I",
-    choice2: "Korean War",
-    choice3: "Vietnam War",
-    choice4: "Gulf War",
+    question: "What is the name of the highest mountain in Nigeria?",
+    choice1: "Mount Patti ",
+    choice2: "Chappal Waddi",
+    choice3: "Mount Dimlang",
+    choice4: "Idanre Hills",
+    answer: 2
+  },
+  {
+    question: "The first female finance minister of Nigeria was?",
+    choice1: "Kemi Adeosun",
+    choice2: "Ngozi Okonjo-Iweala",
+    choice3: "Zainab Ahmed",
+    choice4: "Nenadi Usman",
+    answer: 2
+  },
+  {
+    question: "The Nigerian national currency is called?",
+    choice1: "Naira",
+    choice2: "Cedi",
+    choice3: "Shilling",
+    choice4: "Kwacha",
+    answer: 1
+  },
+  {
+    question: ""Centre of Excellence" as a slogan belongs to which of these Nigerian cities?",
+    choice1: "Abuja",
+    choice2: "Lagos",
+    choice3: "Kano",
+    choice4: "Port Harcourt",
+    answer: 2
+  },
+  {
+    question: "Who was the first Nigerian to  speak foreign language?",
+    choice1: "Oba Esigie",
+    choice2: "Oba Ewedo",
+    choice3: "Oba Ojaja II",
+    choice4: "Oba Igosi",
+    answer: 1
+  },
+  {
+    question: "Who was the first female to become the Deputy Governor of a Nigerian state?",
+    choice1: "Sarah Jubril",
+    choice2: "Cecilia Ezeilo",
+    choice3: "Erelu Olusola Obada",
+    choice4: "Salamatu Hussaini Suleiman",
+    answer: 2
+  },
+  {
+    question: "Where was the name Nigeria derived from?",
+    choice1: "Flora Shaw",
+    choice2: "Ninja",
+    choice3: "Niger River",
+    choice4: "River Niger and Benue",
     answer: 3
-  },
-  {
-    question: "The term 'Reconstruction' in U.S. history refers to the period following the:",
-    choice1:"American Revolution",
-    choice2: "Civil War",
-    choice3: "War of 1812",
-    choice4: "Mexican-American War",
-    answer: 2
   },
   {
     question: "The 1944 G.I. Bill aimed to provide support to:",
