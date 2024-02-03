@@ -415,20 +415,20 @@ let questions = [
     answer: 4
   },
   {
-    question: "The 1964 Civil Rights Act aimed to end discrimination based on:",
-    choice1:"Gender",
-    choice2: "Religion",
-    choice3: "Race and color",
-    choice4: "Sexual orientation",
-    answer: 3
+    question: "In Nigeria the first person to become the Secretary-General of the Commonwealth of Nations was?",
+    choice1: "Emeka Anyaoku",
+    choice2: "Ngozi Okonjo-Iweala",
+    choice3: "Amina J. Mohammed",
+    choice4: "Ibrahim Gambari",
+    answer: 1
   },
   {
-    question: "The 1803 Louisiana Purchase, negotiated by President Thomas Jefferson, involved the acquisition of territory from:",
-    choice1:"France",
-    choice2: "Spain",
-    choice3: "Britain",
-    choice4: "Mexico",
-    answer: 1
+    question: "Which Nigerian city is known for its annual Durbar festival, showcasing colourful displays of horsemanship and culture?",
+    choice1: "Sokoto",
+    choice2: "Zaria",
+    choice3: "Kano",
+    choice4: "Maiduguri",
+    answer: 3
   },
   {
     question: " The 'Big Four' who played a crucial role in negotiating the Treaty of Versailles after World War I included leaders from:",
