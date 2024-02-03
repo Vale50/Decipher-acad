@@ -145,43 +145,43 @@ let questions = [
     answer: 1
   },
   {
-    question: "The Native American leader who led resistance against U.S. expansion in the 1870s and was killed at the Battle of the Little Bighorn was:",
-    choice1:"Chief Joseph ",
-    choice2: "Sitting Bull",
-    choice3: "Geronimo",
-    choice4: "Crazy Horse",
-    answer: 2
+    question: "Which Nigerian leader was known for his "War Against Corruption" campaign?",
+    choice1: "Goodluck Jonathan",
+    choice2: "Olusegun Obasanjo",
+    choice3: "Muhammadu Buhari",
+    choice4: "Umaru Musa Yar'Adua",
+    answer: 3
   },
   {
-    question: "Which amendment to the U.S. Constitution abolished slavery?",
-    choice1:"13th Amendment",
-    choice2: "14th Amendment",
-    choice3: "15th Amendment",
-    choice4: "16th Amendment",
+    question: "What is the nickname for Nigeria's national football team?",
+    choice1: "Super Eagles",
+    choice2: "Black Stars",
+    choice3: "Indomitable Lions",
+    choice4: "Elephants",
     answer: 1
   }, {
-    question: "The slogan '54-40 or Fight!' was associated with which U.S. territorial dispute in the 1840s?",
-    choice1:"Oregon Country",
-    choice2: "Mexican Cession",
-    choice3: " Louisiana Purchase",
-    choice4: "Texas Annexation",
-    answer: 1
-  },
-  {
-    question: "The Watergate scandal led to the resignation of which U.S. president?",
-    choice1:"Richard Nixon",
-    choice2: "Gerald Ford",
-    choice3: "Jimmy Carter",
-    choice4: "Ronald Reagan",
-    answer: 1
-  },
-  {
-    question: "The term 'Manifest Destiny' reflected the 19th-century belief that the United States was destined to:",
-    choice1:"Establish a socialist government ",
-    choice2: "Expand its territory across the continent",
-    choice3: "Promote isolationist policies",
-    choice4: "Form alliances with European powers",
+    question: "Which Nigerian musician is known as the "African Giant"?",
+    choice1: "Fela Kuti",
+    choice2: "Burna Boy",
+    choice3: "Davido",
+    choice4: "Wizkid",
     answer: 2
+  },
+  {
+    question: "Who was the first female Deputy Governor of a Nigerian state?",
+    choice1: "Amina Mohammed",
+    choice2: "Kudirat Abiola",
+    choice3: "Cecilia Ezeilo",
+    choice4: "Erelu Olusola Obada",
+    answer: 3
+  },
+  {
+    question: "What is the name of the famous festival celebrated by the Yoruba people of Nigeria?",
+    choice1: "Durbar Festival",
+    choice2: "Eyo Festival",
+    choice3: "Osun-Osogbo Festival",
+    choice4: "Olojo Festival",
+    answer: 3
   },
   {
     question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
