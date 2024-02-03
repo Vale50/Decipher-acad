@@ -840,8 +840,8 @@ let questions = [
 
 
 //CONSTANTS
-const CORRECT_BONUS = 5;
-const MAX_QUESTIONS = 15;
+const CORRECT_BONUS = 1;
+const MAX_QUESTIONS = 100;
 
 
 startGame = () => {
