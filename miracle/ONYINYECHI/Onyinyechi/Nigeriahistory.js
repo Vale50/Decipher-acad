@@ -280,68 +280,67 @@ let questions = [
     answer: 3
   },
   {
-    question: "The 1944 G.I. Bill aimed to provide support to:",
-    choice1:"Veterans returning from World War II",
-    choice2: "Civil rights activists",
-    choice3: "Women entering the workforce",
-    choice4: "Native American communities",
-    answer: 1
-  },
-  {
-    question: "The landmark case of Roe v. Wade (1973) addressed issues related to:",
-    choice1:"School desegregation ",
-    choice2: "Affirmative action",
-    choice3: "Abortion rightsg",
-    choice4: "Voting rights",
-    answer: 3
-  },
-  {
-    question: "The 1920s in the United States are often referred to as the 'Roaring Twenties' due to:",
-    choice1:"Economic depression",
-    choice2: "Rapid industrialization",
-    choice3: "Social and cultural upheaval",
-    choice4: "Prohibition of alcohol",
-    answer: 3
-  },
-  {
-    question: "The 1968 Democratic National Convention in Chicago became known for:
-    ",
-    choice1:"The nomination of Richard Nixon",
-    choice2: "Peaceful protests and unity",
-    choice3: "Violent clashes between protesters and police",
-    choice4: "The passage of civil rights legislation",
-    answer: 3
-  },
-  {
-    question: "The 'Star-Spangled Banner,'' the U.S. national anthem, was inspired by events during the:",
-    choice1:"American Revolution",
-    choice2: "War of 1812",
-    choice3: "Civil War",
-    choice4: "Mexican-American War",
+    question: "When did Nigeria change from right hand to left hand drive?",
+    choice1: "April 1952",
+    choice2: "April 1972",
+    choice3: "April 1962",
+    choice4: "April 1932",
     answer: 2
   },
   {
-    question: "The Marshall Plan, initiated after World War II, was designed to:",
-    choice1:"Rebuild European economies",
-    choice2: "Promote isolationist policies",
-    choice3: "Contain the spread of communism",
-    choice4: "Establish military alliances in Europe",
+    question: "Who was the first Nigerian to win a Nobel Prize?",
+    choice1: "Wole Soyinka ",
+    choice2: "Chinua Achebe",
+    choice3: "Chimamanda Ngozi Adichie",
+    choice4: "Ben Okri",
     answer: 1
   },
   {
-    question: "The 18th Amendment to the U.S. Constitution, which was later repealed, dealt with the issue of:",
-    choice1:"Women's suffrage",
-    choice2: "Prohibition of alcohol",
-    choice3: " Abolition of slavery",
-    choice4: "Freedom of speech",
+    question: "Which Nigerian city is known for its ancient walls and gates, which are UNESCO World Heritage sitesThe 1920s?",
+    choice1: "Ibadan",
+    choice2: "Benin City",
+    choice3: "Zaria",
+    choice4: "Kano",
+    answer: 4
+  },
+  {
+    question: "The name of the first Nigerian to win an individual gold medal at the Olympic Games is?",
+    choice1: "Blessing Okagbare ",
+    choice2: "Chioma Ajunwa",
+    choice3: "Samuel Peter",
+    choice4: "Hakeem Olajuwon",
     answer: 2
   },
   {
-    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
-    choice1:"Martin Luther King Jr.'s 'I Have a Dream' speech",
-    choice2: "The establishment of the Peace Corps",
-    choice3: "The signing of the Civil Rights Act",
-    choice4: "The formation of the Black Panther Party",
+    question: "What is the name of the Nigerian traditional wrestling style that has gained international recognition",
+    choice1: "Kokawa",
+    choice2: "Lutte Traditionnelle",
+    choice3: "Dambe",
+    choice4: "Nuba wrestling",
+    answer: 3
+  },
+  {
+    question: "Which Nigerian city is known as the "Home of Peace"?",
+    choice1: "Jos",
+    choice2: "Maiduguri",
+    choice3: "Yola",
+    choice4: "Sokoto",
+    answer: 4
+  },
+  {
+    question: "Who is Nigeria's first female combat helicopter pilot in the Nigerian Air Force?",
+    choice1: "Blessing Liman",
+    choice2: "Tolulope Arotile",
+    choice3: " Kafayat Sanni",
+    choice4: "Olubunmi Oyewole",
+    answer: 2
+  },
+  {
+    question: "The Nigerian film industry is known as?",
+    choice1: "Nollywood",
+    choice2: "Kannywood",
+    choice3: "YorubaWood",
+    choice4: "HausaWood",
     answer: 1
   },
   {
