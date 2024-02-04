@@ -679,52 +679,52 @@ let questions = [
     answer: 1
   },
   {
-    question: "The 1954 Brown v. Board of Education decision declared that racial segregation in public schools was:",
-    choice1:" Legal ",
-    choice2: "Unconstitutional",
-    choice3: " Up to individual states",
-    choice4: "Temporary",
+    question: "Who was the longest-serving senate President of Nigeria?",
+    choice1: "Ken Nnamani",
+    choice2: "David Mark",
+    choice3: "Bukola Saraki",
+    choice4: "Atiku Abubakar",
     answer: 2
   },
   {
-    question: "The 1830 Indian Removal Act resulted in the forced relocation of Native American tribes, primarily the:",
-    choice1:"Cherokee",
-    choice2: "Sioux",
-    choice3: "Apache",
-    choice4: " Iroquoi",
-    answer: 1
+    question: "The last military dictator Nigeria had was?",
+    choice1: "Sanni Abacha",
+    choice2: "Abdulsalam Abubakar",
+    choice3: "Muhammed Buhari",
+    choice4: "Ibrahim Babangida",
+    answer: 2
   },
   {
-    question: "The 1870 passage of the 15th Amendment to the U.S. Constitution granted voting rights to:",
-    choice1:" African American men",
-    choice2: "Women",
-    choice3: "Native Americans",
-    choice4: "All citizens regardless of race",
-    answer: 1
+    question: "Where was oil discovered in Nigeria in 1956?",
+    choice1:" Bayelsa State",
+    choice2: "Enugu State",
+    choice3: "Cross-River State",
+    choice4: "Rivers State",
+    answer: 4
   },
   {
-    question: " The 1968 Tet Offensive during the Vietnam War marked a turning point in public opinion against U.S. involvement, as it revealed:",
-    choice1:"Military success and progress",
-    choice2: "The effectiveness of U.S. counterinsurgency strategies",
-    choice3: "The influence of the media on shaping public perception",
-    choice4: "The stability of the South Vietnamese government",
+    question: "NEPA became PHCN in Nigeria in the year?",
+    choice1:"2002",
+    choice2: "2005",
+    choice3: "2008",
+    choice4: "2006",
     answer: 3
   },
   {
-    question: "The 1906 Pure Food and Drug Act and the Meat Inspection Act were responses to concerns raised by:",
-    choice1:" Labor unions",
-    choice2: "Environmental activists",
-    choice3: "Consumer advocates",
-    choice4: " Anti-imperialists",
-    answer: 3
+    question: " What is former President Obasanjo’s middle name?",
+    choice1: "Aremu",
+    choice2: "Onabanjo",
+    choice3: "Olusegun",
+    choice4: " Oluseun",
+    answer: 1
   },
   {
-    question: "The 1942 executive order that authorized the internment of Japanese Americans during World War II was issued by:",
-    choice1:"Franklin D. Roosevelt",
-    choice2: "Harry S. Truman",
-    choice3: " Dwight D. Eisenhower",
-    choice4: "Herbert Hoover",
-    answer: 1
+    question: "Which Nigerian author wrote the novel "Purple Hibiscus"?",
+    choice1: "Chinua Achebe",
+    choice2: "Wole Soyinka",
+    choice3: "Buchi Emecheta",
+    choice4: "Chimamanda Ngozi Adichie",
+    answer: 4
   },
   {
     question: " The 1869 completion of the First Transcontinental Railroad was a significant achievement connecting the East and West coasts of the United States primarily through the efforts of:",
