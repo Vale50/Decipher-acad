@@ -360,7 +360,7 @@ let questions = [
     answer: 3
   },
   {
-    question: "When was the Central Bank of Nigeria established?",
+    question: "When was the Central Bank of Nigeria established?", 
     choice1: "1960 ",
     choice2: "1958",
     choice3: "1965",
@@ -368,7 +368,7 @@ let questions = [
     answer: 2
   },
   {
-    question: "What is the motto of the Nigeria Police?",
+    question: "What is the motto of the Nigeria Police?", 
     choice1: "We are friends ",
     choice2: "Fighting corruption",
     choice3: "The police is your friend",
@@ -376,7 +376,7 @@ let questions = [
     answer: 3
   },
   {
-    question: "The author of the critically acclaimed novel "Half of a Yellow Sun" is known as?",
+    question: "The author of the critically acclaimed novel "Half of a Yellow Sun" is known as?", 
     choice1:" Chimamanda Ngozi Adichie ",
     choice2: " Chinua Achebe",
     choice3: "Wole Soyinka",
@@ -395,18 +395,12 @@ let questions = [
     question: "The eagle on the Nigeria coat of arm depicts?",
     choice1: "Power",
     choice2: "Strength",
-    choice3: " Vision",
+    choice3: "Vision",
     choice4: "Peace",
     answer: 2
   },
+  
   {
-    question: "The 1972 Watergate scandal led to the resignation of President Richard Nixon. What was the primary issue in the Watergate scandal?",
-    choice1:" Illegal wiretapping",
-    choice2: "Espionage against foreign governments",
-    choice3: "Bribery of foreign officials",
-    choice4: "Burglary and cover-up of political activities",
-    answer: 4
-  }, {
     question: " What is the name of the Nigerian traditional attire often worn on special occasions?",
     choice1: "Aso-Oke",
     choice2: "Dashiki",
@@ -495,7 +489,7 @@ let questions = [
     answer: 3
   },
   {
-    question: "Which Nigerian state is known as the "Coal City State”?"
+    question: "Which Nigerian state is known as the "Coal City State"?"
     choice1: "Lagos"
     choice2: "Abuja"
     choice3: "Port Harcourt",
@@ -806,14 +800,29 @@ let questions = [
       answer: 1
     },
     {
-      question: " The 1777 Articles of Confederation served as the first constitution of the United States and were eventually replaced by the:",
-      choice1:"Declaration of Independence",
-      choice2: "Emancipation Proclamation",
-      choice3: "U.S. Constitution",
-      choice4: "Bill of Rights",
+      question: " Which state in Nigeria has the least number of local government areas?",
+      choice1: "Jos",
+      choice2: "Port HarCourt",
+      choice3: "Bayelsa",
+      choice4: "Gombe",
       answer: 3
     },
-
+    {
+      question: "Nigeria was first visited by the white men from which country?",
+      choice1:" Greece ",
+      choice2: "America",
+      choice3: "Portugal",
+      choice4: "Britain",
+      answer: 3
+    },
+    {
+      question: "When was the first political party in Nigeria formed?",
+      choice1:" Illegal wiretapping",
+      choice2: "Espionage against foreign governments",
+      choice3: "Bribery of foreign officials",
+      choice4: "1923",
+      answer: 4
+    }, 
 
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 100;
