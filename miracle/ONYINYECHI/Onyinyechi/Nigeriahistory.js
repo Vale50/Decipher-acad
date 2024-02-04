@@ -727,40 +727,40 @@ let questions = [
     answer: 4
   },
   {
-    question: " The 1869 completion of the First Transcontinental Railroad was a significant achievement connecting the East and West coasts of the United States primarily through the efforts of:",
-    choice1:"Union Pacific and Central Pacific Railroad companies",
-    choice2: "Santa Fe and Southern Pacific Railroad companies",
-    choice3: "Baltimore and Ohio Railroad",
-    choice4: "Norfolk Southern and Canadian Pacific Railway",
+    question: "When did Agbani Darego win Nigeria’s first and only Miss World title?",
+    choice1: "2004",
+    choice2: "1999",
+    choice3: "2001",
+    choice4: "2000",
+    answer: 3
+  },
+  {
+    question: "Who is Nigeria’s first female author?",
+    choice1: "Flora Nwapa",
+    choice2: "Chimamanda Adiche",
+    choice3: "Amina Mama",
+    choice4: "Sefi Atta",
     answer: 1
   },
   {
-    question: "The 1944 G.I. Bill aimed to provide support to:",
-    choice1:"Veterans returning from World War II",
-    choice2: "Civil rights activists",
-    choice3: "Women entering the workforce",
-    choice4: "Native American communities",
-    answer: 1
-  },
-  {
-    question: "The 19th-century abolitionist who published the anti-slavery newspaper 'The Liberator' was:",
-    choice1:"Frederick Douglass",
-    choice2: "John Brown",
-    choice3: "Harriet Tubman",
-    choice4: "William Lloyd Garrison",
-    answer: 4
+    question: "Who is the first Nigeria female Vice-Chancellor?",
+    choice1: "Prof. Nnenna Oti    ",
+    choice2: "Prof. Grace Alele Williams",
+    choice3: "Prof. Folashade Ogunshola",
+    choice4: "Prof. Florence Obi",
+    answer: 2
     {
-      question: "The 1970 Kent State shootings, where National Guard troops killed four students during an anti-Vietnam War protest, occurred in which state?",
-      choice1:"Ohio",
-      choice2: "California",
-      choice3: "New York",
-      choice4: "Illinois",
+      question: "Which Nigerian state has "Light of the Nation" as her slogan?",
+      choice1: "Anambra State",
+      choice2: "Bauchi State",
+      choice3: "Oyo State",
+      choice4: " Plateau State",
       answer: 1
     },
     {
-      question: "The 1832 Nullification Crisis revolved around the opposition of a state to federal tariffs and occurred in which southern state?",
-      choice1:"South Carolina",
-      choice2: "Georgia",
+      question: "Who is the first Nigerian nationalist to move the motion of self government?",
+      choice1:" Aguiyi Ironsi",
+      choice2: "Anthony Enahoro",
       choice3: "Virginia",
       choice4: "Alabama",
       answer: 1
