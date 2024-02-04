@@ -799,11 +799,11 @@ let questions = [
     },
     {
       question: "Who is the first military head of state to die in office?",
-      choice1:"Gen. l J.T.U Aguiyi Ironsi      ",
-      choice2: "16th Amendment",
-      choice3: "18th Amendment",
-      choice4: "19th Amendment",
-      answer: 2
+      choice1: "Gen. l J.T.U Aguiyi Ironsi",
+      choice2: "Gen. Sanni Abacha",
+      choice3: "Gen. Shehu Shagari",
+      choice4: "Gen. Olusegun Obasanjo",
+      answer: 1
     },
     {
       question: " The 1777 Articles of Confederation served as the first constitution of the United States and were eventually replaced by the:",
