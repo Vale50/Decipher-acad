@@ -519,164 +519,164 @@ let questions = [
     answer: 1
   },
   {
-    question: "The 'War on Terror' initiated in the aftermath of the September 11, 2001 attacks led to U.S. military involvement in which countries?",
-    choice1:"Iraq and Afghanistan",
-    choice2: " Iran and Syria",
-    choice3: "Libya and Yemen",
-    choice4: "North Korea and Pakistan",
+    question: " Nigeria’s first female NAFDAC Chairman was?",
+    choice1: "Prof. Dora Akunyili",
+    choice2: "Ngozi Okonjo Iweala",
+    choice3: "Lauretta Onochie",
+    choice4: "Funmilayo Ramsey Kuti",
     answer: 1
   },
   {
-    question: " The 1876 Battle of Little Bighorn, also known as Custer's Last Stand, involved conflict between the U.S. Army and:",
-    choice1:"Apache Indians",
-    choice2: " Lakota Sioux and Cheyenne tribes",
-    choice3: "Nez Perce Indians",
-    choice4: "Comanche Indians",
+    question: "What was the first-ever Nollywood movie produced?",
+    choice1: "Tongues of Fire, 1926",
+    choice2: "Palaver, 1926",
+    choice3: "Phone Swap, 1926",
+    choice4: "Corporate Maid, 1926",
     answer: 2
   },
   {
-    question: "The 'New Frontier' was a term associated with the domestic and foreign policies of which U.S. president?",
-    choice1:"John F. Kennedy ",
-    choice2: "Lyndon B. Johnson",
-    choice3: "Dwight D. Eisenhower",
-    choice4: "Richard Nixon",
-    answer: 1
-  },
-  {
-    question: "The 1898 Treaty of Paris concluded the Spanish-American War and resulted in the United States acquiring which territories?",
-    choice1:"Puerto Rico, Guam, and the Philippines",
-    choice2: "Cuba, Mexico, and Haiti",
-    choice3: " Alaska, Hawaii, and Samoa",
-    choice4: "Panama, Nicaragua, and Honduras",
-    answer: 11
-  },
-  {
-    question: "The 1836 Battle of the Alamo was a key event in which conflict for Texan independence?",
-    choice1:"Mexican-American War ",
-    choice2: "War of 1812",
-    choice3: "Texas Revolution",
-    choice4: " Civil War",
-    answer: 3
-  },
-  {
-    question: "The 1947 Truman Doctrine was a response to the spread of:",
-    choice1:"Communism",
-    choice2: "Fascism",
-    choice3: "Imperialism",
-    choice4: "Nationalism",
-    answer: 1
-  },
-  {
-    question: "The 1969 Apollo 11 mission achieved the first successful:",
-    choice1:"Spacewalk",
-    choice2: "Mars landing",
-    choice3: "Moon landing",
-    choice4: "Satellite launch",
-    answer: 3
-  },
-  {
-    question: "The 1901 assassination of President William McKinley led to the presidency of:",
-    choice1:"Theodore Roosevelt",
-    choice2: "Woodrow Wilson",
-    choice3: "William Howard Taft ",
-    choice4: "Franklin D. Roosevelt",
-    answer: 1
-  },
-  {
-    question: "The 1964 Gulf of Tonkin Resolution granted President Lyndon B. Johnson the authority to:",
-    choice1:"Declare war on North Vietnam",
-    choice2: "Mobilize U.S. troops in Vietnam",
-    choice3: "Negotiate a peace treaty with North Vietnam",
-    choice4: " Expand the draft for military service",
+    question: "The first woman in Nigeria to contest in the presidential election was?",
+    choice1: "Maurice Ibru ",
+    choice2: "Sarah Nnadzwa Jubril",
+    choice3: "Uju Ken-Ohanneye",
+    choice4: "Ngozi Okonjo Iweala",
     answer: 2
   },
   {
-    question: "The 19th-century concept of 'Manifest Destiny' was closely tied to the belief in the:",
-    choice1:"Right to bear arms",
-    choice2: "Abolition of slavery",
-    choice3: "Expansion of American territory to the Pacific",
-    choice4: "Separation of church and state",
+    question: "Former president of Nigeria Umaru Musa Yar’Adua died in what year?",
+    choice1: "May 5, 2010",
+    choice2: "June 5, 2010",
+    choice3: "May 6, 2010",
+    choice4: "June 6,2010",
     answer: 3
   },
   {
-    question: "The 1980s economic policy of reducing government regulation and promoting free-market principles was commonly known as:",
-    choice1:"The Great Society",
-    choice2: "The New Deal",
-    choice3: "Reaganomics",
-    choice4: "The Square Deal",
-    answer: 3
-  },
-  {
-    question: "The 1894 Pullman Strike, a nationwide railroad strike, was a protest against:",
-    choice1:"Wage cuts and poor working conditions",
-    choice2: " High taxes on railroads",
-    choice3: "Government interference in labor disputes",
-    choice4: "Discrimination against immigrant workers",
+    question: "Which is the highest court of law in Nigeria?",
+    choice1: "Supreme Court of Nigeria",
+    choice2: "Court of Appeal",
+    choice3: "Federal High Court",
+    choice4: "State High Court",
     answer: 1
   },
   {
-    question: "The 1919 Treaty of Versailles included the establishment of which international organization?",
-    choice1:"United Nations",
-    choice2: "League of Nations",
-    choice3: "NATO (North Atlantic Treaty Organization)",
-    choice4: "European Union",
-    answer: 2
-  },
-  {
-    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
-    choice1:" Martin Luther King Jr.'s 'I Have a Dream' speech",
-    choice2: "The establishment of the Peace Corps",
-    choice3: "The signing of the Civil Rights Act",
-    choice4: "The formation of the Black Panther Party",
-    answer: 1
-  },
-  {
-    question: "The 1892 Populist Party platform sought to address the concerns of:",
-    choice1:" Industrial workers",
-    choice2: "Farmers and laborers",
-    choice3: "Urban immigrants",
-    choice4: "Business owners",
-    answer: 2
-  },
-  {
-    question: "The 1927 execution of Italian immigrants Sacco and Vanzetti highlighted issues related to:",
-    choice1:"Labor strikes",
-    choice2: "Immigration quotas",
-    choice3: "Anarchism and nativism",
-    choice4: "Civil rights",
-    answer: 3
-  },
-  {
-    question: "The 1846 Oregon Trail migration was driven by the desire for:",
-    choice1:"Gold and wealth",
-    choice2: "Religious freedom",
-    choice3: "Agricultural opportunities",
-    choice4: "Fur trapping and trading opportunities",
-    answer: 3
-  },
-  {
-    question: "The 1965 Watts riots in Los Angeles were sparked by issues related to:",
-    choice1:"Racial tensions and police brutality",
-    choice2: "Economic inequality",
-    choice3: "Vietnam War protests",
-    choice4: "Anti-immigrant sentiments",
-    answer: 1
-  },
-  {
-    question: "The 1920s cultural and social movement known for challenging traditional norms and values was called the:",
-    choice1:"Harlem Renaissance",
-    choice2: "Beat Generation",
-    choice3: "Lost Generation",
-    choice4: "Jazz Age",
+    question: "Which Nigerian city is known for its ancient terracotta sculptures and artefacts?",
+    choice1: "Zaria",
+    choice2: "Benin city",
+    choice3: "Kano",
+    choice4: "Ife",
     answer: 4
   },
   {
-    question: "The 1969 Apollo 11 mission achieved the first successful:",
-    choice1:"Spacewalk",
-    choice2: "Mars landing",
-    choice3: " Moon landing",
-    choice4: " Satellite launch",
+    question: "Who was the first Nigerian to win the UEFA Champions League title?",
+    choice1: "Jay-Jay Okocha",
+    choice2: "Nwankwo Kanu",
+    choice3: "Finidi George",
+    choice4: "John Obi Mikel",
+    answer: 2
+  },
+  {
+    question: "What is the name of the Nigerian national anthem?",
+    choice1: " Our Heroes Past ",
+    choice2: "Nigeria, We Hail Thee",
+    choice3: "Arise, O Compatriots",
+    choice4: "Oh God of Creation",
     answer: 3
+  },
+  {
+    question: "Which is the oldest degree awarding university in Nigeria?"
+    choice1: "Obafemi Awolowo University",
+    choice2: "University of Lagos",
+    choice3: "University of Ibadan",
+    choice4: "University of Benin",
+    answer: 3
+  },
+  {
+    question: "Nigeria’s first ever female psychiatrist was?",
+    choice1: "Prof. Dora Akunyili",
+    choice2: "Dr. Bretha Johnson",
+    choice3: "Dr. Adamu Adamu",
+    choice4: "Dr. Aderonke Kale",
+    answer: 2
+  },
+  {
+    question: "Blue in the Nigerian Police flag represents?",
+    choice1: "Fight, hope and mission",
+    choice2: "Love, strength and peace",
+    choice3: "Strength, joy and happiness",
+    choice4: "Love, loyalty and unity",
+    answer: 4
+  },
+  {
+    question: "Who was Nigeria’s first Inspector General of Police?"
+    choice1: "Mr. C. W. Duncan",
+    choice2: " Godwin Emefiele",
+    choice3: "Louis Edet",
+    choice4: "Muhammed Abubakar",
+    answer: 1
+  },
+  {
+    question: "Nigeria Council was created by?",
+    choice1: "Flora Shaw",
+    choice2: "Herbert Macaulay",
+    choice3: "Lord Luggard",
+    choice4: "Frank Godwin",
+    answer: 3
+  },
+  {
+    question: "Who was the first female to become a Chartered Accountant in Nigeria?",
+    choice1:" Olufunmilayo Ransome-Kuti",
+    choice2: "Margaret Ekpo",
+    choice3: "Francesca Emmanuel    ",
+    choice4: "Cecilia Ibru",
+    answer: 3
+  },
+  {
+    question: "Gombe state in Nigeria is known as the?",
+    choice1: "Jewel of Savannah",
+    choice2: "Food basket of the nation",
+    choice3: "Home of peace",
+    choice4: "Land of milk and honey",
+    answer: 1
+  },
+  {
+    question: "Which Nigerian state is known as Eastern Heartland?",
+    choice1: "Abia state ",
+    choice2: "Anambra state",
+    choice3: "Enugu state ",
+    choice4: "Imo state ",
+    answer: 4
+  },
+  {
+    question: "The first political party in Nigeria was?",
+    choice1: "Nigerian National Democratic Party (NNDP)",
+    choice2: "People’s Democratic Party (PDP)",
+    choice3: "All Progressive Congress (APC)",
+    choice4: "Labour Party (LP)",
+    answer: 1
+  },
+  {
+    question: "Polymer notes were introduced in Nigeria on?",
+    choice1:"28th April, 2007",
+    choice2: "28th June, 2008",
+    choice3: "28th February, 2007",
+    choice4: "28th February, 2008",
+    answer: 4
+  },
+  {
+    question: "Which state in Nigeria has the largest Local Government Areas?:",
+    choice1: "Kano State with 44 LGAs",
+    choice2: "Kaduna State with 44 LGAs",
+    choice3: "Sokoto State with 44 LGAs",
+    choice4: "Kebbi State with 44 LGAs",
+    answer: 1
+  },
+  {
+    question: "General Yakubu Gowon created how many states in Nigeria in May 1967?",
+    choice1: "12 states",
+    choice2: "11 states",
+    choice3: "10 states",
+    choice4: "15 states",
+    answer: 1
   },
   {
     question: "The 1954 Brown v. Board of Education decision declared that racial segregation in public schools was:",
