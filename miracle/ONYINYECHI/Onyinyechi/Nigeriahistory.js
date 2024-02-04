@@ -782,24 +782,24 @@ let questions = [
       answer: 4
     },
     {
-      question: "The 1989 fall of the Berlin Wall symbolized the end of the:",
-      choice1:"Cold War ",
-      choice2: "Korean War",
-      choice3: "Vietnam War",
-      choice4: "Cuban Missile Crisis",
-      answer: 1
-    },
-    {
-      question: "The 1966 Miranda v. Arizona Supreme Court decision established the requirement for law enforcement to:",
-      choice1:"Provide legal representation to defendants",
-      choice2: "Read the rights of the accused before questioning",
-      choice3: "Conduct thorough investigations before making arrests",
-      choice4: "Use physical force only when necessary",
+      question: "When was naira and kobo introduced in Nigeria?",
+      choice1: "1975 ",
+      choice2: "1973",
+      choice3: "1974",
+      choice4: "1976",
       answer: 2
     },
     {
-      question: "The 1913 introduction of the income tax in the United States was enabled by the ratification of the:",
-      choice1:"14th Amendment",
+      question: "Which state in Nigeria is famous for its large deposit of iron and steel?",
+      choice1: "Kwara",
+      choice2: "Lokoja",
+      choice3: "Abeokuta",
+      choice4: "Ibadan",
+      answer: 2
+    },
+    {
+      question: "Who is the first military head of state to die in office?",
+      choice1:"Gen. l J.T.U Aguiyi Ironsi      ",
       choice2: "16th Amendment",
       choice3: "18th Amendment",
       choice4: "19th Amendment",
