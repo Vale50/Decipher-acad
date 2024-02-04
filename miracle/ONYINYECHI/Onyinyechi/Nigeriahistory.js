@@ -817,9 +817,9 @@ let questions = [
     },
     {
       question: "When was the first political party in Nigeria formed?",
-      choice1:" Illegal wiretapping",
-      choice2: "Espionage against foreign governments",
-      choice3: "Bribery of foreign officials",
+      choice1:" 1932",
+      choice2: "1959",
+      choice3: "1960",
       choice4: "1923",
       answer: 4
     }, 
