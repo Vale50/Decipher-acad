@@ -774,12 +774,12 @@ let questions = [
       answer: 3
     },
     {
-      question: "The 1892 Homestead Strike, a labor dispute between workers and management, occurred in which industry?",
-      choice1:"Textiles",
-      choice2: "Coal mining",
-      choice3: "Steel",
-      choice4: "Railroads",
-      answer: 3
+      question: "What town in Nigeria is famous for plywood production?",
+      choice1:"Ring Road",
+      choice2: "Odogbolu ",
+      choice3: "Ihama",
+      choice4: "Sapele",
+      answer: 4
     },
     {
       question: "The 1989 fall of the Berlin Wall symbolized the end of the:",
