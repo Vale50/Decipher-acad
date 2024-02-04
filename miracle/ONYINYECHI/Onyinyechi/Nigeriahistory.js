@@ -759,19 +759,19 @@ let questions = [
     },
     {
       question: "Who is the first Nigerian nationalist to move the motion of self government?",
-      choice1:" Aguiyi Ironsi",
+      choice1: "Aguiyi Ironsi",
       choice2: "Anthony Enahoro",
-      choice3: "Virginia",
-      choice4: "Alabama",
-      answer: 1
+      choice3: "Sanni Abacha",
+      choice4: "Herbert Macaulay",
+      answer: 2
     },
     {
-      question: "The 1960 televised presidential debates between John F. Kennedy and Richard Nixon are often credited with influencing the outcome of the election by favoring:",
-      choice1:" Nixon's experience and policies ",
-      choice2: "Kennedy's charisma and appearance",
-      choice3: "Third-party candidates",
-      choice4: "Eisenhower's endorsement of Kennedy",
-      answer: 2
+      question: "How many states make up Northern Nigeria?",
+      choice1: "17",
+      choice2: "15",
+      choice3: "19",
+      choice4: "12",
+      answer: 3
     },
     {
       question: "The 1892 Homestead Strike, a labor dispute between workers and management, occurred in which industry?",
