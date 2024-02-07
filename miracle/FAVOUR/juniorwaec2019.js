@@ -6,7 +6,7 @@
     choice3: "< 5.7255>", 
     choice4: "< 5.726>",
     choice5: "<5.73>",
-     answer: 
+     answer: 4
   },
   {
     question2:". Write in figure: six hundred and fifty-eight million, one hundred and twenty-five thousand and one?",
@@ -15,7 +15,7 @@
     choice3: "<658,125,001>",
     choice4: "<658,125,000 >",
     choice5: "<658,105,001>",
-    answer: 
+    answer: 3
   },
   {
     question3: "Express 0.00254 in standard form ",
@@ -24,7 +24,7 @@
     choice3: "2.54 x 10-3  ",
     choice4: "2.54 x 10-4 ",
     choice5: "2.54 x 10-5",
-    answer: 
+    answer: 3
   },
   {
     question4: " Find the sum of prime factors in 60.",  
@@ -33,7 +33,7 @@
     choice3: "8 ",
     choice4: "10",
     choice5:"12",
-    answer: 
+    answer: 4
   },
   {
     question5: "Round off 6827 to the nearest ten." ,
@@ -42,7 +42,7 @@
     choice3: "6930",
     choice4: "6900  ",
     choice5:"7000",
-    answer:
+    answer:3
   },
   {
     question6: "Express N32.00 as a ratio of N72.00.",
@@ -51,7 +51,7 @@
     choice3: "9:4 ",
     choice4: "  4:9 ",
     choice5:"1:2",
-    answer: 
+    answer: 4
   },
   {
     question7: " Find the L.C.M. of 20a2 and 32ab.",
@@ -60,167 +60,184 @@
     choice3: "160a2b ",
     choice4: "160ab2",
     choice5:"320a2b ",
-    answer: 
+    answer:3
   },
   {
-    question: "Which British monarch was nicknamed 'The Sun King'?",
-    choice1: "Henry VIII",
-    choice2: "Edward VII",
-    choice3: "Charles I",
-    choice4: " James I ",
+    question8: "Add the following 1011two ; 1111 two and 101111 two?",
+    choice1: "111110 two ",
+    choice2: "10111two",
+    choice3: " 1001001 two ",
+    choice4: "  1001101 two ",
+    choice5:" 11001101 two",
     answer: 3
   },
   {
-    question: " The Corn Laws were primarily aimed at regulating the importation of what agricultural product.",
-    choice1: " Corn (grain)",
-    choice2: "Wheat ",
-    choice3: "Barley",
-    choice4: " Potatoes",
-    answer: 1
-  },
-  {
-    question: "Who was the last British monarch from the House of Hanover? ",
-    choice1: "George I",
-    choice2: "George II",
-    choice3: "George III",
-    choice4: "Victoria",
+    question9: "  Find the H.C.F of 108 and 72.",
+    choice1: " 9",
+    choice2: "18 ",
+    choice3: "27",
+    choice4: "36 ",
+    choice5:"72",
     answer: 4
   },
   {
-    question: "The Battle of Naseby in 1645 was a decisive victory for which side in the English Civil War.?",
-    choice1: "Ralistsoy",
-    choice2: "Parliamentarians",
-    choice3: "Cavaliers",
-    choice4: "Roundheads",
-    answer: 2
+    question10: " Increase 4500kg by 15% ",
+    choice1: "300kg",
+    choice2: " 675kg",
+    choice3: "3825kg",
+    choice4: "5175kg",
+    choice5:"67500kg",
+    answer: 4
   },
   {
-    question: "Who was the British Prime Minister during the signing of the Treaty of Lisbon in 2007 .?",
-    choice1: "Tony Blair",
-    choice2: " Gordon Brown",
-    choice3: "David Cameron",
-    choice4: "Theresa May",
-    answer: 2
+    question11: ". Find the product of the L.C.M. and H.C.F. of the following numbers 9, 12 and 18. ",
+    choice1: "6",
+    choice2: "18",
+    choice3: "36",
+    choice4: "108",
+    choice5:"216",
+    answer: 5
   },
   {
-    question:  "The 'Glorious Revolution' of 1688 resulted in the overthrow of which monarch?",
-    choice1:" Charles II",
-    choice2: "James II",
-    choice3: "William III",
-    choice4: "Anne",
-    answer: 2
+    question12: ". If N240,000.00 is shared among 3 people in the ratio 5:4:3, what is the least share?",
+    choice1: "N100,000.00",
+    choice2: "N96,000.00 ",
+    choice3: "N80,000.00",
+    choice4: " N60,000.00",
+    choice5:" N52,000.0",
+    answer: 4
+  },
+  
+  {
+    question13:  " Find the simple interest on N30,000.00 for 3½ years at 5% per annum.",
+    choice1:" N5,250.00  ",
+    choice2: "N5,775.00 ",
+    choice3: "N10,750.00",
+    choice4: "N11,550.00",
+     choice5:". N15,770.00",
+     answer:1
+  },
+
+  {
+    queation14:" Find the square root of 9 x 16 x 25.",
+    choice1: " . 3600 ",
+    choice2: "360",
+    choice3: " 60",
+    choice4: " 25",
+    choice5:"9",
+    answer:3
+  },
+
+  {
+    question15: " A desktop computer is bought for N45,000.00 and sold for N30,000.00. Find the loss percent. ",
+    choice1: " 45.00%  ",
+    choice2: "33.33% ",
+    choice3: " 30.00%",
+    choice4: ". 15.33% ",
+    choice5:"10.00%    ",
+    answer:2
+  },
+
+  {
+    question16: "  Arrange in descending order of magnitude 3/5, ½, 4/7,  5/9",
+    choice1: "  3/5, 4/7, 1/2., 5/9",
+    choice2: " ½, 4/7, 3/5, 5/9",
+    choice3: "3/5, 4/7, 5/9, ½", 
+    choice4: " 4/7, 3/5, ½, 5/9 ",
+    choice5:"5/9, 3/5, 4/7, ½.",
+    answer: 3
   },
   {
-    question: " Who was the British monarch during the time of the Spanish Armada",
-    choice1: " Elizabeth I",
-    choice2: ") James I",
-    choice3: " Mary I ",
-    choice4: " Henry VIII",
-    answer:1 
+    question17:"On every sale of goods worth N10,000.00, there is a commission of N550.00. If an agent delivers  N150,000.00, find his commissio",
+    choice1: " N1,250.00 ",
+    choice2: "N2,250.00 ",
+    choice3: " N4,150.00",
+    choice4: " N7,250.00",
+    choice5:"N8,250.00",
+    answer:5
   },
   {
-    question: " The Magna Carta was signed during the reign of which English king? ",
-    choice1: " Richard   ",
-    choice2: "John",
-    choice3: "  Henry II",
-    choice4: " Edward I",
+    question18: "Multiply 1001101two by 111two ",
+    choice1: " 1001101two",
+    choice2: "1000101two ",
+    choice3: "1001001two",
+    choice4: "1010001two ",
+    choice5:"10011two",
+    answer: 1
+  },
+  {
+    question19: "A Toyota Hilux uses 100 litres of fuel in a distance of 250km. How many litres of fuel will it use for a distance of 150 kilometres? ",
+    choice1: " 50 litres",
+    choice2: " 60 litres",
+    choice3: "80 litres ",
+    choice4: "  133 litres",
+    choice5:" 375 litres",
     answer:2
   },
   {
-    question: " Who was the British Prime Minister at the time of the Cuban (Missile Crisis in 1962? "
-    choice1: " Harold Macmillan",
-    choice2: "Harold Wilson",
-    choice3: "Anthony Eden", 
-    choice4: "Alec Douglas-Home ",
-    answer: 1
-  },
-  {
-    question:" The Tolpuddle Martyrs were a group of workers from which profession??",
-    choice1: "Miners"
-    choice2: "Farmers"
-    choice3: "Dockworkers"
-    choice4: "Weavers"
-    answer:3 
-  },
-  {
-    question: " Which British monarch was known as 'Good Queen Bess'?"
-    choice1: "Mary I ",
-    choice2: "Elizabeth I ",
-    choice3: "Victoria",
-    choice4: "Anne ",
-    answer: 2
-  },
-  {
-    question: "The Battle of Trafalgar in 1805 secured British naval supremacy against which naval force??  ",
-    choice1: " French",
-    choice2: "Spanish",
-    choice3: "Dutch",
-    choice4: " Italian",
-    answer: 1
-  },
-  {
-    question: "The Domesday Book was commissioned by which English king? ?." ,
-    choice1: "William the Conqueror",
-    choice2: "Harold Godwinson",
-    choice3: " Edward the Confessor",
-    choice4: "  Henry II",
+    question20: "Reciprocal of 0.65 to three significant figure is?" ,
+    choice1: "1.54",
+    choice2: "1.538",
+    choice3: "1.53 ",
+    choice4: " 1.500",
+    choice5:"0.54",
     answer:1
   },
   {
-    question: " The Magna Carta was signed at which historic location ?",
-    choice1: "Windsor Castle",
-    choice: "Runnymede",
-    choice3: " Tower of London    ",
-    choice4:"Westminster Abbey",
-    answer: 2
+    question: " ",
+    choice1: "",
+    choice: "",
+    choice3: "   ",
+    choice4:"",
+    answer: 
     },
   {
-    question: " Who was the British Prime Minister during the Apollo 11 moon landing in 1969?",
-    choice1: " Harold Wilson",
-    choice2: "Edward Heath",
-    choice3: "James Callaghan",
-    choice4: "Margaret Thatcher",
-    answer: 1
+    question: " ",
+    choice1: " ",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    answer: 
   },
   {
-    question: ". The Battle of Flodden in 1513 was fought between England and which other nation?",
-    choice1: "France",
-    choice2: "Scotland",
-    choice3: " Spain",
-    choice4: " Ireland    ",
-    answer: 1
+    question: "",
+    choice1: "",
+    choice2: "",
+    choice3: " ",
+    choice4: "    ",
+    answer: 
   },
   {
-    question: "  Who was the British Prime Minister at the time of the outbreak of the Boer War in 1899?",
-    choice1: " Lord Salisbury",
-    choice2: " William Gladstone ",
-    choice3: "Benjamin Disraeli    ",
-    choice4: "Arthur Balfour ",
-    answer: 1
+    question: " ",
+    choice1: " ",
+    choice2: "  ",
+    choice3: "  ",
+    choice4: " ",
+    answer: 
   },
   {
-    question: "The War of the Roses was fought between which two rival houses ? ",
-    choice1: "Lancaster and York ",
-    choice2: "Tudor and Stuart ",
-    choice3: "Plantagenet and Tudor    ",
-    choice4: "Stuart and Hanover",
-    answer: 1
+    question: "",
+    choice1: "",
+    choice2: "",
+    choice3: "   ",
+    choice4: "",
+    answer: 
   },
   {
-    question: " Who was the first English king to be crowned on Christmas Da.?",
-    choice1: " Edward the Confessor",
-    choice2: "William the Conqueror",
-    choice3: "Richard the Lionheart    ",
-    choice4: "Henry VIII    ",
-    answer: 2
+    question: " ",
+    choice1: " ",
+    choice2: "",
+    choice3: "" ,
+    choice4: "  ",
+    answer: 
   },
   {
-    question:  " The Battle of Flodden in 1513 resulted in the death of which monarch?",
-    choice1: "Henry VIII",
-    choice2: " James IV of Scotland ",
-    choice3: "Elizabeth I ",
-    choice4: " Mary, Queen of Scots",
-    answer:2 
+    question:  " ",
+    choice1: "",
+    choice2: " ",
+    choice3: "",
+    choice4: " ",
+    answer:
   },
   {
     question:  " Who was the British Prime Minister during the Great Reform Act of 1832?",
