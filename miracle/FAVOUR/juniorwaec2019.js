@@ -184,23 +184,25 @@
     answer:1
   },
   {
-    question: " ",
+    question21: ". If P = 4, find the value of P  15 5     ",
     choice1: "",
     choice: "",
     choice3: "   ",
     choice4:"",
+    choice5:"",
     answer: 
     },
   {
-    question: " ",
-    choice1: " ",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    answer: 
+    question22: " The length of a basketball pitch can be divided into 12 parts, each 25cm long. How many parts, each 20cm long can be obtained from the pitch? ",
+    choice1: " 12",
+    choice2: "13",
+    choice3: "14",
+    choice4: "15",
+    choice5:"16",
+    answer: 4
   },
   {
-    question: "",
+    question23: "",
     choice1: "",
     choice2: "",
     choice3: " ",
@@ -208,75 +210,82 @@
     answer: 
   },
   {
-    question: " ",
-    choice1: " ",
-    choice2: "  ",
-    choice3: "  ",
-    choice4: " ",
-    answer: 
+    question24: " The linear scale of two similar objects is 5:8. What is the volume scale factor? ",
+    choice1: " 5:8",
+    choice2: " 25:64 ",
+    choice3: " 125:512 ",
+    choice4: " 64:125",
+    choice5: "512:12",
+    answer: 3
   },
   {
-    question: "",
-    choice1: "",
-    choice2: "",
-    choice3: "   ",
-    choice4: "",
-    answer: 
+    question25: "The volume scale factor of two similar solids is 8:125. If the length of a side in the bigger solid is 140cm, find the length of the corresponding side of the smaller solid.",
+    choice1: "28cm",
+    choice2: "56cm",
+    choice3: " 122cm  ",
+    choice4: "132cm",
+    choice5:"133cm",
+    answer: 2
   },
   {
-    question: " ",
-    choice1: " ",
-    choice2: "",
-    choice3: "" ,
-    choice4: "  ",
-    answer: 
+    question26: "The linear scale factor of two similar shapes is 2:7. If the area of the bigger shape is 392cm2 , find the area of the smaller shape.  ",
+    choice1: "49cm2 ",
+    choice2: "112cm2",
+    choice3: "128cm2" ,
+    choice4: "256cm2  ",
+    choice5:"264cm2",
+    answer: 2
   },
   {
-    question:  " ",
-    choice1: "",
-    choice2: " ",
-    choice3: "",
-    choice4: " ",
-    answer:
+    question27:  "How many sides have a regular polygon whose interior angle is 180o each?",
+    choice1: "4",
+    choice2: "5 ",
+    choice3: "6",
+    choice4: " 7",
+    choice5:"8",
+    answer:4
   },
   {
-    question:  " Who was the British Prime Minister during the Great Reform Act of 1832?",
-    choice1:"Robert Peel ",
-    choice2: "William Gladstone",
-    choice3: "Arthur Wellesley",
-    choice4: " Charles Grey  ",
-    answer: 4
+    question28:  "One interior angle of a hexagon is 170o and each of the remaining interior angle is equal to Yo. Find the value of Y.  ",
+    choice1:"100 ",
+    choice2: "110",
+    choice3: "130",
+    choice4: " 140  ",
+    choice5:"160",
+    answer: 5
   },
   {
-    question: "The Treaty of Windsor in 1386 established an alliance between England and which other nation",
-    choice1: " France ",
-    choice2: "Scotland    ",
-    choice3: "  Portugal    ",
-    choice4: "  Spain",
+    question29: "Find the size of an interior angle of a regular octagon",
+    choice1: " 45o",
+    choice2: "60o" ,
+    choice3: "  90o   ",
+    choice4: " 120o ",
+    choice5:"135o",
     answer:3
     {
-      question: "Who was the British Prime Minister during the Irish Potato Famine in the 1840s?",
-      choice1: "< Robert Peel>",
-      choice2: "<William Ewart Gladstone >",
-      choice3: "<Lord John Russell >", 
-      choice4: "< Benjamin Disraeli>",
-      answer: 3
+      question30: " All the following are the properties of an equilateral triangle EXCEPT",
+      choice1: "<. All the angles are equal>",
+      choice2: "< All the sides are equal >",
+      choice3: "< Each of the angle is 60o>", 
+      choice4: "<  There are three lines of symmetry>",
+      choice5: "< There is only one line of symmetry>",
+      answer: 5
     },
     {
-      question: " The Acts of Union in 1536 and 1543 joined which two countries into the Kingdom of England?",
-      choice1: "< England and Scotland>"
-      choice2: "< England and Wales>"
-      choice3: "< England and Ireland>"
-      choice4: "< England and France>",
-      answer: 2
+      question: " ",
+      choice1: "< >",
+      choice2: "< >",
+      choice3: "< >",
+      choice4: "< >",
+      answer: 
      },
     {
-      question: " Who was the British Prime Minister during the Battle of Britain in 1940 ?"
-      choice1: "Winston Churchill",
-      choice2: "Neville Chamberlain",
-      choice3: " Clement Attlee",
-      choice4: " Anthony Eden ",
-      answer: 1
+      question: ""
+      choice1: "",
+      choice2: "",
+      choice3: " ",
+      choice4: "  ",
+      answer: 
     },
     {
       question: "The Luddite movement in the early 19th century was primarily associated with opposition to which development?  ",
