@@ -272,31 +272,34 @@
       answer: 5
     },
     {
-      question: " ",
-      choice1: "< >",
-      choice2: "< >",
-      choice3: "< >",
-      choice4: "< >",
+      question31: " A regular polygon with 7 sides is called  ",
+      choice1: "<Heptagon >",
+      choice2: "<Hexagon>",
+      choice3: "< Nonagon>",
+      choice4: "<Pentagon >",
+      choice5:"< Quadrilateral ",
       answer: 
      },
     {
-      question: ""
+      question32: "Solve the equation 10  ",
       choice1: "",
       choice2: "",
       choice3: " ",
       choice4: "  ",
+      choice5:"",
       answer: 
     },
     {
-      question: " ",
-      choice1: "",
-      choice2: "",
-      choice3: " ",
-      choice4: "",
+      question33: "When three is divided by the sum of a certain number and 8, the result is the same as dividing 2 by the sum of that number and 3. Find the number.  ",
+      choice1: "5",
+      choice2: "6",
+      choice3: " 7",
+      choice4: "11",
+      choice5:"15",
       answer: 
     },
     {
-      question: "" ,
+      question34: "" ,
       choice1: "",
       choice2: "  ",
       choice3: " ",
@@ -304,7 +307,7 @@
       answer:
     },
     {
-      question: " ",
+      question35: " ",
       choice1: "",
       choice2: "",
       choice3: "",
@@ -312,7 +315,7 @@
       answer: 
     },
     {
-      question:  "",
+      question36:  "",
       choice1: "",
       choice2: " ",
       choice3: "",
@@ -320,7 +323,7 @@
       answer: 
     },
     {
-      question: "      ?",
+      question37: "      ?",
       choice1: "",
       choice2: " ",
       choice3: "",
@@ -328,109 +331,121 @@
       answer: 
     },
     {
-      question: " ",
-      choice1: " ",
-      choice2: "     ",
-      choice3: " ",
-      choice4: " ",
+      question38: " A sector of a circle has an area of 15.4cm2 . If the radius of the circle is 6cm, calculate the angle of the sector",
+      choice1: "33o ",
+      choice2: "  41o   ",
+      choice3: " 49o",
+      choice4: "98o ",
+      choice5:"147o",
       answer: 
     },
     {
-      question: " ",
+      question39: " ",
       choice1: "",
       choice2: "" ,
       choice3: "",
       choice4: " ",
+      choice5:"",
       answer: 
     },
     {
-      question: "",
-      choice1: " ",
-      choice2: " ",
-      choice3: "",
+      question40: "The area of a triangle is 52cm2 . If the base of the triangle  is 8cm, find its height.",
+      choice1: " 6.5cm ",
+      choice2: " 7.5cm  ",
+      choice3: " 13.0cm",
+      choice4: "26.0cm",
+      answer: 
+    },
+    {
+      question41: "?",
+      choice1: "",
+      choice2: "  ",
+      choice3: "       ",
       choice4: "",
-      answer: 
+      choice5:"",
+      answer:
     },
     {
-      question: "The Peterloo Massacre in 1819 took place in which city.?",
-      choice1: "London",
-      choice2: " Manchester ",
-      choice3: " Birmingham      ",
-      choice4: "Liverpool",
-      answer:2 
-    },
-    {
-      question:  " Who was the British  prime minister during the Suez Crisis in 1956?",
-      choice1:"Winston Churchill ",
-      choice2: " Anthony Eden",
-      choice3: " Harold Macmillan",
-      choice4: " Clement Attlee",
-      answer:2 
+      question42:  "Use the four-figure tables to find the value of sin 73.4o. ",
+      choice1:" 0.2857",
+      choice2: " 0.9563",
+      choice3: "0.9578 ",
+      choice4: "0.9583 ",
+      choice5:"3.354",
+      answer:
     },
     {
       {
-        question: " The Reform Act of 1867 in the UK primarily aimed to extend voting rights to which group        ?",
-        choice1: "<Women>",
-        choice2: "< Property-owning men >",
-        choice3: "< Industrial workers >", 
-        choice4: "<Non-landowning me >",
-        answer: 4
+        question43: "  ?",
+        choice1: "<>",
+        choice2: "<  >",
+        choice3: "< >", 
+        choice4: "<>",
+        choice5:"",
+        answer: 
       },
       {
-        question:" Who was the British monarch during the American War of Independence?",
-        choice1: "<George I >"
-        choice2: "<George II>"
-        choice3: "<George III>"
-        choice4: "<George IV>"
-         answer: 3
+        question44:"",
+        choice1: "<>",
+        choice2: "<>",
+        choice3: "<>",
+        choice4: "<>",
+        choice5:"",
+         answer: 
       },
       {
-        question: "The Battle of Bannockburn in 1314 was a significant victory for which nation ?"
-        choice1: "England        ",
-        choice2: " Scotland ",
-        choice3: "Wales",
-        choice4: " Ireland ",
-        answer: 2
+        question45: "",
+        choice1: " ",
+        choice2: " ",
+        choice3: "",
+        choice4: "  ",
+        choice5:"",
+        answer: 
       },
       {
-        question: "Which Britsh monarch ws known as ‘Edward Longshanks’? ?  "  
-        choice1: "Edward I",
-        choice2: "Edward II",
-        choice3: "Edward III ",
-        choice4: "Edward Iv",
-        answer: 1
+        question46: "" ,
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        choice5:"",
+        answer: 
       },
       {
-        question: "The 'Tudor Rose' symbol represents the union of which two houses?." ,
-        choice1: "York and Lancaster",
-        choice2: "Tudor and Stuart",
-        choice3: "Plantagenet and Tudor",
-        choice4: "  Tudor and York ",
-        answer:1
+        question47: "Simply 3x(4a-5b) – 5x(3a-2b)",
+        choice1: " 3ax - 5b",
+        choice2: " (3a - 5b)x",
+        choice3: "(5b - 3a)x",
+        choice4: " -(3a + 5b)x ",
+        choice5:". (3a + 5b)x",
+        answer:
       },
       {
-        question: "Who was the British Prime Minister during the Falklands War in 1982 ?",
-        choice1: " Margaret Thatcher",
-        choice2: " Harold Wilson  ",
-        choice3: "James Callaghan",
-        choice4: "  Edward Heath",
-        answer: 1
+        question48: "What is the coefficient of q in the expansion of (2q + 1)(1 -2q)?",
+        choice1: " -2",
+        choice2: "  -1 ",
+        choice3: "0",
+        choice4: "1 ",
+        choice5:"2",
+        answer: 
       },
       {
-        question: " The Peterloo Massacre in 1819 resulted from a protest for what cause?",
-        choice1: "Women's suffrage",
-        choice2: " Workers' rights",
-        choice3: "Abolition of slavery",
-        choice4: " Land reform",
-        answer:2 
+        question49: " ",
+        choice1: "",
+        choice2: " ",
+        choice3: "",
+        choice4: " ",
+        choice5:"",
+        answer:
       },
       {
-        question: "The battle of Hastings in 1066 was fought between which two parties?",
-        choice1: "England and France",
-        choice2: " England and Scotland",
-        choice3: "England and Normandy",
-        choice4: "England and Wales",
-        answer: 3
+        question50: "Factorize y2 – 121",
+        choice1: " (y – 121) ",
+        choice2: " (y – 11) ",
+        choice3: " (y + 11)",
+        choice4: " (y – 11) (y + 11) ",
+        choice5:" (y + 11) (y + 11)",
+        answer: 
       },
       {
         question: " Who was the British Prime Minister during the signing of the Treaty of Versailles in 1919?        .",
