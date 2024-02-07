@@ -288,68 +288,68 @@
       answer: 
     },
     {
-      question: "The Luddite movement in the early 19th century was primarily associated with opposition to which development?  ",
-      choice1: "Industrialization",
-      choice2: "Agricultural reforms",
-      choice3: " Parliamentary reforms",
-      choice4: " Religious reforms",
-      answer: 1
+      question: " ",
+      choice1: "",
+      choice2: "",
+      choice3: " ",
+      choice4: "",
+      answer: 
     },
     {
-      question: ".Who was the British monarch during the time of the English Civil War?." ,
-      choice1: "Charles I",
-      choice2: "Charles II  ",
-      choice3: "James I ",
-      choice4: "  James II ",
-      answer:1
+      question: "" ,
+      choice1: "",
+      choice2: "  ",
+      choice3: " ",
+      choice4: "   ",
+      answer:
     },
     {
-      question: " The 'White Ship' disaster in 1120 led to a succession crisis during the reign of which English monarch? ?",
-      choice1: "Henry I ",
-      choice2: "Richard I ",
-      choice3: "Henry II",
-      choice4: "  Stephen ",
-      answer: 1
+      question: " ",
+      choice1: "",
+      choice2: "",
+      choice3: "",
+      choice4: "  ",
+      answer: 
     },
     {
-      question:  ".The Reform Act of 1832 extended voting rights to which group of people in Britain?",
-      choice1: " Property-owning men",
-      choice2: " Women",
-      choice3: "Catholics",
-      choice4: "Non-landowning me ",
-      answer: 1
+      question:  "",
+      choice1: "",
+      choice2: " ",
+      choice3: "",
+      choice4: " ",
+      answer: 
     },
     {
-      question: "Who was the British Prime Minister at the time of the Berlin Conference in 1884-1885?      ?",
-      choice1: "William Gladstone",
-      choice2: " Benjamin Disraeli",
-      choice3: ") Lord Salisbury",
-      choice4: " Lord Palmerston ",
-      answer: 2
+      question: "      ?",
+      choice1: "",
+      choice2: " ",
+      choice3: "",
+      choice4: "  ",
+      answer: 
     },
     {
-      question: " The Glorious Revolution of 1688 led to the overthrow of which British monarch?",
-      choice1: " Charles II",
-      choice2: " James II      ",
-      choice3: " William III",
-      choice4: " Mary II ",
-      answer: 2
+      question: " ",
+      choice1: " ",
+      choice2: "     ",
+      choice3: " ",
+      choice4: " ",
+      answer: 
     },
     {
-      question: "Who was the first Tudor monarch of England? ",
-      choice1: "Henry VII",
-      choice2: "Henry VIII ",
-      choice3: "Elizabeth I",
-      choice4: "Edward VI ",
-      answer: 1
+      question: " ",
+      choice1: "",
+      choice2: "" ,
+      choice3: "",
+      choice4: " ",
+      answer: 
     },
     {
-      question: "The Battle of Britain during World War II was primarily fought between two air force?     ?",
-      choice1: " Royal Air Force (RAF) and Luftwaffe",
-      choice2: "Royal Air Force (RAF) and Italian Air Force ",
-      choice3: "Royal Air Force (RAF) and Soviet Air Force",
-      choice4: "Royal Air Force (RAF) and Japanese Air Force",
-      answer: 1
+      question: "",
+      choice1: " ",
+      choice2: " ",
+      choice3: "",
+      choice4: "",
+      answer: 
     },
     {
       question: "The Peterloo Massacre in 1819 took place in which city.?",
