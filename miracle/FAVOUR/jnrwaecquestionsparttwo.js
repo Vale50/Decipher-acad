@@ -1,171 +1,185 @@
 {
-    question: " Who was the British Prime Minister during the signing of the Treaty of Versailles in 1919?        .",
-    choice1: "  David Lloyd George",
-    choice2: "Herbert Asquith ",
-    choice3: "Neville Chamberlain",
-    choice4: " Stanley Baldwin ",
-    answer: 1
+    question1: "What is the place value of 3 in 4321?  "
+    choice1: "Hundred   "
+    choice2: " Hundredth"
+    choice3: " Tenth "
+    choice4: "Thousand "
+    choice5:" Units"
+    answer: 
   },
   {
-    question: " The Battle of Trafalgar in 1805 was a naval battle fought against which country? ",
-    choice1: "France",
-    choice2: "Spain",
-    choice3: " Netherlands",
-    choice4: " Portugal",
-    answer:1 
+    question2: " Round off 0.01256 to three significant figures "
+    choice1: " 0.01"
+    choice2:" 0.012 "
+    choice3: "0.013 "
+    choice4: " 0.0125"
+    choice5: "0.0126"
+    answer:
   },
   {
-    question: "Who was the British Prime Minister during the Indian Mutiny of 1857?",
-    choice1: "Benjamin Disraeli",
-    choice2: "William Gladstone",
-    choice3: " Lord palmerston",
-    choice4: " Lord Aberdeen",
-    answer: 3
+    question3: ""
+    choice1: ""
+    choice2: ""
+    choice3: ""
+    choice4: " "
+    choice5:""
+    answer: 
   },
   {
-    question: "  The Glorious Revolution of 1688 led to the accession of which monarch to the British throne .?",
-    choice1: " James II",
-    choice2: "William III and Mary II ",
-    choice3: "Charles II",
-    choice4: " Anne",
-    answer: 2
+    question4:"The sum of 8 and a certain number is equal to the product of the number and 3. What is the number?"
+    choice1: "3 "
+    choice2: "4 "
+    choice3: "5"
+    choice4: "8 "
+    choice5:"10"
+    answer: 
   },
   {
-    question:  " Which British monarch was known as 'Good Queen Bess'?",
-    choice1:" Mary I",
-    choice2: "Elizabeth I",
-    choice3: "Victoria ",
-    choice4: "Anne",
-    answer: 2
+    question5:  " A man bought a Mathematics textbook for N1,680.00 and sold it for N1,200.00.Find his percentage loss "
+    choice1:" 8.80%"
+    choice2: "28.57%"
+    choice3: " 40.00%"
+    choice4: " 48.00%"
+    choice5:" 71.43%  "
+    answer: 
   },
   {
-    question: " Who was the British Prime Minister during the Apollo 11 moon landing in 1969",
-    choice1: "Harold Wilson",
-    choice2: " Edward Heath",
-    choice3: " James Callaghan  ",
-    choice4: "Margaret Thatcher",
-    answer:  1 ,
+    question6: " Find the sum of the prime factors of 180"
+    choice1: "10"
+    choice2: " 11"
+    choice3: "  19"
+    choice4: "34"
+    choice5:"79"
+    answer:  
     {
-      question: "The Peasants' Revolt of 1381 occurred during the reign of which English king?",
-      choice1: "< Richard II>",
-      choice2: "<Henry IV>",
-      choice3: "<Edward III>", 
-      choice4: "<Henry V >",
-      answer: 1
+      question7: "A profit of 23% was made on an article bought for N4,800.00. What was the selling price?"
+      choice1: "<N1,104.00>"
+      choice2: "<N3,696.00>"
+      choice3: "<N4,800.00>" 
+      choice4: "< N5,904.00>"
+      choice5:"<N5,940.00>"
+      answer: 
     },
     {
-      question:"The Act of Union in 1707 united England and which other nation?",
-      choice1: "<Ireland>"
-      choice2: "< Wales>"
-      choice3: "< Scotland>"
-      choice4: "< France >"
-      answer: 1
+      question8:"Find the HCF of 18a2y and 27x2y 2  . "
+      choice1: "<>"
+      choice2: "< >"
+      choice3: "< >"
+      choice4: "<  >"
+      choice5:""
+      answer: 
     },
     {
-      question: "Who was the British Prime Minister at the outbreak of World War I in 1914?"
-      choice1: " David Lloyd George ",
-      choice2: "  Herbert Asquith",
-      choice3: " Winston Churchill",
-      choice4: " Neville Chamberlain ",
-      answer: 3
+      question9: "Convert 19ten to a binary number. "
+      choice1: " 10001two   "
+      choice2: "  10011two "
+      choice3: " 10101two"
+      choice4: "10111two  "
+      choice5:"11001two"
+      answer: 
     },
     {
-      question: "The Magna Carta was signed during the reign of which English king?  ",  
-      choice1: "Henry II",
-      choice2: "John ",
-      choice3: " Richard I  ",
-      choice4: " Edward I",
-      answer: 2
+      question10: "What is the smallest number by which 60 must be multipled to be a perfect square?  "
+      choice1: "2"
+      choice2: "3 "
+      choice3: " 5 "
+      choice4: " 10"
+      choice5:"15"
+      answer: 
     },
     {
-      question: " The British monarch who was executed following the English Civil War was:?." ,
-      choice1: " Charles I",
-      choice2: "Charles II",
-      choice3: " James I",
-      choice4: "  James II ",
-      answer:1
+      question11: " If 6 men can finish a particular work in 4 days, how many days will it take 8 men to finish the same work if they are working at the same rate?  " 
+      choice1: " 2"
+      choice2: "3"
+      choice3: " 4"
+      choice4: " 6"
+      choice5:"8"
+      answer:
     },
     {
-      question: "The Battle of Bosworth Field in 1485 marked the end of which English dynasty ?",
-      choice1: "Tudor",
-      choice2: "Plantagenet",
-      choice3: " Stuart ",
-      choice4: " Lancaster  ",
-      answer: 2
+      question12: ""
+      choice1: ""
+      choice2: ""
+      choice3: ""
+      choice4: "   "
+      choice5:""
+      answer: 
     },
     {
-      question: "The 'Glorious Revolution' of 1688 resulted in the accession of?",
-      choice1: "William III and Mary II",
-      choice2: " James II",
-      choice3: "Charles II",
-      choice4: " Anne",
-      answer: 1
+      question13: "Express 144eight in base ten."
+      choice1: "120"
+      choice2: " 116"
+      choice3: "100"
+      choice4: "96"
+      choice5:"70"
+      answer: 
     },
     {
-      question: " The founder of the British Red Cross, who served as a nurse during the Crimean War, was?",
-      choice1: "Florence Nightingale",
-      choice2: "Mary Seacole",
-      choice3: "Edith Cavell",
-      choice4: " Clara Barton ",
-      answer: 1
+      question14: " Find the simple interest on N650.00 for 2 years at 6% per annum "
+      choice1: "N13,00"
+      choice2: "N39.00"
+      choice3: "N65.00"
+      choice4: "N78.00 "
+      choice5:"N728.00"
+      answer: 
     },
     {
-      question: " The Domesday Book, commissioned by William the Conqueror, was primarily intended for: ",
-      choice1: "Recording land ownership and taxes ",
-      choice2: "Keeping track of births and deaths",
-      choice3: "Cataloguing religious artefacts",
-      choice4: "  Documenting legal disputes",
-      answer: 1
+      question15: "  The number of girls in a mixed school is 375. If the ratio of boys to girls in the school is 4:5, find the number of boys in the school. "
+      choice1: "275 "
+      choice2: "300"
+      choice3: "325"
+      choice4: "375 "
+      choice5:"675"
+      answer: 
     },
     {
-      question: "The First Barons' War, which led to the sealing of the Magna Carta, was primarily a conflict between King John and
-      ? ",
-      choice1: "The English barons",
-      choice2: " The French monarchy",
-      choice3: " The Scottish lords",
-      choice4: "The Irish chieftains",
-      answer: 1
+      question16: ""
+      choice1: ""
+      choice2: " "
+      choice3: ""
+      choice4: ""
+      answer: 
     },
     {
-      question: " The Corn Laws, which regulated the import and export of grain in Britain, primarily benefited:
-      ?",
-      choice1: " Landowners and farmers",
-      choice2: " Industrial workers",
-      choice3: " Merchants and traders",
-      choice4: " Consumers and urban dwellers",
-      answer: 1
+      question17: " ?"
+      choice1: " "
+      choice2: ""
+      choice3: ""
+      choice4: " "
+      choice5:""
+      answer: 
     },
     {
-      question: "The author of 'On the Origin of Species' and a key figure in the theory of evolution was?",
-      choice1: "Charles Darwin ",
-      choice: " Alfred Russel Wallace",
-      choice3: "Thomas Huxley",
-      choice4: " Gregor Mendel",
-      answer: 1
+      question18: "?"
+      choice1: " "
+      choice: ""
+      choice3: ""
+      choice4: " "
+      answer: 
     },
     {
-      question:  " The Peterloo Massacre in 1819 occurred during a protest for?",
-      choice1:" Workers' rights and political reform ",
-      choice2: "Women's suffrage",
-      choice3: "Religious freedom",
-      choice4: "Abolition of slavery",
-      answer: 1
+      question19:  " ?"
+      choice1:" "
+      choice2: ""
+      choice3: ""
+      choice4: ""
+      answer: 
     },
     {
-      question: " The 'Black Death,'' a devastating pandemic in the 14th century, was caused by",
-      choice1: "Bubonic plague",
-      choice2: "Smallpox",
-      choice3: "Influenza",
-      choice4: "Typhus",
-      answer:1
+      question20: ""
+      choice1: ""
+      choice2: ""
+      choice3: ""
+      choice4: ""
+      answer:
     },
     {
-      question: "The Act of Union of 1707 merged the Parliaments of England and",
-      choice1: "Scotland ",
-      choice2: " Ireland",
-      choice3: " Wales ",
-      choice4: " France ",
-      answer:1
+      question: ""
+      choice1: " "
+      choice2: " "
+      choice3: " "
+      choice4: " France "
+      answer:
     },
     {
       question: " The reign of Queen Victoria is often referred to as the:",
