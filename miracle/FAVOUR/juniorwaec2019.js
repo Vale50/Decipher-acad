@@ -403,7 +403,7 @@
         answer: 
       },
       {
-        question46: "" ,
+        question46: "6. Express <sup>2xas a single fraction" ,
         choice1: "",
         choice2: "",
         choice3: "",
