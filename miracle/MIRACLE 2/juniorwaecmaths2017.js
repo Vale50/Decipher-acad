@@ -70,7 +70,7 @@ let questions = [
     answer: 2
   },
   {
-    question: "Approximate 13075 to the nearest thousand.",
+    question7: "Approximate 13075 to the nearest thousand.",
     choice1: "13075",
     choice2: "13065",
     choice3: "13045",
