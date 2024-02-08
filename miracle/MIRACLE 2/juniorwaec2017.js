@@ -194,648 +194,300 @@ let questions = [
     answer: 4
   },
   {
-    question: "The term 'Manifest Destiny' reflected the 19th-century belief that the United States was destined to:",
-    choice1:"Establish a socialist government ",
-    choice2: "Expand its territory across the continent",
-    choice3: "Promote isolationist policies",
-    choice4: "Form alliances with European powers",
-    answer: 2
-  },
-  {
-    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
-    choice1:"Martin Luther King Jr.'s 'I Have a Dream' speech",
-    choice2: "The establishment of the Peace Corps",
-    choice3: "The signing of the Civil Rights Act",
-    choice4: "The formation of the Black Panther Party",
-    answer: 1
-  },
-  {
-    question: "The Treaty of Guadalupe Hidalgo, ending the Mexican-American War, resulted in the United States gaining control of which present-day states?",
-    choice1:"California, Texas, Arizona ",
-    choice2: "New Mexico, Colorado, Utah",
-    choice3: "Nevada, Idaho, Oregon",
-    choice4: "Florida, Louisiana, Mississippi",
-    answer: 1
-  },
-  {
-    question: "Which U.S. president issued the Monroe Doctrine, asserting American influence in the Western Hemisphere and discouraging European colonization?",
-    choice1:"James Madison",
-    choice2: "James Monroe",
-    choice3: "John Quincy Adams",
-    choice4: " Andrew Jackson",
-    answer: 2
-  },
-  {
-    question: "The Seneca Falls Convention in 1848 is often considered a milestone in the history of:",
-    choice1:"Women's suffrage ",
-    choice2: "Abolition of slavery",
-    choice3: "Labor rights",
-    choice4: "Native American rights",
-    answer: 1
-  },
-  {
-    question: "The 'Great Migration' in the early 20th century refers to the movement of:",
-    choice1:"European immigrants to the United States ",
-    choice2: "African Americans from rural Southern states to Northern cities",
-    choice3: "Native American tribes to reservations",
-    choice4: "Mexican immigrants to the Southwest",
-    answer: 2
-  },
-  {
-    question: "The 1919 Amendment to the U.S. Constitution that granted women the right to vote is commonly known as the:",
-    choice1:"18th Amendment ",
-    choice2: "19th Amendment",
-    choice3: "20th Amendment",
-    choice4: "21st Amendment",
-    answer: 2
-  },
-  {
-    question: "The landmark Supreme Court case of Brown v. Board of Education (1954) dealt with issues related to:",
-    choice1:" Segregation in public schools",
-    choice2: " Affirmative action",
-    choice3: "Voting rights",
-    choice4: "Freedom of speech",
-    answer: 1
-  },
-  {
-    question: "The concept of 'checks and balances' in the U.S. government system is outlined in which part of the Constitution?",
-    choice1:"Preamble",
-    choice2: "Article I",
-    choice3: "Article II",
-    choice4: "Article III",
-    answer: 2
-  },
-  {
-    question: "The 'Red Scare' in the United States during the early 20th century was fueled by fears of:",
-    choice1:"Nuclear warfare",
-    choice2: "Communist infiltration",
-    choice3: "Economic recession",
-    choice4: "Racial tensions",
-    answer: 2
-  },
-  {
-    question: "Which U.S. president is associated with the establishment of the National Park system?",
-    choice1:"Theodore Roosevelt",
-    choice2: "Woodrow Wilson",
-    choice3: "William Howard Taft",
-    choice4: "Franklin D. Roosevelt",
-    answer: 1
-  },
-  {
-    question: "The Gulf of Tonkin Resolution, passed by Congress in 1964, played a significant role in the escalation of U.S. involvement in:",
-    choice1:"World War I",
-    choice2: "Korean War",
-    choice3: "Vietnam War",
-    choice4: "Gulf War",
-    answer: 3
-  },
-  {
-    question: "The term 'Reconstruction' in U.S. history refers to the period following the:",
-    choice1:"American Revolution",
-    choice2: "Civil War",
-    choice3: "War of 1812",
-    choice4: "Mexican-American War",
-    answer: 2
-  },
-  {
-    question: "The 1944 G.I. Bill aimed to provide support to:",
-    choice1:"Veterans returning from World War II",
-    choice2: "Civil rights activists",
-    choice3: "Women entering the workforce",
-    choice4: "Native American communities",
-    answer: 1
-  },
-  {
-    question: "The landmark case of Roe v. Wade (1973) addressed issues related to:",
-    choice1:"School desegregation ",
-    choice2: "Affirmative action",
-    choice3: "Abortion rightsg",
-    choice4: "Voting rights",
-    answer: 3
-  },
-  {
-    question: "The 1920s in the United States are often referred to as the 'Roaring Twenties' due to:",
-    choice1:"Economic depression",
-    choice2: "Rapid industrialization",
-    choice3: "Social and cultural upheaval",
-    choice4: "Prohibition of alcohol",
-    answer: 3
-  },
-  {
-    question: "The 1968 Democratic National Convention in Chicago became known for:
-    ",
-    choice1:"The nomination of Richard Nixon",
-    choice2: "Peaceful protests and unity",
-    choice3: "Violent clashes between protesters and police",
-    choice4: "The passage of civil rights legislation",
-    answer: 3
-  },
-  {
-    question: "The 'Star-Spangled Banner,'' the U.S. national anthem, was inspired by events during the:",
-    choice1:"American Revolution",
-    choice2: "War of 1812",
-    choice3: "Civil War",
-    choice4: "Mexican-American War",
-    answer: 2
-  },
-  {
-    question: "The Marshall Plan, initiated after World War II, was designed to:",
-    choice1:"Rebuild European economies",
-    choice2: "Promote isolationist policies",
-    choice3: "Contain the spread of communism",
-    choice4: "Establish military alliances in Europe",
-    answer: 1
-  },
-  {
-    question: "The 18th Amendment to the U.S. Constitution, which was later repealed, dealt with the issue of:",
-    choice1:"Women's suffrage",
-    choice2: "Prohibition of alcohol",
-    choice3: " Abolition of slavery",
-    choice4: "Freedom of speech",
-    answer: 2
-  },
-  {
-    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
-    choice1:"Martin Luther King Jr.'s 'I Have a Dream' speech",
-    choice2: "The establishment of the Peace Corps",
-    choice3: "The signing of the Civil Rights Act",
-    choice4: "The formation of the Black Panther Party",
-    answer: 1
-  },
-  {
-    question: "The Wounded Knee Massacre in 1890 was a tragic event associated with the:",
-    choice1:"Indian Removal Act ",
-    choice2: "Trail of Tears",
-    choice3: "Ghost Dance movement",
-    choice4: "Battle of Little Bighorn",
-    answer: 3
-  },
-  {
-    question: "The Tet Offensive during the Vietnam War had a significant impact on public opinion in the United States by:",
-    choice1:"Strengthening support for the war",
-    choice2: "Demonstrating the success of U.S. military strategy",
-    choice3: "Shifting public opinion against the war",
-    choice4: "Isolating the conflict from Cold War tensions",
-    answer: 3
-  },
-  {
-    question: "The Harlem Renaissance of the 1920s was a cultural and artistic movement primarily associated with:",
-    choice1:"Jazz music ",
-    choice2: "Abstract expressionist painting",
-    choice3: "Beat poetry",
-    choice4: "Regionalist literature",
-    answer: 1
-  },
-  {
-    question: "The Progressive Era in the early 20th century was characterized by efforts to address social issues through:",
-    choice1:"Laissez-faire economic policies ",
-    choice2: "Limited government intervention",
-    choice3: "Reform and regulation",
-    choice4: "Expansion of imperialism",
-    answer: 3
-  },
-  {
-    question: "The 1862 Homestead Act encouraged westward expansion by providing:",
-    choice1:" Financial aid to farmers ",
-    choice2: " Land grants to railroad companies",
-    choice3: "Free land to settlers who improved the property",
-    choice4: "Military protection to pioneers",
-    answer: 3
-  },
-  {
-    question: " The 1912 presidential election featured a third-party candidate who advocated for progressive reforms. Who was this candidate?",
-    choice1:"Woodrow Wilson ",
-    choice2: "Theodore Roosevelt",
-    choice3: "William Howard Taft",
-    choice4: "Eugene V. Debs",
-    answer: 2
-  },
-  {
-    question: "The 'Bay of Pigs' invasion in 1961 was an unsuccessful attempt by the United States to overthrow the government of:",
-    choice1:"Cuba",
-    choice2: "Vietnam",
-    choice3: " Nicaragua",
-    choice4: "Iran",
-    answer: 1
-  },
-  {
-    question: "The 1972 Watergate scandal led to the resignation of President Richard Nixon. What was the primary issue in the Watergate scandal?",
-    choice1:" Illegal wiretapping",
-    choice2: "Espionage against foreign governments",
-    choice3: "Bribery of foreign officials",
-    choice4: "Burglary and cover-up of political activities",
+    question21: "Two-fifth of the students I a mixed schools are boys. If there are 30 girls in the school, how many are boys?",
+    choice1:"50",
+    choice2: "40",
+    choice3: "30",
+    choice4: "20",
+    choice5: "10",
     answer: 4
+  },
+  {
+    question22: "Find the radius of a circle whose circumstance is 44cm",
+    choice1:"4cm",
+    choice2: "7cm",
+    choice3: "11cm",
+    choice4: "13cm",
+    choice5: "22cm",
+    answer: 2
+  },
+  {
+    question23: "In the diagram below, BÔA is an example of a/an
+    
+                                                                  ",
+    choice1:"acute angle",
+    choice2: "obtuse angle",
+    choice3: "reflex angle",
+    choice4: "right angle",
+    choice5: "straight angle", 
+    answer: 1
+  },
+  {
+    question24: "Find the perimeter of the figure below
+    
+                                                       ",
+    choice1:"16cm",
+    choice2: "18cm",
+    choice3: "20cm",
+    choice4: "15cm + xcm",
+    choice5: "22cm + xcm",
+    answer: 2
+  },
+  {
+    question25: "Simplify 22<sup>0</sup>33’-10<sup>0</sup>54’.",
+    choice1:"12<sup>0</sup>21’",
+    choice2: "11<sup>0</sup>39’",
+    choice3: "11<sup>0</sup>29’",
+    choice4: "11<sup>0</sup>21’",
+    choice5: "11<sup>0</sup>19’",
+    answer: 2
+  },
+  {
+    question26: "Calculate the perimeter of the shape below.
+    
+                                                          ",
+    choice1:"2xcm",
+    choice2: "3xcm",
+    choice3: "4xcm",
+    choice4: "x<sup>2</sup>cm",
+    choice5: "2x<sup>2</sup>cm",
+    answer: 3
+  },
+  {
+    question27: "The angle of elevation of the top of a building from a point 10m away on level ground is 30<sup>0</sup>. Calculate the height of the building?",
+    choice1:"9.238m",
+    choice2: "6.928m",
+    choice3: "5.773m",
+    choice4: "4.619m",
+    choice5: "3.464m",
+    answer: 3
+  },
+  {
+    question28: "Calculate the perimeter of a rectangle of length 8cm and breadth <sup>15</sup>&frasl;<sub>152</sub>cm"
+    choice1:"<sup>13</sup>&frasl;<sub>2</sub>",
+    choice2: "20cm",
+    choice3: "21cm",
+    choice4: "24cm",
+    choice5: "30cm",
+    answer: 3
+  },
+  {
+    question29: "What is the perimeter of a regular decagon of side 3.25cm each?",
+    choice1:"3.25cm",
+    choice2: "26.5cm",
+    choice3: "28.5cm",
+    choice4: "32.3cm",
+    choice5: "40cm",
+    answer: 4
+  },
+  {
+    question30: "Calculate the area of a circle whose diameter is 7m (Take π<sup>5</sup>&frasl;<sub>2</sub>)",
+    choice1:"6<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
+    choice2: "14<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
+    choice3: "22<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
+    choice4: "30<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
+    choice5: "38<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
+    answer: 5
+  },
+  {
+    question31: "Find the area of a square whose diagonal is 8m",
+    choice1:"4m<sup>2</sup>",
+    choice2: "8m<sup>2</sup>",
+    choice3: "16m<sup>2</sup>",
+    choice4: "32<sup>2</sup>",
+    choice5: "64<sup>2</sup>",
+    answer: 4
+  },
+  {
+    question32: "A Cylindrical can of volume 198cm<sup>3</sup> has a height of 7cm. Find the radius of the cylinder.",
+    choice1:"28.29cm",
+    choice2: "18.00cm",
+    choice3: "9.00cm",
+    choice4: "5.20cm",
+    choice5: "3.00cm",
+    answer: 5
+  },
+  {
+    question33: "Calculate the third of an isosceles triangle whose base angle is 48<sup>0</sup>.",
+    choice1:"42<sup>0</sup>",
+    choice2: "76<sup>0</sup>",
+    choice3: "84<sup>0</sup>",
+    choice4: "96<sup>0</sup>",
+    choice4: "136<sup>0</sup>",
+    answer: 3
+  },
+  {
+    question34: "Calculate the value of x in the figure below.
+    
+                                                 ",
+    choice1:"105<sup>o</sup>",
+    choice2: "95<sup>o</sup>",
+    choice3: "75<sup>o</sup>",
+    choice4: "55<sup>o</sup>",
+    choice5: "35<sup>o</sup>",
+    answer: 1
+  },
+  {
+    question35: "Calculate the value of x in the figure below.
+    
+                                                               ",
+    choice1:"50<sup>o</sup>",
+    choice2: "60<sup>o</sup>",
+    choice3: "75<sup>o</sup>",
+    choice4: "80<sup>o</sup>",
+    choice5: "90<sup>o</sup>",
+    answer: 1
+  },
+  {
+    question36: "Find the value of t in the figure below
+    
+                                                         ",
+    choice1:"110<sup>o</sup>",
+    choice2: "120<sup>o</sup>",
+    choice3: "130<sup>o</sup>",
+    choice4: "140<sup>o</sup>",
+    choice5: "150<sup>o</sup>",
+    answer: 2
+  },
+  {
+    question37: "Find the value of x in the figure below.
+    
+                                                             ",
+    choice1:"30<sup>o</sup>",
+    choice2: "50<sup>o</sup>",
+    choice3: "80<sup>o</sup>",
+    choice4: "100<sup>o</sup>",
+    choice5: "120<sup>o</sup>",
+    answer: 3
+  },
+  {
+    question38: "Find the volume of a cone whose height is 15cm and base diameter 14cm. (Take π =<sup>22</sup>&frasl;<sub>7</sub>)",
+    choice1:"2310cm<sup>3</sup>",
+    choice2: "1320cm<sup>3</sup>",
+    choice3: "770cm<sup>3</sup>",
+    choice4: "660cm<sup>3</sup>",
+    choice5: "220<sup>3</sup>",
+    answer: 3
+  },
+  {
+    question39: "Which of the following properties is NOT true of a parallelogram?",
+    choice1:"Opposite sides are parallel and equal in length.",
+    choice2: "Opposite angles are equal",
+    choice3: "There are two lines of symmetry",
+    choice4: "The diagonals bisect each other",
+    choice5: "There is no line of symmetry.",
+    answer: 5
+  },
+  [use te diagram below to answer question 40 and 41]
+  {
+    question40: "The coordinates of point D is",
+    choice1:"(2,3)",
+    choice2: "(3,-2)",
+    choice3: "(-2, 3)",
+    choice4: "(2, -3)",
+    choice5: "(-2, -3)",
+    answer: 3
+  },
+  {
+    question41: "Which of the points represents the coordinates (2, -1)?",
+    choice1:"E",
+    choice2: "D",
+    choice3: "C",
+    choice4: "B",
+    choice5: "A",
+    answer: 4
+  },
+  {
+    question42: "Calculate the perimeter of a circle whose radius is <sup>7</sup>&frasl;<sub>2</sub>cm",
+    choice1:"55cm",
+    choice2: "44cm",
+    choice3: "33cm",
+    choice4: "22cm",
+    choice5: "11cm",
+    answer: 4
+  },
+  {
+    question43: "What is the size of <PAB in the diagram below?
+    
+                                                       ",
+    choice1:"15<sup>o</sup>",
+    choice2: "30<sup>o</sup>",
+    choice3: "45<sup>o</sup>",
+    choice4: "60<sup>o</sup>",
+    choice5: "75<sup>o</sup>",
+    answer: 2
+  },
+  {
+    question44: "
+    
+    Which of the above shows how to construct 45<sup>o</sup>?",
+    choice1:"I only",
+    choice2: "II only",
+    choice3: "III only",
+    choice4: "II and III only",
+    choice5: "I, II and III only",
+    answer: 3
+  },
+  {
+    question45: "Calculate the exterior angle of a regular pentagon",
+    choice1:"72<sup>o</sup>",
+    choice2: "60<sup>o</sup>",
+    choice3: "51.4<sup>o</sup>",
+    choice4: "45<sup>o</sup>",
+    choice5: "40<sup>o</sup>",
+    answer: 1
+  },
+  {
+    question46: "A regular polygon has the sum of its interior angles as 3240<sup>0</sup>. Find the number of sides the polygon has.",
+    choice1:"16",
+    choice2: "20",
+    choice3: "22",
+    choice4: "26",
+    choice5: "30",
+    answer: 2
+  },
+  {
+    question47: "Simplify 110110<sub>two</sub> _____ 101101<sub>two</sub>",
+    choice1:"1000<sub>two</sub>",
+    choice2: "1001<sub>two</sub>",
+    choice3: "1010<sub>two</sub>",
+    choice4: "1011<sub>two</sub>",
+    choice5: "1101<sub>two</sub>",
+    answer: 2
+  },
+  {
+    question48: "Add N4.20, N3.60 and N2.20 and give your answer in kobo.",
+    choice1:"10k",
+    choice2: "100k",
+    choice3: "1,000k",
+    choice4: "10,000k",
+    choice5: "100,000k",
+    answer: 3
+  },
+  {
+    question49: "Find the sum of all prime numbers between 1 and 10.",
+    choice1:" 2",
+    choice2: "3",
+    choice3: "5",
+    choice4: "7",
+    choice5: "17",
+    answer: 5
   }, {
-    question: "The 1906 Pure Food and Drug Act and the Meat Inspection Act were significant pieces of legislation aimed at:",
-    choice1:"Regulating labor practices",
-    choice2: " Improving public health and safety",
-    choice3: " Addressing racial segregation",
-    choice4: " Expanding women's rights",
-    answer: 2
-  },
-  {
-    question: "The 1964 Civil Rights Act aimed to end discrimination based on:",
-    choice1:"Gender",
-    choice2: "Religion",
-    choice3: "Race and color",
-    choice4: "Sexual orientation",
+    question50: "The figure below is a
+    
+                                      ",
+    choice1:"hexagonal based pyramid",
+    choice2: "square based prism",
+    choice3: "square based pyramid",
+    choice4: "triangular based pyramid",
+    choice5: "triangular prism",
     answer: 3
   },
-  {
-    question: "The 1803 Louisiana Purchase, negotiated by President Thomas Jefferson, involved the acquisition of territory from:",
-    choice1:"France",
-    choice2: "Spain",
-    choice3: "Britain",
-    choice4: "Mexico",
-    answer: 1
-  },
-  {
-    question: " The 'Big Four' who played a crucial role in negotiating the Treaty of Versailles after World War I included leaders from:",
-    choice1:"United States, Germany, Britain, and France",
-    choice2: "France, Italy, Japan, and the Soviet Union",
-    choice3: "United States, Britain, France, and Italy",
-    choice4: "Germany, Britain, Russia, and Austria-Hungary",
-    answer: 3
-  },
-  {
-    question: "The 19th-century movement that sought to limit the consumption of alcoholic beverages and ultimately led to Prohibition in the United States was known as:",
-    choice1:"Temperance movement ",
-    choice2: " Suffrage movement",
-    choice3: "Abolitionist movement",
-    choice4: "Populist movement",
-    answer: 1
-  },
-  {
-    question: "The 1986 Challenger space shuttle disaster occurred during the presidency of:",
-    choice1:"Ronald Reagan",
-    choice2: "Jimmy Carter",
-    choice3: "George H.W. Bush",
-    choice4: "Bill Clinton",
-    answer: 1
-  },
-  {
-    question: "The Marshall Plan, initiated after World War II, was designed to provide economic aid primarily to:",
-    choice1:" Asian countries ",
-    choice2: "African countries",
-    choice3: "Eastern European countries",
-    choice4: "Western European countries",
-    answer: 4
-  },
-  {
-    question: "The 'Great Compromise' during the Constitutional Convention of 1787 resolved the issue of representation in the U.S. Congress by proposing a:",
-    choice1:"Proportional representation system",
-    choice2: "Equal representation system",
-    choice3: "Bicameral legislature",
-    choice4: "Unicameral legislature",
-    answer: 3
-  },
-  {
-    question: "The term 'Yellow Journalism' is associated with sensationalized and exaggerated reporting, particularly during the:",
-    choice1:"Civil War",
-    choice2: "Spanish-American War",
-    choice3: "World War I",
-    choice4: "Vietnam War",
-    answer: 2
-  },
-  {
-    question: "The 1965 Voting Rights Act aimed to eliminate barriers preventing African Americans from:",
-    choice1:"Owning property",
-    choice2: "Serving in the military",
-    choice3: "Voting",
-    choice4: "Attending schools",
-    answer: 3
-  },
-  {
-    question: "The Supreme Court case Brown v. Board of Education (1954) overturned the precedent set by which earlier case that allowed racial segregation in public schools?",
-    choice1:" Plessy v. Ferguson",
-    choice2: "Dred Scott v. Sandford",
-    choice3: "Marbury v. Madison",
-    choice4: " Gibbons v. Ogden",
-    answer: 1
-  },
-  {
-    question: "The Neutrality Acts of the 1930s were aimed at preventing the United States from being drawn into conflicts by:",
-    choice1:"Banning the sale of arms to belligerent nations",
-    choice2: "Encouraging alliances with European powers",
-    choice3: "Promoting interventionist foreign policies",
-    choice4: "Supporting international peacekeeping efforts",
-    answer: 1
-  },
-  {
-    question: "The 1979 Iranian Revolution resulted in the overthrow of which leader, leading to the establishment of an Islamic republic in Iran?",
-    choice1:"Shah Mohammad Reza Pahlavi",
-    choice2: "Ayatollah Ruhollah Khomein",
-    choice3: "Saddam Hussein",
-    choice4: "Mahmoud Ahmadinejad",
-    answer: 1
-  },
-  {
-    question: "The 1944 Bretton Woods Conference laid the foundation for the establishment of",
-    choice1:"United Nations",
-    choice2: "International Monetary Fund (IMF)",
-    choice3: "European Union (EU)",
-    choice4: "North Atlantic Treaty Organization (NATO)",
-    answer: 2
-  },
-  {
-    question: "The 'War on Terror' initiated in the aftermath of the September 11, 2001 attacks led to U.S. military involvement in which countries?",
-    choice1:"Iraq and Afghanistan",
-    choice2: " Iran and Syria",
-    choice3: "Libya and Yemen",
-    choice4: "North Korea and Pakistan",
-    answer: 1
-  },
-  {
-    question: " The 1876 Battle of Little Bighorn, also known as Custer's Last Stand, involved conflict between the U.S. Army and:",
-    choice1:"Apache Indians",
-    choice2: " Lakota Sioux and Cheyenne tribes",
-    choice3: "Nez Perce Indians",
-    choice4: "Comanche Indians",
-    answer: 2
-  },
-  {
-    question: "The 'New Frontier' was a term associated with the domestic and foreign policies of which U.S. president?",
-    choice1:"John F. Kennedy ",
-    choice2: "Lyndon B. Johnson",
-    choice3: "Dwight D. Eisenhower",
-    choice4: "Richard Nixon",
-    answer: 1
-  },
-  {
-    question: "The 1898 Treaty of Paris concluded the Spanish-American War and resulted in the United States acquiring which territories?",
-    choice1:"Puerto Rico, Guam, and the Philippines",
-    choice2: "Cuba, Mexico, and Haiti",
-    choice3: " Alaska, Hawaii, and Samoa",
-    choice4: "Panama, Nicaragua, and Honduras",
-    answer: 11
-  },
-  {
-    question: "The 1836 Battle of the Alamo was a key event in which conflict for Texan independence?",
-    choice1:"Mexican-American War ",
-    choice2: "War of 1812",
-    choice3: "Texas Revolution",
-    choice4: " Civil War",
-    answer: 3
-  },
-  {
-    question: "The 1947 Truman Doctrine was a response to the spread of:",
-    choice1:"Communism",
-    choice2: "Fascism",
-    choice3: "Imperialism",
-    choice4: "Nationalism",
-    answer: 1
-  },
-  {
-    question: "The 1969 Apollo 11 mission achieved the first successful:",
-    choice1:"Spacewalk",
-    choice2: "Mars landing",
-    choice3: "Moon landing",
-    choice4: "Satellite launch",
-    answer: 3
-  },
-  {
-    question: "The 1901 assassination of President William McKinley led to the presidency of:",
-    choice1:"Theodore Roosevelt",
-    choice2: "Woodrow Wilson",
-    choice3: "William Howard Taft ",
-    choice4: "Franklin D. Roosevelt",
-    answer: 1
-  },
-  {
-    question: "The 1964 Gulf of Tonkin Resolution granted President Lyndon B. Johnson the authority to:",
-    choice1:"Declare war on North Vietnam",
-    choice2: "Mobilize U.S. troops in Vietnam",
-    choice3: "Negotiate a peace treaty with North Vietnam",
-    choice4: " Expand the draft for military service",
-    answer: 2
-  },
-  {
-    question: "The 19th-century concept of 'Manifest Destiny' was closely tied to the belief in the:",
-    choice1:"Right to bear arms",
-    choice2: "Abolition of slavery",
-    choice3: "Expansion of American territory to the Pacific",
-    choice4: "Separation of church and state",
-    answer: 3
-  },
-  {
-    question: "The 1980s economic policy of reducing government regulation and promoting free-market principles was commonly known as:",
-    choice1:"The Great Society",
-    choice2: "The New Deal",
-    choice3: "Reaganomics",
-    choice4: "The Square Deal",
-    answer: 3
-  },
-  {
-    question: "The 1894 Pullman Strike, a nationwide railroad strike, was a protest against:",
-    choice1:"Wage cuts and poor working conditions",
-    choice2: " High taxes on railroads",
-    choice3: "Government interference in labor disputes",
-    choice4: "Discrimination against immigrant workers",
-    answer: 1
-  },
-  {
-    question: "The 1919 Treaty of Versailles included the establishment of which international organization?",
-    choice1:"United Nations",
-    choice2: "League of Nations",
-    choice3: "NATO (North Atlantic Treaty Organization)",
-    choice4: "European Union",
-    answer: 2
-  },
-  {
-    question: "The 1963 March on Washington for Jobs and Freedom is best remembered for:",
-    choice1:" Martin Luther King Jr.'s 'I Have a Dream' speech",
-    choice2: "The establishment of the Peace Corps",
-    choice3: "The signing of the Civil Rights Act",
-    choice4: "The formation of the Black Panther Party",
-    answer: 1
-  },
-  {
-    question: "The 1892 Populist Party platform sought to address the concerns of:",
-    choice1:" Industrial workers",
-    choice2: "Farmers and laborers",
-    choice3: "Urban immigrants",
-    choice4: "Business owners",
-    answer: 2
-  },
-  {
-    question: "The 1927 execution of Italian immigrants Sacco and Vanzetti highlighted issues related to:",
-    choice1:"Labor strikes",
-    choice2: "Immigration quotas",
-    choice3: "Anarchism and nativism",
-    choice4: "Civil rights",
-    answer: 3
-  },
-  {
-    question: "The 1846 Oregon Trail migration was driven by the desire for:",
-    choice1:"Gold and wealth",
-    choice2: "Religious freedom",
-    choice3: "Agricultural opportunities",
-    choice4: "Fur trapping and trading opportunities",
-    answer: 3
-  },
-  {
-    question: "The 1965 Watts riots in Los Angeles were sparked by issues related to:",
-    choice1:"Racial tensions and police brutality",
-    choice2: "Economic inequality",
-    choice3: "Vietnam War protests",
-    choice4: "Anti-immigrant sentiments",
-    answer: 1
-  },
-  {
-    question: "The 1920s cultural and social movement known for challenging traditional norms and values was called the:",
-    choice1:"Harlem Renaissance",
-    choice2: "Beat Generation",
-    choice3: "Lost Generation",
-    choice4: "Jazz Age",
-    answer: 4
-  },
-  {
-    question: "The 1969 Apollo 11 mission achieved the first successful:",
-    choice1:"Spacewalk",
-    choice2: "Mars landing",
-    choice3: " Moon landing",
-    choice4: " Satellite launch",
-    answer: 3
-  },
-  {
-    question: "The 1954 Brown v. Board of Education decision declared that racial segregation in public schools was:",
-    choice1:" Legal ",
-    choice2: "Unconstitutional",
-    choice3: " Up to individual states",
-    choice4: "Temporary",
-    answer: 2
-  },
-  {
-    question: "The 1830 Indian Removal Act resulted in the forced relocation of Native American tribes, primarily the:",
-    choice1:"Cherokee",
-    choice2: "Sioux",
-    choice3: "Apache",
-    choice4: " Iroquoi",
-    answer: 1
-  },
-  {
-    question: "The 1870 passage of the 15th Amendment to the U.S. Constitution granted voting rights to:",
-    choice1:" African American men",
-    choice2: "Women",
-    choice3: "Native Americans",
-    choice4: "All citizens regardless of race",
-    answer: 1
-  },
-  {
-    question: " The 1968 Tet Offensive during the Vietnam War marked a turning point in public opinion against U.S. involvement, as it revealed:",
-    choice1:"Military success and progress",
-    choice2: "The effectiveness of U.S. counterinsurgency strategies",
-    choice3: "The influence of the media on shaping public perception",
-    choice4: "The stability of the South Vietnamese government",
-    answer: 3
-  },
-  {
-    question: "The 1906 Pure Food and Drug Act and the Meat Inspection Act were responses to concerns raised by:",
-    choice1:" Labor unions",
-    choice2: "Environmental activists",
-    choice3: "Consumer advocates",
-    choice4: " Anti-imperialists",
-    answer: 3
-  },
-  {
-    question: "The 1942 executive order that authorized the internment of Japanese Americans during World War II was issued by:",
-    choice1:"Franklin D. Roosevelt",
-    choice2: "Harry S. Truman",
-    choice3: " Dwight D. Eisenhower",
-    choice4: "Herbert Hoover",
-    answer: 1
-  },
-  {
-    question: " The 1869 completion of the First Transcontinental Railroad was a significant achievement connecting the East and West coasts of the United States primarily through the efforts of:",
-    choice1:"Union Pacific and Central Pacific Railroad companies",
-    choice2: "Santa Fe and Southern Pacific Railroad companies",
-    choice3: "Baltimore and Ohio Railroad",
-    choice4: "Norfolk Southern and Canadian Pacific Railway",
-    answer: 1
-  },
-  {
-    question: "The 1944 G.I. Bill aimed to provide support to:",
-    choice1:"Veterans returning from World War II",
-    choice2: "Civil rights activists",
-    choice3: "Women entering the workforce",
-    choice4: "Native American communities",
-    answer: 1
-  },
-  {
-    question: "The 19th-century abolitionist who published the anti-slavery newspaper 'The Liberator' was:",
-    choice1:"Frederick Douglass",
-    choice2: "John Brown",
-    choice3: "Harriet Tubman",
-    choice4: "William Lloyd Garrison",
-    answer: 4
-    {
-      question: "The 1970 Kent State shootings, where National Guard troops killed four students during an anti-Vietnam War protest, occurred in which state?",
-      choice1:"Ohio",
-      choice2: "California",
-      choice3: "New York",
-      choice4: "Illinois",
-      answer: 1
-    },
-    {
-      question: "The 1832 Nullification Crisis revolved around the opposition of a state to federal tariffs and occurred in which southern state?",
-      choice1:"South Carolina",
-      choice2: "Georgia",
-      choice3: "Virginia",
-      choice4: "Alabama",
-      answer: 1
-    },
-    {
-      question: "The 1960 televised presidential debates between John F. Kennedy and Richard Nixon are often credited with influencing the outcome of the election by favoring:",
-      choice1:" Nixon's experience and policies ",
-      choice2: "Kennedy's charisma and appearance",
-      choice3: "Third-party candidates",
-      choice4: "Eisenhower's endorsement of Kennedy",
-      answer: 2
-    },
-    {
-      question: "The 1892 Homestead Strike, a labor dispute between workers and management, occurred in which industry?",
-      choice1:"Textiles",
-      choice2: "Coal mining",
-      choice3: "Steel",
-      choice4: "Railroads",
-      answer: 3
-    },
-    {
-      question: "The 1989 fall of the Berlin Wall symbolized the end of the:",
-      choice1:"Cold War ",
-      choice2: "Korean War",
-      choice3: "Vietnam War",
-      choice4: "Cuban Missile Crisis",
-      answer: 1
-    },
-    {
-      question: "The 1966 Miranda v. Arizona Supreme Court decision established the requirement for law enforcement to:",
-      choice1:"Provide legal representation to defendants",
-      choice2: "Read the rights of the accused before questioning",
-      choice3: "Conduct thorough investigations before making arrests",
-      choice4: "Use physical force only when necessary",
-      answer: 2
-    },
-    {
-      question: "The 1913 introduction of the income tax in the United States was enabled by the ratification of the:",
-      choice1:"14th Amendment",
-      choice2: "16th Amendment",
-      choice3: "18th Amendment",
-      choice4: "19th Amendment",
-      answer: 2
-    },
-    {
-      question: " The 1777 Articles of Confederation served as the first constitution of the United States and were eventually replaced by the:",
-      choice1:"Declaration of Independence",
-      choice2: "Emancipation Proclamation",
-      choice3: "U.S. Constitution",
-      choice4: "Bill of Rights",
-      answer: 3
-    },
+  
 
 
-const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 100;
+const CORRECT_BONUS = 2;
+const MAX_QUESTIONS = 50;
 
 
 startGame = () => {
