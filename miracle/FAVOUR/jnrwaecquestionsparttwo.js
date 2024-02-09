@@ -276,33 +276,36 @@ let questions = {
       choice4: "sup>x-11</&frasl;<sub>6</sub> "
        choice5:"sup>x+11</&frasl;<sub>6</sub> "
       answer: 4
-    },
+    }
     {
-      question: "  "
+      question31: "  "
       choice1: " "
       choice2: " "
       choice3: "" 
       choice4: ""
+      choice5:
       answer: 
+    }
+    {
+      question32:" Simplify (7x - 4) – (4x - 12)."
+      choice1: "3x – 16 "
+      choice2:"3x – 16"
+      choice3:"3x + 8 "
+      choice4: " 3x – 8"
+      choice5:"3x - 4"
+      answer: 3
+    }
+    {
+      question33: "Solve the simultaneous equations: 2x + y = 4, 3x – y = 14"
+      choice1: "x = -1, y = 2 "
+      choice2: " x = 1, y = -2"
+      choice3: "  x = -1, y = -2  "
+      choice4: " x = 2, y = 2"
+      choice5:"x = 1, y = 2      "
+      answer: 5
     },
     {
-      question:"?"
-      choice1: ""
-      choice3:""
-      choice3:""
-      choice4: ""
-      answer: 
-    },
-    {
-      question: ""
-      choice1: ""
-      choice2: " "
-      choice3: "  "
-      choice4: " "
-      answer: 
-    },
-    {
-      question:  ""
+      question34:  ""
       choice1:""
       choice2: ""
       choice3: ""
@@ -310,85 +313,95 @@ let questions = {
       answer:
     },
     {
-      question: " "
-     choice1: "   "
-      choice2: " "
-      choice3: ""
-      choice4: "  "
-      answer: 
+      question35: " One of the following is a line of symmetry of a circle."
+     choice1: " Arc  "
+      choice2: " Circumference"
+      choice3: "Diameter"
+      choice4: "  Radius"
+      choice5:"Segment"
+      answer: 3
       {
-        question: ""
+        question36: ""
         choice1: ""
         choice2: ""
         choice3:""
         choice4: ""
+        choice5:""
         answer: 
-      },
+      }
       {
-        question: ""
-        choice1: ""
-        choice2: ""
-        choice3: ""
-        choice4: ""
-         answer: 
-      },
+        question37: "Find the circumference of a circle whose diameter is 28cm.(Take = <sup>22<?sup>&frasl;<sub>7</sub>)."
+        choice1: "44cm"
+        choice2: "88cm"
+        choice3: "176cm"
+        choice4: "308cm"
+        choice5:"616cm"
+         answer: 2
+      }
       {
-        question:""
-        choice1: " "
-        choice2: ""
-        choice3: ""
-        choice4: " "
-        answer: 
+        question38:"The diameter of a bicycle wheel is 98cm. Find the distance removed by the wheel in 3 revolutions(Take = <sup>22<?sup>&frasl;<sub>7</sub>). "       
+        choice1: "147cm "
+        choice2: "227cm"
+        choice3: "294cm"
+        choice4: " 364cm"
+        choice5:"924cm"
+        answer: 5
 
-      },
+      }
       {
-        question: ""
-        choice1: ""
-        choice2: " "
-        choice3: ""
-        choice4: ""
-        answer:
+        question39: " The length of a drawn stick is 3.0cm and the length of the real stick is 15cm. Find the scale. "
+        choice1: " 1:9"
+        choice2: "3:4 "
+        choice3: "1:5"
+        choice4: "1:3"
+        choice5:"2:3"
+        answer:3
         
-       question: ""
-        choice1: ""
-        choice2: ""
-        choice3: ""
-        choice4:""
-        answer:
-      },
+       question40: " Calculate the area of a parallelogram whose height is 14cm and base is 6cm."
+        choice1: "20cm2"
+        choice2: "42cm2"
+        choice3: "84cm2"
+        choice4:"96cm2"
+        choice5:"100cm2"
+        answer:3
+      }
       {
-        question:"" 
-        choice1: ""
-        choice2: ""
-        choice3: ""
-        choice4: ''
-        answer: 
-      },
-      {
-        question:""
+        question41:"" 
         choice1: ""
         choice2: ""
         choice3: ""
         choice4: ""
+        choice5:""
         answer: 
+      }
+      {
+        question42:"An equilateral triangle of sides 12cm each has the same perimeter as a square. Find the area of the square."
+        choice1: "9cm<sup>2"
+        choice2: "12cm<sup>2"
+        choice3: "24cm<sup>2"
+        choice4: "36cm<sup>2"
+        choice5:"81cm<sup>2"
+        answer: 5
+      }
+      {
+        question43: "What is the volume of a cuboid tank whose edges measures 5.2m each?   ?"
+        choice1: "5.2m<sup>3 "
+        choice2: "27.0m<sup>3"
+        choice3: "77.2m<sup>3"
+        choice4: " 100.1m<sup>3"
+        choice5:"140.6m<sup>3"
+        answer:5
+      {
+        question44: " How many cubic sugar of edge 2cm can be fitted into a cuboid container of dimension 4cm by 6cm by 10cm?  "  
+        choice1: "30"
+        choice2: "22 "
+        choice3:      "20"   
+        choice4: "12"
+        choice5:"8"
+        answer: 1
       },
       {
-        question: "  ?"
-        choice1: " "
-        choice2: ""
-        choice3: ""
-        choice4: " "
-        answer:
-      {
-        question: "?  "  
-        choice1: ""
-        choice2: " "
-        choice3:      ""   
-        choice4: ""
-        answer: 
-      },
-      {
-        question: "" 
+        question45: "" 
         choice1: "  "
         choice2: " "
         choice3: ""  
@@ -396,7 +409,7 @@ let questions = {
         answer:
       },
       {
-        question: " ?"
+        question46: " ?"
         choice1: ""
         choice2: " "
         choice3:" "
@@ -404,15 +417,16 @@ let questions = {
         answer: 
       },
       {
-        question: ""
-        choice1: ""
-        choice2: ""
-        choice3:""
-        choice4: ""
-        answer: 
+        question47: "Calculate the volume of a cylinder of height 14cm and radius 3cm."
+        choice1: "396cm<sup>3"
+        choice2: "264cm<sup>3"
+        choice3:"198cm<sup>3"
+        choice4: "172cm<sup>3"
+        choice5:"132cm<sup>3"
+        answer: 1
       },
       {
-        question: ""
+        question48: ""
         choice1: ""
         choice2:""
         choice3: ""
@@ -420,7 +434,7 @@ let questions = {
         answer: 
       },
       {
-        question: ""
+        question49: ""
         choice1: " "
         choice2: ""
         choice3: ""
@@ -428,12 +442,13 @@ let questions = {
         answer: 
       },
       {
-        question: ""
-        choice1: ""
-        choice2: ""
-        choice3: ""
-        choice4: ""
-        answer:
+        question50: " A ladder 8m long leans against a vertical wall, making an angle of 60o with the horizontal ground. What is the distance between the foot of the ladder and the wall"
+        choice1: "4m"
+        choice2: "6m"
+        choice3: "8m"
+        choice4: "10m"
+        choice5:"12m"
+        answer:1
       },
       {
         question: ".?"
