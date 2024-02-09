@@ -13,60 +13,62 @@ let availableQuesions = [];
 
 
 let questions = [
+  
   {
-    question 1: "Find the square root of 4x<sup>2</sup>.",
-    choice1: "<x>",
-    choice2: "<2x>",
-    choice3: "<3x>",
-    choice4: "<16x>",
-    choice5: "<16x<sup>-4</sup>>",
+    question 1: "A line that divides a circle into two equal parts is known as.",
+    choice1: "<Chord>",
+    choice2: "<diameter>",
+    choice3: "<radius>",
+    choice4: "<sector>",
+    choice5: "<segment>",
     answer: 2
   },
   {
-    question2:"Evaluate 3a – (4a+ 6a).",
-    choice1: "<7a>",
-    choice2: "<5a>",
-    choice3: "<-7a>",
-    choice4: "<-5a>",
-    choice5: "<-4a>",
+    question2:"Find the value of -5- (-20).",
+    choice1: "<-30>",
+    choice2: "<-25>",
+    choice3: "<-15>",
+    choice4: "<15>",
+    choice5: "<25>",
     answer: 4
   },
   {
-    question3: "What is the coefficient of b in the expression b<sup>2</sup> – 5b + 18?",
-    choice1: "-18",
-    choice2: "-5",
-    choice3: "1",
-    choice4: "5",
-    choice5: "18",
+    question3: "Find the perimeter of a football field of length 100m and breadth 60m.",
+    choice1: "600m",
+    choice2: "450m",
+    choice3: "320m",
+    choice4: "200m",
+    choice5: "160m",
     answer: 3
   },
   {
-    question4: "Represent x ≥ 3 on the number line.",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "", 
+    question4: "Find the simple interest on N800.00 at 4% for 6 years",
+    choice1: "N32.00",
+    choice2: "N48.00",
+    choice3: "N192.00",
+    choice4: "N224.00",
+    choice5: "N240.00", 
     answer: 3
   },
   {
-    question5: "Expand (z + 2)(9 – z)" ,
-    choice1: "-z<sup>2</sup> – 7z – 18",
-    choice2: "–z<sup>2</sup> – 7z + 18",
-    choice3: "-z<sup>2</sup> + 7z + 18",
-    choice4: "z<sup>2</sup> – 7z + 18",
-    choice5: "z<sup>2</sup> + 7z + 18",
+    question5: "Express 33% as a decimal number." ,
+    choice1: "0.30",
+    choice2: "0.31",
+    choice3: "0.32",
+    choice4: "0.33",
+    choice5: "0.34",
     answer: 4
   },
   {
-    question6: "Make x the subject of the formula m =<sup>1</sup>&frasl;<sub>3</sub> rx",
-    choice1: "rx",
-    choice2: "<sup>r</sup>&frasl;<sub>3m</sub> ",
-    choice3: "<sup>3m</sup>&frasl;<sub>r</sub> ",
-    choice4: "<sup>1</sup>&frasl;<sub>3</sub> r",
-    choice5: "<sup>1</sup>&frasl;<sub>3</sub> rx",
+    question6: "Find the value of y in the diagram below
+                                         
+                                                          ",
+    choice1: "9cm",
+    choice2: "10cm",
+    choice3: "12cm",
+    choice4: "15cm",
+    choice5: "20cm",
     answer: 2
-  },
   {
     question7: "Approximate 13075 to the nearest thousand.",
     choice1: "13075",
