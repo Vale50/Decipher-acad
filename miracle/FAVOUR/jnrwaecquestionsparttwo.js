@@ -294,154 +294,153 @@ let questions = {
       answer: 
     },
     {
-      question: "The Great Exhibition of 1851 was held in London's: ",
-      choice1: "Crystal Palace ",
-      choice2: " Westminster Abbey",
-      choice3: "Tower of London    ",
-      choice4: "Buckingham Palace ",
+      question: ""
+      choice1: ""
+      choice2: " "
+      choice3: "  "
+      choice4: " "
       answer: 
     },
     {
-      question:  "The first successful transatlantic telegraph cable was laid down in: ",
-      choice1:"1858",
-      choice2: "1866",
-      choice3: "1872",
-      choice4: "1884",
-      answer:1 
+      question:  ""
+      choice1:""
+      choice2: ""
+      choice3: ""
+      choice4: ""
+      answer:
     },
     {
-      question: " The architect responsible for designing the Houses of Parliament in London was ",
-     choice1: "Charles Barry   ",
-      choice2: "Christopher Wren  ",
-      choice3: "John Nash  ",
-      choice4: ") Inigo Jones  ",
-      answer: 1
+      question: " "
+     choice1: "   "
+      choice2: " "
+      choice3: ""
+      choice4: "  "
+      answer: 
       {
-        question: "The leader of the Scottish army at the Battle of Bannockburn was:",
-        choice1: "<Robert the Bruce>",
-        choice2: "<William Wallace>",
-        choice3: "<Malcolm III  >", 
-        choice4: "< David II>",
-        answer: 1
+        question: ""
+        choice1: ""
+        choice2: ""
+        choice3:""
+        choice4: ""
+        answer: 
       },
       {
-        question: "The navigator who claimed Newfoundland for England in 1497 was:",
-        choice1: "<John Cabot  >"
-        choice2: "<Henry Hudson  >"
-        choice3: "< Vasco da Gama>"
-        choice4: "<Christopher Columbus >"
-         answer: 1
+        question: ""
+        choice1: ""
+        choice2: ""
+        choice3: ""
+        choice4: ""
+         answer: 
       },
       {
-        question: " The Brontë sisters, famous for their novels such as 'Jane Eyre' and 'Wuthering Heights,' were born in which English country?
-         ?"
-        choice1: " Yorkshire ",
-        choice2: "Devonshire ",
-        choice3: "Sussex",
-        choice4: " Lancashire  ",
-        answer: 1
+        question:""
+        choice1: " "
+        choice2: ""
+        choice3: ""
+        choice4: " "
+        answer: 
+
       },
       {
-        question: "The 'Peterloo Massacre' took placeiCity?  ",
-        choice1: "Manchester  ",
-        choice2: " Birmingham",
-        choice3: "London ",
-        choice4: "Liverpool",
-        answer:1
+        question: ""
+        choice1: ""
+        choice2: " "
+        choice3: ""
+        choice4: ""
+        answer:
         
-       question: " The 'Lollard' movement in mediaeval England was associated with?" 
-        choice1: "Religious reform  ",
-        choice2: "Military conquests   ",
-        choice3: " Literary achievements",
-        choice4: " Scientific discoverieS  ",
-        answer:1
+       question: ""
+        choice1: ""
+        choice2: ""
+        choice3: ""
+        choice4:""
+        answer:
       },
       {
-        question: "The 'Danelaw' was a historical term referring to:?",
-        choice1: "<Areas of England under Viking control>",
-        choice2: "<The legal code established by King Alfred >",
-        choice3: "<The kingdom of Mercia>", 
-        choice4: "<The feudal system in mediaeval England  >",
-        answer: 1
+        question:"" 
+        choice1: ""
+        choice2: ""
+        choice3: ""
+        choice4: ''
+        answer: 
       },
       {
-        question:"The founder of the Methodist movement, a major figure in the Evangelical Revival, was:?",
-        choice1: "<John Wesley >"
-        choice2: "< George Whitefield>"
-        choice3: "<Charles Wesley  >"
-        choice4: "< William Wilberforce>"
-        answer: 1
+        question:""
+        choice1: ""
+        choice2: ""
+        choice3: ""
+        choice4: ""
+        answer: 
       },
       {
-        question: " The Chartists were a 19th-century movement advocating for: ?"
-        choice1: "Political reform and universal suffrage  ",
-        choice2: "Religious freedom            ",
-        choice3: "Workers' rights",
-        choice4: "  Abolition of slavery",
-        answer:1 
+        question: "  ?"
+        choice1: " "
+        choice2: ""
+        choice3: ""
+        choice4: " "
+        answer:
+      {
+        question: "?  "  
+        choice1: ""
+        choice2: " "
+        choice3:      ""   
+        choice4: ""
+        answer: 
       },
       {
-        question: "The British Prime Minister during the American Revolution was  ?  ",  
-        choice1: "Lord North",
-        choice2: " William ",
-        choice3: " George Grenville            ",
-        choice4: "Charles Watson-Wentworth",
-        answer: 1
+        question: "" 
+        choice1: "  "
+        choice2: " "
+        choice3: ""  
+        choice4: " "
+        answer:
       },
       {
-        question: "The battle that effectively ended the Jacobite Rising of 1745 was:?." ,
-        choice1: "Battle of Prestonpans  ",
-        choice2: "Battle of Culloden ",
-        choice3: "Battle of Falkirk  ",
-        choice4: "Battle of Sheriffmuir  ",
-        answer:2
+        question: " ?"
+        choice1: ""
+        choice2: " "
+        choice3:" "
+        choice4:" "
+        answer: 
       },
       {
-        question: ". The founding document of the Church of England is known as the ?",
-        choice1: "Act of Supremacy",
-        choice2: " Act of Uniformity ",
-        choice3:"Book of Common Prayer "
-        choice4:"Thirty-Nine Articles  "
-        answer: 1
+        question: ""
+        choice1: ""
+        choice2: ""
+        choice3:""
+        choice4: ""
+        answer: 
       },
       {
-        question: " The first successful vaccine was developed by?",
-        choice1: "Edward Jenner",
-        choice2: " Louis Pasteur",
-        choice3: "Alexander Fleming",
-        choice4: "Joseph Lister  ",
-        answer: 1
+        question: ""
+        choice1: ""
+        choice2:""
+        choice3: ""
+        choice4:""
+        answer: 
       },
       {
-        question: "The industrial city of Manchester became known as the world's first:?",
-        choice1: "industrial city",
-        choice2: "Industrial revolution  ",
-        choice3: "Industrial powerhouse  ",
-        choice4: " Industrial capital ",
-        answer: 1
+        question: ""
+        choice1: " "
+        choice2: ""
+        choice3: ""
+        choice4: ""
+        answer: 
       },
       {
-        question: "The Battle of Tewkesbury in 1471 was a decisive victory for the? ",
-        choice1: " Yorkists",
-        choice2: "Lancastrians  ",
-        choice3: "Tudors",
-        choice4: "Plantagenets ",
-        answer: 1
+        question: ""
+        choice1: ""
+        choice2: ""
+        choice3: ""
+        choice4: ""
+        answer:
       },
       {
-        question: "The Magna Carta was signed during the reign of which English king? ",
-        choice1: "King John",
-        choice2: "Richard the Lionheart  ",
-        choice3: "Henry II  ",
-        choice4: " Edward II",
-        answer:1 
-      },
-      {
-        question: ".?",
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "",
+        question: ".?"
+        choice1: ""
+        choice2: ""
+        choice3: ""
+        choice4: ""
         answer: 
       },
       {
