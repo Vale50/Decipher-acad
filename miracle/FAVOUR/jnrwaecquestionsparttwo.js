@@ -1,23 +1,35 @@
-{
-    question1: "What is the place value of 3 in 4321?  "
-    choice1: "Hundred   "
-    choice2: " Hundredth"
-    choice3: " Tenth "
-    choice4: "Thousand "
-    choice5:" Units"
-    answer: 
+const question = document.getElementById("question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
+let currentQuestion = {};
+let acceptingAnswers = false;
+let score = 0;
+let questionCounter = 0;
+let availableQuesions = [];
+
+let questions = {
+    question1: "What is the place value of 3 in 4321?  ",
+    choice1: "Hundred   ",
+    choice2: " Hundredth",
+    choice3: " Tenth ",
+    choice4: "Thousand ",
+    choice5:" Units",
+    answer: 1
   },
   {
     question2: " Round off 0.01256 to three significant figures "
-    choice1: " 0.01"
-    choice2:" 0.012 "
+     choice1: " 0.01"
+    choice2:"  0.012 "
     choice3: "0.013 "
     choice4: " 0.0125"
     choice5: "0.0126"
-    answer:
+    answer:5
   },
   {
     question3: ""
+    
     choice1: ""
     choice2: ""
     choice3: ""
@@ -32,7 +44,7 @@
     choice3: "5"
     choice4: "8 "
     choice5:"10"
-    answer: 
+    answer: 2
   },
   {
     question5:  " A man bought a Mathematics textbook for N1,680.00 and sold it for N1,200.00.Find his percentage loss "
@@ -41,7 +53,7 @@
     choice3: " 40.00%"
     choice4: " 48.00%"
     choice5:" 71.43%  "
-    answer: 
+    answer: 2
   },
   {
     question6: " Find the sum of the prime factors of 180"
@@ -50,7 +62,7 @@
     choice3: "  19"
     choice4: "34"
     choice5:"79"
-    answer:  
+    answer:  1
     {
       question7: "A profit of 23% was made on an article bought for N4,800.00. What was the selling price?"
       choice1: "<N1,104.00>"
@@ -58,16 +70,16 @@
       choice3: "<N4,800.00>" 
       choice4: "< N5,904.00>"
       choice5:"<N5,940.00>"
-      answer: 
+      answer: 4
     },
     {
-      question8:"Find the HCF of 18a2y and 27x2y 2  . "
-      choice1: "<>"
-      choice2: "< >"
-      choice3: "< >"
-      choice4: "<  >"
-      choice5:""
-      answer: 
+      question8:"Find the HCF of 18a<sup>2y and 27x<sup>2y<sup>2"
+      choice1: "< 9ax>"
+      choice2: "<9y  >"
+      choice3: "< 6axy >"
+      choice4: "< 6ax >"
+      choice5:"<2ay>"
+      answer: 2
     },
     {
       question9: "Convert 19ten to a binary number. "
@@ -76,7 +88,7 @@
       choice3: " 10101two"
       choice4: "10111two  "
       choice5:"11001two"
-      answer: 
+      answer: 2
     },
     {
       question10: "What is the smallest number by which 60 must be multipled to be a perfect square?  "
@@ -85,7 +97,7 @@
       choice3: " 5 "
       choice4: " 10"
       choice5:"15"
-      answer: 
+      answer: 5
     },
     {
       question11: " If 6 men can finish a particular work in 4 days, how many days will it take 8 men to finish the same work if they are working at the same rate?  " 
@@ -94,7 +106,7 @@
       choice3: " 4"
       choice4: " 6"
       choice5:"8"
-      answer:
+      answer:2
     },
     {
       question12: ""
@@ -112,7 +124,7 @@
       choice3: "100"
       choice4: "96"
       choice5:"70"
-      answer: 
+      answer: 3
     },
     {
       question14: " Find the simple interest on N650.00 for 2 years at 6% per annum "
@@ -121,7 +133,7 @@
       choice3: "N65.00"
       choice4: "N78.00 "
       choice5:"N728.00"
-      answer: 
+      answer: 4
     },
     {
       question15: "  The number of girls in a mixed school is 375. If the ratio of boys to girls in the school is 4:5, find the number of boys in the school. "
@@ -130,145 +142,156 @@
       choice3: "325"
       choice4: "375 "
       choice5:"675"
-      answer: 
+      answer: 2
     },
     {
-      question16: ""
-      choice1: ""
-      choice2: " "
-      choice3: ""
-      choice4: ""
-      answer: 
+      question16: " Evaluate <sup>0.01 𝑥 0.04</&frasl;<sub>0.0002</sub>, giving your answer in standard form"
+      choice1: "2 x 10-<sup>3"
+      choice2: " 2 x 10-<sup>2"
+      choice3: " 2 x 10-<sup>1"
+      choice4: " 2 x 10-1"
+      choice5:"2 x 10<sup>1  "
+      answer: 4
     },
     {
-      question17: " ?"
-      choice1: " "
-      choice2: ""
-      choice3: ""
-      choice4: " "
-      choice5:""
-      answer: 
-    },
-    {
-      question18: "?"
-      choice1: " "
-      choice: ""
-      choice3: ""
-      choice4: " "
-      answer: 
-    },
-    {
-      question19:  " ?"
-      choice1:" "
-      choice2: ""
-      choice3: ""
-      choice4: ""
-      answer: 
-    },
-    {
-      question20: ""
-      choice1: ""
-      choice2: ""
-      choice3: ""
-      choice4: ""
-      answer:
-    },
-    {
-      question: ""
-      choice1: " "
-      choice2: " "
-      choice3: " "
-      choice4: " France "
-      answer:
-    },
-    {
-      question: " The reign of Queen Victoria is often referred to as the:",
-      choice1: "<Victorian Era>",
-      choice2: "<Elizabethan Age>",
-      choice3: "<Georgian Period>", 
-      choice4: "<Edwardian Era>",
-      answer: 1
-    },
-    {
-      question:" The Suffragette movement in the late 19th and early 20th centuries campaigned primarily for?",
-      choice1: "<Women's right to vote>"
-      choice2: "<Workers' rights>"
-      choice3: "<Racial equality>"
-      choice4: "<Religious freedom >"
-      answer: 1
-    },
-    {
-      question: "The War of the Spanish Succession, which lasted from 1701 to 1714, primarily involved conflicts over the:
-       ?"
-      choice1: "Succession to the Spanish throne ",
-      choice2: "Control of Mediterranean trade routes ",
-      choice3: " Colonisation of the Americas",
-      choice4: " Partition of Poland",
-      answer: 1
-    },
-    {
-      question: " The leader of the parliamentary forces during the English Civil War was: ",
-      choice1: " Oliver Cromwell",
-      choice2: "Thomas Fairfax",
-      choice3: " Charles I",
-      choice4: "Charles II",
-      answer: 1
-    },
-    {
-      question: "The Battle of Culloden in 1746 marked the defeat of the:" ,
-      choice1: " Jacobites ",
-      choice2: "Roundheads",
-      choice3: "Cavaliers  ",
-      choice4: "Covenanters   ",
-      answer:1
-    },
-    {
-      question: " The Indian Rebellion of 1857, also known as the Sepoy Mutiny, began in the town of:          ?",
-      choice1: "Meerut ",
-      choice2: " Delhi ",
-      choice3: "Lucknow ",
-      choice4: "Calcutta ",
-      answer:1 
-    },
-    {
-      question: "The last British monarch from the House of Hanover was: ",
-      choice1: "William IV ",
-      choice2: "Queen Anne",
-      choice3: "Victoria  ",
-      choice4: "George III ",
+      question17: "What is the positive difference between -3.9 and 3.9 ?"
+      choice1: "0 "
+      choice2: "3.9"
+      choice3: "7.8"
+      choice4: "111.7 "
+      choice5:"15.6"
       answer: 3
     },
     {
-      question: " The Great Fire of London in 1666 started in a bakery on:",
-      choice1: "Pudding Lane   ",
-      choice2: "Baker Street",
-      choice3: "Fishmonger's Row",
-      choice4: "Bread Street ",
+      question18: ". A man spends <sup>1</&frasl;<sub>3</sub> of his salary on food and <sup>1</&frasl;<sub>4</sub> on school fees of his children. What fraction of his salary is left??"
+      choice1: " <sup>1</&frasl;<sub>6</sub>"
+      choice: " <sup>1</&frasl;<sub>3</sub>"
+      choice3: " <sup>-1</&frasl;<sub>5</sub>"
+      choice4: " <sup>1</&frasl;<sub>2</sub>"
+      choice5:" <sup>7</&frasl;<sub>12</sub>" 
+      answer: 3
+    },
+    {
+      question19:  "Express 0.375 as a fraction is its lowest terms.  ?"
+      choice1:" <sup>75</&frasl;<sub>200</sub> "
+      choice2: " <sup>15</&frasl;<sub>12</sub>"
+      choice3: " <sup>3</&frasl;<sub>8</sub>"
+      choice4: " <sup>5</&frasl;<sub>8</sub>"
+      choice5:" <sup>3</&frasl;<sub>4</sub>"
+      answer: 3
+    },
+    {
+      question20: "If 3.5% of a number is 3.5, what is the number? "
+      choice1: "7"
+      choice2: "28"
+      choice3: "56"
+      choice4: "70"
+      choice5:"100"
+      answer:5
+    },
+    {
+      question21: "Convert 10110two to base ten. "
+      choice1: " 16"
+      choice2: " 18"
+      choice3: " 20"
+      choice4: " 22 "
+      choice5:"24"
+      answer:4
+    },
+    {
+      question22: " "
+      choice1: ""
+      choice2: ""
+      choice3: ""
+      choice4: ""
+      answer: 
+    },
+    {
+      question23:"What is the co-efficient of r in the expansion of (3r - 5) (2r + 3)?"
+      choice1: "-1"
+      choice2: "1"
+      choice3: "5"
+      choice4: "6"
+      choice5:"15"
       answer: 1
     },
     {
-      question: " The first successful steam locomotive was developed by:  ",
-      choice1: " George Stephenson",
-      choice2: " Isambard Kingdom Brunel ",
-      choice3: "James Watt  ",
-      choice4: " Richard Trevithick",
-      answer: 1
+      question24: ". The sum of 4 items a certain number and 9 is equal to the sum of the number and 12. What is the number??"
+      choice1: " 1"
+      choice2: "3"
+      choice3: " 7"
+      choice4: "12"
+      choice5:"36"
+      answer:1
     },
     {
-      question: " The Battle of Agincourt in 1415 was part of which conflict? ",
-      choice1: "The Hundred Years' War          ",
-      choice2: " The War of the Roses",
-      choice3: "The Crusades          ",
-      choice4: "The War of Spanish Succession",
-      answer: 1
+      question25: "  "
+      choice1: " "
+      choice2: ""
+      choice3: " "
+      choice4: ""
+      answer: 
     },
     {
-      question: "The author of 'A Tale of Two Cities' and 'Great Expectations' was:?",
-      choice1: "Charles Dickens",
-      choice2: "Jane Austen ",
-      choice3: "William Shakespeare ",
-      choice4: "Emily Bronte  ",
-      answer: 1
+      question26: "Find the HCF of 4x<sup>2 y and 6xyz" 
+      choice1: "2xz "
+      choice2: "2yxy"
+      choice3: "2x<sup>2y"
+      choice4: " 12xy  "
+      choice5:"24x<sup>2yz"
+      answer:2
+    },
+    {
+      question27:" Expand (x + 1) (x -2).  "          
+      choice1:"x<sup> 2 + x – 2"
+      choice2:"x<sup>2 - x + 2"
+      choice3:"x<sup> 2 + 3x + 2"
+      choice4:"x<sup>2 - x – 2"
+      choice5:"x<sup>2 - 2x - 2"
+      answer:4
+
+    },
+    {
+      question28: "Factorize.x<sup> 2 – 7x + 12. "
+      choice1:" (x + 3) (x + 4) "
+      choice2: " (x – 2) (x – 5) "
+      choice3: " (x + 3) (x – 4"
+      choice4: "(x – 3) (x + 4)"
+      choice5:" (x – 3) (x – 4)"
+      answer: 5
+    },
+    {
+      question29:
+      choice1: 
+      choice2: 
+      choice3:
+      choice4: 
+      answer: 
+    },
+    {
+      question30: "(<sup>x-3</&frasl;<sub>2</sub>) -  (<sup>x-1</&frasl;<sub>3</sub>)"
+      choice1: "sup>5x-7</&frasl;<sub>6</sub> "
+      choice2: "sup>5x-11/&frasl;<sub>6</sub> "
+      choice3: "sup>x-7</&frasl;<sub>6</sub> "
+      choice4: "sup>x-11</&frasl;<sub>6</sub> "
+       choice5:"sup>x+11</&frasl;<sub>6</sub> "
+      answer: 4
+    },
+    {
+      question: "  "
+      choice1: " "
+      choice2: " "
+      choice3: "" 
+      choice4: ""
+      answer: 
+    },
+    {
+      question:"?"
+      choice1: ""
+      choice3:""
+      choice3:""
+      choice4: ""
+      answer: 
     },
     {
       question: "The Great Exhibition of 1851 was held in London's: ",
@@ -426,3 +449,69 @@
         choice1: "",
         choice2: " ",
         choice3: "",
+        //CONSTANTS
+const CORRECT_BONUS = 2;
+const MAX_QUESTIONS = 50;
+
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = [...questions];
+  getNewQuestion();
+};
+
+getNewQuestion = () => {
+  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    localStorage.setItem("mostRecentScore", score);
+    //go to the end page
+    return window.location.assign("/end.html");
+  }
+  questionCounter++;
+  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+  //Update the progress bar
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
+  const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+  currentQuestion = availableQuesions[questionIndex];
+  question.innerText = currentQuestion.question;
+
+  choices.forEach(choice => {
+    const number = choice.dataset["number"];
+    choice.innerText = currentQuestion["choice" + number];
+  });
+
+  availableQuesions.splice(questionIndex, 1);
+  acceptingAnswers = true;
+};
+
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    const classToApply =
+      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+    if (classToApply === "correct") {
+      incrementScore(CORRECT_BONUS);
+    }
+
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
+  });
+});
+
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+};
+
+startGame();
+
