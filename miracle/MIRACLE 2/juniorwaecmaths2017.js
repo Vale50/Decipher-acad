@@ -29,7 +29,7 @@ let questions = [
     choice3: "<-15>",
     choice4: "<15>",
     choice5: "<25>",
-    answer: 4
+    answer: 3
   },
   {
     question3: "Find the perimeter of a football field of length 100m and breadth 60m.",
@@ -38,7 +38,7 @@ let questions = [
     choice3: "320m",
     choice4: "200m",
     choice5: "160m",
-    answer: 3
+    answer: 2
   },
   {
     question4: "Find the simple interest on N800.00 at 4% for 6 years",
@@ -47,7 +47,7 @@ let questions = [
     choice3: "N192.00",
     choice4: "N224.00",
     choice5: "N240.00", 
-    answer: 3
+    answer: 5
   },
   {
     question5: "Express 33% as a decimal number." ,
@@ -56,7 +56,7 @@ let questions = [
     choice3: "0.32",
     choice4: "0.33",
     choice5: "0.34",
-    answer: 4
+    answer: 3
   },
   {
     question6: "Find the value of y in the diagram below
@@ -67,421 +67,406 @@ let questions = [
     choice3: "12cm",
     choice4: "15cm",
     choice5: "20cm",
+    answer: 3
+  },
+  {
+    question7: "Make P the subject of the formula Pk + 2 = N",
+    choice1: "P =<sup>2-N</sup>&frasl;<sub>k</sub>",
+    choice2: "P =<sup>N-2</sup>&frasl;<sub>k</sub>",
+    choice3: "P =<sup>N-k</sup>&frasl;<sub>2</sub>",
+    choice4: "P =<sup>k-N</sup>&frasl;<sub>2</sub>",
+    choice5: "P =<sup>2N-k</sup>&frasl;<sub>P</sub>",
     answer: 2
   },
   {
-    question7: "Approximate 13075 to the nearest thousand.",
-    choice1: "13075",
-    choice2: "13065",
-    choice3: "13045",
-    choice4: "13015",
-    choice5: "13000",
-    answer: 5
-  },
-  {
-    question8: "Convert <sup>2</sup>&frasl;<sub>3</sub> to decimal fraction and give your answer to 2 decimal places.",
-    choice1: "0.76",
-    choice2: "0.70",
-    choice3: "0.67",
-    choice4: "0.66",
-    choice4: "0.60",
+    question8: "Doba has Y naira. He spent N35.00. The amount he has left is greater than N15.00. Write an inequality in Y.",
+    choice1: "Y + 35> 15",
+    choice2: "Y – 35 < 15",
+    choice3: "Y – 35 > 15",
+    choice4: "Y + 35 < 15",
+    choice4: "Y – 35> - 15",
     answer: 3
   },
   {
-    question9: "Which of the following is NOT a perfect square?",
-    choice1: "a<sup>2</sup>",
-    choice2: "4y<sup>2</sup>",
-    choice3: "16b<sup>3</sup>",
-    choice4: "36",
-    choice5: "100",
-    answer: 3
-  },
-  {
-    question10: "Find the L.C.M. of 15 and 45",
-    choice1: "15",
-    choice2: "30.",
-    choice3: "45",
-    choice4: "60",
-    choice5: "75",
+    question9: "Simplify 4(r + 3t) – 4(2t – r)",
+    choice1: "4 (2r + t)",
+    choice2: "8r + t",
+    choice3: "4(2r – t)",
+    choice4: "4(2t – r)",
+    choice5: "4t",
     answer: 1
   },
   {
-    question11: "Express 0.0004107 in standard form.",
-    choice1: "4107 x 10<sup>7</sup>",
-    choice2: "41.07 x 10<sup>5</sup>",
-    choice3: "4.107 x 10<sup>4</sup>",
-    choice4: "41.07 x 10<sup>-5</sup>",
-    choice5: "4.107 x 10<sup>-4</sup>",
+    question10: "Find x and y in the simultaneous equations x + y = 4; 3x + y = 8",
+    choice1: "x = -2, y = -2",
+    choice2: "x = -2, y = 2",
+    choice3: "x = 2, y = -2",
+    choice4: "x = 2, y = 3",
+    choice5: "x = 2, y = 2",
     answer: 5
   },
   {
-    question12: "In a class of 25 students, 15 are boys. What percentage are girls?",
-    choice1: "10%",
-    choice2: "15%",
-    choice3: "20%",
-    choice4: "30%",
-    choice5: "40%",
+    question11: "Solve the inequality 3x + 2 ≥ 4x – 6",
+    choice1: "x ≤ - 8",
+    choice2: "x ≤ 8",
+    choice3: "x > 4",
+    choice4: "x ≥ - 6",
+    choice5: "x ≥ 8",
+    answer: 2
+  },
+  {
+    question12: "Solve for x if <sup>1</sup>&frasl;<sub>15</sub>(6 + x) = <sup>1</sup>&frasl;<sub>6</sub>(x + 3)",
+    choice1: "9",
+    choice2: "1",
+    choice3: "<sup>2</sup>&frasl;<sub>3</sub>",
+    choice4: "<sup>-2</sup>&frasl;<sub>3</sub>",
+    choice5: "-1",
     answer: 5
   },
   {
-    question13: "Simplify <sup>3</sup>&frasl;<sub>8</sub> x <sup>1</sup>&frasl;<sub>4</sub> / <sup>3</sup>&frasl;<sub>4</sub> + <sup>1</sup>&frasl;<sub>5</sub>",
-    choice1:"<sup>15</sup>&frasl;<sub>152</sub>",
-    choice2: "<sup>16</sup>&frasl;<sub>152</sub>",
-    choice3: "<sup>13</sup>&frasl;<sub>40</sub>",
-    choice4: "<sup>19</sup>&frasl;<sub>40</sub>",
-    choice5: "<sup>21</sup>&frasl;<sub>40</sub>",
-    answer: 1
-  },
-  {
-    question14: "The following are quadrilaterals EXCEPT.",
-    choice1: "Circle",
-    choice2: "parallelogram",
-    choice3: "rectangle",
-    choice4: "square",
-    choice5: "trapezium",
-    answer: 1
-  },
-  {
-    question15: "Calculate the volume of a cuboid 3cm by 8cm by 5cm",
-    choice1:"120cm <sup>3</sup>",
-    choice2: "88cm<sup>3</sup> ",
-    choice3: "16cm<sup>3</sup> ",
-    choice4: "14cm<sup>3</sup>",
-    choice5: "88cm<sup>3</sup> ",
-    answer: 1
-  }, {
-    question16: "Express 2.44km in metres",
-    choice1:"0.244",
-    choice2: "2.400",
-    choice3: "2.440",
-    choice4: "24.40",
-    choice5: "2440",
+    question13: "A train travels x km at an average speed of  <sup>v</sup>&frasl;<sub>2</sub> Km/h. How long does it takes?",
+    choice1:"2xv hours",
+    choice2: "<sup>2v</sup>&frasl;<sub>x</sub> hours",
+    choice3: "<sup>2</sup>&frasl;<sub>xv</sub> hours",
+    choice4: "<sup>xv</sup>&frasl;<sub>2</sub> hours",
+    choice5: "<sup>2x</sup>&frasl;<sub>v</sub> hours",
     answer: 5
   },
   {
-    question17: "Ayodeji made a profit of 28% on an article he bought for N3600.00. How much did he sell the article?",
-    choice1:"N1008.00",
-    choice2: "N3600.00",
-    choice3: "N4608.00",
-    choice4: "4636.00",
-    choice5: "4680.00",
-    answer: 3
-  },
-  {
-    question18: "A trader bought an electric iron for N1,200.00 and sold it for N1,680.00. What was the percentage profit?",
-    choice1:"0.4%",
-    choice2: "29%",
-    choice3: "40%",
-    choice4: "48%",
-    choice5: "71%",
-    answer: 3
-  }, {
-    question19: "What is the complement of 63 <sup>0</sup>",
-    choice1:"63<sup>0</sup>",
-    choice2: "57<sup>0</sup>",
-    choice3: "47<sup>0</sup>",
-    choice4: "27<sup>0</sup>",
-    choice5: "17<sup>0</sup>",
+    question14: "The coefficient of a2 in the expression 3a<sup>2</sup> – 2a + 25 is",
+    choice1: "-3",
+    choice2: "-2",
+    choice3: "2",
+    choice4: "3",
+    choice5: "25",
     answer: 4
   },
   {
-    question20: "How many edges has a cube?",
+    question15: "If y = 6 and 4x + y = 22, find x",
     choice1:"4",
-    choice2: "8",
-    choice3: "10",
-    choice4: "12",
-    choice5: "13",
+    choice2: "6",
+    choice3: "8",
+    choice4: "16",
+    choice5: "22",
+    answer: 1
+  }, {
+    question16: "Factorize a<sup>2</sup> + 3ab – 5ab – 15b<sup>2</sup> completely",
+    choice1:"a(a -2ab)-b<sup>2</sup>",
+    choice2: "a<sup>2</sup> – (2a + b) b",
+    choice3: "a<sup>2</sup> – (2a –b)b",
+    choice4: "(a-5b)(a + 3b)",
+    choice5: "(a – 3b)(a + 5b)",
     answer: 4
   },
   {
-    question21: "Two-fifth of the students I a mixed schools are boys. If there are 30 girls in the school, how many are boys?",
-    choice1:"50",
-    choice2: "40",
-    choice3: "30",
-    choice4: "20",
-    choice5: "10",
+    question17: "Remove the brackets in (q+3)(2q+3)",
+    choice1:"q + 5q + 9",
+    choice2: "2q + 9q + 9",
+    choice3: "2q<sup>2</sup> + 9q + 6",
+    choice4: "2q<sup>2</sup> + 9q + 9",
+    choice5: "3q<sup>2</sup> – 9q + 3",
     answer: 4
   },
   {
-    question22: "Find the radius of a circle whose circumstance is 44cm",
-    choice1:"4cm",
-    choice2: "7cm",
-    choice3: "11cm",
-    choice4: "13cm",
-    choice5: "22cm",
-    answer: 2
+    question18: "Simplify (<sup>2x</sup>&frasl;<sub>5</sub>)<sup>2</sup>",
+    choice1:"(<sup>4x</sup>&frasl;<sub>5</sub>)",
+    choice2: "(<sup>4x</sup>&frasl;<sub>25</sub>)<sup>2</sup>",
+    choice3: "(<sup>4x</sup>&frasl;<sub>25</sub>)",
+    choice4: "(<sup>4</sup>&frasl;<sub>25</sub>)<sup>2</sup>",
+    choice5: "(<sup>2x</sup>&frasl;<sub>25</sub>)",
+    answer: 3
+  }, {
+    question19: "If a certain number x is subtracted from 3, the result is less than 5. Find the range of the value of x.",
+    choice1:"x < 2",
+    choice2: "x < - 2",
+    choice3: "x > 2",
+    choice4: "x > -2",
+    choice5: "x ≤ 2",
+    answer: 4
   },
   {
-    question23: "In the diagram below, BÔA is an example of a/an
-    
-                                                                  ",
-    choice1:"acute angle",
-    choice2: "obtuse angle",
-    choice3: "reflex angle",
-    choice4: "right angle",
-    choice5: "straight angle", 
+    question20: "Solve <sup>1</sup>&frasl;<sub>x-3</sub> - <sup>2</sup>&frasl;<sub>x-4</sub> = 0",
+    choice1:"2",
+    choice2: "3",
+    choice3: "4",
+    choice4: "6",
+    choice5: "7",
     answer: 1
   },
   {
-    question24: "Find the perimeter of the figure below
-    
-                                                       ",
-    choice1:"16cm",
-    choice2: "18cm",
-    choice3: "20cm",
-    choice4: "15cm + xcm",
-    choice5: "22cm + xcm",
+    question21: "Make x the subject of the formula if 16(a + b) = 4x<sup>2</sup>y",
+    choice1:"x = <sup>4(𝑎+𝑏)</sup>&frasl;<sub>𝑦</sub>",
+    choice2: "x = 2 <sup>(𝑎+𝑏)</sup>&frasl;<sub>𝑦</sub>",
+    choice3: "x = <sup>2(𝑎+𝑏)</sup>&frasl;<sub>𝑦</sub>",
+    choice4: "x = <sup>2(𝑎+𝑏)</sup>&frasl;<sub>𝑦</sub>",
+    choice5: "x = <sup>2(𝑎+𝑏)</sup>&frasl;<sub>𝑦</sub>",
     answer: 2
   },
   {
-    question25: "Simplify 22<sup>0</sup>33’-10<sup>0</sup>54’.",
-    choice1:"12<sup>0</sup>21’",
-    choice2: "11<sup>0</sup>39’",
-    choice3: "11<sup>0</sup>29’",
-    choice4: "11<sup>0</sup>21’",
-    choice5: "11<sup>0</sup>19’",
+    question22: "Factorize the expression m (3m-2) + 2m<sup>2</sup>",
+    choice1:"m(5m – 2)",
+    choice2: "m(5m +2)",
+    choice3: "m(5m<sup>2</sup> – 2)",
+    choice4: "m<sup>2</sup> (5m – 2)",
+    choice5: "m<sup>2</sup>(5m + 2)",
+    answer: 1
+  },
+  {
+    question23: "Solve the equations 2x – 6y = 12 and 8x + 6y = 18 simultaneously.",
+    choice1:"(-3, -1)",
+    choice2: "(-3, 1)",
+    choice3: "(3, 1)",
+    choice4: "(3, 1)",
+    choice5: "(3, 2)", 
+    answer: 3
+  },
+  {
+    question24: "Find the product of (x + 2) and (x – 3).",
+    choice1:"x<sup>2</sup> – 5x – 6",
+    choice2: "x<sup>2</sup> – 3x – 6",
+    choice3: "x<sup>2</sup> – 2x -6",
+    choice4: "x<sup>2</sup> – x - 6",
+    choice5: "x<sup>2</sup> – x – 5",
+    answer: 4
+  },
+  {
+    question25: "Solve the inequality 7- x > 4",
+    choice1:"x < - 11",
+    choice2: "x < - 3",
+    choice3: "x < 11",
+    choice4: "x < 3",
+    choice5: "x > - 11",
+    answer: 4
+  },
+  {
+    question26: "If 12 is added to 3 times a certain number, the result is 24, what is the number?",
+    choice1:"3",
+    choice2: "4",
+    choice3: "12",
+    choice4: "24",
+    choice5: "25",
     answer: 2
   },
   {
-    question26: "Calculate the perimeter of the shape below.
+    question27: "Evaluate <sup>2(𝑃−3𝑞)</sup>&frasl;<sub>5𝑅</sub>, given that P = 2, q = -2 and R = 1.",
+    choice1:"<sup>-2</sup>&frasl;<sub>5</sub>",
+    choice2: "<sup>2</sup>&frasl;<sub>5</sub>",
+    choice3: "1",
+    choice4: "2",
+    choice5: "5",
+    answer: 4
+  },
+  {
+    question28: "Solve the simultaneous equations:2x + y = 8 ; X + y = 5"
+    choice1:"x = 2, y = 4",
+    choice2: "x = 2, y = 3",
+    choice3: "x = 3, y = 2",
+    choice4: "x = -3, y = 2",
+    choice5: "x = -3, y = -2",
+    answer: 3
+  },
+  {
+    question29: "Factorize 10mn + 10m",
+    choice1:"10m (n+1)",
+    choice2: "10m (10 + n)",
+    choice3: "10m (n-1)",
+    choice4: "n + 1",
+    choice5: "n -1",
+    answer: 1
+  },
+  {
+    question30: "Find the range of the values of x for which 4 – x < 2",
+    choice1:"x > 2",
+    choice2: "x < 2",
+    choice3: "x ≤ 2",
+    choice4: "x ≥ 2",
+    choice5: "x – 2",
+    answer: 1
+  },
+  {"use the following table of value for y = 2 + 3x to answer questions 31 and 32."
+
+    question31: "Calculate the value of a2.",
+    choice1:"25",
+    choice2: "14",
+    choice3: "10",
+    choice4: "9",
+    choice5: "5",
+    answer: 1
+  },
+  {
+    question32: "Evaluate a + b",
+    choice1:"5",
+    choice2: "16",
+    choice3: "25",
+    choice4: "30",
+    choice5: "36",
+    answer: 2
+  },
+  {
+    question33: "Which of the following inequalities represents the number line shown below?
     
-                                                          ",
-    choice1:"2xcm",
-    choice2: "3xcm",
-    choice3: "4xcm",
-    choice4: "x<sup>2</sup>cm",
-    choice5: "2x<sup>2</sup>cm",
-    answer: 3
-  },
-  {
-    question27: "The angle of elevation of the top of a building from a point 10m away on level ground is 30<sup>0</sup>. Calculate the height of the building?",
-    choice1:"9.238m",
-    choice2: "6.928m",
-    choice3: "5.773m",
-    choice4: "4.619m",
-    choice5: "3.464m",
-    answer: 3
-  },
-  {
-    question28: "Calculate the perimeter of a rectangle of length 8cm and breadth <sup>15</sup>&frasl;<sub>152</sub>cm"
-    choice1:"<sup>13</sup>&frasl;<sub>2</sub>",
-    choice2: "20cm",
-    choice3: "21cm",
-    choice4: "24cm",
-    choice5: "30cm",
-    answer: 3
-  },
-  {
-    question29: "What is the perimeter of a regular decagon of side 3.25cm each?",
-    choice1:"3.25cm",
-    choice2: "26.5cm",
-    choice3: "28.5cm",
-    choice4: "32.3cm",
-    choice5: "40cm",
-    answer: 4
-  },
-  {
-    question30: "Calculate the area of a circle whose diameter is 7m (Take π<sup>5</sup>&frasl;<sub>2</sub>)",
-    choice1:"6<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
-    choice2: "14<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
-    choice3: "22<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
-    choice4: "30<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
-    choice5: "38<sup>1</sup>&frasl;<sub>2</sub><sup>2</sup>",
+                                                                                     ",
+    choice1:"x ≥ 2",
+    choice2: "x - < -3",
+    choice3: "x ≤ - 2",
+    choice4: "x > -3",
+    choice4: "x ≥ - 3",
     answer: 5
   },
   {
-    question31: "Find the area of a square whose diagonal is 8m",
-    choice1:"4m<sup>2</sup>",
-    choice2: "8m<sup>2</sup>",
-    choice3: "16m<sup>2</sup>",
-    choice4: "32<sup>2</sup>",
-    choice5: "64<sup>2</sup>",
-    answer: 4
-  },
-  {
-    question32: "A Cylindrical can of volume 198cm<sup>3</sup> has a height of 7cm. Find the radius of the cylinder.",
-    choice1:"28.29cm",
-    choice2: "18.00cm",
-    choice3: "9.00cm",
-    choice4: "5.20cm",
-    choice5: "3.00cm",
-    answer: 5
-  },
-  {
-    question33: "Calculate the third of an isosceles triangle whose base angle is 48<sup>0</sup>.",
-    choice1:"42<sup>0</sup>",
-    choice2: "76<sup>0</sup>",
-    choice3: "84<sup>0</sup>",
-    choice4: "96<sup>0</sup>",
-    choice4: "136<sup>0</sup>",
-    answer: 3
-  },
-  {
-    question34: "Calculate the value of x in the figure below.
+    question34: "Which of these inequalities represents the number line below?
     
                                                  ",
-    choice1:"105<sup>o</sup>",
-    choice2: "95<sup>o</sup>",
-    choice3: "75<sup>o</sup>",
-    choice4: "55<sup>o</sup>",
-    choice5: "35<sup>o</sup>",
-    answer: 1
-  },
-  {
-    question35: "Calculate the value of x in the figure below.
-    
-                                                               ",
-    choice1:"50<sup>o</sup>",
-    choice2: "60<sup>o</sup>",
-    choice3: "75<sup>o</sup>",
-    choice4: "80<sup>o</sup>",
-    choice5: "90<sup>o</sup>",
-    answer: 1
-  },
-  {
-    question36: "Find the value of t in the figure below
-    
-                                                         ",
-    choice1:"110<sup>o</sup>",
-    choice2: "120<sup>o</sup>",
-    choice3: "130<sup>o</sup>",
-    choice4: "140<sup>o</sup>",
-    choice5: "150<sup>o</sup>",
-    answer: 2
-  },
-  {
-    question37: "Find the value of x in the figure below.
-    
-                                                             ",
-    choice1:"30<sup>o</sup>",
-    choice2: "50<sup>o</sup>",
-    choice3: "80<sup>o</sup>",
-    choice4: "100<sup>o</sup>",
-    choice5: "120<sup>o</sup>",
-    answer: 3
-  },
-  {
-    question38: "Find the volume of a cone whose height is 15cm and base diameter 14cm. (Take π =<sup>22</sup>&frasl;<sub>7</sub>)",
-    choice1:"2310cm<sup>3</sup>",
-    choice2: "1320cm<sup>3</sup>",
-    choice3: "770cm<sup>3</sup>",
-    choice4: "660cm<sup>3</sup>",
-    choice5: "220<sup>3</sup>",
-    answer: 3
-  },
-  {
-    question39: "Which of the following properties is NOT true of a parallelogram?",
-    choice1:"Opposite sides are parallel and equal in length.",
-    choice2: "Opposite angles are equal",
-    choice3: "There are two lines of symmetry",
-    choice4: "The diagonals bisect each other",
-    choice5: "There is no line of symmetry.",
-    answer: 5
-  },
-  [use te diagram below to answer question 40 and 41]
-  {
-    question40: "The coordinates of point D is",
-    choice1:"(2,3)",
-    choice2: "(3,-2)",
-    choice3: "(-2, 3)",
-    choice4: "(2, -3)",
-    choice5: "(-2, -3)",
-    answer: 3
-  },
-  {
-    question41: "Which of the points represents the coordinates (2, -1)?",
-    choice1:"E",
-    choice2: "D",
-    choice3: "C",
-    choice4: "B",
-    choice5: "A",
+    choice1:"x <2",
+    choice2: "x ≥ 2",
+    choice3: "x ≤ 2",
+    choice4: "x > 2",
+    choice5: "x = 2",
     answer: 4
   },
   {
-    question42: "Calculate the perimeter of a circle whose radius is <sup>7</sup>&frasl;<sub>2</sub>cm",
-    choice1:"55cm",
-    choice2: "44cm",
-    choice3: "33cm",
-    choice4: "22cm",
-    choice5: "11cm",
-    answer: 4
-  },
-  {
-    question43: "What is the size of <PAB in the diagram below?
-    
-                                                       ",
-    choice1:"15<sup>o</sup>",
-    choice2: "30<sup>o</sup>",
-    choice3: "45<sup>o</sup>",
-    choice4: "60<sup>o</sup>",
-    choice5: "75<sup>o</sup>",
-    answer: 2
-  },
-  {
-    question44: "
-    
-    Which of the above shows how to construct 45<sup>o</sup>?",
-    choice1:"I only",
-    choice2: "II only",
-    choice3: "III only",
-    choice4: "II and III only",
-    choice5: "I, II and III only",
+    question35: "Given that 2a + b = 5 and a + 2b = 4, find the value of a.",
+    choice1:"-2",
+    choice2: "1",
+    choice3: "2",
+    choice4: "4",
+    choice5: "5",
     answer: 3
   },
   {
-    question45: "Calculate the exterior angle of a regular pentagon",
-    choice1:"72<sup>o</sup>",
-    choice2: "60<sup>o</sup>",
-    choice3: "51.4<sup>o</sup>",
-    choice4: "45<sup>o</sup>",
-    choice5: "40<sup>o</sup>",
-    answer: 1
-  },
-  {
-    question46: "A regular polygon has the sum of its interior angles as 3240<sup>0</sup>. Find the number of sides the polygon has.",
-    choice1:"16",
-    choice2: "20",
-    choice3: "22",
-    choice4: "26",
-    choice5: "30",
+    question36: "Expand the expression ( x + 3)(x -3).",
+    choice1:"x<sup>2</sup> + 3",
+    choice2: "x<sup>2</sup> - 9",
+    choice3: "x<sup>2</sup> + 9x + 9",
+    choice4: "x<sup>2</sup> – 9x + 9",
+    choice5: "x<sup>2</sup> + 9x -9>",
     answer: 2
   },
   {
-    question47: "Simplify 110110<sub>two</sub> _____ 101101<sub>two</sub>",
-    choice1:"1000<sub>two</sub>",
-    choice2: "1001<sub>two</sub>",
-    choice3: "1010<sub>two</sub>",
-    choice4: "1011<sub>two</sub>",
-    choice5: "1101<sub>two</sub>",
-    answer: 2
-  },
-  {
-    question48: "Add N4.20, N3.60 and N2.20 and give your answer in kobo.",
-    choice1:"10k",
-    choice2: "100k",
-    choice3: "1,000k",
-    choice4: "10,000k",
-    choice5: "100,000k",
-    answer: 3
-  },
-  {
-    question49: "Find the sum of all prime numbers between 1 and 10.",
-    choice1:" 2",
+    question37: "When 40 is divided by the product of k and 2, the result is 5. Find k.",
+    choice1:"-4",
     choice2: "3",
-    choice3: "5",
-    choice4: "7",
-    choice5: "17",
-    answer: 5
-  }, {
-    question50: "The figure below is a
-    
-                                      ",
-    choice1:"hexagonal based pyramid",
-    choice2: "square based prism",
-    choice3: "square based pyramid",
-    choice4: "triangular based pyramid",
-    choice5: "triangular prism",
+    choice3: "4",
+    choice4: "5",
+    choice5: "6",
     answer: 3
+  },
+  {
+    question38: "Factorize 3pq<sup>3</sup> – 12pq completely",
+    choice1:"3pq (p<sup>2</sup>-4)",
+    choice2: "3pq (p - 2)(P + 2)",
+    choice3: "3pq (p – 2)(p-2)",
+    choice4: "3p<sup>2</sup>p(p – 4)",
+    choice5: "3p<sup>2</sup>q (p + 4)",
+    answer: 2
+  },
+  {
+    question39: "If x 14 <span>&#8730;</span syle="border-top:1px solid white"> <sup>b</sup>&frasl;<sub>a</sub> </span>, express b in terms of a and x",
+    choice1:"16ax<sup>2</sup>",
+    choice2: "16ax",
+    choice3: "16a<sup>2</sup>x",
+    choice4: "16a<sup>2</sup>x<sup>2</sup>",
+    choice5: "16x",
+    answer: 1
+  },
+  {
+    question40: "One-half of a number is equal to 5. What is the number?",
+    choice1:"<sup>1</sup>&frasl;<sub>2</sub>",
+    choice2: "2<sup>1</sup>&frasl;<sub>2</sub>",
+    choice3: "5",
+    choice4: "10",
+    choice5: "20",
+    answer: 4
+  },
+  {
+    question41: "A boy is x years old and his father is 10 years more than twice his age. Calculate the father’s age in terms of x.",
+    choice1:"10x + 2 years",
+    choice2: "12x years",
+    choice3: "14x years",
+    choice4: "2x + 10 years",
+    choice5: "2x years",
+    answer: 4
+  },
+  {
+    question42: "Solve the equation <sup>x+2</sup>&frasl;<sub>3</sub> + 2x = 10",
+    choice1:"9<sup>1</sup>&frasl;<sub>3</sub>",
+    choice2: "5",
+    choice3: "4<sup>2</sup>&frasl;<sub>3</sub>",
+    choice4: "4",
+    choice5: "1<sup>1</sup>&frasl;<sub>7</sub>",
+    answer: 4
+  },
+  {
+    question43: "Solve for P in the equation: <sup>4</sup>&frasl;<sub>P-2</sub> + <sup>2</sup>&frasl;<sub>P-2</sub> = 0",
+    choice1:"-2",
+    choice2: "-<sup>1</sup>&frasl;<sub>3</sub>",
+    choice3: "<sup>1</sup>&frasl;<sub>3</sub>",
+    choice4: "2",
+    choice5: "3",
+    answer: 2
+  },
+  {
+    question44: "Find the value of y if <sup>4</sup>&frasl;<sub>y-1</sub> = <sup>1</sup>&frasl;<sub>y</sub>",
+    choice1:"<sup>-1</sup>&frasl;<sub>3</sub>",
+    choice2: "<sup>1</sup>&frasl;<sub>7</sub>",
+    choice3: "<sup>1</sup>&frasl;<sub>6</sub>",
+    choice4: "<sup>1</sup>&frasl;<sub>5</sub>",
+    choice5: "<sup>1</sup>&frasl;<sub>3</sub>",
+    answer: 5
+  },
+  {
+    question45: "Find the value of x if 12x + 3 = 4x – 1?",
+    choice1:"<sup>-1</sup>&frasl;<sub>2</sub>",
+    choice2: "<sup>1</sup>&frasl;<sub>4</sub>",
+    choice3: "<sup>1</sup>&frasl;<sub>2</sub>",
+    choice4: "2",
+    choice5: "4",
+    answer: 1
+  },
+  {
+    question46: "Factorize 81-16b<sub>2</sub>",
+    choice1:"(9-4b)<sub>2</sub>",
+    choice2: "(9+4b)<sub>2</sub>",
+    choice3: "(4b – 9)(4b + 9)",
+    choice4: "(9-4b)(9+4b)",
+    choice5: "(9 + 4b)(4b -9)",
+    answer: 4
+  },
+  {
+    question47: "Solve for x in the equation: 2<sup>1</sup>&frasl;<sub>4</sub> - <sup>11`</sup>&frasl;<sub>2x</sub> = 0",
+    choice1:"-2<sup>4</sup>&frasl;<sub>9</sub>",
+    choice2: "-<sup>9</sup>&frasl;<sub>22</sub>",
+    choice3: "<sup>11</sup>&frasl;<sub>22</sub>",
+    choice4: "<sup>9</sup>&frasl;<sub>22</sub>",
+    choice5: "2<sup>4</sup>&frasl;<sub>9</sub>",
+    answer: 5
+  },
+  {
+    question48: "Express b in terms of a, c and P in <sup>b-4ac</sup>&frasl;<sub>p</sub> = 3",
+    choice1:"b=<span>&#8730;</span syle="border-top:1px solid white"> 3p+4ac</span>",
+    choice2: "b=<span>&#8730;</span syle="border-top:1px solid white"> 3p-4ac</span>",
+    choice3: "b=<span>&#8730;</span syle="border-top:1px solid white"> <sup>3p</sup>&frasl;<sub>-4ac</sub> </span>",
+    choice4: "b=3p+4ac",
+    choice5: "b=3p-4ac",
+    answer: 1
+  },
+  "Use the data below to answer questions 49 and 50. In a NECO JSCE Mathematics examination, the following are the scores of certain students:"
+  {
+    question49: "Find the median of the data",
+    choice1:" 20",
+    choice2: "30",
+    choice3: "40",
+    choice4: "50",
+    choice5: "70",
+    answer: 3
+  }, {
+    question50: "What is the mode of the data?",
+    choice1:"70",
+    choice2: "50",
+    choice3: "40",
+    choice4: "30",
+    choice5: "`17`",
+    answer: 2
   },
   
 
