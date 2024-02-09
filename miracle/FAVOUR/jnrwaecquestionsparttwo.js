@@ -28,14 +28,14 @@ let questions = {
     answer:5
   },
   {
-    question3: ""
-    
-    choice1: ""
-    choice2: ""
-    choice3: ""
-    choice4: " "
-    choice5:""
-    answer: 
+    question3: "<span>&#8730;</span><span style="border-top:1px solid white"> 3 <sup>1</&frasl;<sub>16</sub><?span>
+
+    choice1: "1<sup>1</&frasl;<sub>4</sub>"
+    choice2: "1<sup>1</&frasl;<sub>2</sub>"
+    choice3: "1<sup>3</&frasl;<sub>4</sub>"
+    choice4: "2<sup>1</&frasl;<sub>4</sub>" 
+    choice5:"2<sup>1</&frasl;<sub>2</sub>"
+    answer: 3
   },
   {
     question4:"The sum of 8 and a certain number is equal to the product of the number and 3. What is the number?"
@@ -109,13 +109,18 @@ let questions = {
       answer:2
     },
     {
-      question12: ""
-      choice1: ""
-      choice2: ""
-      choice3: ""
-      choice4: "   "
-      choice5:""
-      answer: 
+      question12: "What is the missing number if the following subtraction is 
+      in base two?
+      1 1 0 0 1 0 1 0
+      -
+      x x x x x x x x 
+      1 0 1 0 1 0 1 1"
+      choice1: "1011111 "
+      choice2: "111111 "
+      choice3: "101111 "
+      choice4: " 11111  "
+      choice5:"10111    "
+      answer: 4
     },
     {
       question13: "Express 144eight in base ten."
@@ -226,11 +231,12 @@ let questions = {
     },
     {
       question25: "  "
-      choice1: " "
-      choice2: ""
-      choice3: " "
-      choice4: ""
-      answer: 
+      choice1: "x < -1  "
+      choice2: "x≤ -1"
+      choice3: "x ≥ -1  "
+      choice4: "x < 4 "
+      choice5:"x ≥ 4. "
+      answer: 2
     },
     {
       question26: "Find the HCF of 4x<sup>2 y and 6xyz" 
@@ -261,12 +267,13 @@ let questions = {
       answer: 5
     },
     {
-      question29:
-      choice1: 
-      choice2: 
-      choice3:
-      choice4: 
-      answer: 
+      question29:"8xsup>2y  x <sup>3xy</sup>&frasl;<sub>6xy</sub> <sup>2"
+      choice1: "x<sup>2y"
+      choice2: "4x"
+      choice3:"4x<sup>2"
+      choice4: "4x<sup>2y"
+      choice5:"4xy<sup>2"
+      answer: 3
     },
     {
       question30: "(<sup>x-3</&frasl;<sub>2</sub>) -  (<sup>x-1</&frasl;<sub>3</sub>)"
@@ -278,13 +285,13 @@ let questions = {
       answer: 4
     }
     {
-      question31: "  "
-      choice1: " "
-      choice2: " "
-      choice3: "" 
-      choice4: ""
-      choice5:
-      answer: 
+      question31: "solve the equation <sup>x</sup>&frasl;<sub>3</sub>+ <sup>x</sup>&frasl;<sub>2</sub>sup>5</sup>&frasl;<sub>2</sub>= "
+      choice1: "-3 "
+      choice2: " sup>x</sup>&frasl;<sub>2</sub>"
+      choice3: "2" 
+      choice4: "3"
+      choice5:"15"
+      answer: 1
     }
     {
       question32:" Simplify (7x - 4) – (4x - 12)."
@@ -322,12 +329,12 @@ let questions = {
       answer: 3
       {
         question36: ""
-        choice1: ""
-        choice2: ""
-        choice3:""
-        choice4: ""
-        choice5:""
-        answer: 
+        choice1: "23cm"
+        choice2: "22cm"
+        choice3:"18cm"
+        choice4: "17cm"
+        choice5:"13cm"
+        answer: 2
       }
       {
         question37: "Find the circumference of a circle whose diameter is 28cm.(Take = <sup>22<?sup>&frasl;<sub>7</sub>)."
@@ -431,15 +438,17 @@ let questions = {
         choice2:""
         choice3: ""
         choice4:""
+        choice5:""
         answer: 
       },
       {
         question49: ""
-        choice1: " "
-        choice2: ""
-        choice3: ""
-        choice4: ""
-        answer: 
+        choice1: "4m "
+        choice2: "6m"
+        choice3: "8m"
+        choice4: "10m"
+        choice5:"12m"
+        answer: 5
       },
       {
         question50: " A ladder 8m long leans against a vertical wall, making an angle of 60o with the horizontal ground. What is the distance between the foot of the ladder and the wall"
