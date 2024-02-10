@@ -189,7 +189,7 @@ let questions = [
     answer: 
   }, 
   {
-    question 21: " If a certain number K is added to 6, the result is greater than 3. Find the range of the values of K",
+    question 21: "If a certain number K is added to 6, the result is greater than 3. Find the range of the values of K",
     choice1: "K > 3",
     choice2: "K > -3",
     choice3: "K < 3",
@@ -198,16 +198,16 @@ let questions = [
     answer: 
   },  
   {
-    question: " ",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 22: "One-fifth of applicants for a job have masters degree while others have first degree certificates. If there are 50 applicants altogether, how many have first degree certificates?",
+    choice1: "45",
+    choice2: "40",
+    choice3: "30",
+    choice4: "25",
+    choice5: "10",
     answer: 
   }, 
   {
-    question: " ",
+    question 23: "Simplify ",
     choice1: "",
     choice2: "",
     choice3: "",
@@ -216,50 +216,106 @@ let questions = [
     answer: 
   },
   {
-    question: " ",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
+    question 24: " Solve <sup>x-5</sup>&frasl;<sub>3</sub>looks like x-5/3 =<sup>x-1</sup>&frasl;<sub>4</sub>looks like x-1/4",
+    choice1: "17",
+    choice2: "14",
+    choice3: "10",
+    choice4: "-4",
+    choice5: "-10",
+    answer: 
+  }, 
+  {
+    question 25: " Simplify<sup>1</sup>&frasl;<sub>2b</sub>looks like 1/2b + <sup>2</sup>&frasl;<sub>b-5</sub>looks like 2/b-5",
+    choice1: "<sup>5</sup>&frasl;<sub>2b</sub>looks like 5/2b",
+    choice2: "<sup>5(b-1)</sup>&frasl;<sub>2b(b-5)</sub>looks like 5(b-1)/2b(b-5)", 
+    choice3: "<sup>b</sup>&frasl;<sub>2b</sub>looks like b/2b",
+    choice4: " ",
     choice5: "",
     answer: 
   }, 
   {
-    question: " ",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 26: "Which of the following inequalities represents the number line shown below? ",
+    choice1: "x ≤ 2",
+    choice2: "x < 2",
+    choice3: "x > 2",
+    choice4: "x ≥ 2",
+    choice5: "x ≤ -2",
     answer: 
   }, 
   {
-    question: " ",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
-    answer: 
-  }, 
-  {
-    question: " ",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 27: "<sup>y-3</sup>&frasl;<sub>3</sub>looks like y-3/3 - <sup>y</sup>&frasl;<sub>2</sub>looks like y/2 =0",
+    choice1: "-3",
+    choice2: "-4",
+    choice3: "-6",
+    choice4: "-8",
+    choice5: "-10",
     answer: 
   },  
   {
-    question: " ",
+    question 28: " Find the value of p from the table above",
+    choice1: "4.2",
+    choice2: "4.4",
+    choice3: "4.6",
+    choice4: "5.4",
+    choice5: "5.8",
+    answer: 
+  },  
+  {
+    question 29: "Determine the value of q",
+    choice1: "2",
+    choice2: "3",
+    choice3: "4",
+    choice4: "5",
+    choice5: "6",
+    answer: 
+  },
+  {
+    question 30: "Calculate the value of 2q - r",
+    choice1: "1.2",
+    choice2: "3.2",
+    choice3: "3.2",
+    choice4: "6.2",
+    choice5: "7.2",
+    answer: 
+  },
+  {
+    question 31: "What is the value of p + q + r?",
+    choice1: "5.6",
+    choice2: "8.6",
+    choice3: "9.6",
+    choice4: "13.6",
+    choice5: "14.6",
+    answer: 
+  },
+  {
+    question 32: "A pair of trousers costs N1,600.00 and a pair of shoes costs Nq. If the two cost N2,800.00 altogether, what is  the cost of the pair of shoes? ",
+    choice1: "N1,200.00",
+    choice2: "N1,300.00",
+    choice3: "N1,450.00",
+    choice4: "N1,600.00",
+    choice5: "N1,750.00",
+    answer: 
+  },
+  {
+    question : " ",
     choice1: "",
     choice2: "",
     choice3: "",
     choice4: "",
     choice5: "",
     answer: 
-  },                            
+  },
+  {
+    question : " ",
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    choice5: "",
+    answer: 
+  },
+    
+
 ];
 
 //CONSTANTS
