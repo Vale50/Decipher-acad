@@ -244,7 +244,7 @@ let questions = [
     answer: 1
   }, 
   {
-    question 27: "<sup>y-3</sup>&frasl;<sub>3</sub>looks like y-3/3 - <sup>y</sup>&frasl;<sub>2</sub>looks like y/2 =0",
+    question 27: "Solve the equation: <sup>y-3</sup>&frasl;<sub>3</sub>looks like y-3/3 - <sup>y</sup>&frasl;<sub>2</sub>looks like y/2 =0",
     choice1: "-3",
     choice2: "-4",
     choice3: "-6",
