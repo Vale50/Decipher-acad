@@ -83,31 +83,31 @@ let questions = [
     answer: 5
   },
   {
-    question 7: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 7: "Find the sum of all the factors of 17.",
+    choice1: "17",
+    choice2: "18",
+    choice3: "19",
+    choice4: "20",
+    choice5: "21"
+    answer: 2
   },
   {
-    question 8: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 8: "Find the product of LCM and HCF of 3 and 15",
+    choice1: "15",
+    choice2: "30",
+    choice3: "45",
+    choice4: "60",
+    choice5: "75"
+    answer: 3
   },
   {
-    question 9: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 9: "Find the result in decimal fraction if <sup>1</sup>&frasl;<sub>8</sub> looks like 1/8 is substracted from the product of <sup>2</sup>&frasl;<sub>5</sub> looks like 2/5 and <sup>5</sup>&frasl;<sub>8</sub> looks like 5/8.",
+    choice1: "0.125",
+    choice2: " 0.375",
+    choice3: "0.515",
+    choice4: "0.900",
+    choice5: "1.150"
+    answer: 1
   },
   {
     question 10: "",
