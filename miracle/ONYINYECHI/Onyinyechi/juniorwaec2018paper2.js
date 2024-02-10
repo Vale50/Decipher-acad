@@ -110,148 +110,148 @@ let questions = [
     answer: 1
   },
   {
-    question 10: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 10: "Find the positive difference of the prime factors of 40.",
+    choice1: "2",
+    choice2: "3",
+    choice3: "7",
+    choice4: "11",
+    choice5: "13"
+    answer: 2
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 11: "Find the H.C.F. of 18, 24 and 30.",
+    choice1: "6",
+    choice2: "5",
+    choice3: "4",
+    choice4: "3",
+    choice5: "2"
+    answer: 1
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 12: "Express 0.25 as a fraction",
+    choice1: "<sup>25</sup>&frasl;<sub>31</sub> looks like 25/31",
+    choice2: "<sup>5</sup>&frasl;<sub>11</sub> looks like 5/11",
+    choice3: "<sup>25</sup>&frasl;<sub>61</sub> looks like 25/61",
+    choice4: "<sup>2</sup>&frasl;<sub>5</sub> looks like 2/5",
+    choice5: "<sup>1</sup>&frasl;<sub>4</sub> looks like 1/4"
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 13: "In a basket containing 20 oranges, 12 are good. What fraction is bad?",
+    choice1: "<sup>8</sup>&frasl;<sub>11</sub> looks like 8/11",
+    choice2: "<sup>9</sup>&frasl;<sub>13</sub> looks like 9/13",
+    choice3: "<sup>13</sup>&frasl;<sub>20</sub> looks like 13/20",
+    choice4: "<sup>3</sup>&frasl;<sub>5</sub> looks like 3/5",
+    choice5: "<sup>2</sup>&frasl;<sub>5</sub> looks like 2/5"
+    answer: 4
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 14: "Convert 2<sup>2</sup>&frasl;<sub>5</sub> looks like 2/5 to decimal fraction and give your answer to 1 significant figure ",
+    choice1: "2",
+    choice2: "2.4",
+    choice3: "3",
+    choice4: "3.2",
+    choice5: "5"
+    answer: 1 
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 15: "12.5% of a number is 50, find the number.",
+    choice1: "1200",
+    choice2: "1000",
+    choice3: "800",
+    choice4: "600",
+    choice5: "400"
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 16: "If the first common multiple of two numbers is 4, find the fifth common multiple",
+    choice1: "4",
+    choice2: "8",
+    choice3: "12",
+    choice4: "16",
+    choice5: "20",
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 17: "Which of the following is NOT a prime number?",
+    choice1: "7",
+    choice2: "17",
+    choice3: "29",
+    choice4: "47",
+    choice5: "49",
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 18: "What is the missing number if the following subtraction is in base two?",
+    choice1: "1001",
+    choice2: "1001",
+    choice3: "1010",
+    choice4: "1100",
+    choice5: "1011",
+    answer: 1
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 19: "Multiply 11two by 10011two",
+    choice1: "100111two",
+    choice2: "110101two",
+    choice3: "001100two",
+    choice4: "1001010two",
+    choice5: "111001two",
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 20: "Find the compound interest on N800.00 at 4% for 2years",
+    choice1: "N3,200.00",
+    choice2: "N865.28",
+    choice3: "N864.00",
+    choice4: "N65.28",
+    choice5: "N64.00",
+    answer: 4
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 21: "A man budgets <sup>2</sup>&frasl;<sub>5</sub> looks like 2/5 of his pay on food <sup>2</sup>&frasl;<sub>7</sub> looks like 2/7on meant. What fraction of his pay is left? ",
+    choice1: "<sup>4</sup>&frasl;<sub>35</sub> looks like 4/35",
+    choice2: "<sup>11</sup>&frasl;<sub>35</sub> looks like 11/35",
+    choice3: "<sup>2</sup>&frasl;<sub>5</sub> looks like 2/5",
+    choice4: "<sup>24</sup>&frasl;<sub>35</sub> looks like 24/35",
+    choice5: "<sup>31</sup>&frasl;<sub>35</sub> looks like 31/35",
+    answer: 2
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 22: "Find the reciprocal of 0.125.",
+    choice1: "<sup>1</sup>&frasl;<sub>125</sub> looks like 1/125",
+    choice2: "<sup>1</sup>&frasl;<sub>8</sub> looks like 1/8",
+    choice3: "5",
+    choice4: "8",
+    choice5: "125",
+    answer: 4
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 23: "Find the sum of 1001two and 111101two",
+    choice1: "100001two",
+    choice2: "100011two",
+    choice3: "100110two",
+    choice4: "101101two",
+    choice5: "1000110two",
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 24: "What is the value of A ÷ B?",
+    choice1: "-<sup>1</sup>&frasl;<sub>2</sub> looks like 1/2",
+    choice2: "-<sup>1</sup>&frasl;<sub>4</sub> looks like 1/4",
+    choice3: "<sup>1</sup>&frasl;<sub>4</sub> looks like 1/4",
+    choice4: "<sup>1</sup>&frasl;<sub>2</sub> looks like 1/2",
+    choice5: "1",
+    answer: 1
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 25: "Find the value of 2(1 - A + B).",
+    choice1: "9",
+    choice2: "18",
+    choice3: "25",
+    choice4: "36",
+    choice5: "50"
+    answer: 5
   },
   {
     question 1: "",
