@@ -351,60 +351,116 @@ let questions = [
     answer: 
   },
   {
-    question 3: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 39: "What fraction of the whole school is JSS 1?",
+    choice1: "<sup>5</sup>&frasl;<sub>18</sub>looks like 5/18",
+    choice2: "<sup>11</sup>&frasl;<sub>36</sub>looks like 11/36",
+    choice3: "<sup>1</sup>&frasl;<sub>3</sub>looks like 1/3",
+    choice4: "<sup>5</sup>&frasl;<sub>12</sub>looks like 5/12",
+    choice5: "<sup>1</sup>&frasl;<sub>2</sub>looks like 1/2",
     answer: 
   },
   {
-    question 3: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 40: "If there are 180 students in the school, how many are in JSS 2?",
+    choice1: "125",
+    choice2: "75",
+    choice3: "55",
+    choice4: "50",
+    choice5: "45",
     answer: 
   },
   {
-    question 3: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 41: "The mean age of five pupils whose ages are 6, 9, x, 7, 8 is 8 years. Find the median age.",
+    choice1: "6 years",
+    choice2: "7 years",
+    choice3: "8 years",
+    choice4: "9 years",
+    choice5: "10 years",
     answer: 
   },
   {
-    question 3: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 42: "2.Four students have a mean weight of 26kg. When they are joined by a fifth student, their mean weight decreased to 24kg. What is the weight of the fifth students",
+    choice1: "26kg",
+    choice2: "24kg",
+    choice3: "20kg",
+    choice4: "18kg",
+    choice5: "16kg",
     answer: 
   },
   {
-    question 3: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
+    question 43: "Jones rolls a fair die once. What is the probability of obtaining an odd number?",
+    choice1: "<sup>1</sup>&frasl;<sub>5</sub>looks like 1/5",
+    choice2: "<sup>1</sup>&frasl;<sub>4</sub>looks like 1/4",
+    choice3: "<sup>1</sup>&frasl;<sub>2</sub>looks like 1/2",
+    choice4: "<sup>3</sup>&frasl;<sub>5</sub>looks like 3/5",
+    choice5: "<sup>2</sup>&frasl;<sub>3</sub>looks like 2/3",
     answer: 
   },
   {
-    question 3: "",
+    question 44: "A fair coin is tossed once, what is the probability of having a tail?",
+    choice1: "<sup>1</sup>&frasl;<sub>6</sub>looks like 1/6",
+    choice2: "<sup>1</sup>&frasl;<sub>3</sub>looks like 1/3",
+    choice3: "<sup>1</sup>&frasl;<sub>2</sub>looks like 1/2",
+    choice4: "<sup>2</sup>&frasl;<sub>3</sub>looks like 2/3",
+    choice5: "<sup>5</sup>&frasl;<sub>6</sub>looks like 5/6",
+    answer: 
+  }, 
+  {
+    question 45: "The scores of selected students in a mock examination are given as 43, 13, 57, 49, 63, 84 and 75. What is the range of the marks?",
+    choice1: "13",
+    choice2: "32",
+    choice3: "71",
+    choice4: "84",
+    choice5: "118",
+    answer: 
+  }, 
+  {
+    question 46: "The following is the distribution of the number of eggs laid by 20 hens in one week in a certain poultry farm. Find the range of the distribution",
+    choice1: "10",
+    choice2: "8",
+    choice3: "7",
+    choice4: "4",
+    choice5: "1",
+    answer: 
+  }, 
+  {
+    question 47: "The pie chart below shows the distribution of Mr. Tanko's income in a month.If his monthly salary is N100,000.00, what amount does he spend on education?",
+    choice1: "N 4,444.00",
+    choice2: "N15,000.00",
+    choice3: "N15,556.00",
+    choice4: "N25,000.00",
+    choice5: "N30,000.00",
+    answer: 
+  },
+  {
+    question 48: "Find the median of the following numbers: 16, 8, 12, 10, 13, 14, 8, 6, 4, 16 and 16.",
     choice1: "",
     choice2: "",
     choice3: "",
     choice4: "",
     choice5: "",
     answer: 
-  },
+  }, 
+  {
+    question 49: "What is the percentage of the rainfall in February in that village?",
+    choice1: "15.56%",
+    choice2: "18.52%",
+    choice3: "24.07%",
+    choice4: "28.89%",
+    choice5: "42.00%",
+    answer: 
+  }, 
+  {
+    question 50: "Find the probability of obtaining an even number when a fair die is thrown once.",
+    choice1: "<sup>3</sup>&frasl;<sub>4</sub>looks like 3/4",
+    choice2: "<sup>2</sup>&frasl;<sub>3</sub>looks like 2/3",
+    choice3: "<sup>1</sup>&frasl;<sub>2</sub>looks like 1/2",
+    choice4: "<sup>1</sup>&frasl;<sub>4</sub>looks like 1/4",
+    choice5: "<sup>1</sup>&frasl;<sub>5</sub>looks like 1/5",
+    answer: 
+  }, 
+  
 ];
+
 
 //CONSTANTS
 const CORRECT_BONUS = 2;
