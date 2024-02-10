@@ -297,7 +297,61 @@ let questions = [
     answer: 
   },
   {
-    question : " ",
+    question 33: "Find the sum of the mode and median of the following set of numbers: 2, 3, 2, 1, 3, 3 ",
+    choice1: "2.5",
+    choice2: "3.0",
+    choice3: "4.5",
+    choice4: "5.5",
+    choice5: "6.0",
+    answer: 
+  },
+  {
+    question 34: "Find the mean of 4, 2, 1, 5, 3, 5, 1.",
+    choice1: "3.0",
+    choice2: "4.1",
+    choice3: "4.3",
+    choice4: "5.2",
+    choice5: "6.1",
+    answer: 
+  },
+  {
+    question 35: "Which of these has the same meaning as arithmetic average?",
+    choice1: "Mean",
+    choice2: "Median",
+    choice3: "Mode",
+    choice4: "Range",
+    choice5: "Standard deviation",
+    answer: 
+  },
+  {
+    question 36: "What is the total goals scored in Hockey?",
+    choice1: "9",
+    choice2: "10",
+    choice3: "11",
+    choice4: "27",
+    choice5: "32",
+    answer: 
+  },
+  {
+    question 37: "Which team scored the highest number of goals in the competition?",
+    choice1: "A",
+    choice2: "B",
+    choice3: "C",
+    choice4: "F",
+    choice5: "G",
+    answer: 
+  },
+  {
+    question 38: "What is the mode of the following set of numbers? 10, 10, 7, 13, 13, 15, 12, 11, 11, 10, 9, 13, 8, 7, 8, 9, 10",
+    choice1: "4",
+    choice2: "9",
+    choice3: "10",
+    choice4: "11",
+    choice5: "13",
+    answer: 
+  },
+  {
+    question 3: "",
     choice1: "",
     choice2: "",
     choice3: "",
@@ -306,7 +360,7 @@ let questions = [
     answer: 
   },
   {
-    question : " ",
+    question 3: "",
     choice1: "",
     choice2: "",
     choice3: "",
@@ -314,8 +368,42 @@ let questions = [
     choice5: "",
     answer: 
   },
-    
-
+  {
+    question 3: "",
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    choice5: "",
+    answer: 
+  },
+  {
+    question 3: "",
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    choice5: "",
+    answer: 
+  },
+  {
+    question 3: "",
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    choice5: "",
+    answer: 
+  },
+  {
+    question 3: "",
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    choice5: "",
+    answer: 
+  },
 ];
 
 //CONSTANTS
