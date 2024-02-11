@@ -371,22 +371,22 @@ let questions = [
     answer: 2
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 39: "In a rectangular shape the breadth can be expressed as",
+    choice1: "<sup>perimeter</sup>&frasl;<sub>2</sub> looks like perimeter/2 - Length",
+    choice2: "<sup>length</sup>&frasl;<sub>2</sub> looks like length/2 - Perimeter",
+    choice3: "<sup>length</sup>&frasl;<sub>2</sub> looks like length/2 - + Perimeter",
+    choice4: "<sup>perimeter</sup>&frasl;<sub>2</sub> looks like perimeter/2 + Length",
+    choice5: "Perimeter - Length",
+    answer: 1
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 40: "Find the value of a in the diagram below.",
+    choice1: "42",
+    choice2: "43",
+    choice3: "84",
+    choice4: "95",
+    choice5: "105"
+    answer: 3
   },
   {
     question 1: "",
