@@ -250,125 +250,125 @@ let questions = [
     choice2: "18",
     choice3: "25",
     choice4: "36",
-    choice5: "50"
+    choice5: "50",
     answer: 5
   },
   {
-    question 1: "",
+    question 26: "",
+    choice1: "-11",
+    choice2: "-9",
+    choice3: "6",
+    choice4: "9",
+    choice5: "11",
+    answer: 5
+  },
+  {
+    question 27: " A mobile phone costs N12,000.00. At what price will Ade sell it to make a loss of 20%?",
+    choice1: "N14,400.00",
+    choice2: "N12,000.00",
+    choice3: "N9,600.00",
+    choice4: "N7,600.00",
+    choice5: "N5,600.00",
+    answer: 3
+  },
+  {
+    question 28: "An item is sold at Nx. If the cost of the item is Ny, which of the following expressions represents the percentage profit?",
+    choice1: "<sup>y-x</sup>&frasl;<sub>y</sub> looks like y-x/y x 100%",
+    choice2: "<sup>y-x</sup>&frasl;<sub>x</sub> looks like y-x/x x 100%",
+    choice3: "<sup>x-y</sup>&frasl;<sub>y</sub> looks like x-y/y x 100%",
+    choice4: "<sup>x+y</sup>&frasl;<sub>y</sub> looks like x+y/y x 100%",
+    choice5: "<sup>x-y</sup>&frasl;<sub>x</sub> looks like x-y/x x 100%",
+    answer: 3
+  },
+  {
+    question 29: "A sachet of pure water costs N1.00, if 20 sachets bought at once would be given for N150.00, how much is saved on hundred sachets bought?",
+    choice1: "N150.00",
+    choice2: "N180.00",
+    choice3: "N200.00",
+    choice4: "N250.00",
+    choice5: "280.00",
+    answer: 4
+  },
+  {
+    question 30: "In an examination, a candidate obtained a score of 70%. If the obtainable score for the examination is 80, what was the candidate’s score? ",
+    choice1: "56",
+    choice2: "70",
+    choice3: "75",
+    choice4: "80",
+    choice5: "100",
+    answer: 1
+  },
+  {
+    question 31: "How many quadrilaterals are in the diagram below?",
+    choice1: "5",
+    choice2: "4",
+    choice3: "3",
+    choice4: "2",
+    choice5: "1",
+    answer: 3
+  },
+  {
+    question 32: "How many vertices has a cuboid?",
+    choice1: "4",
+    choice2: "6",
+    choice3: "8",
+    choice4: "12",
+    choice5: "16",
+    answer: 3 
+  },
+  {
+    question 33: "Which of the following properties is NOT of a kite?",
+    choice1: "One pair of opposite angles are equal.",
+    choice2: "The diagonals meet at right angles",
+    choice3: "There is one line of symmetry",
+    choice4: "There are two lines of symmetry",
+    choice5: "Two pairs of adjacent sides are equal "
+    answer: 4
+  },
+  {
+    question 34: "Find the perimeter of a circle whose diameter is 11.2cm.",
+    choice1: "11.2cm",
+    choice2: "17.6cm",
+    choice3: "23.4cm",
+    choice4: "35.2cm",
+    choice5: "70.4cm",
+    answer: 4
+  },
+  {
+    question 35: "",
     choice1: "",
     choice2: "",
     choice3: "",
     choice4: "",
-    choice5: ""
+    choice5: "",
     answer: 
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 36: "Calculate /AC/ in the figure below",
+    choice1: "2cm",
+    choice2: "3cm",
+    choice3: "4cm",
+    choice4: "5cm",
+    choice5: "6cm",
+    answer: 1
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 37: "Calculate the area of a rhombus, whose diagonals are 8cm and 16cm long.",
+    choice1: "8cm<sup>2</sup>",
+    choice2: "16cm<sup>2</sup>",
+    choice3: "24cm<sup>2</sup>",
+    choice4: "32cm<sup>2</sup>",
+    choice5: "64cm<sup>2</sup>",
+    answer: 5
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 38: "Two similar cylinders have radii 3cm and 4cm. If the first cylinder has a volume of 270cm<sup>3</sup>, find the volume of the second cylinder",
+    choice1: "640cm<sup>3</sup>",
+    choice2: "480cm<sup>3</sup>",
+    choice3: "270cm<sup>3</sup>",
+    choice4: "200cm<sup>3</sup>",
+    choice5: "153cm<sup>3</sup>",
+    answer: 2
   },
   {
     question 1: "",
