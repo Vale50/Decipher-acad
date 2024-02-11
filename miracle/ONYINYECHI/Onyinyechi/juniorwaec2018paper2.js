@@ -10,24 +10,7 @@ let questionCounter = 0;
 let availableQuesions = [];
 
 let questions = [
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
+ 
   {
     question 1: "Find the value of -20- (-100)",
     choice1: "120",
@@ -38,13 +21,13 @@ let questions = [
     answer: 3
   },
   {
-    question 2: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 2: "Arrange the following in descending order of magnitude:<sup>3</sup>&frasl;<sub>4</sub> looks like 3/4, sup>4</sup>&frasl;<sub>5</sub> looks like 4/5, sup>2</sup>&frasl;<sub>5</sub> looks like 2/5, sup>1</sup>&frasl;<sub>2</sub> looks like 1/2",
+    choice1: "<sup>1</sup>&frasl;<sub>2</sub> looks like 1/2, <sup>2</sup>&frasl;<sub>5</sub> looks like 2/5, <sup>3</sup>&frasl;<sub>4</sub> looks like 3/4, <sup>4</sup>&frasl;<sub>5</sub> looks like 4/5",  
+    choice2: "<sup>4</sup>&frasl;<sub>5</sub> looks like 4/5, <sup>3</sup>&frasl;<sub>4</sub> looks like 3/4, <sup>1</sup>&frasl;<sub>2</sub> looks like 1/2, <sup>2</sup>&frasl;<sub>5</sub> looks like 2/5",
+    choice3: "<sup>4</sup>&frasl;<sub>5</sub> looks like 4/5, <sup>2</sup>&frasl;<sub>5</sub> looks like 2/5, <sup>3</sup>&frasl;<sub>4</sub> looks like 3/4, <sup>1</sup>&frasl;<sub>2</sub> looks like 1/2", 
+    choice4: "<sup>2</sup>&frasl;<sub>5</sub> looks like 2/5, <sup>1</sup>&frasl;<sub>2</sub> looks like 1/2, <sup>3</sup>&frasl;<sub>4</sub> looks like 3/4, <sup>4</sup>&frasl;<sub>5</sub> looks like 4/5",
+    choice5: "<sup>4</sup>&frasl;<sub>5</sub> looks like 4/5, <sup>3</sup>&frasl;<sub>4</sub> looks like 3/4, <sup>2</sup>&frasl;<sub>5</sub> looks like 2/5, <sup>1</sup>&frasl;<sub>2</sub> looks like 1/2",
+    answer: 2
   },
   {
     question 3: "Express one million, one hundred and fifty thousand and three in figure.",
@@ -75,11 +58,11 @@ let questions = [
   },
   {
     question 6: "Convert 46ten to base three.",
-    choice1: "102three",
-    choice2: "201three",
-    choice3: "1012three",
-    choice4: "1021three",
-    choice5: "1201three"
+    choice1: "102<sub>three</sub>",
+    choice2: "201<sub>three</sub>",
+    choice3: "1012<sub>three</sub>",
+    choice4: "1021<sub>three</sub>",
+    choice5: "1201<sub>three</sub>"
     answer: 5
   },
   {
