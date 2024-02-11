@@ -39,13 +39,13 @@ let questions = [
     answer: 3
   },
   {
-    question 4: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
+    question 4: "simplify (1<sup>3</sup>&frasl;<sub>4</sub> looks like 3/4 - <sup>2</sup>&frasl;<sub>3</sub> looks like 2/3) x 2<sup>2</sup>&frasl;<sub>5</sub> looks like 2/5",
+    choice1: "1<sup>1</sup>&frasl;<sub>12</sub> looks like 1/12",
+    choice2: "1<sup>3</sup>&frasl;<sub>10</sub> looks like 3/10",
+    choice3: "2<sup>3</sup>&frasl;<sub>5</sub> looks like 3/5",
+    choice4: "5<sup>4</sup>&frasl;<sub>5</sub> looks like 4/5",
+    choice5: "12"
+    answer: 3
   },
   {
     question 5: "Subtract 10101two from 111000two",
@@ -318,13 +318,13 @@ let questions = [
     answer: 4
   },
   {
-    question 35: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
-    answer: 
+    question 35: "Find the volume of a cone of base radius 3<sup>1</sup>&frasl;<sub>2</sub> looks like 1/2 and height 42cm (π = 22/7).",
+    choice1: "77cm<sup>3</sup>",
+    choice2: "147cm<sup>3</sup>",
+    choice3: "154cm<sup>3</sup>",
+    choice4: "539cm<sup>3</sup>",
+    choice5: "1617cm<sup>3</sup>",
+    answer: 4
   },
   {
     question 36: "Calculate /AC/ in the figure below",
