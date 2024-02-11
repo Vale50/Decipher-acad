@@ -385,7 +385,88 @@ let questions = [
     choice2: "43",
     choice3: "84",
     choice4: "95",
-    choice5: "105"
+    choice5: "105",
+    answer: 3
+  },
+  {
+    question 41: "Find the value of x in the diagram below",
+    choice1: "180",
+    choice2: "156",
+    choice3: "102",
+    choice4: "78",
+    choice5: "39",
+    answer: 5
+  },
+  {
+    question 42: "Find the value of x in the diagram below.",
+    choice1: "50",
+    choice2: "40",
+    choice3: "30",
+    choice4: "20",
+    choice5: "10",
+    answer: 4
+  },
+  {
+    question 43: "Find the length of line BC to the nearest metres",
+    choice1: "40m",
+    choice2: "23m",
+    choice3: "17m",
+    choice4: "12m",
+    choice5: "10m",
+    answer: 1
+  },
+  {
+    question 44: "In the figure below, PQ//RS and PS and QR intersect at T. If PT = 4cm, QT = 3cm and TR = 9cm, calculate the length of ST",
+    choice1: "8cm",
+    choice2: "9cm",
+    choice3: "12cm",
+    choice4: "15cm",
+    choice5: "16cm",
+    answer: 3
+  },
+  {
+    question 45: "In the figure below, calculate the length of DE.",
+    choice1: "7½ cm",
+    choice2: "4<sup>4</sup>&frasl;<sub>5</sub> looks like 4/5",
+    choice3: "4cm",
+    choice4: "3<sup>1</sup>&frasl;<sub>3</sub> looks like 1/3",
+    choice5: "12cm",
+    answer: 4 
+  },
+  {
+    question 46: "A cylindrical container of height 70cm has a base diameter of 24cm. Find its volume. (π = 22/7).",
+    choice1: "2.640cm<sup>3</sup>",
+    choice2: "10,560cm<sup>3</sup>",
+    choice3: "31,680cm<sup>3</sup>",
+    choice4: "31,860cm<sup>3</sup>",
+    choice5: "126,720cm<sup>3</sup>",
+    answer: 3
+  },
+  {
+    question 47: "Two similar cones are of heights 2cm and 6cm. If the radius of the shorter cone is 3cm, what is the radius of the longer one?",
+    choice1: "4cm",
+    choice2: "6cm",
+    choice3: "8cm",
+    choice4: "9cm",
+    choice5: "16cm",
+    answer: 4
+  },
+  {
+    question 48: "Find the radius of a circle if the circumference is 22cm. Take (π = 22/7).",
+    choice1: "2.6cm",
+    choice2: "3<sup>1</sup>&frasl;<sub>2</sub> looks like 1/2",
+    choice3: "7cm",
+    choice4: "5cm",
+    choice5: "7.5cm",
+    answer: 2
+  },
+  {
+    question 49: "If angle A is equal to angle C in the figure below, find /DE/",
+    choice1: "4.2cm",
+    choice2: "5.3cm",
+    choice3: "6.7cm",
+    choice4: "7.0cm",
+    choice5: "7.5cm",
     answer: 3
   },
   {
@@ -394,61 +475,7 @@ let questions = [
     choice2: "",
     choice3: "",
     choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
-    answer: 
-  },
-  {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: ""
+    choice5: "",
     answer: 
   },
 ];
