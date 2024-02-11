@@ -470,13 +470,13 @@ let questions = [
     answer: 3
   },
   {
-    question 1: "",
-    choice1: "",
-    choice2: "",
-    choice3: "",
-    choice4: "",
-    choice5: "",
-    answer: 
+    question 50: "In the figure below, find the area of the base of the cone to 1 decimal place",
+    choice1: "0.5cm<sup>2</sup>",
+    choice2: "10.0cm<sup>2</sup>",
+    choice3: "22.0cm<sup>2</sup>",
+    choice4: "28.3cm<sup>2</sup>",
+    choice5: "154.0cm<sup>2</sup>",
+    answer: 3
   },
 ];
 
