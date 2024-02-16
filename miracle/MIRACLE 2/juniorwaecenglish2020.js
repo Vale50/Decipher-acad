@@ -124,34 +124,33 @@ body {
 
 
 #progressBar {
-    width: 100%;
-    height: 20px;
-    margin-top: 10px;
+width: 100%;
+height: 20px;
+margin-top: 10px;
 }
        
-        .correct { background-color: green; }
-        .incorrect { background-color: red; }
-        .hidden { display: none; }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+.hidden { display: none; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="quiz">
-        <div class="question">
-        INSTRUCTION: Choose the word that is nearly opposite in meaning to the underlined
+<div id="quiz">
+<div class="question">
+INSTRUCTION: Choose the word that is nearly opposite in meaning to the underlined
 word in each of the following sentences.
-            <p>1: He passed through the narrow wav.</p>
-            <div class="options">
-                <div class="option" data-correct="false">A. Plain</div>
-                <div class="option" data-correct="false">B. extraordinary</div>
-                <div class="option" data-correct="true">C. broad</div>
-                <div class="option" data-correct="false">D. endless</div>
-            </div>
-            <button class="check-answer hidden">Check Answer</button>
-            <div class="answer hidden"> </div>The opposite of narrow is broad.The correct answer is C. broad</div>
-        </div>
-    <div id="quiz">
-        <div class="question">
+<p>1: He passed through the narrow wav.</p>
+<div class="options">
+<div class="option" data-correct="false">A. Plain</div>
+<div class="option" data-correct="false">B. extraordinary</div>
+<div class="option" data-correct="true">C. broad</div>
+<div class="option" data-correct="false">D. endless</div></div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden"> </div>The opposite of narrow is broad.The correct answer is C. broad</div>
+</div>
+<div id="quiz">
+<div class="question">
             <p>2: The boxer speedily punched the heavy bag.</p>
             <div class="options">
                 <div class="option" data-correct="false">A. small</div>
@@ -238,134 +237,137 @@ underlined word in each of the following sentences.
  
          <div id="quiz">
             <div class="question">
-                <p>8: What is the capital of France?</p>
+                <p>8: I wasn't brave enough to tell her what I thought of her.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. bright</div>
+                    <div class="option" data-correct="true">B. courageous</div>
+                    <div class="option" data-correct="false">C. strong</div>
+                    <div class="option" data-correct="false">D. weak</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">courageous has same meaning with brave. The correct answer is B. courageous</div>
             </div>
        
          </div>
         <div id="quiz">
             <div class="question">
-                <p>9: What is the capital of France?</p>
+                <p>9: Chemical weapons are banned internationally</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. allowed</div>
+                    <div class="option" data-correct="false">B. destroyed</div>
+                    <div class="option" data-correct="true">C. prohibited</div>
+                    <div class="option" data-correct="false">D. used</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">prohibited has the same meaning with banned. The correct answer is C. prohibited</div>
             </div>
        
         </div>
         <div id="quiz">
             <div class="question">
-                <p>10: What is the capital of France?</p>
+                <p>10: That accident was fatal but my brother came out unscratched.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. alive</div>
+                    <div class="option" data-correct="false">B. scattered</div>
+                    <div class="option" data-correct="false">C. unconscious</div>
+                    <div class="option" data-correct="true">D. unhurt</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">unhurt means unscratched. The correct answer is D. unhurt</div>
             </div>
         </div>
           <div id="quiz">
             <div class="question">
-                <p>11: What is the capital of France?</p>
+            INSTRUCTION: Choose the correct word or phrase that best completes each of the blank
+spaces.       
+                <p>11: Starch is got____cassava.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="true">A. from</div>
+                    <div class="option" data-correct="false">B. in</div>
+                    <div class="option" data-correct="false">C. of</div>
+                    <div class="option" data-correct="false">D. with</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">when using te verb got, the right preposition is from. The correct answer is A. from</div>
             </div>
           </div>
           <div id="quiz">
             <div class="question">
-                <p>12: What is the capital of France?</p>
+                <p>12: The boy_______pencil 1 broke has reported to the teachers.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. which</div>
+                    <div class="option" data-correct="false">B. who</div>
+                    <div class="option" data-correct="false">C. who's</div>
+                    <div class="option" data-correct="true">D. whose</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">we use whose for human. The correct answer is D. whose</div>
             </div>
           </div>
           <div id="quiz">
             <div class="question">
-                <p>13: What is the capital of France?</p>
+                <p>13: The thief made________with the cash box.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="true">A.away</div>
+                    <div class="option" data-correct="false">B. in</div>
+                    <div class="option" data-correct="false">C. on </div>
+                    <div class="option" data-correct="false">D. out </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">away is the right preposition. The correct answer is A.away</div>
             </div>
           </div>
           <div id="quiz">
             <div class="question">
-                <p>14: What is the capital of France?</p>
+                <p>14: Obi and Chioma went hunting today.________</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. Isn't it?</div>
+                    <div class="option" data-correct="true">B. Didn't they?</div>
+                    <div class="option" data-correct="false">C.Hadn't they?</div>
+                    <div class="option" data-correct="false">D. Haven't they?</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">it is the right  question tag. The correct answer is B. Didn't they?</div>
             </div>
           </div>
           <div id="quiz">
             <div class="question">
-                <p>15: What is the capital of France?</p>
+                <p>15: The doctors' strike was____yesterday</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="true">A. called in</div>
+                    <div class="option" data-correct="false">B. called off</div>
+                    <div class="option" data-correct="false">C. called of</div>
+                    <div class="option" data-correct="false">D. called out </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">because the trike just started. The correct answer is A. called in</div>
             </div>
           </div>
         <div id="quiz">
             <div class="question">
-                <p>16: What is the capital of France?</p>
+            INSTRUCTION: Choose the ward that Is correctly spelt to fill each of the gaps below.       
+                <p>16: The_________visited our school on Monday.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. commissiona</div>
+                    <div class="option" data-correct="true">B. commissioner</div>
+                    <div class="option" data-correct="false">C. commisioner</div>
+                    <div class="option" data-correct="false">D. commistioner</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">The correct answer is B. commissioner</div>
             </div>
         </div>
         <div id="quiz">
             <div class="question">
-                <p>17: What is the capital of France?</p>
+                <p>17: Cutting firewood is a_____work.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Berlin</div>
-                    <div class="option" data-correct="true">B. Paris</div>
-                    <div class="option" data-correct="false">C. Rome</div>
-                    <div class="option" data-correct="false">D. Madrid</div>
+                    <div class="option" data-correct="false">A. strenuos</div>
+                    <div class="option" data-correct="true">B. strenuous</div>
+                    <div class="option" data-correct="false">C. strenuus</div>
+                    <div class="option" data-correct="false">D. strenous</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is B. Paris</div>
+                <div class="answer hidden">The correct answer is B. strenuous</div>
             </div>
         </div>
          <div id="quiz">
@@ -381,14 +383,131 @@ underlined word in each of the following sentences.
                 <div class="answer hidden">The correct answer is C. Tokyo</div>
             </div>
          </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div> <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+
     </div>
-    <div id="score">Score: 0</div>
-    <div id="progress">Progress: 0/20</div>
+    <div id="score">Score: 2</div>
+    <div id="progress">Progress: 100/100</div>
 
 
     <script>
-        var score = 0;
-        var progress = 0;
+        var score = 2;
+        var progress = 50;
 
 
         $(".option").click(function() {
