@@ -856,9 +856,8 @@ a/an _____ </p>
 
 
     <script>
-        var score = 2;
-        var progress = 50;
-
+        var score = 0;
+        var progress = 0;
 
         $(".option").click(function() {
             if ($(this).hasClass("selected")) {
@@ -876,7 +875,6 @@ a/an _____ </p>
             progress++;
             $("#progress").text("Progress: " + progress + "/50");
         });
-
 
         $(".check-answer").click(function() {
             $(this).siblings(".answer").removeClass("hidden");
