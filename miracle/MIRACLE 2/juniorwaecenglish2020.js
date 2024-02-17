@@ -372,67 +372,56 @@ spaces.
         </div>
          <div id="quiz">
             <div class="question">
-                <p>18: What is the capital of Japan?</p>
+                <p>18: There is an ongoing________on my car.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Beijing</div>
-                    <div class="option" data-correct="false">B. Seoul</div>
-                    <div class="option" data-correct="true">C. Tokyo</div>
-                    <div class="option" data-correct="false">D. Bangkok</div>
+                    <div class="option" data-correct="true">A. maintenance</div>
+                    <div class="option" data-correct="false">B. maintai nance</div>
+                    <div class="option" data-correct="false">C. maintenanse</div>
+                    <div class="option" data-correct="false">D. maintenance</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is C. Tokyo</div>
+                <div class="answer hidden">The correct answer is A. maintenance</div>
             </div>
          </div>
          <div id="quiz">
             <div class="question">
-                <p>18: What is the capital of Japan?</p>
+                <p>19: He wrote an_________letter to the principal.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Beijing</div>
-                    <div class="option" data-correct="false">B. Seoul</div>
-                    <div class="option" data-correct="true">C. Tokyo</div>
-                    <div class="option" data-correct="false">D. Bangkok</div>
+                    <div class="option" data-correct="false">A. anonimous</div>
+                    <div class="option" data-correct="true">B. anonymous</div>
+                    <div class="option" data-correct="false">C. annonymous</div>
+                    <div class="option" data-correct="false">D. anonymus</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is C. Tokyo</div>
+                <div class="answer hidden">The correct answer is B. anonymous</div>
             </div>
          </div>
          <div id="quiz">
             <div class="question">
-                <p>18: What is the capital of Japan?</p>
+                <p>20: I have received the_____card.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Beijing</div>
-                    <div class="option" data-correct="false">B. Seoul</div>
-                    <div class="option" data-correct="true">C. Tokyo</div>
-                    <div class="option" data-correct="false">D. Bangkok</div>
+                    <div class="option" data-correct="true">A. acknowledgement</div>
+                    <div class="option" data-correct="false">B. aknowledgement</div>
+                    <div class="option" data-correct="false">C. acknowledgmen</div>
+                    <div class="option" data-correct="false">D. acnoleggement</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is C. Tokyo</div>
+                <div class="answer hidden">The correct answer is A. acknowledgement</div>
             </div>
          </div>
          <div id="quiz">
             <div class="question">
-                <p>18: What is the capital of Japan?</p>
+            INSTRUCTION: Choose the word that represents the correct part of speech of each of
+the underlined words.             
+                <p>21: I was humbled by his wisdom.</p>
                 <div class="options">
-                    <div class="option" data-correct="false">A. Beijing</div>
-                    <div class="option" data-correct="false">B. Seoul</div>
-                    <div class="option" data-correct="true">C. Tokyo</div>
-                    <div class="option" data-correct="false">D. Bangkok</div>
+                    <div class="option" data-correct="false">A. Adverb</div>
+                    <div class="option" data-correct="false">B. Pronoun</div>
+                    <div class="option" data-correct="true">C. Noun</div>
+                    <div class="option" data-correct="false">D. Verb</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is C. Tokyo</div>
-            </div>
-         </div>
-         <div id="quiz">
-            <div class="question">
-                <p>18: What is the capital of Japan?</p>
-                <div class="options">
-                    <div class="option" data-correct="false">A. Beijing</div>
-                    <div class="option" data-correct="false">B. Seoul</div>
-                    <div class="option" data-correct="true">C. Tokyo</div>
-                    <div class="option" data-correct="false">D. Bangkok</div>
-                </div>
-                <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is C. Tokyo</div>
+                <div class="answer hidden">it is an abstact noun. The correct answer is C. Noun</div>
             </div>
          </div>
          <div id="quiz">
