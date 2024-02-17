@@ -14,8 +14,7 @@ let availableQuesions = [];
 
 let questions = [
   {
-    question: "Who was the first President of the United States?
-    ",
+    question: "Who was the first President of the United States?",
     choice1: "<Thomas Jefferson>",
     choice2: "< George Washington>",
     choice3: "<John Adams>",
@@ -32,8 +31,7 @@ let questions = [
     answer: 3
   },
   {
-    question: " Which document outlined the principles of self-government and individual liberties in the American colonies?
-    ",
+    question: " Which document outlined the principles of self-government and individual liberties in the American colonies?",
     choice1: " Magna Carta",
     choice2: "Declaration of Independence",
     choice3: "Mayflower Compact",
@@ -304,8 +302,7 @@ let questions = [
     answer: 3
   },
   {
-    question: "The 1968 Democratic National Convention in Chicago became known for:
-    ",
+    question: "The 1968 Democratic National Convention in Chicago became known for:",
     choice1:"The nomination of Richard Nixon",
     choice2: "Peaceful protests and unity",
     choice3: "Violent clashes between protesters and police",
@@ -750,6 +747,7 @@ let questions = [
     choice3: "Harriet Tubman",
     choice4: "William Lloyd Garrison",
     answer: 4
+  },
     {
       question: "The 1970 Kent State shootings, where National Guard troops killed four students during an anti-Vietnam War protest, occurred in which state?",
       choice1:"Ohio",
@@ -814,8 +812,7 @@ let questions = [
       choice4: "Bill of Rights",
       answer: 3
     },
-
-
+  ];
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 100;
 
