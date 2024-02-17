@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: #3498db;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #f9f9f9;
+  
+}
+#progress{
+    color: #f9f9f9;
+float: right;
+}
+
+
+#progressBar {
+width: 100%;
+height: 20px;
+margin-top: 10px;
+color: #f9f9f9;
+
+}
+       
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+.hidden {display: none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="quiz">
+<div class="question">
+    INSTRUCTIONS TO CANDIDATES
+
+    PLEASE DO NOT OPEN THIS BOOKLET UNTIL YOU ARE TOLD TO DO SO. WHILE WAITING, READ THE FOLLOWING INSTRUCTIONS CAREFULLY.
+    
+    
+    1.	Write your Centre and Examination Numbers, Name, the Name of your School and the 	Subject in the spaces provided on the Answer Sheet.
+    
+    
+    2.	Read each question carefully before answering it.
+    
+    
+    3.	DO NOT waste time on any question; if you find one difficult, go on to others and finish 	them before 	you come back to the difficult one(s).
+    
+    
+    4.	Please, work completely on your own. Remember, Examination Malpractice is a serious 	criminal offence, do not be involved.
+    
+
+<div id="quiz">
+    <div class="question">
+<p>1: ______ machine is used for chiseling and scrapping of wood.</p>
+<div class="options">
+<div class="option" data-correct="false">A. Circular saw </div>
+<div class="option" data-correct="true">B. Surface planner</div>
+<div class="option" data-correct="false">C. Thicknesses</div>
+<div class="option" data-correct="false">D. Wood lathe</div></div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden"> </div> The correct answer is B. Surface planner</div>
+</div>
+<div id="quiz">
+<div class="question">
+            <p>2: Which of these gear is used to transmit motion between two parallel shafts.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Bevel gear</div>
+                <div class="option" data-correct="false">B. Helical gear</div>
+                <div class="option" data-correct="true">C. Spur gear</div>
+                <div class="option" data-correct="false">D. Worn gear</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The correct answer is C. Spur gear</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+            <p>3: The type of drawing where only pencil and eraser are used is called</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Pencil</div>
+                <div class="option" data-correct="true">B. Freehand</div>
+                <div class="option" data-correct="false">C. Creative</div>
+                <div class="option" data-correct="false">D. Parallel</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. Freehand</div>
+        </div>
+
+
+      </div>
+   
+       <div id="quiz">
+        <div class="question">
+            <p>4: The two standard types of set square are</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. 45° and 90° </div>
+                <div class="option" data-correct="false">B. 30° and 60°</div>
+                <div class="option" data-correct="false">C. 45° and 60°</div>
+                <div class="option" data-correct="false">D. 30° and 90°</div>
+            </div>severe
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The correct answer is B. 30° and 60°</div>
+        </div>
+   
+
+
+       </div>
+      <div id="quiz">
+        <div class="question">
+            <p>5: The Centre of bar is located using _______	</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.  Oddleg Calipers</div>
+                <div class="option" data-correct="false">B. Centre Calipers</div>
+                <div class="option" data-correct="false">C. outside Calipers</div>
+                <div class="option" data-correct="false">D.  Inside Calipers</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A.  Oddleg Calipers</div>
+        </div>
+   
+      <div id="quiz">
+        <div class="question">
+            <p>6: _____ is used to get a finner degree of accuracy in metal work.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.  steel rule</div>
+                <div class="option" data-correct="true">B. micrometer</div>
+                <div class="option" data-correct="false">C. Calipers</div>
+                <div class="option" data-correct="false">D. Bevel</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. micrometer</div>
+        </div>
+   
+      </div>
+        <div class="question">
+            <p>7: These tools are used for replacement of worn out components EXCEPT the _______?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. spanner</div>
+                <div class="option" data-correct="false">B. pliers </div>
+                <div class="option" data-correct="true">C. scriber</div>
+                <div class="option" data-correct="false">D. screwdriver</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The correct answer is C. scriber</div>
+        </div>
+ 
+         <div id="quiz">
+            <div class="question">
+                <p>8: A place where two or more roads meet forming a circle that ensures all traffic going around in armed direction is called _______.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Crossroad</div>
+                    <div class="option" data-correct="true">B. Round about</div>
+                    <div class="option" data-correct="false">C. T- junction</div>
+                    <div class="option" data-correct="false">D. Y- junction</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">courageous has same meaning with brave. The correct answer is B. Round about</div>
+            </div>
+       
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <p>9: Trees with needle-like leaves are called</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Coniferous </div>
+                    <div class="option" data-correct="false">B. Deciduous</div>
+                    <div class="option" data-correct="true">C. Temperature</div>
+                    <div class="option" data-correct="false">D. Trunk trees</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Coniferous</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>10: The protective device used to protect the delicate part of the body is called _______.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  Body guard</div>
+                    <div class="option" data-correct="false">B. Cowering</div>
+                    <div class="option" data-correct="false">C.  Clothing</div>
+                    <div class="option" data-correct="true">D. Workshop Safety Devices</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Workshop Safety Devices</div>
+            </div>
+        </div>
+          <div id="quiz">
+            <div class="question">
+                <p>11: The main function of first aid is _________</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Destroy life</div>
+                    <div class="option" data-correct="false">B. make life useless</div>
+                    <div class="option" data-correct="true">C. Save life</div>
+                    <div class="option" data-correct="false">D. To threaten life</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Save life</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>12: A figure bounded by more than five straight lines is a/an ______</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Circle</div>
+                    <div class="option" data-correct="false">B. polygon</div>
+                    <div class="option" data-correct="false">C. octagon</div>
+                    <div class="option" data-correct="true">D. triangle</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. polygon</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>13: Another name for coniferous is _______.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A.Clay</div>
+                    <div class="option" data-correct="false">B. Deciduas</div>
+                    <div class="option" data-correct="false">C. Hardwood </div>
+                    <div class="option" data-correct="false">D. softwood </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. softwood</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>14: Calculate the area of a triangle whose base is 6m and height 12m.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 16m<sub>2</sub></div>
+                    <div class="option" data-correct="false">B. 26m<sub>2</sub></div>
+                    <div class="option" data-correct="true">C. 36m<sub>2</sub></div>
+                    <div class="option" data-correct="false">D. 46m<sub>2</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C.36m<sub>2</sub></div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>15: Which of these safety tips is carried out after working on a machine?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  leave job on it</div>
+                    <div class="option" data-correct="false">B. light the workshop</div>
+                    <div class="option" data-correct="false">C. strictly follow instruction</div>
+                    <div class="option" data-correct="true">D.  switch off machine </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D.  switch off machine</div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+                <p>16: The sap of timber tree is transported to leaves through _______</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. stem</div>
+                    <div class="option" data-correct="false">B. root</div>
+                    <div class="option" data-correct="false">C. medullary rays</div>
+                    <div class="option" data-correct="false">D. bark</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. stem</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: The following are properties of good timber Except ______.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  have good texture</div>
+                    <div class="option" data-correct="true">B. have a uniform colour</div>
+                    <div class="option" data-correct="false">C.  have uneven and rough surface</div>
+                    <div class="option" data-correct="false">D. be resistant to shock</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. have a uniform colour</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: There is an ongoing________on my car.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. maintenance</div>
+                    <div class="option" data-correct="false">B. maintai nance</div>
+                    <div class="option" data-correct="false">C. maintenanse</div>
+                    <div class="option" data-correct="false">D. maintenance</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. maintenance</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>19: He wrote an_________letter to the principal.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. anonimous</div>
+                    <div class="option" data-correct="true">B. anonymous</div>
+                    <div class="option" data-correct="false">C. annonymous</div>
+                    <div class="option" data-correct="false">D. anonymus</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. anonymous</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>20: I have received the_____card.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. acknowledgement</div>
+                    <div class="option" data-correct="false">B. aknowledgement</div>
+                    <div class="option" data-correct="false">C. acknowledgmen</div>
+                    <div class="option" data-correct="false">D. acnoleggement</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. acknowledgement</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>21: I was humbled by his "<u>wisdom</u>.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Adverb</div>
+                    <div class="option" data-correct="false">B. Pronoun</div>
+                    <div class="option" data-correct="true">C. Noun</div>
+                    <div class="option" data-correct="false">D. Verb</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">it is an abstact noun. The correct answer is C. Noun</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>22: The "<u>handsome</u>" boy sang melodiously</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Adjective</div>
+                    <div class="option" data-correct="false">B. Adverb</div>
+                    <div class="option" data-correct="false">C. Noun</div>
+                    <div class="option" data-correct="false">D. Verb</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">It qualifies the noun boy. The correct answer is A. Adjective</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>23: "<u>Prevention</u>" is better than cure.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Adjective</div>
+                    <div class="option" data-correct="false">B. Adverb</div>
+                    <div class="option" data-correct="false">C. Pronoun</div>
+                    <div class="option" data-correct="true">D. Noun</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">it peforms as the subject. The correct answer is D. Noun</div>
+            </div>
+         </div> <div id="quiz">
+            <div class="question">
+                <p>24: lt is going to be a "<u>beautiful</u>" day..</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Adjective</div>
+                    <div class="option" data-correct="false">B. Preposition</div>
+                    <div class="option" data-correct="false">C. Pronoun</div>
+                    <div class="option" data-correct="false">D. Verb</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">it qualifies "day". The correct answer is A. Adjective</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>25: She walked "<u>sluggishly</u>" to school.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Adverb</div>
+                    <div class="option" data-correct="false">B. Conjunction</div>
+                    <div class="option" data-correct="false">C. Pronoun</div>
+                    <div class="option" data-correct="false">D. Verb Turnover</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">it is modifying the verb 'walked'The correct answer is A. Adverb</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>26: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. areas</div>
+                    <div class="option" data-correct="false">B. floors</div>
+                    <div class="option" data-correct="false">C. levels</div>
+                    <div class="option" data-correct="true">D. plots</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. plots</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+         <p>27: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. living</div>
+                    <div class="option" data-correct="false">B. occupational</div>
+                    <div class="option" data-correct="true">C. residential</div>
+                    <div class="option" data-correct="false">D. staying</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. residential</div>
+            </div>
+         </div>
+         <p>28: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. development</div>
+                    <div class="option" data-correct="false">B. painting</div>
+                    <div class="option" data-correct="false">C. wiring</div>
+                    <div class="option" data-correct="false">D. work</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. development</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>29: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. architect</div>
+                    <div class="option" data-correct="false">B. builder</div>
+                    <div class="option" data-correct="false">C. foreman</div>
+                    <div class="option" data-correct="true">D. surveyor</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. surveyor</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>30: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. findings</div>
+                    <div class="option" data-correct="false">B. measures</div>
+                    <div class="option" data-correct="true">C. measurements</div>
+                    <div class="option" data-correct="false">D. readings</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. measurements</div>
+            </div>
+         </div>         <div id="quiz">
+            <div class="question">
+
+         <p>31: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. floor</div>
+                    <div class="option" data-correct="false">B. ground</div>
+                    <div class="option" data-correct="true">C. land</div>
+                    <div class="option" data-correct="false">D. place</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. land</div>
+            </div>
+         </div>
+                <div id="quiz">
+                <div class="question">  
+         <p>32: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. beacons</div>
+                    <div class="option" data-correct="false">B. blocks</div>
+                    <div class="option" data-correct="false">C. plans</div>
+                    <div class="option" data-correct="false">D. signposts</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. beacons</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">    
+<p>33: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Building</div>
+                    <div class="option" data-correct="false">B. Environment</div>
+                    <div class="option" data-correct="false">C. Structure</div>
+                    <div class="option" data-correct="true">D. Survey</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Survey</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">    
+<p>34: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Construction</div>
+                    <div class="option" data-correct="false">B. Foundation</div>
+                    <div class="option" data-correct="true">C. Occupancy</div>
+                    <div class="option" data-correct="false">D. Operation</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Occupancy</div>
+            </div>
+         </div>
+                  <div id="quiz">
+                  <div class="question">
+<p>35: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. architect</div>
+                    <div class="option" data-correct="false">B. builder</div>
+                    <div class="option" data-correct="false">C. foreman</div>
+                    <div class="option" data-correct="false">D. plumber</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. architect</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">  
+             INSTRUCTION: Chose the word that contain the sound represented by each of the
+phonetic symbols below           
+<p>36:/e/ </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Many</div>
+                    <div class="option" data-correct="false">B. hate</div>
+                    <div class="option" data-correct="false">C. wanted</div>
+                    <div class="option" data-correct="false">D. seek</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Many</div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+         <p>37: /b/</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Comb</div>
+                    <div class="option" data-correct="false">B. Plumber</div>
+                    <div class="option" data-correct="tue">C. Rob</div>
+                    <div class="option" data-correct="false">D. Tree</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Rob</div>
+            </div>
+         </div> 
+                 <div id="quiz">
+            <div class="question">
+
+         <p>38:/ 􀀀/ </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Cloth</div>
+                    <div class="option" data-correct="false">B. Made</div>
+                    <div class="option" data-correct="false">C. Whether</div>
+                    <div class="option" data-correct="false">D. Wit</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Cloth</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>39:/dз/ </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. gentle</div>
+                    <div class="option" data-correct="false">B. treasure</div>
+                    <div class="option" data-correct="false">C. zeal</div>
+                    <div class="option" data-correct="false">D. dress</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. gentle</div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+<p>40:/ð/ </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. theme</div>
+                    <div class="option" data-correct="true">B. brother</div>
+                    <div class="option" data-correct="false">C. demon</div>
+                    <div class="option" data-correct="false">D.remand</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. brother</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">  
+              POETRY: QUESTION 41-45
+WE ALL HAVE EY BY SAM ONOMBRE II        
+<p>41:The poem, "Oh Dear Mother by Sam Onombre
+It is a tribute to ___ </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. children hood</div>
+                    <div class="option" data-correct="false">B. fatherhood</div>
+                    <div class="option" data-correct="true">C. motherhood</div>
+                    <div class="option" data-correct="false">D. sisterhood</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. motherhood</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>42:In the poem "Oh Dear Mother" by Sam Onombre II there is a burning ___
+between the poet and his mother. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Admiration</div>
+                    <div class="option" data-correct="false">B. Laughter</div>
+                    <div class="option" data-correct="true">C. Love</div>
+                    <div class="option" data-correct="false">D. Tear</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Love</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question"> 
+             PAPA'S PARCEL     
+         <p>43:In the poem, "Papa's Parcel” by Sam Onombre II, the poet suggests that 'Papa'
+was a man </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Fragile</div>
+                    <div class="option" data-correct="false">B. No-Nonsense</div>
+                    <div class="option" data-correct="false">C. powerful</div>
+                    <div class="option" data-correct="false">D. proud</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Fragile</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">
+             WISE POEM BY PAUL BY HENRY EBOH & MARIO UMEGBOLU           
+         <p>44:How many stanzas are in the poem "Word of wisdom" by Paul Henry and Mario
+Umegbolu? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. five</div>
+                    <div class="option" data-correct="true">B. three</div>
+                    <div class="option" data-correct="false">C. ten</div>
+                    <div class="option" data-correct="false">D. two</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. three</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>45:According to the poet, in the poem "HELP" by O.C Ozoudeokpoko man denied
+helping </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. areas</div>
+                    <div class="option" data-correct="true">B. ego</div>
+                    <div class="option" data-correct="false">C. Gratitude</div>
+                    <div class="option" data-correct="false">D. Threat</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. ego</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">
+              GENERAL LITERATURE: QUESTIONS 46 - 50
+From the options provided, choose the ones that are most appropriate to fill the blank
+spaces in the sentences below.               
+<p>46:An opposing character to the hero in a play is called a/an </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. heroine</div>
+                    <div class="option" data-correct="false">B. villain</div>
+                    <div class="option" data-correct="false">C. Protagonist</div>
+                    <div class="option" data-correct="true">D. antagonist</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. antagonist</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>47:A story that starts happily and ends sadly is a </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. comedy</div>
+                    <div class="option" data-correct="true">B. tragic-comedy</div>
+                    <div class="option" data-correct="false">C. melodrama</div>
+                    <div class="option" data-correct="false">D. Tragedy</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. tragic-comedy</div>
+            </div>
+         </div>
+ <div id="quiz">
+ <div class="question"> 
+<p>48:A piece of literary work is said to be didactic when it_____________
+<div class="options">
+    <div class="option" data-correct="false">A. educates</div>
+    <div class="option" data-correct="false">B. entertains</div>
+    <div class="option" data-correct="false">C. relieves tension</div>
+    <div class="option" data-correct="true">D. teaches moral lessons</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. teaches moral lessons</div>
+</div>
+</div>
+ <div id="quiz">
+ <div class="question"> 
+<p>49:The cast in a play consists of____. </p>
+<div class="options">
+    <div class="option" data-correct="false">A. audience</div>
+    <div class="option" data-correct="false">B. characters</div>
+    <div class="option" data-correct="false">C. costumes</div>
+    <div class="option" data-correct="true">D. performers</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. performers</div>
+</div>
+</div>
+<div id="quiz">
+ <div class="question"> 
+<p>50:A book which contains a collection of poems written by different poets is known as
+a/an _____ </p>
+<div class="options">
+    <div class="option" data-correct="true">A. anthology</div>
+    <div class="option" data-correct="false">B. autobiography</div>
+    <div class="option" data-correct="false">C. biography</div>
+    <div class="option" data-correct="false">D. anthrography</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. anthology</div>
+</div>
+</div>
+
+
+
+
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="progress">Progress: 0/50</div>
+
+
+    <script>
+        var score = 0;
+        var progress = 0;
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/50");
+        });
+
+        $(".check-answer").click(function() {
+            $(this).siblings(".answer").removeClass("hidden");
+        });
+    </script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+<!-- button -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.footer-widget ul li {
+display: inline-block;
+float: right;
+width: 50%;
+margin-bottom: 10px;
+}
+.footer-widget ul li a:hover{
+color: darkcyan;
+}
+.footer-widget ul li a {
+color: lightblue;
+text-transform: capitalize;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 50px;
+}
+</style>
+</div>
+</div>
+<div class="footer-content pt-5 pb-5">
+<div class="row">
+
+
+
+
+<!--stop -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+<a href="x.com"><i class="fab fa-twitter"></i></i></a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">courses</a></li>
+<li><a href="#">classroom</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">blog</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+
+
+
+
+</div>
+</footer>
+</html>
