@@ -154,25 +154,25 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
     <div id="quiz">
         <div class="question">
-            <p>2: What is the capital of France?</p>
+            <p>2:Mr.Udo wants to expand the business not.... it</p>
             <div class="options">
-                <div class="option" data-correct="false">A. Berlin</div>
-                <div class="option" data-correct="true">B. Paris</div>
-                <div class="option" data-correct="false">C. Rome</div>
-                <div class="option" data-correct="false">D. Madrid</div>
+                <div class="option" data-correct="false">A. decrease </div>
+                <div class="option" data-correct="true">B. lessen’</div>
+                <div class="option" data-correct="false">C.  level </div>
+                <div class="option" data-correct="false">D. shrink</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
-            <div class="answer hidden">The correct answer is B. Paris</div>
+            <div class="answer hidden">the opposite of expand is shrinl.The correct answer is D. Shrink</div>
         </div>
     </div>
       <div id="quiz">
         <div class="question">
-            <p>3: What is the capital of France?</p>
+            <p>3:Mr.Udo wants to expand the business not.... it</p>
             <div class="options">
-                <div class="option" data-correct="false">A. Berlin</div>
-                <div class="option" data-correct="true">B. Paris</div>
-                <div class="option" data-correct="false">C. Rome</div>
-                <div class="option" data-correct="false">D. Madrid</div>
+                <div class="option" data-correct="false">A. decrease </div>
+                <div class="option" data-correct="true">B. lessen’ </div>
+                <div class="option" data-correct="false">C. level </div>
+                <div class="option" data-correct="false">D. shrink</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
             <div class="answer hidden">The correct answer is B. Paris</div>
