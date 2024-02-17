@@ -142,7 +142,7 @@ body {
 Example: 
 <p>Instruction: Answer the questions nearest in meaning</p>
 INSTRUCTION: Choose the word that is nearly opposite in meaning to the underlined word in each of the following sentences.
-            <p>1:Attack is the best form of....  </p>
+            <p>1:<u>Attack</u> is the best form of....  </p>
             <div class="options">
                 <div class="option" data-correct="true">A. defence.</div>
                 <div class="option" data-correct="false">B. fighting. </div>
@@ -154,7 +154,7 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
     <div id="quiz">
         <div class="question">
-            <p>2:Mr.Udo wants to expand the business not.... it</p>
+            <p>2:Mr.Udo wants to <u>expand</u> the business not.... it</p>
             <div class="options">
                 <div class="option" data-correct="false">A. decrease </div>
                 <div class="option" data-correct="true">B. lessen’</div>
@@ -162,62 +162,63 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
                 <div class="option" data-correct="false">D. shrink</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
-            <div class="answer hidden">the opposite of expand is shrinl.The correct answer is D. Shrink</div>
+            <div class="answer hidden">the opposite of expand is shrink .The correct answer is Shrink</div>
         </div>
     </div>
       <div id="quiz">
         <div class="question">
-            <p>3:Mr.Udo wants to expand the business not.... it</p>
+            <p>3:The old woman was <u>aware</u> of her powers</p>
             <div class="options">
-                <div class="option" data-correct="false">A. decrease </div>
-                <div class="option" data-correct="true">B. lessen’ </div>
-                <div class="option" data-correct="false">C. level </div>
-                <div class="option" data-correct="false">D. shrink</div>
+                <div class="option" data-correct="false">A. alert  </div>
+                <div class="option" data-correct="false">B. Careful  </div>
+                <div class="option" data-correct="false">C. Conscious </div>
+                <div class="option" data-correct="true">D. ignorant</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
-            <div class="answer hidden">The correct answer is B. Paris</div>
+            <div class="answer hidden">the opposite of aware is ignorant.The correct answer is D. ignorant</div>
         </div>
 
 
       </div>
    
-       <div id="quiz">
-        <div class="question">
-            <p>4: What is the capital of France?</p>
+       <div id="quiz">INSTRUCTION: Choose the right options which has almost the same meaning as the underlined words in each of the following sentences.
+       
+
+        <div class=>"question">
+            <p>4: I cannot <u>stand</u>my gateman; he talks too much </p>
             <div class="options">
-                <div class="option" data-correct="false">A. Berlin</div>
-                <div class="option" data-correct="true">B. Paris</div>
-                <div class="option" data-correct="false">C. Rome</div>
-                <div class="option" data-correct="false">D. Madrid</div>
+                <div class="option" data-correct="false">A. believe</div>
+                <div class="option" data-correct="false">B. encourage</div>
+                <div class="option" data-correct="true">C.tolerate </div>
+                <div class="option" data-correct="false">D. understand</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
-            <div class="answer hidden">The correct answer is B. Paris</div>
-        </div>
+            <div class="answer hidden">the option with the  almost the same meaning as stand is tolerante.The correct answer is C. tolerate</div></div>
    
 
 
        </div>
       <div id="quiz">
         <div class="question">
-            <p>5: What is the capital of France?</p>
+            <p>5:We need to talk to you about this <u>important</u> issue immediately</p>
             <div class="options">
-                <div class="option" data-correct="false">A. Berlin</div>
-                <div class="option" data-correct="true">B. Paris</div>
-                <div class="option" data-correct="false">C. Rome</div>
-                <div class="option" data-correct="false">D. Madrid</div>
+                <div class="option" data-correct="false">A. essential</div>
+                <div class="option" data-correct="true">B. extreme  </div>
+                <div class="option" data-correct="false">C. sad</div>
+                <div class="option" data-correct="false">D. trivial</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
-            <div class="answer hidden">The correct answer is B. Paris</div>
+            <div class="answer hidden">the option with almost the same meaning to important is essential. The correct answer is A. important</div>
         </div>
    
       <div id="quiz">
         <div class="question">
-            <p>6: What is the capital of France?</p>
+            <p>6: 	The harmattan weather is very harsh.</p>
             <div class="options">
-                <div class="option" data-correct="false">A. Berlin</div>
-                <div class="option" data-correct="true">B. Paris</div>
-                <div class="option" data-correct="false">C. Rome</div>
-                <div class="option" data-correct="false">D. Madrid</div>
+                <div class="option" data-correct="false">A. coarse</div>
+                <div class="option" data-correct="true">B. mud</div>
+                <div class="option" data-correct="false">C.rough </div>
+                <div class="option" data-correct="false">D. unpleasant</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
             <div class="answer hidden">The correct answer is B. Paris</div>
