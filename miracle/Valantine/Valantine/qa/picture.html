@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<body>
+
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Upload Image</button>
+</form>
+
+<div id="imageContainer"></div>
+
+<script>
+    document.getElementById("uploadForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var formData = new FormData(this);
+
+        fetch('upload.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                var imageUrl = data.imageUrl;
+                var imageContainer = document.getElementById("imageContainer");
+                var imgElement = document.createElement("img");
+                imgElement.src = "uploads/" + imageUrl;
+                imageContainer.innerHTML = "";
+                imageContainer.appendChild(imgElement);
+            } else {
+                alert("Error uploading image: " + data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+
+</body>
+</html>

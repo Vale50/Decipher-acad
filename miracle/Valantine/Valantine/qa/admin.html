@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    nav {
+        background-color: #666;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .results {
+        width: 45%;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+    .upload {
+        width: 45%;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+    .result-item {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Admin Dashboard</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Results</a>
+    <a href="#">Upload Result</a>
+</nav>
+
+<div class="container my-5">
+        <h1>Client Information</h1>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    
+                    <th>FULL NAME</th>
+                    <th>E-MAIL</th>
+                    <th>ANSWER1/th>
+                    <th>ANSWER2</th>
+                    <th>ANSWER3</th>
+                    <th>ANSWER4</th>
+                    <th>ANSWER5</th>
+                    <th>ANSWER6</th>
+                    <th>ANSWER7</th>
+                    <th>ANSWER8</th>
+                    <th>ANSWER9</th>
+                    <th>ANSWER10</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                include_once('connection.php');
+
+                // Check connection
+                if ($con->connect_error) {
+                    die("Connection failed: " . $con->connect_error);
+                }
+
+                // Read all rows from the database table
+                $s = "select * from ccd"; 
+                $result = $con->query($s);
+
+                // Read data of each row
+                while ($row = $result->fetch_assoc()) {
+                    echo "
+                    <tr>
+                        <td>" . htmlspecialchars($row['trackid']) . "</td>
+                        <td>" . htmlspecialchars($row['courier']) . "</td>
+                        <td>" . htmlspecialchars($row['package']) . "</td>
+                        <td>" . htmlspecialchars($row['mode']) . "</td>
+                        <td>" . htmlspecialchars($row['product']) . "</td>
+                        <td>" . htmlspecialchars($row['quantity']) . "</td>
+                        <td>" . htmlspecialchars($row['totalfreight']) . "</td>
+                        <td>" . htmlspecialchars($row['crn']) . "</td>
+                        <td>" . htmlspecialchars($row['status']) . "</td>
+                        <td>" . htmlspecialchars($row['sendername']) . "</td>
+                        <td>" . htmlspecialchars($row['senderemail']) . "</td>
+                        <td>" . htmlspecialchars($row['sendercontact']) . "</td>
+                        <td>" . htmlspecialchars($row['senderaddress']) . "</td>
+                        <td>" . htmlspecialchars($row['dispatchlocation']) . "</td>
+                        <td>" . htmlspecialchars($row['receivername']) . "</td>
+                        <td>" . htmlspecialchars($row['receiveremail']) . "</td>
+                        <td>" . htmlspecialchars($row['receivercontact']) . "</td>
+                        <td>" . htmlspecialchars($row['receiveraddress']) . "</td>
+                        <td>" . htmlspecialchars($row['ftype']) . "</td>
+                        <td>" . htmlspecialchars($row['edd']) . "</td>
+
+                        <td>
+                            <a class='btn btn-primary btn-sm' href='/logistics/edits.php?trackid=" . urlencode($row['trackid']) . "'>Edit</a>
+                            <a class='btn btn-danger btn-sm' href='/logistics/delete.php?trackid=" . urlencode($row['trackid']) . "'>Delete</a>
+                        </td>
+                    </tr>
+                    ";
+                }
+
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
