@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  background-color: #efefef;
+}
+
+.logo{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 90px;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 1px #747474, 
+      -1px 3px 1px #767676, 
+      -2px 5px 1px #787878, 
+      -3px 7px 1px #7a7a7a,
+      -4px 9px 1px #7f7f7f,
+      -5px 11px 1px #838383,
+      -6px 13px 1px #878787,
+      -7px 15px 1px #8a8a8a, 
+      -8px 17px 1px #8e8e8e,
+      -9px 19px 1px #949494,
+      -10px 21px 1px #989898,
+      -11px 23px 1px #9f9f9f,
+      
+}
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #f9f9f9;
+  
+}
+#progress{
+    color: #f9f9f9;
+float: right;
+}
+
+
+#progressBar {
+width: 100%;
+height: 20px;
+margin-top: 10px;
+color: #f9f9f9;
+
+}
+       
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+.hidden {display: none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="quiz">
+<div class="question">
+
+<p>1: The area under a force-time graph represents</p>
+<div class="options">
+<div class="option" data-correct="false">A. change in kinetic energy</div>
+<div class="option" data-correct="false">B. change in momentum</div>
+<div class="option" data-correct="false">C.work done.</div>
+<div class="option" data-correct="true">D.	change in internal energy.</div></div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden"> </div> The correct answer is D. Higher animals can reproduce asexually</div>
+</div>
+<div id="quiz">
+<div class="question">
+            <p>2:From the principle of flotation, a body sinks in a fluid until it displaces a 	quantity of fluid equal to its own
+            </p>
+            <div class="options">
+                <div class="option" data-correct="false">A. density</div>
+                <div class="option" data-correct="false">B. mass</div>
+                <div class="option" data-correct="true">C. weight</div>
+                <div class="option" data-correct="false">D. volume</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is C. kidney</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+
+            <p>3: Suppose three identical steel balls Q, R and S are placed on an undulating ground as illustrated in the diagram above. Which of the 	balls is/are in neutral equilibrium?</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. S only </div>
+                <div class="option" data-correct="false">B. Q only</div>
+                <div class="option" data-correct="false">C. R only</div>
+                <div class="option" data-correct="false">D. Q and S only</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. roots. 
+
+
+
+            </div>
+        </div>
+
+
+      </div>
+   
+       <div id="quiz">
+        <div class="question">
+    <p>4: The length of a simple pendulum is increased by a factor of four. By what factor is its period increased? </p>
+            <div class="options">
+                <div class="option" data-correct="false">A. 0.5 π</div>
+                <div class="option" data-correct="false">B. 2</div>
+                <div class="option" data-correct="false">C. 2 π </div>
+                <div class="option" data-correct="true">D. 4</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> So the correct answer is D. IV</div>
+        </div>
+   
+
+
+       </div>
+      <div id="quiz">
+        <div class="question">
+            <p>5: The linear expansivity,a , and cubic expansivity,y , of a material are 	related by the equation</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. y=a </div>
+                <div class="option" data-correct="false">B. y=3a</div>
+                <div class="option" data-correct="false">C. y=2a</div>
+                <div class="option" data-correct="false">D.  y=1/3α
+                </div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. pith .</div>
+        </div>
+    </div>
+
+   
+      <div id="quiz">
+        <div class="question">
+       
+     <p>6: Which of the illustrated graphs below represents a body moving with uniform retardation?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.</div>
+                <div class="option" data-correct="true">B. </div>
+                <div class="option" data-correct="false">C. s</div>
+                <div class="option" data-correct="false">D. </div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The correct answer is B. .</div>
+        </div>
+   
+      </div>
+      <div id="quiz">
+        <div class="question">
+     <p>7:The correct relationship between the displacement, s, of a particle 	initially at rest in a linear motion and the time, t, is</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. s  t-2</div>
+                <div class="option" data-correct="false">B. s  t-1</div>
+                <div class="option" data-correct="true">C. s  t </div>
+                <div class="option" data-correct="false">D. s  t2.</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is C. plasmolysis </div>
+        </div>
+ </div>
+         <div id="quiz">
+            <div class="question">
+                <p>8: The Joule is equivalent to  </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. kg m<sup>2</sup> s <sup>-1</sup> </div>
+                    <div class="option" data-correct="false">B. kg<sup>2</sup> m s <sup>-2</sup> </div>
+                    <div class="option" data-correct="false">C. kg m<sup>2</sup> s <sup>-2</sup> </div>
+                    <div class="option" data-correct="false">D. kg m s <sup>-1</sup></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. cambium. </div>
+            </div>
+       
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <p>9: Which of the following statement(s) is/are correct about a fixed mass of 	gas compressed in an in expansible container? 
+                    I.	The average speed of the molecules increases.
+	II.	The temperature of the gas increases.
+	III.	The molecules hit the walls of the container more often than before the compression.
+                </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I only </div>
+                    <div class="option" data-correct="false">B. I and II only </div>
+                    <div class="option" data-correct="false"> C. I and III only. </div>
+                    <div class="option" data-correct="true">D. I, II and III </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. humans and rat.</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+    <p>10: An example of a mechanical wave is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. water waves  </div>
+                    <div class="option" data-correct="true">B. radio waves  </div>
+                    <div class="option" data-correct="false">C. x-rays. </div>
+                    <div class="option" data-correct="false">D. light rays </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. Erythrocyte. </div>
+            </div>
+
+
+        </div>
+          <div id="quiz">
+            <div class="question">                
+            
+                <p>11:Which of the following descriptions of the image formed by a plane mirror is not correct?  The image is </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. erect and of the same size as the object. </div>
+                    <div class="option" data-correct="false">B. laterally inverted and of the same size as the object. </div>
+                    <div class="option" data-correct="false">C.	erect and bigger than the object.</div>
+                    <div class="option" data-correct="false">D. virtual and of the same size as the object.
+                    </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. I and III only</div>
+            </div>
+
+
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>12: The efficiency of a wheel and axle is 100% and the ratio of their radii is 5:1. Calculate the effort required to lift a load of mass 20 kg using this 	machine, [g = 10 m s <sup>-2</sup>]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 20 N  </div>
+                    <div class="option" data-correct="true">B. 25 N</div>
+                    <div class="option" data-correct="false">C. 40 N </div>
+                    <div class="option" data-correct="false">D. 100 N</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. II </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>13: A freely suspended compass needle on the earth’s surface settles in a ____	plane called</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.geographic meridian </div>
+                    <div class="option" data-correct="false">B. magnetic meridian </div>
+                    <div class="option" data-correct="false">C. magnetic declination  </div>
+                    <div class="option" data-correct="true">D. isogonals </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. osmoregulation</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+
+  <p>14: An object is placed at different distances, u, from a converging lens of focal length, 15.0 cm. For what value of u does the lens act as a simple 	microscope?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. u = 15 cm only </div>
+                    <div class="option" data-correct="true">B. u = 30 cm only </div>
+                    <div class="option" data-correct="false">C. u < 15 cm only  </div>
+                    <div class="option" data-correct="false">D. u > 30 cm only</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. Adrenaline, Glucagon, Oestrogen, ADH</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>15: The periodic rise and fall in the intensity of sound produced when two notes of nearly equal frequencies are sounded together is called</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. doppler effect </div>
+                    <div class="option" data-correct="false">B. beat </div>
+                    <div class="option" data-correct="false">C. interference/div>
+                    <div class="option" data-correct="false">D. resonance </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. I </div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+                <p>16: The power of a lens is + 2.5 D. What is its radius of curvature?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.2.5 cm </div>
+                    <div class="option" data-correct="true">B. 25.0 cm </div>
+                    <div class="option" data-correct="false">C.	40.0 cm </div>
+                    <div class="option" data-correct="false">D. 80.0 cm.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. ossicles</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: The reason for having a large number of turns in the coil of a moving coil 	galvanometer is to</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. make the deflection of the needle proportional to the current.</div>
+                    <div class="option" data-correct="false">B. increase the sensitivity of the galvanometer</div>
+                    <div class="option" data-correct="false">C.decrease the magnetic flux produced by the magnet</div>
+                    <div class="option" data-correct="true">D. make the permanent magnet stronger</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. II 		I, III 		IV</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: Current is passed through two parallel conductors in the same direction. If the conductors are placed near each other, they will </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. move in a circle </div>
+                    <div class="option" data-correct="false">B. repel each other. </div>
+                    <div class="option" data-correct="false">C. remain stationary. </div>
+                    <div class="option" data-correct="false">D. attract each other </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. I </div>
+            </div>
+
+            
+         </div>
+
+
+         <div id="quiz">
+            <div class="question">
+                
+ <p>19: The period of a 10 kHz radio wave travelling at 3.0  10<sup>8</sup> ms<sup>-1</sup>> is </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 3.0  10<sup>-5</sup> <sub>s.</sub> </div>
+                    <div class="option" data-correct="false">B. 1.0  10<sup>-4</sup> <sub>s.</sub> </div>
+                    <div class="option" data-correct="false">C. 1.0  10<sup>4</sup> <sub>s.</sub>. </div>
+                    <div class="option" data-correct="false">D. 3.0  10<sup>4</sup> <sub>s.</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. III and I</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>20: The magnetic material produced from the chemical combination of metal 	oxides and has a very high resistance to electric current is called a </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. ferrite substance </div>
+                    <div class="option" data-correct="false">B. paramagnetic substance </div>
+                    <div class="option" data-correct="false">C. ferromagnetic substance</div>
+                    <div class="option" data-correct="false">D. diamagnetic substance </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Both cells are structures for asexual reproduction</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+             
+ <p>21: A body of mass, M, moving with velocity, V, has a wavelength, λ, associated with it. This phenomenon is called</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. photoelectric effect</div>
+                    <div class="option" data-correct="false">B. Heisenberg’s uncertainty principle</div>
+                    <div class="option" data-correct="false">C. Compton effect.</div>
+                    <div class="option" data-correct="false">D. wave-particle paradox</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. 23 and 23</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>22:Which of the following statements about a straight current-carrying wire 	placed in a uniform magnetic field is correct? The wire experiences </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. maximum motor force if the current reverses its direction..</div>
+                    <div class="option" data-correct="false">B.no motor force if it is parallel to the field.</div>
+                    <div class="option" data-correct="true">C.	no motor force if it is perpendicular to the field. </div>
+                    <div class="option" data-correct="false">D. a motor force with constant direction if either the current or the magnetic field is reversed</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C.	Chloroplast</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>23: Three cells each of emf, 1.1 V, and internal resistance, 2 Ω, are connected in parallel across a 3 Ω resistor. Determine the current in the 	resistor.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 0.90 A.</div>
+                    <div class="option" data-correct="true">B. 0.39 A </div>
+                    <div class="option" data-correct="false">C. 0.30,4 .</div>
+                    <div class="option" data-correct="false">D. 0.01 A.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. release of oxygen</div>
+            </div>
+         </div> <div id="quiz">
+            <div class="question">
+                <p>24: Which of the following statements about electric potential energy is not correct? </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. The electric potential energy of a positively charged particle 	increases when it moves to a point of higher potential.</div>
+                    <div class="option" data-correct="false">B. The electric potential energy of a negatively charged particle increases when it moves to a point of lower potential.</div>
+                    <div class="option" data-correct="false">C. The electric potential energy of a positively charged particle 	decreases when it moves to a point of higher potential.</div>
+                    <div class="option" data-correct="false">D. The work done in taking a charged particle around a closed path in an electric field is zero</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. egg yolk, carrot and palm oil..</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+     <p>25: A galvanometer with a full scale deflection of 20 mA is converted to read 	8 V by connecting a 395 Ω resistor in series with it. Determine the 	internal resistance of the galvanometer.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2.5 Ω.</div>
+                    <div class="option" data-correct="true">B. 5.0 Ω</div>
+                    <div class="option" data-correct="false">C. 8.0 Ω.</div>
+                    <div class="option" data-correct="false">D. 10.0 Ω </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. L</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+
+<div id="quiz">
+    <div class="question">
+
+<p>26: An inductor of inductance 10H is connected across an a.c. circuit 	source of 50 V, 100 Hz.  What is the current in the circuit? [ π = 3.14]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 0.200 A </div>
+                    <div class="option" data-correct="true">B. 0.070 A </div>
+                    <div class="option" data-correct="false">C. 0.050 A</div>
+                    <div class="option" data-correct="false">D. 0.008 A </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. are specific in their action</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+  <p>27:The speed of fast moving neutrons in a nuclear reactor can be reduced by using</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. graphite rods</div>
+                    <div class="option" data-correct="false">B. concrete shield </div>
+                    <div class="option" data-correct="true">C.iron rods</div>
+                    <div class="option" data-correct="false">D. boron rods</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C.amino acids.</div>
+            </div>
+         </div>
+         <p>28: In a series R-L-C circuit at resonance, impedance is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. maximum</div>
+                    <div class="option" data-correct="true">B. minimum.</div>
+                    <div class="option" data-correct="false">C. capacitive</div>
+                    <div class="option" data-correct="false">D. inductive </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. tendency of becoming waterlogged.</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>29:A lamp is rated 240 V, 60 W. Determine the resistance of the lamp when 	lit.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 120 Ω </div>
+                    <div class="option" data-correct="false">B. 240 Ω.</div>
+                    <div class="option" data-correct="true">C. 540 Ω</div>
+                    <div class="option" data-correct="false">D. 960 Ω</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Leaving the land bare.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>30:One major reason why electrical appliances in homes are normally earthed is that the</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. person touching the appliance is safe from electric shock.</div>
+                    <div class="option" data-correct="true">B. appliances are maintained at a higher p.d. than the earth.</div>
+                    <div class="option" data-correct="true">C.appliances are maintained at a lower p.d. than the earth</div>
+                    <div class="option" data-correct="false">D. appliances are maintained at the same p.d. with that of the earth</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. community</div>
+            </div>
+         </div>         <div id="quiz">
+            <div class="question">
+
+           <p>31: In doping an intrinsic semiconductor to produce a p-type semiconductor, </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. the semiconductor is heated up </div>
+                    <div class="option" data-correct="false">B. a donor element is added </div>
+                    <div class="option" data-correct="false">C. an acceptor element is added </div>
+                    <div class="option" data-correct="false">D. the semiconductor is connected to a battery </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. I</div>
+            </div>
+         </div>
+                <div id="quiz">
+                <div class="question">  
+         <p>32:Arrange the following radiations in order of increasing ionization of air.	
+            I.	Alpha
+            II.	Gamma
+            III.	Beta </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I < III < II </div>
+                    <div class="option" data-correct="true">B. II < I < III </div>
+                    <div class="option" data-correct="false">C. II < III< I </div>
+                    <div class="option" data-correct="false">D. I < II < III </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. sand</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">    
+<p>33: If the kinetic energy of an electron is 100 eV, what is the wavelength of the de-Broglie wave associated with it?	
+	[h = 6.6 10 <sup>-34</sup> j s, e =1.6  10<sup>-19</sup>>C, m<sub>e</sub>= 9.1  10<sup>-31</sup>> kg]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1.22  10<sup>-10</sup> m </div>
+                    <div class="option" data-correct="false">B. 4.10 10<sup>-10</sup> m </div>
+                    <div class="option" data-correct="false">C. 3.90 10<sup>-10</sup> m </div>
+                    <div class="option" data-correct="true">D. 5.50 10<sup>-14</sup> m</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. organisms</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question"> 
+   
+<p>34:Gamma rays are produced when </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. high velocity electrons are abruptly stopped in metals.</div>
+                    <div class="option" data-correct="false">B. energy changes occur within the nuclei of atoms..</div>
+                    <div class="option" data-correct="false">C. energy changes occur within the electronic structure of atoms. </div>
+                    <div class="option" data-correct="true">D. electrons are deflected in very strong magnetic fields</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. sunlight </div>
+            </div>
+         </div>
+                  <div id="quiz">
+                  <div class="question">
+<p>35:The half-life of a radioactive substance is 15 hours. If at some instance, the sample has a mass of 512 g, calculate the time it will take 7/8  of the sample to decay. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 15 hours </div>
+                    <div class="option" data-correct="false">B. 30 hours </div>
+                    <div class="option" data-correct="false">C. 45 hours </div>
+                    <div class="option" data-correct="true">D. 60 hours </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. is a secondary consumer</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">  
+          
+<p>36:When the direction of vibration of the particles of a medium is perpendicular to the direction of propagation of a wave, the wave is said to be</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. longitudinal </div>
+                    <div class="option" data-correct="false">B. transverse </div>
+                    <div class="option" data-correct="false">C. mechanical. </div>
+                    <div class="option" data-correct="true">D. a sound wave..</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is D. pyramid of numbers. </div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+         <p>37: A hunter fires a gun at a point 408 m away from a cliff. If he hears an echo 2.4 s later, determine the speed of the sound wave </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 340 ms<sup>-1</sup>  </div>
+                    <div class="option" data-correct="false">B. 380 ms<sup>-1</sup></div>
+                    <div class="option" data-correct="false">C. 400 ms<sup>-1</sup>  </div>
+                    <div class="option" data-correct="true">D. 680 ms<sup>-1</sup></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is D. Hairy structures on the leaves to reduce water loss</div>
+            </div>
+         </div> 
+                 <div id="quiz">
+            <div class="question">
+
+         <p>38:The distance between the fixed points of a mercury-in-glass thermometer is 30 cm. Determine the temperature when the mercury level is 10.5 cm above the lower fixed point. </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 28.6 °C </div>
+                    <div class="option" data-correct="false">B. 30.0 °C </div>
+                    <div class="option" data-correct="false">C. 35.0 °C </div>
+                    <div class="option" data-correct="false">D. 40.5 °C</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is A. competition </div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>39:Which of the following statements about electromagnetic waves is not correct? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. They carry energy' as they travel through space </div>
+                    <div class="option" data-correct="false">B. They travel with the speed of light. </div>
+                    <div class="option" data-correct="true">C. They are longitudinal </div>
+                    <div class="option" data-correct="false">D. The electric and magnetic fields are at right angles to each other..</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. poaching in game reserves</div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+<p>40:The diameter of a brass ring at 30 °C is 50.0 cm. To what temperature must this ring be heated to increase its diameter to 50.29 cm?  
+	[ linear expansivity of brass = 1.9  10<sup>-5</sup> K<sup>-1</sup>] </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 152.6 °C </div>
+                    <div class="option" data-correct="false">B. 182.6 °C </div>
+                    <div class="option" data-correct="false">C. 306.1°C </div>
+                    <div class="option" data-correct="false">D. 335.3 °C.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. destroys the organic components of the soil</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">  
+     
+<p>41:Which of the following concepts is a method of heat transfer that does not require a material medium? </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Conduction </div>
+                    <div class="option" data-correct="false">B. Diffusion </div>
+                    <div class="option" data-correct="false">C. Convection  </div>
+                    <div class="option" data-correct="false">D. Radiation </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. petroleum</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>42:Which of the following statements about light travelling from one 	material medium to another is not correct?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. The refracted angle is less than the incident angle if the speed is higher in the first material </div>
+                    <div class="option" data-correct="false">B. It bends away from the normal if the speed is lower in the first material. </div>
+                    <div class="option" data-correct="true">C. Its wavelength does not change.</div>
+                    <div class="option" data-correct="false">D. Its frequency changes</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. AB</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question"> 
+   
+  <p>43:The engine of a car provides a forward force of 1240 N and the total resistive force on the car is 800 N. If the mass of the car is 1220 kg, determine the distance the car has to travel from the rest before acquiring a speed of 4 m s<sup>-1</sup>>. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 44.0 m</div>
+                    <div class="option" data-correct="false">B. 22.2 m</div>
+                    <div class="option" data-correct="true">C. 11.1 m</div>
+                    <div class="option" data-correct="false">D. 5.5 m</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tongue rolling</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">
+         <p>44:A quantity of water at 0 °C is heated to 30 °C. For each degree rise in temperature, its density will</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. rise steadily.</div>
+                    <div class="option" data-correct="false">B. fall steadily</div>
+                    <div class="option" data-correct="false">C. fall and then rises</div>
+                    <div class="option" data-correct="false">D. rise and then falls.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. antigens are absent in their blood cells</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>45:A small object of mass 50 g is released from a point A. Determine the velocity of the object when it reaches a point B, a vertical distance of 30 m below A. [g=10ms<sup>-2</sup>>]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1.5 m s<sup>-1</sup></div>
+                    <div class="option" data-correct="false">B. 6.0 m s<sup>-1</sup></div>
+                    <div class="option" data-correct="false">C. 17.3 m s<sup>-1</sup></div>
+                    <div class="option" data-correct="true">D. 24.5 m s<sup>-1</sup></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. TT and Tt</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">
+               
+<p>46:Molecules move in random motion within a liquid. The total internal energy of the liquid depends on all of the following except its </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. temperature</div>
+                    <div class="option" data-correct="false">B. mass</div>
+                    <div class="option" data-correct="true">C. specific heat capacity</div>
+                    <div class="option" data-correct="false">D. melting point</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. between the progeny of parents to ascertain their external expressions</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>47:The viscosity of a fluid depends on the following factors except the</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. relative motion between the layers of the fluid.</div>
+                    <div class="option" data-correct="false">B. nature of the material of the fluid </div>
+                    <div class="option" data-correct="false">C. surface area of the fluid in contact</div>
+                    <div class="option" data-correct="true">D. normal reaction in the fluid</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Males are never carriers since they only receive one sex chromosome</div>
+            </div>
+         </div>
+ <div id="quiz">
+ <div class="question"> 
+<p>48:Using vernier calipers, which of the following readings gives the correct measurement for the length of a rod?<p>
+<div class="options">
+    <div class="option" data-correct="false">A. 4.1 cm</div>
+    <div class="option" data-correct="true">B. 4.13 cm </div>
+    <div class="option" data-correct="false">C. 4.125 cm  </div>
+    <div class="option" data-correct="false">D. 4.1254 cm</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. ¼ </div>
+</div>
+</div>
+ <div id="quiz">
+ <div class="question"> 
+<p>49:The basic principle of operation of a beam balance is </p>
+<div class="options">
+    <div class="option" data-correct="false">A. Archimedes principle</div>
+    <div class="option" data-correct="true">B. law of flotation</div>
+    <div class="option" data-correct="false">C. Hooke's law</div>
+    <div class="option" data-correct="false">D. principle of moments</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. Chameleon</div>
+</div>
+</div>
+<div id="quiz">
+ <div class="question"> 
+<p>50:In which of the following situations is friction not useful?</p>
+<div class="options">
+    <div class="option" data-correct="true">A. Operation of a grinding machine</div>
+    <div class="option" data-correct="false">B. Walking </div>
+    <div class="option" data-correct="false">C. Application of brakes</div>
+    <div class="option" data-correct="false">D. Moving piston in a sleeve </div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. Algae —► Liverwort —►Ferns —►Angiosperms</div>
+</div>
+</div>
+<div id="quiz">
+              <div class="question">
+               
+              </div>
+              <div id="score">Score: 0</div>
+              <div id="progress">Progress: 0/50</div>
+          
+          
+              <script>
+                  var score = 0;
+                  var progress = 0;
+          
+                  $(".option").click(function() {
+                      if ($(this).hasClass("selected")) {
+                          return;
+                      }
+                      $(this).addClass("selected");
+                      $(this).siblings().removeClass("correct incorrect");
+                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+                      if ($(this).data("correct")) {
+                          score++;
+                          $("#score").text("Score: " + score);
+                      } else {
+                          $(this).parent().siblings(".check-answer").removeClass("hidden");
+                      }
+                      progress++;
+                      $("#progress").text("Progress: " + progress + "/50");
+                  });
+          
+                  $(".check-answer").click(function() {
+                      $(this).siblings(".answer").removeClass("hidden");
+                  });
+              </script>
+          </body>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+          <!-- button -->
+          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <style>
+          
+          
+          .footer-social-icon i {
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 38px;
+          border-radius: 50%;
+          }
+          .footer-widget ul li {
+          display: inline-block;
+          float: right;
+          width: 50%;
+          margin-bottom: 10px;
+          }
+          .footer-widget ul li a:hover{
+          color: darkcyan;
+          }
+          .footer-widget ul li a {
+          color: lightblue;
+          text-transform: capitalize;
+          }
+          .footer-menu li {
+          display: inline-block;
+          margin-left: 50px;
+          }
+          </style>
+          </div>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+          <div class="row">
+          
+          
+          
+          
+          <!--stop -->
+          
+          
+          
+          
+          
+          
+          </div>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+          <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+          <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">courses</a></li>
+          <li><a href="#">classroom</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">blog</a></li>
+          </ul>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          
+          
+          
+          
+          </div>
+          </footer>
+          </html>
+          
+          
+          
+          
+          
+         
