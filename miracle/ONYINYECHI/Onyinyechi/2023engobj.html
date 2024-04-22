@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  background-color: #efefef;
+}
+
+.logo{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 90px;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 1px #747474, 
+      -1px 3px 1px #767676, 
+      -2px 5px 1px #787878, 
+      -3px 7px 1px #7a7a7a,
+      -4px 9px 1px #7f7f7f,
+      -5px 11px 1px #838383,
+      -6px 13px 1px #878787,
+      -7px 15px 1px #8a8a8a, 
+      -8px 17px 1px #8e8e8e,
+      -9px 19px 1px #949494,
+      -10px 21px 1px #989898,
+      -11px 23px 1px #9f9f9f,
+      
+}
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #f9f9f9;
+  
+}
+#progress{
+    color: #f9f9f9;
+float: right;
+}
+
+
+#progressBar {
+width: 100%;
+height: 20px;
+margin-top: 10px;
+color: #f9f9f9;
+
+}
+       
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+.hidden {display: none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="quiz">
+<div class="question">
+    In each of the following sentences, there is one underlined word and one gap. From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the underlined word and that will, at the same time, correctly fill the gap in the sentence.
+
+<p>1: The posh cars were sandwiched between two …..ones.</p>
+<div class="options">
+<div class="option" data-correct="false">A. dented</div>
+<div class="option" data-correct="false">B. rugged</div>
+<div class="option" data-correct="false">C. rickety</div>
+<div class="option" data-correct="true">D. modest</div></div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden"> </div> The correct answer is D. modest</div>
+</div>
+<div id="quiz">
+<div class="question">
+            <p>2:A trivial issue often becomes……	when it is not properly handled.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. valuable</div>
+                <div class="option" data-correct="true">B. serious</div>
+                <div class="option" data-correct="false">C. unbearable</div>
+                <div class="option" data-correct="false">D. ordinary</div>
+          </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. serious</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+            <p>3: 	The rockstar’s stellar performance  contrasted sharply with the….. showing of the amateur group..</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. routine</div>
+                <div class="option" data-correct="true">B. woeful</div>
+                <div class="option" data-correct="false">C. mundane</div>
+                <div class="option" data-correct="false">D. awkward</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. woeful.</div>
+       </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+            <p>4: Tolu was sanctioned for late coming but his friend was…..</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. pardoned</div>
+                <div class="option" data-correct="false">B. ignored</div>
+                <div class="option" data-correct="false">C. exempted</div>
+                <div class="option" data-correct="false">D. released</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> So the correct answer is A. pardoned</div>
+        </div>
+      </div>
+    <div id="quiz">
+      <div class="question">
+          <p>5: While other teachers’ support for the action was…….	, Victor’s was dogged.</p>
+          <div class="options">
+              <div class="option" data-correct="false">A. declining</div>
+              <div class="option" data-correct="false">B. woeful</div>
+              <div class="option" data-correct="false">C. disappointing</div>
+              <div class="option" data-correct="true">D. wavering
+              </div>
+          </div>
+          <button class="check-answer hidden">Check Answer</button>
+          <div class="answer hidden">The correct answer is D. wavering. .</div>
+      </div>
+    </div>
+  <div id="quiz">
+      <div class="question">
+     
+          <p>6: Some people are good at terminating other people’s projects but are not capable of,,,,..theirs.</p>
+          <div class="options">
+              <div class="option" data-correct="false">A. initiating</div>
+              <div class="option" data-correct="false">B. organising</div>
+              <div class="option" data-correct="true">C. executing</div>
+              <div class="option" data-correct="false">D. designing </div>
+          </div>
+          <button class="check-answer hidden">Check Answer</button>
+          <div class="answer hidden"> The correct answer is C. executing..</div>
+      </div>
+ 
+    </div>
+    <div id="quiz">
+      <div class="question">
+          <p>7:	The precarious terraces of the stadium have  been transformed into a……	  walkway. </p>
+          <div class="options">
+              <div class="option" data-correct="false">A. durable</div>
+              <div class="option" data-correct="false">B. secure</div>
+              <div class="option" data-correct="true">C. smooth </div>
+              <div class="option" data-correct="false">D. narrow</div>
+          </div>
+          <button class="check-answer hidden">Check Answer</button>
+          <div class="answer hidden">The correct answer is C. smooth. </div>
+      </div>
+</div>
+       <div id="quiz">
+          <div class="question">
+              <p>8: The two political parties live today in……after four years of hostility. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. happiness </div>
+                  <div class="option" data-correct="true">B. amity </div>
+                  <div class="option" data-correct="false">C. agreement </div>
+                  <div class="option" data-correct="false">D. freedom</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is B. amity. </div>
+          </div>
+     
+       </div>
+      <div id="quiz">
+          <div class="question">
+              <p>9: The champions were elated after the tournament while their opponents looked</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. baffled </div>
+                  <div class="option" data-correct="true">B. dejected </div>
+                  <div class="option" data-correct="false"> C. pitiful </div>
+                  <div class="option" data-correct="false">D. frightened</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is B. dejected.</div>
+          </div>
+     
+      </div>
+      <div id="quiz">
+          <div class="question">
+              <p>10: That engineer was said to have used  inferior rather than…… materials in the  construction of the collapsed building.  .</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. excellent </div>
+                  <div class="option" data-correct="false">B. recommended </div>
+                  <div class="option" data-correct="true">C. quality </div>
+                  <div class="option" data-correct="false">D. exceptional </div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is C. quality. </div>
+          </div>
+
+
+      </div>
+        <div id="quiz">
+          <div class="question">
+
+              SECTION 2
+              From the words lettered A to D, choose the word that that best completes each of the following sentences.                
+
+              <p>11: I could not read w hat he wrote because his handwriting was…..</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. tiny </div>
+                  <div class="option" data-correct="false">B. eligible </div>
+                  <div class="option" data-correct="false">C. untidy </div>
+                  <div class="option" data-correct="true">D. illegible</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is D. illegible</div>
+          </div>
+
+
+        </div>
+        <div id="quiz">
+          <div class="question">
+              <p>12: When all the items on the agenda had been discussed, the meeting was</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. dismissed </div>
+                  <div class="option" data-correct="false">B. postponed </div>
+                  <div class="option" data-correct="true">C. adjourned </div>
+                  <div class="option" data-correct="false">D. dissolved</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is C. adjourned </div>
+          </div>
+        </div>
+        <div id="quiz">
+          <div class="question">
+              <p>13: Occasionally, universities award……  degrees to outstanding personalities.  </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A.ceremonial </div>
+                  <div class="option" data-correct="true">B. honorary </div>
+                  <div class="option" data-correct="false">C. temporary  </div>
+                  <div class="option" data-correct="false">D. respectable </div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is B. honorary</div>
+          </div>
+        </div>
+        <div id="quiz">
+          <div class="question">
+              <p>14: His thoughtlessness is simply beyond </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. idea </div>
+                  <div class="option" data-correct="false">B. assurance </div>
+                  <div class="option" data-correct="true">C.belief </div>
+                  <div class="option" data-correct="false">D. fate</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is C.belief </div>
+          </div>
+        </div>
+        <div id="quiz">
+          <div class="question">
+              <p>15: Many doctors have…… to western  countries for better opportunities.</p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. migrated </div>
+                  <div class="option" data-correct="false">B. travelled </div>
+                  <div class="option" data-correct="false">C. immigrated</div>
+                  <div class="option" data-correct="false">D. fled </div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is A. migrated</div>
+          </div>
+        </div>
+      <div id="quiz">
+          <div class="question">
+
+              <p>16: The younger brother insisted that he should be a…..	to the account. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. partner </div>
+                  <div class="option" data-correct="true">B. signatory </div>
+                  <div class="option" data-correct="false">C. guarantor </div>
+                  <div class="option" data-correct="false">D. participant</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. signatory</div>
+          </div>
+      </div>
+      <div id="quiz">
+          <div class="question">
+              <p>17: The military was able to….	the plan  to overthrow the government. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. fight </div>
+                  <div class="option" data-correct="false">B. disrupt </div>
+                  <div class="option" data-correct="true">C. thwart </div>
+                  <div class="option" data-correct="false">D. disturb</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. thwart</div>
+          </div>
+      </div>
+       <div id="quiz">
+          <div class="question">
+              <p>18: She gave her poem to her teacher to…….  for the school magazine.</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. read </div>
+                  <div class="option" data-correct="true">B. edit </div>
+                  <div class="option" data-correct="false">C. correct </div>
+                  <div class="option" data-correct="false">D. label</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. edit</div>
+          </div>
+
+          
+       </div>
+
+
+       <div id="quiz">
+          <div class="question">
+              <p>19: Freedom of movement is a	……..right  of every citizen. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. negotiated </div>
+                  <div class="option" data-correct="true">B. fundamental </div>
+                  <div class="option" data-correct="false">C. privileged </div>
+                  <div class="option" data-correct="false">D. foremost</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. fundamental</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+              <p>20: The governor granted the political prisoners </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. asylum </div>
+                  <div class="option" data-correct="false">B. acquittal </div>
+                  <div class="option" data-correct="true">C. amnesty </div>
+                  <div class="option" data-correct="false">D. bail</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. amnesty</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+           
+              SECTION 3
+              After each of the following- sentences, a list of possible interpretations is given. Choose the interpretation that is most appropriate for each sentence.
+
+
+              <p>21: The recruits are under his tutelage. This means that he
+              </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. assigns work to them.</div>
+                  <div class="option" data-correct="false">B. trains them</div>
+                  <div class="option" data-correct="false">C. disciplines them at work</div>
+                  <div class="option" data-correct="true">D. protects them</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is D. protects them</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+              <p>22: He listened attentively to. her cock-and-bull story. This means that she told </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. a terrifying story.</div>
+                  <div class="option" data-correct="false">B. an interesting story</div>
+                  <div class="option" data-correct="true">C. an incredible story</div>
+                  <div class="option" data-correct="false">D. a lot of folktales.</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is C. an incredible story</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+              <p>23: He has left the country for good this time. This means that he</p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. will never come back, i </div>
+                  <div class="option" data-correct="false">B. left for better conditions. </div>
+                  <div class="option" data-correct="false">C. became an adventurer</div>
+                  <div class="option" data-correct="false">D. will improve his credentials.</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is A. will never come back,</div>
+          </div>
+       </div> <div id="quiz">
+          <div class="question">
+              <p>24: The bus driver smelt a rat when an unregistered vehicle trailed him for several kilometres. This means that the bus driver  
+              </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. increased his speed</div>
+                  <div class="option" data-correct="true">B. became nervous.</div>
+                  <div class="option" data-correct="false">C. became suspicious.</div>
+                  <div class="option" data-correct="false">D. alerted the passengers.</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. became nervous.</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+              <p>25: The newly employed workers were remunerated handsomely. This means that</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. both old and new workers were paid.</div>
+                  <div class="option" data-correct="true">B. only newly employed workers were paid</div>
+                  <div class="option" data-correct="false">C. the salaries of the new workers were attractive.</div>
+                  <div class="option" data-correct="false">D. the salaries of the new workers were paid promptly </div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden"> The correct answer is B. only newly employed workers were paid</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+
+<div id="quiz">
+  <div class="question">
+
+<p>26: The chairman has come under fire over this project. This means that the chairman has been</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. severely criticized.</div>
+                  <div class="option" data-correct="false">B. highly praised</div>
+                  <div class="option" data-correct="true">C. given the go-ahead.</div>
+                  <div class="option" data-correct="false">D. charged to court.</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. given the go-ahead.</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+       <p>27:The ugly incidents of the Civil War are water under the bridge. This means that the incidents </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. continue to haunt us.</div>
+                  <div class="option" data-correct="false">B. have been experienced again. </div>
+                  <div class="option" data-correct="false">C. have been forgotten</div>
+                  <div class="option" data-correct="false">D. cannot be wished away</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. continue to haunt us.</div>
+          </div>
+       </div>
+       <p>28: My heart was in my mouth as I tried to open the envelope. 
+          This means that as I opened the envelope, I was
+          </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. very happy.</div>
+                  <div class="option" data-correct="false">B. quite eager</div>
+                  <div class="option" data-correct="true">C. deeply disappointed.</div>
+                  <div class="option" data-correct="false">D. extremely afraid.</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. deeply disappointed.</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>29:Throughout the long argument, the minister maintained his ground over the claims. 
+  This means that the minister
+   </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. accepted his error. </div>
+                  <div class="option" data-correct="false">B. refused to change his stand.</div>
+                  <div class="option" data-correct="false">C. said different things</div>
+                  <div class="option" data-correct="false">D. did not consider every view.</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. accepted his error.</div>
+          </div>
+       </div>
+       <div id="quiz">
+          <div class="question">
+<p>30:John may be sincere, but I suspect that he has an axe to grind. 
+  This means that John has a 
+   </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. selfish motive</div>
+                  <div class="option" data-correct="true">B. different opinion</div>
+                  <div class="option" data-correct="true">C. matter to attend to.</div>
+                  <div class="option" data-correct="false">D. solution to the problem</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. different opinion</div>
+          </div>
+       </div>         <div id="quiz">
+          <div class="question">
+
+              SECTION 4
+From the words lettered A to D below each of the following sentences, choose the word or group of words that is nearest in meaning to the underlined word as it is used in the sentence.	
+
+       <p>31: So much effluent has been poured into the stream that its water has become unsafe for
+          drinking.
+      </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. sewage </div>
+                  <div class="option" data-correct="false">B. disinfectant </div>
+                  <div class="option" data-correct="false">C. oil </div>
+                  <div class="option" data-correct="false">D. concoction</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. sewage</div>
+          </div>
+       </div>
+              <div id="quiz">
+              <div class="question">  
+       <p>32:The students became restive after the authorities increased their tuition fees </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. alarmed </div>
+                  <div class="option" data-correct="false">B. hostile</div>
+                  <div class="option" data-correct="false">C. noisy </div>
+                  <div class="option" data-correct="true">D. agitated</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is D. agitated</div>
+          </div>
+       </div>
+            <div id="quiz">
+            <div class="question">    
+<p>33: Ali plays the guitar with great dexterity</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. wisdom </div>
+                  <div class="option" data-correct="false">B. experience </div>
+                  <div class="option" data-correct="false">C. pride </div>
+                  <div class="option" data-correct="true">D. skill</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is D. skill</div>
+          </div>
+       </div>
+            <div id="quiz">
+            <div class="question">    
+<p>34:Obi’s behaviour is questionable. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. disputable</div>
+                  <div class="option" data-correct="false">B. worrisome </div>
+                  <div class="option" data-correct="true">C. dubious </div>
+                  <div class="option" data-correct="false">D. refutable</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. dubious </div>
+          </div>
+       </div>
+                <div id="quiz">
+                <div class="question">
+<p>35:The electricity supply in this community is erratic. </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. unpredictable </div>
+                  <div class="option" data-correct="false">B. disorderly </div>
+                  <div class="option" data-correct="false">C. low </div>
+                  <div class="option" data-correct="false">D. temporary</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. unpredictable</div>
+          </div>
+       </div>
+           <div id="quiz">
+           <div class="question">  
+        
+<p>36:He became really disheartened when he heard the news.  </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. defamed </div>
+                  <div class="option" data-correct="false">B. dishevelled </div>
+                  <div class="option" data-correct="true">C. depressed </div>
+                  <div class="option" data-correct="false">D. disturbed</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">  The correct answer is C. depressed </div>
+          </div>
+       </div>
+             <div id="quiz">
+             <div class="question">   
+       <p>37: The office has taken stringent measures to protect its facilities. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. suitable </div>
+                  <div class="option" data-correct="false">B. right </div>
+                  <div class="option" data-correct="tue">C. strict </div>
+                  <div class="option" data-correct="false">D. complete</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">  The correct answer is C. strict</div>
+          </div>
+       </div> 
+               <div id="quiz">
+          <div class="question">
+
+       <p>38:Adaobi was appalled by the shabby appearance of the man who brought her the message from home. </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. shocked </div>
+                  <div class="option" data-correct="false">B. discouraged </div>
+                  <div class="option" data-correct="false">C. annoyed </div>
+                  <div class="option" data-correct="false">D. humiliated</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">  The correct answer is A. shocked </div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>39:Henry likes to be involved in shady deals. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. unknown </div>
+                  <div class="option" data-correct="false">B. undisclosed </div>
+                  <div class="option" data-correct="true">C. dishonest </div>
+                  <div class="option" data-correct="false">D. doubtful</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. dishonest</div>
+          </div>
+       </div>
+             <div id="quiz">
+             <div class="question">   
+<p>40:A good student should be inquisitive. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. hardworking </div>
+                  <div class="option" data-correct="false">B. busy </div>
+                  <div class="option" data-correct="true">C. curious </div>
+                  <div class="option" data-correct="false">D.studious</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. curious</div>
+          </div>
+       </div>
+            <div id="quiz">
+            <div class="question">  
+
+SECTION 5
+From the words or group of words lettered A to D, choose the word or group of words that best completes each of the following sentences      
+<p>41:Life in the city is…..	expensive for most  people.</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. too much</div>
+                  <div class="option" data-correct="false">B. much very</div>
+                  <div class="option" data-correct="false">C. very much </div>
+                  <div class="option" data-correct="true">D. much too</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is D. much too</div>
+          </div>
+       </div>
+          <div id="quiz">
+          <div class="question">      
+<p>42:My father made me……at home. </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. stay </div>
+                  <div class="option" data-correct="false">B. stayed </div>
+                  <div class="option" data-correct="false">C. to be staying</div>
+                  <div class="option" data-correct="false">D. to stay</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. stay</div>
+          </div>
+       </div>
+           <div id="quiz">
+           <div class="question"> 
+ 
+       <p>43:The fireman managed to put the raging fire. </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. off</div>
+                  <div class="option" data-correct="false">B. out</div>
+                  <div class="option" data-correct="false">C. down</div>
+                  <div class="option" data-correct="false">D. away</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. off</div>
+          </div>
+       </div>
+           <div id="quiz">
+           <div class="question">
+       <p>44:The long-awaited match was called……	  at the last moment. </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. off</div>
+                  <div class="option" data-correct="false">B. out</div>
+                  <div class="option" data-correct="false">C. on</div>
+                  <div class="option" data-correct="false">D. up</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. off</div>
+          </div>
+       </div>
+          <div id="quiz">
+          <div class="question">      
+<p>45:Get to work! Don’t sit……..	 doing nothing.</p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. about</div>
+                  <div class="option" data-correct="false">B. up</div>
+                  <div class="option" data-correct="false">C. on</div>
+                  <div class="option" data-correct="false">D. by</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. about</div>
+          </div>
+       </div>
+            <div id="quiz">
+            <div class="question">
+             
+<p>46:We promised to tell the truth,…..	? </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. isn’t it</div>
+                  <div class="option" data-correct="true">B. didn’t we</div>
+                  <div class="option" data-correct="false">C. shouldn’t we</div>
+                  <div class="option" data-correct="false">D. wasn’t it</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. didn’t we</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>47:No sooner had we set off it started to rain.</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. that</div>
+                  <div class="option" data-correct="false">B. when</div>
+                  <div class="option" data-correct="true">C. than</div>
+                  <div class="option" data-correct="false">D. as</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. than</div>
+          </div>
+       </div>
+<div id="quiz">
+<div class="question"> 
+<p>48:I cannot put up……	his saucy behaviour.<p>
+<div class="options">
+  <div class="option" data-correct="false">A. on</div>
+  <div class="option" data-correct="true">B. with</div>
+  <div class="option" data-correct="false">C. from</div>
+  <div class="option" data-correct="false">D. by</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. with</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>49:Several…….. 	 attended the two-day  economic summit. </p>
+<div class="options">
+  <div class="option" data-correct="false">A. head of state</div>
+  <div class="option" data-correct="true">B. heads of states</div>
+  <div class="option" data-correct="false">C. heads of state</div>
+  <div class="option" data-correct="false">D. head of states</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. heads of states</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>50:I won’t go to the cinema with you; I…….	  the movie.</p>
+<div class="options">
+  <div class="option" data-correct="false">A. seeing</div>
+  <div class="option" data-correct="true">B. have seen</div>
+  <div class="option" data-correct="false">C. seen</div>
+  <div class="option" data-correct="false">D. had seen</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. have seen</div>
+</div>
+</div>
+<div id="quiz">
+            <div class="question">
+             
+<p>51:The committee has submitted its report ……the students’ riot.  </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. on </div>
+                  <div class="option" data-correct="false">B. for </div>
+                  <div class="option" data-correct="false">C. about </div>
+                  <div class="option" data-correct="false">D. at</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. on </div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>52:It’s been a rough life so far,…..?</p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. hasn’t it</div>
+                  <div class="option" data-correct="false">B. hadn’t it</div>
+                  <div class="option" data-correct="false">C. isn’t it </div>
+                  <div class="option" data-correct="false">D. wasn’t it</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. hasn’t it</div>
+          </div>
+       </div>
+<div id="quiz">
+<div class="question"> 
+<p>53:If I had known, I….	not have come.<p>
+<div class="options">
+  <div class="option" data-correct="false">A. should </div>
+  <div class="option" data-correct="false">B. ought </div>
+  <div class="option" data-correct="true">C. would</div>
+  <div class="option" data-correct="false">D. may</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. would</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>54:She had to work from……	 </p>
+<div class="options">
+  <div class="option" data-correct="false">A. morning till the evening </div>
+  <div class="option" data-correct="false">B. the morning till evening</div>
+  <div class="option" data-correct="false">C. the morning till the evening  e</div>
+  <div class="option" data-correct="true">D. morning till evening</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. morning till evening</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>55:He did it, but not…..the way I had expected. </p>
+<div class="options">
+  <div class="option" data-correct="false">A. as </div>
+  <div class="option" data-correct="true">B. quite </div>
+  <div class="option" data-correct="false">C. hardly </div>
+  <div class="option" data-correct="false">D. so</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. quite</div>
+</div>
+</div>
+<div id="quiz">
+            <div class="question">
+             
+<p>56:After stalking its prey for a while, the lion…… 	for the kill.</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. closed in</div>
+                  <div class="option" data-correct="true">B. closed up</div>
+                  <div class="option" data-correct="false">C.	closed on</div>
+                  <div class="option" data-correct="false">D. closed down</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. closed up</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>57:Mary and Jane are always quarrelling with….  </p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. each other</div>
+                  <div class="option" data-correct="false">B. themselves </div>
+                  <div class="option" data-correct="false">C. another </div>
+                  <div class="option" data-correct="false">D. either</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. each other</div>
+          </div>
+       </div>
+<div id="quiz">
+<div class="question"> 
+<p>58:They have been informed of his departure,….. ? <p>
+<div class="options">
+  <div class="option" data-correct="true">A. haven’t they</div>
+  <div class="option" data-correct="false">B. hadn’t they</div>
+  <div class="option" data-correct="false">C. wasn’t it</div>
+  <div class="option" data-correct="false">D. isn’t it</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. haven’t they</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>59:Although some students may be innocent,……	are guilty of this offence. </p>
+<div class="options">
+  <div class="option" data-correct="false">A. much </div>
+  <div class="option" data-correct="false">B.	great deal</div>
+  <div class="option" data-correct="true">C.	most</div>
+  <div class="option" data-correct="false">D. a good deal</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C.	most</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>60:She prefers singing…..dancing. </p>
+<div class="options">
+  <div class="option" data-correct="false">A. besides </div>
+  <div class="option" data-correct="false">B. aside </div>
+  <div class="option" data-correct="false">C. than </div>
+  <div class="option" data-correct="true">D. to</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. to</div>
+</div>
+</div>
+<div id="quiz">
+            <div class="question">
+             
+<p>61:Is that the lady……	you planned to visit?  </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. which </div>
+                  <div class="option" data-correct="false">B. who </div>
+                  <div class="option" data-correct="false">C. whose </div>
+                  <div class="option" data-correct="true">D. whom</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is D. whom</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>62:The children……. in the pool after school. </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. swam </div>
+                  <div class="option" data-correct="false">B. swum </div>
+                  <div class="option" data-correct="false">C. swimming</div>
+                  <div class="option" data-correct="true">D. swim</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is D. swim</div>
+          </div>
+       </div>
+<div id="quiz">
+<div class="question"> 
+<p>63:In spite of all their shortcomings, we cannot<p>
+<div class="options">
+  <div class="option" data-correct="false">A. only </div>
+  <div class="option" data-correct="true">B. but </div>
+  <div class="option" data-correct="false">C. also </div>
+  <div class="option" data-correct="false">D. still</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. but</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>64:The choice to go to the university is entirely…..  </p>
+<div class="options">
+  <div class="option" data-correct="true">A. yours </div>
+  <div class="option" data-correct="false">B. you </div>
+  <div class="option" data-correct="false">C. yours’ </div>
+  <div class="option" data-correct="false">D. your’s</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. yours</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>65:The African extended family system gives security to…..members.</p>
+<div class="options">
+  <div class="option" data-correct="false">A. his </div>
+  <div class="option" data-correct="false">B. her </div>
+  <div class="option" data-correct="true">C. its </div>
+  <div class="option" data-correct="false">D. their</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. its</div>
+</div>
+</div>
+<div id="quiz">
+            <div class="question">
+             
+<p>66:We all look forward to meeting the……</p>
+              <div class="options">
+                  <div class="option" data-correct="true">A.beautiful, young, Nigerian musician</div>
+                  <div class="option" data-correct="false">B. young, Nigerian, beautiful musician</div>
+                  <div class="option" data-correct="false">C. Nigerian, young, beautiful musician</div>
+                  <div class="option" data-correct="false">D. Nigerian, beautiful, young musician</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A.beautiful, young, Nigerian musician</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>67:One of my….. is a lecturer in the 	university.</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. sister</div>
+                  <div class="option" data-correct="false">B. sister's</div>
+                  <div class="option" data-correct="true">C. sisters</div>
+                  <div class="option" data-correct="false">D. sisters'</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. sisters</div>
+          </div>
+       </div>
+<div id="quiz">
+<div class="question"> 
+<p>68:Regina pleaded with her son to…..the  habit of smoking.<p>
+<div class="options">
+  <div class="option" data-correct="false">A. come out</div>
+  <div class="option" data-correct="false">B. come over</div>
+  <div class="option" data-correct="true">C. come off</div>
+  <div class="option" data-correct="false">D. come from</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. come off</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>69:Their proposal looks………	than ours. </p>
+<div class="options">
+  <div class="option" data-correct="false">A. more workable a little bit </div>
+  <div class="option" data-correct="true">B. a little bit more workable</div>
+  <div class="option" data-correct="false">C. more a little bit workable</div>
+  <div class="option" data-correct="false">D. workable a little bit more    </div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. a little bit more workable</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>70:You will be none…..	for it if you take  the examinations in November.</p>
+<div class="options">
+  <div class="option" data-correct="false">A. the worst</div>
+  <div class="option" data-correct="false">B.worst</div>
+  <div class="option" data-correct="false">C. worse</div>
+  <div class="option" data-correct="true">D. the worse</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. the worse</div>
+</div>
+</div>
+<div id="quiz">
+            <div class="question">
+
+              SECTION 6
+
+              In the following passage, the numbered gaps indicate missing words. Against each number in the list below the passage, four options are given in columns lettered A to D. Choose the word that is the most suitable to fill the numbered gaps in the passage.
+              
+              Money serves as a	…71… of exchange in the modem world. This is perhaps the most important …72…	of money. People who have money can use it to buy goods and…73….. Without it, trade will be carried out on the basis of….74….where goods or services are exchanged as was the practice in the years gone by. This mode of trading has a number of disadvantages, as people will have to match their …75….	with those of other people. For example, if a hunter wants to trade his ....76….	for yam, he must find a….	77….who needs what he is trading. Another
+              difficulty is determining the…..78…..of each item needed in the exchange. Therefore, this mode of trading is no longer commonly practised.
+              
+              Nowadays, people pay money for goods and services rendered both locally and internationally. International trade boosts the….	79….	of a nation. The….80…..frequently used in international trade is the US Dollar.
+                             
+<p>71: </p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. value</div>
+                  <div class="option" data-correct="true">B. medium</div>
+                  <div class="option" data-correct="false">C. type</div>
+                  <div class="option" data-correct="false">D. form</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is B. medium</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>72:</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. aspect</div>
+                  <div class="option" data-correct="false">B. duty</div>
+                  <div class="option" data-correct="true">C. function</div>
+                  <div class="option" data-correct="false">D. feature</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. function</div>
+          </div>
+       </div>
+<div id="quiz">
+<div class="question"> 
+<p>73:<p>
+<div class="options">
+  <div class="option" data-correct="false">A. handiwork</div>
+  <div class="option" data-correct="true">B. services</div>
+  <div class="option" data-correct="false">C. skill</div>
+  <div class="option" data-correct="false">D. businesses</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. services</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>74:</p>
+<div class="options">
+  <div class="option" data-correct="true">A. barter</div>
+  <div class="option" data-correct="false">B. dealings</div>
+  <div class="option" data-correct="false">C. negotiation</div>
+  <div class="option" data-correct="false">D. exchange</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. barter</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question"> 
+<p>75:</p>
+<div class="options">
+  <div class="option" data-correct="true">A. needs</div>
+  <div class="option" data-correct="false">B. intentionsn</div>
+  <div class="option" data-correct="false">C. wishes</div>
+  <div class="option" data-correct="false">D. desires</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. needs</div>
+</div>
+</div>
+<div id="quiz">
+            <div class="question">
+             
+<p>76:</p>
+              <div class="options">
+                  <div class="option" data-correct="true">A. kill</div>
+                  <div class="option" data-correct="false">B. animal</div>
+                  <div class="option" data-correct="false">C. livestock</div>
+                  <div class="option" data-correct="false">D. prey</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is A. kill</div>
+          </div>
+       </div>
+               <div id="quiz">
+               <div class="question"> 
+<p>77:</p>
+              <div class="options">
+                  <div class="option" data-correct="false">A. grower</div>
+                  <div class="option" data-correct="false">B. labourer</div>
+                  <div class="option" data-correct="true">C. farmer</div>
+                  <div class="option" data-correct="false">D. customer</div>
+              </div>
+              <button class="check-answer hidden">Check Answer</button>
+              <div class="answer hidden">The correct answer is C. farmer</div>
+          </div>      
+ <p>80:</p>
+<div class="options">
+    <div class="option" data-correct="false">A. cash</div>
+    <div class="option" data-correct="false">B. money</div>
+    <div class="option" data-correct="true">C. currency</div>
+    <div class="option" data-correct="false">D. notes</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. currency</div>
+</div>
+</div>
+
+
+
+
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="progress">Progress: 0/80</div>
+
+
+    <script>
+        var score = 0;
+        var progress = 0;
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/50");
+        });
+
+        $(".check-answer").click(function() {
+            $(this).siblings(".answer").removeClass("hidden");
+        });
+    </script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+<!-- button -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.footer-widget ul li {
+display: inline-block;
+float: right;
+width: 50%;
+margin-bottom: 10px;
+}
+.footer-widget ul li a:hover{
+color: darkcyan;
+}
+.footer-widget ul li a {
+color: lightblue;
+text-transform: capitalize;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 50px;
+}
+</style>
+</div>
+</div>
+<div class="footer-content pt-5 pb-5">
+<div class="row">
+
+
+
+
+<!--stop -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+<a href="x.com"><i class="fab fa-twitter"></i></i></a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">courses</a></li>
+<li><a href="#">classroom</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">blog</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+
+
+
+
+</div>
+</footer>
+</html>
+
+
+
+
+
