@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  background-color: #efefef;
+}
+
+.logo{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 90px;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 1px #747474, 
+      -1px 3px 1px #767676, 
+      -2px 5px 1px #787878, 
+      -3px 7px 1px #7a7a7a,
+      -4px 9px 1px #7f7f7f,
+      -5px 11px 1px #838383,
+      -6px 13px 1px #878787,
+      -7px 15px 1px #8a8a8a, 
+      -8px 17px 1px #8e8e8e,
+      -9px 19px 1px #949494,
+      -10px 21px 1px #989898,
+      -11px 23px 1px #9f9f9f,
+      
+}
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #f9f9f9;
+  
+}
+#progress{
+    color: #f9f9f9;
+float: right;
+}
+
+
+#progressBar {
+width: 100%;
+height: 20px;
+margin-top: 10px;
+color: #f9f9f9;
+
+}
+       
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+.hidden {display: none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="quiz">
+<div class="question">
+    Each question is followed by four options lettered A to D. Find the correct option for each question.
+
+
+<p>1: The ability of organisms to maintain a constant internal environment is known as</p>
+<div class="options">
+<div class="option" data-correct="false">A.diuresis </div>
+<div class="option" data-correct="false">B. endosmosis</div>
+<div class="option" data-correct="true">C. homeostasis</div>
+<div class="option" data-correct="false">D. plasmolysis</div></div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden"> </div> The correct answer is C. homeostasis</div>
+</div>
+<div id="quiz">
+<div class="question">
+    The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.
+            
+    <p>2: The likely reason why the student failed the test was that the</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. labels were wrong and the guidelines were not touching the structures</div>
+                <div class="option" data-correct="false">B. net venation shown were few, rough, not properly drawn and wrongly placed</div>
+                <div class="option" data-correct="false">C. leaf was too tapered at the apex, the leaf stalk was too short and the shape of leaf was wrong.</div>
+                <div class="option" data-correct="false">D. leaf venation should have been parallel and the midrib should be thicker.</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. labels were wrong and the guidelines were not touching the structures</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+
+            <p>3:Which other features of the diagram, if shown, would have earned the student more marks? The </p>
+            <div class="options">
+                <div class="option" data-correct="false">A. colour and size</div>
+                <div class="option" data-correct="true">B. title and magnification.</div>
+                <div class="option" data-correct="false">C. habitat and agricultural qualities of leaf</div>
+                <div class="option" data-correct="false">D. spelling of label and length of midrib</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. title and magnification.</div>
+        </div>
+      </div>
+   
+       <div id="quiz">
+        <div class="question">
+            
+            The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.
+            
+            <p>4: Which group of organisms is illustrated? </p>
+            <div class="options">
+                <div class="option" data-correct="true">A. bacteria</div>
+                <div class="option" data-correct="false">B. viruses</div>
+                <div class="option" data-correct="false">C. fungi </div>
+                <div class="option" data-correct="false">D. protozoa</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> So the correct answer is A. bacteria</div>
+        </div>
+       </div>
+      <div id="quiz">
+        <div class="question">
+            <p>5: In which of the illustrated forms docs the organism that causes cholera exist?</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. I</div>
+                <div class="option" data-correct="false">B. II</div>
+                <div class="option" data-correct="false">C. IV</div>
+                <div class="option" data-correct="false">D. V</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. I.</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+
+            Study the list of organisms below and use them to answer questions 6 and 7.
+        I	- Hydra
+        II	- Owl
+        III	- Snake
+        IV	- Snail
+       
+            <p>6: Arrangement of the organisms in order of increasing complexity is </p>
+            <div class="options">
+                <div class="option" data-correct="false">A. I – II – III – IV</div>
+                <div class="option" data-correct="false">B. II – III – I – IV</div>
+                <div class="option" data-correct="true">C. I – IV – III – II.</div>
+                <div class="option" data-correct="false">D. IV – III – II – I.</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The correct answer is C. 	I – IV – III – II.</div>
+        </div>
+      </div>
+      <div id="quiz">
+        <div class="question">
+            <p>7:The Phylum of the organism labelled IV is </p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Coelentcrata</div>
+                <div class="option" data-correct="false">B. Platyhclminthes</div>
+                <div class="option" data-correct="true">C. Mollusca </div>
+                <div class="option" data-correct="false">D. Arthropoda</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is C. Mollusca </div>
+        </div>
+      </div>
+         <div id="quiz">
+            <div class="question">
+
+                The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.
+                
+        <p>8: In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar?  </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I </div>
+                    <div class="option" data-correct="true">B. II </div>
+                    <div class="option" data-correct="false">C. III </div>
+                    <div class="option" data-correct="false">D. IV</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. II. </div>
+            </div>
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <p>9: 	The oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labelled </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I </div>
+                    <div class="option" data-correct="false">B. II. </div>
+                    <div class="option" data-correct="true"> C.III. </div>
+                    <div class="option" data-correct="false">D. IV.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C. III.</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>10: An example of a process that involves osmosis is the</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. movement of digested food from ileum into blood capillaries.  </div>
+                    <div class="option" data-correct="false">B. translocation of starch from leaves to all parts of a plant.  </div>
+                    <div class="option" data-correct="false">C. reabsorption of food nutrients from the kidney into blood capillarie </div>
+                    <div class="option" data-correct="true">D. movement of water from root hairs into cortical cell. </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. movement of water from root hairs into cortical cell.. </div>
+            </div>
+           </div>
+          <div id="quiz">
+            <div class="question">                
+       <p>11: Growth in animals differs from that in plants because growth in </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. plants is intercalary  </div>
+                    <div class="option" data-correct="false">B. animals is apical</div>
+                    <div class="option" data-correct="false">C.	plants is from within</div>
+                    <div class="option" data-correct="true">D. plants is indefinite</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. plants is indefinite</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.
+            <p>12: The illustrated structure is a part of the</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. cervical vertebrae  </div>
+                    <div class="option" data-correct="true">B. axial skeleton </div>
+                    <div class="option" data-correct="false">C. axis vertebrae </div>
+                    <div class="option" data-correct="false">D. appendicular skeleton</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. axial skeleton </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>13: 	An individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.Lumbar, eye and teeth </div>
+                    <div class="option" data-correct="false">B. liar, brain and hinge join </div>
+                    <div class="option" data-correct="true">C. Eye, cerebellum and ear  </div>
+                    <div class="option" data-correct="false">D. 	Clavicle, tongue and pelvis </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C. eye, cerebellum and ear</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+          <p>14: The tricuspid valve is located between the?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. left auricle and left ventricle </div>
+                    <div class="option" data-correct="true">B. 	right auricle and the superior vena cava </div>
+                    <div class="option" data-correct="false">C. aorta and the left ventricle. </div>
+                    <div class="option" data-correct="false">D. right auricle and right ventricle</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. right auricle and the superior vena cava</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16. 
+                <p>15: 	The parts labelled I, II, III and IV respectively are</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. larynx, bronchus, bronchiole and trachea.</div>
+                    <div class="option" data-correct="false">B. bronchus, bronchiole, trachea and larynx. </div>
+                    <div class="option" data-correct="false">C. bronchiole, trachea, bronchus and larynx./div>
+                    <div class="option" data-correct="false">D. larynx, trachea, bronchiole and bronchus </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. larynx, bronchus, bronchiole and trachea.</div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+                The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.
+                <p>16: 	Which of the following hormones is wrongly paired with its secretory organ?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.heart </div>
+                    <div class="option" data-correct="true">B. lung </div>
+                    <div class="option" data-correct="false">C. kidney </div>
+                    <div class="option" data-correct="false">D. sternum.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. lung</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: Which of the following hormones is wrongly paired with its secretory organ? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Insulin and pancreas</div>
+                    <div class="option" data-correct="false">B. Oestrogen and ovary </div>
+                    <div class="option" data-correct="true">C. 	Oxytocin and hypothalamus </div>
+                    <div class="option" data-correct="false">D. Adrenalin and kidney</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C.	Oxytocin and hypothalamus</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: 	The eye defect caused by an uneven curvature of the cornea or lens or both is </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. myopia </div>
+                    <div class="option" data-correct="true">B. astigmatism </div>
+                    <div class="option" data-correct="false">C. presbyopia </div>
+                    <div class="option" data-correct="false">D. 	hypermetropia</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. astigmatism </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>19: 	The androecium in a flowering plant is a collection of</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. ovules </div>
+                    <div class="option" data-correct="false">B. stamens</div>
+                    <div class="option" data-correct="false">C. filaments</div>
+                    <div class="option" data-correct="false">D. sperms</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. ovules</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>20: 	Placentation in fruits is referred to as the </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. part of the ovary where the ovules originate and remain till maturity. </div>
+                    <div class="option" data-correct="false">B. formation of a single carpel joined at the two edges of an ovule </div>
+                    <div class="option" data-correct="true">C.	arrangement of ovules in the ovary of a flower</div>
+                    <div class="option" data-correct="false">D. ovules borne on a central column of tissues in an ovary.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C.arrangement of ovules in the ovary of a flower.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+         <p>21: 	Which of the following processes does not occur during photosynthesis? </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 	Carbon (IV) oxide is evolved  </div>
+                    <div class="option" data-correct="false">B. water is split</div>
+                    <div class="option" data-correct="false">C. Oxygen is evolved</div>
+                    <div class="option" data-correct="false">D. Energy from sunlight is absorbed</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Carbon (IV) oxide is evolved  </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>22: Stunted growth and small yellow leaves in plants are symptoms of the deficiencies of? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. sulphur.</div>
+                    <div class="option" data-correct="false">B.iron</div>
+                    <div class="option" data-correct="false">C.	magnesium </div>
+                    <div class="option" data-correct="true">D. nitrogen</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. nitrogen</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>23: The structure that its action could result in choking when talking and eating at the same time is</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. epiglottis.</div>
+                    <div class="option" data-correct="false">B. oesophagus </div>
+                    <div class="option" data-correct="false">C. liver.</div>
+                    <div class="option" data-correct="false">D. stomach.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. epiglottis</div>
+            </div>
+         </div> <div id="quiz">
+            <div class="question">
+                <p>24: The food substance that would produce the highest amount of energy is   </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. glucose.</div>
+                    <div class="option" data-correct="true">B. fat.</div>
+                    <div class="option" data-correct="false">C. amino acid.</div>
+                    <div class="option" data-correct="false">D. protein.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. fat</div>
+               </div>
+             </div>
+              <div id="quiz">
+                <div class="question">
+        <p>25: Organisms that feed on dead, decaying tissues of other organisms are known as </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. parasites.</div>
+                    <div class="option" data-correct="false">B. autotrophs</div>
+                    <div class="option" data-correct="false">C. heterotrophs.</div>
+                    <div class="option" data-correct="true">D. saprophytes </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. saprophytes</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+         <p>26: The type of nutrition in which organisms take in solid organic materials into their body is  </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. holozoic.</div>
+                    <div class="option" data-correct="false">B. symbiotic</div>
+                    <div class="option" data-correct="false">C. saprophytic.</div>
+                    <div class="option" data-correct="false">D. parasitic </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. holozoic</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+        <p>27:The mouth parts of a grasshopper are adapted for</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. chewing</div>
+                    <div class="option" data-correct="false">B. grinding </div>
+                    <div class="option" data-correct="false">C.sucking</div>
+                    <div class="option" data-correct="false">D. absorption</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. chewing.</div>
+            </div>
+         </div>
+         <p>28: A group of organisms belonging to different species that coexist in the same habitat and interact is referred to as</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. population</div>
+                    <div class="option" data-correct="false">B. biosphere.</div>
+                    <div class="option" data-correct="false">C. niche</div>
+                    <div class="option" data-correct="true">D.community </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D.community.</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+       <p>29: Which of the following factors is the main problem facing xerophytes?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Conservation of excess water. </div>
+                    <div class="option" data-correct="false">B. Competition for sunlight  .</div>
+                    <div class="option" data-correct="true">C. Lack of adequate water</div>
+                    <div class="option" data-correct="false">D. Poor formation of roots</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Lack of adequate water.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+    <p>30:Fishes survive in water mainly because they possess </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. streamlined body</div>
+                    <div class="option" data-correct="false">B. scales</div>
+                    <div class="option" data-correct="false">C.paired fins</div>
+                    <div class="option" data-correct="true">D. gills</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. gills</div>
+            </div>
+         </div>        
+         <div id="quiz">
+            <div class="question">
+                <p>31: Which of the following instruments is not used in measuring abiotic factors in a habitat?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Thermometer   </div>
+                    <div class="option" data-correct="true">B. microscope </div>
+                    <div class="option" data-correct="false">C. Hygrometer   </div>
+                    <div class="option" data-correct="false">D. wind vane </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. microscope</div>
+            </div>
+         </div>
+                <div id="quiz">
+                <div class="question">  
+         <p>32:Which of the following soil types have a high capillarity? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. sand and clay </div>
+                    <div class="option" data-correct="true">B. silt and clay </div>
+                    <div class="option" data-correct="false">C. silt and sand </div>
+                    <div class="option" data-correct="false">D. loam and sand</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. silt and clay</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">    
+<p>33: The capturing and digestion of insects by a pitcher plant is a special form of nutrition that  is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. chemosynthetic </div>
+                    <div class="option" data-correct="false">B. saprophytic </div>
+                    <div class="option" data-correct="true">C. heterotrophic. </div>
+                    <div class="option" data-correct="false">D. autotrophic</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. heterotrophic.</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">   
+    <p>34: Which of the following organisms would be the producer in a food chain?  </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. goat</div>
+                    <div class="option" data-correct="true">B. maize</div>
+                    <div class="option" data-correct="false">C. man</div>
+                    <div class="option" data-correct="false">D. Bacterium</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. maize </div>
+            </div>
+         </div>
+                  <div id="quiz">
+                  <div class="question">
+<p>35:The rate of decomposition of dead organisms is faster in the tropical rainforest than in other bionics because </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. of consistent cool temperature</div>
+                    <div class="option" data-correct="false">B. of the relatively constant daylight. </div>
+                    <div class="option" data-correct="false">C. there are more plants. </div>
+                    <div class="option" data-correct="true">D. of availability of moisture</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. of availability of moisture</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">  
+                The diagrams below are illustrations of organisms in a habitat. Study them and answer questions 36 and 37.
+ 
+        <p>36:	The feeding relationship between the organisms labelled III and IV in the diagrams is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. mutualism</div>
+                    <div class="option" data-correct="false">B. parasitism </div>
+                    <div class="option" data-correct="true">C. predation. </div>
+                    <div class="option" data-correct="false">D. saprophytism.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is C. predation. </div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+         <p>37: The producer in the diagrams is? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I because it contains the least amount of energy. </div>
+                    <div class="option" data-correct="true">B. I because it uses sunlight to manufacture food.</div>
+                    <div class="option" data-correct="false">C. IV because it is the largest organism in the diagram </div>
+                    <div class="option" data-correct="false">D. IV because it is the organism that receives the highest amount of sunlight.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is B. I because it uses sunlight to manufacture food.</div>
+            </div>
+         </div> 
+                 <div id="quiz">
+            <div class="question">
+
+         <p>38:Which of the following activities is against the conservation of natural resources? </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. competition </div>
+                    <div class="option" data-correct="false">B. predation </div>
+                    <div class="option" data-correct="false">C. parasitism </div>
+                    <div class="option" data-correct="false">D. commensalism</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is A. competition </div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>39:The conservation of natural resources is enhanced by the following practices except </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. controlling farming activities </div>
+                    <div class="option" data-correct="false">B. protecting endangered species </div>
+                    <div class="option" data-correct="true">C. poaching in game reserves </div>
+                    <div class="option" data-correct="false">D. establishing parks and gardens.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. poaching in game reserves</div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+<p>40:The burning of farmlands should be discouraged because it </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. destroys the organic components of the soil </div>
+                    <div class="option" data-correct="false">B. increases the population of wild animals on the farm. </div>
+                    <div class="option" data-correct="false">C. increases the dormancy period of some seeds </div>
+                    <div class="option" data-correct="false">D.destroys some plant pests.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. destroys the organic components of the soil</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">  
+     
+<p>41:The use of a lighter instead of match sticks is a way of conserving </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. petroleum</div>
+                    <div class="option" data-correct="false">B. forest</div>
+                    <div class="option" data-correct="false">C. water </div>
+                    <div class="option" data-correct="false">D. wildlife </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. petroleum</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>42:An accident victim was successfully transfused with blood from the father whose blood 	group is AB. The blood group of the accident victim is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. B </div>
+                    <div class="option" data-correct="false">B. O </div>
+                    <div class="option" data-correct="true">C. AB</div>
+                    <div class="option" data-correct="false">D. A</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. AB</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question"> 
+   
+         <p>43:Which of the following traits in humans is an example of physiological variation? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Skin colour</div>
+                    <div class="option" data-correct="false">B. Fingerprint</div>
+                    <div class="option" data-correct="true">C. Tongue rolling</div>
+                    <div class="option" data-correct="false">D. Height</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tongue rolling</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">
+         <p>44:Individuals belonging to blood group O are universal donors because</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. antigens are absent in their blood cells.</div>
+                    <div class="option" data-correct="false">B. members of the group constitute the highest number of humans</div>
+                    <div class="option" data-correct="false">C. there are no antibodies in their blood plasma</div>
+                    <div class="option" data-correct="false">D. the antigens in their blood cells are easily destroyed</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. antigens are absent in their blood cells</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>45:Two tall plants were crossed and all the F, plants were tall. When the F plants were 	selfed, some of the F2 plants were tall while others were short. What are the possible 	genotypes of the original plants?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Tt and tt</div>
+                    <div class="option" data-correct="false">B. TT and TT</div>
+                    <div class="option" data-correct="false">C. tt and tt</div>
+                    <div class="option" data-correct="true">D. TT and Tt</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. TT and Tt</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">
+               
+<p>46:Which of the following statements best describes a test cross? It is </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. to determine the genotype of an individual whose phenotype is known</div>
+                    <div class="option" data-correct="false">B. to determine the phenotype of an individual whose genotype is known</div>
+                    <div class="option" data-correct="true">C. between the progeny of parents to ascertain their external expressions</div>
+                    <div class="option" data-correct="false">D. between two homozygous recessive individuals to confirm the genotypes of the offspring</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. between the progeny of parents to ascertain their external expressions</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>47:Which of the following statements about sex-linked traits is not correct?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Males inherit sex-linked traits from their fathers</div>
+                    <div class="option" data-correct="false">B. Sex-linked traits are more common in males </div>
+                    <div class="option" data-correct="false">C. Females can be carriers because they can be heterozygous for the trait</div>
+                    <div class="option" data-correct="true">D. Males are never carriers since they only receive one sex chromosome</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Males are never carriers since they only receive one sex chromosome</div>
+            </div>
+         </div>
+ <div id="quiz">
+ <div class="question"> 
+<p>48:When two carriers of sickle cell anaemia produce an offspring, the probability of the 	offspring being a sickler is<p>
+<div class="options">
+    <div class="option" data-correct="false">A. ¾</div>
+    <div class="option" data-correct="true">B. ¼ </div>
+    <div class="option" data-correct="false">C. ½ </div>
+    <div class="option" data-correct="false">D. 2/2</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. ¼ </div>
+</div>
+</div>
+ <div id="quiz">
+ <div class="question"> 
+<p>49:Which of the following organisms exhibits adaptive colouration? </p>
+<div class="options">
+    <div class="option" data-correct="false">A. Rabbit</div>
+    <div class="option" data-correct="true">B. Chameleon</div>
+    <div class="option" data-correct="false">C. Mouse</div>
+    <div class="option" data-correct="false">D. Dog</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. Chameleon</div>
+</div>
+</div>
+<div id="quiz">
+ <div class="question"> 
+<p>50:Which of the following sequences is the correct evolutionary trend in organisms?</p>
+<div class="options">
+    <div class="option" data-correct="true">A. Algae —► Liverwort —►Ferns —►Angiosperms</div>
+    <div class="option" data-correct="false">B. Liverwort —►Angiosperms —► Ferns —► Algae</div>
+    <div class="option" data-correct="false">C. Angiosperms —► Algae —► Ferns —► Liverwort</div>
+    <div class="option" data-correct="false">D. Fems —► Liverwort —► Angiosperms—► Algae</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. Algae —► Liverwort —►Ferns —►Angiosperms</div>
+</div>
+</div>
+<div id="quiz">
+              <div class="question">
+               
+              </div>
+              <div id="score">Score: 0</div>
+              <div id="progress">Progress: 0/50</div>
+          
+          
+              <script>
+                  var score = 0;
+                  var progress = 0;
+          
+                  $(".option").click(function() {
+                      if ($(this).hasClass("selected")) {
+                          return;
+                      }
+                      $(this).addClass("selected");
+                      $(this).siblings().removeClass("correct incorrect");
+                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+                      if ($(this).data("correct")) {
+                          score++;
+                          $("#score").text("Score: " + score);
+                      } else {
+                          $(this).parent().siblings(".check-answer").removeClass("hidden");
+                      }
+                      progress++;
+                      $("#progress").text("Progress: " + progress + "/50");
+                  });
+          
+                  $(".check-answer").click(function() {
+                      $(this).siblings(".answer").removeClass("hidden");
+                  });
+              </script>
+          </body>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+          <!-- button -->
+          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <style>
+          
+          
+          .footer-social-icon i {
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 38px;
+          border-radius: 50%;
+          }
+          .footer-widget ul li {
+          display: inline-block;
+          float: right;
+          width: 50%;
+          margin-bottom: 10px;
+          }
+          .footer-widget ul li a:hover{
+          color: darkcyan;
+          }
+          .footer-widget ul li a {
+          color: lightblue;
+          text-transform: capitalize;
+          }
+          .footer-menu li {
+          display: inline-block;
+          margin-left: 50px;
+          }
+          </style>
+          </div>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+          <div class="row">
+          
+          
+          
+          
+          <!--stop -->
+          
+          
+          
+          
+          
+          
+          </div>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+          <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+          <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">courses</a></li>
+          <li><a href="#">classroom</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">blog</a></li>
+          </ul>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          
+          
+          
+          
+          </div>
+          </footer>
+          </html>
+          
+          
+          
+          
+          
+        
