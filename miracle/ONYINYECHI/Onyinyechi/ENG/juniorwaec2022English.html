@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: #3498db;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+#progressBar {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+       
+        .correct { background-color: green; }
+        .incorrect { background-color: red; }
+        .hidden { display: none; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="quiz">
+        <div class="question">
+<!—-your instructions goes here—>
+Example: 
+<p>Instruction: Choose the word that is nearly opposite in meaning to the underlined word in each of the following sentences.</p>
+            <p>1: The old man <u>occupied</u> the rat-infested building in the slum.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Built </div>
+                <div class="option" data-correct="false">B. Inhabited</div>
+                <div class="option" data-correct="false">C. Rented</div>
+                <div class="option" data-correct="true">D. Vacated</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The opposite of "occupied" is "vacated" because, the term "occupied" means filled or taken while, vacated means to leave or abandon a place making it empty or unoccupied. Example: they were asked to vacate the building. So the correct answer is D. Vacated</div>
+        </div>
+    <div id="quiz">
+        <div class="question">
+            <p>2: The Auditor could not identify the <u>authentic</u> receipt.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Real</div>
+                <div class="option" data-correct="true">B. Fake</div>
+                <div class="option" data-correct="false">C. Earlier</div>
+                <div class="option" data-correct="false">D. Lost</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The word "vacant" means genuine or real so the opposite word would be "fake" which means counterfeit or not genuine so the correct answer is B. Fake</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+            <p>3: The meat is very <u>tough</u>.?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Delicious</div>
+                <div class="option" data-correct="false">B. Hard</div>
+                <div class="option" data-correct="false">C. Mild</div>
+                <div class="option" data-correct="true">D. Tender</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The word "tough" describes something that is difficult to chew or cut due to its hardness,the nearly opposite would be tender which means easy to chew or cut due to softness so the correct answer is D. Tender</div>
+            </div>
+        </div>
+           <div id="quiz">
+             <div class="question">
+            <p>4: Ojo <u>denied</u> that he stole the watch.</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. Admitted</div>
+                <div class="option" data-correct="false">B. Argued</div>
+                <div class="option" data-correct="false">C. Emphasized</div>
+                <div class="option" data-correct="false">D. Said</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The word "Denied" means to declare that something is not true,the nearly opposite would be "admitted" which means to confess or acknowledge something is true so the correct answer is A. Admitted</div>
+            </div>
+      <div id="quiz">
+        <div class="question">
+            <p>5: The bus driver <u>slowed</u> down as he overtook the lorry. </p>
+            <div class="options">
+                <div class="option" data-correct="true">A. Accelerated </div>
+                <div class="option" data-correct="false">B. Dispatched</div>
+                <div class="option" data-correct="false">C. Ran</div>
+                <div class="option" data-correct="false">D. Flew</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The word "slowed" indicates a decrease in speed, so the nearly opposite word would be "accelerated" which means to increase in speed. So the correct answer is A. Accelerated </div>
+        </div>
+     <div id="quiz">
+        <div class="question">
+<p>Instruction: Choose the right option which has almost the same meaning as the underlined word in each of the following sentences.</p>
+            <p>6: My uncle thinks a map is <u>essential</u> for this journey</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. Invaluable </div>
+                <div class="option" data-correct="false">B. Useful</div>
+                <div class="option" data-correct="false">C. Unnecessary</div>
+                <div class="option" data-correct="false">D. Worthless</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The word "essential" implies that something is necessary for a particular purpose. "invaluable" means extremely useful or indispensable, making it the nearest in meaning to the word . So the correct answer is B. Useful</div>
+        </div>
+   
+      </div>
+        <div class="question">
+            <p>7: The manger says he must charge a fee for <u>admission</u>.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Attendance</div>
+                <div class="option" data-correct="true">B.  Entrance</div>
+                <div class="option" data-correct="false">C. Entertainment </div>
+                <div class="option" data-correct="false">D. Membership</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The word "admission" refers to an act of entering a place or even often after paying a fee, "entrance" is the nearest in meaning to admission as it relates to gaining access to a location or event. So the correct answer is B. Entrance</div>
+        </div>
+ 
+         <div id="quiz">
+            <div class="question">
+                <p>8: The secretary's action at the meeting was very <u>offensive</u>.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Annoying</div>
+                    <div class="option" data-correct="false">B. Clear</div>
+                    <div class="option" data-correct="false">C. Childish</div>
+                    <div class="option" data-correct="false">D. Sweet</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">"Offensive" suggest something that is likely to cause displeasure or being perceived as hurtful or inappropriate, "annoying" is nearest in meaning to the word as it conveys a negative impact on others. So the correct answer is A. Annoying</div>
+            </div>
+       
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <p>9: The <u>purpose</u> of the meeting is to cause trouble.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Result</div>
+                    <div class="option" data-correct="false">B. Importance</div>
+                    <div class="option" data-correct="true">C. Aim</div>
+                    <div class="option" data-correct="false">D. View</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">"Purpose" refers to the reason for which something is done or created,indicating a specific goal or intention. The word "aim" is nearest in meaning as it means aligning with the intended objective or target of an action. So the correct answer is C. Aim</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>10: Ngozi, please <u>look after</u> your brother while I'm away. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Play with</div>
+                    <div class="option" data-correct="false">B.  Study with</div>
+                    <div class="option" data-correct="false">C. Punish</div>
+                    <div class="option" data-correct="true">D. Take care of</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The phrase "look after" means to take care of or watch over someone or something especially in their absence. "take care of" is the nearest in meaning as it emphasizes responsibility and protection. So the correct answer is D. Take care of</div>
+            </div>
+        </div>
+          <div id="quiz">
+            <div class="question">
+<p>Instruction: Choose the correct word that best complete each of the following blank spaces.</p>
+                <p>11: John was.... in the shade, reading a book.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Laid</div>
+                    <div class="option" data-correct="false">B. Lain</div>
+                    <div class="option" data-correct="true">C. Lying</div>
+                    <div class="option" data-correct="false">D. Layed</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The ccorrect word to complete the sentence is "lying", it is the present participle form of the verb "to lie",which means to  recline or be in horizontal position. So the correct answer is C. Lying</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>12: It is a pity that this pretty girl can neither sew .... cook. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. And</div>
+                    <div class="option" data-correct="false">B. But</div>
+                    <div class="option" data-correct="true">C. Nor</div>
+                    <div class="option" data-correct="false">D. Or</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">"Nor" is used to show a negative correlation between the two activities. It is used to show that the girl cannot sew and cannot cook. So the correct answer is C. Nor</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>13: We have agreed... a date forthe wedding.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Of</div>
+                    <div class="option" data-correct="true">B. On</div>
+                    <div class="option" data-correct="false">C. During</div>
+                    <div class="option" data-correct="false">D. In</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">In this context "on" best fills the sentence, the preposition "on" is commonly used in relation to dates and time. So the correct answer is B. On</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>14: The lady.... here tomorrow.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Arrive</div>
+                    <div class="option" data-correct="false">B. Arriving</div>
+                    <div class="option" data-correct="true">C. Arrives</div>
+                    <div class="option" data-correct="false">D. Arrived</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The word "arrives" best completes the sentence. In this case "arrives" is the third-person singular form of the verb "to arrive". The sentence indicates that the lady will arrive tomorrow, so the present tense form "arrives" is best. So the correct answer is C. Arrives</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>15: It is about to rain: we had better....</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. To go home</div>
+                    <div class="option" data-correct="false">B. We went home</div>
+                    <div class="option" data-correct="false">C. Not going home</div>
+                    <div class="option" data-correct="true">D. Go home</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct phrase to complete the sentence is "go home". It is an imperative form of the verb phrase "to go home" indicating a suggestion or recommendation to leave before it starts raining. So the correct answer is D. Go home</div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+<p>Instruction: Choose the word that is correctly spelt to fill each of the gaps below.</p>
+                <p>16: My sister said that the.... was rude to her.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Strenger </div>
+                    <div class="option" data-correct="true">B. Stranger</div>
+                    <div class="option" data-correct="false">C. Strength</div>
+                    <div class="option" data-correct="false">D. Stremger </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Stranger</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: The ... teacher has been taken away from our school. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Wick</div>
+                    <div class="option" data-correct="false">B. Waek</div>
+                    <div class="option" data-correct="true">C. Weak</div>
+                    <div class="option" data-correct="false">D. Week</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Weak</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: The class room was very....</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Rowdy</div>
+                    <div class="option" data-correct="false">B. Roudy</div>
+                    <div class="option" data-correct="false">C. Wrowdy</div>
+                    <div class="option" data-correct="false">D. Rowdly</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Rowdy</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>19: Saturdays are.... sanitation days.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Enviroment </div>
+                    <div class="option" data-correct="true">B. Environmental </div>
+                    <div class="option" data-correct="false">C. Enviromental </div>
+                    <div class="option" data-correct="false">D. Environmentals</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Environmental</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>20: I will....be there tomorrow.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Certainly </div>
+                    <div class="option" data-correct="false">B. Cartainly </div>
+                    <div class="option" data-correct="false">C. Certeinly </div>
+                    <div class="option" data-correct="false">D. Certianly </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Certainly</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>Instruction: <b>Choose the correct part of speech that represent each of the underlined words</b>.</p>
+                <p>21: The man smiled <u>kindly</u> at the little boy </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Adjective </div>
+                    <div class="option" data-correct="true">B. Adverb </div>
+                    <div class="option" data-correct="false">C. Conjunction </div>
+                    <div class="option" data-correct="false">D. Pronoun</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The word "kindly" is an adverb in this ssentence,it is  used to modify the verb "smiled" showing how the man smiled. So the correct answer is B. Adverb</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>22: It is <u>very cool</u> in the shade.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Adverb </div>
+                    <div class="option" data-correct="true">B. Adjective </div>
+                    <div class="option" data-correct="false">C. Preposition </div>
+                    <div class="option" data-correct="false">D. Pronoun</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">"Very cool" functions as an adjective. Adjectives are words that modify or describe nouns or pronouns, in this case "cool" is the noun being described and "very" is an adverb that intensifies the adjective "cool". So the correct answer is B. Adjective</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>23: This is my <u>cat</u></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Noun </div>
+                    <div class="option" data-correct="false">B. Adjective </div>
+                    <div class="option" data-correct="false">C. Pronoun</div>
+                    <div class="option" data-correct="false">D. Conjunction</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The word "cat" is a noun in the sentence because it is the subject of the sentence and refers to a person,place, thing, or idea. In this case it is a specific thing (a pet). So the correct answer is A. Noun </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>24: My dog eats <u>quickly</u> </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Noun</div>
+                    <div class="option" data-correct="true">B. Adverb</div>
+                    <div class="option" data-correct="false">C. Adjective </div>
+                    <div class="option" data-correct="false">D. Pronoun</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The word "quickly" is an adverb in this sentence because it describes how the dog eats. Adverbs modify verbs, adjectives, or other adverbs. So the correct answer is B. Adverb</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>25: <u>Wow!</u> What a beautiful house</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Interjection </div>
+                    <div class="option" data-correct="false">B. Conjunction </div>
+                    <div class="option" data-correct="false">C. Pronoun</div>
+                    <div class="option" data-correct="false">D. Adjective</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The word "wow!" is an interjection in the sentence because it expresses a sudden emotion or exclamatio. Interjeections are words used to convey strong emotions or feelings,and "wow!" in this context expresses surprise or amazement. So the correct answer is A. Interjection</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>INSTRUCTION: Choose the appropriate words to fill in the gaps in the following passage.</p>
+                <p>26: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Receptionist</div>
+                    <div class="option" data-correct="false">B. Clerk</div>
+                    <div class="option" data-correct="false">C. Messenger</div>
+                    <div class="option" data-correct="false">D. Officer</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Receptionist</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>27: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Administration</div>
+                    <div class="option" data-correct="true">B. General Manager</div>
+                    <div class="option" data-correct="false">C. Accountant </div>
+                    <div class="option" data-correct="false">D. Engineer</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. General Manager</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>28: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Manager</div>
+                    <div class="option" data-correct="false">B. Messenger </div>
+                    <div class="option" data-correct="false">C. Clerk</div>
+                    <div class="option" data-correct="false">D. Secretary</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Secretary</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>29: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Tag</div>
+                    <div class="option" data-correct="false">B. Basket</div>
+                    <div class="option" data-correct="true">C. Tray</div>
+                    <div class="option" data-correct="false">D. Container</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tray</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>30: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Outgoing</div>
+                    <div class="option" data-correct="false">B. Received</div>
+                    <div class="option" data-correct="false">C. Upcoming</div>
+                    <div class="option" data-correct="false">D. Collected</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Outgoing</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>31: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. File</div>
+                    <div class="option" data-correct="false">B. Computer</div>
+                    <div class="option" data-correct="false">C. Paper</div>
+                    <div class="option" data-correct="false">D. Board</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Computer</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>32: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Information</div>
+                    <div class="option" data-correct="false">B. News</div>
+                    <div class="option" data-correct="false">C. Message</div>
+                    <div class="option" data-correct="true">D. Memoranda</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Memoranda</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>33: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Clerk</div>
+                    <div class="option" data-correct="true">B. Accountant</div>
+                    <div class="option" data-correct="false">C. Receptionist</div>
+                    <div class="option" data-correct="false">D. Messenger</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Accountant</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>34: </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Banked</div>
+                    <div class="option" data-correct="false">B. Kept</div>
+                    <div class="option" data-correct="false">C. Hidden</div>
+                    <div class="option" data-correct="false">D. Received</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Banked</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">  
+                <p>35: </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Cleaned</div>
+                    <div class="option" data-correct="false">B. Painted</div>
+                    <div class="option" data-correct="true">C. Furnished</div>
+                    <div class="option" data-correct="false">D. Decorated</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Furnished</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">  
+<P>INSTRUCTION: Choose the phonetic symbol representing the sound in the listed words.</P>
+                <p>36: 	/h/</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Vehicle </div>
+                    <div class="option" data-correct="false">B. Khaki</div>
+                    <div class="option" data-correct="false">C. Rhyme </div>
+                    <div class="option" data-correct="true">D. Hammer</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Hammer</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>37: watch<u>ch</u></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. /ts/ </div>
+                    <div class="option" data-correct="false">B. / ʤ /</div>
+                    <div class="option" data-correct="false">C. / n /</div>
+                    <div class="option" data-correct="false">D. / r /</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. / ts /</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>38: car<u>ar</u></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. / a: /</div>
+                    <div class="option" data-correct="false">B. / ai /</div>
+                    <div class="option" data-correct="false">C. /ae /</div>
+                    <div class="option" data-correct="false">D. / au /</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. / a: /</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>INSTRUCTION: Choose the word that has the same consonant as the one represented by the letters underlined.</p>
+                <p>39: post<u>p</u> </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Receipt</div>
+                    <div class="option" data-correct="true">B. Heap</div>
+                    <div class="option" data-correct="false">C. Pneumonia </div>
+                    <div class="option" data-correct="false">D. Psalm</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Heap</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>40: rain<u>r</u> </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. wretch</div>
+                    <div class="option" data-correct="false">B. park</div>
+                    <div class="option" data-correct="false">C. light</div>
+                    <div class="option" data-correct="false">D. surge</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. wretch</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>POETRY: QUESTIONS 41-46</p>
+                <p>41: In the poem “Insatiable animal" by Pat Okonji, who is referred to as "insatiable animal" ?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Animal</div>
+                    <div class="option" data-correct="false">B. God</div>
+                    <div class="option" data-correct="true">C. Human being</div>
+                    <div class="option" data-correct="false">D. Satan</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Human being</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>42: What are the three vital attributes of the “Silent Caller”?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Abomination, bribe, sympathy  </div>
+                    <div class="option" data-correct="false">B. Conqueror, poverty and wealth </div>
+                    <div class="option" data-correct="true">C. Honesty, firmness, impartiality</div>
+                    <div class="option" data-correct="false">D. Discrimination, inexhaustible, invisible</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Honesty, firmness, impartiality</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>43: How many stanzas are there in the poem “Who told you that you are a slave”? by Sunday Igwebuike.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 4</div>
+                    <div class="option" data-correct="false">B. 6</div>
+                    <div class="option" data-correct="false">C. 8</div>
+                    <div class="option" data-correct="false">D. 10</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. 4</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>44: According to the poet in the poem “My Dream”. I want God's light to penetrate.... </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Every dark corner of my soul. </div>
+                    <div class="option" data-correct="false">B. Every good side of my life. </div>
+                    <div class="option" data-correct="false">C. Everywhere</div>
+                    <div class="option" data-correct="false">D. My whole world.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. every dark corner of my soul. </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>45: In the poem "Time” by Vera Ojebor. “My foe you stole away my song”. What figure of speech is in the above line?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Alliteration </div>
+                    <div class="option" data-correct="false">B. Assonance </div>
+                    <div class="option" data-correct="false">C. Metaphor </div>
+                    <div class="option" data-correct="true">D. Personification</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. Personification</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>46: According to the poet when one plays and dances at the same time....</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. There is disharmony</div>
+                    <div class="option" data-correct="false">B. There is harmony,</div>
+                    <div class="option" data-correct="false">C. There is good music.</div>
+                    <div class="option" data-correct="false">D. There is two kinds of the drum. </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. There is disharmony</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>GENERAL LITERATURE: QUESTIONS 47-50</p>
+                <p>47: The time and place of a stoty is called is called ...</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Setting</div>
+                    <div class="option" data-correct="false">B. Plot </div>
+                    <div class="option" data-correct="false">C. Exposition</div>
+                    <div class="option" data-correct="false">D. Point of view</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Setting</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>48: The organised pattern or sequence of events that make up a story is called....</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. A drama</div>
+                    <div class="option" data-correct="true">B. A plot</div>
+                    <div class="option" data-correct="false">C. An act</div>
+                    <div class="option" data-correct="false">D. A setting</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. A plot</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>49: A direct comparison between two unlike things is called....</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. A metaphor </div>
+                    <div class="option" data-correct="false">B. A similie</div>
+                    <div class="option" data-correct="false">C. A personification</div>
+                    <div class="option" data-correct="false">D.  An allusion</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. A metaphor</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>50: An account of someone's life written by the same person is called....</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. A biography</div>
+                    <div class="option" data-correct="false">B. A life story</div>
+                    <div class="option" data-correct="true">C. An autobiography</div>
+                    <div class="option" data-correct="false">D.  A</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. An autobiography</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">  
+                
+            </div>
+         </div>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="progress">Progress: 0/20</div>
+
+
+    <script>
+        var score = 0;
+        var progress = 0;
+
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/20");
+        });
+
+
+        $(".check-answer").click(function() {
+            $(this).siblings(".answer").removeClass("hidden");
+        });
+    </script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+<!-- button -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.footer-widget ul li {
+display: inline-block;
+float: right;
+width: 50%;
+margin-bottom: 10px;
+}
+.footer-widget ul li a:hover{
+color: darkcyan;
+}
+.footer-widget ul li a {
+color: lightblue;
+text-transform: capitalize;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+</style>
+</div>
+</div>
+<div class="footer-content pt-5 pb-5">
+<div class="row">
+
+
+
+
+<!--stop -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+<a href="x.com"><i class="fab fa-twitter"></i></i></a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">courses</a></li>
+<li><a href="#">classroom</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">blog</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+
+
+
+
+</div>
+</footer>
+</html>

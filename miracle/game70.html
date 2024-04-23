@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shape Matching Game</title>
+<style>
+  .shape {
+    position: absolute;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    animation: moveRight 5s linear infinite;
+  }
+  @keyframes moveRight {
+    0% { left: 0; }
+    100% { left: 100%; }
+  }
+  #square {
+    width: 50px;
+    height: 50px;
+  }
+  #rectangle {
+    width: 100px;
+    height: 50px;
+  }
+  #triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #f1f1f1;
+  }
+  .name {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #ddd;
+    cursor: grab;
+  }
+</style>
+</head>
+<body>
+
+<div id="square" class="shape"></div>
+<div id="rectangle" class="shape"></div>
+<div id="triangle" class="shape"></div>
+
+<div id="names">
+  <div class="name" data-shape="square">Square</div>
+  <div class="name" data-shape="rectangle">Rectangle</div>
+  <div class="name" data-shape="triangle">Triangle</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(function() {
+    $('.name').draggable({
+      revert: "invalid",
+      start: function() {
+        $(this).css('background-color', '#aaa');
+      },
+      stop: function() {
+        $(this).css('background-color', '#ddd');
+      }
+    });
+
+    $('.shape').droppable({
+      accept: function(draggable) {
+        return $(this).attr('id') === draggable.data('shape');
+      },
+      drop: function(event, ui) {
+        $(this).css('background-color', 'green');
+        $(this).fadeOut();
+        ui.draggable.draggable('disable').hide();
+      },
+      over: function(event, ui) {
+        $(this).css('background-color', 'lightblue');
+      },
+      out: function(event, ui) {
+        $(this).css('background-color', '#f1f1f1');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
