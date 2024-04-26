@@ -1,0 +1,983 @@
+DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  background-color: #efefef;
+}
+
+.logo{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 90px;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 1px #747474, 
+      -1px 3px 1px #767676, 
+      -2px 5px 1px #787878, 
+      -3px 7px 1px #7a7a7a,
+      -4px 9px 1px #7f7f7f,
+      -5px 11px 1px #838383,
+      -6px 13px 1px #878787,
+      -7px 15px 1px #8a8a8a, 
+      -8px 17px 1px #8e8e8e,
+      -9px 19px 1px #949494,
+      -10px 21px 1px #989898,
+      -11px 23px 1px #9f9f9f,
+      
+}
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #f9f9f9;
+  
+}
+#progress{
+    color: #f9f9f9;
+float: right;
+}
+
+
+#progressBar {
+width: 100%;
+height: 20px;
+margin-top: 10px;
+color: #f9f9f9;
+
+}
+       
+.correct { background-color: green; }
+.incorrect { background-color: red; }
+.hidden {display: none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="quiz">
+<div class="question">
+
+<p>1: The hydrolysis of proteins by dilute mineral acids produces</p>
+<div class="options">
+<div class="option" data-correct="false">A. sucrose</div>
+<div class="option" data-correct="false">B. glucose</div>
+<div class="option" data-correct="true">C.	amino acid</div>
+<div class="option" data-correct="false">D.	fatty acids</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden"> </div> The correct answer is C. amino acid</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>2:Which of the following oxides causes acid rain?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. CO</div>
+                <div class="option" data-correct="false">B. NO</div>
+                <div class="option" data-correct="false">C. H2O2</div>
+                <div class="option" data-correct="true">D. N02</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is D. N02</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+<p>3: The ratio of carbon atoms to hydrogen atoms in a hydrocarbon is 1:2. If its molecular mass is 56, what is its molecular formula?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. C3H6 </div>
+                <div class="option" data-correct="true">B. C4H8</div>
+                <div class="option" data-correct="false">C. C2H4</div>
+                <div class="option" data-correct="false">D. CH2</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. C4H8.</div>
+  </div>
+ </div>
+ <div id="quiz">
+        <div class="question">
+<p>4: What is the relative molecular mass of the compound below?</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. 137</div>
+                <div class="option" data-correct="false">B. 136</div>
+                <div class="option" data-correct="false">C. 64 </div>
+                <div class="option" data-correct="false">D. 59</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> So the correct answer is A. 137</div>
+        </div>
+   
+
+
+       </div>
+      <div id="quiz">
+        <div class="question">
+<p>5: Cathodic protection of metals is based on</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. standard electrode potential of hydrogen </div>
+                <div class="option" data-correct="false">B. its electrical conductivity.</div>
+                <div class="option" data-correct="false">C. 	nature of oxides formed</div>
+                <div class="option" data-correct="false">D. relative tendencies of oxidation </div> 
+                </div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. standard electrode potential of hydrogen .</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+<p>6: If humid air is polluted by chlorine discharge, the air can be restored by sprinkling</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.solid MnO2.</div>
+                <div class="option" data-correct="false">B.acidified KMnO4. </div>
+                <div class="option" data-correct="false">C. acidified FeSO4.</div>
+                <div class="option" data-correct="false">D. saturated NaCl(aq)</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> The correct answer is A. solid MnO2.</div>
+        </div>
+      </div>
+      <div id="quiz">
+        <div class="question">
+<p>7:The alkanol represented by the structure below is</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. primary and dihydric.</div>
+                <div class="option" data-correct="false">B. secondaiy and monohydric.</div>
+                <div class="option" data-correct="false">C. tertiary and dihydric </div>
+                <div class="option" data-correct="false">D. secondaiy and dihydric.</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. primary and dihydric.</div>
+        </div>
+     </div>
+         <div id="quiz">
+            <div class="question">
+<p>8: Which of the following pairs of compounds would form a precipitate when their aqueous solutions are mixed?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. NaCl and KNO3 </div>
+                    <div class="option" data-correct="false">B. KCl and NaNO3</div>
+                    <div class="option" data-correct="true">C. K2SO4 and BaCl2 </div>
+                    <div class="option" data-correct="false">D. NH4NO3andNa2CO3 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C. K2SO4 and BaCl2 </div>
+            </div>
+         </div>
+        <div id="quiz">
+            <div class="question">
+ <p>9: Which of the graphs illustrates the variation of the rate of evolution of a gas from a given length 	of magnesium ribbon (y-axis) with increase in the concentration of the acid added (x-axis)?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. I </div>
+                    <div class="option" data-correct="false">B. II</div>
+                    <div class="option" data-correct="false"> C. III </div>
+                    <div class="option" data-correct="false">D. IV </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. mO<sub>3</sub>.</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+    <p>10: Which of the graphs illustrates the variation of the pH of a given volume of strong acid solution (y-axis) with the volume of strong base titrated against it (x-axis)?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I</div>
+                    <div class="option" data-correct="false">B.II </div>
+                    <div class="option" data-correct="false">C. III </div>
+                    <div class="option" data-correct="true">D. IV </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. IV </div>
+            </div>
+        </div>
+          <div id="quiz">
+            <div class="question">                
+            
+    <p>11:Which of the graphs illustrates the variation of the solubility of a salt in water (y-axis) with 	increase in temperature (x-axis), if the dissolution process is exothermic?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I</div>
+                    <div class="option" data-correct="false">B. II </div>
+                    <div class="option" data-correct="true">C.	III</div>
+                    <div class="option" data-correct="false">D. IV </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C. III</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+<p>12: The formation of ethene from dehydration of ethanol can be described as </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. an addition reaction.  </div>
+                    <div class="option" data-correct="true">B. an elimination reaction.</div>
+                    <div class="option" data-correct="false">C. an oxidation reaction. </div>
+                    <div class="option" data-correct="false">D. a substitution reaction.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B. an elimination reaction. </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+<p>13: Which of the following gases is highly soluble in water at room temperature?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. ammonia </div>
+                    <div class="option" data-correct="true">B. Carbon(lV) oxide </div>
+                    <div class="option" data-correct="false">C. Chlorine </div>
+                    <div class="option" data-correct="false">D. nitrogen </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is B.Carbon(lV) oxide</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+
+  <p>14: A molecule of phosphorus is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. diatomic</div>
+                    <div class="option" data-correct="false">B. triatomic </div>
+                    <div class="option" data-correct="true">C. tetraatomic.</div>
+                    <div class="option" data-correct="false">D. monoatomic</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C. tetraatomic.</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+<p>15: The most common method of preparing insoluble salts is by</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. filtration</div>
+                    <div class="option" data-correct="false">B. decomposition </div>
+                    <div class="option" data-correct="false">C. neutralization</div>
+                    <div class="option" data-correct="true">D. double decomposition.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. double decomposition. </div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+<p>16: What number of moles of oxygen would exert a pressure of 10 atm at 320 K in an 8.2 dm3 	cylinder?
+	[R = 0.082 atm dm3 mol-1 K-1]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.0.32</div>
+                    <div class="option" data-correct="false">B. 1.56 </div>
+                    <div class="option" data-correct="true">C.	3.13</div>
+                    <div class="option" data-correct="false">D. 31.25</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. 3.13increases the solubility of a solid in a liquid but decreases the solubility of a gas in a liquid.</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: The basic property of salts used as drying agents is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. efflorescence.</div>
+                    <div class="option" data-correct="false">B. high melting point.</div>
+                    <div class="option" data-correct="true">C.hygroscopy</div>
+                    <div class="option" data-correct="false">D. low solubility.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. hygroscopy</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+<p>18: What would be observed when aqueous ammonia is added in drops and then in excess to a solution of copper(II) ions? A </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. blue precipitate is formed which is soluble in excess ammonia </div>
+                    <div class="option" data-correct="false">B. blue precipitate is formed which is soluble in excess ammonia</div>
+                    <div class="option" data-correct="false">C.  white precipitate is formed which is soluble in excess ammonia </div>
+                    <div class="option" data-correct="false">D. white precipitate is formed which is soluble in excess ammonia </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. blue precipitate is formed which is soluble in excess ammonia </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+ <p>19: When CuSO<sub>4(aq)</sub>is added to Pb(NO<sub>3</sub>)<sub>2(aq)</sub> </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.there would be no visible change.</div>
+                    <div class="option" data-correct="false">B. a blue precipitate would be formed. </div>
+                    <div class="option" data-correct="false">C. the resulting solution would become colourless.</div>
+                    <div class="option" data-correct="true">D. a white precipitate would be formed.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D. a white precipitate would be formed.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>Consider the diagram below</p>
+    <p>20: How many carbon atoms does the parent chain contain?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 5 </div>
+                    <div class="option" data-correct="true">B. 4 </div>
+                    <div class="option" data-correct="false">C. 3</div>
+                    <div class="option" data-correct="false">D. 2 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. 4 </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+             
+ <p>21: Under which conditions of pressure (P) and temperature (T) would the volume of an inflated 	balloon increase? When</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. both T and P are increased</div>
+                    <div class="option" data-correct="false">B. both T and P are decreased </div>
+                    <div class="option" data-correct="true">C. T is increased and P is decreased</div>
+                    <div class="option" data-correct="false">D. T is decreased and P is increased</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C.T is increased and P is decreased</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+    <p>22:The collision between ideal gas molecules are considered to be perfectly elastic because</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. they collide without losing energy.</div>
+                    <div class="option" data-correct="false">B.they collide without losing energy.</div>
+                    <div class="option" data-correct="false">C.	their average kinetic energy is variable.</div>
+                    <div class="option" data-correct="false">D. the distance between them is large compared to their sizes.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is A. they collide without losing energy.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+    <p>23: Elements with high ionization energies would</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. lose electrons easily..</div>
+                    <div class="option" data-correct="false">B.	have large atomic radii. </div>
+                    <div class="option" data-correct="true">C. NH<sub>3</sub> .</div>
+                    <div class="option" data-correct="false">D. N<sub>2</sub>O.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is C. NH<sub>3</sub> </div>
+            </div>
+         </div> <div id="quiz">
+            <div class="question">
+<p>24: Which of the following statements about an equilibrium system is correct? </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Forward and backward reactions occur at the same rate</div>
+                    <div class="option" data-correct="false">B. The concentrations of reactants must equal that of the products.</div>
+                    <div class="option" data-correct="false">C. The concentrations of reactants and products can be changed by adding a catalyst</div>
+                    <div class="option" data-correct="false">D. The concentrations of reactants and products are not affected by a change in temperature.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. Forward and backward reactions occur at the same rate </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>25: Consider the following reaction equation:	
+	N<sub>2(g)</sub>	+ 3H2<sub>(g)</sub> ⇌ 2NH<sub>3(g)</sub>; ∆H = -92KJ.
+	Increasing the temperature of the reaction would
+</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. shift the equilibrium to the right.</div>
+                    <div class="option" data-correct="false">B. increase the yield of ammonia</div>
+                    <div class="option" data-correct="false">C. decrease the amount of hydrogen</div>
+                    <div class="option" data-correct="true">D. decrease the yield of ammonia </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> The correct answer is D. decrease the yield of ammonia</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+
+<div id="quiz">
+    <div class="question">
+
+<p>26: When air in a syringe is compressed such that there is no change in temperature, the</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. air liquefies </div>
+                    <div class="option" data-correct="false">B. pressure increases </div>
+                    <div class="option" data-correct="false">C. intermolecular space increases</div>
+                    <div class="option" data-correct="false">D. density decreases. </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. air liquefies </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+  <p>27:Which of the following statements about liquids is/are true?	
+	I.	Liquids maintain their volume at constant temperature.
+	II.	Liquids have fixed shape.
+	III.	Liquids do not diffuse.
+	IV.	Change in pressure affects volume of liquids</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. I only</div>
+                    <div class="option" data-correct="false">B. IV only </div>
+                    <div class="option" data-correct="false">C.I and IV only</div>
+                    <div class="option" data-correct="false">D. II and III only</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. I only</div>
+            </div>
+         </div>
+<p>28: A hydrogen chloride gas reacted with oxygen gas to yield water and chlorine gas. The mole ratio of the hydrogen chloride gas to water is</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1 : 3</div>
+                    <div class="option" data-correct="true">B. 2 : 1.</div>
+                    <div class="option" data-correct="false">C. 3 : 1</div>
+                    <div class="option" data-correct="false">D. 4 : 1 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. 2 : 1.</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>29:What number of moles of oxygen would exert a pressure of 10 atm at 320K in an 8.2 dm<sup>3</sup> cylinder?	
+	[R =	0.082 atm dm<sup>-3</sup> mol<sup>-1</sup> K<sup>-1</sup>]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 0.32 </div>
+                    <div class="option" data-correct="false">B. 1.52.</div>
+                    <div class="option" data-correct="true">C. 3.13</div>
+                    <div class="option" data-correct="false">D. 31.25</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. 3.13</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+<p>30:If 50 cm<sup>3</sup> of a saturated solution of KN0<sub>3</sub> at 40 °C contained 5.05 g of the salt, its solubility at the same temperature would be [KN0<sub>3</sub> = 101]</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 1.0 mol dm<sup>-3</sup></div>
+                    <div class="option" data-correct="false">B. 1.5 mol dm<sup>-3</sup>.</div>
+                    <div class="option" data-correct="true">C.2.0 mol dm<sup>-3</sup></div>
+                    <div class="option" data-correct="false">D. 5.0 mol dm<sup>-3</sup></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. 1.0 mol dm<sup>-3</sup></div>
+            </div>
+         </div>         <div id="quiz">
+            <div class="question">
+
+<p>31: Which of the following elements would displace copper from a solution of 	copper ions? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Silver </div>
+                    <div class="option" data-correct="false">B. Gold </div>
+                    <div class="option" data-correct="true">C. Lead </div>
+                    <div class="option" data-correct="false">D. Mercury </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Lead</div>
+            </div>
+         </div>
+                <div id="quiz">
+                <div class="question">  
+<p>32:What is the percentage composition of carbon in Ca(HC0<sub>3</sub>)<sub>2</sub>?	
+	[Ca	= 40.0, 0 = 16.0,-C= 12.0, H= 1.0]</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 22.2 % </div>
+                    <div class="option" data-correct="true">B. 14.8 % </div>
+                    <div class="option" data-correct="false">C. 7.4 % </div>
+                    <div class="option" data-correct="false">D. 3.7% </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. 14.8 % </div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">    
+<p>33: Which of the following bond types is intermolecular?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Covalent bond </div>
+                    <div class="option" data-correct="true">B. Hydrogen bond </div>
+                    <div class="option" data-correct="false">C. Ionic bond </div>
+                    <div class="option" data-correct="false">D. Metallic bond</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Hydrogen bond</div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question"> 
+   
+<p>34:The maximum number of covalent bonds formed by nitrogen is </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1</div>
+                    <div class="option" data-correct="false">B. 2</div>
+                    <div class="option" data-correct="true">C. 3 </div>
+                    <div class="option" data-correct="false">D. 4</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. 3 </div>
+            </div>
+         </div>
+                  <div id="quiz">
+                  <div class="question">
+<p>35:The IUPAC name of the compound CH<sub>3</sub>CH(CH<sub>3</sub>)CHCH<sub>2</sub> is </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2 - methyl but - 1 - ene. </div>
+                    <div class="option" data-correct="false">B. 2 - methyl but - 2 - ene </div>
+                    <div class="option" data-correct="true">C. 3 - methyl but - 1 - ene </div>
+                    <div class="option" data-correct="false">D. 3 - methyl but - 2 - ene </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. 3 - methyl but - 1 - ene</div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">  
+          
+<p>36:Ionization energy increases across the period in the periodic table 	because</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. atomic number increases </div>
+                    <div class="option" data-correct="true">B. effective nuclear charge increases. </div>
+                    <div class="option" data-correct="false">C. mass number decreases. </div>
+                    <div class="option" data-correct="false">D. screening effect decreases.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is B. effective nuclear charge increases. </div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+         <p>37: Which of the following properties indicate that an element is a metal. It	
+            I.	reacts with oxygen to form an acidic oxide
+            II.	forms ionic chlorides.
+            III.	has variable oxidation states.
+            IV.	displaces hydrogen from dilute HC1. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. I and III only  </div>
+                    <div class="option" data-correct="false">B. I and II only </div>
+                    <div class="option" data-correct="true">C. II and IV only  </div>
+                    <div class="option" data-correct="false">D. I, II, III and IV</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is C. II and IV only </div>
+            </div>
+         </div> 
+                 <div id="quiz">
+            <div class="question">
+
+<p>38:The electron configuration of carbon atom in its excited state is </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Is<sup>2</sup>2s<sup>2</sup>2P <sup>2</sup>2P <sup>0</sup> </div>
+                    <div class="option" data-correct="false">B. Is<sup>2</sup>2s<sup>2</sup>2P<sup>1</sup>2P<sup>.1</sup> </div>
+                    <div class="option" data-correct="true">C. Is<sup>2</sup>2s<sup>2</sup><sup>2P</sup> <sup>1</sup>2P<sub>y</sub><sup>1</sup>12P<sub>z</sub><sup>1</sup> </div>
+                    <div class="option" data-correct="false">D. Is<sup>1</sup>2s<sup>2P</sup><sup>1</sup>2P<sub>y</sub><sup>1</sup>2P<sub>z</sub><sup>1</sup> </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">  The correct answer is C. Is<sup>2</sup>2s<sup>2</sup><sup>2P</sup> <sup>1</sup>2P<sub>y</sub><sup>1</sup>12P<sub>z</sub><sup>1</sup> </div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>39:	An oxide has the following properties. It		
+	I.	is a white powder.	
+	II.	reacts with HC1.	
+	Ill	reacts with NaOH.	
+	IV.	is insoluble in water.	
+	The oxide is </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. alkaline </div>
+                    <div class="option" data-correct="true">B. amphoteric. </div>
+                    <div class="option" data-correct="false">C. acidic </div>
+                    <div class="option" data-correct="false">D. neutral </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. amphoteric</div>
+            </div>
+         </div>
+               <div id="quiz">
+               <div class="question">   
+<p>40:Which of the following statements about atoms of a metal is correct? They </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. readily accept electrons </div>
+                    <div class="option" data-correct="true">B. are soft </div>
+                    <div class="option" data-correct="false">C. are held together by covalent bond </div>
+                    <div class="option" data-correct="false">D. are held together by a sea of electron cloud.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. are soft </div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">  
+     
+<p>41:Which of the following sketches is a graphical representation of Boyle’s law? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  </div>
+                    <div class="option" data-correct="false">B. </div>
+                    <div class="option" data-correct="true">C.   </div>
+                    <div class="option" data-correct="false">D.  </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. </div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>42:The atom with the electron configuration		
+	Is<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>3</sup>3p<sup>6</sup>3d<sup>10</sup>4s<sup>2</sup>4p<sup>4</sup> is in</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. period 4, p- block </div>
+                    <div class="option" data-correct="false">B. period 3, p- block </div>
+                    <div class="option" data-correct="false">C. period 4, d- block.</div>
+                    <div class="option" data-correct="false">D. period 3, d- block</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. period 4, p- block </div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question"> 
+   
+  <p>43:Electropositivity of elements across the periodic table normally </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. remains constant down the group</div>
+                    <div class="option" data-correct="false">B. increases across the period</div>
+                    <div class="option" data-correct="true">C. decreases across the period</div>
+                    <div class="option" data-correct="false">D. decreases down the group. </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. decreases across the period </div>
+            </div>
+         </div>
+             <div id="quiz">
+             <div class="question">
+<p>44:Consider the following table:
+
+    Which of the substances is a liquid at room temperature and rapidly evaporates on exposure to air?
+</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. P.</div>
+                    <div class="option" data-correct="true">B. Q</div>
+                    <div class="option" data-correct="false">C. R</div>
+                    <div class="option" data-correct="false">D. S.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Q.</div>
+            </div>
+         </div>
+            <div id="quiz">
+            <div class="question">      
+<p>45:Which of the following oxides is amphoteric?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Carbon(II) oxide</div>
+                    <div class="option" data-correct="false">B. Nitrogen(IV) oxide</div>
+                    <div class="option" data-correct="true">C. Lead(II) oxide</div>
+                    <div class="option" data-correct="false">D. Calcium oxide</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Lead(II) oxide </div>
+            </div>
+         </div>
+              <div id="quiz">
+              <div class="question">
+               
+<p>46:Which of the following processes occur during fractional distillation of 		petroleum?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Condensation and diffusion</div>
+                    <div class="option" data-correct="true">B. Diffusion and evaporation</div>
+                    <div class="option" data-correct="false">C. Diffusion and sublimation</div>
+                    <div class="option" data-correct="false">D. Evaporation and condensation</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. Diffusion and evaporation</div>
+            </div>
+         </div>
+                 <div id="quiz">
+                 <div class="question"> 
+<p>47:If the molar mass of X(HC0<sub>3</sub>)<sub>2</sub> is 162 g mol<sup>-1</sup>, determine the relative atomic mass of X. 
+    [H = 1.0, C= 12.0, 0=16.0]
+    </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 40.</div>
+                    <div class="option" data-correct="false">B. 48 </div>
+                    <div class="option" data-correct="false">C. 61</div>
+                    <div class="option" data-correct="false">D. 101</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. 40</div>
+            </div>
+         </div>
+ <div id="quiz">
+ <div class="question"> 
+<p>48:Charcoal is used in the decolourization of sugar because of its<p>
+<div class="options">
+    <div class="option" data-correct="false">A. absorption property</div>
+    <div class="option" data-correct="false">B. amorphous property </div>
+    <div class="option" data-correct="false">C. oxidizing property  </div>
+    <div class="option" data-correct="true">D. adsorption property </div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. adsorption property </div>
+</div>
+</div>
+ <div id="quiz">
+ <div class="question"> 
+<p>49:The first definition of an element was made by </p>
+<div class="options">
+    <div class="option" data-correct="false">A. J. Dalton</div>
+    <div class="option" data-correct="false">B. A. Lavoisier</div>
+    <div class="option" data-correct="true">C. R. Boyle</div>
+    <div class="option" data-correct="false">D. J. J. Thompson</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. R. Boyle </div>
+</div>
+</div>
+<div id="quiz">
+ <div class="question"> 
+<p>50:Which of the following scientists formulated the law of conservation of mass?</p>
+<div class="options">
+    <div class="option" data-correct="true">A. A. Lavoisier</div>
+    <div class="option" data-correct="false">B. J. Dalton </div>
+    <div class="option" data-correct="false">C. R. Boyle</div>
+    <div class="option" data-correct="false">D. J. Proust </div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. A. Lavoisier </div>
+</div>
+</div>
+<div id="quiz">
+              <div class="question">
+               
+              </div>
+              <div id="score">Score: 0</div>
+              <div id="progress">Progress: 0/50</div>
+          
+          
+              <script>
+                  var score = 0;
+                  var progress = 0;
+          
+                  $(".option").click(function() {
+                      if ($(this).hasClass("selected")) {
+                          return;
+                      }
+                      $(this).addClass("selected");
+                      $(this).siblings().removeClass("correct incorrect");
+                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+                      if ($(this).data("correct")) {
+                          score++;
+                          $("#score").text("Score: " + score);
+                      } else {
+                          $(this).parent().siblings(".check-answer").removeClass("hidden");
+                      }
+                      progress++;
+                      $("#progress").text("Progress: " + progress + "/50");
+                  });
+          
+                  $(".check-answer").click(function() {
+                      $(this).siblings(".answer").removeClass("hidden");
+                  });
+              </script>
+          </body>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+          <!-- button -->
+          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <style>
+          
+          
+          .footer-social-icon i {
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 38px;
+          border-radius: 50%;
+          }
+          .footer-widget ul li {
+          display: inline-block;
+          float: right;
+          width: 50%;
+          margin-bottom: 10px;
+          }
+          .footer-widget ul li a:hover{
+          color: darkcyan;
+          }
+          .footer-widget ul li a {
+          color: lightblue;
+          text-transform: capitalize;
+          }
+          .footer-menu li {
+          display: inline-block;
+          margin-left: 50px;
+          }
+          </style>
+          </div>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+          <div class="row">
+          
+          
+          
+          
+          <!--stop -->
+          
+          
+          
+          
+          
+          
+          </div>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+          <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+          <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">courses</a></li>
+          <li><a href="#">classroom</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">blog</a></li>
+          </ul>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          
+          
+          
+          
+          </div>
+          </footer>
+          </html>
+          
+          
+          
+          
+          
+         
