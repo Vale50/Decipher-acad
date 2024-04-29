@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        body {
+            background-color: #efefef;
+        }
+        .logo {
+            margin: 40px auto;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 90px;
+            color: #121212;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 1px #747474, 
+                -1px 3px 1px #767676, 
+                -2px 5px 1px #787878, 
+                -3px 7px 1px #7a7a7a,
+                -4px 9px 1px #7f7f7f,
+                -5px 11px 1px #838383,
+                -6px 13px 1px #878787,
+                -7px 15px 1px #8a8a8a, 
+                -8px 17px 1px #8e8e8e,
+                -9px 19px 1px #949494,
+                -10px 21px 1px #989898,
+                -11px 23px 1px #9f9f9f,
+        }
+        .question {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 3px solid #3498db; /* Bolder border */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for creative style */
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+        .question:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker shade on hover */
+        }
+        .answer {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(this).next(".answer").slideToggle(); /* Toggle the visibility of the answer */
+            });
+        });
+    </script>
+</head>
+ <body>
+<div id="quest">
+<div class="question">
+    <!--SECTION A"-->
+    <h1> PAPER 2 THEORY</h1>
+    <p>Instructcion:Answer two questions only from this section  </p> <!---->
+    <p> 1. 	(a) 	What is classification of living things </p> <!--    -->
+<div class="">
+<!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">Input Explanation here</div>
+</div>
+</div>
+<div id="quest">
+<div class="question">
+    <p> (b) 	State four ways each by which the following groups of organism 
+        are of economic importance in their habitats:
+        i. fungi;  	ii. 	Plants	 </p> <!--Questions appears here-->
+            
+    
+            <div class="">
+      <!--noneere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+         <p> (c)  Complete the table below by stating five major phyla of the kingdom 
+            Animalia and give one example each  
+        </p><!--Questions appears here-->
+
+            <div class="">
+          <!--nonehere--><style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>Phyla of Kingdom Animalia</th>
+    <th>Example</th>
+ ></tr>
+ <tr
+    <td>   </td>
+    <td>  </td>
+    
+  </tr>
+  <tr> 
+    <td>       </td>
+    <td>         </td>
+   
+    <tr
+    <td>    </td>
+    <td>      </td>
+    
+  </tr>
+  <tr
+    <td>    </td>
+    <td>    </td>
+    
+  </tr>
+  <tr
+    <td>   </td>
+    <td>    </td>
+    
+  </tr>
+
+    
+  </tr>
+
+
+</table>
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+   
+       <div id="quest">
+        <div class="question">
+    <p>Instruction: </p><!--Instructions appears here-->
+            <p> </p><!--Questions appears here-->
+
+            <div class="">
+                <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+       </div>
+      <div id="quest">
+        <div class="question">
+            <p> </p> <!--Questions appears here-->
+            <div class="">
+               <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+<p>Instruction: </p><!--Questions appears here-->
+       
+    <p> </p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+</body>
+</html>
