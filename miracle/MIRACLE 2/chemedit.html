@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        /* Other styles... */
+        .question-number {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .option {
+            text-align: left; /* Align options to the left */
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        body {
+  background-color: #efefef;
+}
+
+.logo{
+  margin: 40px auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 90px;
+  color: #121212;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 1px #747474, 
+      -1px 3px 1px #767676, 
+      -2px 5px 1px #787878, 
+      -3px 7px 1px #7a7a7a,
+      -4px 9px 1px #7f7f7f,
+      -5px 11px 1px #838383,
+      -6px 13px 1px #878787,
+      -7px 15px 1px #8a8a8a, 
+      -8px 17px 1px #8e8e8e,
+      -9px 19px 1px #949494,
+      -10px 21px 1px #989898,
+      -11px 23px 1px #9f9f9f,
+      
+}
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+    </style>
+</head>
+<body>
+    <body>
+        <div class="header">
+         <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+         <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+         <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+         <div class="header-right">
+         <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+         <a href="#contact">About</a>
+         <a href="#courses">Courses</a>
+         <a href="#classroom">Classrooms</a>
+         <a href="#blog">Blog</a>
+         </div>
+        </div>
+        </body>
+
+    <div id="quiz">
+        <!-- Question 1 -->
+        <div class="question">
+            <div class="question-number"><strong>1.</strong></div>
+            <p>The by-product of fermentation of sugar is</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. carbon(IV) oxide</div>
+                <div class="option" data-correct="false">B. ethanoic acid</div>
+                <div class="option" data-correct="false">C. propanol.</div>
+                <div class="option" data-correct="false">D. propan-1, 2, 3-triol.</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. carbon(IV) oxide</div>
+            
+            <div class="explanation">
+                <img src="/gre2.jpg" alt="Illustrative Picture">
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <div class="question-number"><strong>2.</strong></div>
+            <p>Which of the following sugars is a product of the condensation of monosaccharides?</p>
+            <!-- Options and other elements... -->
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <div class="question-number"><strong>3.</strong></div>
+            <p>The cleansing effect of soap is low in acidic water because of</p>
+            <!-- Options and other elements... -->
+        </div>
+    </div>
+</body>
+</html>
