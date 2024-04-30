@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        body {
+            background-color: #efefef;
+        }
+        .logo {
+            margin: 40px auto;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 90px;
+            color: #121212;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 1px #747474, 
+                -1px 3px 1px #767676, 
+                -2px 5px 1px #787878, 
+                -3px 7px 1px #7a7a7a,
+                -4px 9px 1px #7f7f7f,
+                -5px 11px 1px #838383,
+                -6px 13px 1px #878787,
+                -7px 15px 1px #8a8a8a, 
+                -8px 17px 1px #8e8e8e,
+                -9px 19px 1px #949494,
+                -10px 21px 1px #989898,
+                -11px 23px 1px #9f9f9f,
+        }
+        .question {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 3px solid #3498db; /* Bolder border */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for creative style */
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+        .question:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker shade on hover */
+        }
+        .answer {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(this).next(".answer").slideToggle(); /* Toggle the visibility of the answer */
+            });
+        });
+    </script>
+</head>
+ <body>
+<div id="quest">
+<div class="question">
+    <!--Each section in the Theory must be Identified and Typed out in bold example "PAPER 2 THEORY"-->
+    <h1> SECTION A</h1>
+    <p>Answer all the questions in this section</p> <!--instruction appears here-->
+    <p> 1 	(a) 	What is transition element?   </p> <!--Questions appears here-->
+<div class="">
+<!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">Input Explanation here</div>
+</div>
+</div>
+<div id="quest">
+<div class="question">
+    <p>(b) 	Consider the election configuration of the following elements
+        A = 2:8:6;	B = 2:8:2	C=2:8:1	D = 2:8:8
+        State the element which form a:
+        i.	 doubly charge cation;
+        ii. 	soluble trioxocarbonate (IV) </p> <!--Questions appears here-->
+            
+    
+            <div class="">
+      <!--noneere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+         <p>(c) 	Explain briefly why there is a general increase in the first ionization energies of the element across the period in the periodic table. </p><!--Questions appears here-->
+
+            <div class="">
+          <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+   
+       <div id="quest">
+        <div class="question">
+    <p>(d) 	Give two example of an aliphatic compound.  </p><!--Instructions appears here-->
+            <p> </p><!--Questions appears here-->
+
+            <div class="">
+                <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+       </div>
+      <div id="quest">
+        <div class="question">
+            <p>(e) 	Explain briefly why alkanols are stronger than water	 </p> <!--Questions appears here-->
+            <div class="">
+               <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+<p>(f) 	State the major raw materials used in the solvay process </p><!--Questions appears here-->
+       
+    <p> </p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+        <p>(g) 	What is geometric isomerism? <!--Questions appears here-->
+       
+        <p> </p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">Input Explanation here</div>
+            </div>
+            <p>(h) 	Give a reason why water gas is a better fuel than producer gas</p><!--Questions appears here-->
+       
+            <p> </p>
+                    <div class="">
+                       <!--nonehere-->
+                    </div>
+                    <button>Explanation</button>
+                    <div class="answer hidden">Input Explanation here</div>
+                </div>
+                <p>(i)	Define the term heat of combustion </p><!--Questions appears here-->
+       
+                <p> </p>
+                        <div class="">
+                           <!--nonehere-->
+                        </div>
+                        <button>Explanation</button>
+                        <div class="answer hidden">Input Explanation here</div>
+                    </div>
+                    <p>(j)	 i. 	State Faraday’s second law of electrolysis
+                        ii.	Calculate the amount of silver deposited when 10920 coulombs 
+                        of electricity is passed through a solution of a silver salt
+                        [IF = 96500 C mol<sup>-1</sup>] </p><!--Questions appears here-->
+       
+                    <p> </p>
+                            <div class="">
+                               <!--nonehere-->
+                            </div>
+                            <button>Explanation</button>
+                            <div class="answer hidden">Input Explanation here</div>
+                        </div>
+                        <h1> SECTION A</h1>            
+                        <p>Answer three questions only from this section </p><!--Questions appears here-->
+       
+    <p> 2. 	(a) 	In an experiment 20.0cm<sup>3</sup> of a solution containing 4 gdm<sup>-3</sup> of sodium hydroxide 
+ was neutralized by 8.0cm<sup>3</sup> of dilute tetraoxosulphate (VI) acid:
+  i. 	Write  a balance equation for the reaction;
+   ii. 	calculate the concentration of the acid in mol dm<sup>-3</sup>
+                            </p>
+                                <div class="">
+                                   <!--nonehere-->
+                                </div>
+                                <button>Explanation</button>
+                                <div class="answer hidden">Input Explanation here</div>
+                            </div>
+   <p>(b) 	i. 	State two postulates of the Kinetic theory of gases which real gases 
+    do not obey
+ ii. 	Explain briefly why real gases do not obey the postulates stated in 2(b)(i) </p>
+                            <div class="">
+                               <!--nonehere-->
+                            </div>
+                            <button>Explanation</button>
+                            <div class="answer hidden">Input Explanation here</div>
+                        </div>
+  <p>(c) 	Consider the following compound
+    
+    i. 	name the compound
+ii. 	name the two structural isomers of the compound;
+iii. 	state the chemical process involved in the preparation of the compound from starch;
+iv. 	write the chemical equation for the steps involved in the process in 2(c) (iii);
+v. 	name two enzymes involved in the process in 2(c)(iii) </p>
+                        <div class="">
+                           <!--nonehere-->
+                        </div>
+                        <button>Explanation</button>
+                        <div class="answer hidden">Input Explanation here</div>
+                    </div>
+   <p> (d) 	Explain briefly the term structural isomerism </p>
+                    <div class="">
+                       <!--nonehere-->
+                    </div>
+                    <button>Explanation</button>
+                    <div class="answer hidden">Input Explanation here</div>
+                </div>
+    <p>3. 	(a) 	A compound contain 52.2% C, 13.1% H and Oxygen only. The vapour density of the 
+        compound is 23.
+        i. 	Determine the empirical formula;
+        ii. 	Determine its molecular formula;
+        iii. 	The compound reacts with sodium metal to produce hydrogen gas and when warmed with acidified KMnO4 (aq) gives a solution which turns from purple to colourless. It also forms a sweet smelling liquid when heated with ethanoic acid in the presence of concentrated H2SO4
+        
+        I. 	name the functional group present in the compound;
+        
+        II. 	draw the structural formula of the compound;
+        [ H = 1.0, C=12.0	O = 16.0]
+         </p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">Input Explanation here</div>
+            </div>
+  <p>(b) 	Outline the chemical equations for the production of ethanol from cooked cassava </p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    <p> (c) 	i. 	Explain briefly why a piece of alluminun does not react with water
+        ii. 	How can a pure sample of alluminium chloride crystals be prepared from aluminium
+        </p>
+        <div class="">
+           <!--nonehere-->
+        </div>
+        <button>Explanation</button>
+        <div class="answer hidden">Input Explanation here</div>
+    </div> 
+    <p> </p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">Input Explanation here</div>
+</div> 
+<p> (d) 	Describe how water can be separated from aqueous CuSO<sub>4</sub> </p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div> 
+        <p>4. 	(a) 	Starting with calcium chloride, describe briefly how a solid sample of calcium 
+            trioxocarbonate (IV) can be prepared in the laboratory.
+            [5 marks]
+            i. 	state what would be observed in the reaction;
+            iii. 	state why the copper is oxidated;
+            iv.  	an excess of copper is added to 25.0cm<sup>3</sup> of 16.0 mol dm<sup>-3</sup> HNO<sup>3</sup>. Calculate the volume of the gas formed at s.t.p
+            [H = 1.0, N = 14.0, O = 16.0 Cu=63.0; 
+            Molar volume of gas at s.t.p = 22.4 dm<sup>3</sup>]
+             </p>
+        <div class="">
+           <!--nonehere-->
+        </div>
+        <button>Explanation</button>
+        <div class="answer hidden">Input Explanation here</div>
+    </div>  
+    <p>(d). 	i. 	Pure HNO<sub>3</sub> is a colourless liquid but when exposed to air, it turns yellowish-
+        brown in colour. Explain briefly this oberservation.
+        
+        ii. 	write a balance equation for the labouratory preparation of hydrogen trioxonitrate (V) acid </p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">Input Explanation here</div>
+</div> 
+<p>5. 	(a) 	Describe how iron and aluminium react with each of the following substances;
+    i. dilute H<sub>2</sub>SO<sub>4</sub>	ii. Dilute HNO<sub>3</sub> </p>
+        <div class="">
+           <!--nonehere-->
+        </div>
+        <button>Explanation</button>
+        <div class="answer hidden">Input Explanation here</div>
+    </div> 
+    <p>(b)  	i. 	Write an equation for the burning of sulphur in air
+        ii. 	Name the catalyst used in the contact process
+        iii. 	In the contact process, why is an excess air used?
+        iv. 	Why is it necessary to cool the catalyst used in 5(b)(ii)?
+        v.  	Give a reason why the air used in the contact process need to be as clean as possible
+        vi. 	State two reason why SO<sub>2</sub> should not be discharge into the atmosphere. </p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">Input Explanation here</div>
+</div>  
+<p> (c)	i.	 state the reagent and condition used in the laboratory preparation of 
+    chlorine. 
+    ii. 	State two uses of chlorine.</p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">Input Explanation here</div>
+</div> 
+<p>(d) 	i. 	Name the drying agent for each of the following gases
+    I. hydrogen;		II. Sulphur (IV) oxide	III. Ammonia
+
+ii. 	State the component of the following alloys
+I. bronze	II. Brass.
+</p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">Input Explanation here</div>
+</div>                                                                                                                                      
+      </div>
+</body>
+</html>
