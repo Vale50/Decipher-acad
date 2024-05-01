@@ -167,25 +167,31 @@ color: #f9f9f9;
 .correct { background-color: green; }
 .incorrect { background-color: red; }
 .hidden {display: none;}
+.question-number {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id="quiz">
 <div class="question">
-
-<p>1: The by-product of fermentation of sugar is</p>
+    <div class="question-number"><strong>1.</strong></div>
+<p> The by-product of fermentation of sugar is</p>
 <div class="options">
 <div class="option" data-correct="true">A. carbon(IV) oxide</div>
 <div class="option" data-correct="false">B. ethanoic acid</div>
 <div class="option" data-correct="false">C.	propanol.</div>
 <div class="option" data-correct="false">D.	propan-1, 2, 3-triol.</div></div>
 <button class="check-answer hidden">Check Answer</button>
-<div class="answer hidden"> </div> The correct answer is A. carbon(IV) oxide</div>
+<div class="answer hidden"> The correct answer is A. carbon(IV) oxide</div>
 </div>
 <div id="quiz">
 <div class="question">
-<p>2:Which of the following sugars is a product of the condensation of monosaccharides?</p>
+    <div class="question-number"><strong>2.</strong></div>
+<p>Which of the following sugars is a product of the condensation of monosaccharides?</p>
             <div class="options">
                 <div class="option" data-correct="false">A. Galactose</div>
                 <div class="option" data-correct="true">B. Maltose</div>
@@ -198,6 +204,7 @@ color: #f9f9f9;
     </div>
       <div id="quiz">
         <div class="question">
+            <div class="question-number"><strong>3.</strong></div>
 <p>3: The cleansing effect of soap is low in acidic water because of</p>
             <div class="options">
                 <div class="option" data-correct="true">A. the formation of unionized fatty acid </div>
@@ -212,7 +219,8 @@ color: #f9f9f9;
  </div>
  <div id="quiz">
         <div class="question">
-<p>4: The following compounds are condensation polymers except</p>
+            <div class="question-number"><strong>4.</strong></div>
+<p>The following compounds are condensation polymers except</p>
             <div class="options">
                 <div class="option" data-correct="false">A. nylon</div>
                 <div class="option" data-correct="false">B. protein</div>
@@ -228,7 +236,9 @@ color: #f9f9f9;
        </div>
       <div id="quiz">
         <div class="question">
-<p>5: What amount of electricity is required to deposit one mole of aluminium 	from a solution of A1Cl<sub>3</sub>?</p>
+            <div class="question-number"><strong>5.</strong></div>
+
+<p>What amount of electricity is required to deposit one mole of aluminium 	from a solution of A1Cl<sub>3</sub>?</p>
             <div class="options">
                 <div class="option" data-correct="false">A. One Faraday </div>
                 <div class="option" data-correct="false">B. One ampere</div>
@@ -244,8 +254,9 @@ color: #f9f9f9;
    
       <div id="quiz">
         <div class="question">
-       
-<p>6: Which of the following compounds would react rapidly with bromine?</p>
+            <div class="question-number"><strong>.</strong></div>
+
+<p>Which of the following compounds would react rapidly with bromine?</p>
             <div class="options">
                 <div class="option" data-correct="false">A.Benzene</div>
                 <div class="option" data-correct="false">B.Hexane </div>
@@ -259,7 +270,9 @@ color: #f9f9f9;
       </div>
       <div id="quiz">
         <div class="question">
-<p>7:Alkanols can be manufactured from alkenes by the initial reaction of alkenes with</p>
+            <div class="question-number"><strong>7.</strong></div>
+
+<p>Alkanols can be manufactured from alkenes by the initial reaction of alkenes with</p>
             <div class="options">
                 <div class="option" data-correct="false">A. bromine in tetrachloromethane</div>
                 <div class="option" data-correct="true">B. concentrated tetraoxosulphate(VI) acid</div>
@@ -272,7 +285,9 @@ color: #f9f9f9;
  </div>
          <div id="quiz">
             <div class="question">
-<p>8: Which of the following statements about the standard hydrogen electrode is not correct?  </p>
+                <div class="question-number"><strong>8.</strong></div>
+
+<p>Which of the following statements about the standard hydrogen electrode is not correct?  </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. The hydrogen gas is at a pressure of 1 atmosphere </div>
                     <div class="option" data-correct="false">B. A solution containing 1 mol dm<sup>-3</sup> of H<sup>+</sup>(aq)<sub></sub> ions is used </div>
@@ -286,7 +301,9 @@ color: #f9f9f9;
          </div>
         <div id="quiz">
             <div class="question">
- <p>9: If 60g of M combines with 24g of oxygen, what would the empirical formula of the oxide be?	[O =16.0, M= 120] </p>
+                <div class="question-number"><strong>9.</strong></div>
+
+ <p>If 60g of M combines with 24g of oxygen, what would the empirical formula of the oxide be?	[O =16.0, M= 120] </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. MO </div>
                     <div class="option" data-correct="false">B. mO<sub>2</sub> </div>
@@ -300,7 +317,9 @@ color: #f9f9f9;
         </div>
         <div id="quiz">
             <div class="question">
-    <p>10: The products of the electrolysis of dilute sodium chloride using carbon electrodes are 
+                <div class="question-number"><strong>10.</strong></div>
+
+    <p>The products of the electrolysis of dilute sodium chloride using carbon electrodes are 
 		<u>Anode</u> 		<u>Cathode</u></p>
                 <div class="options">
                     <div class="option" data-correct="true">A. chlorine	and	sodium  </div>
@@ -316,8 +335,9 @@ color: #f9f9f9;
         </div>
           <div id="quiz">
             <div class="question">                
-            
-<p>11:Determine the quantity of electricity used when a current of 0.20 amperes is passed through an electrolytic cell for 60 minutes. </p>
+                <div class="question-number"><strong>11.</strong></div>
+
+<p>Determine the quantity of electricity used when a current of 0.20 amperes is passed through an electrolytic cell for 60 minutes. </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. 12 C. </div>
                     <div class="option" data-correct="false">B. 120 C. </div>
@@ -332,7 +352,9 @@ color: #f9f9f9;
           </div>
           <div id="quiz">
             <div class="question">
-<p>12: Oxochlorate (I) acid is used as a bleaching agent because it is </p>
+                <div class="question-number"><strong>12.</strong></div>
+
+<p>Oxochlorate (I) acid is used as a bleaching agent because it is </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. a weak acid  </div>
                     <div class="option" data-correct="false">B. a reducing agent</div>
@@ -345,7 +367,9 @@ color: #f9f9f9;
           </div>
           <div id="quiz">
             <div class="question">
-<p>13: The IUPAC name for	
+                <div class="question-number"><strong>13.</strong></div>
+
+<p>The IUPAC name for	
 	CH<sub>3</sub>CHCH<sub>3</sub>CHCICHCH<sub>3</sub>CH<sub>2</sub>CH<sub>3</sub> is</p>
                 <div class="options">
                     <div class="option" data-correct="true">A.2,4 - dimethyl - 3 - chlorohexan </div>
@@ -359,8 +383,9 @@ color: #f9f9f9;
           </div>
           <div id="quiz">
             <div class="question">
+                <div class="question-number"><strong>14.</strong></div>
 
-  <p>14: A colourless gas with a pungent smell is evolved when dilute hydrochloric acid is added to a sample of a salt. The gas evolved could turn</p>
+  <p>A colourless gas with a pungent smell is evolved when dilute hydrochloric acid is added to a sample of a salt. The gas evolved could turn</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. acidified K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> solution colourless </div>
                     <div class="option" data-correct="true">B. acidified KMn0<sub>4</sub> solution colourless. </div>
@@ -373,7 +398,9 @@ color: #f9f9f9;
           </div>
           <div id="quiz">
             <div class="question">
-<p>15: If 5.0 g of marble reacts with 25.0 cm<sup>3</sup> hydrochloric acid, which of the following combinations has the fastest reaction rate?</p>
+                <div class="question-number"><strong>15.</strong></div>
+
+<p>If 5.0 g of marble reacts with 25.0 cm<sup>3</sup> hydrochloric acid, which of the following combinations has the fastest reaction rate?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Marble chips and 2.0 mol dm<sup>-3</sup> HCl<sub>(aq)</sub> </div>
                     <div class="option" data-correct="false">B. Marble chips and 2.5 mol dm<sup>-3</sup> HCl<sub>(aq)</sub>  </div>
@@ -389,7 +416,9 @@ color: #f9f9f9;
           </div>
         <div id="quiz">
             <div class="question">
-<p>16: Increasing the temperature generally</p>
+                <div class="question-number"><strong>16.</strong></div>
+
+<p>Increasing the temperature generally</p>
                 <div class="options">
                     <div class="option" data-correct="false">A.decreases the solubility of a solid in a liquid but increases the solubility of a gas in a liquid </div>
                     <div class="option" data-correct="true">B. increases the solubility of a solid in a liquid but decreases the solubility of a gas in a liquid. </div>
@@ -402,7 +431,9 @@ color: #f9f9f9;
         </div>
         <div id="quiz">
             <div class="question">
-                <p>17: A white precipitate was formed when BaCl<sub>2(aq)</sub>was added to an aqueous solution of a salt X. The precipitate dissolved in dilute HCI with rapid 	effervescence. Salt X is likely to contain</p>
+                <div class="question-number"><strong>17.</strong></div>
+
+                <p> A white precipitate was formed when BaCl<sub>2(aq)</sub>was added to an aqueous solution of a salt X. The precipitate dissolved in dilute HCI with rapid 	effervescence. Salt X is likely to contain</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. SO<sub>4</sub><sup>2-</sup> ions.</div>
                     <div class="option" data-correct="true">B. SO<sub>3</sub><sup>2-</sup> ions</div>
@@ -415,7 +446,9 @@ color: #f9f9f9;
         </div>
          <div id="quiz">
             <div class="question">
-<p>18: Before a reaction could take place, there should be </p>
+                <div class="question-number"><strong>18.</strong></div>
+
+<p>Before a reaction could take place, there should be </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. ionization of reactant particles. </div>
                     <div class="option" data-correct="false">B. breakage of bonds of products </div>
@@ -425,15 +458,14 @@ color: #f9f9f9;
                 <button class="check-answer hidden">Check Answer</button>
                 <div class="answer hidden">The correct answer is C. breakage of bonds of reactants </div>
             </div>
-
-            
          </div>
 
 
          <div id="quiz">
             <div class="question">
-                
- <p>19: Consider the following reaction equation: CaO + Si0<sub>2</sub> —► CaSiO<sub>3</sub>	
+                <div class="question-number"><strong>19.</strong></div>
+
+ <p>Consider the following reaction equation: CaO + Si0<sub>2</sub> —► CaSiO<sub>3</sub>	
 	Silicon(IV) oxide is acting as </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. a basic oxide </div>
@@ -447,7 +479,9 @@ color: #f9f9f9;
          </div>
          <div id="quiz">
             <div class="question">
-    <p>20: Which of the following acids would form normal salt only?</p>
+                <div class="question-number"><strong>20.</strong></div>
+
+    <p>Which of the following acids would form normal salt only?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Tetraoxosulphate (VI) acid </div>
                     <div class="option" data-correct="true">B. Trioxonitrate (V) acid </div>
@@ -460,8 +494,9 @@ color: #f9f9f9;
          </div>
          <div id="quiz">
             <div class="question">
-             
- <p>21: What is the partial pressure of oxygen at s.t.p. in a gaseous mixture containing 100 cm<sup>3</sup> of oxygen and 900 cm<sup>3</sup> of nitrogen gas? </p>
+                <div class="question-number"><strong>21.</strong></div>
+
+ <p>What is the partial pressure of oxygen at s.t.p. in a gaseous mixture containing 100 cm<sup>3</sup> of oxygen and 900 cm<sup>3</sup> of nitrogen gas? </p>
                 <div class="options">
                     <div class="option" data-correct="true">A. 1.0 atm</div>
                     <div class="option" data-correct="false">B. 0.1 atm</div>
@@ -474,7 +509,9 @@ color: #f9f9f9;
          </div>
          <div id="quiz">
             <div class="question">
-<p>22:Graphite is used as a dry lubricant due to the presence of </p>
+                <div class="question-number"><strong>22.</strong></div>
+
+<p>Graphite is used as a dry lubricant due to the presence of </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. mobile electrons </div>
                     <div class="option" data-correct="false">B.free electrons.</div>
@@ -487,7 +524,9 @@ color: #f9f9f9;
          </div>
          <div id="quiz">
             <div class="question">
-<p>23: Which of the following gases is alkaline?</p>
+                <div class="question-number"><strong>23.</strong></div>
+
+<p>Which of the following gases is alkaline?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. NO<sub>2</sub>.</div>
                     <div class="option" data-correct="false">B.	CO<sub>2</sub> </div>
@@ -499,7 +538,9 @@ color: #f9f9f9;
             </div>
          </div> <div id="quiz">
             <div class="question">
-<p>24: Which of the following statements about an equilibrium system is correct? </p>
+                <div class="question-number"><strong>24.</strong></div>
+
+<p>Which of the following statements about an equilibrium system is correct? </p>
                 <div class="options">
                     <div class="option" data-correct="true">A. Forward and backward reactions occur at the same rate</div>
                     <div class="option" data-correct="false">B. The concentrations of reactants must equal that of the products.</div>
@@ -512,7 +553,9 @@ color: #f9f9f9;
          </div>
          <div id="quiz">
             <div class="question">
-<p>25: Consider the following reaction equation:	
+                <div class="question-number"><strong>25.</strong></div>
+
+<p>Consider the following reaction equation:	
 	N<sub>2(g)</sub>	+ 3H2<sub>(g)</sub> ⇌ 2NH<sub>3(g)</sub>; ∆H = -92KJ.
 	Increasing the temperature of the reaction would
 </p>
@@ -526,13 +569,13 @@ color: #f9f9f9;
                 <div class="answer hidden"> The correct answer is D. decrease the yield of ammonia</div>
             </div>
          </div>
-         <div id="quiz">
-            <div class="question">
+        
 
 <div id="quiz">
     <div class="question">
+        <div class="question-number"><strong>26.</strong></div>
 
-<p>26: When air in a syringe is compressed such that there is no change in temperature, the</p>
+<p>When air in a syringe is compressed such that there is no change in temperature, the</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. air liquefies </div>
                     <div class="option" data-correct="false">B. pressure increases </div>
@@ -544,7 +587,9 @@ color: #f9f9f9;
          </div>
          <div id="quiz">
             <div class="question">
-  <p>27:Which of the following statements about liquids is/are true?	
+                <div class="question-number"><strong>27.</strong></div>
+
+  <p>Which of the following statements about liquids is/are true?	
 	I.	Liquids maintain their volume at constant temperature.
 	II.	Liquids have fixed shape.
 	III.	Liquids do not diffuse.
@@ -559,7 +604,11 @@ color: #f9f9f9;
                 <div class="answer hidden">The correct answer is A. I only</div>
             </div>
          </div>
-<p>28: A hydrogen chloride gas reacted with oxygen gas to yield water and chlorine gas. The mole ratio of the hydrogen chloride gas to water is</p>
+
+         <div id="quiz">
+            <div class="question">
+         <div class="question-number"><strong>28.</strong></div>
+<p>A hydrogen chloride gas reacted with oxygen gas to yield water and chlorine gas. The mole ratio of the hydrogen chloride gas to water is</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. 1 : 3</div>
                     <div class="option" data-correct="true">B. 2 : 1.</div>
@@ -572,7 +621,9 @@ color: #f9f9f9;
          </div>
                  <div id="quiz">
                  <div class="question"> 
-<p>29:What number of moles of oxygen would exert a pressure of 10 atm at 320K in an 8.2 dm<sup>3</sup> cylinder?	
+                    <div class="question-number"><strong>29.</strong></div>
+
+<p>What number of moles of oxygen would exert a pressure of 10 atm at 320K in an 8.2 dm<sup>3</sup> cylinder?	
 	[R =	0.082 atm dm<sup>-3</sup> mol<sup>-1</sup> K<sup>-1</sup>]</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. 0.32 </div>
@@ -584,9 +635,12 @@ color: #f9f9f9;
                 <div class="answer hidden">The correct answer is C. 3.13</div>
             </div>
          </div>
+
          <div id="quiz">
             <div class="question">
-<p>30:If 50 cm<sup>3</sup> of a saturated solution of KN0<sub>3</sub> at 40 °C contained 5.05 g of the salt, its solubility at the same temperature would be [KN0<sub>3</sub> = 101]</p>
+                <div class="question-number"><strong>30.</strong></div>
+
+<p>If 50 cm<sup>3</sup> of a saturated solution of KN0<sub>3</sub> at 40 °C contained 5.05 g of the salt, its solubility at the same temperature would be [KN0<sub>3</sub> = 101]</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. 1.0 mol dm<sup>-3</sup></div>
                     <div class="option" data-correct="false">B. 1.5 mol dm<sup>-3</sup>.</div>
