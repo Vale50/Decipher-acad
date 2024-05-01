@@ -113,7 +113,9 @@ body {
     max-width: 600px;
     text-align: center;
 }
-
+#content {
+  display: none;
+}
 
 #question {
     font-size: 18px;
@@ -139,7 +141,13 @@ body {
     margin: 10px;
     cursor: pointer;
 }
-
+.explanation{
+     padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
 
 
 
@@ -174,6 +182,28 @@ color: #f9f9f9;
         }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    // Function to toggle the display of content
+    function toggleContent() {
+      var content = document.getElementById("content");
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+
+    // Add event listener to the check answer button
+    document.addEventListener('DOMContentLoaded', function() {
+        var checkAnswerButton = document.querySelector('.check-answer');
+        checkAnswerButton.addEventListener('click', function() {
+            toggleContent(); // Call the toggleContent function when the button is clicked
+            this.classList.toggle('hidden'); // Toggle the visibility of the button itself
+        });
+    });
+
+    </script>
 </head>
 <body>
 <div id="quiz">
@@ -185,7 +215,7 @@ color: #f9f9f9;
 <div class="option" data-correct="false">B. ethanoic acid</div>
 <div class="option" data-correct="false">C.	propanol.</div>
 <div class="option" data-correct="false">D.	propan-1, 2, 3-triol.</div></div>
-<button class="check-answer hidden">Check Answer</button>
+            <button class="check-answer hidden">Check Answer</button>
 <div class="answer hidden"> The correct answer is A. carbon(IV) oxide</div>
 </div>
 <div id="quiz">
@@ -198,7 +228,6 @@ color: #f9f9f9;
                 <div class="option" data-correct="false">C. Glucose</div>
                 <div class="option" data-correct="false">D. Fructose</div>
             </div>
-            <button class="check-answer hidden">Check Answer</button>
             <div class="answer hidden">The correct answer is B. Maltose
                 <div class="explanation">
                     <img src="/gre2.jpg" alt="Illustrative Picture">
