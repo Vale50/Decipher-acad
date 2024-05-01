@@ -97,6 +97,7 @@ body {
     <style>
 
 
+
        *  {
     margin: 0;
     padding: 0;
@@ -149,6 +150,20 @@ body {
     text-align: center;
 }
 
+.option::before {
+    font-weight: bold;
+    color: green; /* Change to your preferred color */
+    content: attr(data-prefix);
+    margin-right: 5px;
+}
+
+.option[data-correct="true"]::before {
+    content: 'A. ';
+}
+
+.option[data-correct="false"]::before {
+    content: 'B. '; /* Repeat for options C and D with appropriate content */
+}
 
 
 /* Score and progress bar styles */
