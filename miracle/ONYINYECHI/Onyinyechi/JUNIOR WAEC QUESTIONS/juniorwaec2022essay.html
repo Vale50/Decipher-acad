@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        body {
+            background-color: #efefef;
+        }
+        .logo {
+            margin: 40px auto;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 90px;
+            color: #121212;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 1px #747474, 
+                -1px 3px 1px #767676, 
+                -2px 5px 1px #787878, 
+                -3px 7px 1px #7a7a7a,
+                -4px 9px 1px #7f7f7f,
+                -5px 11px 1px #838383,
+                -6px 13px 1px #878787,
+                -7px 15px 1px #8a8a8a, 
+                -8px 17px 1px #8e8e8e,
+                -9px 19px 1px #949494,
+                -10px 21px 1px #989898,
+                -11px 23px 1px #9f9f9f,
+        }
+        .question {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 3px solid #3498db; /* Bolder border */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for creative style */
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+        .question:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker shade on hover */
+        }
+        .answer {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(this).next(".answer").slideToggle(); /* Toggle the visibility of the answer */
+            });
+        });
+    </script>
+</head>
+ <body>
+<div id="quest">
+<div class="question">
+    <!--Each section in the Theory must be Identified and Typed out in bold example "PAPER 2 THEORY"-->
+    <h1> SECTON A:
+
+        ESSAY/LETTER WRITING</h1>
+    <p>Instruction: Answer one question from this section</p> 
+    <p>  1.	In NOT less than ONE page, write a letter to your friend in another school, warning him/her of the dangers of getting involved in examination malpractice during BECE and asking him/her to concentrate on his/her studies.</p> 
+<div class="">
+<!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">Input Explanation here</div>
+</div>
+</div>
+<div id="quest">
+<div class="question">
+    <p>2.	In NOT more than a page write an essay on the ٠ topic. "My Future Career.” </p> 
+
+            <div class="">
+      <!--noneere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+            <h1>SECTION B
+                COMPREHENSION 
+            </h1>
+            <p>INSTRUCTIONS: Read the passage carefully and answer the questions that follow.</p>
+         <p> 3. One of my friends - John once asked me a question when I was in JS Two. The question was "Do you have a goal”? My reply was that I had one and it was to excel in my promotion examination. That is good but it is a short term one, he replied. "What exactly do you want to become"? he asked further. ‘I am too young for that I can become anything - a doctor, and engineer, a banker, a lawyer, just anything'. I replied and I added, when I get to SS Three, 1 will think about it.
+
+            John then took time to enlighten me: 'Listen Mary, don't deceive yourself, you must have a particular goal. Do you want to become a member of the NFA? Do you know NFA?. No Future Ambition. You have to think of what you want to become right now so that you can study towards it. You don't just wake up one day to become a doctor, a lawyer. What you want to become requires careful planning. For instance, your goal will determine the kind of subjects you want to combine. You will not just combine any subject with any other one. You need to combine the relevant subjects that will lead to your course of study. At the Senior Secondary School level, you will study subjects in different areas like Sciences, Humanities, Business and Technology. They all have different subjects as combinations.
+            
+            ‘I see, but how did you obtain this vital information?' Mary asked. My father happens to be a Guidance Counsellor and he has explained everything about the choice of a career, to me. Please, don't hesitate to go directly to your Guidance Counsellor in your school, and he or she will counsel you.
+            
+            So, 'what is your own goal'? I asked. "I want to be a Dentist. I will soon be helping you and other people to take adequate care of their teeth”. I will read Dentistry at the university, John replied. “Thank you, John, you have enlightened me today".
+            
+            Questions
+            
+            i.	What was the profession of John's father?
+            
+            ii.	What work do Guidance Counsellors do according to the passage?
+            
+            iii.	Who is a Dentist?
+            
+            iv.	How did John have such information on having a goal?
+            
+            v. 	Why did Mary need to think about her goals in JS Two that she was? </p>
+
+            <div class="">
+          <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden"><p>i. John's father is a guidance counselor</p>
+                <p>ii. Guidance counselors help to counsel people on what to do and what they dont know</p>
+                <p>iii. A dentist is a doctor who takes adequate caare of the teeth of other people</p>
+                <p>iv. John had the information on having a goal because his father is a guidance counselor and he explained everything about the need to have a goal to him.</p>
+                <p>v. Mary needed to think about her goal in JS2 so that she can carefully plan for her future</p>  </div>
+        </div>
+      </div>
+       <div id="quest">
+        <div class="question">
+            <h1>SECTION C:
+
+             SUMMARY</h1>
+    <p>INSTRUCTION: Read the passage carefully and answer the questions that follow. </p>
+            <p> 4. Road accidents in Nigeria are now on the increase. This ugly situation should be checked because many lives are being lost yearly without caution.
+
+                The question is - what are the causes and possible remedies? One of the chief causes is over— speeding by drivers. Many drivers speed without thinking of the possible outcome. This, without doubt, causes road accident.
+                
+                Secondly, many drivers have faulty brakes. They do not spare time to repair their faulty vehicles but would like to manage them. They do not have time to repair their vehicles. They want to get rich at all costs. This becomes an ill-wind blowing no good to anybody.
+                
+                Another cause of road accident is the presence of Police checkpoints on roads. This becomes more disadvantageous than what it had originally been intended for. In a bid to dodge the checkpoints, drivers speed so much that they are involved in fatal road accidents.
+                
+                From the foregoing, it is pertinent to suggest the following solutions to help to minimize road accidents, if not eradicate them. The first solution is that drivers should not over speed. The adage better be late than the late should be drummed into their ears.
+                
+                Lastly, vehicles should be checked always and maintained all the time to prevent loss of lives as a result of road accidents.
+                
+                Questions
+                
+                i. In THREE sentences, one for each, state the causes of road accidents in Nigeria.
+                
+                ii. In TWO sentences, state two possible remedies remedies of road accidents from the passage</p><!--Questions appears here-->
+
+            <div class="">
+                <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden"><p>i. Over-speeding by drivers cause road accident</p>
+                <p>Many drivers have faulty brakes</p>
+                <p>Presence of police checkpoints on roads causes road accident</p>
+                <p>ii. Drivers should not overspeed</p>
+                <p>Drivers should check and maintain their vehicle always</p> </div>
+        </div>
+       </div>
+      <div id="quest">
+        <div class="question">
+            <h1>SECTION E</h1>
+            <p>INSTRUCTION: Answer only ONE question from this section.</p>
+            <p> “THE PREGNANT TOMORROW” BY S. O. OGUDE
+                5. Mention the five excuses the tenants gave for not paying their rents.
+                </p> 
+            <div class="">
+               <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden"><p>i. One said he had not been paid salary</p>
+                <p>ii. Adjarho said, he works in a company,and receives monthly. And that it is not possible to receive money at the exact day the month ends</p>
+            <p>iii. Ikpikpi said, it is difficult to come by money,and that he doesn't get salary in the company he works at the exact month end</p>
+            <p>iv. Ubiero said,it is not eaasy to get money at the exact day the month ends.</p>
+            <p>v. Agada said, when month ends, extra days should be put to enable them gather the money to pay.</p> </div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+           <p> “SACRIFICE TO THE DUMB GOD” BY JOSEPH NWAMANA</p> 
+<p>6a. Mention the task the king gave to lyasele.</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">He should stay awake and communicate with the ancestors </div>
+        </div>
+      </div>
+      <p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+                  <div class="">
+                     <!--nonehere-->
+                  </div>
+                  <button>Explanation</button>
+                  <div class="answer hidden">when the former king was very sick </div>
+              </div>
+            </div> 
+            <p>6c. What three things did lyasele discover when he threw the Ikpekpele again?</p>
+                        <div class="">
+                           <!--nonehere-->
+                        </div>
+                        <button>Explanation</button>
+                        <div class="answer hidden"><p>He discovered that:</p>
+                        <p>i. the king murdered his wife,</p>
+                    <p>ii. the girl's mother is a witch,and</p>
+                <p>iii. she decided to avenge the death of her daughter</p>  </div>
+                    </div>
+                  </div>
+            <p>“ALL THAT GLITTERS” BY OJEBOR VERA 
+             7a. Give two reasons why Ijeoma was very happy, </p>
+                <div class="">
+             <!--nonehere-->
+             </div>
+            <button>Explanation</button>
+            <div class="answer hidden"><p>The reason why Ijeoma was very happy:</p>
+                <p>i. Because her daughter is very beautiful</p>
+                <p>ii. She will be very rich soon because suitors have begin to knock on her door for her daughter's hand in marriage</p> </div>  
+        </div>
+    </div>
+    <p>7b. Why did Ijeoma reject Okoh?</p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">Ijeoma rejected Okoh because he is too close to them and he knows her daughter very well </div>     
+        </div>
+    </div>
+<p>“A PAIR OF WINGS” BY SAM ONOMBRE II 
+    8a. What happened to Sula's father?</p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">Sula's father died in an accident. As he arrived into the country, he was involved in a motor accident on his way from the airport.</div> 
+        </div>
+    </div>
+    <p>8b.	When was the lawyer permitted to read the will?</p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">when the former king was very sick </div>
+        </div>
+    </div>
+<p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+            </div>
+          </div>           
+ <p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+    <div class="">
+     <!--nonehere-->
+          </div>
+          <button>Explanation</button>
+          <div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+      </div>
+    </div>  
+    <p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+</div>
+</div>           
+<p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+                <div class="">
+                   <!--nonehere-->
+                </div>
+                <button>Explanation</button>
+                <div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+            </div>
+          </div>           
+          <p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+          <div class="">
+             <!--nonehere-->
+          </div>
+          <button>Explanation</button>
+          <div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+      </div>
+    </div>           
+    <p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+    <div class="">
+       <!--nonehere-->
+    </div>
+    <button>Explanation</button>
+    <div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+</div>
+</div>           
+<p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+<div class="">
+   <!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+</div>
+</div>           
+<p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+<div class="">
+   <!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+</div>
+</div>           
+<p>6b. When was the last time lyasele's Ikpekpele came out?</p>
+<div class="">
+   <!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">The lawyer is permitted to read the will when Sula gets married </div>
+</div>
+</div>                                             
+
+<div id="quest">
+<div class="question">
+    <!--Each section in the Theory must be Identified and Typed out in bold example "PAPER 2 THEORY"-->
+    <h1> PAPER 2 THEORY</h1>
+    <p>Instructcion</p> <!--instruction appears here-->
+    <p>  </p> <!--Questions appears here-->
+<div class="">
+<!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">Input Explanation here</div>
+</div>
+</div>
+<div id="quest">
+<div class="question">
+    <p>Instruction:  </p> <!--Questions appears here-->
+            
+    
+            <div class="">
+      <!--noneere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+         <p> </p><!--Questions appears here-->
+
+            <div class="">
+          <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+   
+       <div id="quest">
+        <div class="question">
+    <p>Instruction: </p><!--Instructions appears here-->
+            <p> </p><!--Questions appears here-->
+
+            <div class="">
+                <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+       </div>
+      <div id="quest">
+        <div class="question">
+            <p> </p> <!--Questions appears here-->
+            <div class="">
+               <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+<p>Instruction: </p><!--Questions appears here-->
+       
+    <p> </p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+</body>
+</html>
+
+</body>
+</html>
