@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #story {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: justify;
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="shuffleButton">Shuffle</button>
+    <div id="story"></div>
+
+    <script>
+        var stories = [
+            "Story 1: Once upon a time, in a land far, far away...",
+            "Story 2: In the heart of the ancient city...",
+            "Story 3: Deep in the enchanted forest...",
+            "Story 4: High atop the windswept mountains...",
+            "Story 5: Amid the endless dunes of the desert..."
+        ];
+
+        document.getElementById('shuffleButton').addEventListener('click', function() {
+            var randomIndex = Math.floor(Math.random() * stories.length);
+            document.getElementById('story').innerText = stories[randomIndex];
+        });
+    </script>
+</body>
+</html>
