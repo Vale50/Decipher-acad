@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html>
+    <!---1. iusing html,css and js, In not less than a page, write a letter to your friend, congratulating him/her on his success in the just concluded examination.
+note: this letter will be exchanged for the stories 
+2. use proper salutation. , maintain clarity, include a formal closing, express gratitude of warmth, stick to the purpose of the letter 
+3.  use full block format, modified formats, semi-block format, indented format, open punctuation format ,closed punctuation format.
+4. let the senders information be at the top right corner and the recipient information at the left corner below the senders information.-->
 <head>
     <style>
-        #story {
-            width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #000;
-            border-radius: 5px;
-            text-align: justify;
+        body {
+            font-family: Arial, sans-serif;
         }
-        #shuffleButton {
-            display: block;
-            width: 100px;
-            margin: 20px auto;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
+        .sender {
+            text-align: right;
+        }
+        .recipient {
+            text-align: left;
+        }
+        .letter {
+            text-align: justify;
         }
     </style>
 </head>
 <body>
-    <button id="shuffleButton">Shuffle</button>
-    <div id="story"></div>
-
+    <div class="sender">
+        <p>Your Name</p>
+        <p>Your Address</p>
+        <p>Your City, State, ZIP</p>
+        <p>Your Email Address</p>
+    </div>
+    <div class="recipient">
+        <p>Friend's Name</p>
+        <p>Friend's Address</p>
+        <p>Friend's City, State, ZIP</p>
+    </div>
+    <div class="letter">
+        <p>Dear Maureen,</p>
+        <p>I am writing to congratulate you on your outstanding success in the recent examination. Your hard work and dedication have truly paid off.</p>
+        <p>I am so proud of your achievement and I am sure that this is just the beginning of a successful journey for you.</p>
+        <p>Once again, congratulations on your success. I look forward to celebrating this achievement with you soon.</p>
+        <p>With warm regards,</p>
+        <p>Your Name</p>
+    </div>
     <script>
-        var stories = [
-            "Story 1: Once upon a time, in a land far, far away...",
-            "Story 2: In the heart of the ancient city...",
-            "Story 3: Deep in the enchanted forest...",
-            "Story 4: High atop the windswept mountains...",
-            "Story 5: Amid the endless dunes of the desert..."
-        ];
-
-        document.getElementById('shuffleButton').addEventListener('click', function() {
-            var randomIndex = Math.floor(Math.random() * stories.length);
-            document.getElementById('story').innerText = stories[randomIndex];
-        });
+        // JavaScript code can go here
     </script>
 </body>
 </html>
-
-
