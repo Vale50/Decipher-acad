@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #letter {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: justify;
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .sender {
+            float: right;
+        }
+        .recipient {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <button id="shuffleButton">Shuffle</button>
+    <div id="letter">
+        <div class="sender">Sender Information</div>
+        <div class="recipient">Recipient Information</div>
+    </div>
+
+    <script>
+        var letters = ['letter1.html', 'letter2.html', 'letter3.html', 'letter4.html', 'letter5.html'];
+
+        document.getElementById('shuffleButton').addEventListener('click', function() {
+            var randomIndex = Math.floor(Math.random() * letters.length);
+            fetch(letters[randomIndex])
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('letter').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
