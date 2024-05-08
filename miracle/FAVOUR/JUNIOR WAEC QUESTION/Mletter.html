@@ -37,7 +37,7 @@
     </div>
 
     <script>
-var letters = ['miracle/letter1.html', 'miracle/letter2.html', 'miracle/letter3.html', 'miracle/letter4.html', 'miracle/letter5.html'];
+var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
         document.getElementById('shuffleButton').addEventListener('click', function() {
             var randomIndex = Math.floor(Math.random() * letters.length);
             fetch(letters[randomIndex])
