@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #letter {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: justify;
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="shuffleButton">Shuffle</button>
+    <div id="letter"></div>
+
+    <script>
+        var letters = [
+            "Your Name\\nYour Address\\n\\n\\nRonke\\nRecipient's Address\\n\\nDear Ronke,\\n\\nI am writing to congratulate you on your outstanding success in the recent examinations. Your hard work and dedication have truly paid off and I am so proud of you! It is indeed a well-deserved achievement and I am sure that this is just the beginning of a successful journey for you. Your perseverance and commitment to your studies have been truly inspiring. Once again, congratulations on your success. I am looking forward to celebrating this wonderful achievement with you soon.\\n\\nWith warm regards,\\n\\nYour Name",
+            "Your Name\\nYour Address\\n\\n\\nBayo\\nRecipient's Address\\n\\nDear Bayo,\\n\\nI am writing to congratulate you on your outstanding success in the recent examinations. Your hard work and dedication have truly paid off and I am so proud of you! It is indeed a well-deserved achievement and I am sure that this is just the beginning of a successful journey for you. Your perseverance and commitment to your studies have been truly inspiring. Once again, congratulations on your success. I am looking forward to celebrating this wonderful achievement with you soon.\\n\\nWith warm regards,\\n\\nYour Name",
+            "Your Name\\nYour Address\\n\\n\\nJane\\nRecipient's Address\\n\\nDear Jane,\\n\\nI am writing to congratulate you on your outstanding success in the recent examinations. Your hard work and dedication have truly paid off and I am so proud of you! It is indeed a well-deserved achievement and I am sure that this is just the beginning of a successful journey for you. Your perseverance and commitment to your studies have been truly inspiring. Once again, congratulations on your success. I am looking forward to celebrating this wonderful achievement with you soon.\\n\\nWith warm regards,\\n\\nYour Name",
+            "Your Name\\nYour Address\\n\\n\\nKenny\\nRecipient's Address\\n\\nDear Kenny,\\n\\nI am writing to congratulate you on your outstanding success in the recent examinations. Your hard work and dedication have truly paid off and I am so proud of you! It is indeed a well-deserved achievement and I am sure that this is just the beginning of a successful journey for you. Your perseverance and commitment to your studies have been truly inspiring. Once again, congratulations on your success. I am looking forward to celebrating this wonderful achievement with you soon.\\n\\nWith warm regards,\\n\\nYour Name",
+            "Your Name\\nYour Address\\n\\n\\nJaphet\\nRecipient's Address\\n\\nDear Japhet,\\n\\nI am writing to congratulate you on your outstanding success in the recent examinations. Your hard work and dedication have truly paid off and I am so proud of you! It is indeed a well-deserved achievement and I am sure that this is just the beginning of a successful journey for you. Your perseverance and commitment to your studies have been truly inspiring. Once again, congratulations on your success. I am looking forward to celebrating this wonderful achievement with you soon.\\n\\nWith warm regards,\\n\\nYour Name"
+        ];
+
+        document.getElementById('shuffleButton').addEventListener('click', function() {
+            var randomIndex = Math.floor(Math.random() * letters.length);
+            document.getElementById('letter').innerText = letters[randomIndex];
+        });
+    </script>
+</body>
+</html>
