@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+        }
+        .sender {
+            text-align: right;
+        }
+        .recipient {
+            text-align: left;
+        }
+        .letter {
+            text-align: justify;
+        }
+        #letter {
+            text-align: justify;
+            
+            
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .sender {
+            float: right;
+        }
+        .recipient {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <button id="shuffleButton">Shuffle</button>
+    <div id="letter">
+   
+    </div>
+
+    <script>
+var letters = ['/miracle/letter6.html', '/miracle/letter7.html', '/miracle/letter8.html', '/miracle/letter9.html', '/miracle/letter10.html'];
+        document.getElementById('shuffleButton').addEventListener('click', function() {
+            var randomIndex = Math.floor(Math.random() * letters.length);
+            fetch(letters[randomIndex])
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('letter').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

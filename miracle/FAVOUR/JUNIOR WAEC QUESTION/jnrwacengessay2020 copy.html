@@ -412,15 +412,26 @@ ii. Mention three parts of Ada’s body that Onyemaechi flogged.
 </div>                                                                               
       </div>
       <script>
-        var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
-                document.getElementById('shuffleButton').addEventListener('click', function() {
-                    var randomIndex = Math.floor(Math.random() * letters.length);
-                    fetch(letters[randomIndex])
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById('letter').innerHTML = data;
-                        });
-                });
-            </script>
+       var letters1 = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
+var letters2 = ['/miracle/letter6.html', '/miracle/letter7.html', '/miracle/letter8.html', '/miracle/letter9.html', '/miracle/letter10.html'];
+
+document.getElementById('shuffleButton1').addEventListener('click', function() {
+    var randomIndex = Math.floor(Math.random() * letters1.length);
+    fetch(letters1[randomIndex])
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('letter').innerHTML = data;
+        });
+});
+
+document.getElementById('shuffleButton2').addEventListener('click', function() {
+    var randomIndex = Math.floor(Math.random() * letters2.length);
+    fetch(letters2[randomIndex])
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('letter').innerHTML = data;
+        });
+});
+</script>
 </body>
 </html>
