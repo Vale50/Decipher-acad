@@ -447,7 +447,7 @@ document.getElementById('shuffleButton2').addEventListener('click', function() {
     fetch(letters2[randomIndex])
         .then(response => response.text())
         .then(data => {
-            document.getElementById('letter').innerHTML = data;
+            document.getElementById('letter2').innerHTML = data;
         });
 });
 </script>
