@@ -3,17 +3,6 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
-        <script>
-var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
-        document.getElementById('shuffleButton').addEventListener('click', function() {
-            var randomIndex = Math.floor(Math.random() * letters.length);
-            fetch(letters[randomIndex])
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('letter').innerHTML = data;
-                });
-        });
-    </script>
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
@@ -126,7 +115,7 @@ var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/lette
 </div>
 <button>Explanation</button>
 
-    <input type="submit" id="shuffleButton">Samples</input>
+    <input type="Samples" id="shuffleButton"></input>
     <div id="letter">
    
     </div>
@@ -459,5 +448,16 @@ ii. Mention three parts of Ada’s body that Onyemaechi flogged.
                             </div>
 </div>                                                                               
       </div>
+      <script>
+        var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
+                document.getElementById('shuffleButton').addEventListener('click', function() {
+                    var randomIndex = Math.floor(Math.random() * letters.length);
+                    fetch(letters[randomIndex])
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('letter').innerHTML = data;
+                        });
+                });
+            </script>
 </body>
 </html>
