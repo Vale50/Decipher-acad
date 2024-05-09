@@ -2,6 +2,19 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+        <script>
+var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
+        document.getElementById('shuffleButton').addEventListener('click', function() {
+            var randomIndex = Math.floor(Math.random() * letters.length);
+            fetch(letters[randomIndex])
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('letter').innerHTML = data;
+                });
+        });
+    </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
         body {
@@ -58,6 +71,40 @@
             background-color: #f0f0f0;
             border-radius: 5px;
         }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sender {
+            text-align: right;
+        }
+        .recipient {
+            text-align: left;
+        }
+        .letter {
+            text-align: justify;
+        }
+        #letter {
+            text-align: justify;
+            
+            
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .sender {
+            float: right;
+        }
+        .recipient {
+            float: left;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -79,8 +126,10 @@
 </div>
 <button>Explanation</button>
 <div class="answer hidden">
-    
-
+    <button id="shuffleButton">Shuffle</button>
+    <div id="letter">
+   
+    </div>
 </div>
 </div>
 </div>
