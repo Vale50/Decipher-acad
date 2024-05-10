@@ -2,6 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
         body {
@@ -58,6 +60,58 @@
             background-color: #f0f0f0;
             border-radius: 5px;
         }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sender {
+            text-align: right;
+        }
+        .recipient {
+            text-align: left;
+        }
+        .letter {
+            text-align: justify;
+        }
+        #letter {
+            text-align: justify;
+        }
+            .letter2 {
+            text-align: justify;
+        }
+        #letter2 {
+            text-align: justify;
+          
+            
+            
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #shuffleButton2 {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .sender {
+            float: right;
+        }
+        .recipient {
+            float: left;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -78,94 +132,29 @@
 <div class="">
 </div>
 <button>Explanation</button>
-<div class="answer hidden">A.	CONTENT 
-    1.	Any 3 or more points should score 
-    2.	Any 2 points should score 
-    3.	One points should score 
-    
-    Points:
-    -	Introduce the club by stating its name and what it is about.
-    -	State why you decided to join the club instead of others.
-    -	Mention activities the club carries out that you find interesting.
-    -	State the aims and objectives of the club.
-    -	State the membership composition of club.
-    -	State how the club has affected you academically, socially, and in other areas.
-    -	State your role in the club and express the impact you have made in the club and through 	the club.
-    -	State what you would like to see the club achieve.
-    -	Conclusion
-    
-    B.	ORGANIZATION
-    1.	The title of the essay -1 mark
-    2.	Good paragraph structure and appropriate linking of ideas -1mark
-    
-    C.	EXPRESSION
-    1.	The essay should be written m clear and simple English.
-    2.	A candidate who communicates partially should score 1 mark.
-    3.	A script that does not make sense should score zero.
-    4.	Candidates should be consistent in their use offenses.
-    
-    D.	MECHANICAL ACCURACY 
-    1.	Ring incorrect spellings, obvious punctuation errors, wrong use of capital letters.
-    2.	Twenty ringed mistakes will neutralize the two marks.
-    3.	Where a candidate writes less than the specified length of 20 lines, mark out of 1 mark 	and specify this on the script.
-    
-    4.	Where a candidate writes more than the specific length, there is no penalty. Draw a 	double line at the required length. Do not ring but underline any errors found-after the 	double line and reward points made thereafter.
+<div class="answer hidden">
 
+    <button  id="shuffleButton">Samples</button>
+    <div id="letter">
+   
+    </div>
 </div>
+
 </div>
 </div>
 <div id="quest">
 <div class="question">
-    <p><b>1b</b>	In not less than a page, write a letter to your uncle, thanking him for the gift he 	sent you on your birthday.
+    <p><b>1b</b>	In not less than a page, write a letter to your uncle, thanking him for the gift he sent you on your birthday.
  </p>
  <div class="">
       <!--noneere-->
             </div>
             <button>Explanation</button>
-            <div class="answer hidden">A.	CONTENT 
-                1.	Any 3 or more of the following points should score 3 marks.
-                2.	Any 2 points should score 2 marks.
-                3.	One point should score 1 mark.
-                
-                Points:
-                -	Ask about uncle’s well-being and his family’s.
-                -	Let him know how grateful you are for the birthday gift.
-                -	Make your appreciation credible by stating how timely his gesture was and how useful the 	gift will be in your life.
-                -	Share events from the birthday party with him.
-                -	Share personal information with him, for instance, tell him about your performance in
-                    the last examination, or about your family.
-                -	Reiterate your appreciation.
-                -	Extend greetings to his family.
-                -	Conclusion
-                
-                B.	ORGANISATION 
-                
-                The informal letter format is mandatory and both the features and scores are as follows.
-                
-                1.	Writer’s address on the top right head corner and date	1 mark.
-                2.	The salutation -Dear sir	
-                3.	Closing -Yours sincerely
-                4.	Plus name of writer	mark.
-                5.	Good paragraph structure and effective linking of ideas	1 mark.
-                
-                The candidate loses the appropriate score if any one of the item is left out in the different sections.
-                
-                C.	EXPRESSION 
-                
-                The letter should be written in simple and correct English. The use of slang and contracted forms should be noted. There should be at least three well paragraph and developed ideas.
-                
-                D.	MECHANICAL ACCURACY
-                
-                1.	Ring incorrect spellings, obvious punctuation errors, wrong use of capital letters.
-                2.	Ten ringed mistakes will neutralize the one mark.	*
-                
-                3.	Where a candidate write less than the specified length of 20 lines, mark out of 1/2 under 	M.A. and specify this on the script.
-                4.	Where a candidate writes more than the
-                specified length, there is no penalty. Draw a double line at the required length. Do not ring but underline any errors found after the double line and reward points made thereafter.
-                
-                
-                
-
+            <div class="answer hidden">
+                <button  id="shuffleButton2">Samples</button>
+                <div id="letter2">
+               
+                </div>
             </div>
         </div>
     </div>
@@ -440,5 +429,27 @@ ii. Mention three parts of Ada’s body that Onyemaechi flogged.
                             </div>
 </div>                                                                               
       </div>
+      <script>
+       var letters = ['/miracle/letter1.html', '/miracle/letter2.html', '/miracle/letter3.html', '/miracle/letter4.html', '/miracle/letter5.html'];
+var letters2 = ['/miracle/letter6.html', '/miracle/letter7.html', '/miracle/letter8.html', '/miracle/letter9.html', '/miracle/letter10.html'];
+
+document.getElementById('shuffleButton').addEventListener('click', function() {
+    var randomIndex = Math.floor(Math.random() * letters.length);
+    fetch(letters[randomIndex])
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('letter').innerHTML = data;
+        });
+});
+
+document.getElementById('shuffleButton2').addEventListener('click', function() {
+    var randomIndex = Math.floor(Math.random() * letters2.length);
+    fetch(letters2[randomIndex])
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('letter2').innerHTML = data;
+        });
+});
+</script>
 </body>
 </html>
