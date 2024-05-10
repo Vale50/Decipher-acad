@@ -58,6 +58,55 @@
             background-color: #f0f0f0;
             border-radius: 5px;
         }
+        .sender {
+            text-align: right;
+        }
+        .recipient {
+            text-align: left;
+        }
+        .letter {
+            text-align: justify;
+        }
+        #letter {
+            text-align: justify;
+        }
+            .letter2 {
+            text-align: justify;
+        }
+        #letter2 {
+            text-align: justify;
+          
+            
+            
+        }
+        #shuffleButton {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #shuffleButton2 {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .sender {
+            float: right;
+        }
+        .recipient {
+            float: left;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -78,7 +127,12 @@
 <div class="">
 </div>
 <button>Explanation</button>
-<div class="answer hidden">1.	INFORMAL LETTER
+<div class="answer hidden">
+    <button  id="shuffleButton">Samples</button>
+    <div id="letter">
+   
+    </div>
+    <!-- 1.	INFORMAL LETTER
     In NOT less than a page, write a letter to your friend, congratulating him/her on his/her success in the just concluded examination,
     a.	Content		6	marks
     f b.	Organisation		6	marks
@@ -122,7 +176,7 @@
     1.	Ring incorrect spellings, obvious punctuation errors, wrong use of capital letters.
     2.	Ten ringed mistakes will neutralize the two marks.
     3.	Where a candidate write less than the specified length, mark out of 1 under M.A. and specify this on the script.
-    4.	Where a candidate writes more than the specified length, there is no penalty. Draw a double line at the required length. Do not ring but underline any errors found after the double line and reward points made thereafter.</div>
+    4.	Where a candidate writes more than the specified length, there is no penalty. Draw a double line at the required length. Do not ring but underline any errors found after the double line and reward points made thereafter.--></div>
 </div>
 </div>
 <div id="quest">
@@ -132,7 +186,10 @@
       <!--noneere-->
             </div>
             <button>Explanation</button>
-            <div class="answer hidden">ESSAY WRITING
+            <div class="answer hidden">
+                <button  id="shuffleButton2">Samples</button>
+                <div id="letter2">
+                    <!-- ESSAY WRITING
                 An essay on the topic. “My Future Career.”
                 a.	Content	-	6	marks
                 b.	Organisation	-	4	marks
@@ -173,7 +230,8 @@
                 1.	Ring incorrect spellings, obvious punctuation errors, wrong use of capital letters.
                 2.	Twenty ringed mistakes will neutralize the 4 marks.
                 3.	Where a candidate writes less than the specified length, mark out of 2 marks and specify this on the script.
-                4.	Where a candidate writes more than the specific length, there is no penalty. Draw a double line at the required length. Do not ring but underline any errors found after the double line and reward points made thereafter.</div>
+                4.	Where a candidate writes more than the specific length, there is no penalty. Draw a double line at the required length. Do not ring but underline any errors found after the double line and reward points made thereafter.-->
+        </div>
         </div>
     </div>
       <div id="quest">
@@ -559,12 +617,34 @@
         <div class="answer hidden">24a. The four evil that will befall Emu Community if the sacrifice was rejected by the gods are;
             i.	More pains.
             ii.	More lack.
-            iii.	More death until the male child in each household is sacrificed.
+            iii.More death until the male child in each household is sacrificed.
             iv.	More calamities.
             b.	Emu eloped with Akum
             c.	Emu people were claiming ownership of the boundary land because of the rumour going around that oil was found in the land by an oil company</div>
     </div>                                           
 </div>                                                                               
       </div>
+      <script>
+        var letters = ['/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/essay1.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/essay2.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/essay3.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/essay4.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/essay5.html'];
+ var letters2 = ['/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/letter11.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/letter12.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/letter13.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/letter14.html', '/miracle/MIRACLE 2/JUNIOR WAEC QUESTIONS/letter15.html'];
+ 
+ document.getElementById('shuffleButton').addEventListener('click', function() {
+     var randomIndex = Math.floor(Math.random() * letters.length);
+     fetch(letters[randomIndex])
+         .then(response => response.text())
+         .then(data => {
+             document.getElementById('letter').innerHTML = data;
+         });
+ });
+ 
+ document.getElementById('shuffleButton2').addEventListener('click', function() {
+     var randomIndex = Math.floor(Math.random() * letters2.length);
+     fetch(letters2[randomIndex])
+         .then(response => response.text())
+         .then(data => {
+             document.getElementById('letter2').innerHTML = data;
+         });
+ });
+ </script>
 </body>
 </html>
