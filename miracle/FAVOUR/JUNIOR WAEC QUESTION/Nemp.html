@@ -218,4 +218,28 @@ Example:
         <button class="neu-button video hidden">Video</button>
         <div class="answer hidden">The correct answer is A. Aluminum</div>
     </div>
+    <script>
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/20");
+        });
+
+
+        $(".check-answer").click(function() {
+            $(this).siblings(".answer").removeClass("hidden");
+        });
+    </script>
 </body>
