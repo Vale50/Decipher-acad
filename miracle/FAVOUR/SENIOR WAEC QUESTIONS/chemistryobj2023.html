@@ -2,172 +2,146 @@ DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- <style>
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-body {
-  background-color: #efefef;
-}
-
-.logo{
-  margin: 40px auto;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 90px;
-  color: #121212;
-  text-align: center;
-  letter-spacing: 5px;
-  text-shadow: 0 2px 1px #747474, 
-      -1px 3px 1px #767676, 
-      -2px 5px 1px #787878, 
-      -3px 7px 1px #7a7a7a,
-      -4px 9px 1px #7f7f7f,
-      -5px 11px 1px #838383,
-      -6px 13px 1px #878787,
-      -7px 15px 1px #8a8a8a, 
-      -8px 17px 1px #8e8e8e,
-      -9px 19px 1px #949494,
-      -10px 21px 1px #989898,
-      -11px 23px 1px #9f9f9f,
-      
-}
-    h1{
-        color: #fff;
-        font-style: italic;
-    }
-* {box-sizing: border-box;}
-body {
- margin: 0;
- font-family: Arial, Helvetica, sans-serif;
- background-color: #12335b;
-}
-.header {
- overflow: hidden;
- background-color: #3498db;
- padding: 10px 5px;
- transition: 0.3s ease;
-}
-.header a {
- float: left;
- color: #12335b;
- text-align: center;
- padding: 10px;
- text-decoration: none;
- font-size: 17px;
- line-height: 25px;
- border-radius: 4px;
-}
-.header a.logo {
- font-size: 20px;
- font-weight: bold;
-}
-.header a:hover {
- color: cyan;
-}
-.header-right {
- float: right;
-}
-@media screen and (max-width: 500px) {
- .header a {
- float: none;
- display: block;
- text-align: center;
- transition: 0.3s ease;
- }
- 
- .header-right {
- float: none;
- }
-}
-</style>
-</head>
-<body>
-<div class="header">
- <a href="#default" class="logo">DECIPHER-ACADEMY</a>
- <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
- <a href="x.com"><i class="fab fa-twitter"></i></i></a>
- <div class="header-right">
- <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
- <a href="#contact">About</a>
- <a href="#courses">Courses</a>
- <a href="#classroom">Classrooms</a>
- <a href="#blog">Blog</a>
- </div>
-</div>
-</body>
     <style>
 
 
-       *  {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* Quiz container styles */
-#quiz{
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: center;
-}
-
-
-#question {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-
-.option {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-
-#answer {
-    margin-top: 20px;
-}
-.answer{
-    border: 1px solid blue;
-    background-color: green;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-
-
-
-/* Score and progress bar styles */
-#score {
-    font-size: 16px;
-    margin-top: 20px;
-    color: #f9f9f9;
-  
-}
-#progress{
-    color: #f9f9f9;
-float: right;
-}
-
-
-#progressBar {
-width: 100%;
-height: 20px;
-margin-top: 10px;
-color: #f9f9f9;
-
-}
-       
-.correct { background-color: green; }
-.incorrect { background-color: red; }
-.hidden {display: none;}
-</style>
+        *  {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ 
+ /* Quiz container styles */
+ /* Neumorphism effect for divs */
+ .neu-div {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 8px 8px 15px #a7a7a7,
+                 -8px -8px 15px #ffffff;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 600px;
+ }
+ 
+ /* Apply neumorphism effect to specific elements */
+ #quiz, .question, .options {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 8px 8px 15px #a7a7a7,
+                 -8px -8px 15px #ffffff;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 600px;
+ }
+ 
+ .option {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 5px 5px 10px #a7a7a7,
+                 -5px -5px 10px #ffffff;
+     padding: 10px;
+     margin: 10px;
+     cursor: pointer;
+     transition: 0.3s ease;
+ }
+ 
+ .option:hover {
+     box-shadow: inset 5px 5px 10px #a7a7a7,
+                 inset -5px -5px 10px #ffffff;
+ }
+ 
+ .option:active {
+     box-shadow: inset 2px 2px 5px #a7a7a7,
+                 inset -2px -2px 5px #ffffff;
+ }
+ #quiz{
+     background-color: #f9f9f9;
+     padding: 20px;
+     border-radius: 10px;
+     margin: 20px auto;
+     max-width: 600px;
+     text-align: center;
+ }
+ 
+ 
+ #question {
+     font-size: 18px;
+     margin-bottom: 20px;
+ }
+ 
+ 
+ .option {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin: 10px;
+     cursor: pointer;
+ }
+ 
+ 
+ #answer {
+     margin-top: 20px;
+ }
+ .answer{
+     border: 1px solid blue;
+     background-color: #34db95;
+     margin: 10px;
+     cursor: pointer;
+             outline: none;
+             color: #333;
+             padding: 10px 20px;
+             border-radius: 10px;
+             box-shadow: 8px 8px 15px #a7a7a7,
+                         -8px -8px 15px #ffffff;
+             font-weight: bold;
+             cursor: pointer;
+             transition: 0.3s ease;
+ }
+ 
+ 
+ 
+ 
+ /* Score and progress bar styles */
+ #score {
+     font-size: 16px;
+     margin-top: 20px;
+ }
+ 
+ 
+ #progressBar {
+     width: 100%;
+     height: 20px;
+     margin-top: 10px;
+ }
+        
+         .correct { background-color: green; }
+         .incorrect { background-color: red; }
+         .hidden { display: none; }
+         /* Neumorphism effect for buttons */
+         .neu-button {
+             border: none;
+             outline: none;
+             background-color: #e0e0e0;
+             color: #333;
+             padding: 10px 20px;
+             border-radius: 10px;
+             box-shadow: 8px 8px 15px #a7a7a7,
+                         -8px -8px 15px #ffffff;
+             font-weight: bold;
+             cursor: pointer;
+             transition: 0.3s ease;
+         }
+ 
+         .neu-button:hover {
+             box-shadow: inset 8px 8px 15px #a7a7a7,
+                         inset -8px -8px 15px #ffffff;
+         }
+ 
+         .neu-button:active {
+             box-shadow: inset 4px 4px 10px #a7a7a7,
+                         inset -4px -4px 10px #ffffff;
+         }
+     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
@@ -185,6 +159,7 @@ color: #f9f9f9;
 <div class="option" data-correct="false">C.	Gay-lussac’s law	</div>
 <div class="option" data-correct="false">D.	Boyle’s law</div>
 <button class="check-answer hidden">Check Answer</button>
+<button class="neu-button video hidden">Video</button>
 <div class="answer hidden"> </div> The correct answer isA.	Dalton’s atomic theory  </div>
 </div>
 <div id="quiz">
@@ -197,6 +172,7 @@ color: #f9f9f9;
                 <div class="option" data-correct="false">D. propane</div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
+            <button class="neu-button video hidden">Video</button>
             <div class="answer hidden">The correct answer is C.methane</div>
         </div>
     </div>
@@ -211,6 +187,7 @@ color: #f9f9f9;
                 <div class="option" data-correct="false">D.	requires hydrogen </div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
+            <button class="neu-button video hidden">Video</button>
             <div class="answer hidden">The correct answer is A. involves decomposition. 
  </div>
   </div>
@@ -225,6 +202,7 @@ color: #f9f9f9;
                 <div class="option" data-correct="true">D.	incomplete combustion of petrol. </div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
+            <button class="neu-button video hidden">Video</button>
             <div class="answer hidden"> So the correct answer is D.incomplete combustion of petrol.  </div>
         </div>
    
@@ -242,6 +220,7 @@ color: #f9f9f9;
                 </div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
+            <button class="neu-button video hidden">Video</button>
             <div class="answer hidden">The correct answer is A. 2 .</div>
         </div>
     </div>
@@ -258,6 +237,7 @@ color: #f9f9f9;
                 <div class="option" data-correct="false">D. the combustion of alkane.  </div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
+            <button class="neu-button video hidden">Video</button>
             <div class="answer hidden"> The correct answer is B.the cracking of hydrocarbons.</div>
         </div>
    
@@ -273,6 +253,7 @@ color: #f9f9f9;
                 </div>
             </div>
             <button class="check-answer hidden">Check Answer</button>
+            <button class="neu-button video hidden">Video</button>
             <div class="answer hidden">The correct answer isB.	applied chemistry  </div>
         </div>
  </div>
@@ -286,6 +267,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="true">D.intermediates</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is D.intermediates
                      </div>
             </div>
@@ -302,6 +284,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 	Pentane has five isomers </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer isA.	An alkane with 49 carbon atoms contain 100 hydrogen atoms  </div>
             </div>
        
@@ -316,6 +299,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 	screened methyl orange </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is C. phenolphthalein . </div>
             </div>
 
@@ -337,6 +321,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. Zn (s) -- Zn<sup>2+ </sup><sub>(aq) + 2e-  </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is  B. Cu<sup>2+ </sup><sub>(aq)</sub> + 2e-	-- Cu<sub>(s) </sub></div>
             </div>
 
@@ -353,6 +338,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.2.15 mol dm<sup>-3</sup></div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is C. 0.74 mol dm<sup>-3</sup> </div>
             </div>
           </div>
@@ -366,6 +352,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.sodium tetraoxosulphate (VI). </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is 	A.	potassium trioxonitrate (V).</div>
             </div>
           </div>
@@ -382,6 +369,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. amphoteric </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is A.basic</div>
             </div>
           </div>
@@ -398,6 +386,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.CH<sub>3</sub>COOH + OH<sup>-</sup>    CH<sub>3</sub>COO- + H<sub>2</sub>O  </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is C.CH<sub>3</sub>COOCH<sub>2</sub>CH<sub>3</sub> + H<su>2</su>O  CH<sub>3</sub>COOH + CH<sub>3</sub>CH<sub>2
                 </sub>OH</div>
           </div>
@@ -411,7 +400,8 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
-                <div class="answer hidden">The correct answer is 
+                <button class="neu-button video hidden">Video</button>
+                <div class="answer hidden">The correct answer is B
                     .</div>
             </div>
         </div>
@@ -426,6 +416,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is  C.react with the gas.</div>
             </div>
         </div>
@@ -439,6 +430,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.Ca(OH)<sub>2</sub> + Cl<sub>2</sub>  CaOCl<sub>2</sub>+ H<sub>2</sub>O </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is C. Cl<sub>2</sub> + 2NaF	2NaCl + F<sub>2</sub>.</div>
             </div>
 
@@ -457,6 +449,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 5</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is </div>
             </div>
          </div>
@@ -471,6 +464,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer isC.ionization energy increases.     </div>
             </div>
          </div>
@@ -485,6 +479,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.Aluminium</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer isA. Sodium</div>
             </div>
          </div>
@@ -498,6 +493,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 	ionization energy</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is B.electron affinity.</div>
             </div>
          </div>
@@ -511,6 +507,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. problem identification.</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is B.open-mindedness </div>
             </div>
          </div> <div id="quiz">
@@ -523,6 +520,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.ions </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is A.electrons</div>
             </div>
          </div>
@@ -537,6 +535,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 	66.00. </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden"> The correct answer is B.65.40</div>
             </div>
          </div>
@@ -553,6 +552,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">C. </div>
                     <div class="option" data-correct="false">D. </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is  </div>
             </div>
          </div>
@@ -567,6 +567,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is A.flooding</div>
             </div>
          </div>
@@ -579,6 +580,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. Methane</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is.C. Oxygen </div>
             </div>
          </div>
@@ -592,6 +594,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. oxygen</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer isB.nitrogen  </div>
             </div>
          </div>
@@ -606,6 +609,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer isB.H<sub>2</sub>SO<sub>4</sub>(aq)</div>
             </div>
          </div>         <div id="quiz">
@@ -633,6 +637,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is B.  0.80 g </div>
             </div>
          </div>
@@ -646,6 +651,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.	electrovalent bond </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is A.polarity</div>
             </div>
          </div>
@@ -660,6 +666,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. Cl<sub>2</sub></div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is  B.HC1 </div>
             </div>
          </div>
@@ -673,6 +680,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. Y and Z only </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is</div>
             </div>
          </div>
@@ -687,6 +695,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.45 </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">  The correct answer is A. 15  </div>
             </div>
          </div>
@@ -703,6 +712,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 198 kJ of energy is absorbed.</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">  The correct answer is A.The reaction is exothermic.  </div>
             </div>
          </div> 
@@ -717,6 +727,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D.Melting </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">  The correct answer C.  Polymerization </div>
             </div>
          </div>
@@ -731,6 +742,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="true">D. an acid anhydride. </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is D.an acid anhydride. </div>
             </div>
          </div>
@@ -744,6 +756,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="true">D. metallic bonds.</div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is  D.metallic bonds</div>
             </div>
          </div>
@@ -758,6 +771,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. it is highly corrosive. </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is A. it is a strong oxidizing agent.  </div>
             </div>
          </div>
@@ -771,6 +785,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="true">D.	0.0625 </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is D.	0.0625</div>
             </div>
          </div>
@@ -786,6 +801,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is B.have unpaired electrons </div>
             </div>
          </div>
@@ -802,6 +818,7 @@ color: #f9f9f9;
 
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is D. 400cm.</div>
             </div>
          </div>
@@ -818,6 +835,7 @@ color: #f9f9f9;
                     </div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is A.	The total kinetic energy of the gas is not affected by collision
                      </div>
             </div>
@@ -833,6 +851,7 @@ color: #f9f9f9;
                     <div class="option" data-correct="false">D. 	CH<sub>4</sub>, SiH<sub>4</sub>, HF,NH<sub>3</sub></div>
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is C.HF, NH<sub>3</sub>, SiH<sub>4</sub>, CH<sub>4</sub>
                 </div>
             </div>
@@ -849,6 +868,7 @@ color: #f9f9f9;
                     </div>	
                 </div>
                 <button class="check-answer hidden">Check Answer</button>
+                <button class="neu-button video hidden">Video</button>
                 <div class="answer hidden">The correct answer is D. 	there is large decrease in the volume of a solid metal when pressure is applied to it
                 </div>
             </div>
@@ -863,6 +883,7 @@ color: #f9f9f9;
     <div class="option" data-correct="true">D. </div>
 </div>
 <button class="check-answer hidden">Check Answer</button>
+<button class="neu-button video hidden">Video</button>
 <div class="answer hidden">The correct answer is</div>
 </div>
 </div>
@@ -876,6 +897,7 @@ color: #f9f9f9;
     <div class="option" data-correct="false">D. evaporation</div>
 </div>
 <button class="check-answer hidden">Check Answer</button>
+<button class="neu-button video hidden">Video</button>
 <div class="answer hidden">The correct answer is C.crystallization </div>
 </div>
 </div>
@@ -889,6 +911,7 @@ color: #f9f9f9;
     <div class="option" data-correct="true">D.  filtration </div>
 </div>
 <button class="check-answer hidden">Check Answer</button>
+<button class="neu-button video hidden">Video</button>
 <div class="answer hidden">The correct answer is  D.  filtration</div>
 </div>
 </div>
@@ -898,33 +921,30 @@ color: #f9f9f9;
               </div>
               <div id="score">Score: 0</div>
               <div id="progress">Progress: 0/50</div>
-          
-          
               <script>
-                  var score = 0;
-                  var progress = 0;
-          
-                  $(".option").click(function() {
-                      if ($(this).hasClass("selected")) {
-                          return;
-                      }
-                      $(this).addClass("selected");
-                      $(this).siblings().removeClass("correct incorrect");
-                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-                      if ($(this).data("correct")) {
-                          score++;
-                          $("#score").text("Score: " + score);
-                      } else {
-                          $(this).parent().siblings(".check-answer").removeClass("hidden");
-                      }
-                      progress++;
-                      $("#progress").text("Progress: " + progress + "/50");
-                  });
-          
-                  $(".check-answer").click(function() {
-                      $(this).siblings(".answer").removeClass("hidden");
-                  });
-              </script>
+
+                $(".option").click(function() {
+                    if ($(this).hasClass("selected")) {
+                        return;
+                    }
+                    $(this).addClass("selected");
+                    $(this).siblings().removeClass("correct incorrect");
+                    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+                    if ($(this).data("correct")) {
+                        score++;
+                        $("#score").text("Score: " + score);
+                    } else {
+                        $(this).parent().siblings(".check-answer, .video").removeClass("hidden");
+                    }
+                    progress++;
+                    $("#progress").text("Progress: " + progress + "/20");
+                });
+                
+                $(".check-answer").click(function() {
+                    $(this).siblings(".answer, .video").removeClass("hidden");
+                });
+                
+                    </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
           <!-- button -->
