@@ -206,17 +206,25 @@ body {
          box-shadow: inset 4px 4px 10px #a7a7a7,
                      inset -4px -4px 10px #ffffff;
      }
+     .question-number {
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
  </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="quiz">
         <div class="question">
+            <div class="question-number"><strong>.</strong></div>
+
 <!—-your instructions goes here—>
 Example: 
 <p>INSTRUCTION: Choose from the options lettered A-D, the one that best answers each of the following questions</p>
-            <p>1: Which of these is a solid matter?</p>
+            <p> Which of these is a solid matter?</p>
             <div class="options">
+
                 <div class="option" data-correct="true">A. Aluminum	</div>
                 <div class="option" data-correct="false">B. Alcohol</div>
                 <div class="option" data-correct="false">C. Kerosine</div>
@@ -227,7 +235,9 @@ Example:
         </div>
     <div id="quiz">
         <div class="question">
-            <p>2:The S.I unit of force is....</p>
+            <div class="question-number"><strong>2.</strong></div>
+
+            <p>The S.I unit of force is....</p>
             <div class="options">
                 <div class="option" data-correct="false">A. ampere.	</div>
                 <div class="option" data-correct="true">B. kilogram</div>
@@ -240,7 +250,9 @@ Example:
     </div>
       <div id="quiz">
         <div class="question">
-            <p>3: Overgrazing of grassland by cattle exposes the land to?</p>
+            <div class="question-number"><strong>3.</strong></div>
+
+            <p>Overgrazing of grassland by cattle exposes the land to?</p>
             <div class="options">
                 <div class="option" data-correct="false">A. agriculture.</div>
                 <div class="option" data-correct="true">B. erosion</div>
@@ -256,7 +268,9 @@ Example:
    
        <div id="quiz">
         <div class="question">
-            <p>4:A part of the plant used as medicine is called....</p>
+            <div class="question-number"><strong>4.</strong></div>
+
+            <p>A part of the plant used as medicine is called....</p>
             <div class="options">
                 <div class="option" data-correct="true">A. herb. </div>
                 <div class="option" data-correct="false">B. onga. </div>
@@ -272,7 +286,9 @@ Example:
        </div>
       <div id="quiz">
         <div class="question">
-            <p>5:Continuity in family is brought about by....</p>
+            <div class="question-number"><strong>5.</strong></div>
+
+            <p>Continuity in family is brought about by....</p>
             <div class="options">
                 <div class="option" data-correct="false">A. love</div>
                 <div class="option" data-correct="true">B. marriage</div>
@@ -285,7 +301,9 @@ Example:
    
       <div id="quiz">
         <div class="question">
-            <p>6:A piece of iron that can also act as a magnet is also called a...</p>
+            <div class="question-number"><strong>6.</strong></div>
+
+            <p>A piece of iron that can also act as a magnet is also called a...</p>
             <div class="options">
                 <div class="option" data-correct="false">A. bar</div>
                 <div class="option" data-correct="false">B. brass</div>
@@ -297,8 +315,12 @@ Example:
         </div>
    
       </div>
+      
+      <div id="quiz">
         <div class="question">
-            <p>7: WThe process by which liquid escapes into the atmosphere is called....</p>
+            <div class="question-number"><strong>7.</strong></div>
+
+            <p>WThe process by which liquid escapes into the atmosphere is called....</p>
             <div class="options">
                 <div class="option" data-correct="false">A. bubbles</div>
                 <div class="option" data-correct="false">B. boiling point</div>
@@ -308,10 +330,13 @@ Example:
             <button class="check-answer hidden">Check Answer</button>
             <div class="answer hidden">The correct answer is C.evaporation </div>
         </div>
+    </div>
  
          <div id="quiz">
             <div class="question">
-                <p>8: What is the full meaning of NDLEA?</p>
+                <div class="question-number"><strong>8.</strong></div>
+
+                <p>What is the full meaning of NDLEA?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Nigeria Dealer Law and Enlargement Agency</div>
                     <div class="option" data-correct="false">B. National Daily Law and Enforcement</div>
@@ -325,7 +350,9 @@ Example:
          </div>
         <div id="quiz">
             <div class="question">
-                <p>9: 	When a person is running, energy is converted from chemical energy to....</p>
+                <div class="question-number"><strong>9.</strong></div>
+
+                <p>When a person is running, energy is converted from chemical energy to....</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. kinetic energy.	</div>
                     <div class="option" data-correct="false">B. light energy</div>
@@ -339,7 +366,9 @@ Example:
         </div>
         <div id="quiz">
             <div class="question">
-                <p>10: .....is the gradual transformation of a terrestrial habitat into a desert</p>
+                <div class="question-number"><strong>10.</strong></div>
+
+                <p> .....is the gradual transformation of a terrestrial habitat into a desert</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Deforestation </div>
                     <div class="option" data-correct="true">B. Desertification </div>
@@ -352,7 +381,9 @@ Example:
         </div>
           <div id="quiz">
             <div class="question">
-                <p>11: An infant growing milk teeth is a....change.</p>
+                <div class="question-number"><strong>11.</strong></div>
+
+                <p>An infant growing milk teeth is a....change.</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. permanent</div>
                     <div class="option" data-correct="true">B. strong</div>
@@ -365,7 +396,9 @@ Example:
           </div>
           <div id="quiz">
             <div class="question">
-                <p>12: The three ossicles are found in the.... layer.</p>
+                <div class="question-number"><strong>12.</strong></div>
+
+                <p>The three ossicles are found in the.... layer.</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. inner </div>
                     <div class="option" data-correct="true">B. middle </div>
@@ -378,7 +411,9 @@ Example:
           </div>
           <div id="quiz">
             <div class="question">
-                <p>13: The fraction of crude oil used for tarring of roads is ....</p>
+                <div class="question-number"><strong>.</strong></div>
+
+                <p>The fraction of crude oil used for tarring of roads is ....</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. bitumen</div>
                     <div class="option" data-correct="true">B. engine oil. </div>
@@ -391,7 +426,9 @@ Example:
           </div>
           <div id="quiz">
             <div class="question">
-                <p>14: The following are vitamins EXCEPT....</p>
+                <div class="question-number"><strong>14.</strong></div>
+
+                <p>The following are vitamins EXCEPT....</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. vitamin A.</div>
                     <div class="option" data-correct="true">B. vitamin B.</div>
@@ -404,7 +441,9 @@ Example:
           </div>
           <div id="quiz">
             <div class="question">
-                <p>15: A fuse usually.... when there is excess current</p>
+                <div class="question-number"><strong>15.</strong></div>
+
+                <p>A fuse usually.... when there is excess current</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. freezes</div>
                     <div class="option" data-correct="true">B. melts</div>
@@ -417,7 +456,9 @@ Example:
           </div>
         <div id="quiz">
             <div class="question">
-                <p>16: The formula for calculating kinetic energy is K.E =</p>
+                <div class="question-number"><strong>16.</strong></div>
+
+                <p>The formula for calculating kinetic energy is K.E =</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. 1 x 2MV </div>
                     <div class="option" data-correct="true">B. 1 x 2MV<sup>2 </div>
@@ -430,7 +471,9 @@ Example:
         </div>
         <div id="quiz">
             <div class="question">
-                <p>17: ...... is the increase in size of an organism due to increase in number of body cells</p>
+                <div class="question-number"><strong>17.</strong></div>
+
+                <p> ...... is the increase in size of an organism due to increase in number of body cells</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Growth</div>
                     <div class="option" data-correct="true">B. Enlargement</div>
@@ -443,7 +486,9 @@ Example:
         </div>
          <div id="quiz">
             <div class="question">
-                <p>18: What is the capital of Japan?</p>
+                <div class="question-number"><strong>18.</strong></div>
+
+                <p>What is the capital of Japan?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Beijing</div>
                     <div class="option" data-correct="false">B. Seoul</div>
@@ -454,7 +499,9 @@ Example:
                 <div class="answer hidden">The correct answer is C. Tokyo</div>
             </div>
          </div>
-    </div> <p>1: WWhich of these is a solid matter?</p>
+    </div> 
+    
+    <p>Which of these is a solid matter?</p>
     <div class="options">
         <div class="option" data-correct="true">A. Aluminum	</div>
         <div class="option" data-correct="false">B. Alcohol</div>

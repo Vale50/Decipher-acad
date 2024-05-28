@@ -163,7 +163,11 @@ body {
          transition: 0.3s ease;
 }
 
-
+.question-number {
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
 
 
 /* Score and progress bar styles */
@@ -212,11 +216,11 @@ body {
 <body>
     <div id="quiz">
         <div class="question">
-<!—-your instructions goes here—>
+            <div class="question-number"><strong>1.</strong></div>
 Example: 
 <p>Instruction: Answer the questions nearest in meaning</p>
 INSTRUCTION: Choose the word that is nearly opposite in meaning to the underlined word in each of the following sentences.
-            <p>1:<u>Attack</u> is the best form of....  </p>
+            <p><u>Attack</u> is the best form of....  </p>
             <div class="options">
                 <div class="option" data-correct="true">A. defence.</div>
                 <div class="option" data-correct="false">B. fighting. </div>
@@ -228,7 +232,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
     <div id="quiz">
         <div class="question">
-            <p>2:Mr.Udo wants to <u>expand</u> the business not.... it</p>
+            <div class="question-number"><strong>2.</strong></div>
+
+            <p>Mr.Udo wants to <u>expand</u> the business not.... it</p>
             <div class="options">
                 <div class="option" data-correct="false">A. decrease </div>
                 <div class="option" data-correct="true">B. lessen’</div>
@@ -241,7 +247,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
     </div>
       <div id="quiz">
         <div class="question">
-            <p>3:The old woman was <u>aware</u> of her powers</p>
+            <div class="question-number"><strong>3.</strong></div>
+
+            <p>The old woman was <u>aware</u> of her powers</p>
             <div class="options">
                 <div class="option" data-correct="false">A. alert  </div>
                 <div class="option" data-correct="false">B. Careful  </div>
@@ -255,11 +263,11 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
 
       </div>
    
-       <div id="quiz">INSTRUCTION: Choose the right options which has almost the same meaning as the underlined words in each of the following sentences.
-       
-
-        <div class=>"question">
-            <p>4: I cannot <u>stand</u>my gateman; he talks too much </p>
+       <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>4.</strong></div>
+<p>INSTRUCTION: Choose the right options which has almost the same meaning as the underlined words in each of the following sentences.</p>
+            <p> I cannot <u>stand</u>my gateman; he talks too much </p>
             <div class="options">
                 <div class="option" data-correct="false">A. believe</div>
                 <div class="option" data-correct="false">B. encourage</div>
@@ -274,7 +282,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
        </div>
       <div id="quiz">
         <div class="question">
-            <p>5:We need to talk to you about this <u>important</u> issue immediately</p>
+            <div class="question-number"><strong>5.</strong></div>
+
+            <p>We need to talk to you about this <u>important</u> issue immediately</p>
             <div class="options">
                 <div class="option" data-correct="false">A. essential</div>
                 <div class="option" data-correct="true">B. extreme  </div>
@@ -287,7 +297,8 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
    
       <div id="quiz">
         <div class="question">
-            <p>6: 	The harmattan weather is very harsh.</p>
+            <div class="question-number"><strong>6.</strong></div>
+            <p>The harmattan weather is very harsh.</p>
             <div class="options">
                 <div class="option" data-correct="false">A. coarse</div>
                 <div class="option" data-correct="true">B. mud</div>
@@ -299,8 +310,12 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
    
       </div>
+      <div id="quiz">
+
         <div class="question">
-            <p>7: What is the capital of France?</p>
+            <div class="question-number"><strong>7.</strong></div>
+
+            <p>What is the capital of France?</p>
             <div class="options">
                 <div class="option" data-correct="false">A. Berlin</div>
                 <div class="option" data-correct="true">B. Paris</div>
@@ -310,10 +325,13 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
             <button class="check-answer hidden">Check Answer</button>
             <div class="answer hidden">The correct answer is B. Paris</div>
         </div>
+    </div>
  
          <div id="quiz">
             <div class="question">
-                <p>8: What is the capital of France?</p>
+                <div class="question-number"><strong>8.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -327,7 +345,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
          </div>
         <div id="quiz">
             <div class="question">
-                <p>9: What is the capital of France?</p>
+                <div class="question-number"><strong>9.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -341,7 +361,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
         <div id="quiz">
             <div class="question">
-                <p>10: What is the capital of France?</p>
+                <div class="question-number"><strong>10.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -354,7 +376,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
           <div id="quiz">
             <div class="question">
-                <p>11: What is the capital of France?</p>
+                <div class="question-number"><strong>11.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -365,9 +389,12 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
                 <div class="answer hidden">The correct answer is B. Paris</div>
             </div>
           </div>
+
           <div id="quiz">
             <div class="question">
-                <p>12: What is the capital of France?</p>
+                <div class="question-number"><strong>12.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -378,9 +405,12 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
                 <div class="answer hidden">The correct answer is B. Paris</div>
             </div>
           </div>
+
           <div id="quiz">
             <div class="question">
-                <p>13: What is the capital of France?</p>
+                <div class="question-number"><strong>13.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -391,9 +421,12 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
                 <div class="answer hidden">The correct answer is B. Paris</div>
             </div>
           </div>
+
           <div id="quiz">
             <div class="question">
-                <p>14: What is the capital of France?</p>
+                <div class="question-number"><strong>14.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -404,9 +437,12 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
                 <div class="answer hidden">The correct answer is B. Paris</div>
             </div>
           </div>
+
           <div id="quiz">
             <div class="question">
-                <p>15: What is the capital of France?</p>
+                <div class="question-number"><strong>15.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -417,8 +453,10 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
                 <div class="answer hidden">The correct answer is B. Paris</div>
             </div>
           </div>
+
         <div id="quiz">
             <div class="question">
+                <div class="question-number"><strong>16.</strong></div>
                 <p>16: What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
@@ -432,7 +470,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
         <div id="quiz">
             <div class="question">
-                <p>17: What is the capital of France?</p>
+                <div class="question-number"><strong>17.</strong></div>
+
+                <p>What is the capital of France?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Berlin</div>
                     <div class="option" data-correct="true">B. Paris</div>
@@ -445,7 +485,9 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
         </div>
          <div id="quiz">
             <div class="question">
-                <p>18: What is the capital of Japan?</p>
+                <div class="question-number"><strong>18.</strong></div>
+
+                <p>What is the capital of Japan?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Beijing</div>
                     <div class="option" data-correct="false">B. Seoul</div>
