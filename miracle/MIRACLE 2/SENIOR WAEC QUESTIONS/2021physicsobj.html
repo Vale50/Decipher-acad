@@ -172,8 +172,33 @@ color: #f9f9f9;
 .correct { background-color: green; }
 .incorrect { background-color: red; }
 .hidden {display: none;}
+.answer {
+  border-right: .15em solid black;
+  white-space: pre;
+  overflow: hidden; 
+  margin: 0 auto;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    
+document.querySelector('.check-answer').addEventListener('click', function() {
+  var answer = document.querySelector('.answer');
+  answer.style.animation = 'typing 3s steps(40, end), blink-caret .75s step-end infinite';
+});
+
+
+</script>
 </head>
 <body>
 <div id="quiz">
@@ -267,8 +292,8 @@ color: #f9f9f9;
             <button class="check-answer hidden">Check Answer</button>
             <div class="answer hidden"> The correct answer is C. thermistor.</div>
         </div>
-   
       </div>
+      
       <div id="quiz">
         <div class="question">
      <p>7:Electric motor primarily converts</p>
