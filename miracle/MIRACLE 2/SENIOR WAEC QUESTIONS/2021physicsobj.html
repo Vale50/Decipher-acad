@@ -2,6 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        document.querySelector('.check-answer.hidden').addEventListener('click', function() {
+  var answer = document.querySelector('.answer.hidden');
+  answer.style.animation = 'typing 3s steps(40, end), blink-caret .75s step-end infinite';
+});
+
+
+    </script>
  <style>
     @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
@@ -172,7 +180,7 @@ color: #f9f9f9;
 .correct { background-color: green; }
 .incorrect { background-color: red; }
 .hidden {display: none;}
-.answer {
+.answer.hidden {
   border-right: .15em solid black;
   white-space: pre;
   overflow: hidden; 
@@ -190,15 +198,7 @@ color: #f9f9f9;
 }
 
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    
-document.querySelector('.check-answer').addEventListener('click', function() {
-  var answer = document.querySelector('.answer');
-  answer.style.animation = 'typing 3s steps(40, end), blink-caret .75s step-end infinite';
-});
-
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id="quiz">
@@ -208,7 +208,7 @@ document.querySelector('.check-answer').addEventListener('click', function() {
 <div class="options">
 <div class="option" data-correct="true">A. Mass</div>
 <div class="option" data-correct="false">B. Tension</div>
-<div class="option" data-correct="false">C.Weight.</div>
+<div class="option" data-correct="false">C. Weight.</div>
 <div class="option" data-correct="false">D.	Friction.</div></div>
 <button class="check-answer hidden">Check Answer</button>
 <div class="answer hidden"> </div> The correct answer is A. Mass </div>
