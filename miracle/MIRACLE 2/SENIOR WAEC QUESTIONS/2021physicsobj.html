@@ -215,9 +215,21 @@ color: #f9f9f9;
     </style>
     
     <script>
-    document.querySelector('.check-answer').addEventListener('click', function() {
-      document.querySelector('.answer').classList.remove('hidden');
-    });
+    
+document.querySelector('.check-answer').addEventListener('click', function() {
+  var text = document.querySelector('.answer').textContent;
+  var i = 0;
+  document.querySelector('.answer').textContent = '';
+  document.querySelector('.answer').classList.remove('hidden');
+  var typewriter = setInterval(function() {
+    if (i < text.length) {
+      document.querySelector('.answer').textContent += text.charAt(i);
+      i++;
+    } else {
+      clearInterval(typewriter);
+    }
+  }, 50); // adjust the speed of the animation by changing this value
+});
     </script>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
