@@ -180,57 +180,37 @@ color: #f9f9f9;
 .correct { background-color: green; }
 .incorrect { background-color: red; }
 .hidden {display: none;}
-.answer.hidden {
-  border-right: .15em solid black;
-  white-space: pre;
-  overflow: hidden; 
-  margin: 0 auto;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-}
-
 </style>
 <style>
-    @keyframes typewriter {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    
     .answer {
-      width: 0;
+      border-right: .15em solid black;
+      white-space: pre-wrap;
       overflow: hidden;
-      white-space: nowrap;
-      border-right: .15em solid orange;
-      animation: typewriter 4s steps(44) 1s 1 normal both,
-                 blink-caret .75s step-end infinite;
+      margin: 0 auto;
     }
     </style>
     
     <script>
+    window.onload = function() {
+      var answer = document.querySelector('.answer');
+      var text = answer.innerText;
+      var i = 0;
     
-document.querySelector('.check-answer').addEventListener('click', function() {
-  var text = document.querySelector('.answer').textContent;
-  var i = 0;
-  document.querySelector('.answer').textContent = '';
-  document.querySelector('.answer').classList.remove('hidden');
-  var typewriter = setInterval(function() {
-    if (i < text.length) {
-      document.querySelector('.answer').textContent += text.charAt(i);
-      i++;
-    } else {
-      clearInterval(typewriter);
-    }
-  }, 50); // adjust the speed of the animation by changing this value
-});
+      answer.innerText = '';
+      answer.classList.remove('hidden');
+    
+      function typeWriter() {
+        if (i < text.length) {
+          answer.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+    
+      typeWriter();
+    };
     </script>
+    
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
