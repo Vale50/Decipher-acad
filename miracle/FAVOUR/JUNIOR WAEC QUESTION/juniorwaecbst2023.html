@@ -8,6 +8,14 @@
         font-style: italic;
     }
 * {box-sizing: border-box;}
+.answered {
+    background-color: #f0f0f0; /* Light grey background for answered questions */
+}
+
+.selected {
+    font-weight: bold; /* Bold font for selected option */
+}
+
 body {
  margin: 0;
  font-family: Arial, Helvetica, sans-serif;
@@ -1208,6 +1216,29 @@ $(".check-answer").click(function() {
 
     typeWriter();
 });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.classList.add('answered');
+            this.classList.add('selected');
+            question.querySelector('.check-answer').classList.remove('hidden');
+        });
+    });
+
+    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+    checkAnswerButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.querySelector('.answer').classList.remove('hidden');
+            this.classList.add('hidden');
+        });
+    });
+});
+
     </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
