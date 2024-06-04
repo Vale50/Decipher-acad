@@ -191,24 +191,6 @@ color: #f9f9f9;
     </style>
     
     <script>
-document.querySelector(".check-answer").addEventListener("click", function() {
-    var answer = document.querySelector('.answer');
-    var text = answer.textContent;
-    var i = 0;
-
-    answer.textContent = '';
-    answer.classList.remove('hidden');
-
-    function typeWriter() {
-        if (i < text.length) {
-            answer.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-
-    typeWriter();
-});
 
     </script>
     
@@ -941,28 +923,44 @@ Use the graph to answer questions 25 and 26.
           
               <script>
                   var score = 0;
-                  var progress = 0;
-          
-                  $(".option").click(function() {
-                      if ($(this).hasClass("selected")) {
-                          return;
-                      }
-                      $(this).addClass("selected");
-                      $(this).siblings().removeClass("correct incorrect");
-                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-                      if ($(this).data("correct")) {
-                          score++;
-                          $("#score").text("Score: " + score);
-                      } else {
-                          $(this).parent().siblings(".check-answer").removeClass("hidden");
-                      }
-                      progress++;
-                      $("#progress").text("Progress: " + progress + "/50");
-                  });
-          
-                  $(".check-answer").click(function() {
-                      $(this).siblings(".answer").removeClass("hidden");
-                  });
+var progress = 0;
+
+$(".option").click(function() {
+    if ($(this).hasClass("selected")) {
+        return;
+    }
+    $(this).addClass("selected");
+    $(this).siblings().removeClass("correct incorrect");
+    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+    if ($(this).data("correct")) {
+        score++;
+        $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
+    }
+    progress++;
+    $("#progress").text("Progress: " + progress + "/50");
+});
+
+$(".check-answer").click(function() {
+    var answer = $(this).siblings('.answer');
+    var text = answer.text();
+    var i = 0;
+
+    answer.text('');
+    answer.removeClass('hidden');
+
+    function typeWriter() {
+        if (i < text.length) {
+            answer.text(answer.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+});
+
               </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
