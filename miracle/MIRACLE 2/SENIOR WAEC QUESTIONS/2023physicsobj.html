@@ -3,43 +3,19 @@ DOCTYPE html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <style>
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-body {
-  background-color: #efefef;
-}
-.question-number {
-            font-weight: bold;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-
-.logo{
-  margin: 40px auto;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 90px;
-  color: #121212;
-  text-align: center;
-  letter-spacing: 5px;
-  text-shadow: 0 2px 1px #747474, 
-      -1px 3px 1px #767676, 
-      -2px 5px 1px #787878, 
-      -3px 7px 1px #7a7a7a,
-      -4px 9px 1px #7f7f7f,
-      -5px 11px 1px #838383,
-      -6px 13px 1px #878787,
-      -7px 15px 1px #8a8a8a, 
-      -8px 17px 1px #8e8e8e,
-      -9px 19px 1px #949494,
-      -10px 21px 1px #989898,
-      -11px 23px 1px #9f9f9f,
-      
-}
-    h1{
+   h1{
         color: #fff;
         font-style: italic;
     }
 * {box-sizing: border-box;}
+.answered {
+    background-color: #f0f0f0; /* Light grey background for answered questions */
+}
+
+.selected {
+    font-weight: bold; /* Bold font for selected option */
+}
+
 body {
  margin: 0;
  font-family: Arial, Helvetica, sans-serif;
@@ -99,50 +75,100 @@ body {
  </div>
 </div>
 </body>
-    <style>
+<style>
 
 
-       *  {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    *  {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 
 /* Quiz container styles */
+/* Neumorphism effect for divs */
+.neu-div {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 8px 8px 15px #a7a7a7,
+             -8px -8px 15px #ffffff;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 600px;
+}
+
+/* Apply neumorphism effect to specific elements */
+#quiz, .question, .options {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 8px 8px 15px #a7a7a7,
+             -8px -8px 15px #ffffff;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 600px;
+}
+
+.option {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 5px 5px 10px #a7a7a7,
+             -5px -5px 10px #ffffff;
+ padding: 10px;
+ margin: 10px;
+ cursor: pointer;
+ transition: 0.3s ease;
+}
+
+.option:hover {
+ box-shadow: inset 5px 5px 10px #a7a7a7,
+             inset -5px -5px 10px #ffffff;
+}
+
+.option:active {
+ box-shadow: inset 2px 2px 5px #a7a7a7,
+             inset -2px -2px 5px #ffffff;
+}
 #quiz{
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: center;
+ background-color: #f9f9f9;
+ padding: 20px;
+ border-radius: 10px;
+ margin: 20px auto;
+ max-width: 600px;
+ text-align: center;
 }
 
 
 #question {
-    font-size: 18px;
-    margin-bottom: 20px;
+ font-size: 18px;
+ margin-bottom: 20px;
 }
 
 
 .option {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
+ border: 1px solid #ccc;
+ padding: 10px;
+ margin: 10px;
+ cursor: pointer;
 }
 
 
 #answer {
-    margin-top: 20px;
+ margin-top: 20px;
 }
 .answer{
-    border: 1px solid blue;
-    background-color: green;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
+ border: 1px solid blue;
+ background-color: #34db95;
+ margin: 10px;
+ cursor: pointer;
+         outline: none;
+         color: #333;
+         padding: 10px 20px;
+         border-radius: 10px;
+         box-shadow: 8px 8px 15px #a7a7a7,
+                     -8px -8px 15px #ffffff;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s ease;
 }
 
 
@@ -150,29 +176,50 @@ body {
 
 /* Score and progress bar styles */
 #score {
-    font-size: 16px;
-    margin-top: 20px;
-    color: #f9f9f9;
-  
-}
-#progress{
-    color: #f9f9f9;
-float: right;
+ font-size: 16px;
+ margin-top: 20px;
 }
 
 
 #progressBar {
-width: 100%;
-height: 20px;
-margin-top: 10px;
-color: #f9f9f9;
-
+ width: 100%;
+ height: 20px;
+ margin-top: 10px;
 }
-       
-.correct { background-color: green; }
-.incorrect { background-color: red; }
-.hidden {display: none;}
-</style>
+    
+     .correct { background-color: green; }
+     .incorrect { background-color: red; }
+     .hidden { display: none; }
+     /* Neumorphism effect for buttons */
+     .neu-button {
+         border: none;
+         outline: none;
+         background-color: #e0e0e0;
+         color: #333;
+         padding: 10px 20px;
+         border-radius: 10px;
+         box-shadow: 8px 8px 15px #a7a7a7,
+                     -8px -8px 15px #ffffff;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s ease;
+     }
+
+     .neu-button:hover {
+         box-shadow: inset 8px 8px 15px #a7a7a7,
+                     inset -8px -8px 15px #ffffff;
+     }
+
+     .neu-button:active {
+         box-shadow: inset 4px 4px 10px #a7a7a7,
+                     inset -4px -4px 10px #ffffff;
+     }
+     .question-number {
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+ </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -956,29 +1003,67 @@ color: #f9f9f9;
           
           
               <script>
-                  var score = 0;
-                  var progress = 0;
-          
-                  $(".option").click(function() {
-                      if ($(this).hasClass("selected")) {
-                          return;
-                      }
-                      $(this).addClass("selected");
-                      $(this).siblings().removeClass("correct incorrect");
-                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-                      if ($(this).data("correct")) {
-                          score++;
-                          $("#score").text("Score: " + score);
-                      } else {
-                          $(this).parent().siblings(".check-answer").removeClass("hidden");
-                      }
-                      progress++;
-                      $("#progress").text("Progress: " + progress + "/50");
-                  });
-          
-                  $(".check-answer").click(function() {
-                      $(this).siblings(".answer").removeClass("hidden");
-                  });
+                   var score = 0;
+var progress = 0;
+
+$(".option").click(function() {
+    if ($(this).hasClass("selected")) {
+        return;
+    }
+    $(this).addClass("selected");
+    $(this).siblings().removeClass("correct incorrect");
+    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+    if ($(this).data("correct")) {
+        score++;
+        $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
+    }
+    progress++;
+    $("#progress").text("Progress: " + progress + "/50");
+});
+
+$(".check-answer").click(function() {
+    var answer = $(this).siblings('.answer');
+    var text = answer.text();
+    var i = 0;
+
+    answer.text('');
+    answer.removeClass('hidden');
+
+    function typeWriter() {
+        if (i < text.length) {
+            answer.text(answer.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.classList.add('answered');
+            this.classList.add('selected');
+            question.querySelector('.check-answer').classList.remove('hidden');
+        });
+    });
+
+    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+    checkAnswerButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.querySelector('.answer').classList.remove('hidden');
+            this.classList.add('hidden');
+        });
+    });
+});
+
               </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
