@@ -191,27 +191,24 @@ color: #f9f9f9;
     </style>
     
     <script>
+document.querySelector(".check-answer").addEventListener("click", function() {
+    var answer = document.querySelector('.answer');
+    var text = answer.textContent;
+    var i = 0;
 
-    // Start your animation here
-    window.onload = function() {
-      var answer = document.querySelector('.answer');
-      var text = answer.innerText;
-      var i = 0;
-    
-      answer.innerText = '';
-      answer.classList.remove('hidden');
-    
-      function typeWriter() {
+    answer.textContent = '';
+    answer.classList.remove('hidden');
+
+    function typeWriter() {
         if (i < text.length) {
-          answer.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 40);
+            answer.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50);
         }
-      }
-    
-      typeWriter();
-    };
+    }
 
+    typeWriter();
+});
 
     </script>
     
@@ -943,7 +940,7 @@ Use the graph to answer questions 25 and 26.
           
           
               <script>
-                  var score = 0;
+                 /* var score = 0;
                   var progress = 0;
           
                   $(".option").click(function() {
@@ -965,7 +962,7 @@ Use the graph to answer questions 25 and 26.
           
                   $(".check-answer").click(function() {
                       $(this).siblings(".answer").removeClass("hidden");
-                  });
+                  });*/
               </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
