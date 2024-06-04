@@ -3,7 +3,12 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script>
-    
+        document.querySelector('.check-answer.hidden').addEventListener('click', function() {
+  var answer = document.querySelector('.answer.hidden');
+  answer.style.animation = 'typing 3s steps(40, end), blink-caret .75s step-end infinite';
+});
+
+
     </script>
  <style>
     @import url('https://fonts.googleapis.com/css?family=Ubuntu');
@@ -935,7 +940,7 @@ Use the graph to answer questions 25 and 26.
           
           
               <script>
-                 /* var score = 0;
+                  var score = 0;
                   var progress = 0;
           
                   $(".option").click(function() {
@@ -957,7 +962,7 @@ Use the graph to answer questions 25 and 26.
           
                   $(".check-answer").click(function() {
                       $(this).siblings(".answer").removeClass("hidden");
-                  });*/
+                  });
               </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
