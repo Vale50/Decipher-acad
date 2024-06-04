@@ -191,26 +191,24 @@ color: #f9f9f9;
     </style>
     
     <script>
-        document.getElementById("check-answer").addEventListener("click", function() {
+      document.getElementById("check-answer").addEventListener("click", function() {
     // Start your animation here
-    window.onload = function() {
-      var answer = document.querySelector('.answer');
-      var text = answer.innerText;
-      var i = 0;
-    
-      answer.innerText = '';
-      answer.classList.remove('hidden');
-    
-      function typeWriter() {
+    var answer = document.querySelector('.answer');
+    var text = answer.innerText;
+    var i = 0;
+
+    answer.innerText = '';
+    answer.classList.remove('hidden');
+
+    function typeWriter() {
         if (i < text.length) {
-          answer.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50);
+            answer.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50);
         }
-      }
-    
-      typeWriter();
-    };
+    }
+
+    typeWriter();
 });
     </script>
     
