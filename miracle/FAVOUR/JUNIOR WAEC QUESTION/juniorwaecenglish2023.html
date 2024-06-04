@@ -504,31 +504,44 @@ INSTRUCTION: Choose the word that is nearly opposite in meaning to the underline
 
 
     <script>
-        var score = 0;
-        var progress = 0;
+              var score = 0;
+var progress = 0;
 
+$(".option").click(function() {
+    if ($(this).hasClass("selected")) {
+        return;
+    }
+    $(this).addClass("selected");
+    $(this).siblings().removeClass("correct incorrect");
+    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+    if ($(this).data("correct")) {
+        score++;
+        $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
+    }
+    progress++;
+    $("#progress").text("Progress: " + progress + "/50");
+});
 
-        $(".option").click(function() {
-            if ($(this).hasClass("selected")) {
-                return;
-            }
-            $(this).addClass("selected");
-            $(this).siblings().removeClass("correct incorrect");
-            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-            if ($(this).data("correct")) {
-                score++;
-                $("#score").text("Score: " + score);
-            } else {
-                $(this).parent().siblings(".check-answer").removeClass("hidden");
-            }
-            progress++;
-            $("#progress").text("Progress: " + progress + "/20");
-        });
+$(".check-answer").click(function() {
+    var answer = $(this).siblings('.answer');
+    var text = answer.text();
+    var i = 0;
 
+    answer.text('');
+    answer.removeClass('hidden');
 
-        $(".check-answer").click(function() {
-            $(this).siblings(".answer").removeClass("hidden");
-        });
+    function typeWriter() {
+        if (i < text.length) {
+            answer.text(answer.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+});
     </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
