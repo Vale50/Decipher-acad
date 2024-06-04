@@ -191,23 +191,26 @@ color: #f9f9f9;
     </style>
     
     <script>
-      
-    var answer = document.querySelector('.answer');
-    var text = answer.textContent;
-    var i = 0;
 
-    answer.textContent = '';
-    answer.classList.remove('hidden');
-
-    function typeWriter() {
+    // Start your animation here
+    window.onload = function() {
+      var answer = document.querySelector('.answer');
+      var text = answer.innerText;
+      var i = 0;
+    
+      answer.innerText = '';
+      answer.classList.remove('hidden');
+    
+      function typeWriter() {
         if (i < text.length) {
-            answer.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
+          answer.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
         }
-    }
-
-    typeWriter();
+      }
+    
+      typeWriter();
+    };
 
 
     </script>
