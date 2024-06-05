@@ -1483,6 +1483,96 @@ $(".check-answer").click(function() {
 });
 
     </script>
+    <script>
+        // List of positive feedback messages
+let positiveFeedbacks = [
+"Great job! You nailed that question! 🎉",
+"Well done! Your hard work is showing. 👍",
+"Excellent work! That was spot on. 🎯",
+"Keep it up! You’re on the right track. 👟",
+"Impressive! You’ve got a great understanding of this. 🧠",
+"Fantastic! You’re really getting the hang of this. 🚀",
+"Correct! You did your homework well. 📚",
+"Superb! I can tell you studied for this. 🕵️‍♂️",
+"Bravo! You’ve mastered this concept. 🏆",
+"Wonderful! You’re making great progress. 🌱",
+"Spot on! You’re paying great attention to detail. 🔍",
+"Terrific! You’re setting a high bar. 📈",
+"Outstanding! You’re leaps and bounds ahead. 🦘",
+"Perfect! You couldn’t have done it better. 💯",
+"Right on target! You’re acing this material. 🎯",
+"Yes! That’s the right answer. ✅",
+"Good recall! You remembered that perfectly. 🧠",
+"That’s correct! You’ve grasped the idea completely. 🤝",
+"A+ effort! You’re doing wonderfully. ⭐",
+"That’s it! You’ve got it. 👌",
+"You’re correct! Your answer is right on point. 📍",
+"Nice work! You’ve been paying attention. 👀",
+"You got it! That’s the right approach. 🛤️",
+"You’re right! You understood that perfectly. 🎓",
+"That’s right! You’re showing excellent comprehension. 🌟",
+    // Add all other positive feedback messages here...
+];
+
+// List of negative feedback messages
+let negativeFeedbacks = [
+    "Good try, but let’s consider the other options as well. 🤔",
+    "Not quite, but you’re thinking critically! 👏",
+    "Good try, but let’s consider the other options as well. 👉",
+"Not quite, but you’re thinking critically! 🤔",
+"That’s not the one, but I can see your thought process. 💭",
+"This one’s tricky, but I know you’ll get it with another look. 🔍",
+"The right answer is still out there, let’s find it together. 🌟",
+"You’ve chosen A, but B might be the way to go. Let’s review why. ↔️",
+"Close, but there’s another answer that fits better. 🎯",
+"You’re almost there, just a bit off track. 🛤️",
+"This was a tough one, and you’re brave for tackling it. 🦁",
+"Option C isn’t correct, but you’re learning more with each try. 📈",
+"Not the answer we’re looking for, but your effort is commendable. 👏",
+"Keep exploring the possibilities, you’re getting closer. 🔎",
+"You’ve picked D, which is a common mistake. Let’s work on understanding why. 📚",
+"You’re gathering valuable clues with each attempt. 🕵️‍♂️",
+"It’s not about being perfect, it’s about improving, which you are. 💪",
+"You’ve missed this one, but remember, every question is a new chance. 🔄",
+"Your choice isn’t right this time, but I’m confident you’ll nail it soon. 🌈",
+"Learning is about discovery, and every wrong answer is part of that journey. 🛤️",
+"Take a moment, then come back to it. You might see it differently. ⏳",
+"The process of elimination is key. You’ve ruled one out, now what’s next? ❓",
+    // Add all other negative feedback messages here...
+];
+
+// Function to display feedback message
+function displayFeedback(isCorrect) {
+    let feedbackMessage;
+    if (isCorrect) {
+        // Pick a random positive feedback message
+        feedbackMessage = positiveFeedbacks[Math.floor(Math.random() * positiveFeedbacks.length)];
+    } else {
+        // Pick a random negative feedback message
+        feedbackMessage = negativeFeedbacks[Math.floor(Math.random() * negativeFeedbacks.length)];
+    }
+
+    // Create a feedback div
+    let feedbackDiv = document.createElement("div");
+    feedbackDiv.textContent = feedbackMessage;
+    document.body.appendChild(feedbackDiv);
+
+    // Remove the feedback div after 2 seconds
+    setTimeout(function() {
+        document.body.removeChild(feedbackDiv);
+    }, 2000);
+}
+
+// Attach event listeners to the options
+let options = document.querySelectorAll(".option");
+options.forEach(function(option) {
+    option.addEventListener("click", function() {
+        let isCorrect = option.getAttribute("data-correct") === "true";
+        displayFeedback(isCorrect);
+    });
+});
+
+    </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
 <!-- button -->
