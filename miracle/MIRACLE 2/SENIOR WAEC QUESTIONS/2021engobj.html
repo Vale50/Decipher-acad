@@ -1542,6 +1542,7 @@ let negativeFeedbacks = [
 ];
 
 // Function to display feedback message
+Function to display feedback message
 function displayFeedback(isCorrect) {
     let feedbackMessage;
     if (isCorrect) {
@@ -1553,23 +1554,19 @@ function displayFeedback(isCorrect) {
     }
 
     // Create a feedback div
-    let feedbackDiv = document.createElement("div");
-    feedbackDiv.textContent = feedbackMessage;
-    document.body.appendChild(feedbackDiv);
+    let feedbackDiv = $("<div></div>").text(feedbackMessage);
+    $("body").append(feedbackDiv);
 
     // Remove the feedback div after 2 seconds
     setTimeout(function() {
-        document.body.removeChild(feedbackDiv);
+        feedbackDiv.remove();
     }, 2000);
 }
 
 // Attach event listeners to the options
-let options = document.querySelectorAll(".option");
-options.forEach(function(option) {
-    option.addEventListener("click", function() {
-        let isCorrect = option.getAttribute("data-correct") === "true";
-        displayFeedback(isCorrect);
-    });
+$(".option").click(function() {
+    let isCorrect = $(this).data("correct");
+    displayFeedback(isCorrect);
 });
 
     </script>
