@@ -1198,32 +1198,12 @@ Example:
 
 
 <script>
-     var score = 0;
-var progress = 0;
-
-$(".option").click(function() {
-    if ($(this).hasClass("selected")) {
-        return;
-    }
-    $(this).addClass("selected");
-    $(this).siblings().removeClass("correct incorrect");
-    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-    if ($(this).data("correct")) {
-        score++;
-        $("#score").text("Score: " + score);
-    } else {
-        $(this).parent().siblings(".check-answer").removeClass("hidden");
-    }
-    progress++;
-    $("#progress").text("Progress: " + progress + "/50");
-});
-
-$(".check-answer").click(function() {
+     $(".check-answer").click(function() {
     var answer = $(this).siblings('.answer');
-    var text = answer.text();
+    var text = answer.html(); // Change .text() to .html() to get the HTML content including tags
     var i = 0;
 
-    answer.text('');
+    answer.html(''); // Change .text('') to .html('') to clear the HTML content
     answer.removeClass('hidden');
 
     function typeWriter() {
@@ -1233,7 +1213,7 @@ $(".check-answer").click(function() {
                 answer.html(answer.html() + text.slice(i, imgTagEnd+1));
                 i = imgTagEnd + 1;
             } else {
-                answer.text(answer.text() + text.charAt(i));
+                answer.html(answer.html() + text.charAt(i)); // Change .text() to .html() to append the text to the HTML content
                 i++;
             }
             setTimeout(typeWriter, 50);
@@ -1242,6 +1222,7 @@ $(".check-answer").click(function() {
 
     typeWriter();
 });
+
 
     </script>
     <script>
