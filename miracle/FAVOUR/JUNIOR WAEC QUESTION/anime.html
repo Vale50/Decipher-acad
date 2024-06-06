@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@keyframes typewriter {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.typewriter-text {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite normal;
+  border-right: .15em solid rgba(255,255,255,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2em;
+  margin: 0 auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2 class="typewriter-text">I love You</h2>
+<img src="matter1.jpg" alt="Image" class="image">
+
+<h2 class="typewriter-text">I need You</h2>
+<img src="matter2.jpg" alt="Image" class="image">
+
+</body>
+</html>
