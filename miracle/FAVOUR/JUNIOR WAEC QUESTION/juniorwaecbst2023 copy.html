@@ -1198,31 +1198,50 @@ Example:
 
 
 <script>
-     $(".check-answer").click(function() {
-    var answer = $(this).siblings('.answer');
-    var text = answer.html(); // Change .text() to .html() to get the HTML content including tags
-    var i = 0;
+      var score = 0;
+        var progress = 0;
 
-    answer.html(''); // Change .text('') to .html('') to clear the HTML content
-    answer.removeClass('hidden');
-
-    function typeWriter() {
-        if (i < text.length) {
-            if (text.charAt(i) === '<' && text.slice(i, i+4) === '<img') {
-                var imgTagEnd = text.indexOf('>', i);
-                answer.html(answer.html() + text.slice(i, imgTagEnd+1));
-                i = imgTagEnd + 1;
-            } else {
-                answer.html(answer.html() + text.charAt(i)); // Change .text() to .html() to append the text to the HTML content
-                i++;
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
             }
-            setTimeout(typeWriter, 50);
-        }
-    }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/50");
+        });
 
-    typeWriter();
-});
+        $(".check-answer").click(function() {
+            var answer = $(this).siblings('.answer');
+            var htmlContent = answer.html();
+            var i = 0;
 
+            answer.html('');
+            answer.removeClass('hidden');
+
+            function typeWriter() {
+                if (i < htmlContent.length) {
+                    if (htmlContent.charAt(i) === '<') {
+                        var tagEnd = htmlContent.indexOf('>', i) + 1;
+                        answer.append(htmlContent.slice(i, tagEnd));
+                        i = tagEnd;
+                    } else {
+                        answer.append(htmlContent.charAt(i));
+                        i++;
+                    }
+                    setTimeout(typeWriter, 50);
+                }
+            }
+
+            typeWriter();
+        });
 
     </script>
     <script>
@@ -1279,6 +1298,10 @@ text-transform: capitalize;
 display: inline-block;
 margin-left: 20px;
 }
+.hidden { display: none; }
+        .selected { font-weight: bold; }
+        .correct { color: green; }
+        .incorrect { color: red; }
 </style>
 </div>
 </div>
