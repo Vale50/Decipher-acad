@@ -1510,18 +1510,25 @@ $(".option").click(function() {
 
 $(".check-answer").click(function() {
     var answer = $(this).siblings('.answer');
-    var text = answer.html(); // Changed to .html() to include HTML tags
+    var text = answer.html();  // Changed to .html() to include HTML tags
     var i = 0;
 
-    answer.html(''); // Changed to .html() to handle HTML content
+    answer.html('');  // Changed to .html() to handle HTML content
     answer.removeClass('hidden');
 
     function typeWriter() {
         if (i < text.length) {
             if (text.charAt(i) === '<') {
                 var tagEnd = text.indexOf('>', i);
-                answer.html(answer.html() + text.slice(i, tagEnd + 1));
-                i = tagEnd + 1;
+                if (text.slice(i, tagEnd + 1).includes('<button')) {
+                    answer.html(answer.html() + text.slice(i, tagEnd + 1));
+                    i = tagEnd + 1;
+                } else {
+                    var tagStart = text.indexOf('<', i);
+                    var tagEnd = text.indexOf('>', tagStart);
+                    answer.html(answer.html() + text.slice(tagStart, tagEnd + 1));
+                    i = tagEnd + 1;
+                }
             } else {
                 answer.html(answer.html() + text.charAt(i));
                 i++;
