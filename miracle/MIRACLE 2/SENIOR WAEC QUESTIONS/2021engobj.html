@@ -1519,7 +1519,7 @@ $(".option").click(function() {
 });
 
 $(".check-answer").click(function() {
-    var container = $("#container");
+    var container = $(this).siblings("#container");
     var answer = container.find('.answer');
     var text = answer.html();  // Changed to .html() to include HTML tags
     var i = 0;
@@ -1546,6 +1546,7 @@ $(".check-answer").click(function() {
 
     typeWriter();
 });
+
 
 $('#subject-button').click(function() {
     var content = $('#subject-name');
