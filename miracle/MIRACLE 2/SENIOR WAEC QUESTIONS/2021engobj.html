@@ -1536,8 +1536,14 @@ document.querySelector('.check-answer').addEventListener('click', function() {
 });
 
 document.querySelector('#subject-button').addEventListener('click', function() {
-    document.querySelector('#subject-name').classList.remove('hidden');
+    var content = document.querySelector('#subject-name');
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+    } else {
+        content.classList.add('hidden');
+    }
 });
+
 
     </script>
     <script>
