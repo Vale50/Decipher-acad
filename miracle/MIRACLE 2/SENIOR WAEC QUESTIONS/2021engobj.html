@@ -1519,34 +1519,23 @@ $(".option").click(function() {
 });
 
 $(".check-answer").click(function() {
-    var container = $(this).siblings("#container");
-    var answer = container.find('.answer');
-    var text = answer.html();  // Changed to .html() to include HTML tags
+    var answer = $(this).siblings('.answer');
+    var text = answer.text();
     var i = 0;
 
-    container.removeClass('hidden');
-    answer.html('');  // Changed to .html() to handle HTML content
+    answer.text('');
+    answer.removeClass('hidden');
 
     function typeWriter() {
         if (i < text.length) {
-            if (text.charAt(i) === '<') {
-                var tagEnd = text.indexOf('>', i);
-                var tagContent = text.slice(i, tagEnd + 1);
-                answer.html(answer.html() + tagContent);
-                i = tagEnd + 1;
-            } else {
-                answer.html(answer.html() + text.charAt(i));
-                i++;
-            }
+            answer.text(answer.text() + text.charAt(i));
+            i++;
             setTimeout(typeWriter, 50);
-        } else {
-            $('#subject-button').removeClass('hidden');
         }
     }
 
     typeWriter();
 });
-
 
 $('#subject-button').click(function() {
     var content = $('#subject-name');
