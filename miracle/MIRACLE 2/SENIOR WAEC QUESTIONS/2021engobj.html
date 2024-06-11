@@ -1504,35 +1504,12 @@ $(".check-answer").click(function() {
             answer.text(answer.text() + text.charAt(i));
             i++;
             setTimeout(typeWriter, 50);
+        } else {
+            document.querySelector('#subject-button').classList.remove('hidden');
         }
     }
 
     typeWriter();
-});
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const options = document.querySelectorAll('.option');
-    options.forEach(option => {
-        option.addEventListener('click', function() {
-            const question = this.closest('.question');
-            question.classList.add('answered');
-            this.classList.add('selected');
-            question.querySelector('.check-answer').classList.remove('hidden');
-        });
-    });
-
-    const checkAnswerButtons = document.querySelectorAll('.check-answer');
-    checkAnswerButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const question = this.closest('.question');
-            question.querySelector('.answer').classList.remove('hidden');
-            this.classList.add('hidden');
-        });
-    });
-});
-document.querySelector('.check-answer').addEventListener('click', function() {
-    document.querySelector('#subject-button').classList.remove('hidden');
 });
 
 document.querySelector('#subject-button').addEventListener('click', function() {
