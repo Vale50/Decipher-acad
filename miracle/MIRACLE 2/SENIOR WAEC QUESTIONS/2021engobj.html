@@ -284,7 +284,7 @@ body {
 <div class="option" data-correct="false">C. Clever</div>
 <div class="option" data-correct="true">D. Experienced</div></div>
 <button class="check-answer hidden button">Check Answer</button>
-    <div class="container">
+    <div class="container hidden">
         <div class="answer hidden"> The correct answer is D. experienced.</br>
         </br> The word “experienced” is the most nearly opposite in meaning to the underlined word “novice.” While a novice lacks experience and is new to a particular field or skill, someone who is experienced has accumulated knowledge and skill through practice and familiarity. In this context, Mr. Ade is experienced, while his son is a novice.
     </div>
@@ -1545,26 +1545,24 @@ $(".option").click(function() {
 });
 
 $(".check-answer").click(function() {
-    var answer = $(this).siblings('.container').children('.answer');
-    var text = answer.text();
-    var i = 0;
-    var that = this; // Store the reference to 'this'
+  var answer = $(this).siblings('.container').children('.answer');
+  var text = answer.text();
+  var i = 0;
+  var that = this;
 
-    answer.text('');
-    answer.removeClass('hidden');
+  answer.text('');
+  $(this).siblings('.container').removeClass('hidden'); // Show the container
 
-    function typeWriter() {
-        if (i < text.length) {
-            answer.text(answer.text() + text.charAt(i));
-            i++;
-            setTimeout(typeWriter, 50);
-        } else {
-            // Move the "Show Subject" button inside the container after the animation is complete
-            $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
-        }
-    }
+  function typeWriter() {
+    if (i < text.length) {
+      answer.text(answer.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } 
+  }
 
-    typeWriter();
+  typeWriter();
+
     // Show the container div when the Check Answer button is clicked
     $(this).siblings('.container').removeClass('hidden');
 });
