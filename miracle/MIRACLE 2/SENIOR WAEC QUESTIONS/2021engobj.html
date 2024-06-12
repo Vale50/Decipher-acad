@@ -261,7 +261,7 @@ body {
 <div class="option" data-correct="false">C. Clever</div>
 <div class="option" data-correct="true">D. Experienced</div></div>
 <button class="check-answer hidden">Check Answer</button>
-    <div>
+    <div class="container">
         <div class="answer hidden"> The correct answer is D. experienced.</br>
         </br> The word “experienced” is the most nearly opposite in meaning to the underlined word “novice.” While a novice lacks experience and is new to a particular field or skill, someone who is experienced has accumulated knowledge and skill through practice and familiarity. In this context, Mr. Ade is experienced, while his son is a novice.
     </div>
@@ -1500,28 +1500,8 @@ From the words or group of words lettered A to D, choose the word or group of wo
 
 
     <script>
- var score = 0;
-var progress = 0;
-
-$(".option").click(function() {
-    if ($(this).hasClass("selected")) {
-        return;
-    }
-    $(this).addClass("selected");
-    $(this).siblings().removeClass("correct incorrect");
-    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-    if ($(this).data("correct")) {
-        score++;
-        $("#score").text("Score: " + score);
-    } else {
-        $(this).parent().siblings(".check-answer").removeClass("hidden");
-    }
-    progress++;
-    $("#progress").text("Progress: " + progress + "/50");
-});
-
 $(".check-answer").click(function() {
-    var answer = $(this).siblings('.answer');
+    var answer = $(this).siblings('.container').children('.answer');
     var text = answer.text();
     var i = 0;
 
@@ -1538,6 +1518,7 @@ $(".check-answer").click(function() {
 
     typeWriter();
 });
+
 
 $('#subject-button').click(function() {
     var content = $('#subject-name');
