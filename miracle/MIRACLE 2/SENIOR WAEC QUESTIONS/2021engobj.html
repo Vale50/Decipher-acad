@@ -1535,8 +1535,8 @@ $(".check-answer").click(function() {
             i++;
             setTimeout(typeWriter, 50);
         } else {
-            // Move the "Show Subject" button inside the container after the animation is complete
-            $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+            // Move the "Show Subject" button and the subject name inside the container after the animation is complete
+            $(that).siblings('#subject-button, #subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
         }
     }
 
@@ -1547,6 +1547,7 @@ $("#subject-button").click(function() {
     // Toggle the display of the subject "English"
     $(this).siblings('#subject-name').toggleClass('hidden');
 });
+
 
 
 
