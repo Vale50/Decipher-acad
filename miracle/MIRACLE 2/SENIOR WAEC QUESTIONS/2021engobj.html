@@ -1524,6 +1524,7 @@ $(".check-answer").click(function() {
     var answer = $(this).siblings('.container').children('.answer');
     var text = answer.text();
     var i = 0;
+    var that = this; // Store the reference to 'this'
 
     answer.text('');
     answer.removeClass('hidden');
@@ -1535,7 +1536,7 @@ $(".check-answer").click(function() {
             setTimeout(typeWriter, 50);
         } else {
             // Move the "Show Subject" button inside the container after the animation is complete
-            $(this).siblings('#subject-button').appendTo($(this).siblings('.container')).removeClass('hidden');
+            $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
         }
     }
 
@@ -1546,6 +1547,7 @@ $("#subject-button").click(function() {
     // Toggle the display of the subject "English"
     $(this).siblings('#subject-name').toggleClass('hidden');
 });
+
 
 
 $('#subject-button').click(function() {
