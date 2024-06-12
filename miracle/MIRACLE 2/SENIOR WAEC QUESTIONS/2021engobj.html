@@ -1528,45 +1528,50 @@ var score = 0;
 var progress = 0;
 
 $(".option").click(function() {
-    if ($(this).hasClass("selected")) {
-        return;
-    }
-    $(this).addClass("selected");
-    $(this).siblings().removeClass("correct incorrect");
-    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-    if ($(this).data("correct")) {
-        score++;
-        $("#score").text("Score: " + score);
-    } else {
-        $(this).parent().siblings(".check-answer").removeClass("hidden");
-    }
-    progress++;
-    $("#progress").text("Progress: " + progress + "/50");
+  if ($(this).hasClass("selected")) {
+    return;
+  }
+  $(this).addClass("selected");
+  $(this).siblings().removeClass("correct incorrect");
+  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+  if ($(this).data("correct")) {
+    score++;
+    $("#score").text("Score: " + score);
+  } else {
+    $(this).parent().siblings(".check-answer").removeClass("hidden");
+  }
+  progress++;
+  $("#progress").text("Progress: " + progress + "/50");
 });
 
 $(".check-answer").click(function() {
-    var answer = $(this).siblings('.container').children('.answer');
-    var text = answer.text();
-    var i = 0;
-    var that = this; // Store the reference to 'this'
+  var answer = $(this).siblings('.container').children('.answer');
+  var text = answer.text();
+  var i = 0;
+  var that = this; // Store the reference to 'this'
 
-    answer.text('');
-    answer.removeClass('hidden');
+  answer.text('');
+  answer.removeClass('hidden');
 
-    function typeWriter() {
-        if (i < text.length) {
-            answer.text(answer.text() + text.charAt(i));
-            i++;
-            setTimeout(typeWriter, 50);
-        } else {
-            // Move the "Show Subject" button inside the container after the animation is complete
-            $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
-        }
+  function typeWriter() {
+    if (i < text.length) {
+      answer.text(answer.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      // Move the "Show Subject" button inside the container after the animation is complete
+      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
     }
+  }
 
-    typeWriter();
-    // Show the container div when the Check Answer button is clicked
-    $(this).siblings('.container').removeClass('hidden');
+  typeWriter();
+});
+
+$("#subject-button").click(function() {
+  // Toggle the display of the subject "English"
+  $(this).siblings('#subject-name').toggleClass('hidden');
+  // Display the text inside the container
+  $(this).siblings('.answer').text("The word “experienced” is the most nearly opposite in meaning");
 });
 
 $("#subject-button").click(function() {
