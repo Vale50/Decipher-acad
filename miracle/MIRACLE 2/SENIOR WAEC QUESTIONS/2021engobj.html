@@ -1565,6 +1565,8 @@ $(".check-answer").click(function() {
     }
 
     typeWriter();
+    // Show the container div when the Check Answer button is clicked
+    $(this).siblings('.container').removeClass('hidden');
 });
 
 $("#subject-button").click(function() {
