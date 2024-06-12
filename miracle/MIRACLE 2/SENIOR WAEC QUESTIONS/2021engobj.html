@@ -1533,10 +1533,18 @@ $(".check-answer").click(function() {
             answer.text(answer.text() + text.charAt(i));
             i++;
             setTimeout(typeWriter, 50);
+        } else {
+            // Move the "Show Subject" button inside the container after the animation is complete
+            $(this).siblings('#subject-button').appendTo($(this).siblings('.container')).removeClass('hidden');
         }
     }
 
     typeWriter();
+});
+
+$("#subject-button").click(function() {
+    // Toggle the display of the subject "English"
+    $(this).siblings('#subject-name').toggleClass('hidden');
 });
 
 
