@@ -1546,25 +1546,20 @@ $(".option").click(function() {
 
 $(".check-answer").click(function() {
   var answer = $(this).siblings('.container').children('.answer');
-  var text = answer.text();
+  var text = answer.text(); // Store the existing text
   var i = 0;
   var that = this;
 
-  answer.text('');
-  $(this).siblings('.container').removeClass('hidden'); // Show the container
-
   function typeWriter() {
     if (i < text.length) {
-      answer.text(answer.text() + text.charAt(i));
+      answer.text(answer.text() + text.charAt(i)); // Append the character
       i++;
       setTimeout(typeWriter, 50);
     } 
   }
 
   typeWriter();
-
-    // Show the container div when the Check Answer button is clicked
-    $(this).siblings('.container').removeClass('hidden');
+  $(this).siblings('.container').removeClass('hidden'); // Show the container
 });
 
 $("#subject-button").click(function() {
