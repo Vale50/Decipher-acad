@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <style>
@@ -85,7 +86,98 @@ body {
 }
 
 
-/* Quiz container styles */
+/* Quiz container styles 
+
+I need the subject name to only display when the subject button is clicked and why is the animation not smooth why is it that when the check answer button is clicked more than once the text in the  animation becomes scattered
+
+<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>1.</strong></div>
+    In each of the following sentences, there is one underlined word and one gap. From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the underlined word and that will at the same time, correctly fill the gap in the sentence.
+<p> While Mr. Ade is……, his son is a novice.</p>
+<div class="options">
+<div class="option" data-correct="false">A. Enlightened</div>
+<div class="option" data-correct="false">B. Competent</div>
+<div class="option" data-correct="false">C. Clever</div>
+<div class="option" data-correct="true">D. Experienced</div></div>
+<button class="check-answer hidden button">Check Answer</button>
+    <div class="container">
+        <div class="answer hidden"> The correct answer is D. experienced.</br>
+        </br> The word “experienced” is the most nearly opposite in meaning to the underlined word “novice.” While a novice lacks experience and is new to a particular field or skill, someone who is experienced has accumulated knowledge and skill through practice and familiarity. In this context, Mr. Ade is experienced, while his son is a novice.
+    </div>
+
+    </div>
+<button id="subject-button" class="hidden button">More..</button>  
+<div id="subject-name" class="hidden">English</div>
+
+ 
+
+    </div>
+    
+</div>
+
+var score = 0;
+var progress = 0;
+
+$(".option").click(function() {
+  if ($(this).hasClass("selected")) {
+    return;
+  }
+  $(this).addClass("selected");
+  $(this).siblings().removeClass("correct incorrect");
+  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+  if ($(this).data("correct")) {
+    score++;
+    $("#score").text("Score: " + score);
+  } else {
+    $(this).parent().siblings(".check-answer").removeClass("hidden");
+  }
+  progress++;
+  $("#progress").text("Progress: " + progress + "/50");
+});
+
+function displayAnswer(that) {
+  var answer = $(that).siblings('.container').children('.answer');
+  var text = answer.text();
+  var i = 0;
+
+  answer.text('');
+  answer.removeClass('hidden');
+
+  function typeWriter() {
+    if (i < text.length) {
+      answer.text(answer.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      // Move the "Show Subject" button and "subject-name" div inside the container after the animation is complete
+      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      $(that).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
+    }
+  }
+
+  typeWriter();
+}
+
+$(".check-answer").click(function() {
+  displayAnswer(this);
+});
+
+$("#subject-button").click(function() {
+  displayAnswer(this);
+});
+
+
+
+$("#subject-button").click(function() {
+    
+    // Append the subject name div to the container div inside the question div
+    $('.question .container').append($('#subject-name'));
+    // Toggle the display of the subject "English"
+    $('#subject-name').toggleClass('hidden');
+});
+
+*/
 /* Neumorphism effect for divs */
 .neu-div {
  background-color: #e0e0e0;
