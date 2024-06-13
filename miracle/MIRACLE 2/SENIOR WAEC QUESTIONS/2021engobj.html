@@ -1568,13 +1568,6 @@ $(".check-answer").click(function() {
 });
 
 $("#subject-button").click(function() {
-  // Toggle the display of the subject "English"
-  $(this).siblings('#subject-name').toggleClass('hidden');
-  // Display the text inside the container
-  $(this).siblings('.answer').text("The word “experienced” is the most nearly opposite in meaning");
-});
-
-$("#subject-button").click(function() {
     // Append the subject name div to the container div
     $(this).siblings('.container').append($('#subject-name'));
     // Toggle the display of the subject "English"
