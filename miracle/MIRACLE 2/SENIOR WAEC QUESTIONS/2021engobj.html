@@ -1549,8 +1549,8 @@ $(".option").click(function() {
   $("#progress").text("Progress: " + progress + "/50");
 });
 
-function displayAnswer(that, isSubject) {
-  var answer = $(that).siblings('.container').children(isSubject ? '#subject-name' : '.answer');
+function displayAnswer(that) {
+  var answer = $(that).siblings('.container').children('.answer');
   var text = answer.text();
   var i = 0;
 
@@ -1563,10 +1563,9 @@ function displayAnswer(that, isSubject) {
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      if (!isSubject) {
-        // Move the "Show Subject" button inside the container after the animation is complete
-        $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
-      }
+      // Move the "Show Subject" button and "subject-name" div inside the container after the animation is complete
+      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      $(that).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
     }
   }
 
@@ -1574,12 +1573,13 @@ function displayAnswer(that, isSubject) {
 }
 
 $(".check-answer").click(function() {
-  displayAnswer(this, false);
+  displayAnswer(this);
 });
 
 $("#subject-button").click(function() {
-  displayAnswer(this, true);
+  displayAnswer(this);
 });
+
 
 
 $("#subject-button").click(function() {
