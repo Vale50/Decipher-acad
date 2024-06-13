@@ -292,9 +292,9 @@ body {
 
     </div>
         <button id="subject-button" class="hidden button">More..</button>   
-         <div>
-            <p id="subject-name" class="hidden">English</p>
-         </div>
+         <div class="container">
+    <div id="subject-name" class="answer hidden">English</div>
+</div>
 
     </div>
     
@@ -1576,13 +1576,14 @@ $(".check-answer").click(function() {
   displayAnswer(this);
 });
 
-$("#subject-button").click(function() {
+$(".subject-button").click(function() {
   displayAnswer(this);
 });
 
 
 
 $("#subject-button").click(function() {
+     displayAnswer(this);
     // Append the subject name div to the container div inside the question div
     $('.question .container').append($('#subject-name'));
     // Toggle the display of the subject "English"
