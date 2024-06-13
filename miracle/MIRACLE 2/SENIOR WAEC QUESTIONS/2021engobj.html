@@ -1548,7 +1548,13 @@ $(".option").click(function() {
   $("#progress").text("Progress: " + progress + "/50");
 });
 
+var isAnimating = false;
+
 function displayAnswer(that) {
+  if (isAnimating) {
+    return;
+  }
+  isAnimating = true;
   var answer = $(that).siblings('.container').children('.answer');
   var text = answer.text();
   var i = 0;
@@ -1562,7 +1568,7 @@ function displayAnswer(that) {
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      // Move the "Show Subject" button and "subject-name" div inside the container after the animation is complete
+      isAnimating = false;
       $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
       $(that).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
     }
@@ -1580,14 +1586,6 @@ $("#subject-button").click(function() {
 });
 
 
-
-$("#subject-button").click(function() {
-    
-    // Append the subject name div to the container div inside the question div
-    $('.question .container').append($('#subject-name'));
-    // Toggle the display of the subject "English"
-    $('#subject-name').toggleClass('hidden');
-});
 
 
 
