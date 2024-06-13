@@ -1544,11 +1544,10 @@ $(".option").click(function() {
   $("#progress").text("Progress: " + progress + "/50");
 });
 
-$(".check-answer").click(function() {
-  var answer = $(this).siblings('.container').children('.answer');
+function displayAnswer(that) {
+  var answer = $(that).siblings('.container').children('.answer');
   var text = answer.text();
   var i = 0;
-  var that = this; // Store the reference to 'this'
 
   answer.text('');
   answer.removeClass('hidden');
@@ -1565,7 +1564,16 @@ $(".check-answer").click(function() {
   }
 
   typeWriter();
+}
+
+$(".check-answer").click(function() {
+  displayAnswer(this);
 });
+
+$("#subject-button").click(function() {
+  displayAnswer(this);
+});
+
 
 $("#subject-button").click(function() {
     // Append the subject name div to the container div
