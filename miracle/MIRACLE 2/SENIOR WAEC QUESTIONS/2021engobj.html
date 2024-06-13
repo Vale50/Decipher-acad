@@ -288,9 +288,10 @@ body {
         <div class="answer hidden"> The correct answer is D. experienced.</br>
         </br> The word “experienced” is the most nearly opposite in meaning to the underlined word “novice.” While a novice lacks experience and is new to a particular field or skill, someone who is experienced has accumulated knowledge and skill through practice and familiarity. In this context, Mr. Ade is experienced, while his son is a novice.
     </div>
+    <div id="subject-name" class="hidden">English</div>
+
     </div>
 <button id="subject-button" class="hidden button">More..</button>   
-<div id="subject-name" class="hidden">English</div>
 
     </div>
     
@@ -1575,8 +1576,12 @@ $("#subject-button").click(function() {
 });
 
 
-
-
+$("#subject-button").click(function() {
+    // Append the subject name div to the container div
+    $(this).siblings('.container').append($('#subject-name'));
+    // Toggle the display of the subject "English"
+    $('#subject-name').toggleClass('hidden');
+});
 
 
 
