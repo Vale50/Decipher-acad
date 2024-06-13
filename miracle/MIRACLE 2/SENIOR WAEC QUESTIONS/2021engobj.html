@@ -1557,7 +1557,7 @@ function displayAnswer(that) {
     if (i < text.length) {
       answer.text(answer.text() + text.charAt(i));
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 50); // Adjust the delay here for faster or slower animation
     } else {
       // Move the "Show Subject" button inside the container after the animation is complete
       $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
@@ -1566,6 +1566,7 @@ function displayAnswer(that) {
 
   typeWriter();
 }
+
 
 $(".check-answer").click(function() {
   displayAnswer(this);
