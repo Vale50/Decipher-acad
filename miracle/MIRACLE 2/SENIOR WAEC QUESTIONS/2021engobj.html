@@ -292,7 +292,7 @@ body {
 
     </div>
         <button id="subject-button" class="hidden button">More..</button>   
-         <div class="container">
+         <div>
             <p id="subject-name" class="hidden">English</p>
          </div>
 
@@ -1549,8 +1549,8 @@ $(".option").click(function() {
   $("#progress").text("Progress: " + progress + "/50");
 });
 
-function displayAnswer(that) {
-  var answer = $(that).siblings('.container').children('.answer');
+function displayAnswer(that, isSubject) {
+  var answer = $(that).siblings('.container').children(isSubject ? '#subject-name' : '.answer');
   var text = answer.text();
   var i = 0;
 
@@ -1561,23 +1561,24 @@ function displayAnswer(that) {
     if (i < text.length) {
       answer.text(answer.text() + text.charAt(i));
       i++;
-      setTimeout(typeWriter, 50); // Adjust the delay here for faster or slower animation
+      setTimeout(typeWriter, 50);
     } else {
-      // Move the "Show Subject" button inside the container after the animation is complete
-      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      if (!isSubject) {
+        // Move the "Show Subject" button inside the container after the animation is complete
+        $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      }
     }
   }
 
   typeWriter();
 }
 
-
 $(".check-answer").click(function() {
-  displayAnswer(this);
+  displayAnswer(this, false);
 });
 
 $("#subject-button").click(function() {
-  displayAnswer(this);
+  displayAnswer(this, true);
 });
 
 
