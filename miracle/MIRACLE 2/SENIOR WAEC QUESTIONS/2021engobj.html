@@ -1585,7 +1585,13 @@ $("#subject-button").click(function() {
   displayAnswer(this);
 });
 
-
+$("#subject-button").click(function() {
+    
+    // Append the subject name div to the container div inside the question div
+    $('.question .container').append($('#subject-name'));
+    // Toggle the display of the subject "English"
+    $('#subject-name').toggleClass('hidden');
+});
 
 
 
