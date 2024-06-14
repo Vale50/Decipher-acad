@@ -360,6 +360,34 @@ body {
         $('.question .container').append($('#subject-name'));
         // Toggle the display of the subject "English"
         $('#subject-name').toggleClass('hidden');
+        var isAnimating = false;
+    
+    function displayAnswer1(that) {
+      if (isAnimating) {
+        return;
+      }
+      isAnimating = true;
+      var answer = $(that).siblings('.container').children('#subject-name');
+      var text = subject-name.text();
+      var i = 0;
+    
+      answer.text('');
+      answer.removeClass('hidden');
+    
+      function typeWriter() {
+        if (i < text.length) {
+          answer.text(answer.text() + text.charAt(i));
+          i++;
+          setTimeout(typeWriter, 50);
+        } else {
+          isAnimating = false;
+          $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+          $(that).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
+        }
+      }
+    
+      typeWriter();
+    }
     });
     
 </script>    
