@@ -1617,6 +1617,26 @@ From the words or group of words lettered A to D, choose the word or group of wo
 
 
     <script>
+var score = 0;
+var progress = 0;
+
+$(".option").click(function() {
+  if ($(this).hasClass("selected")) {
+    return;
+  }
+  $(this).addClass("selected");
+  $(this).siblings().removeClass("correct incorrect");
+  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+  if ($(this).data("correct")) {
+    score++;
+    $("#score").text("Score: " + score);
+  } else {
+    $(this).parent().siblings(".check-answer").removeClass("hidden");
+  }
+  progress++;
+  $("#progress").text("Progress: " + progress + "/50");
+});
+
 var isAnimating = false;
 
 function displayAnswer(that) {
