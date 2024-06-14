@@ -382,7 +382,7 @@ $("#subject-button").click(function() {
     </div>
         <button id="subject-button" class="hidden button">More..</button>   
          
-    <div id="subject-name" class="answer hidden">English</div>
+    <div id="subject-name" class="answer1 hidden">English</div>
 
     </div>
     
@@ -1665,7 +1665,34 @@ function displayAnswer(that) {
 
   typeWriter();
 }
+var isAnimating = false;
 
+function displayAnswer(that) {
+  if (isAnimating) {
+    return;
+  }
+  isAnimating = true;
+  var answer1 = $(that).siblings('.container').children('.answer1');
+  var text = answer1.text();
+  var i = 0;
+
+  answer1.text('');
+  answer1.removeClass('hidden');
+
+  function typeWriter() {
+    if (i < text.length) {
+      answer.text(answer.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      isAnimating = false;
+      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      $(that).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
+    }
+  }
+
+  typeWriter();
+}
 $(".check-answer").click(function() {
   displayAnswer(this);
 });
