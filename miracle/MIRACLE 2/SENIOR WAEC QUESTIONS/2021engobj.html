@@ -1668,7 +1668,7 @@ $(".check-answer").click(function() {
 
 $("#subject-button").click(function() {
   if (!$(this).siblings('#subject-name').hasClass('hidden')) return;
-  $(this).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
+  $(this).siblings('#subject-name').appendTo($(this).siblings('.container')).removeClass('hidden');
 });
 
 
