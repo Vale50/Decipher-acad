@@ -1654,21 +1654,16 @@ function displayAnswer(that) {
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
-      isAnimating = false;
+      isAnimating = false; // Set to false after answer animation
     }
   }
 
   typeWriter();
 }
 
+
 $(".check-answer").click(function() {
   displayAnswer(this);
-});
-
-$("#subject-button").click(function() {
-  if (!$(this).parent().find('#subject-name').hasClass('hidden')) return;
-  $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
 });
 
 function displaySubjectName(button) {
