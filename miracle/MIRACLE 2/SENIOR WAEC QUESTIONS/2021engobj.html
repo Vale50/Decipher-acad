@@ -1665,6 +1665,10 @@ function displayAnswer(that) {
 $(".check-answer").click(function() {
   displayAnswer(this);
 });
+$("#subject-button").click(function() {
+  if (!$(this).parent().find('#subject-name').hasClass('hidden')) return;
+  $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
+});
 
 function displaySubjectName(button) {
   if (isAnimating) return; // Prevent multiple animations
