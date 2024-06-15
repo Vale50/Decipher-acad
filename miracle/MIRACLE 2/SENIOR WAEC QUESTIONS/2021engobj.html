@@ -1671,6 +1671,35 @@ $("#subject-button").click(function() {
   $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
 });
 
+function displaySubjectName(button) {
+  if (isAnimating) return; // Prevent multiple animations
+
+  var subjectName = $(button).siblings('#subject-name');
+  var text = subjectName.text();
+  var i = 0;
+
+  subjectName.text(''); // Clear existing text
+  isAnimating = true;
+
+  function typeWriterSubject() {
+    if (i < text.length) {
+      subjectName.text(subjectName.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriterSubject, 50);
+    } else {
+      isAnimating = false;
+    }
+  }
+
+  typeWriterSubject();
+}
+
+$("#subject-button").click(function() {
+  if ($(this).parent().find('#subject-name').hasClass('hidden')) {
+    displaySubjectName(this);
+  }
+});
+
 
 
 
