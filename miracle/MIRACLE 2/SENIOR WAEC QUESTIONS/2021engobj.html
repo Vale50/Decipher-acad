@@ -1618,7 +1618,6 @@ From the words or group of words lettered A to D, choose the word or group of wo
 
     <script>
 var score = 0;
-var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1629,10 +1628,46 @@ $(".option").click(function() {
   $(this).addClass("selected");
   $(this).siblings().removeClass("correct incorrect");
   $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+  if ($(this).data("correct")) {
+    score++;
+    $("#score").text("Score: " + score);
+  } else {
+    $(this).parent().siblings(".check-answer").removeClass("hidden");
+  }
+  progress++;
+  $("#progress").text("Progress: " + progress + "/50");
+});
+
+function displayAnswer(that) {
+  if (isAnimating) return;
+  var answer = $(that).siblings('.container').children('.answer');
+  var text = answer.text();
+  var i = 0;
+
+  answer.text('');
+  answer.removeClass('hidden');
+  isAnimating = true;
+
+  function typeWriter() {
+    if (i < text.length) {
+      answer.text(answer.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      isAnimating = false;
+    }
+  }
+
+  typeWriter();
+}
 
 $(".check-answer").click(function() {
   displayAnswer(this);
 });
+
+
+
 $("#subject-button").click(function() {
   if (!$(this).parent().find('#subject-name').hasClass('hidden')) return;
   $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
@@ -1660,12 +1695,6 @@ function displaySubjectName(button) {
 
   typeWriterSubject();
 }
-
-$("#subject-button").click(function() {
-  if ($(this).parent().find('#subject-name').hasClass('hidden')) {
-    displaySubjectName(this);
-  }
-});
 
 
 
