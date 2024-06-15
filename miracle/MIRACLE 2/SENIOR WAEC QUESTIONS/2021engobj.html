@@ -1619,6 +1619,7 @@ From the words or group of words lettered A to D, choose the word or group of wo
     <script>
 var score = 0;
 var progress = 0;
+var isAnimating = false;
 
 $(".option").click(function() {
   if ($(this).hasClass("selected")) {
@@ -1637,18 +1638,15 @@ $(".option").click(function() {
   $("#progress").text("Progress: " + progress + "/50");
 });
 
-var isAnimating = false;
-
 function displayAnswer(that) {
-  if (isAnimating) return; // Prevent the function from running if an animation is already in progress
-
+  if (isAnimating) return;
   var answer = $(that).siblings('.container').children('.answer');
   var text = answer.text();
   var i = 0;
 
   answer.text('');
   answer.removeClass('hidden');
-  isAnimating = true; // Set the flag to true to indicate that an animation is in progress
+  isAnimating = true;
 
   function typeWriter() {
     if (i < text.length) {
@@ -1656,10 +1654,8 @@ function displayAnswer(that) {
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      // Move the "Show Subject" button and "subject-name" div inside the container after the animation is complete
-      $(that).siblings('.container').append($('#subject-button')).append($('#subject-name'));
-      $('#subject-button, #subject-name').removeClass('hidden');
-      isAnimating = false; // Reset the flag when the animation is complete
+      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      isAnimating = false;
     }
   }
 
@@ -1671,8 +1667,8 @@ $(".check-answer").click(function() {
 });
 
 $("#subject-button").click(function() {
-  if (!$(this).closest('.container').find('#subject-name').hasClass('hidden')) return; // Prevent the subject name from showing if it's already visible
-  $(this).closest('.container').append($('#subject-name')).removeClass('hidden');
+  if (!$(this).siblings('#subject-name').hasClass('hidden')) return;
+  $(this).siblings('#subject-name').appendTo($(that).siblings('.container')).removeClass('hidden');
 });
 
 
