@@ -1638,23 +1638,26 @@ $(".option").click(function() {
   $("#progress").text("Progress: " + progress + "/50");
 });
 
-function displayAnswer(that) {
+function displaySubject(that) {
+  if (!$(that).parent().find('#subject-name').hasClass('hidden')) return;
+  $(that).parent().find('#subject-name').appendTo($(that).parent().find('.container')).removeClass('hidden');
+}
+
+function animateSubjectName(that) {
   if (isAnimating) return;
-  var answer = $(that).siblings('.container').children('.answer');
-  var text = answer.text();
+  var subjectName = $(that).siblings('#subject-name');
+  var text = subjectName.text();
   var i = 0;
 
-  answer.text('');
-  answer.removeClass('hidden');
+  subjectName.text('');
   isAnimating = true;
 
   function typeWriter() {
     if (i < text.length) {
-      answer.text(answer.text() + text.charAt(i));
+      subjectName.text(subjectName.text() + text.charAt(i));
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
       isAnimating = false;
     }
   }
@@ -1663,38 +1666,10 @@ function displayAnswer(that) {
 }
 
 $(".check-answer").click(function() {
-  displayAnswer(this);
+  displaySubject(this);
+  animateSubjectName(this);
 });
 
-
-
-$("#subject-button").click(function() {
-  if (!$(this).parent().find('#subject-name').hasClass('hidden')) return;
-  $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
-});
-
-function displaySubjectName(button) {
-  if (isAnimating) return; // Prevent multiple animations
-
-  var subjectName = $(button).siblings('#subject-name');
-  var text = subjectName.text();
-  var i = 0;
-
-  subjectName.text(''); // Clear existing text
-  isAnimating = true;
-
-  function typeWriterSubject() {
-    if (i < text.length) {
-      subjectName.text(subjectName.text() + text.charAt(i));
-      i++;
-      setTimeout(typeWriterSubject, 50);
-    } else {
-      isAnimating = false;
-    }
-  }
-
-  typeWriterSubject();
-}
 
 
 
