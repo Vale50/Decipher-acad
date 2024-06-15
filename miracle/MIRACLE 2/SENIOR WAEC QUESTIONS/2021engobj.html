@@ -1682,7 +1682,7 @@ $(".option").click(function() {
     score++;
     $("#score").text("Score: " + score);
   } else {
-    $(this).parent().siblings(".check-answer").removeClass("hidden");
+    $(this).parent().siblings("#subject-button").removeClass("hidden");
   }
   progress++;
   $("#progress").text("Progress: " + progress + "/50");
@@ -1715,7 +1715,7 @@ function animateSubjectName(that) {
   typeWriter();
 }
 
-$(".check-answer").click(function() {
+$("#subject-button").click(function() {
   displaySubject(this);
   animateSubjectName(this);
 });
