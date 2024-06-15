@@ -1612,7 +1612,7 @@ From the words or group of words lettered A to D, choose the word or group of wo
 
 
     <script>
-        var score = 0;
+       var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1664,34 +1664,8 @@ $(".check-answer").click(function() {
 $("#subject-button").click(function() {
   if (!$(this).parent().find('#subject-name').hasClass('hidden')) return;
   $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
+  animateSubjectName(this);
 });
-
-
-var score = 0;
-var progress = 0;
-var isAnimating = false;
-
-$(".option").click(function() {
-  if ($(this).hasClass("selected")) {
-    return;
-  }
-  $(this).addClass("selected");
-  $(this).siblings().removeClass("correct incorrect");
-  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-  if ($(this).data("correct")) {
-    score++;
-    $("#score").text("Score: " + score);
-  } else {
-    $(this).parent().siblings(".subject-button").removeClass("hidden");
-  }
-  progress++;
-  $("#progress").text("Progress: " + progress + "/50");
-});
-
-function displaySubject(that) {
-  if (!$(that).parent().find('.subject-name').hasClass('hidden')) return;
-  $(that).parent().find('.subject-name').appendTo($(that).parent().find('.container')).removeClass('hidden');
-}
 
 function animateSubjectName(that) {
   if (isAnimating) return;
@@ -1714,13 +1688,6 @@ function animateSubjectName(that) {
 
   typeWriter();
 }
-
-$(".subject-button").click(function() {
-  displaySubject(this);
-  animateSubjectName(this);
-});
-
-
 
 
 
