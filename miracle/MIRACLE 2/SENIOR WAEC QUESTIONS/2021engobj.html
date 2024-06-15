@@ -1657,7 +1657,7 @@ function displayAnswer(that) {
       setTimeout(typeWriter, 50);
     } else {
       // Move the "Show Subject" button and "subject-name" div inside the container after the animation is complete
-      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      $(that).siblings('.container').append($('#subject-button')).removeClass('hidden');
       isAnimating = false; // Reset the flag when the animation is complete
     }
   }
@@ -1670,9 +1670,10 @@ $(".check-answer").click(function() {
 });
 
 $("#subject-button").click(function() {
-  if (!$(this).siblings('#subject-name').hasClass('hidden')) return; // Prevent the subject name from showing if it's already visible
-  $(this).siblings('#subject-name').appendTo($(this).siblings('.container')).removeClass('hidden');
+  if (!$(this).closest('.container').find('#subject-name').hasClass('hidden')) return; // Prevent the subject name from showing if it's already visible
+  $(this).closest('.container').append($('#subject-name')).removeClass('hidden');
 });
+
 
 
 
