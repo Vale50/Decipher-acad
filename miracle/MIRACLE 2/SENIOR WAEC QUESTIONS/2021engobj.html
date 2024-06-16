@@ -1663,7 +1663,7 @@ $(".check-answer").click(function() {
 
 $("#quiz").on("click", "#subject-button", function() {
   if ($('#subject-name').is(':visible')) return;
-  $('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
+  $('#subject-name').appendTo($(this).sibling().find('.container')).removeClass('hidden');
   animateSubjectName(this);
 });
 
