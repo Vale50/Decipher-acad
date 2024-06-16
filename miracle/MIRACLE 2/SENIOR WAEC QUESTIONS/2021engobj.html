@@ -1661,7 +1661,7 @@ $(".check-answer").click(function() {
   displayAnswer(this);
 });
 
-$("#subject-button").click(function() {
+$("#quiz").on("click", "#subject-button", function() {
   if (!$('#subject-name').hasClass('hidden')) return;
   $('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
   animateSubjectName(this);
