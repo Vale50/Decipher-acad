@@ -1662,10 +1662,11 @@ $(".check-answer").click(function() {
 });
 
 $("#quiz").on("click", "#subject-button", function() {
-  if (!$('#subject-name').hasClass('hidden')) return;
+  if ($('#subject-name').is(':visible')) return;
   $('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
   animateSubjectName(this);
 });
+
 
 function animateSubjectName(that) {
   if (isAnimating) return;
