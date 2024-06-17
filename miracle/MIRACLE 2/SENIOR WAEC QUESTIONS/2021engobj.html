@@ -115,8 +115,7 @@ I need the subject name to only display when the subject button is clicked and w
     </div>
     
 </div>
-
-var score = 0;
+ var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -165,10 +164,57 @@ $(".check-answer").click(function() {
   displayAnswer(this);
 });
 
-$("#subject-button").click(function() {
-  if (!$(this).parent().find('#subject-name').hasClass('hidden')) return;
-  $(this).parent().find('#subject-name').appendTo($(this).parent().find('.container')).removeClass('hidden');
+$("#quiz").on("click", "#subject-button", function() {
+  if ($('#subject-name').is(':visible')) return;
+  $('#subject-name').insertAfter($(this)).removeClass('hidden');
+  animateSubjectName(this);
 });
+
+
+function animateSubjectName(that) {
+  if (isAnimating) return;
+  var subjectName = $('#subject-name');
+  var text = subjectName.text();
+  var i = 0;
+
+  subjectName.text('');
+  isAnimating = true;
+
+  function typeWriter() {
+    if (i < text.length) {
+      subjectName.text(subjectName.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      isAnimating = false;
+    }
+  }
+
+  typeWriter();
+}
+$("#subject-button").click(function() {
+  if (isAnimating) return;
+  var subjectName = $('#subject-name');
+  var text = subjectName.text();
+  var i = 0;
+
+  subjectName.text('');
+  subjectName.removeClass('hidden');
+  isAnimating = true;
+
+  function typeWriter() {
+    if (i < text.length) {
+      subjectName.text(subjectName.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      isAnimating = false;
+    }
+  }
+
+  typeWriter();
+});
+
 
 
 
@@ -375,12 +421,9 @@ $("#subject-button").click(function() {
 </br>
 </br>
          
-<button id="subject-button" class="hidden button">More..</button>   
-
-<div id="subject-name" class="hidden">English</div>
+   <div id="subject-name" class="hidden">English</div>
     </div>
-        
-
+    <button id="subject-button" class="hidden button">More..</button>   
 
     </div>
     
@@ -1665,8 +1708,8 @@ $(".check-answer").click(function() {
 });
 
 $("#quiz").on("click", "#subject-button", function() {
-  if ($('#subject-name').is(':visible')) return;
-  $('#subject-name').insertAfter($(this)).removeClass('hidden');
+  if ($(this).siblings('#subject-name').is(':visible')) return;
+  $(this).siblings('#subject-name').removeClass('hidden');
   animateSubjectName(this);
 });
 
