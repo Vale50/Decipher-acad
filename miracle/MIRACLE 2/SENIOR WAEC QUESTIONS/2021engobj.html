@@ -374,11 +374,11 @@ $("#subject-button").click(function() {
     </div>
 </br>
 </br>
-    <button id="subject-button" class="hidden button">More..</button>   
          
         <div id="subject-name" class="hidden">English</div>
 
     </div>
+    <button id="subject-button" class="hidden button">More..</button>   
 
         
 
@@ -1667,9 +1667,10 @@ $(".check-answer").click(function() {
 
 $("#quiz").on("click", "#subject-button", function() {
   if ($('#subject-name').is(':visible')) return;
-  $('#subject-name').appendTo($(this).sibling().find('.container')).removeClass('hidden');
+  $('#subject-name').insertAfter($(this)).removeClass('hidden');
   animateSubjectName(this);
 });
+
 
 function animateSubjectName(that) {
   if (isAnimating) return;
