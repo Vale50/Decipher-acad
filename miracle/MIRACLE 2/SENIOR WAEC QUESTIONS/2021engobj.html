@@ -1710,7 +1710,9 @@ function displayAnswer(that) {
 
 $(".check-answer").click(function() {
   displayAnswer(this);
+  container.siblings('.container').removeClass('hidden');
 });
+
 
 $("#question").on("click", "#subject-button", function() {
   if ($(this).siblings('#subject-name').is(':visible')) return;
