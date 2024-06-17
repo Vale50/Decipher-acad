@@ -423,7 +423,7 @@ $("#subject-button").click(function() {
          
     </div>
     <button id="subject-button" class="hidden button">More..</button>   
-    <div id="subject-name" class="hidden question">English</div>
+    <div id="subject-name" class="hidden">English</div>
 
 
     </div>
@@ -1708,7 +1708,7 @@ $(".check-answer").click(function() {
   displayAnswer(this);
 });
 
-$("#quiz").on("click", "#subject-button", function() {
+$("#question").on("click", "#subject-button", function() {
   if ($(this).siblings('#subject-name').is(':visible')) return;
   $(this).siblings('#subject-name').removeClass('hidden');
   animateSubjectName(this);
