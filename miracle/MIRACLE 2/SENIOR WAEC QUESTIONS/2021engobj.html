@@ -1696,13 +1696,14 @@ function displayAnswer(that) {
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      $(that).siblings('#subject-button').appendTo($(that).siblings('.container')).removeClass('hidden');
+      $(that).siblings('#subject-button').removeClass('hidden');
       isAnimating = false;
     }
   }
 
   typeWriter();
 }
+
 
 $(".check-answer").click(function() {
   displayAnswer(this);
