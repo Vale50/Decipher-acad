@@ -1682,7 +1682,8 @@ $(".option").click(function() {
 
 function displayAnswer(that) {
   if (isAnimating) return;
-  var answer = $(that).siblings('.container').children('.answer');
+  var container = $(that).siblings('.container');
+  var answer = container.children('.answer');
   var text = answer.text();
   var i = 0;
 
@@ -1696,13 +1697,14 @@ function displayAnswer(that) {
       i++;
       setTimeout(typeWriter, 50);
     } else {
-      $(that).siblings('#subject-button').removeClass('hidden');
+      container.children('#subject-button').removeClass('hidden');
       isAnimating = false;
     }
   }
 
   typeWriter();
 }
+
 
 
 $(".check-answer").click(function() {
