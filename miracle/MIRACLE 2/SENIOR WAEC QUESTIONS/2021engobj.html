@@ -375,11 +375,10 @@ $("#subject-button").click(function() {
 </br>
 </br>
          
+<button id="subject-button" class="hidden button">More..</button>   
 
+<div id="subject-name" class="hidden">English</div>
     </div>
-    <button id="subject-button" class="hidden button">More..</button>   
-    <div id="subject-name" class="hidden">English</div>
-
         
 
 
@@ -1671,10 +1670,9 @@ $("#quiz").on("click", "#subject-button", function() {
   animateSubjectName(this);
 });
 
-
 function animateSubjectName(that) {
   if (isAnimating) return;
-  var subjectName = $('#subject-name');
+  var subjectName = $(that).siblings('#subject-name');
   var text = subjectName.text();
   var i = 0;
 
@@ -1693,6 +1691,7 @@ function animateSubjectName(that) {
 
   typeWriter();
 }
+
 $("#subject-button").click(function() {
   if (isAnimating) return;
   var subjectName = $('#subject-name');
