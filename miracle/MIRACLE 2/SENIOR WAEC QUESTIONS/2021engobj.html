@@ -1690,6 +1690,7 @@ function displayAnswer(that) {
 
   answer.text('');
   answer.removeClass('hidden');
+  container.removeClass('hidden');
   isAnimating = true;
 
   function typeWriter() {
@@ -1710,7 +1711,6 @@ function displayAnswer(that) {
 
 $(".check-answer").click(function() {
   displayAnswer(this);
-  container.removeClass('hidden');
 });
 
 
