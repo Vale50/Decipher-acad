@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <style>
@@ -86,9 +85,7 @@ body {
 }
 
 
-/* Quiz container styles 
-
-*/
+/* Quiz container styles */
 /* Neumorphism effect for divs */
 .neu-div {
  background-color: #e0e0e0;
@@ -109,29 +106,6 @@ body {
  padding: 20px;
  margin: 20px auto;
  max-width: 600px;
-}
-
-.button{
-  display: inline-block;
-  border-radius: 50px;
-  padding: 9px 14px;
-  font-size: 14px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #12335b;
-  border: none;
-  box-shadow:  20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff;
-}
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }
 
 .option {
@@ -197,21 +171,7 @@ body {
          transition: 0.3s ease;
 }
 
-#subject-button.hidden, .container {
-    border: 1px solid white;
-    background-color: #34db95;
-    margin: 10px;
-    cursor: pointer;
-    outline: none;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 15px #a7a7a7,
-                -8px -8px 15px #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
+
 
 
 /* Score and progress bar styles */
@@ -226,16 +186,6 @@ body {
  height: 20px;
  margin-top: 10px;
 }
-#container {
-    background-color: lightgreen;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.hidden {
-    display: none;
-}
-
     
      .correct { background-color: green; }
      .incorrect { background-color: red; }
@@ -1323,6 +1273,87 @@ $(".check-answer").click(function() {
         });
     });
 });
+
+var score = 0;
+var progress = 0;
+var isAnimating = false;
+
+$(".option").click(function() {
+  if ($(this).hasClass("selected")) {
+    return;
+  }
+  $(this).addClass("selected");
+  $(this).siblings().removeClass("correct incorrect");
+  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+  if ($(this).data("correct")) {
+    score++;
+    $("#score").text("Score: " + score);
+  } else {
+    $(this).parent().siblings(".check-answer").removeClass("hidden");
+  }
+  progress++;
+  $("#progress").text("Progress: " + progress + "/50");
+});
+
+function displayAnswer(that) {
+  if (isAnimating) return;
+  var container = $(that).siblings('.container');
+  var answer = container.children('.answer');
+  var text = answer.text();
+  var i = 0;
+
+  answer.text('');
+  answer.removeClass('hidden');
+  container.removeClass('hidden');
+  isAnimating = true;
+
+  function typeWriter() {
+    if (i < text.length) {
+      answer.text(answer.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 30);
+    } else {
+      container.children('#subject-button').removeClass('hidden');
+      isAnimating = false;
+    }
+  }
+
+  typeWriter();
+}
+
+$(".check-answer").click(function() {
+  displayAnswer(this);
+});
+
+$(".question").on("click", "#subject-button", function() {
+  if ($(this).siblings('#subject-name').is(':visible')) return;
+  $(this).siblings('#subject-name').removeClass('hidden');
+  animateSubjectName(this);
+});
+
+function animateSubjectName(that) {
+  if (isAnimating) return;
+  var subjectName = $(that).siblings('#subject-name');
+  var text = subjectName.text();
+  var i = 0;
+
+  subjectName.text('');
+  isAnimating = true;
+
+  function typeWriter() {
+    if (i < text.length) {
+      subjectName.text(subjectName.text() + text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 30);
+    } else {
+      isAnimating = false;
+    }
+  }
+
+  typeWriter();
+}
+
+
 
     </script>
 </body>
