@@ -1270,109 +1270,11 @@ Example:
             typeWriter();
         });
 
-        var score = 0;
-var progress = 0;
-var isAnimating = false;
-
-$(".option").click(function() {
-  if ($(this).hasClass("selected")) {
-    return;
-  }
-  $(this).addClass("selected");
-  $(this).siblings().removeClass("correct incorrect");
-  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-  if ($(this).data("correct")) {
-    score++;
-    $("#score").text("Score: " + score);
-  } else {
-    $(this).parent().siblings(".check-answer").removeClass("hidden");
-  }
-  progress++;
-  $("#progress").text("Progress: " + progress + "/50");
-});
-
-function displayAnswer(that) {
-  if (isAnimating) return;
-  var container = $(that).siblings('.container');
-  var answer = container.children('.answer');
-  var text = answer.text();
-  var i = 0;
-
-  answer.text('');
-  answer.removeClass('hidden');
-  container.removeClass('hidden');
-  isAnimating = true;
-
-  function typeWriter() {
-    if (i < text.length) {
-      answer.text(answer.text() + text.charAt(i));
-      i++;
-      setTimeout(typeWriter, 30);
-    } else {
-      container.children('#subject-button').removeClass('hidden');
-      isAnimating = false;
-    }
-  }
-
-  typeWriter();
-}
-
-$(".check-answer").click(function() {
-  displayAnswer(this);
-});
-
-$(".question").on("click", "#subject-button", function() {
-  if ($(this).siblings('#subject-name').is(':visible')) return;
-  $(this).siblings('#subject-name').removeClass('hidden');
-  animateSubjectName(this);
-});
-
-function animateSubjectName(that) {
-  if (isAnimating) return;
-  var subjectName = $(that).siblings('#subject-name');
-  var text = subjectName.text();
-  var i = 0;
-
-  subjectName.text('');
-  isAnimating = true;
-
-  function typeWriter() {
-    if (i < text.length) {
-      subjectName.text(subjectName.text() + text.charAt(i));
-      i++;
-      setTimeout(typeWriter, 30);
-    } else {
-      isAnimating = false;
-    }
-  }
-
-  typeWriter();
-}
-
+      
 
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const options = document.querySelectorAll('.option');
-    options.forEach(option => {
-        option.addEventListener('click', function() {
-            const question = this.closest('.question');
-            question.classList.add('answered');
-            this.classList.add('selected');
-            question.querySelector('.check-answer').classList.remove('hidden');
-        });
-    });
-
-    const checkAnswerButtons = document.querySelectorAll('.check-answer');
-    checkAnswerButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const question = this.closest('.question');
-            question.querySelector('.answer').classList.remove('hidden');
-            this.classList.add('hidden');
-        });
-    });
-});
-
+       
     </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />

@@ -1247,7 +1247,51 @@ And lastly,
 
 
 <script>
-     
+      var score = 0;
+        var progress = 0;
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/50");
+        });
+
+        $(".check-answer").click(function() {
+            var answer = $(this).siblings('.answer');
+            var htmlContent = answer.html();
+            var i = 0;
+
+            answer.html('');
+            answer.removeClass('hidden');
+
+            function typeWriter() {
+                if (i < htmlContent.length) {
+                    if (htmlContent.charAt(i) === '<') {
+                        var tagEnd = htmlContent.indexOf('>', i) + 1;
+                        answer.append(htmlContent.slice(i, tagEnd));
+                        i = tagEnd;
+                    } else {
+                        answer.append(htmlContent.charAt(i));
+                        i++;
+                    }
+                    setTimeout(typeWriter, 40);
+                }
+            }
+
+            typeWriter();
+        });
+
         var score = 0;
 var progress = 0;
 var isAnimating = false;
