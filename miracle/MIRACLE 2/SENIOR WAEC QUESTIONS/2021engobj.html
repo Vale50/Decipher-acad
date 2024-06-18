@@ -1710,10 +1710,9 @@ function displayAnswer(that) {
 
 $(".check-answer").click(function() {
   displayAnswer(this);
+  container.removeClass('hidden');
 });
-$(".check-answer").click(function() {
-    container.removeClass('hidden');
-});
+
 
 
 $("#question").on("click", "#subject-button", function() {
