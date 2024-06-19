@@ -1270,19 +1270,25 @@ function displayAnswer(that) {
   if (isAnimating) return;
   var container = $(that).siblings('.container');
   var answer = container.children('.answer');
-  var text = answer.text();
+  var htmlContent = answer.html();
   var i = 0;
 
-  answer.text('');
+  answer.html('');
   answer.removeClass('hidden');
   container.removeClass('hidden');
   isAnimating = true;
 
   function typeWriter() {
-    if (i < text.length) {
-      answer.text(answer.text() + text.charAt(i));
-      i++;
-      setTimeout(typeWriter, 30);
+    if (i < htmlContent.length) {
+      if (htmlContent.charAt(i) === '<') {
+        var tagEnd = htmlContent.indexOf('>', i) + 1;
+        answer.append(htmlContent.slice(i, tagEnd));
+        i = tagEnd;
+      } else {
+        answer.append(htmlContent.charAt(i));
+        i++;
+      }
+      setTimeout(typeWriter, 40);
     } else {
       container.children('#subject-button').removeClass('hidden');
       isAnimating = false;
