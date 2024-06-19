@@ -1245,7 +1245,7 @@ And lastly,
 
 
 <script>
-     var score = 0;
+   var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1266,29 +1266,23 @@ $(".option").click(function() {
     $("#progress").text("Progress: " + progress + "/50");
 });
 
-$(".check-answer").click(function() {
+function displayAnswer(that) {
     if (isAnimating) return;
-    var container = $(this).siblings('.container');
+    var container = $(that).siblings('.container');
     var answer = container.children('.answer');
-    var htmlContent = answer.html();
+    var text = answer.text();
     var i = 0;
 
-    answer.html('');
+    answer.text('');
     answer.removeClass('hidden');
     container.removeClass('hidden');
     isAnimating = true;
 
     function typeWriter() {
-        if (i < htmlContent.length) {
-            if (htmlContent.charAt(i) === '<') {
-                var tagEnd = htmlContent.indexOf('>', i) + 1;
-                answer.append(htmlContent.slice(i, tagEnd));
-                i = tagEnd;
-            } else {
-                answer.append(htmlContent.charAt(i));
-                i++;
-            }
-            setTimeout(typeWriter, 40);
+        if (i < text.length) {
+            answer.text(answer.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 30);
         } else {
             container.children('#subject-button').removeClass('hidden');
             isAnimating = false;
@@ -1296,7 +1290,39 @@ $(".check-answer").click(function() {
     }
 
     typeWriter();
+}
+
+$(".check-answer").click(function() {
+    displayAnswer(this);
 });
+
+$(".question").on("click", "#subject-button", function() {
+    if ($(this).siblings('#subject-name').is(':visible')) return;
+    $(this).siblings('#subject-name').removeClass('hidden');
+    animateSubjectName(this);
+});
+
+function animateSubjectName(that) {
+    if (isAnimating) return;
+    var subjectName = $(that).siblings('#subject-name');
+    var text = subjectName.text();
+    var i = 0;
+
+    subjectName.text('');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < text.length) {
+            subjectName.text(subjectName.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 30);
+        } else {
+            isAnimating = false;
+        }
+    }
+
+    typeWriter();
+}
 
     </script>
     <script>
