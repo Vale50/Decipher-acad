@@ -1280,7 +1280,7 @@ function displayAnswer(that) {
 
   function typeWriter() {
     if (i < htmlContent.length) {
-      if (htmlContent.charAt(i) === '<') {
+      if (htmlContent.charAt(i) === '<' && htmlContent.charAt(i+1) !== 'b') {
         var tagEnd = htmlContent.indexOf('>', i) + 1;
         answer.append(htmlContent.slice(i, tagEnd));
         i = tagEnd;
