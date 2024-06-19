@@ -1245,7 +1245,7 @@ And lastly,
 
 
 <script>
-    var score = 0;
+   var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1277,20 +1277,25 @@ function displayAnswer(that) {
   var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
 
   answer.html('');
+  answer.removeClass('hidden');
+  container.removeClass('hidden');
   isAnimating = true;
 
   function typeWriter() {
     if (i < endIndex) {
-      // ... existing typewriting logic ...
+      if (htmlContent.charAt(i) === '<') {
+        var tagEnd = htmlContent.indexOf('>', i) + 1;
+        answer.append(htmlContent.slice(i, tagEnd));
+        i = tagEnd;
+      } else {
+        answer.append(htmlContent.charAt(i));
+        i++;
+      }
+      setTimeout(typeWriter, 40);
     } else {
-      answer.append(htmlContent.slice(i, endIndex)); // Append remaining content after animation
-      container.removeClass('hidden'); // Reveal container after animation
-      container.children('#subject-button').appendTo(container); // Move button inside
       container.children('#subject-button').removeClass('hidden');
       isAnimating = false;
     }
-    i++;
-    setTimeout(typeWriter, 40);
   }
 
   typeWriter();
@@ -1327,6 +1332,7 @@ function animateSubjectName(that) {
 
   typeWriter();
 }
+
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
