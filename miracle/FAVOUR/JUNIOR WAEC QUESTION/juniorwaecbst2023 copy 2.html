@@ -1277,19 +1277,20 @@ function displayAnswer(that) {
   var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
 
   answer.html('');
-  answer.removeClass('hidden');
-  container.removeClass('hidden');
   isAnimating = true;
 
   function typeWriter() {
     if (i < endIndex) {
       // ... existing typewriting logic ...
     } else {
-      // Move the "More.." button inside the container before revealing it
-      container.children('#subject-button').appendTo(container);
+      answer.append(htmlContent.slice(i, endIndex)); // Append remaining content after animation
+      container.removeClass('hidden'); // Reveal container after animation
+      container.children('#subject-button').appendTo(container); // Move button inside
       container.children('#subject-button').removeClass('hidden');
       isAnimating = false;
     }
+    i++;
+    setTimeout(typeWriter, 40);
   }
 
   typeWriter();
