@@ -1245,7 +1245,7 @@ And lastly,
 
 
 <script>
-   var score = 0;
+  var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1332,6 +1332,13 @@ function animateSubjectName(that) {
 
   typeWriter();
 }
+
+// Show more button functionality
+$("#subject-button").click(function() {
+  var moreContent = $("#more-content");
+  moreContent.toggleClass("hidden");
+});
+
 
     </script>
     <script>
