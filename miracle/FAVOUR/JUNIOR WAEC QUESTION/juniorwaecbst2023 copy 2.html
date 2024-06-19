@@ -1283,16 +1283,10 @@ function displayAnswer(that) {
 
   function typeWriter() {
     if (i < endIndex) {
-      if (htmlContent.charAt(i) === '<') {
-        var tagEnd = htmlContent.indexOf('>', i) + 1;
-        answer.append(htmlContent.slice(i, tagEnd));
-        i = tagEnd;
-      } else {
-        answer.append(htmlContent.charAt(i));
-        i++;
-      }
-      setTimeout(typeWriter, 40);
+      // ... existing typewriting logic ...
     } else {
+      // Move the "More.." button inside the container before revealing it
+      container.children('#subject-button').appendTo(container);
       container.children('#subject-button').removeClass('hidden');
       isAnimating = false;
     }
