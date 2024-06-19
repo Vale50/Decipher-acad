@@ -1273,14 +1273,17 @@ function displayAnswer(that) {
   var htmlContent = answer.html();
   var i = 0;
 
+  // Find the index of the end of the "answer hidden" div
+  var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+
   answer.html('');
   answer.removeClass('hidden');
   container.removeClass('hidden');
   isAnimating = true;
 
   function typeWriter() {
-    if (i < htmlContent.length) {
-      if (htmlContent.charAt(i) === '<' && htmlContent.charAt(i+1) !== 'b') {
+    if (i < endIndex) {
+      if (htmlContent.charAt(i) === '<') {
         var tagEnd = htmlContent.indexOf('>', i) + 1;
         answer.append(htmlContent.slice(i, tagEnd));
         i = tagEnd;
