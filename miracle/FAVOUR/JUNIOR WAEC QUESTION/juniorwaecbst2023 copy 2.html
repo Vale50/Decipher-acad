@@ -1245,7 +1245,7 @@ And lastly,
 
 
 <script>
-      var score = 0;
+     var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1267,12 +1267,16 @@ $(".option").click(function() {
 });
 
 $(".check-answer").click(function() {
-    var answer = $(this).siblings('.answer');
+    if (isAnimating) return;
+    var container = $(this).siblings('.container');
+    var answer = container.children('.answer');
     var htmlContent = answer.html();
     var i = 0;
 
     answer.html('');
     answer.removeClass('hidden');
+    container.removeClass('hidden');
+    isAnimating = true;
 
     function typeWriter() {
         if (i < htmlContent.length) {
@@ -1286,7 +1290,7 @@ $(".check-answer").click(function() {
             }
             setTimeout(typeWriter, 40);
         } else {
-            $(this).siblings('.container').children('#subject-button').removeClass('hidden');
+            container.children('#subject-button').removeClass('hidden');
             isAnimating = false;
         }
     }
