@@ -1246,98 +1246,93 @@ And lastly,
 
 <script>
   var score = 0;
-    var progress = 0;
-    var isAnimating = false;
+var progress = 0;
+var isAnimating = false;
 
-    $(".option").click(function() {
-        if ($(this).hasClass("selected")) {
-            return;
-        }
-        $(this).addClass("selected");
-        $(this).siblings().removeClass("correct incorrect");
-        $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-        if ($(this).data("correct")) {
-            score++;
-            $("#score").text("Score: " + score);
-        } else {
-            $(this).parent().siblings(".check-answer").removeClass("hidden");
-        }
-        progress++;
-        $("#progress").text("Progress: " + progress + "/50");
-    });
-
-    function displayAnswer(that) {
-        if (isAnimating) return;
-        var container = $(that).siblings('.container');
-        var answer = container.children('.answer');
-        var htmlContent = answer.html();
-        var i = 0;
-
-        // Find the index of the end of the "answer hidden" div
-        var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
-
-        answer.html('');
-        answer.removeClass('hidden');
-        container.removeClass('hidden');
-        isAnimating = true;
-
-        function typeWriter() {
-            if (i < endIndex) {
-                if (htmlContent.charAt(i) === '<') {
-                    var tagEnd = htmlContent.indexOf('>', i) + 1;
-                    answer.append(htmlContent.slice(i, tagEnd));
-                    i = tagEnd;
-                } else {
-                    answer.append(htmlContent.charAt(i));
-                    i++;
-                }
-                setTimeout(typeWriter, 40);
-            } else {
-                container.children('#subject-button').removeClass('hidden');
-                isAnimating = false;
-            }
-        }
-
-        typeWriter();
+$(".option").click(function() {
+    if ($(this).hasClass("selected")) {
+        return;
     }
-
-    $(".check-answer").click(function() {
-        displayAnswer(this);
-    });
-
-    $(".question").on("click", "#subject-button", function() {
-        if ($(this).siblings('#subject-name').is(':visible')) return;
-        $(this).siblings('#subject-name').removeClass('hidden');
-        animateSubjectName(this);
-    });
-
-    function animateSubjectName(that) {
-        if (isAnimating) return;
-        var subjectName = $(that).siblings('#subject-name');
-        var text = subjectName.text();
-        var i = 0;
-
-        subjectName.text('');
-        isAnimating = true;
-
-        function typeWriter() {
-            if (i < text.length) {
-                subjectName.text(subjectName.text() + text.charAt(i));
-                i++;
-                setTimeout(typeWriter, 30);
-            } else {
-                isAnimating = false;
-            }
-        }
-
-        typeWriter();
+    $(this).addClass("selected");
+    $(this).siblings().removeClass("correct incorrect");
+    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+    if ($(this).data("correct")) {
+        score++;
+        $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
     }
-
-// Show more button functionality
-$("#subject-button").click(function() {
-  var moreContent = $("#more-content");
-  moreContent.toggleClass("hidden");
+    progress++;
+    $("#progress").text("Progress: " + progress + "/50");
 });
+
+function displayAnswer(that) {
+    if (isAnimating) return;
+    var container = $(that).siblings('.container');
+    var answer = container.children('.answer');
+    var htmlContent = answer.html();
+    var i = 0;
+
+    // Find the index of the end of the "answer hidden" div
+    var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+
+    answer.html('');
+    answer.removeClass('hidden');
+    container.removeClass('hidden');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                answer.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                answer.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            // Show the "More.." button after the animation of the answer is completed
+            container.find('#subject-button').removeClass('hidden');
+            isAnimating = false;
+        }
+    }
+
+    typeWriter();
+}
+
+$(".check-answer").click(function() {
+    displayAnswer(this);
+});
+
+$(".question").on("click", "#subject-button", function() {
+    if ($(this).siblings('#subject-name').is(':visible')) return;
+    $(this).siblings('#subject-name').removeClass('hidden');
+    animateSubjectName(this);
+});
+
+function animateSubjectName(that) {
+    if (isAnimating) return;
+    var subjectName = $(that).siblings('#subject-name');
+    var text = subjectName.text();
+    var i = 0;
+
+    subjectName.text('');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < text.length) {
+            subjectName.text(subjectName.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 30);
+        } else {
+            isAnimating = false;
+        }
+    }
+
+    typeWriter();
+}
 
 
 
