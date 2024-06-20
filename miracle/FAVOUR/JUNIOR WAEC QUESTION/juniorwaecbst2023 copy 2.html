@@ -249,6 +249,7 @@ body {
             margin-bottom: 10px;
         }
  </style>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -1273,27 +1274,20 @@ function displayAnswer(that) {
     var htmlContent = answer.html();
     var i = 0;
 
-    // Find the index of the end of the "answer hidden" div
-    var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
-
+    // Clear the current content and make sure the container and answer are visible
     answer.html('');
     answer.removeClass('hidden');
     container.removeClass('hidden');
     isAnimating = true;
 
     function typeWriter() {
-        if (i < endIndex) {
-            if (htmlContent.charAt(i) === '<') {
-                var tagEnd = htmlContent.indexOf('>', i) + 1;
-                answer.append(htmlContent.slice(i, tagEnd));
-                i = tagEnd;
-            } else {
-                answer.append(htmlContent.charAt(i));
-                i++;
-            }
-            setTimeout(typeWriter, 40);
+        if (i < htmlContent.length) {
+            // Append character by character
+            answer.append(htmlContent.charAt(i));
+            i++;
+            setTimeout(typeWriter, 40); // Adjust time as needed for the typing effect
         } else {
-            // Show the "More.." button after the animation of the answer is completed
+            // Once the typing animation is done, reveal the "More.." button
             container.find('#subject-button').removeClass('hidden');
             isAnimating = false;
         }
@@ -1301,7 +1295,6 @@ function displayAnswer(that) {
 
     typeWriter();
 }
-
 $(".check-answer").click(function() {
     displayAnswer(this);
 });
