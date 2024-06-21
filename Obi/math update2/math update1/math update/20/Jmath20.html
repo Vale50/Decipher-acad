@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: #3498db;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+        max-height: 200px;
+    }
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+#progressBar {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+       
+        .correct { background-color: green; }
+        .incorrect { background-color: red; }
+        .hidden { display: none; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="quiz">
+        <div class="question">
+
+<p><b>Best of Luck</b></p>
+<br>
+            <p>1:  What is the place value of 3 in 4321?</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. Hundred </div>
+                <div class="option" data-correct="false">B. Hundredth</div>
+                <div class="option" data-correct="false">C. Tenth</div>
+                <div class="option" data-correct="false">D.  Thousand</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">To find the place value of 3 in the number 4321, we need to identify the position of the digit 3 in the number.
+
+In the number 4321, we can break it down into its individual digits:
+
+4 (thousands place)
+3 (hundreds place)
+2 (tens place)
+1 (ones place)
+
+The hundreds place is the position where the digit 3 is located. Therefore, the place value of 3 in the number 4321 is hundreds.
+
+</div>
+        </div>
+    <div id="quiz">
+        <div class="question">
+            <p>2: Round off 0.01256 to three significant figures.</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. . 0.01 </div>
+                <div class="option" data-correct="false">B.  0.012</div>
+                <div class="option" data-correct="true">C. . 0.01256</div>
+                <div class="option" data-correct="false">D.  0.0126</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> When rounding a number to a certain number of significant figures, we look for the first digit that is not significant (i.e., the first digit that is not 1, 2, 3, 4, or 5).
+
+In this case, the number 0.01256 has 5 significant figures: 0, 1, 2, 5, and 6. Since the first digit that is not significant is the sixth digit (which is 6), we need to round off the number to the nearest tenth.
+
+So, rounding off 0.01256 
+ </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+            <p>3: <img src="1.png" alt="Math Image"></p>
+            <div class="options">
+                <div class="option" data-correct="false">A. 1<sup>1</sup>&frasl;<sub>4</sub></div>
+                <div class="option" data-correct="false">B.1.08</div>
+                <div class="option" data-correct="false">C. 8</div>
+                <div class="option" data-correct="true">D.  9</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"><p>Let's break this fraction down step by step.
+
+The expression is: 3 ÷ (1/16) × 3 × 1/16
+
+To evaluate this expression, we need to follow the order of operations (PEMDAS):
+
+1. Parentheses: None
+2. Exponents: None
+3. Multiplication and Division (from left to right):
+    * 3 ÷ (1/16) = 3 × 16 = 48 (because dividing by a fraction is the same as multiplying by its reciprocal)
+    * 48 × 3 = 144
+    * 144 × 1/16 = 144 ÷ 16 = 9
+
+So, the final answer is:
+
+3 ÷ (1/16) × 3 × 1/16 = 9
+</div>
+            </div>
+        </div>
+           <div id="quiz">
+             <div class="question">
+            <p>4: The sum of 8 and a certain number is equal to the product of the number and 3. What is the number?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. 3</div>
+                <div class="option" data-correct="true">B. 4 </div>
+                <div class="option" data-correct="false">C. 5</div>
+                <div class="option" data-correct="false">D. 10</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">     <p>Let's denote the unknown number as \( x \).</p>
+    <p>According to the given information:</p>
+    <p>The sum of 8 and  x is equal to the product of x  and 3.</p>
+    <p>Mathematically, this can be represented as:</p>
+    <p>8 + x = 3x </p>
+    <p>To find the value of  x , we can solve this equation:</p>
+    <p> 8 + x = 3x </p>
+    <p> 8 = 3x - x </p>
+    <p> 8 = 2x </p>
+    <p>x = <sup>8</sup>&frasl;<sub>2</sub> </p>
+    <p> x = 4 </p></div>
+            </div>
+      <div id="quiz">
+        <div class="question">
+            <p>5: A man bought a Mathematics textbook for N1,680.00 and 
+sold it for N1,200.00.Find his percentage loss </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.  8.80% </div>
+                <div class="option" data-correct="true">B.28.57% </div>
+                <div class="option" data-correct="false">C.40.00%</div>
+                <div class="option" data-correct="false">D.  48.00% </div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">Selling price = N1,200.00
+Buying price = N1,680.00
+
+To find the difference, subtract the selling price from the buying price:
+
+Difference = Buying price - Selling price
+= N1,680.00 - N1,200.00
+= N480.00
+
+So, the man lost N480.00.
+
+To find the percentage loss, we need to divide the difference (loss) by the buying price and multiply by 100.
+
+Percentage loss = (Difference ÷ Buying price) × 100
+= (N480.00 ÷ N1,680.00) × 100
+= 28.57%</div>
+        </div>
+     <div id="quiz">
+        <div class="question">
+       <p> 6: Find the sum of the prime factors of 180</p>
+
+            <div class="options">
+                <div class="option" data-correct="true">A.  15 </div>
+                <div class="option" data-correct="false">B. 11</div>
+                <div class="option" data-correct="false">C. 19 </div>
+                <div class="option" data-correct="false">D. 34</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">Let's break down the prime factorization of 180:
+
+180 = 2 × 2 × 3 × 3 × 5
+
+So, the prime factors of 180 are:
+
+2, 2, 3, 3, and 5
+
+To find the sum of the prime factors, simply add them up:
+
+Sum of prime factors = 2 + 2 + 3 + 3 + 5
+= 15
+
+Therefore, the sum of the prime factors of 180 is 15.</div>
+        </div>
+   
+      </div>
+        <div class="question">
+            <p>7:  A profit of 23% was made on an article bought for N4,800.00. What was the selling price?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.  N1,104.00 </div>
+                <div class="option" data-correct="false">B.  N3,696.00 </div>
+                <div class="option" data-correct="false">C.   N4,800.00</div>
+                <div class="option" data-correct="true">D.  N5,904.00</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The cost price is given as N4,800.00.
+
+The profit percentage is 23%, which means that the profit is 23% of the cost price.
+
+To find the profit amount, multiply the cost price by the profit percentage:
+
+Profit amount = Cost price × Profit percentage
+= N4,800.00 × 0.23
+= N1,104.00
+
+The selling price is the sum of the cost price and the profit amount:
+
+Selling price = Cost price + Profit amount
+= N4,800.00 + N1,104.00
+= N5,904.00
+
+Therefore, the selling price is N5,904.00.</div>
+        </div>
+ 
+         <div id="quiz">
+            <div class="question">
+                <p>8:  Find the HCF of 18a&#178;y and 27x&#178;y&#178; </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 9a𝑥 </div>
+                    <div class="option" data-correct="true">B. 9xy </div>
+                    <div class="option" data-correct="false"> C. 6a𝑥y </div>
+                    <div class="option" data-correct="false">D. 6a𝑥</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+
+1. Factored 18 into its prime factors: 2 × 3 × 3
+2. Factored 27 into its prime factors: 3 × 3 × 3
+3. Identified the common factors: 3 × 3 = 9
+4. Factored a^2y and x^2y^2 into their prime factors: a × a × y and x × x × y × y
+5. Identified the common factors: x × y
+6. Combined the common factors to find the HCF: 3 × 2 × x × y = 9xy
+
+</body></div>
+            </div>
+       
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <p>9:  Convert 19ten to a binary number.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  0001two </div>
+                    <div class="option" data-correct="true">B.  10011two  </div>
+                    <div class="option" data-correct="false">C. . 11001two</div>
+                    <div class="option" data-correct="true">D. . 10111two</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To convert a decimal number like 19 to a binary number, we can use a simple process. Here's how:
+
+Divide the decimal number by 2:
+19 ÷ 2 = 9 with a remainder of 1
+
+Write down the remainder (1) and divide the result by 2 again:
+9 ÷ 2 = 4 with a remainder of 1
+
+Write down the remainder (1) and divide the result by 2 again:
+4 ÷ 2 = 2 with a remainder of 0
+
+Write down the remainder (0) and divide the result by 2 again:
+2 ÷ 2 = 1 with a remainder of 0
+
+Write down the remainder (0) and stop:
+
+The binary representation of the decimal number 19 is:
+
+10111</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>10:   What is the smallest number by which 60 must be multipled to be a perfect square? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2</div>
+                    <div class="option" data-correct="true">B. 3</div>
+                    <div class="option" data-correct="false">C. 10</div>
+                    <div class="option" data-correct="false">D. 15</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> 60 = 2&#178; × 3 × 5 60 × 3 = 2&#178; × 3&#178; × 5
+This results in a perfect square, which is indeed the smallest number by which 60 must be multiplied to be a perfect square.
+So, the correct answer is 3</div>
+            </div>
+        </div>
+          <div id="quiz">
+            <div class="question">
+<p> 11: If 6 men can finish a particular work in 4 days, how many days will it take 8 men to finish the same work if they are working at the same rate? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2</div>
+                    <div class="option" data-correct="true">B. 3</div>
+                    <div class="option" data-correct="false">C. 8</div>
+                    <div class="option" data-correct="false">D. 6</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+
+By setting up the proportion:
+
+6 × 4 = 8 × 𝐷
+
+You can solve for 𝐷, which represents the number of days required for 8 men to finish the work.
+
+Your steps are spot on:
+
+<p>24 = 8𝐷</p>
+<p>𝐷 = 24/8</p>
+<p>𝐷 = 3 </p>
+
+Therefore, it will indeed take 8 men working at the same rate 3 days to finish the same work.
+</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>12:  What is the missing number if the following subtraction is in base two?</p><img src="2.png" alt="Math Image"></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 10110111</div>
+                    <div class="option" data-correct="false">B. 1101111</div>
+                    <div class="option" data-correct="false">C. 1011011</div>
+                    <div class="option" data-correct="true">D. 01001000</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">the missing number is 01001000</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>13: Express 144<sup>eight</sup> in base ten. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 120</div>
+                    <div class="option" data-correct="false">B. 116</div>
+                    <div class="option" data-correct="true">C. 100</div>
+                    <div class="option" data-correct="false">D. 96</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To convert the number 144<sup>eight</sup>to base ten, we need to understand the place values in the octal (base-eight) system.
+
+In the octal system, each digit represents a power of 8. Starting from the rightmost digit, the powers of 8 increase by one as you move to the left.
+
+So, 144<sup>eight</sup> can be expanded as:
+
+1 X 8^2 + 4 X 8^1 + 4 X 8^0
+
+Now, let's calculate:
+
+1 X 8^2 = 1 X 64 = 64
+4 X 8^1 = 4 X 8 = 32
+4 X 8^0 = 4 X 1 = 4
+
+Adding these together:
+
+64 + 32 + 4 = 100
+</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>14: . Find the simple interest on N650.00 for 2 years at 6% per annum. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  N13,00</div>
+                    <div class="option" data-correct="false">B. N39.00</div>
+                    <div class="option" data-correct="false">C. N65.00</div>
+                    <div class="option" data-correct="true">D. N78.00</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Simple interest is a type of interest that is calculated as a percentage of the principal amount, and it's not compounded. In this case, we have:
+
+* Principal (P) = N650.00
+* Rate (r) = 6% per annum
+* Time (t) = 2 years
+
+To find the simple interest, we can use the formula:
+
+Simple Interest (SI) = P × r × t
+
+First, we need to convert the rate from percentage to a decimal by dividing by 100:
+
+r = 6% = 6 ÷ 100 = 0.06
+
+Now, plug in the values:
+
+SI = N650.00 × 0.06 × 2
+= N78.00
+
+So, the simple interest on N650.00 for 2 years at 6% per annum is N78.00.
+
+To find the total amount, you can add the simple interest to the principal:
+
+Total Amount = Principal + Simple Interest
+= N650.00 + N78.00
+= N728.00</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>15: . The number of girls in a mixed school is 375. If the ratio of boys to girls in the school is 4:5, find the number of boys in the school.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 275</div>
+                    <div class="option" data-correct="true">B. 300</div>
+                    <div class="option" data-correct="false">C. 325</div>
+                    <div class="option" data-correct="false">D. 375</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A nice ratio problem!
+
+Let's break it down step by step:
+
+1. The ratio of boys to girls is 4:5, which means that for every 4 boys, there are 5 girls.
+2. We know the number of girls in the school is 375. To find the number of boys, we can set up a proportion:
+
+Number of boys / Number of girls = 4 / 5
+x / 375 = 4 / 5
+
+3. Cross-multiply:
+
+x × 5 = 375 × 4
+5x = 1500
+x = 300
+
+So, the number of boys in the school is 300.
+
+To verify, we can check that the ratio of boys to girls is indeed 4:5:
+
+Number of boys: 300
+Number of girls: 375
+
+ Ratio: 300/375 = 4/5 (approximately)
+
+Looks good!</div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+                <p>16: <img src="3.png" alt="Math Image"></p> </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  x 10-3</div>
+                    <div class="option" data-correct="false">B.   2 x 10-2</div>
+                    <div class="option" data-correct="true">C.   2 x 10-1</div>
+                    <div class="option" data-correct="false">D.  2 x 10&#176;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To evaluate 0.01 x 0.04/ 0.002} and express the answer in standard form, we can perform the multiplication and division first, and then convert the result to standard form.
+
+0.01 x 0.04/0.002 = 0.01 x 20 = 0.2
+
+To express 0.2 in standard form, we represent it as 2 x 10^-1.
+
+So, 0.01 x 0.04/0.002 = 2 x 10^-1 in standard form.</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: What is the positive difference between -3.9 and 3.9?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 0</div>
+                    <div class="option" data-correct="false">B. 3.9</div>
+                    <div class="option" data-correct="true">C. 7.8</div>
+                    <div class="option" data-correct="false">D. 11.7</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the positive difference, we need to subtract the smaller value from the larger value:
+
+3.9 - (-3.9) = 3.9 + 3.9
+
+Combine the like terms:
+
+7.8
+
+So, the positive difference between -3.9 and 3.9 is 7.8.</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: A man spends <sup>1</sup>&frasl;<sub>3</sub>of his salary on food and <sup>1</sup>&frasl;<sub>4</sub>on school fees of his children. What fraction of his salary is left? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>1</sup>&frasl;<sub>6</sub></div>
+                    <div class="option" data-correct="false">B. <sup>1</sup>&frasl;<sub>3</sub></div>
+                    <div class="option" data-correct="true">C. <sup>5</sup>&frasl;<sub>12</sub></div>
+                    <div class="option" data-correct="false">D. <sup>1</sup>&frasl;<sub>2</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's break it down step by step!
+
+Let the man's salary be x.
+
+He spends 1/3 of his salary on food, which is:
+
+x × 1/3 = x/3
+
+He spends 1/4 of his salary on school fees, which is:
+
+x × 1/4 = x/4
+
+To find the total amount he spends on both food and school fees, we add these two amounts:
+
+x/3 + x/4 = ?
+
+To add these fractions, we need to have the same denominator. The least common multiple (LCM) of 3 and 4 is 12, so we can rewrite the fractions with a denominator of 12:
+
+x/3 = x × 4/12 = 4x/12
+x/4 = x × 3/12 = 3x/12
+
+Now we can add:
+
+(4x/12) + (3x/12) = 7x/12
+
+So, the total amount he spends on food and school fees is 7x/12.
+
+To find the amount left, we subtract the total amount spent from the original salary:
+
+x - (7x/12) = ?
+
+Simplifying the fraction:
+
+x - (7x)/12 = x - x(7/12) = x(1 - 7/12) = x(1 - 7/12)
+
+Now, we can simplify the fraction inside the parentheses:
+
+1 - 7/12 = 5/12
+
+So, the amount left is: 5/12
+</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>19:  Express 0.375 as a fraction is its lowest terms. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>75</sup>&frasl;<sub>200</sub> </div>
+                    <div class="option" data-correct="false">B. <sup>15</sup>&frasl;<sub>12</sub></div>
+                    <div class="option" data-correct="true">C. <sup>3</sup>&frasl;<sub>8</sub> </div>
+                    <div class="option" data-correct="false">D. <sup>5</sup>&frasl;<sub>8</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To express 0.375 as a fraction, we can start by multiplying both the numerator and denominator by 4 to get rid of the decimal:
+
+0.375 = 375/1000
+
+Now, we can simplify the fraction by dividing both the numerator and denominator by their greatest common divisor, which is 25:
+
+375 ÷ 25 = 15
+1000 ÷ 25 = 40
+
+So, the simplified fraction is:
+
+375/1000 = 15/40
+
+We can further simplify this fraction by dividing both the numerator and denominator by their greatest common divisor, which is 5:
+
+15 ÷ 5 = 3
+40 ÷ 5 = 8
+
+So, the final simplified fraction is:
+
+15/40 = 3/8
+
+Therefore, 0.375 expressed as a fraction in its lowest terms is 3/8.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>20:  If 3.5% of a number is 3.5, what is the number?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 100 </div>
+                    <div class="option" data-correct="false">B. 28 </div>
+                    <div class="option" data-correct="false">C. 56 </div>
+                    <div class="option" data-correct="false">D. 70 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's start by converting the percentage to a decimal:
+
+3.5% = 0.035
+
+Now, we can set up an equation using the given information:
+
+0.035 × x = 3.5
+
+Where x is the number we're trying to find.
+
+To solve for x, we can divide both sides of the equation by 0.035:
+
+x = 3.5 / 0.035
+
+x = 100
+
+So, the number is 100.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>21: Convert 10110two to base ten.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 16</div>
+                    <div class="option" data-correct="false">B. 18 </div>
+                    <div class="option" data-correct="false">C. 20 </div>
+                    <div class="option" data-correct="true">D. 22</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To convert a binary number (base 2) to a decimal number (base 10), we can use the following steps:
+
+1. Write the binary number with its corresponding powers of 2:
+
+10110
+2^4 = 16
+2^3 = 8
+2^2 = 4
+2^1 = 2
+2^0 = 1
+
+2. Multiply each binary digit by its corresponding power of 2:
+
+1 × 16 = 16
+0 × 8 = 0
+1 × 4 = 4
+1 × 2 = 2
+0 × 1 = 0
+
+3. Add up the results:
+
+16 + 0 + 4 + 2 + 0 = 22
+
+So, the binary number 10110 is equal to the decimal number 22.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>22:  Solve the inequality 3𝑥 -1 &#8804; <sup>4</sup>&frasl;<sub>5</sub> 3 -2𝑥</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 𝑥 &#60;  <sup>-4</sup>&frasl;<sub>5</sub></div>
+                    <div class="option" data-correct="false">B. 𝑥 &#8805; <sup>4</sup>&frasl;<sub>5</sub></div>
+                    <div class="option" data-correct="true">C. 𝑥 &#8804; <sup>7</sup>&frasl;<sub>23</sub></div>
+                    <div class="option" data-correct="false">D. 𝑥 &#8804; <sup>-4</sup>&frasl;<sub>5</sub> 3</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"><p>To solve the inequality \(3x - 1 \leq \frac{4}{5}(3 - 2x)\), let's first simplify the expression on the right side:</p>
+    <p>\( \frac{4}{5}(3 - 2x) = \frac{4}{5}(3) - \frac{4}{5}(2x) = \frac{12}{5} - \frac{8x}{5} \)</p>
+    <p>Now, let's rewrite the inequality:</p>
+    <p>\(3x - 1 \leq \frac{12}{5} - \frac{8x}{5}\)</p>
+    <p>To solve the inequality, let's first get rid of the fractions by multiplying both sides by the least common denominator, which is \(5\):</p>
+    <p>\(5(3x - 1) \leq 5\left(\frac{12}{5} - \frac{8x}{5}\right)\)</p>
+    <p>\(15x - 5 \leq 12 - 8x\)</p>
+    <p>Next, let's simplify:</p>
+    <p>\(15x - 5 \leq 12 - 8x\)</p>
+    <p>\(15x + 8x \leq 12 + 5\)</p>
+    <p>\(23x \leq 17\)</p>
+    <p>Now, divide both sides by 23 to isolate x:</p>
+    <p><sup>7</sup>&frasl;<sub>23</sub></p>
+    <p>So, the solution to the inequality is  <sup>7</sup>&frasl;<sub>23</sub>.</p></div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>23: What is the co-efficient of r in the expansion of (3r - 5) (2r + 3)?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. -1 </div>
+                    <div class="option" data-correct="false">B. 1 </div>
+                    <div class="option" data-correct="false">C. 5</div>
+                    <div class="option" data-correct="false">D. 6</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> To find the coefficient of \( r \) in the expansion of (3r - 5)(2r + 3), we'll use the distributive property to multiply the two binomials:
+
+(3r - 5)(2r + 3) = 3r \cdot 2r + 3r. 3 - 5 \cdot 2r - 5 . 3
+
+ = 6r^2 + 9r - 10r - 15 
+
+Now, let's combine like terms:
+
+= 6r^2 - r - 15 
+
+So, the coefficient of r  in the expansion of (3r - 5)(2r + 3) is  -1 .</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>24:   The sum of 4 items a certain number and 9 is equal to the sum of the number and 12. What is the number?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A.  1</div>
+                    <div class="option" data-correct="false">B.  3</div>
+                    <div class="option" data-correct="false">C.  7</div>
+                    <div class="option" data-correct="false">D. 12</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's say the number is x. Then, we can write the equation:
+
+4x + 9 = x + 12
+
+To solve for x, we can start by subtracting 9 from both sides of the equation:
+
+4x = x + 3
+
+Then, we can subtract x from both sides:
+
+3x = 3
+
+Finally, we can divide both sides by 3:
+
+x = 1
+
+So, the number is 1.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>25:  Which of the following inequalities is sketched in the figure below?</p>
+                <img src="4.png" alt="Math Image"></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  𝑥 < -1</div>
+                    <div class="option" data-correct="true">B.  𝑥 ≤ -1</div>
+                    <div class="option" data-correct="false">C.  𝑥 ≥ -1</div>
+                    <div class="option" data-correct="false">D.  𝑥 < 4 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">B</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>26: Find the HCF of 4𝑥&#178;y and 6𝑥yz.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2𝑥z</div>
+                    <div class="option" data-correct="true">B. 2𝑥y</div>
+                    <div class="option" data-correct="false">C. 2𝑥&#178;y </div>
+                    <div class="option" data-correct="false">D. 12𝑥y </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the HCF (Highest Common Factor) of two expressions, we need to identify the common factors between them.
+
+The given expressions are:
+
+4𝑥²y and 6𝑥yz
+
+Let's start by factoring out the common factors:
+
+4𝑥²y = 2² × 𝑥² × y
+6𝑥yz = 2 × 3 × 𝑥 × y × z
+
+Now, we can see that the common factors are:
+
+2, 𝑥, and y
+
+So, the HCF of 4𝑥²y and 6𝑥yz is:
+
+2𝑥y</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>27:  Expand (𝑥 + 1) (𝑥 -2).</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 𝑥&#178; + 𝑥 – 2 </div>
+                    <div class="option" data-correct="false">B.  𝑥&#178;- 𝑥 + 2</div>
+                    <div class="option" data-correct="false">C. 𝑥&#178; + 3𝑥 + 2</div>
+                    <div class="option" data-correct="true">D.  𝑥&#178; - 𝑥 – 2</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To expand the expression (x + 1)(x - 2), we use the distributive property:
+
+(x + 1)(x - 2) = x(x) + x(-2) + 1(x) + 1(-2)
+
+Now, let's multiply each term:
+
+= x&#178; - 2x + x - 2
+
+Next, let's combine like terms:
+
+= x&#178; - 2x + x - 2
+
+= x&#178; - x - 2
+
+So, (x + 1)(x - 2) expands to x&#178; - x - 2.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>28: Factorize. 𝑥&#178;– 7𝑥 + 12. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. (𝑥 + 3) (𝑥 + 4)</div>
+                    <div class="option" data-correct="true">B. (𝑥 – 3) (𝑥 – 4)</div>
+                    <div class="option" data-correct="false">C. (𝑥 + 3) (𝑥 – 4) </div>
+                    <div class="option" data-correct="false">D.  (𝑥 – 3) (𝑥 + 4) </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A great question!
+
+To factorize the expression x^2 - 7x + 12, we need to find two numbers whose product is 12 and whose sum is -7. These numbers are -3 and -4.
+
+Let's write the expression as:
+
+x^2 - 7x + 12 = (x - 3)(x - 4)
+
+So, the factored form is:
+
+(x - 3)(x - 4)
+
+This is the simplest form of the expression, which can be easily solved by finding the values of x that make the expression equal to zero.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>29:  Simplify 8𝑥&#178;y X <sup>3𝑥y</sup>&frasl;<sub>6𝑥y&#178;</sub></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 𝑥&#178;y</div>
+                    <div class="option" data-correct="false">B. 4𝑥</div>
+                    <div class="option" data-correct="true">C. 4𝑥&#178;</div>
+                    <div class="option" data-correct="false">D. 4𝑥&#178;y</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A nice challenge!
+
+To simplify this expression, we need to combine the terms that have the same variables and exponents. Let's break it down:
+
+8x²y × x³y / 6x²y²
+
+First, we can cancel out the common factors:
+
+x²y / 6x²y² = 1 / 6x
+
+Now, we can combine the remaining terms:
+
+8x²y × x³y = 8x⁵y²
+
+So, the simplified expression is:
+
+8x⁵y² / 6x
+
+To simplify further, we can divide the numerator and denominator by their greatest common factor (GCF), which is 2x:
+
+4x² 
+
+And that's the simplified expression!</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>30: Simplify <sup>(𝑥-y)</sup>&frasl;<sub>2</sub> - <sup>(𝑥+1)</sup>&frasl;<sub>3</sub></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>5𝑥-7</sup>&frasl;<sub>6</sub></div>
+                    <div class="option" data-correct="false">B. <sup>5𝑥-11</sup>&frasl;<sub>6</sub></div>
+                    <div class="option" data-correct="false">C. <sup>𝑥-7</sup>&frasl;<sub>6</sub></div>
+                    <div class="option" data-correct="true">D. <sup>𝑥-y-2</sup>&frasl;<sub>6</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> A nice simplification problem!
+
+To simplify this expression, we can start by finding the common denominator, which is 6 (the least common multiple of 2 and 3). Let's multiply the numerator and denominator of each fraction by the necessary values:
+
+(𝑥-y)⁄2 = (3/2)(𝑥-y)⁄2 = (3/2)(𝑥-y) × (3/3)⁄2 = (3𝑥-3y)/6
+
+(𝑥+1)⁄3 = (2/3)(𝑥+1)⁄3 = (2/3)(𝑥+1) × (2/2)⁄3 = (2𝑥+2)/6
+
+Now, we can simplify the expression by subtracting the two fractions:
+
+(3𝑥-3y)/6 - (2𝑥+2)/6 = (3𝑥-3y - 2𝑥-2)/6
+
+Combine like terms:
+
+(𝑥-y-2)/6 </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>31:  Solve the equation <sup>𝑥</sup>&frasl;<sub>3</sub> + <sup>𝑥</sup>&frasl;<sub>2</sub> = <sup>5</sup>&frasl;<sub>2</sub></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. -3</div>
+                    <div class="option" data-correct="false">B. <sup>1</sup>&frasl;<sub>2</sub></div>
+                    <div class="option" data-correct="false">C. 2</div>
+                    <div class="option" data-correct="true">D. 3</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A nice equation to solve!
+
+To solve this equation, we can start by getting rid of the fractions. We can do this by multiplying both sides of the equation by 6, which is the least common multiple of 2 and 3:
+
+(𝑥⁄3) × 6 + (𝑥⁄2) × 6 = (5⁄2) × 6
+
+This simplifies to:
+
+2𝑥 + 3𝑥 = 15
+
+Combine like terms:
+
+5𝑥 = 15
+
+Divide both sides by 5:
+
+𝑥 = 15⁄5
+
+𝑥 = 3
+
+So, the solution to the equation is 𝑥 = 3</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>32:   Simplify (7𝑥 - 4) – (4𝑥 - 12). </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 3𝑥 - 16</div>
+                    <div class="option" data-correct="true">B. 3𝑥 + 8</div>
+                    <div class="option" data-correct="false">C. 3𝑥 -8</div>
+                    <div class="option" data-correct="false">D. 3𝑥 - 4</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A nice simplification problem!
+
+To simplify this expression, we can start by combining the like terms:
+
+(7𝑥 - 4) - (4𝑥 - 12) = ?
+
+First, let's distribute the minus sign:
+
+7𝑥 - 4 - 4𝑥 + 12
+
+Now, let's combine the like terms:
+
+(7𝑥 - 4𝑥) + (12 - 4)
+
+Combine the like terms:
+
+3𝑥 + 8</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>33:  Solve the simultaneous equations: 2𝑥 + y = 4, 3𝑥 – y = 14</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. . 𝑥 = -1, y = 2</div>
+                    <div class="option" data-correct="false">B.  𝑥 = 1, y = -2</div>
+                    <div class="option" data-correct="true">C. . 𝑥 = 18/5, y =-16/5</div>
+                    <div class="option" data-correct="false">D.  𝑥 = 2, y = 2</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's break it down step by step:
+
+**Step 1: Subtract 2x from both sides of the first equation**
+
+y = 4 - 2x
+
+**Step 2: Replace y with 4 - 2x in each equation**
+
+The first equation becomes:
+
+2x + (4 - 2x) = 4
+
+Simplifying:
+
+2x + 4 - 2x = 4
+4 = 4
+
+This equation is true for all values of x, so we can ignore it for now.
+
+The second equation becomes:
+
+3x - (4 - 2x) = 14
+
+Expanding and simplifying:
+
+3x - 4 + 2x = 14
+5x - 4 = 14
+
+**Step 3: Add 4 to both sides of the equation**
+
+5x - 4 + 4 = 14 + 4
+5x = 18
+
+**Step 4: Solve for x**
+
+5x = 18
+x = 18/5
+x = 18/5
+
+**Step 5: Substitute x back into one of the original equations to solve for y**
+
+We'll substitute x back into the original equation (y = 4 - 2x):
+
+y = 4 - 2(18/5)
+
+Simplifying:
+
+y = 4 - 36/5
+y = (20 - 36)/5
+y = -16/5
+
+**And there you have it!**
+
+The solution to the simultaneous equations is:
+
+x = 18/5
+y = -16/5</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+             <p>34:    In the diagram below, find the largest angle<br><img src="6.png" alt="Math Image"></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 60&#176;</div>
+                    <div class="option" data-correct="true">B. 90&#176;</div>
+                    <div class="option" data-correct="false">C. 120&#176;</div>
+                    <div class="option" data-correct="false">D. 180&#176;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">B</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+             <p>35:   One of the following is a line of symmetry of a circle  </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Arc</div>
+                    <div class="option" data-correct="false">B. Circumference</div>
+                    <div class="option" data-correct="true">C. Diameter</div>
+                    <div class="option" data-correct="false">D. Radius</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A circle!
+
+In this case, the line of symmetry is the **diameter** of the circle.
+
+A diameter is a chord that passes through the center of the circle and has its endpoints on the circle. It is a line of symmetry because it divides the circle into two identical halves.
+
+When you draw a line of symmetry through the center of a circle, it creates two congruent halves, and any shape or figure drawn on one half will be mirrored on the other half.</div>
+            </div>
+         <div id="quiz">
+            <div class="question"> 
+            <div id="quiz">
+            <div class="question">
+                <p>36: Find the perimeter of the unshaded portion in the figure below<br><img src="7.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  23cm</div>
+                    <div class="option" data-correct="false">B. 22cm</div>
+                    <div class="option" data-correct="true">C. 38cm</div>
+                    <div class="option" data-correct="false">D. 17cm</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's break it down step by step:
+
+**Step 1: Identify the parts of the unshaded portion**
+
+We have a rectangle with dimensions 5 cm (length) and 4 cm (breadth), and a square with side length 5 cm.
+
+**Step 2: Find the perimeter of the rectangle**
+
+The perimeter of a rectangle is given by the formula: Perimeter = 2(length + breadth)
+
+Plugging in the values, we get:
+
+Perimeter = 2(5 cm + 4 cm) = 2(9 cm) = 18 cm
+
+**Step 3: Find the perimeter of the square**
+
+The perimeter of a square is given by the formula: Perimeter = 4(side length)
+
+Plugging in the value, we get:
+
+Perimeter = 4(5 cm) = 20 cm
+
+**Step 4: Find the perimeter of the unshaded portion**
+
+The perimeter of the unshaded portion is the sum of the perimeters of the rectangle and the square:
+
+Perimeter = Perimeter of rectangle + Perimeter of square
+= 18 cm + 20 cm
+= 38 cm
+
+So, the perimeter of the unshaded portion is indeed **38 cm**!</div>
+            </div>
+         </div> 
+                <p>37: Find the circumference of a circle whose diameter is 28cm. (Take π= <sup>22</sup>&frasl;<sub>7</sub>).
+                <div class="options">
+                    <div class="option" data-correct="false">A.  44cm</div>
+                    <div class="option" data-correct="true">B.  88cm</div>
+                    <div class="option" data-correct="false">C. 176cm</div>
+                    <div class="option" data-correct="false">D. 308cm</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+C = π × d
+
+And using the approximation π = 22/7, we get:
+
+C = (22/7) × 28
+
+= 616/7
+
+= 88 cm
+
+So, the circumference of the circle is approximately 88 cm. </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">  
+                <p>38: 	The diameter of a bicycle wheel is 98cm. Find the distance moved by the wheel in 3 revolutions. (Take π= <sup>22</sup>&frasl;<sub>7</sub>)</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 147cm</div>
+                    <div class="option" data-correct="true">B. 924cm</div>
+                    <div class="option" data-correct="false">C. 294</div>
+                    <div class="option" data-correct="false">D. 364cm</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+
+C = π × d
+
+With the approximation π = 22/7, you got:
+
+C = (22/7) × 98
+= 2156/7
+= 308 cm
+
+And then, you multiplied the circumference by the number of revolutions to find the distance:
+
+Distance = Circumference × Number of Revolutions
+= 308 cm × 3
+= 924 cm</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>39:  The length of a drawn stick is 3.0cm and the length of the real stick is 15cm. Find the scale.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1:9</div>
+                    <div class="option" data-correct="false">B. 3:4</div>
+                    <div class="option" data-correct="true">C. 1:5</div>
+                    <div class="option" data-correct="false">D. 1:3</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+The scale is the ratio of the length of the drawn stick to the length of the real stick. To find the scale, we can divide the length of the drawn stick by the length of the real stick:
+
+Scale = Length of drawn stick / Length of real stick
+= 3.0 cm / 15 cm
+= 1/5 </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+           <p>40:  Calculate the area of a parallelogram whose height is 14cm and base is 6cm.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 20cm&#178;</div>
+                    <div class="option" data-correct="false">B. 42cm&#178;</div>
+                    <div class="option" data-correct="true">C. 84cm&#178; </div>
+                    <div class="option" data-correct="false">D. 96cm&#178;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+
+The area of a parallelogram is found by multiplying the base by the height. In this case, the base is 6cm and the height is 14cm, so:
+
+Area = Base × Height
+= 6 cm × 14 cm
+= 84 cm²
+
+So, the area of the parallelogram is 84 square centimeters.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>41:  Calculate (p + s) in the diagram below.<br><img src="8.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 35&#176;</div>
+                    <div class="option" data-correct="false">B. 40&#176;</div>
+                    <div class="option" data-correct="true">C. 150&#176;</div>
+                    <div class="option" data-correct="false">D. 110&#176;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">C</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>42:  An equilateral triangle of sides 12cm each has the same perimeter as a square. Find the area of the square.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 9cm&#178;</div>
+                    <div class="option" data-correct="true">B. 81cm&#178;</div>
+                    <div class="option" data-correct="false">C. 24cm&#178;</div>
+                    <div class="option" data-correct="false">D. 36m&#178;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+
+Since the equilateral triangle has the same perimeter as the square, we can set up an equation based on the perimeter of each shape:
+
+Perimeter of equilateral triangle = Perimeter of square
+
+The perimeter of an equilateral triangle is found by multiplying the side length by 3:
+
+Perimeter of equilateral triangle = 3 × side length
+= 3 × 12 cm
+= 36 cm
+
+The perimeter of a square is found by multiplying the side length by 4:
+
+Perimeter of square = 4 × side length
+= x (since we don't know the side length yet)
+
+Now, we can set up the equation:
+
+36 cm = 4 × side length
+x = 36 cm / 4
+x = 9 cm
+
+So, the side length of the square is 9 cm. To find the area of the square, we multiply the side length by itself:
+
+Area of square = side length × side length
+= 9 cm × 9 cm
+= 81 cm²</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>43:  What is the volume of a cuboid tank whose edges measures 5.2m each? </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 5.2m&#179;</div>
+                    <div class="option" data-correct="false">B. 27.0m&#179;</div>
+                    <div class="option" data-correct="false">C. 77.2m&#179;</div>
+                    <div class="option" data-correct="true">D. 140.6m&#179;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Since the edges of the cuboid tank are all equal (5.2m each), we can conclude that it is a cube.
+
+The formula for the volume of a cube (or cuboid) is:
+
+Volume = Edge length × Edge length × Edge length
+= 5.2m × 5.2m × 5.2m
+= 140.8 m³
+
+Therefore, the volume of the cuboid tank is 140.8 cubic meters.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>44:  How many cubic sugar of edge 2cm can be fitted into a cuboid container of dimension 4cm by 6cm by 10cm?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 30</div>
+                    <div class="option" data-correct="false">B. 22</div>
+                    <div class="option" data-correct="false">C. 20</div>
+                    <div class="option" data-correct="false">D. 12</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> Find the volume of the cuboid container:
+Volume of container = Length × Width × Height
+= 4cm × 6cm × 10cm
+= 240 cubic centimeters
+
+Find the volume of a cube of edge 2cm (cubic sugar):
+Volume of cube = Edge length × Edge length × Edge length
+= 2cm × 2cm × 2cm
+= 8 cubic centimeters
+
+To find out how many cubes of edge 2cm can fit into the container, we need to divide the volume of the container by the volume of a single cube:
+Number of cubes = Volume of container ÷ Volume of cube
+= 240 cubic centimeters ÷ 8 cubic centimeters
+= 30</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>45:  In the diagram below, calculate the value of y + x.<br><img src="9.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 52&#176;</div>
+                    <div class="option" data-correct="true">B.168&#176;</div>
+                    <div class="option" data-correct="false">C. 116&#176;</div>
+                    <div class="option" data-correct="false">D. 128&#176;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">By subtracting y from 180°, you found the value of x:
+
+x = 180° - 64°
+= 116° </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>46:  In the diagram below, find the positive difference between a and b.<br><img src="10.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 0</div>
+                    <div class="option" data-correct="false">B.64&#176;</div>
+                    <div class="option" data-correct="false">C. 116&#176;</div>
+                    <div class="option" data-correct="false">D. 128&#176;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">to find the positive difference between a and b, you used the absolute value notation, which is a great way to handle the problem. The absolute value of a difference is always non-negative, and it gives you the magnitude of the difference without considering its sign.
+
+In this case, the positive difference between a and b is:
+
+|a - b| = |64° - 64°| = |0°| = 0°</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>47: Calculate the volume of a cylinder of height 14cm and radius 3cm.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A.  396cm&#179;</div>
+                    <div class="option" data-correct="false">B. 264cm&#179;</div>
+                    <div class="option" data-correct="false">C. 198cm&#179;</div>
+                    <div class="option" data-correct="false">D. 172cm&#179;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">V = πr²h
+
+With the given values, you substituted r = 3 cm and h = 14 cm, and simplified the expression:
+
+V = π(3 cm)²(14 cm)
+= π(9 cm²)(14 cm)
+= 126π cm³
+
+Then, you approximated π as 3.14159 and multiplied:
+
+V ≈ 126 × 3.14159 cm³
+= 395.97 cm³
+= 396cm&#179;</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>48:  Calculate the value of x in the diagram below<br><img src="11.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 120&#176;</div>
+                    <div class="option" data-correct="false">B. 100&#176;</div>
+                    <div class="option" data-correct="false">C. 20&#176;</div>
+                    <div class="option" data-correct="true">D. 80&#176;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">D</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>49:   Find the value of x in the diagram below<br><img src="11.png" alt="Math Image"></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 4m</div>
+                    <div class="option" data-correct="false">B. 6m</div>
+                    <div class="option" data-correct="true">C. 16m</div>
+                    <div class="option" data-correct="false">D. 12m</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> C</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>50: A ladder 8m long leans against a vertical wall, making an angle of 60&#176; with the horizontal ground. What is the distance between the foot of the ladder and the wall.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 4m</div>
+                    <div class="option" data-correct="false">B. 6m</div>
+                    <div class="option" data-correct="false">C. 8m</div>
+                    <div class="option" data-correct="false">D. 10m</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> steps:
+
+1. Formulate:
+
+8 × cos⁡60∘
+
+2. Rewrite the angle as a sum or difference using the period of sine or cosine function:
+
+8 cos⁡(240∘+360∘)
+
+3. Simplify the expression using the period of trigonometric function:
+
+8 cos⁡(240∘)
+
+4. Rewrite the angle as a sum or difference with its reference angle:
+
+8 cos⁡(180∘+60∘)
+
+5. Simplify the expression using the general reduction formula:
+
+8 × (-cos⁡(60∘))
+
+6. Remove the parentheses:
+
+-8 cos⁡(60∘)
+
+7. Evaluate the expression:
+
+-8 × 1/2
+= -4</div>
+            </div>
+         </div>
+         </div>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="progress">Progress: 0/20</div>
+
+
+    <script>
+        var score = 0;
+        var progress = 0;
+
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/20");
+        });
+
+
+        $(".check-answer").click(function() {
+            $(this).siblings(".answer").removeClass("hidden");
+        });
+    </script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+<!-- button -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.footer-widget ul li {
+display: inline-block;
+float: right;
+width: 50%;
+margin-bottom: 10px;
+}
+.footer-widget ul li a:hover{
+color: darkcyan;
+}
+.footer-widget ul li a {
+color: lightblue;
+text-transform: capitalize;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+</style>
+</div>
+</div>
+<div class="footer-content pt-5 pb-5">
+<div class="row">
+
+
+
+
+<!--stop -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+<a href="x.com"><i class="fab fa-twitter"></i></i></a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">courses</a></li>
+<li><a href="#">classroom</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">blog</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+
+
+
+
+</div>
+</footer>
+</html>
