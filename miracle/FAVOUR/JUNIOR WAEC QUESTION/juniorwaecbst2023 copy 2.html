@@ -1264,9 +1264,12 @@ $(".option").click(function() {
     } else {
         $(this).parent().siblings(".check-answer").removeClass("hidden");
     }
+    // Remove the 'hidden' class from the "Check Answer" button
+    $(this).siblings(".check-answer").removeClass("hidden");
     progress++;
     $("#progress").text("Progress: " + progress + "/50");
 });
+
 
 function displayAnswer(that) {
     if (isAnimating) return;
