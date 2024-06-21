@@ -1302,19 +1302,14 @@ function displayAnswer(that) {
     typeWriter();
 }
 
-$(".question").on("click", "#subject-button", function() {
-    if (isAnimating) return;
-    var subjectName = $(this).siblings('#subject-name');
-    subjectName.toggleClass("hidden");
-    animateSubjectName(this);
+$(".check-answer").click(function() {
+    displayAnswer(this);
 });
 
-// Show more button functionality
-$(".container").on("click", "#subject-button", function() {
-    if (isAnimating) return;
-    var moreContent = $(this).siblings('#more-content');
-    moreContent.toggleClass("hidden");
-    animateMoreContent(this);
+$(".question").on("click", "#subject-button", function() {
+    if ($(this).siblings('#subject-name').is(':visible')) return;
+    $(this).siblings('#subject-name').removeClass('hidden');
+    animateSubjectName(this);
 });
 
 function animateSubjectName(that) {
