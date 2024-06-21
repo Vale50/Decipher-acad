@@ -1305,7 +1305,11 @@ function displayAnswer(that) {
     }
 
     typeWriter();
+
+    // Make the "Check Answer" button visible
+    $(that).removeClass('hidden');
 }
+
 
 $(".check-answer").click(function() {
     displayAnswer(this);
