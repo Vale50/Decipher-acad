@@ -1265,12 +1265,9 @@ $(".option").click(function() {
     } else {
         $(this).parent().siblings(".check-answer").removeClass("hidden");
     }
-    // Remove the 'hidden' class from the "Check Answer" button
-    $(this).siblings(".check-answer").removeClass("hidden");
     progress++;
     $("#progress").text("Progress: " + progress + "/50");
 });
-
 
 function displayAnswer(that) {
     if (isAnimating) return;
@@ -1305,40 +1302,33 @@ function displayAnswer(that) {
     }
 
     typeWriter();
-
-    // Make the "Check Answer" button visible
-    $(that).removeClass('hidden');
 }
-
 
 $(".check-answer").click(function() {
     displayAnswer(this);
 });
 
-function displayMoreContent(that) {
+$(".container").on("click", "#subject-button", function() {
     if (isAnimating) return;
-    var moreContent = $(that).siblings('#more-content');
-    var htmlContent = moreContent.html();
+    var subjectName = $(this).siblings('#subject-name');
+    subjectName.toggleClass("hidden");
+    animateSubjectName(this);
+});
+
+function animateSubjectName(that) {
+    if (isAnimating) return;
+    var subjectName = $(that).siblings('#subject-name');
+    var text = subjectName.text();
     var i = 0;
 
-    // Find the index of the end of the "more-content hidden" div
-    var endIndex = htmlContent.lastIndexOf('</div>') + 6;
-
-    moreContent.html('');
-    moreContent.removeClass('hidden');
+    subjectName.text('');
     isAnimating = true;
 
     function typeWriter() {
-        if (i < endIndex) {
-            if (htmlContent.charAt(i) === '<') {
-                var tagEnd = htmlContent.indexOf('>', i) + 1;
-                moreContent.append(htmlContent.slice(i, tagEnd));
-                i = tagEnd;
-            } else {
-                moreContent.append(htmlContent.charAt(i));
-                i++;
-            }
-            setTimeout(typeWriter, 40);
+        if (i < text.length) {
+            subjectName.text(subjectName.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 30);
         } else {
             isAnimating = false;
         }
@@ -1346,6 +1336,7 @@ function displayMoreContent(that) {
 
     typeWriter();
 }
+
 
 $(".container").on("click", "#subject-button", function() {
     displayMoreContent(this);
