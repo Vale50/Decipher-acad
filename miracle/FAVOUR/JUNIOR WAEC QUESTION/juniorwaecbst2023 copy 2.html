@@ -1306,9 +1306,10 @@ $(".check-answer").click(function() {
     displayAnswer(this);
 });
 
-$(".question").on("click", "#subject-button", function() {
-    if ($(this).siblings('#subject-name').is(':visible')) return;
-    $(this).siblings('#subject-name').removeClass('hidden');
+$(".container").on("click", "#subject-button", function() {
+    if (isAnimating) return;
+    var subjectName = $(this).siblings('#subject-name');
+    subjectName.toggleClass("hidden");
     animateSubjectName(this);
 });
 
@@ -1324,36 +1325,6 @@ function animateSubjectName(that) {
     function typeWriter() {
         if (i < text.length) {
             subjectName.text(subjectName.text() + text.charAt(i));
-            i++;
-            setTimeout(typeWriter, 30);
-        } else {
-            isAnimating = false;
-        }
-    }
-
-    typeWriter();
-}
-
-// Show more button functionality
-$("#subject-button").click(function() {
-    if (isAnimating) return;
-    var moreContent = $(this).siblings('#more-content');
-    moreContent.toggleClass("hidden");
-    animateMoreContent(this);
-});
-
-function animateMoreContent(that) {
-    if (isAnimating) return;
-    var moreContent = $(that).siblings('#more-content');
-    var text = moreContent.text();
-    var i = 0;
-
-    moreContent.text('');
-    isAnimating = true;
-
-    function typeWriter() {
-        if (i < text.length) {
-            moreContent.text(moreContent.text() + text.charAt(i));
             i++;
             setTimeout(typeWriter, 30);
         } else {
