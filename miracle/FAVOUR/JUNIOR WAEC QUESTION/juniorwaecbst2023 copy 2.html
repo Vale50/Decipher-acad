@@ -1262,8 +1262,6 @@ $(".option").click(function() {
     if ($(this).data("correct")) {
         score++;
         $("#score").text("Score: " + score);
-    } else {
-        $(this).parent().siblings(".check-answer").removeClass("hidden");
     }
     progress++;
     $("#progress").text("Progress: " + progress + "/50");
