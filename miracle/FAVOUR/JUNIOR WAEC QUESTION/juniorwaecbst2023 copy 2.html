@@ -1271,7 +1271,6 @@ $(".option").click(function() {
     $("#progress").text("Progress: " + progress + "/50");
 });
 
-
 function displayAnswer(that) {
     if (isAnimating) return;
     var container = $(that).siblings('.container');
@@ -1305,11 +1304,7 @@ function displayAnswer(that) {
     }
 
     typeWriter();
-
-    // Make the "Check Answer" button visible
-    $(that).removeClass('hidden');
 }
-
 
 $(".check-answer").click(function() {
     displayAnswer(this);
@@ -1346,6 +1341,7 @@ function displayMoreContent(that) {
 
     typeWriter();
 }
+
 
 $(".container").on("click", "#subject-button", function() {
     displayMoreContent(this);
