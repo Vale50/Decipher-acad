@@ -1248,7 +1248,7 @@ And lastly,
 
 
 <script>
- var score = 0;
+  var score = 0;
 var progress = 0;
 var isAnimating = false;
 
@@ -1262,10 +1262,11 @@ $(".option").click(function() {
     if ($(this).data("correct")) {
         score++;
         $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
     }
     progress++;
     $("#progress").text("Progress: " + progress + "/50");
-    $(this).parent().siblings(".check-answer").removeClass("hidden");
 });
 
 function displayAnswer(that) {
@@ -1309,14 +1310,14 @@ $(".check-answer").click(function() {
 
 $(".container").on("click", "#subject-button", function() {
     if (isAnimating) return;
-    var moreContent = $(this).siblings('#more-content');
-    moreContent.toggleClass("hidden");
+    var subjectName = $(this).siblings('#subject-name');
+    subjectName.toggleClass("hidden");
     animateSubjectName(this);
 });
 
 function animateSubjectName(that) {
     if (isAnimating) return;
-    var subjectName = $(that).siblings('#more-content').children('#subject-name');
+    var subjectName = $(that).siblings('#subject-name');
     var text = subjectName.text();
     var i = 0;
 
