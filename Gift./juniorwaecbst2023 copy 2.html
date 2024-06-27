@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+.answered {
+    background-color: #f0f0f0; /* Light grey background for answered questions */
+}
+
+.selected {
+    font-weight: bold; /* Bold font for selected option */
+}
+
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+#subject-button.hidden, .container {
+    border: 1px solid white;
+    background-color: #34db95;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px #a7a7a7,
+                -8px -8px 15px #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+<style>
+
+
+    *  {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+/* Neumorphism effect for divs */
+.neu-div {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 8px 8px 15px #a7a7a7,
+             -8px -8px 15px #ffffff;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 600px;
+}
+
+/* Apply neumorphism effect to specific elements */
+#quiz, .question, .options {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 8px 8px 15px #a7a7a7,
+             -8px -8px 15px #ffffff;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 600px;
+}
+.button{
+  display: inline-block;
+  border-radius: 50px;
+  padding: 9px 14px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #12335b;
+  border: none;
+  box-shadow:  20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff;
+}
+
+.option {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 5px 5px 10px #a7a7a7,
+             -5px -5px 10px #ffffff;
+ padding: 10px;
+ margin: 10px;
+ cursor: pointer;
+ transition: 0.3s ease;
+}
+
+.option:hover {
+ box-shadow: inset 5px 5px 10px #a7a7a7,
+             inset -5px -5px 10px #ffffff;
+}
+
+.option:active {
+ box-shadow: inset 2px 2px 5px #a7a7a7,
+             inset -2px -2px 5px #ffffff;
+}
+#quiz{
+ background-color: #f9f9f9;
+ padding: 20px;
+ border-radius: 10px;
+ margin: 20px auto;
+ max-width: 600px;
+ text-align: center;
+}
+
+
+#question {
+ font-size: 18px;
+ margin-bottom: 20px;
+}
+
+
+.option {
+ border: 1px solid #ccc;
+ padding: 10px;
+ margin: 10px;
+ cursor: pointer;
+}
+
+
+#answer {
+ margin-top: 20px;
+}
+.answer{
+ border: 1px solid blue;
+ background-color: #34db95;
+ margin: 10px;
+ cursor: pointer;
+         outline: none;
+         color: #333;
+         padding: 10px 20px;
+         border-radius: 10px;
+         box-shadow: 8px 8px 15px #a7a7a7,
+                     -8px -8px 15px #ffffff;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s ease;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+ font-size: 16px;
+ margin-top: 20px;
+}
+
+
+#progressBar {
+ width: 100%;
+ height: 20px;
+ margin-top: 10px;
+}
+    
+     .correct { background-color: green; }
+     .incorrect { background-color: red; }
+     .hidden { display: none; }
+     /* Neumorphism effect for buttons */
+     .neu-button {
+         border: none;
+         outline: none;
+         background-color: #e0e0e0;
+         color: #333;
+         padding: 10px 20px;
+         border-radius: 10px;
+         box-shadow: 8px 8px 15px #a7a7a7,
+                     -8px -8px 15px #ffffff;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s ease;
+     }
+
+     .neu-button:hover {
+         box-shadow: inset 8px 8px 15px #a7a7a7,
+                     inset -8px -8px 15px #ffffff;
+     }
+
+     .neu-button:active {
+         box-shadow: inset 4px 4px 10px #a7a7a7,
+                     inset -4px -4px 10px #ffffff;
+     }
+     .question-number {
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+ </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>1.</strong></div>
+
+<!—-your instructions goes here—>
+Example: 
+<p>INSTRUCTION: Choose from the options lettered A-D, the one that best answers each of the following questions</p>
+<p> Which of these is a solid matter?</p>
+<div class="options">
+    <div class="option" data-correct="true">A. Aluminum	</div>
+    <div class="option" data-correct="false">B. Alcohol</div>
+    <div class="option" data-correct="false">C. Kerosine</div>
+    <div class="option" data-correct="false">D. Petroleum</div>
+</div>
+<button class="check-answer hidden button">Check Answer</button>
+        <div class="container hidden">
+            <div class="answer hidden"> The correct answer is Option A. Aluminum
+                <div style="width: 25vw; height: auto;">
+                    <img src="/miracle/MIRACLE 2/SENIOR WAEC QUESTIONS/matter1.jpg
+                    " style="width: 100%; height: auto;"> </img>
+        </div>
+    </br>
+</br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>   
+    <div id="more-content" class="hidden">
+    </br>
+    <div id="subject-name" class="hidden"> Aluminum is a metal that remains solid under normal conditions, including room temperature.</div></br>
+    On the other hand, 
+     <div style="width: 25vw; height: auto;">
+        <img src="/miracle/MIRACLE 2/SENIOR WAEC QUESTIONS/matter4.jpg
+        " style="width: 100%; height: auto;"> </img></br>
+        
+        Alcohol is a liquid at room temperature. 
+    It does not have a fixed shape but takes the shape of its container, which is a characteristic of liquids, not solids.
+    </div></br>
+    Also,
+    <div style="width: 25vw; height: auto;">
+        <img src="/miracle/MIRACLE 2/SENIOR WAEC QUESTIONS/matter3.jpg
+        " style="width: 100%; height: auto;"> </img>
+    </div>
+    Kerosene is a type of hydrocarbon that is commonly used as a fuel. At room temperature and pressure, kerosene is a liquid, not a solid.
+</br>
+And lastly,
+    <div style="width: 25vw; height: auto;">
+        <img src="/miracle/MIRACLE 2/SENIOR WAEC QUESTIONS/matter2.jpg
+        " style="width: 100%; height: auto;"> </img>
+    </div>
+    Petroleum is a naturally occurring liquid found in rock formations. It consists of a complex mixture of hydrocarbons. Like alcohol and kerosene, petroleum is a liquid at room temperature.
+
+    </div>
+        
+    </div>
+        
+        </div>
+</div>
+</div>
+
+    <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>2.</strong></div>
+
+            <p>The S.I unit of force is....</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Ampere.	</div>
+                <div class="option" data-correct="false">B. kilogram</div>
+                <div class="option" data-correct="false">C. Metres per second</div>
+                <div class="option" data-correct="true">D. Newton</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+        <div class="container hidden">
+            <div class="answer hidden"> The correct answer is Option D. Newton.
+                <div style="width: 25vw; height: auto;">
+                    <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/newton.jpeg
+                    " style="width: 100%; height: auto;"> </img>
+        </div>
+    </br>
+</br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>   
+    <div id="more-content" class="hidden">
+    </br>
+    <div id="subject-name" class="hidden"> Newton is the International System of Units (S.I) unit of force. It is defined as the force necessary to accelerate a one-kilogram mass by one meter per second squared.</div></br>
+    On the other hand, 
+     <div style="width: 25vw; height: auto;">
+        <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/mass.jpeg
+        " style="width: 100%; height: auto;"> </img></br>
+        
+        Option A. Ampere is incorrect because an ampere, often shortened to “amp,” is the base unit of electric current in the International System of Units. It is not related to force.
+    </div></br>
+    Also,
+    <div style="width: 25vw; height: auto;">
+        <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/current.jpeg
+        " style="width: 100%; height: auto;"> </img>
+    </div>
+    Option B. Kilogram is also incorrect. A kilogram is the base unit of mass in the International System of Units. While mass is related to force (via Newton’s second law of motion), it is not a unit of force.</br>
+And lastly,
+    <div style="width: 25vw; height: auto;">
+        <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/speed.jpeg
+        " style="width: 100%; height: auto;"> </img>
+    </div>
+    Option C. Metres per second is incorrect as well. Metres per second is a unit of speed, not force. It describes how fast an object is moving, but not the force acting on it.
+    </div>
+        
+    </div>
+        
+        </div>
+</div>
+</div>
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>3.</strong></div>
+
+            <p>Overgrazing of grassland by cattle exposes the land to?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. Agriculture.</div>
+                <div class="option" data-correct="true">B. Erosion</div>
+                <div class="option" data-correct="false">C. Sheets.</div>
+                <div class="option" data-correct="false">D. Tars</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is b. erosion </div>
+        </div>
+
+
+      </div>
+   
+       <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>4.</strong></div>
+
+            <p>A part of the plant used as medicine is called....</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. herb. </div>
+                <div class="option" data-correct="false">B. onga. </div>
+                <div class="option" data-correct="false">C. powder</div>
+                <div class="option" data-correct="false">D. vegetable</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is A. herbs</div>
+        </div>
+   
+
+
+       </div>
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>5.</strong></div>
+
+            <p>Continuity in family is brought about by....</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. love</div>
+                <div class="option" data-correct="true">B. marriage</div>
+                <div class="option" data-correct="false">C. natural disaster</div>
+                <div class="option" data-correct="false">D. tradition</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is B. marriage </div>
+        </div>
+   
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>6.</strong></div>
+
+            <p>A piece of iron that can also act as a magnet is also called a...</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. bar</div>
+                <div class="option" data-correct="false">B. brass</div>
+                <div class="option" data-correct="false">C. copper</div>
+                <div class="option" data-correct="true">D. lode stone.</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is d.lode stone </div>
+        </div>
+   
+      </div>
+      
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>7.</strong></div>
+
+            <p>WThe process by which liquid escapes into the atmosphere is called....</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. bubbles</div>
+                <div class="option" data-correct="false">B. boiling point</div>
+                <div class="option" data-correct="tuee">C. evaporation</div>
+                <div class="option" data-correct="false">D. vaporization</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">The correct answer is C.evaporation </div>
+        </div>
+    </div>
+ 
+         <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>8.</strong></div>
+
+                <p>What is the full meaning of NDLEA?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Nigeria Dealer Law and Enlargement Agency</div>
+                    <div class="option" data-correct="false">B. National Daily Law and Enforcement</div>
+                    <div class="option" data-correct="false">C. National Daily Law and Effectiveness Agency</div>
+                    <div class="option" data-correct="true">D. National Drug Law and Enforcement Agency</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is D.. National Drug law and Enforcement Agency </div>
+            </div>
+       
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>9.</strong></div>
+
+                <p>When a person is running, energy is converted from chemical energy to....</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. kinetic energy.	</div>
+                    <div class="option" data-correct="false">B. light energy</div>
+                    <div class="option" data-correct="false">C. sound energy</div>
+                    <div class="option" data-correct="false">D. solarenergy.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is A. kinetic energy</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>10.</strong></div>
+
+                <p> .....is the gradual transformation of a terrestrial habitat into a desert</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Deforestation </div>
+                    <div class="option" data-correct="true">B. Desertification </div>
+                    <div class="option" data-correct="false">C. Overgrazing </div>
+                    <div class="option" data-correct="false">D. Encroachment</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is B. desertification</div>
+            </div>
+        </div>
+          <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>11.</strong></div>
+
+                <p>An infant growing milk teeth is a....change.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. permanent</div>
+                    <div class="option" data-correct="true">B. strong</div>
+                    <div class="option" data-correct="false">C. temporary</div>
+                    <div class="option" data-correct="false">D. weak</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>12.</strong></div>
+
+                <p>The three ossicles are found in the.... layer.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. inner </div>
+                    <div class="option" data-correct="true">B. middle </div>
+                    <div class="option" data-correct="false">C. outer </div>
+                    <div class="option" data-correct="false">D. outside</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>.</strong></div>
+
+                <p>The fraction of crude oil used for tarring of roads is ....</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. bitumen</div>
+                    <div class="option" data-correct="true">B. engine oil. </div>
+                    <div class="option" data-correct="false">C. kerosene</div>
+                    <div class="option" data-correct="false">D. lubricating oil.</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>14.</strong></div>
+
+                <p>The following are vitamins EXCEPT....</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. vitamin A.</div>
+                    <div class="option" data-correct="true">B. vitamin B.</div>
+                    <div class="option" data-correct="false">C. vitamin C</div>
+                    <div class="option" data-correct="false">D. vitamin F</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>15.</strong></div>
+
+                <p>A fuse usually.... when there is excess current</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. freezes</div>
+                    <div class="option" data-correct="true">B. melts</div>
+                    <div class="option" data-correct="false">C. shocks</div>
+                    <div class="option" data-correct="false">D. show red light</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>16.</strong></div>
+
+                <p>The formula for calculating kinetic energy is K.E =</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1 x 2MV </div>
+                    <div class="option" data-correct="true">B. 1 x 2MV<sup>2 </div>
+                    <div class="option" data-correct="false">C. ½ MV D</div>
+                    <div class="option" data-correct="false">D. ½ MV<sup>2</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>17.</strong></div>
+
+                <p> ...... is the increase in size of an organism due to increase in number of body cells</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Growth</div>
+                    <div class="option" data-correct="true">B. Enlargement</div>
+                    <div class="option" data-correct="false">C. Childhood</div>
+                    <div class="option" data-correct="false">D. Mammary gland</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is </div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>18.</strong></div>
+
+                <p>What is the capital of Japan?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. Beijing</div>
+                    <div class="option" data-correct="false">B. Seoul</div>
+                    <div class="option" data-correct="true">C. Tokyo</div>
+                    <div class="option" data-correct="false">D. Bangkok</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The correct answer is C. Tokyo</div>
+            </div>
+         </div>
+    </div> 
+    
+    <p>Which of these is a solid matter?</p>
+    <div class="options">
+        <div class="option" data-correct="true">A. Aluminum	</div>
+        <div class="option" data-correct="false">B. Alcohol</div>
+        <div class="option" data-correct="false">C. Kerosine</div>
+        <div class="option" data-correct="false">D. Petroleum</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is A. Aluminum</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>2:The S.I unit of force is....</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. ampere.	</div>
+        <div class="option" data-correct="true">B. kilogram</div>
+        <div class="option" data-correct="false">C.metres per second</div>
+        <div class="option" data-correct="false">D. newton</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is D. Newton</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>3: Overgrazing of grassland by cattle exposes the land to?</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. agriculture.</div>
+        <div class="option" data-correct="true">B. erosion</div>
+        <div class="option" data-correct="false">C. sheets.</div>
+        <div class="option" data-correct="false">D. tars</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is b. erosion </div>
+</div>
+
+
+</div>
+
+<div id="quiz">
+<div class="question">
+    <p>4:A part of the plant used as medicine is called....</p>
+    <div class="options">
+        <div class="option" data-correct="true">A. herb. </div>
+        <div class="option" data-correct="false">B. onga. </div>
+        <div class="option" data-correct="false">C. powder</div>
+        <div class="option" data-correct="false">D. vegetable</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is A. herbs</div>
+</div>
+
+
+
+</div>
+<div id="quiz">
+<div class="question">
+    <p>5:Continuity in family is brought about by....</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. love</div>
+        <div class="option" data-correct="true">B. marriage</div>
+        <div class="option" data-correct="false">C. natural disaster</div>
+        <div class="option" data-correct="false">D. tradition</div>
+    </div>
+    <button class="check-answer hidden">B.marriageCheck Answer</button>
+    <div class="answer hidden">The correct answer is </div>
+</div>
+
+<div id="quiz">
+<div class="question">
+    <p>6:A piece of iron that can also act as a magnet is also called a...</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. bar</div>
+        <div class="option" data-correct="false">B. brass</div>
+        <div class="option" data-correct="false">C. copper</div>
+        <div class="option" data-correct="true">D. lode stone.</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is d.lode stone </div>
+</div>
+
+</div>
+<div class="question">
+    <p>7: WThe process by which liquid escapes into the atmosphere is called....</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. bubbles</div>
+        <div class="option" data-correct="false">B. boiling point</div>
+        <div class="option" data-correct="tuee">C. evaporation</div>
+        <div class="option" data-correct="false">D. vaporization</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is C.evaporation </div>
+</div>
+
+ <div id="quiz">
+    <div class="question">
+        <p>8: What is the full meaning of NDLEA?</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. Nigeria Dealer Law and Enlargement Agency</div>
+            <div class="option" data-correct="false">B. National Daily Law and Enforcement</div>
+            <div class="option" data-correct="false">C. National Daily Law and Effectiveness Agency</div>
+            <div class="option" data-correct="true">D. National Drug Law and Enforcement Agency</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is D.. National Drug law and Enforcement Agency </div>
+    </div>
+
+ </div>
+<div id="quiz">
+    <div class="question">
+        <p>9: 	When a person is running, energy is converted from chemical energy to....</p>
+        <div class="options">
+            <div class="option" data-correct="true">A. kinetic energy.	</div>
+            <div class="option" data-correct="false">B. light energy</div>
+            <div class="option" data-correct="false">C. sound energy</div>
+            <div class="option" data-correct="false">D. solarenergy.</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is A. kinetic energy</div>
+    </div>
+
+</div>
+<div id="quiz">
+    <div class="question">
+        <p>10: .....is the gradual transformation of a terrestrial habitat into a desert</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. Deforestation </div>
+            <div class="option" data-correct="true">B. Desertification </div>
+            <div class="option" data-correct="false">C. Overgrazing </div>
+            <div class="option" data-correct="false">D. Encroachment</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is B. desertification</div>
+    </div>
+</div>
+  <div id="quiz">
+    <div class="question">
+        <p>11: An infant growing milk teeth is a....change.</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. permanent</div>
+            <div class="option" data-correct="false">B. strong</div>
+            <div class="option" data-correct="true">C. temporary</div>
+            <div class="option" data-correct="false">D. weak</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is C.temporary </div>
+    </div>
+  </div>
+  <div id="quiz">
+    <div class="question">
+        <p>12: The three ossicles are found in the.... layer.</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. inner </div>
+            <div class="option" data-correct="true">B. middle </div>
+            <div class="option" data-correct="false">C. outer </div>
+            <div class="option" data-correct="false">D. outside</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is B.middle </div>
+    </div>
+  </div>
+  <div id="quiz">
+    <div class="question">
+        <p>13: The fraction of crude oil used for tarring of roads is ....</p>
+        <div class="options">
+            <div class="option" data-correct="true">A. bitumen</div>
+            <div class="option" data-correct="false">B. engine oil. </div>
+            <div class="option" data-correct="false">C. kerosene</div>
+            <div class="option" data-correct="false">D. lubricating oil.</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is A.bitumen</div>
+    </div>
+  </div>
+  <div id="quiz">
+    <div class="question">
+        <p>14: The following are vitamins EXCEPT....</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. vitamin A.</div>
+            <div class="option" data-correct="false">B. vitamin B.</div>
+            <div class="option" data-correct="false">C. vitamin C</div>
+            <div class="option" data-correct="true">D. vitamin F</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is D. vitamin F </div>
+    </div>
+  </div>
+
+  <div id="quiz">
+    <div class="question">
+        <p>15: A fuse usually.... when there is excess current</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. freezes</div>
+            <div class="option" data-correct="true">B. melts</div>
+            <div class="option" data-correct="false">C. shocks</div>
+            <div class="option" data-correct="false">D. show red light</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is B.melts</div>
+    </div>
+  </div>
+<div id="quiz">
+    <div class="question">
+        <p>16: The formula for calculating kinetic energy is K.E =</p>
+        <div class="options">
+            <div class="option" data-correct="false">A. 1 x 2MV </div>
+            <div class="option" data-correct="false">B. 1 x 2MV<sup>2 </div>
+            <div class="option" data-correct="false">C. ½ MV D</div>
+            <div class="option" data-correct="true">D. ½ MV<sup>2</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is D. ½ MV<sup>2</div>
+    </div>
+</div>
+<div id="quiz">
+    <div class="question">
+        <p>17: ...... is the increase in size of an organism due to increase in number of body cells</p>
+        <div class="options">
+            <div class="option" data-correct="true">A. Growth</div>
+            <div class="option" data-correct="false">B. Enlargement</div>
+            <div class="option" data-correct="false">C. Childhood</div>
+            <div class="option" data-correct="false">D. Mammary gland</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is A. growth </div>
+    </div>
+</div>
+ <div id="quiz">
+    <div class="question">
+        <p>18:Matter can be classified into.... states </p>
+        <div class="options">
+            <div class="option" data-correct="false">A. one </div>
+            <div class="option" data-correct="false">B. two </div>
+            <div class="option" data-correct="true">C. three </div>
+            <div class="option" data-correct="false">D. four</div>
+        </div>
+        <button class="check-answer hidden">Check Answer</button>
+        <div class="answer hidden">The correct answer is C.three</div>
+    </div>
+ </div>
+</div>
+<p>19: Which of the following is used as fuel in the blast furnace?</p>
+<div class="options">
+    <div class="option" data-correct="false">A. Bitumen	</div>
+    <div class="option" data-correct="true">B. Coke</div>
+    <div class="option" data-correct="false">C. Limestone</div>
+    <div class="option" data-correct="false">D. Petrol</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. coke </div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>20:The drawing that enlarges and reduces sizes of drawing is called.... </p>
+<div class="options">
+    <div class="option" data-correct="false">A. enlarging.	</div>
+    <div class="option" data-correct="false">B. outlining</div>
+    <div class="option" data-correct="false">C.reduction</div>
+    <div class="option" data-correct="true">D. scaling</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. scaling </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>21: The major difference between plastic and rubber is called....</p>
+<div class="options">
+    <div class="option" data-correct="false">A. colour.</div>
+    <div class="option" data-correct="false">B. ductility</div>
+    <div class="option" data-correct="true">C. elasticity.</div>
+    <div class="option" data-correct="false">D. insulation</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C.elasticity </div>
+</div>
+
+
+</div>
+
+<div id="quiz">
+<div class="question">
+<p>22:Tee square is made up of the stock and....</p>
+<div class="options">
+    <div class="option" data-correct="true">A. the blade. </div>
+    <div class="option" data-correct="false">B. the bottom. </div>
+    <div class="option" data-correct="false">C. the saw</div>
+    <div class="option" data-correct="false">D. the top.</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. the blade </div>
+</div>
+
+
+
+</div>
+<div id="quiz">
+<div class="question">
+<p>23:Hack saw is used to cut....</p>
+<div class="options">
+    <div class="option" data-correct="false">A. concrete</div>
+    <div class="option" data-correct="true">B. metal</div>
+    <div class="option" data-correct="false">C. plastic</div>
+    <div class="option" data-correct="false">D. wood</div>
+</div>
+<button class="check-answer hidden">eCheck Answer</button>
+<div class="answer hidden">The correct answer is B. metal</div>
+</div>
+
+<div id="quiz">
+<div class="question">
+<p>24:The blue-print is prepared by.... </p>
+<div class="options">
+    <div class="option" data-correct="true">A. architect</div>
+    <div class="option" data-correct="false">B. bricklayer</div>
+    <div class="option" data-correct="false">C. client</div>
+    <div class="option" data-correct="false">D. surveyor.</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. architect </div>
+</div>
+
+</div>
+<div class="question">
+<p>25: 	Identify soft wood among the following</p>
+<div class="options">
+    <div class="option" data-correct="false">A. Afara </div>
+    <div class="option" data-correct="false">B. Beech </div>
+    <div class="option" data-correct="true">C. Cedar</div>
+    <div class="option" data-correct="false">D. Mansonia</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. cedar </div>
+</div>
+
+<div id="quiz">
+<div class="question">
+    <p>26: Ductility is the ability of a metal to....</p>
+    <div class="options">
+        <div class="option" data-correct="true">A.be drawn to thin wire</div>
+        <div class="option" data-correct="false">B.conduct electricity</div>
+        <div class="option" data-correct="false">C. conduct heat.</div>
+        <div class="option" data-correct="false">D. resist heat</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is A. be drawn to thin wire </div>
+</div>
+
+</div>
+<div id="quiz">
+<div class="question">
+    <p>27: 	A metal which contains iron is known as....</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. aluminum	</div>
+        <div class="option" data-correct="false">B.bronze</div>
+        <div class="option" data-correct="false">C.copper</div>
+        <div class="option" data-correct="true">D. ferrous.</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is D.ferrous</div>
+</div>
+
+</div>
+<div id="quiz">
+<div class="question">
+    <p>28: The distance round a circle is called</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. arc </div>
+        <div class="option" data-correct="false">B. chord </div>
+        <div class="option" data-correct="true">C. circumference </div>
+        <div class="option" data-correct="false">D. diameter</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is C.circumference </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>29: The normal body temperature is.....</p>
+    <div class="options">
+        <div class="option" data-correct="true">A. 30-37°C </div>
+        <div class="option" data-correct="false">B.  39°C </div>
+        <div class="option" data-correct="false">C. 49°C 	</div>
+        <div class="option" data-correct="false">D. 40.5°C</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is A. 30-37°C </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>30: The three ossicles are found in the.... layer.</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. inner </div>
+        <div class="option" data-correct="false">B. middle </div>
+        <div class="option" data-correct="true">C. outer </div>
+        <div class="option" data-correct="false">D. outside</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is C. outer</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>31:The tool used for felling tree into logs is called....</p>
+    <div class="options">
+        <div class="option" data-correct="true">A. chainsaw</div>
+        <div class="option" data-correct="false">B.chisel</div>
+        <div class="option" data-correct="false">C. digger</div>
+        <div class="option" data-correct="false">D.hacksaw.</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is A.chainsaw </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>32:The water closet is wet in....</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.bedroom.</div>
+        <div class="option" data-correct="false">B.kitchen</div>
+        <div class="option" data-correct="truee">C.restroom </div>
+        <div class="option" data-correct="false">D.sitting room </div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is C.restroom/div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>33: Whistle are useful in rescue operations to....</p>
+    <div class="options">
+        <div class="option" data-correct="true">A. alert others</div>
+        <div class="option" data-correct="true">B. make noise</div>
+        <div class="option" data-correct="false">C. play</div>
+        <div class="option" data-correct="false">D.sing </div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is A.alart others</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>34: The multiple spindle drilling is mainly used for....</p>
+    <div class="options">
+        <div class="option" data-correct="false">A. boring small holes on metal </div>
+        <div class="option" data-correct="false">B. designing lighter jobs </div>
+        <div class="option" data-correct="false">C. used for mass production of metal work</div>
+        <div class="option" data-correct="true">D. used for mass production of metal work</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer is D. used for mass production of metal work</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>35: Plastics that cannot be shaped again even if heated is called... </p>
+    <div class="options">
+        <div class="option" data-correct="true">A. thermoset</div>
+        <div class="option" data-correct="false">B.thermoplastic </div>
+        <div class="option" data-correct="false">C. thermometer</div>
+        <div class="option" data-correct="false">D.temperature</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer isA. thermoset   </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+    <p>36: Which of the gear is used to transmit motion between two parallel shaft? </p>
+    <div class="options">
+        <div class="option" data-correct="false">A. Bevel gear </div>
+        <div class="option" data-correct="false">B. Helical gear </div>
+        <div class="option" data-correct="true">C. Spur gear </div>
+        <div class="option" data-correct="false">D. Worn gear</div>
+    </div>
+    <button class="check-answer hidden">Check Answer</button>
+    <div class="answer hidden">The correct answer isC. Spur gear  </div>
+</div>
+</div>
+</div>
+
+<p>37: Using handkerchief to cover the nose when sneezing is the act of preventing the spread of.... diseases.</p>
+<div class="options">
+    <div class="option" data-correct="true">A. air-borne</div>
+    <div class="option" data-correct="false">B. contagious </div>
+    <div class="option" data-correct="false">C. insect-borne</div>
+    <div class="option" data-correct="false">D. water-borne</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. air-borne  </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>38: Beans supply the body with.... </p>
+<div class="options">
+    <div class="option" data-correct="false">A. carbohydrate </div>
+    <div class="option" data-correct="false">B. fats </div>
+    <div class="option" data-correct="false">C. minerals </div>
+    <div class="option" data-correct="true">D. protein</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. protein</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>39:  The germs of cholera attack the ....</p>
+<div class="options">
+    <div class="option" data-correct="true">A. alimentary canal</div>
+    <div class="option" data-correct="false">B. blood . </div>
+    <div class="option" data-correct="false">C. nervous system.</div>
+    <div class="option" data-correct="false">D.. salivary gland .</div>. 
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is A. alimentary canal</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>40: Which of these is an indoor recreational activity?</p>
+<div class="options">
+    <div class="option" data-correct="true">A.Jogging .</div>
+    <div class="option" data-correct="false">B. Dancing.</div>
+    <div class="option" data-correct="false">C.Bird watching</div>
+    <div class="option" data-correct="false">D.Hiking </div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. Dancing </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>41: One of the following is not a type of fracture</p>
+<div class="options">
+    <div class="option" data-correct="false">A. Complicate</div>
+    <div class="option" data-correct="false">B. Compound</div>
+    <div class="option" data-correct="false">C. Impacted</div>
+    <div class="option" data-correct="true">D.Bruised </div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D.Bruised</div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>42: Sudden irritation of the nose and throat is a sign and symptom of.... </p>
+<div class="options">
+    <div class="option" data-correct="false">A. cholera</div>
+    <div class="option" data-correct="true">B.common cold </div>
+    <div class="option" data-correct="false">C.ringworm</div>
+    <div class="option" data-correct="false">D. tetanus</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B.common cold </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>43: Table tennis is played on....</p>
+<div class="options">
+    <div class="option" data-correct="false">A. court</div>
+    <div class="option" data-correct="false">B. field</div>
+    <div class="option" data-correct="false">C. pitch</div>
+    <div class="option" data-correct="true">D. table</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is D. table </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>44:Water is needed in the following areas except.... </p>
+<div class="options">
+    <div class="option" data-correct="false">A. agriculture </div>
+    <div class="option" data-correct="false">B.  domestic affairs </div>
+    <div class="option" data-correct="true">C. ocean </div>
+    <div class="option" data-correct="false">D. transportation</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is C. ocean</div>
+</div>
+</div>
+</div>
+<p>45: 	A game played with the aid of an electronic device is called....game</p>
+<div class="options">
+<div class="option" data-correct="false">A. archery 	</div>
+<div class="option" data-correct="true">B. computer</div>
+<div class="option" data-correct="false">C. outdoor </div>
+<div class="option" data-correct="false">D. monopoly</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is  B. computer</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>46:The excessive curvature of the spine either to the left or right is....</p>
+<div class="options">
+<div class="option" data-correct="false">A. knock kneels.	</div>
+<div class="option" data-correct="false">B. kyphosis </div>
+<div class="option" data-correct="true">C.lordosis</div>
+<div class="option" data-correct="false">D. sclerosis</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer isC.lordosis </div>
+</div>
+</div>
+<div id="quiz">
+<div class="question">
+<p>47: 	Which of the following is a minor sign and symptom of HIV/AIDS?</p>
+<div class="options">
+<div class="option" data-correct="false">A. 	10% weight loss.</div>
+<div class="option" data-correct="true">B. 	One month persistent fever of 38°C</div>
+<div class="option" data-correct="false">C. One month of chronic diarrhea.</div>
+<div class="option" data-correct="false">D. 	Peripheral nervous damage</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is  B. 	One month persistent fever of 38°C</div>
+</div>
+
+
+</div>
+
+<div id="quiz">
+<div class="question">
+<p>48:Which of these is not a method of refuse disposal?</p>
+<div class="options">
+<div class="option" data-correct="false">A.Incineration . </div>
+<div class="option" data-correct="false">B. Open dump. </div>
+<div class="option" data-correct="true">C. Pit hole latrine </div>. 
+<div class="option" data-correct="false">D. Sanitary land fills</div>. 
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer isC. Pit hole latrine </div>
+</div>
+
+
+
+</div>
+<div id="quiz">
+<div class="question">
+<p>49:The data can also be seen as...</p>
+<div class="options">
+<div class="option" data-correct="false">A. information</div>
+<div class="option" data-correct="false">B. messages</div>
+<div class="option" data-correct="true">C. raw facts</div>
+<div class="option" data-correct="false">D. words</div>
+</div>
+<button class="check-answer hidden">eCheck Answer</button>
+<div class="answer hidden">The correct answer isC. raw facts </div>
+</div>
+
+<div id="quiz">
+<div class="question">
+<p>50:Which of the following is a benefit of the internet? </p>
+<div class="options">
+<div class="option" data-correct="false">A. For addiction</div>
+<div class="option" data-correct="true">B. For buying and selling </div>
+<div class="option" data-correct="false">C. For Occultism</div>
+<div class="option" data-correct="false">D. For spam.</div>
+</div>
+<button class="check-answer hidden">Check Answer</button>
+<div class="answer hidden">The correct answer is B. For buying and selling </div>
+</div>
+
+</div>
+
+
+<script>
+  var score = 0;
+var progress = 0;
+var isAnimating = false;
+
+$(".option").click(function() {
+    if ($(this).hasClass("selected")) {
+        return;
+    }
+    $(this).addClass("selected");
+    $(this).siblings().removeClass("correct incorrect");
+    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+    if ($(this).data("correct")) {
+        score++;
+        $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
+    }
+    // Remove the 'hidden' class from the "Check Answer" button
+    $(this).siblings(".check-answer").removeClass("hidden");
+    progress++;
+    $("#progress").text("Progress: " + progress + "/50");
+});
+
+function displayAnswer(that) {
+    if (isAnimating) return;
+    var container = $(that).siblings('.container');
+    var answer = container.children('.answer');
+    var htmlContent = answer.html();
+    var i = 0;
+
+    // Find the index of the end of the "answer hidden" div
+    var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+
+    answer.html('');
+    answer.removeClass('hidden');
+    container.removeClass('hidden');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                answer.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                answer.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            container.children('#subject-button').removeClass('hidden');
+            isAnimating = false;
+        }
+    }
+
+    typeWriter();
+}
+
+$(".check-answer").click(function() {
+    displayAnswer(this);
+});
+
+function displayMoreContent(that) {
+    if (isAnimating) return;
+    var moreContent = $(that).siblings('#more-content');
+    var htmlContent = moreContent.html();
+    var i = 0;
+
+    // Find the index of the end of the "more-content hidden" div
+    var endIndex = htmlContent.lastIndexOf('</div>') + 6;
+
+    moreContent.html('');
+    moreContent.removeClass('hidden');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                moreContent.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                moreContent.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            isAnimating = false;
+        }
+    }
+
+    typeWriter();
+}
+
+
+$(".container").on("click", "#subject-button", function() {
+    displayMoreContent(this);
+});
+
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.classList.add('answered');
+            this.classList.add('selected');
+            question.querySelector('.check-answer').classList.remove('hidden');
+        });
+    });
+
+    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+    checkAnswerButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.querySelector('.answer').classList.remove('hidden');
+            
+        });
+    });
+});
+
+    </script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+<!-- button -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.footer-widget ul li {
+display: inline-block;
+float: right;
+width: 50%;
+margin-bottom: 10px;
+}
+.footer-widget ul li a:hover{
+color: darkcyan;
+}
+.footer-widget ul li a {
+color: lightblue;
+text-transform: capitalize;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+
+</style>
+</div>
+</div>
+<div class="footer-content pt-5 pb-5">
+<div class="row">
+
+
+
+
+<!--stop -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+<a href="x.com"><i class="fab fa-twitter"></i></i></a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">courses</a></li>
+<li><a href="#">classroom</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">blog</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+
+
+
+
+</div>
+</footer>
+</html>
