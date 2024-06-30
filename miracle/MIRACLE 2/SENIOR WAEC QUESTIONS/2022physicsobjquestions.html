@@ -969,6 +969,7 @@ body {
               <script>
                     var score = 0;
 var progress = 0;
+var isAnimating = false;
 
 $(".option").click(function() {
     if ($(this).hasClass("selected")) {
@@ -983,28 +984,89 @@ $(".option").click(function() {
     } else {
         $(this).parent().siblings(".check-answer").removeClass("hidden");
     }
+    // Remove the 'hidden' class from the "Check Answer" button
+    $(this).siblings(".check-answer").removeClass("hidden");
     progress++;
     $("#progress").text("Progress: " + progress + "/50");
 });
 
-$(".check-answer").click(function() {
-    var answer = $(this).siblings('.answer');
-    var text = answer.text();
+function displayAnswer(that) {
+    if (isAnimating) return;
+    var container = $(that).siblings('.container');
+    var answer = container.children('.answer');
+    var htmlContent = answer.html();
     var i = 0;
 
-    answer.text('');
+    // Find the index of the end of the "answer hidden" div
+    var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+
+    answer.html('');
     answer.removeClass('hidden');
+    container.removeClass('hidden');
+    isAnimating = true;
 
     function typeWriter() {
-        if (i < text.length) {
-            answer.text(answer.text() + text.charAt(i));
-            i++;
-            setTimeout(typeWriter, 50);
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                answer.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                answer.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            container.children('#subject-button').removeClass('hidden');
+            isAnimating = false;
         }
     }
 
     typeWriter();
+}
+
+$(".check-answer").click(function() {
+    displayAnswer(this);
 });
+
+function displayMoreContent(that) {
+    if (isAnimating) return;
+    var moreContent = $(that).siblings('#more-content');
+    var htmlContent = moreContent.html();
+    var i = 0;
+
+    // Find the index of the end of the "more-content hidden" div
+    var endIndex = htmlContent.lastIndexOf('</div>') + 6;
+
+    moreContent.html('');
+    moreContent.removeClass('hidden');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                moreContent.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                moreContent.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            isAnimating = false;
+        }
+    }
+
+    typeWriter();
+}
+
+
+$(".container").on("click", "#subject-button", function() {
+    displayMoreContent(this);
+});
+
+
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -1023,10 +1085,11 @@ $(".check-answer").click(function() {
         button.addEventListener('click', function() {
             const question = this.closest('.question');
             question.querySelector('.answer').classList.remove('hidden');
-            this.classList.add('hidden');
+            
         });
     });
 });
+
 
               </script>
           </body>
