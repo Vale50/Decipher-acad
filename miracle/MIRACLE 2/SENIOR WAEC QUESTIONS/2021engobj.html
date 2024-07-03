@@ -946,7 +946,7 @@ And lastly,
                     <div class="option" data-correct="false">C. Temporary  </div>
                     <div class="option" data-correct="false">D. Respectable </div>
                 </div>
-                <button<div class="answer hidden"> The correct answer is Option D. Newton.
+                <button<div class="answer hidden"> The correct answer is Option B. Honorary.
                 <div style="width: 25vw; height: auto;">
                     <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/newton.jpeg
                     " style="width: 100%; height: auto;"> </img>
@@ -957,13 +957,13 @@ And lastly,
     <button id="subject-button" class="hidden button">More..?</button>   
     <div id="more-content" class="hidden">
     </br>
-    <div id="subject-name" class="hidden"> Newton is the International System of Units (S.I) unit of force. It is defined as the force necessary to accelerate a one-kilogram mass by one meter per second squared.</div></br>
+    <div id="subject-name" class="hidden"> B. Honorary - means given as an honor without the usual requirements or duties, which fits the context of universities awarding degrees to outstanding personalities.</div></br>
     On the other hand, 
      <div style="width: 25vw; height: auto;">
         <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/current.jpeg
         " style="width: 100%; height: auto;"> </img></br>
         
-        Option A. Ampere is incorrect because an ampere, often shortened to “amp,” is the base unit of electric current in the International System of Units. It is not related to force.
+        A. Ceremonial - relates to formal ceremonies or events, not degrees.
     </div></br>
     Also,
     <div style="width: 25vw; height: auto;">
@@ -980,7 +980,7 @@ And lastly,
     </div>
     </div>
 
-<button id="subject-button" class="hidden button">More..</button>   
+<button id="subject- button" class="hidden button">More..</button>   
 </br>
 <div id="subject-name" class="hidden">English</div>
 
@@ -1059,7 +1059,7 @@ And lastly,
                     <div class="option" data-correct="false">C. Immigrated</div>
                     <div class="option" data-correct="false">D. Fled </div>
                 </div>
-                <button<div class="answer hidden"> The correct answer is Option D. Newton.
+                <button<div class="answer hidden"> The correct answer is Option A. Migrated.
                 <div style="width: 25vw; height: auto;">
                     <img src="/miracle/FAVOUR/JUNIOR WAEC QUESTION/newton.jpeg
                     " style="width: 100%; height: auto;"> </img>
@@ -3361,260 +3361,212 @@ And lastly,
 
 
     <script>
-    var score = 0;
-var progress = 0;
-var isAnimating = false;
-
-$(".option").click(function() {
-  if ($(this).hasClass("selected")) {
-    return;
-  }
-  $(this).addClass("selected");
-  $(this).siblings().removeClass("correct incorrect");
-  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-  if ($(this).data("correct")) {
-    score++;
-    $("#score").text("Score: " + score);
-  } else {
-    $(this).parent().siblings(".check-answer").removeClass("hidden");
-  }
-  progress++;
-  $("#progress").text("Progress: " + progress + "/50");
-});
-
-function displayAnswer(that) {
-  if (isAnimating) return;
-  var container = $(that).siblings('.container');
-  var answer = container.children('.answer');
-  var text = answer.text();
-  var i = 0;
-
-  answer.text('');
-  answer.removeClass('hidden');
-  container.removeClass('hidden');
-  isAnimating = true;
-
-  function typeWriter() {
-    if (i < text.length) {
-      answer.text(answer.text() + text.charAt(i));
-      i++;
-      setTimeout(typeWriter, 30);
-    } else {
-      container.children('#subject-button').removeClass('hidden');
-      isAnimating = false;
-    }
-  }
-
-  typeWriter();
-}
-
-$(".check-answer").click(function() {
-  displayAnswer(this);
-});
-
-$(".question").on("click", "#subject-button", function() {
-  if ($(this).siblings('#subject-name').is(':visible')) return;
-  $(this).siblings('#subject-name').removeClass('hidden');
-  animateSubjectName(this);
-});
-
-function animateSubjectName(that) {
-  if (isAnimating) return;
-  var subjectName = $(that).siblings('#subject-name');
-  var text = subjectName.text();
-  var i = 0;
-
-  subjectName.text('');
-  isAnimating = true;
-
-  function typeWriter() {
-    if (i < text.length) {
-      subjectName.text(subjectName.text() + text.charAt(i));
-      i++;
-      setTimeout(typeWriter, 30);
-    } else {
-      isAnimating = false;
-    }
-  }
-
-  typeWriter();
-}
-
-
-
-
-
-
-
-    </script>
-    <script>
-        // List of positive feedback messages
-let positiveFeedbacks = [
-"Great job! You nailed that question! 🎉",
-"Well done! Your hard work is showing. 👍",
-"Excellent work! That was spot on. 🎯",
-"Keep it up! You’re on the right track. 👟",
-"Impressive! You’ve got a great understanding of this. 🧠",
-"Fantastic! You’re really getting the hang of this. 🚀",
-"Correct! You did your homework well. 📚",
-"Superb! I can tell you studied for this. 🕵️‍♂️",
-"Bravo! You’ve mastered this concept. 🏆",
-"Wonderful! You’re making great progress. 🌱",
-"Spot on! You’re paying great attention to detail. 🔍",
-"Terrific! You’re setting a high bar. 📈",
-"Outstanding! You’re leaps and bounds ahead. 🦘",
-"Perfect! You couldn’t have done it better. 💯",
-"Right on target! You’re acing this material. 🎯",
-"Yes! That’s the right answer. ✅",
-"Good recall! You remembered that perfectly. 🧠",
-"That’s correct! You’ve grasped the idea completely. 🤝",
-"A+ effort! You’re doing wonderfully. ⭐",
-"That’s it! You’ve got it. 👌",
-"You’re correct! Your answer is right on point. 📍",
-"Nice work! You’ve been paying attention. 👀",
-"You got it! That’s the right approach. 🛤️",
-"You’re right! You understood that perfectly. 🎓",
-"That’s right! You’re showing excellent comprehension. 🌟",
-    // Add all other positive feedback messages here...
-];
-
-// List of negative feedback messages
-let negativeFeedbacks = [
-    "Good try, but let’s consider the other options as well. 🤔",
-    "Not quite, but you’re thinking critically! 👏",
-    "Good try, but let’s consider the other options as well. 👉",
-"Not quite, but you’re thinking critically! 🤔",
-"That’s not the one, but I can see your thought process. 💭",
-"This one’s tricky, but I know you’ll get it with another look. 🔍",
-"The right answer is still out there, let’s find it together. 🌟",
-"You’ve chosen A, but B might be the way to go. Let’s review why. ↔️",
-"Close, but there’s another answer that fits better. 🎯",
-"You’re almost there, just a bit off track. 🛤️",
-"This was a tough one, and you’re brave for tackling it. 🦁",
-"Option C isn’t correct, but you’re learning more with each try. 📈",
-"Not the answer we’re looking for, but your effort is commendable. 👏",
-"Keep exploring the possibilities, you’re getting closer. 🔎",
-"You’ve picked D, which is a common mistake. Let’s work on understanding why. 📚",
-"You’re gathering valuable clues with each attempt. 🕵️‍♂️",
-"It’s not about being perfect, it’s about improving, which you are. 💪",
-"You’ve missed this one, but remember, every question is a new chance. 🔄",
-"Your choice isn’t right this time, but I’m confident you’ll nail it soon. 🌈",
-"Learning is about discovery, and every wrong answer is part of that journey. 🛤️",
-"Take a moment, then come back to it. You might see it differently. ⏳",
-"The process of elimination is key. You’ve ruled one out, now what’s next? ❓",
-    // Add all other negative feedback messages here...
-];
-
-// Function to display feedback message
-function displayFeedback(isCorrect) {
-    let feedbackMessage;
-    if (isCorrect) {
-        // Pick a random positive feedback message
-        feedbackMessage = positiveFeedbacks[Math.floor(Math.random() * positiveFeedbacks.length)];
-    } else {
-        // Pick a random negative feedback message
-        feedbackMessage = negativeFeedbacks[Math.floor(Math.random() * negativeFeedbacks.length)];
-    }
-
-    // Create a feedback div
-    let feedbackDiv = $("<div></div>").text(feedbackMessage);
-    $("body").append(feedbackDiv);
-
-    // Remove the feedback div after 2 seconds
-    setTimeout(function() {
-        feedbackDiv.remove();
-    }, 2000);
-}
-
-// Attach event listeners to the options
-$(".option").click(function() {
-    let isCorrect = $(this).data("correct");
-    displayFeedback(isCorrect);
-});
-
-    </script>
-</body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
-<!-- button -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-
-
-.footer-social-icon i {
-height: 40px;
-width: 40px;
-text-align: center;
-line-height: 38px;
-border-radius: 50%;
-}
-.footer-widget ul li {
-display: inline-block;
-float: right;
-width: 50%;
-margin-bottom: 10px;
-}
-.footer-widget ul li a:hover{
-color: darkcyan;
-}
-.footer-widget ul li a {
-color: lightblue;
-text-transform: capitalize;
-}
-.footer-menu li {
-display: inline-block;
-margin-left: 50px;
-}
-</style>
-</div>
-</div>
-<div class="footer-content pt-5 pb-5">
-<div class="row">
-
-
-
-
-<!--stop -->
-
-
-
-
-
-
-</div>
-</div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-<div class="footer-widget">
-<div class="footer-widget-heading">
-
-
-</div>
-<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
-<a href="x.com"><i class="fab fa-twitter"></i></i></a>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">about</a></li>
-<li><a href="#">courses</a></li>
-<li><a href="#">classroom</a></li>
-<li><a href="#">Contact</a></li>
-<li><a href="#">blog</a></li>
-</ul>
-</div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-<div class="footer-widget">
-<div class="footer-widget-heading">
-
-
-</div>
-
-
-
-
-</div>
-</footer>
-</html>
-
+        var score = 0;
+      var progress = 0;
+      var isAnimating = false;
+      
+      $(".option").click(function() {
+          if ($(this).hasClass("selected")) {
+              return;
+          }
+          $(this).addClass("selected");
+          $(this).siblings().removeClass("correct incorrect");
+          $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+          if ($(this).data("correct")) {
+              score++;
+              $("#score").text("Score: " + score);
+          } else {
+              $(this).parent().siblings(".check-answer").removeClass("hidden");
+          }
+          // Remove the 'hidden' class from the "Check Answer" button
+          $(this).siblings(".check-answer").removeClass("hidden");
+          progress++;
+          $("#progress").text("Progress: " + progress + "/50");
+      });
+      
+      function displayAnswer(that) {
+          if (isAnimating) return;
+          var container = $(that).siblings('.container');
+          var answer = container.children('.answer');
+          var htmlContent = answer.html();
+          var i = 0;
+      
+          // Find the index of the end of the "answer hidden" div
+          var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+      
+          answer.html('');
+          answer.removeClass('hidden');
+          container.removeClass('hidden');
+          isAnimating = true;
+      
+          function typeWriter() {
+              if (i < endIndex) {
+                  if (htmlContent.charAt(i) === '<') {
+                      var tagEnd = htmlContent.indexOf('>', i) + 1;
+                      answer.append(htmlContent.slice(i, tagEnd));
+                      i = tagEnd;
+                  } else {
+                      answer.append(htmlContent.charAt(i));
+                      i++;
+                  }
+                  setTimeout(typeWriter, 40);
+              } else {
+                  container.children('#subject-button').removeClass('hidden');
+                  isAnimating = false;
+              }
+          }
+      
+          typeWriter();
+      }
+      
+      $(".check-answer").click(function() {
+          displayAnswer(this);
+      });
+      
+      function displayMoreContent(that) {
+          if (isAnimating) return;
+          var moreContent = $(that).siblings('#more-content');
+          var htmlContent = moreContent.html();
+          var i = 0;
+      
+          // Find the index of the end of the "more-content hidden" div
+          var endIndex = htmlContent.lastIndexOf('</div>') + 6;
+      
+          moreContent.html('');
+          moreContent.removeClass('hidden');
+          isAnimating = true;
+      
+          function typeWriter() {
+              if (i < endIndex) {
+                  if (htmlContent.charAt(i) === '<') {
+                      var tagEnd = htmlContent.indexOf('>', i) + 1;
+                      moreContent.append(htmlContent.slice(i, tagEnd));
+                      i = tagEnd;
+                  } else {
+                      moreContent.append(htmlContent.charAt(i));
+                      i++;
+                  }
+                  setTimeout(typeWriter, 40);
+              } else {
+                  isAnimating = false;
+              }
+          }
+      
+          typeWriter();
+      }
+      
+      
+      $(".container").on("click", "#subject-button", function() {
+          displayMoreContent(this);
+      });
+      
+      
+          </script>
+          <script>
+              document.addEventListener('DOMContentLoaded', (event) => {
+          const options = document.querySelectorAll('.option');
+          options.forEach(option => {
+              option.addEventListener('click', function() {
+                  const question = this.closest('.question');
+                  question.classList.add('answered');
+                  this.classList.add('selected');
+                  question.querySelector('.check-answer').classList.remove('hidden');
+              });
+          });
+      
+          const checkAnswerButtons = document.querySelectorAll('.check-answer');
+          checkAnswerButtons.forEach(button => {
+              button.addEventListener('click', function() {
+                  const question = this.closest('.question');
+                  question.querySelector('.answer').classList.remove('hidden');
+                  
+              });
+          });
+      });
+      
+          </script>
+      </body>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+      <!-- button -->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <style>
+      
+      
+      .footer-social-icon i {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+      }
+      .footer-widget ul li {
+      display: inline-block;
+      float: right;
+      width: 50%;
+      margin-bottom: 10px;
+      }
+      .footer-widget ul li a:hover{
+      color: darkcyan;
+      }
+      .footer-widget ul li a {
+      color: lightblue;
+      text-transform: capitalize;
+      }
+      .footer-menu li {
+      display: inline-block;
+      margin-left: 20px;
+      }
+      
+      </style>
+      </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+      <div class="row">
+      
+      
+      
+      
+      <!--stop -->
+      
+      
+      
+      
+      
+      
+      </div>
+      </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+      <div class="footer-widget">
+      <div class="footer-widget-heading">
+      
+      
+      </div>
+      <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+      <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+      <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">courses</a></li>
+      <li><a href="#">classroom</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">blog</a></li>
+      </ul>
+      </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+      <div class="footer-widget">
+      <div class="footer-widget-heading">
+      
+      
+      </div>
+      
+      
+      
+      
+      </div>
+      </footer>
+      </html>
 
 
 
