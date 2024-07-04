@@ -9,6 +9,9 @@
     }
 * {box-sizing: border-box;}
 .answered {
+    background-color: #f0f0f0; /* 
+    I want you to create a quiz maker and add it to the code below such that is able to recognize and differentiate a question and its options and then  arrange it into the format of the game quiz below. let the quiz maker will have a large text box beneath the quiz where the questions and options are inputed, then it uses the inputed content to make a quiz. add a generate quiz button that create the quiz. use the quiz format below but  ignore all he questions of the quiz below., coz new ones will be generated manaually,
+    Light grey background for answered questions */
     background-color: #f0f0f0; /* Light grey background for answered questions */
 }
 
@@ -350,7 +353,7 @@ And lastly,
     <button id="subject-button" class="hidden button">More..?</button>   
     <div id="more-content" class="hidden">
     </br>
-    <div id="subject-name" class="hidden"> vPolarization
+    <div id="subject-name" class="hidden"> Polarization
         - **Definition**: Polarization in the context of primary cells refers to the build-up of hydrogen gas bubbles on the surface of the electrode (usually the cathode).
         - **Effect**: This build-up of hydrogen can hinder the flow of electrons, effectively increasing the internal resistance of the cell and reducing its efficiency.
         - **Cause**: It occurs because the hydrogen ions (protons) in the electrolyte gain electrons at the cathode and form hydrogen gas.
@@ -460,7 +463,6 @@ And lastly,
                 <div class="option" data-correct="false">C. Iris</div>
                 <div class="option" data-correct="false">D. Optic nerve </div>
                 </div>
-            </div>
             <button class="check-answer hidden button">Check Answer</button>
             <div class="container hidden">
                 <div class="answer hidden"> The correct answer is Option A. Pupil.
@@ -3174,6 +3176,21 @@ function displayAnswer(that) {
     isAnimating = true;
 
     function typeWriter() {
+<<<<<<< HEAD
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                answer.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                answer.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            container.children('#subject-button').removeClass('hidden');
+            isAnimating = false;
+=======
 if (i < endIndex) {
     if (htmlContent.charAt(i) === '<') {
 var tagEnd = htmlContent.indexOf('>', i) + 1;
@@ -3223,6 +3240,52 @@ i++;
     setTimeout(typeWriter, 40);
 } else {
             isAnimating = false;
+>>>>>>> 1a9a939fb85f5e08955e7a2ab8267cccb87f1ac9
+        }
+    }
+
+    typeWriter();
+<<<<<<< HEAD
+}
+
+$(".check-answer").click(function() {
+    displayAnswer(this);
+=======
+}
+
+
+$(".container").on("click", "#subject-button", function() {
+    displayMoreContent(this);
+>>>>>>> 1a9a939fb85f5e08955e7a2ab8267cccb87f1ac9
+});
+
+<<<<<<< HEAD
+function displayMoreContent(that) {
+    if (isAnimating) return;
+    var moreContent = $(that).siblings('#more-content');
+    var htmlContent = moreContent.html();
+    var i = 0;
+
+    // Find the index of the end of the "more-content hidden" div
+    var endIndex = htmlContent.lastIndexOf('</div>') + 6;
+
+    moreContent.html('');
+    moreContent.removeClass('hidden');
+    isAnimating = true;
+
+    function typeWriter() {
+        if (i < endIndex) {
+            if (htmlContent.charAt(i) === '<') {
+                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                moreContent.append(htmlContent.slice(i, tagEnd));
+                i = tagEnd;
+            } else {
+                moreContent.append(htmlContent.charAt(i));
+                i++;
+            }
+            setTimeout(typeWriter, 40);
+        } else {
+            isAnimating = false;
         }
     }
 
@@ -3259,6 +3322,33 @@ $(".container").on("click", "#subject-button", function() {
 });
 
 
+=======
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.classList.add('answered');
+            this.classList.add('selected');
+            question.querySelector('.check-answer').classList.remove('hidden');
+        });
+    });
+
+    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+    checkAnswerButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.querySelector('.answer').classList.remove('hidden');
+            
+        });
+    });
+});
+
+
+>>>>>>> 1a9a939fb85f5e08955e7a2ab8267cccb87f1ac9
               </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
