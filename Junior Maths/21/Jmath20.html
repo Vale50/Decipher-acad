@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+    h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+    <style>
+
+
+       *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+#quiz{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#answer {
+    margin-top: 20px;
+}
+.answer{
+    border: 1px solid blue;
+    background-color: #3498db;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+        max-height: 200px;
+    }
+
+
+/* Score and progress bar styles */
+#score {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+#progressBar {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+       
+        .correct { background-color: green; }
+        .incorrect { background-color: red; }
+        .hidden { display: none; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="quiz">
+        <div class="question">
+<!—-your instructions goes here—>
+<p><b>Best of Luck</b></p>
+<br>
+            <p>1: The sum of a certain number and 16 is 42. What is the number?</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. 20 </div>
+                <div class="option" data-correct="false">B. 22</div>
+                <div class="option" data-correct="false">C. 24</div>
+                <div class="option" data-correct="true">D.  26</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">Let's break it down step by step:
+
+The problem states that the sum of a certain number and 16 is 42. This can be written as an equation:
+x + 16 = 42
+
+Where x is the unknown number.
+
+Our goal is to find the value of x. To do this, we can subtract 16 from both sides of the equation, which leaves us with:
+x = 42 - 16
+
+Simplifying the right-hand side, we get:
+x = 26</div>
+        </div>
+    <div id="quiz">
+        <div class="question">
+            <p>2:  Find the product of (y-3) and (y + 3).</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. y&#178;  – 6y + 9</div>
+                <div class="option" data-correct="true">B. y&#178; – 9</div>
+                <div class="option" data-correct="false">C.  y&#178;  + 6y + 9</div>
+                <div class="option" data-correct="false">D. y&#178;  + 9</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> To find the product of (y-3) and (y+3), we can use the distributive property of multiplication over addition. This means that we can multiply each term in (y-3) by each term in (y+3).
+
+Here's the step-by-step process:
+
+Multiply the first term in (y-3) by the first term in (y+3):
+(y-3) × (y+3) = y × y + y × 3 - 3 × y - 3 × 3
+
+Expand the products:
+y × y = y&#178;
+y × 3 = 3y
+-3 × y = -3y
+-3 × 3 = -9
+
+So, we get:
+
+y&#178; + 3y - 3y - 9
+
+Combine like terms:
+y&#178; - 9</div>
+        </div>
+    </div>
+      <div id="quiz">
+        <div class="question">
+            <p>3:  A man is 26 years older than his son. He is also 8 years older than three times his son’s age. Find the son’s age.</p>
+            <div class="options">
+                <div class="option" data-correct="true">A. 9 years </div>
+                <div class="option" data-correct="false">B. 10 years</div>
+                <div class="option" data-correct="false">C.  12 years </div>
+                <div class="option" data-correct="false">D. 14 years</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">Let's break it down step by step:
+
+Let the son's age be x. Then, the man's age is x + 26 (since the man is 26 years older than his son).
+The problem states that the man is also 8 years older than three times his son's age. We can write this as an equation:
+x + 26 = 3x + 8
+
+Subtract x from both sides to get:
+26 = 2x + 8
+
+Subtract 8 from both sides to get:
+18 = 2x
+
+Divide both sides by 2 to get:
+x = 9</div>
+            </div>
+        </div>
+           <div id="quiz">
+             <div class="question">
+            <p>4: The factors of x&#178;  + x – 12 are</p>
+            <div class="options">
+                <div class="option" data-correct="false">A. (x – 4) and (x – 3)</div>
+                <div class="option" data-correct="false">B.  (x – 4) and (x + 3) </div>
+                <div class="option" data-correct="true">C. (x + 3) and (x – 4)</div>
+                <div class="option" data-correct="false">D. 1 (x + 6) and (x – 2)</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden"> To find the factors of the quadratic expression x² + x - 12, we can start by factoring the expression.
+
+Let's start by finding two numbers whose product is -12 and whose sum is 1. These numbers are -3 and 4, since (-3) × (4) = -12 and (-3) + 4 = 1.
+
+So, we can write the expression as:
+
+x² + x - 12 = (x + 3)(x - 4)</div>
+            </div>
+      <div id="quiz">
+        <div class="question">
+            <p>5: <img src="1.png" alt="Math Image"></p></p>
+            <div class="options">
+                <div class="option" data-correct="false">A. -2<sup>5</sup>&frasl;<sub>6</sub></div>
+                <div class="option" data-correct="false">B. -1<sup>5</sup>&frasl;<sub>6</sub></div>
+                <div class="option" data-correct="true">C. <sup>11</sup>&frasl;<sub>6</sub></div>
+                <div class="option" data-correct="false">D. <sup>1</sup>&frasl;<sub>6</sub>(12x + 17) </div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">To simplify \(\frac{2x+1}{2} - \frac{3x+7}{3}\), you need to find a common denominator for the fractions and then combine them. 
+
+The least common multiple of 2 and 3 is 6. 
+
+So, let's rewrite the fractions with the common denominator of 6:
+
+\[\frac{3(2x+1)}{6} - \frac{2(3x+7)}{6}\]
+
+This simplifies to:
+
+\[\frac{6x+3}{6} - \frac{6x+14}{6}\]
+
+Now, you can combine the fractions:
+
+\[\frac{(6x+3) - (6x+14)}{6}\]
+
+Expanding the parentheses:
+
+\[\frac{6x+3 - 6x - 14}{6}\]
+
+Now, simplify the numerator:
+
+<sup>11</sup>&frasl;<sub>6</sub></div>
+        </div>
+     <div id="quiz">
+        <div class="question">
+       <p> 6: Factorize: 4x&#178;  – 3y – 6x + 2xy</p>
+
+            <div class="options">
+                <div class="option" data-correct="false">A. (2x – y)(2x -3) </div>
+                <div class="option" data-correct="false">B. (x – 2y)(2x – 3)</div>
+                <div class="option" data-correct="false">C.  (2x + 3)(2x +y)</div>
+                <div class="option" data-correct="true">D.  (2x - 3)(2x + y)</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">
+I completely agree with your steps:
+
+1. You grouped the terms correctly: \((4x^2 - 6x) + (-3y + 2xy)\)
+2. You factored out the common terms from each group: \(2x(2x - 3) + y(2x - 3)\)
+3. You noticed that both terms have a common factor of \((2x - 3)\) and factored it out: \((2x - 3)(2x + y)\)
+
+And indeed, the factored form of the expression is:
+
+4x² - 3y - 6x + 2xy = (2x - 3)(2x + y)</div>
+        </div>
+   
+      </div>
+        <div class="question">
+            <p>7: <img src="2.png" alt="Math Image"></p></p>
+            <div class="options">
+                <div class="option" data-correct="false">A.  -12  </div>
+                <div class="option" data-correct="false">B.  -6</div>
+                <div class="option" data-correct="false">C.  6</div>
+                <div class="option" data-correct="true">D.  12</div>
+            </div>
+            <button class="check-answer hidden">Check Answer</button>
+            <div class="answer hidden">Cross-multiply
+
+ Multiply both sides of the equation by the least common multiple (LCM) of the denominators, which is (x+2)(3x-1). This eliminates the fractions:
+
+2(3x-1) = 5(x+2)
+
+Step 2: Expand and simplify
+
+Expand both sides of the equation:
+
+6x - 2 = 5x + 10
+
+Subtract 5x from both sides:
+
+x - 2 = 10
+
+Add 2 to both sides:
+
+x = 12</div>
+        </div>
+ 
+         <div id="quiz">
+            <div class="question">
+                <p>8:   Find x if 2x + 3x + 3x – 4x = 8x&#178; </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  0 or 4 </div>
+                    <div class="option" data-correct="false">B.  0 or 2  </div>
+                    <div class="option" data-correct="false"> C.  0 or ¾ </div>
+                    <div class="option" data-correct="true">D.  0 or ½ </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's solve the equation step by step:
+
+**Step 1: Simplify the left side**
+
+Combine like terms on the left side:
+
+4x = 8x²
+
+**Step 2: Move all terms to one side**
+
+Subtract 4x from both sides:
+
+0 = 8x² - 4x
+
+**Step 3: Factor the quadratic expression**
+
+Factor the right side:
+
+0 = (4x)(2x - 1)
+
+**Step 4: Set each factor equal to 0 and solve for x**
+
+Set each factor equal to 0 and solve for x:
+
+4x = 0 => x = 0
+
+2x - 1 = 0 => x = 1/2
+
+So, the solutions to the equation are x = 0 and x = 1/2.</div>
+            </div>
+       
+         </div>
+        <div id="quiz">
+            <div class="question">
+                <p>9:  Solve the simultaneous equations: <br>x – 2y + 3 = 0, 3x + 2y = 7</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. x = -4, y = 1 </div>
+                    <div class="option" data-correct="true">B.  x = -3, y = 0 </div>
+                    <div class="option" data-correct="false">C.  x = 1, y = -3 </div>
+                    <div class="option" data-correct="true">D. x = 1, y = 2</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's solve the simultaneous equations step by step:
+
+**Step 1: Write the equations in standard form**
+
+We're given the equations:
+
+x - 2y + 3 = 0 ... (Equation 1)
+3x + 2y = 7 ... (Equation 2)
+
+**Step 2: Rearrange one of the equations to isolate a variable**
+
+Rearrange Equation 1 to isolate x:
+
+x = 2y - 3
+
+**Step 3: Substitute the expression for x into the other equation**
+
+Substitute x = 2y - 3 into Equation 2:
+
+3(2y - 3) + 2y = 7
+
+**Step 4: Simplify and solve for y**
+
+Expand and simplify:
+
+6y - 9 + 2y = 7
+8y - 9 = 7
+8y = 16
+y = 2
+
+**Step 5: Substitute the value of y back into one of the original equations to find x**
+
+Substitute y = 2 into the equation x = 2y - 3:
+
+x = 2(2) - 3
+= 4 - 3
+= 1
+
+So, the solution to the simultaneous equations is x = 1 and y = 2.</div>
+            </div>
+       
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>10: The sum of 2 times a number and 3 times another number is 4. The first number minus the second number is -3. What are the numbers?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  -3 and 6</div>
+                    <div class="option" data-correct="true">B.. -1 and 2 </div>
+                    <div class="option" data-correct="false">C.  2 and 5</div>
+                    <div class="option" data-correct="false">D. 6 and 3 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Write the given equations as a system of two equations.
+Multiplied the second equation by 3 to make the coefficients of y the same but opposite in sign.
+Added the two equations to eliminate the y-term, resulting in a single equation with x.
+Divided both sides by 5 to solve for x.
+Substituted x = -1 into one of the original equations to find y.
+And you found that x = -1 and y = 2</div>
+            </div>
+        </div>
+          <div id="quiz">
+            <div class="question">
+<p> 11: The product of 5 and the sum of 12 and a certain number is 10. What is the number?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  -15</div>
+                    <div class="option" data-correct="true">B.  -10 </div>
+                    <div class="option" data-correct="false">C.  -5 </div>
+                    <div class="option" data-correct="false">D. 5</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+
+**Step 1: Let the certain number be x**
+
+We have a certain number, which we'll call x. We'll express the sum of 12 and x as:
+
+12 + x
+
+**Step 2: Write the given equation**
+
+The product of 5 and the sum of 12 and x is 10:
+
+5(12 + x) = 10
+
+**Step 3: Expand the equation**
+
+Distribute the 5 to both terms inside the parentheses:
+
+60 + 5x = 10
+
+**Step 4: Isolate the term with x**
+
+Subtract 60 from both sides:
+
+5x = -50
+
+**Step 5: Solve for x**
+
+Divide both sides by 5:
+
+x = -50/5
+
+x = -10</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>12:  <img src="3.png" alt="Math Image"></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  ±3 </div>
+                    <div class="option" data-correct="true">B.  ± =-4 </div>
+                    <div class="option" data-correct="false">C. ±6 </div>
+                    <div class="option" data-correct="false">D.  ±16 </div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">(3z = 0 \Rightarrow z = 0)
+(z^2 - 16 = 0 \Rightarrow z^2 = 16 \Rightarrow z = \pm 4)
+So, the solutions for (z) are indeed (z = 0, z = 4,) and (z = -4.)</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>13: if y -2x = 3, x + y = 3. Find the values of x and y.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. x = 0 , y = 3.</div>
+                    <div class="option" data-correct="false">B. x = 3, y = 0</div>
+                    <div class="option" data-correct="false">C.  x = -3, y = 0 </div>
+                    <div class="option" data-correct="false">D. x = 0, y = 0</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's solve the system of equations!
+
+We have two equations:
+
+1. y - 2x = 3
+2. x + y = 3
+
+Our goal is to find the values of x and y.
+
+**Step 1: Solve the first equation for y**
+
+Add 2x to both sides of the first equation:
+
+y - 2x + 2x = 3 + 2x
+
+This simplifies to:
+
+y = 3 + 2x
+
+**Step 2: Substitute the expression for y into the second equation**
+
+Substitute the expression for y (from step 1) into the second equation:
+
+(x) + (3 + 2x) = 3
+
+Expand and simplify:
+
+x + 3 + 2x = 3
+
+Combine like terms:
+
+3x + 3 = 3
+
+Subtract 3 from both sides:
+
+3x = 0
+
+Divide both sides by 3:
+
+x = 0
+
+**Step 3: Find the value of y using the expression from step 1**
+
+Now that we know x, we can substitute it into the expression for y from step 1:
+
+y = 3 + 2x
+= 3 + 2(0)
+= 3
+
+So, the values of x and y are:
+
+x = 0
+y = 3
+
+Therefore, the solution to the system of equations is x = 0 and y = 3.</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>14: If 4x + 2y = 0, 3x – y = 5, find x + y </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.   3 </div>
+                    <div class="option" data-correct="false">B. 2</div>
+                    <div class="option" data-correct="false">C. 1</div>
+                    <div class="option" data-correct="true">D. -1</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">We have two equations:
+
+1. 4x + 2y = 0
+2. 3x - y = 5
+
+Our goal is to find the value of x + y.
+
+**Step 1: Solve the first equation for y**
+
+Divide both sides of the first equation by 2:
+
+2y = -4x
+
+Subtract -4x from both sides:
+
+y = -2x
+
+**Step 2: Substitute the expression for y into the second equation**
+
+Substitute the expression for y (from step 1) into the second equation:
+
+3x - (-2x) = 5
+
+Simplify:
+
+3x + 2x = 5
+
+Combine like terms:
+
+5x = 5
+
+Divide both sides by 5:
+
+x = 1
+
+**Step 3: Find the value of y using the expression from step 1**
+
+Now that we know x, we can substitute it into the expression for y from step 1:
+
+y = -2x
+= -2(1)
+= -2
+
+So, the values of x and y are:
+
+x = 1
+y = -2
+
+Now, we can find the value of x + y:
+
+x + y = 1 + (-2)
+= 1 - 2
+= -1
+
+Therefore, the value of x + y is -1.</div>
+            </div>
+          </div>
+          <div id="quiz">
+            <div class="question">
+                <p>15: Given that 3x + 2y = 5, 2x + 5y = 3, find <sup>𝑥</sup>&frasl;<sub>y</sub></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 29</div>
+                    <div class="option" data-correct="false">B. 19</div>
+                    <div class="option" data-correct="false">C. 17</div>
+                    <div class="option" data-correct="true">D. -19</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Multiplied the first equation by 2 and the second equation by 3 to make the coefficients of x the same but opposite in sign.
+Subtracted the second equation from the first to eliminate x, which led to a solution for y: y = -1/11.
+Substituted the value of y back into one of the original equations to solve for x, which led to a solution for x: x = 19/11.
+Finally, found the value of x/y by dividing x by y: x/y = -19</div>
+            </div>
+          </div>
+        <div id="quiz">
+            <div class="question">
+                <p>16:  Simplify 10x – 7y – 6x + 5y</p> </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  2(4x – 2y)</div>
+                    <div class="option" data-correct="true">B.  4x - 2y</div>
+                    <div class="option" data-correct="false">C.  2x – y </div>
+                    <div class="option" data-correct="false">D.   2x(2x – 2y)</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> 10x - 7y - 6x + 5y
+= (10x - 6x) - (7y + 5y)
+= 4x - 2y</div>
+            </div>
+        </div>
+        <div id="quiz">
+            <div class="question">
+                <p>17: Find the length of the diagonal of a rectangle whose length and breadth are 4m and 3m respectively.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 6m</div>
+                    <div class="option" data-correct="true">B. 5m</div>
+                    <div class="option" data-correct="false">C. 4m</div>
+                    <div class="option" data-correct="false">D. 3m</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the length of the diagonal of a rectangle, we can use the Pythagorean theorem. The Pythagorean theorem states that:
+
+a² + b² = c²
+
+where a and b are the lengths of the sides of a right-angled triangle, and c is the length of the hypotenuse (the diagonal).
+
+In this case, we have a rectangle with length (a) = 4m and breadth (b) = 3m. We can draw a diagonal from one corner of the rectangle to the opposite corner, which forms a right-angled triangle.
+
+Let's label the length of the diagonal as c. We can plug in the values into the Pythagorean theorem:
+
+4² + 3² = c²
+16 + 9 = c²
+25 = c²
+
+Now, take the square root of both sides:
+
+c = √25
+c = 5m</div>
+            </div>
+        </div>
+         <div id="quiz">
+            <div class="question">
+                <p>18: Solve the equation <sup>2𝑥-3</sup>&frasl;<sub>7</sub> = 5.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 18</div>
+                    <div class="option" data-correct="true">B. 19</div>
+                    <div class="option" data-correct="false">C. 20</div>
+                    <div class="option" data-correct="false">D. 21</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">numbers. This is a great approach, as it simplifies the equation and makes it easier to work with.
+
+You multiplied 5 and 7 to get 35, which is a good way to calculate the result of the multiplication.
+
+You added 3 to both sides of the equation to get rid of the negative term. This is a good way to isolate the variable x.
+
+You added 35 and 3 to get 38, which is a good way to simplify the equation.
+
+Finally, you divided both sides of the equation by 2 to solve for x. This is a good way to isolate the variable x.
+
+Your solution is correct, and you got:
+
+x = 19</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>19:  If one-tenth of a number is added to 2, the result is half of that number, find the number.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2.5</div>
+                    <div class="option" data-correct="false">B. 3.3</div>
+                    <div class="option" data-correct="false">C. 4.2</div>
+                    <div class="option" data-correct="true">D. 5</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> Let's say the number is x. We know that one-tenth of x is added to 2, so we can write an equation:
+
+2 + (1/10)x = (1/2)x
+
+Our goal is to find the value of x.
+
+To start, we can simplify the equation by multiplying both sides by 10 to eliminate the fraction:
+
+20 + x = 5x
+
+Next, we can subtract x from both sides to get:
+
+20 = 4x
+
+Now, we can divide both sides by 4 to solve for x:
+
+x = 20/4
+
+x = 5</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>20: Represent x ≤4 on the number line.</p>
+                <div class="options">
+                    <div class="option" data-correct="false"><img src="4a.png" alt="Math Image"></div>
+                    <div class="option" data-correct="true"><img src="4b.png" alt="Math Image"></div>
+                    <div class="option" data-correct="false"><img src="4c.png" alt="Math Image"></div>
+                    <div class="option" data-correct="false"><img src="4d.png" alt="Math Image">
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Since the inequality includes "less than or equal to", you'll draw a solid dot at 4 to represent that 4 is included in the solution set.
+Shade the region to the left of the mark because it includes all values less than 4.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>21:  If a certain number K is added to 6, the result is greater than 3. Find the range of the values of K.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. K > 3</div>
+                    <div class="option" data-correct="true">B. K > -3</div>
+                    <div class="option" data-correct="false">C. K < 3 </div>
+                    <div class="option" data-correct="false">D. K < -3</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the range of values of K  such that when it's added to 6, the result is greater than 3, we can set up the following inequality:
+
+K + 6 > 3
+
+Now, let's solve this inequality for K :
+
+ K > 3 - 6 
+
+K > -3 
+
+So, the range of values for  K  is all real numbers greater than -3. In interval notation, this can be represented as -3.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>22:  One-fifth of applicants for a job have masters degree while others have first degree certificates. If there are 50 applicants altogether, how many have first degree certificates?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 45 </div>
+                    <div class="option" data-correct="true">B. 40</div>
+                    <div class="option" data-correct="false">C. 30</div>
+                    <div class="option" data-correct="false">D. 25</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's break this problem down step by step:
+
+1. We know that one-fifth of the applicants have a master's degree. To find the number of applicants with a master's degree, we can multiply the total number of applicants (50) by the fraction one-fifth, which is 1/5 or 0.2.
+
+Number of applicants with master's degree = 50 × 0.2 = 10
+
+2. Since there are 50 applicants in total, and we've found that 10 have a master's degree, we can subtract 10 from 50 to find the number of applicants with a first degree certificate:
+
+Number of applicants with first degree certificate = 50 - 10 = 40
+
+So, 40 applicants have first degree certificates.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>23: <img src="5.png" alt="Math Image"></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 2xz&#178;</sub></div>
+                    <div class="option" data-correct="false">B. <sup>2𝑥&#178;Z</sup>&frasl;<sub>y &#178;</sub></div>
+                    <div class="option" data-correct="false">C. <sup>2𝑥&#178;Z</sup>&frasl;<sub>2y</sub></div>
+                    <div class="option" data-correct="false">D. <sup>𝑥&#178;Z&#178;</sup>&frasl;<sub>2y</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">
+I can help with that!
+
+Let's break it down step by step:
+
+**Step 1: Simplify the numbers**
+
+We can divide the numerator (18) by the denominator (9) to get:
+
+18 ÷ 9 = 2
+
+So, the simplified fraction of the numbers is:
+
+2
+
+**Step 2: Simplify the variables**
+
+Now, let's look at the variables (x, y, and z). To simplify them, we need to subtract the exponents of the variables in the numerator and denominator.
+
+For x:
+Numerator: x^3
+Denominator: x^2
+Subtract exponents: x^3 - x^2 = x^1
+So, the simplified expression for x is: x
+
+For y:
+Numerator: y^1
+Denominator: y^2
+Subtract exponents: y^1 - y^2 = y^-1
+So, the simplified expression for y is: 1/y
+
+For z:
+Numerator: z^3
+Denominator: z^1
+Subtract exponents: z^3 - z^1 = z^2
+So, the simplified expression for z is: z^2
+
+**Step 3: Combine the simplified numbers and variables**
+
+Now that we have simplified the numbers and variables, we can combine them to get the final simplified expression:
+
+2 × x × (1/y) × z^2
+
+We can simplify this expression further by combining the factors:
+
+2 × x × z^2 × 1/y
+
+This becomes:
+
+2xz^2 / y
+
+Wait, what's this? It looks like we still have a fraction! But we can simplify it further by multiplying both the numerator and denominator by y to get:
+
+2xz^2
+
+And that's our final simplified expression!
+
+So, the simplified expression is 2xz&#178;. </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>24:    Solve <sup>𝑥-5</sup>&frasl;<sub>3</sub> = <sup>𝑥-1</sup>&frasl;<sub>4</sub></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 0</div>
+                    <div class="option" data-correct="false">B.14</div>
+                    <div class="option" data-correct="false">C.10</div>
+                    <div class="option" data-correct="false">D.-4</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's solve the equation:
+
+𝑥 - 5⁄3 = 𝑥 - 1⁄4
+
+First, we can add 5/3 to both sides of the equation to get:
+
+𝑥 = 𝑥 - 5⁄3 + 1⁄4
+
+Now, we can simplify the right-hand side of the equation:
+
+𝑥 = 𝑥 - 5/12
+
+Next, we can subtract 𝑥 from both sides of the equation to get:
+
+0 = -5/12
+
+Now, we can multiply both sides of the equation by -12 to get:
+
+0 × -12 = 5
+
+So, the solution is:
+
+𝑥 = 0
+
+Therefore, the value of 𝑥 is 0.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>25:   Simplify <sup>1</sup>&frasl;<sub>2b</sub> + <sup>2</sup>&frasl;<sub>b-5</sub></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>5</sup>&frasl;<sub>2b</sub></div>
+                    <div class="option" data-correct="true">B. <sup>(3/2)b</sup>&frasl;<sub>-5</sub></div>
+                    <div class="option" data-correct="false">C. <sup>b</sup>&frasl;<sub>2b</sub></div>
+                    <div class="option" data-correct="false">D. <sup>5+4b</sup>&frasl;<sub>b&#178;-10b</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The given expression is:
+
+1⁄2b + 2⁄b - 5
+
+Our goal is to simplify this expression by combining like terms and eliminating any fractions.
+
+First, let's focus on the fractions. We can combine the two fractions by finding the least common multiple (LCM) of 2 and b, which is b. So, we can rewrite the expression as:
+
+(1/2b) × 1 + (2/b) × 1 - 5
+
+Now, we can simplify the fractions by multiplying both numerator and denominator by b:
+
+(1/2) × 1 × b + (2/1) × 1 × b - 5
+
+This simplifies to:
+
+(1/2b) × b + (2/1) × b - 5
+
+Now, we can combine like terms:
+
+(b/2) + 2b - 5
+
+Finally, we can combine the two terms with a variable (b):
+
+(3/2)b - 5</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>26: Which of the following inequalities represents the number line shown below?</p><br><img src="6.png" alt="Math Image"></p>
+
+                <div class="options">
+                    <div class="option" data-correct="true">A. x ≤ 2</div>
+                    <div class="option" data-correct="false">B.  x < 2</div>
+                    <div class="option" data-correct="false">C. x > 2</div>
+                    <div class="option" data-correct="false">D. x ≥ 2</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">≤ 2</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>27:  Solve the equation: <sup>y-3</sup>&frasl;<sub>3</sub> - <sup>y</sup>&frasl;<sub>2</sub> = 0</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. -3</div>
+                    <div class="option" data-correct="false">B. -4</div>
+                    <div class="option" data-correct="true">C. 5</div>
+                    <div class="option" data-correct="false">D.  -8</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's solve the equation step by step.
+
+Given equation: y - 3/3 - y/2 = 0
+
+First, we can combine the fractions on the left side of the equation:
+
+y - (1/1) - (3/2) = 0
+
+Now, we can simplify the fractions by multiplying both numerator and denominator by 2:
+
+y - 1 - (3/2) × 1 = 0
+
+This simplifies to:
+
+y - 1 - 3/2 = 0
+
+Next, we can combine the constant terms on the left side of the equation:
+
+y - (1 + 3/2) = 0
+
+Now, we can simplify the fraction by multiplying both numerator and denominator by 2:
+
+y - (2 + 3) = 0
+
+This simplifies to:
+
+y - 5 = 0
+
+Finally, we can add 5 to both sides of the equation to solve for y:
+
+y = 5
+</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <img src="7.png"><br>
+
+                <p>28:  Find the value of p from the table above.. </p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 4.2</div>
+                    <div class="option" data-correct="true">B. 5.8</div>
+                    <div class="option" data-correct="false">C. 4.6</div>
+                    <div class="option" data-correct="false">D. 5.4</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the value of p, we need to substitute x = -2 and the equation 2x + 5y = 25 into the table.
+
+From the table, we know that:
+
+x = -2, y = p
+
+Substituting these values into the equation, we get:
+
+2(-2) + 5p = 25
+
+Simplifying the equation, we get:
+
+-4 + 5p = 25
+
+Adding 4 to both sides of the equation, we get:
+
+5p = 29
+
+Dividing both sides of the equation by 5, we get:
+
+p = 29/5
+
+p = 5.8
+
+So, the value of p is 5.8.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>29:  Determine the value of q.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 2</div>
+                    <div class="option" data-correct="false">B. 3</div>
+                    <div class="option" data-correct="false">C. 4</div>
+                    <div class="option" data-correct="true">D. 5</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the value of q, we need to substitute x = 0 and the equation 2x + 5y = 25 into the table.
+
+From the table, we know that:
+
+x = 0, y = q
+
+Substituting these values into the equation, we get:
+
+2(0) + 5q = 25
+
+Simplifying the equation, we get:
+
+0 + 5q = 25
+
+Subtracting 0 from both sides of the equation, we get:
+
+5q = 25
+
+Dividing both sides of the equation by 5, we get:
+
+q = 25/5
+
+q = 5
+
+So, the value of q is 5.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>30:  Calculate the value of 2q – r</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 1.2</div>
+                    <div class="option" data-correct="false">B. 3.2</div>
+                    <div class="option" data-correct="false">C. 6.2</div>
+                    <div class="option" data-correct="true">D. 5.4</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> We know the values of q and r from the table:
+
+q = 5
+r = ?
+
+We also know that x = 1, y = 4.6, and the equation 2x + 5y = 25:
+
+2(1) + 5(4.6) = 25
+
+Simplifying the equation, we get:
+
+2 + 23 = 25
+
+Combining like terms, we get:
+
+25 = 25
+
+This equation is true, so we can conclude that r = 4.6.
+
+Now, we can calculate the value of 2q - r:
+
+2q - r = 2(5) - 4.6
+= 10 - 4.6
+= 5.4
+
+So, the value of 2q - r is 5.4 </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>31:  What is the value of p + q + r?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 5.6</div>
+                    <div class="option" data-correct="false">B. 8.6</div>
+                    <div class="option" data-correct="false">C. 9.6</div>
+                    <div class="option" data-correct="true">D. 12.6</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">We know the values of p, q, and r from the table:
+
+p = 3
+q = 5
+r = 4.6
+
+To calculate the value of p + q + r, we can add the values of p, q, and r together:
+
+p + q + r = 3 + 5 + 4.6
+= 12.6
+
+So, the value of p + q + r is 12.6.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>32:   A pair of trousers costs N1,600.00 and a pair of shoes costs Nq. If the two cost N2,800.00 altogether, what is the cost of the pair of shoes?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A.  N1,200.00</div>
+                    <div class="option" data-correct="false">B.  N1,300.00</div>
+                    <div class="option" data-correct="false">C.  N1,450.00</div>
+                    <div class="option" data-correct="false">D.  N1,600.00</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's start by using the information given to us: the cost of the trousers is N1,600.00 and the cost of the shoes is Nq.
+
+We are also told that the total cost of the trousers and shoes together is N2,800.00. This means that we can set up an equation:
+
+1,600 + q = 2,800
+
+To solve for q, we can subtract 1,600 from both sides of the equation:
+
+q = 2,800 - 1,600
+= 1,200
+
+So, the cost of the pair of shoes is N1,200.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>33:  Find the sum of the mode and median of the following set of numbers: 2, 3, 2, 1, 3, 3.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  2</div>
+                    <div class="option" data-correct="false">B.  3</div>
+                    <div class="option" data-correct="false">C.   4</div>
+                    <div class="option" data-correct="true">D.  5</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A nice statistics problem!
+
+To find the mode, median, and sum of the mode and median, we need to follow these steps:
+
+1. Find the mode:
+The mode is the value that appears most frequently in the set. In this case, the value 3 appears three times, which is more than any other value. Therefore, the mode is 3.
+
+2. Find the median:
+To find the median, we need to arrange the numbers in order from smallest to largest: 1, 2, 2, 3, 3, 3.
+
+Since there are an even number of values (6), the median is the average of the two middle values. The two middle values are 2 and 2. So, the median is:
+
+Median = (2 + 2) / 2 = 2
+
+3. Find the sum of the mode and median:
+Now that we have found the mode (3) and median (2), we can add them together:
+
+Sum = Mode + Median = 3 + 2 = 5
+
+So, the sum of the mode and median is 5.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+             <p>34:    Find the mean of 4, 2, 1, 5, 3, 5, 1.</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 3.14</div>
+                    <div class="option" data-correct="false">B. 4.1</div>
+                    <div class="option" data-correct="false">C. 4.3</div>
+                    <div class="option" data-correct="false">D. 5.2</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the mean, we need to follow these steps:
+
+1. Add up all the numbers:
+
+4 + 2 + 1 + 5 + 3 + 5 + 1 = 22
+
+2. Count the number of values (in this case, there are 7 values):
+
+n = 7
+
+3. Divide the sum by the count:
+
+Mean = 22 / 7 = 3.14
+
+So, the mean of the given numbers is approximately 3.14.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+             <p>35:    Which of these has the same meaning as arithmetic average?  </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. Mean</div>
+                    <div class="option" data-correct="false">B. Median</div>
+                    <div class="option" data-correct="false">C. Mode</div>
+                    <div class="option" data-correct="false">D. Range</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">The term "arithmetic average" is synonymous with the term "mean". So, in the context of statistics, "mean" and "arithmetic average" have the same meaning. They both refer to the sum of the values divided by the number of values.</div>
+            </div>
+         <div id="quiz">
+            <div class="question"> 
+            <div id="quiz">
+            <div class="question">
+                <p><b>Use the information below to answer questions 36 and 37.</b></p><br>
+                    <p><b>8 teams were involved in a football and hockey competition. Their goals in both football and hockey are in the table below:</b></p>
+                    <br>
+                    <img src="8.png" alt="Math Image"></p>
+
+                <p>36:  What is the total goals scored in Hockey?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 9</div>
+                    <div class="option" data-correct="false">B. 10</div>
+                    <div class="option" data-correct="true">C. 32</div>
+                    <div class="option" data-correct="false">D.27</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's find the total goals scored in Hockey by adding up the goals for each team:
+
+Hockey = 8, 5, 9, 3, 1, 2, 0, 4
+
+Add up the goals:
+8 + 5 = 13
+13 + 9 = 22
+22 + 3 = 25
+25 + 1 = 26
+26 + 2 = 28
+28 + 0 = 28
+28 + 4 = 32
+
+So, the total goals scored in Hockey is 32.</div>
+            </div>
+         </div> 
+         <div id="quiz">
+            <div class="question"> 
+                <p>37: Which team scored the highest number of goals in the competition? </p>
+                <div class="options">
+                    <div class="option" data-correct="true">A.  F</div>
+                    <div class="option" data-correct="false">B.  G</div>
+                    <div class="option" data-correct="false">C. A</div>
+                    <div class="option" data-correct="false">D. B</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the team that scored the highest number of goals in the competition, we need to compare the total goals scored by each team in both football and hockey.
+
+Let's add up the goals for each team in both football and hockey:
+
+Team A: 3 (football) + 8 (hockey) = 11
+Team B: 2 (football) + 5 (hockey) = 7
+Team C: 0 (football) + 9 (hockey) = 9
+Team D: 3 (football) + 3 (hockey) = 6
+Team E: 5 (football) + 1 (hockey) = 6
+Team F: 8 (football) + 2 (hockey) = 10
+Team G: 5 (football) + 0 (hockey) = 5
+Team H: 1 (football) + 4 (hockey) = 5
+
+The team that scored the highest number of goals in the competition is Team F with a total of 10 goals.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">  
+                <p>38: What is the mode of the following set of numbers?<br>10, 10, 7, 13, 13, 15, 12, 11, 11, 10, 9, 13, 8, 7, 8, 9, 10.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 4</div>
+                    <div class="option" data-correct="false">B. 9</div>
+                    <div class="option" data-correct="true">C. 10</div>
+                    <div class="option" data-correct="false">D. 11</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">To find the mode of the set of numbers, we need to identify the number that appears most frequently.
+
+Let's count the occurrences of each number:
+
+* 10: 4 times
+* 7: 2 times
+* 13: 3 times
+* 11: 2 times
+* 12: 1 time
+* 15: 1 time
+* 9: 2 times
+* 8: 2 times
+
+The number that appears most frequently is 10, which appears 4 times. Therefore, the mode of the set of numbers is 10.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p><b>The diagram below shows the distribution of students in a Junior Secondary School <br>Use the information to answer questions 39 and 40.</b></p><br>
+
+                <img src="9.png" alt="Math Image">
+
+                <p>39:  What fraction of the whole school is JSS 1?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 28.7%</div>
+                    <div class="option" data-correct="false">B. 5.7%</div>
+                    <div class="option" data-correct="false">C. 10.7%</div>
+                    <div class="option" data-correct="true">D. 8.7%</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Since we don't have the exact value of JSS 1, we can't determine the exact fraction of the whole school it represents. However, we can make an educated guess if we assume that the diagram is a representation of the total number of students in the school.
+
+If we let JSS 1 = x, then we can express the total number of students in the school as:
+
+x + 110 + 100
+
+To find the fraction of the whole school that JSS 1 represents, we can divide the value of JSS 1 (x) by the total number of students and simplify:
+
+Fraction of JSS 1 = x / (x + 110 + 100)
+
+Since we don't know the value of x, we can't simplify this fraction further. If you could provide the actual value of JSS 1, we could calculate the exact fraction.
+
+However, if you're looking for a rough estimate, you could assume that JSS 1 represents a small percentage of the whole school. For example, if JSS 1 had a value of 20, then the fraction would be:
+
+Fraction of JSS 1 = 20 / (20 + 110 + 100) = 20 / 230 ≈ 0.087 or about 8.7%
+
+Keep in mind that this is just a rough estimate, and the actual value of JSS 1 could be significantly different.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+           <p>40:  if there are 180 students in the school, how many are in JSS 2?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 125</div>
+                    <div class="option" data-correct="false">B. 75</div>
+                    <div class="option" data-correct="true">C. 80</div>
+                    <div class="option" data-correct="false">D. 50</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Now that we have the total number of students in the school, we can use the information provided to find the number of students in JSS 2.
+
+We know that JSS 2 has a value of 110 degrees, but we're not sure what that represents. However, we can assume that it's a numerical value, not an angle or measurement. Let's use the value as a numerical value.
+
+The total number of students in the school is 180, and we're looking for the number of students in JSS 2. We can set up an equation using the information provided:
+
+JSS 2 + JSS 3 = 180 - JSS 1
+
+We're not given the value of JSS 1, but we can substitute the values given for JSS 2 and JSS 3:
+
+JSS 2 + 100 = 180 - ?
+
+Since JSS 2 has a value of 110, we can substitute that value into the equation:
+
+110 + 100 = 180 - ?
+
+Combine like terms:
+
+210 = 180 - ?
+
+Subtract 180 from both sides:
+
+30 = ?
+
+So, JSS 1 has a value of 30. However, since we're not looking for the value of JSS 1, we can ignore this result.
+
+To find the number of students in JSS 2, we can subtract the value of JSS 3 from the total number of students:
+
+Number of students in JSS 2 = Total number of students - Number of students in JSS 3
+= 180 - 100
+= 80
+
+Therefore, there are 80 students in JSS 2.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>41:  The mean age of five pupils whose ages are 6, 9, x, 7, 8 is 8 years. Find the median age.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A.  6 years</div>
+                    <div class="option" data-correct="false">B. 7 years </div>
+                    <div class="option" data-correct="true">C.  8 years</div>
+                    <div class="option" data-correct="false">D. 9 years</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A nice problem! Let's break it down step by step.
+
+Given:
+
+* The mean age of 5 pupils is 8 years.
+* The ages of the pupils are: 6, 9, x, 7, 8.
+
+We need to find the median age.
+
+Step 1: Find the mean age
+
+To find the mean age, we add up all the ages and divide by 5:
+
+(6 + 9 + x + 7 + 8) / 5 = 8
+
+Multiply both sides by 5 to eliminate the fraction:
+
+6 + 9 + x + 7 + 8 = 40
+
+Combine like terms:
+
+30 + x = 40
+
+Subtract 30 from both sides:
+
+x = 10
+
+So, the unknown age x is 10.
+
+Step 2: Find the median age
+
+To find the median age, we need to arrange the ages in order from smallest to largest:
+
+6, 7, 8, 9, 10
+
+Since there are an odd number of pupils (5), the middle value is the median. In this case, the median age is:
+
+8 years
+
+Therefore, the median age of the five pupils is 8 years.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>42:  Four students have a mean weight of 26kg. When they are joined by a fifth student, their mean weight decreased to 24kg. What is the weight of the fifth students?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 26kg</div>
+                    <div class="option" data-correct="true">B. 16kg</div>
+                    <div class="option" data-correct="false">C. 24kg</div>
+                    <div class="option" data-correct="false">D. 18kg;</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Another great problem! Let's solve it step by step.
+
+Given:
+
+* The mean weight of 4 students is 26 kg.
+* The mean weight of 5 students is 24 kg.
+* We need to find the weight of the 5th student.
+
+Step 1: Find the total weight of the 4 students
+
+Since the mean weight of the 4 students is 26 kg, we can multiply the number of students by the mean weight to find the total weight:
+
+4 students × 26 kg = 104 kg
+
+Step 2: Find the total weight of all 5 students
+
+When the 5th student joins, the mean weight decreases to 24 kg. We can multiply the number of students (5) by the mean weight (24) to find the total weight:
+
+5 students × 24 kg = 120 kg
+
+Step 3: Find the difference in total weight
+
+The total weight of the 4 students is 104 kg, and the total weight of all 5 students is 120 kg. To find the difference, subtract the smaller value from the larger value:
+
+120 kg - 104 kg = 16 kg
+
+This means that the weight of the additional student (the 5th student) is equal to the difference in total weight:
+
+Weight of the 5th student = 16 kg
+
+Therefore, the weight of the fifth student is 16 kg.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>43:  Jones rolls a fair die once. What is the probability of obtaining an odd number?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>1</sup>&frasl;<sub>5</sub></div>
+                    <div class="option" data-correct="false">B. <sup>1</sup>&frasl;<sub>4</sub></div>
+                    <div class="option" data-correct="true">C. <sup>1</sup>&frasl;<sub>2</sub></div>
+                    <div class="option" data-correct="false">D. <sup>3</sup>&frasl;<sub>5</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A simple probability problem!
+
+Given:
+
+* Jones rolls a fair die once.
+* We want to find the probability of obtaining an odd number.
+
+Fair die:
+
+A fair die has 6 faces, labeled 1 to 6.
+
+Odd numbers on the die:
+
+The odd numbers on the die are 1, 3, and 5.
+
+Total number of possible outcomes:
+
+There are 6 possible outcomes when rolling a fair die: 1, 2, 3, 4, 5, and 6.
+
+Number of favorable outcomes:
+
+There are 3 favorable outcomes (1, 3, and 5) that result in an odd number.
+
+Probability formula:
+
+Probability = Number of favorable outcomes / Total number of possible outcomes
+
+Probability of obtaining an odd number = 3/6
+
+Simplify the fraction:
+
+Probability = 1/2
+
+So, the probability of obtaining an odd number when rolling a fair die is 1/2 or 50%.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>44:  A fair coin is tossed once, what is the probability of having a tail?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>1</sup>&frasl;<sub>6</sub></div>
+                    <div class="option" data-correct="false">B. <sup>1</sup>&frasl;<sub>3</sub></div>
+                    <div class="option" data-correct="true">C. <sup>1</sup>&frasl;<sub>2</sub></div>
+                    <div class="option" data-correct="false">D. <sup>2</sup>&frasl;<sub>3</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> Another simple probability problem!
+
+Given:
+
+* A fair coin is tossed once.
+* We want to find the probability of having a tail.
+
+Fair coin:
+
+A fair coin has 2 sides, labeled heads (H) and tails (T).
+
+Number of possible outcomes:
+
+There are 2 possible outcomes when tossing a fair coin: heads (H) or tails (T).
+
+Number of favorable outcomes:
+
+There is 1 favorable outcome (T) that results in a tail.
+
+Probability formula:
+
+Probability = Number of favorable outcomes / Total number of possible outcomes
+
+Probability of having a tail = 1/2
+
+So, the probability of having a tail when tossing a fair coin is 1/2 or 50%.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>45: The scores of selected students in a mock examination are given as 43, 13, 57, 49, 63, 84 and 75. What is the range of the marks?</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 13</div>
+                    <div class="option" data-correct="false">B. 32</div>
+                    <div class="option" data-correct="true">C. 71</div>
+                    <div class="option" data-correct="false">D. 84</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A problem about finding the range of marks!
+
+Given:
+
+* The scores of selected students in a mock examination are:
+    + 43
+    + 13
+    + 57
+    + 49
+    + 63
+    + 84
+    + 75
+
+Range:
+
+The range of a set of data is the difference between the largest and smallest values in the set.
+
+Step-by-step solution:
+
+1. Find the smallest value (minimum) in the set:
+    Minimum = 13
+2. Find the largest value (maximum) in the set:
+    Maximum = 84
+3. Calculate the range:
+    Range = Maximum - Minimum
+    = 84 - 13
+    = 71
+
+So, the range of the marks is 71.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>46:  The following is the distribution of the number of eggs laid by 20 hens in one week in a certain poultry farm. Find the range of the distribution.<br><img src="10.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. 10</div>
+                    <div class="option" data-correct="false">B.8</div>
+                    <div class="option" data-correct="false">C. 7</div>
+                    <div class="option" data-correct="true">D. 4</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's break it down step by step!
+
+First, we need to identify the data given:
+
+* The number of eggs laid by each hen (egg = 1, 2, 3, 4, 5)
+* The frequency of each number of eggs laid (frequency = 3, 2, 3, 2, 10)
+
+The range is the difference between the largest and smallest values in the data. To find the range, we need to:
+
+1. Identify the smallest value (minimum): In this case, the smallest value is 1 (egg = 1 has a frequency of 3).
+2. Identify the largest value (maximum): In this case, the largest value is 5 (egg = 5 has a frequency of 10).
+
+Now, let's calculate the range:
+
+Range = Maximum - Minimum
+= 5 - 1
+= 4
+</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>47: The pie chart below shows the distribution of Mr. Tanko’s income in a month.</p><br><img src="11.png" alt="Math Image"> <br>If his monthly salary is N100,000.00, what amount does he spend on education?</p>
+
+                <div class="options">
+                    <div class="option" data-correct="true">A. N98,838.00</div>
+                    <div class="option" data-correct="false">B. 15,000.00</div>
+                    <div class="option" data-correct="false">C. N15,556.00</div>
+                    <div class="option" data-correct="false">D. N25,000.00</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Let's analyze the pie chart!
+
+The pie chart shows the distribution of Mr. Tanko's income in a month, and the given values are:
+
+* Shelter: 56
+* Transportation: 54
+* Education: 108
+* Music: 52
+
+Since the total monthly salary is N100,000.00, we can set up an equation to represent the total amount:
+
+Shelter + Transportation + Education + Music = N100,000.00
+
+We can add up the values given:
+
+56 + 54 + 108 + 52 = ?
+
+Let's calculate the sum:
+
+= 270
+
+Now, we know that the total amount is N100,000.00. To find the amount spent on education, we need to subtract the sum of the other categories from the total amount:
+
+Education = Total Amount - (Shelter + Transportation + Music)
+= N100,000.00 - (56 + 54 + 52)
+= N100,000.00 - 162
+= N100,000.00 - N162.00
+= N98,838.00
+
+So, Mr. Tanko spends N98,838.00 on education.</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>48:  .Find the median of the following numbers: 16, 8, 12, 10, 13, 14, 8, 6, 4, 16 and 16.<br>The table below shows the distribution of rainfall in thousands (mm&#179;) from January to May in a particular village.<br><img src="12.png" alt="Math Image"></p></p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 54</div>
+                    <div class="option" data-correct="false">B. 14</div>
+                    <div class="option" data-correct="false">C. 30</div>
+                    <div class="option" data-correct="false">D. 12</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">A great start to our math journey!
+
+**Finding the Median**
+
+To find the median of a set of numbers, we need to first arrange the numbers in order from smallest to largest. Here are the numbers you provided:
+
+4, 6, 8, 8, 10, 12, 13, 14, 16, 16, 16
+
+Now, let's find the median. Since there are 11 numbers (an odd number), the middle value is the median.
+
+To find the median, we can count the numbers:
+
+1. 4
+2. 6
+3. 8
+4. 8
+5. 10
+6. 12
+7. **13** (middle value)
+8. 14
+9. 16
+10. 16
+11. 16
+
+The median is the middle value, which is **13**.
+
+**Finding the Mean**
+
+If you're interested in finding the mean (also known as the average) of the rainfall data, we can do that too!
+
+The formula for finding the mean is:
+
+Mean = (Sum of all values) / (Number of values)
+
+Let's calculate the mean for the rainfall data:
+
+month = jan, feb, mar, apr, may
+amount of rainfall = 35, 42, 50, 65,78
+
+First, let's add up all the values:
+
+35 + 42 + 50 + 65 + 78 = 270
+
+Now, we divide the sum by the number of values:
+
+270 ÷ 5 = **54**
+
+So, the mean rainfall for January to May is **54** mm³.
+ </div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>49:   What is the percentage of the rainfall in February in that village?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A. 15.56%</div>
+                    <div class="option" data-correct="false">B. 18.52% </div>
+                    <div class="option" data-correct="false">C.  24.07%</div>
+                    <div class="option" data-correct="false">D. 28.89%</div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden">Another great question!
+
+To find the percentage of the rainfall in February, we need to know the total rainfall in February and the total rainfall for the entire period (January to May).
+
+According to the data, the rainfall in February is **42** mm³.
+
+The total rainfall for January to May is **270** mm³, which we calculated earlier.
+
+To find the percentage of the rainfall in February, we can use the following formula:
+
+Percentage = (Value of February rainfall / Total rainfall) × 100
+
+Plugging in the values, we get:
+
+Percentage = (42 / 270) × 100
+= 0.155555556 (approximately)
+= **15.56%**
+
+So, the percentage of the rainfall in February is approximately **15.56%** of the total rainfall from January to May.
+</div>
+            </div>
+         </div>
+         <div id="quiz">
+            <div class="question">
+                <p>50: Find the probability of obtaining an even number when a fair die is thrown once.</p>
+                <div class="options">
+                    <div class="option" data-correct="false">A. <sup>3</sup>&frasl;<sub>4</sub></div>
+                    <div class="option" data-correct="false">B. <sup>2</sup>&frasl;<sub>3</sub></div>
+                    <div class="option" data-correct="true">C. <sup>1</sup>&frasl;<sub>2</sub></div>
+                    <div class="option" data-correct="false">D. <sup>1</sup>&frasl;<sub>4</sub></div>
+                </div>
+                <button class="check-answer hidden">Check Answer</button>
+                <div class="answer hidden"> A classic probability problem!
+
+When a fair die is thrown, there are 6 possible outcomes:
+
+1, 2, 3, 4, 5, and 6
+
+To find the probability of obtaining an even number, we need to count the number of favorable outcomes (even numbers) and divide it by the total number of outcomes.
+
+The favorable outcomes are:
+
+2, 4, and 6
+
+There are 3 even numbers out of the 6 possible outcomes.
+
+So, the probability of obtaining an even number when a fair die is thrown once is:
+
+Probability = (Number of favorable outcomes) / (Total number of outcomes)
+= 3/6
+= **1/2**
+
+Alternatively, you can write the probability as a decimal or a percentage:
+
+Probability = 0.5 (or) 50%
+
+Therefore, the probability of obtaining an even number when a fair die is thrown once is **1/2** or **50%**.</div>
+            </div>
+         </div>
+         </div>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="progress">Progress: 0/20</div>
+
+
+    <script>
+        var score = 0;
+        var progress = 0;
+
+
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            progress++;
+            $("#progress").text("Progress: " + progress + "/20");
+        });
+
+
+        $(".check-answer").click(function() {
+            $(this).siblings(".answer").removeClass("hidden");
+        });
+    </script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+<!-- button -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.footer-widget ul li {
+display: inline-block;
+float: right;
+width: 50%;
+margin-bottom: 10px;
+}
+.footer-widget ul li a:hover{
+color: darkcyan;
+}
+.footer-widget ul li a {
+color: lightblue;
+text-transform: capitalize;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+</style>
+</div>
+</div>
+<div class="footer-content pt-5 pb-5">
+<div class="row">
+
+
+
+
+<!--stop -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+<a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+<a href="x.com"><i class="fab fa-twitter"></i></i></a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">about</a></li>
+<li><a href="#">courses</a></li>
+<li><a href="#">classroom</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">blog</a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+<div class="footer-widget">
+<div class="footer-widget-heading">
+
+
+</div>
+
+
+
+
+</div>
+</footer>
+</html>
