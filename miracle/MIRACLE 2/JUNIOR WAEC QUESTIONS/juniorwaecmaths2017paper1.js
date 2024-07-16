@@ -23,7 +23,7 @@ let questions = [
     choice4: "<Sector>",
     choice5: "<Segment>",
     answer: 2
-  },
+  }, 
   <div class="question-number"><strong>2.</strong></div> 
   {
     question:"Find the value of -5- (-20).",
