@@ -3,38 +3,19 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <style>
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-body {
-  background-color: #efefef;
-}
-
-.logo{
-  margin: 40px auto;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 90px;
-  color: #121212;
-  text-align: center;
-  letter-spacing: 5px;
-  text-shadow: 0 2px 1px #747474, 
-      -1px 3px 1px #767676, 
-      -2px 5px 1px #787878, 
-      -3px 7px 1px #7a7a7a,
-      -4px 9px 1px #7f7f7f,
-      -5px 11px 1px #838383,
-      -6px 13px 1px #878787,
-      -7px 15px 1px #8a8a8a, 
-      -8px 17px 1px #8e8e8e,
-      -9px 19px 1px #949494,
-      -10px 21px 1px #989898,
-      -11px 23px 1px #9f9f9f,
-      
-}
     h1{
         color: #fff;
         font-style: italic;
     }
 * {box-sizing: border-box;}
+.answered {
+    background-color: #f0f0f0; /* Light grey background for answered questions */
+}
+
+.selected {
+    font-weight: bold; /* Bold font for selected option */
+}
+
 body {
  margin: 0;
  font-family: Arial, Helvetica, sans-serif;
@@ -78,106 +59,21 @@ body {
  float: none;
  }
 }
-.question {
-    background-color: #ffffff; /* White background for the question area */
-    padding: 20px;
-    border: 1px solid #ddd; /* Light grey border */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 20px; /* Space between questions */
-}
-
-.option:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
-}
-</style>
-</head>
-<body>
-<div class="header">
- <a href="#default" class="logo">DECIPHER-ACADEMY</a>
- <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
- <a href="x.com"><i class="fab fa-twitter"></i></i></a>
- <div class="header-right">
- <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
- <a href="#contact">About</a>
- <a href="#courses">Courses</a>
- <a href="#classroom">Classrooms</a>
- <a href="#blog">Blog</a>
- </div>
-</div>
-</body>
-    <style>
-
-
-       *  {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* Quiz container styles */
-#quiz{
-    background-color: #f9f9f9;
-    padding: 20px;
+#subject-button.hidden, .container {
+    border: 1px solid white;
+    background-color: #34db95;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    color: #333;
+    padding: 10px 20px;
     border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: center;
-}
-
-
-#question {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-
-.option {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+    box-shadow: 8px 8px 15px #a7a7a7,
+                -8px -8px 15px #ffffff;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease;
 }
-
-
-#answer {
-    margin-top: 20px;
-}
-.answer{
-    border: 1px solid blue;
-    background-color: green;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-
-
-
-/* Score and progress bar styles */
-#score {
-    font-size: 16px;
-    margin-top: 20px;
-    color: #f9f9f9;
-  
-}
-#progress{
-    color: #f9f9f9;
-float: right;
-}
-
-
-#progressBar {
-width: 100%;
-height: 20px;
-margin-top: 10px;
-color: #f9f9f9;
-
-}
-       
-.correct { background-color: green; }
-.incorrect { background-color: red; }
-.hidden {display: none;}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -187,7 +83,7 @@ color: #f9f9f9;
     Each question is followed by four options lettered A to D. Find the correct option for each question.
 
     <div class="question"> <div class="question-number"><strong>1.</strong></div>  
-<p>: The ability of organisms to maintain a constant internal environment is known as</p>
+<p class="question-number">he ability of organisms to maintain a constant internal environment is known as</p>
 <div class="options">
 <div class="option" data-correct="false">A.diuresis </div>
 <div class="option" data-correct="false">B. endosmosis</div>
@@ -229,12 +125,26 @@ color: #f9f9f9;
                     D. plasmolysis - Refers to the process in which cells lose water in a hypertonic solution.
                 </div>
 
-            </div></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+  </div>
+
+            </div>
+        </div>
+
 <div id="quiz">
 <div class="question">
-    <p>Instruction: The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</p>
+    <div class="question-number"><strong>Instruction</strong></div>             
+    <div class="question-number"><strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.
+    </strong></div>             
     <div class="question"> <div class="question-number"><strong>2.</strong></div>             
-    <p>: The likely reason why the student failed the test was that the</p>
+    <p class="question-number">he likely reason why the student failed the test was that the</p>
             <div class="options">
                 <div class="option" data-correct="true">A. labels were wrong and the guidelines were not touching the structures</div>
                 <div class="option" data-correct="false">B. net venation shown were few, rough, not properly drawn and wrongly placed</div>
@@ -277,10 +187,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-      <div id="quiz">
+        </div>
+
+            </div>
+        </div>
+      
+            <div id="quiz">
         <div class="question">
             <div class="question"> <div class="question-number"><strong>3.</strong></div>  
-            <p>:Which other features of the diagram, if shown, would have earned the student more marks? The </p>
+            <p class="question-number">Which other features of the diagram, if shown, would have earned the student more marks? The </p>
             <div class="options">
                 <div class="option" data-correct="false">A. colour and size</div>
                 <div class="option" data-correct="true">B. title and magnification.</div>
@@ -324,11 +239,16 @@ color: #f9f9f9;
 
             </div>
    
-       <div id="quiz">
+         </div>
+
+            </div>
+        </div>
+       
+            <div id="quiz">
         <div class="question">
-    <p>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</p>
+    <p class="question-number">nstruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</p>
     <div class="question"> <div class="question-number"><strong>4.</strong></div>          
-    <p>: Which group of organisms is illustrated? </p>
+    <p class="question-number"> Which group of organisms is illustrated? </p>
             <div class="options">
                 <div class="option" data-correct="true">A. bacteria</div>
                 <div class="option" data-correct="false">B. viruses</div>
@@ -371,10 +291,15 @@ color: #f9f9f9;
                 </div>
 
             </div>>
-      <div id="quiz">
+        </div>
+
+            </div>
+        </div>
+      
+            <div id="quiz">
         <div class="question">
             <div class="question"> <div class="question-number"><strong>5.</strong></div>  
-            <p>: In which of the illustrated forms docs the organism that causes cholera exist?</p>
+            <p class="question-number"> In which of the illustrated forms docs the organism that causes cholera exist?</p>
             <div class="options">
                 <div class="option" data-correct="true">A. I</div>
                 <div class="option" data-correct="false">B. II</div>
@@ -417,16 +342,21 @@ color: #f9f9f9;
                 </div>
 
             </div>
-      <div id="quiz">
+        </div>
+
+            </div>
+        </div>
+      
+            <div id="quiz">
         <div class="question">
              
-<p>Instruction: Study the list of organisms below and use them to answer questions 6 and 7.</p>
+<p class="question-number">nstruction: Study the list of organisms below and use them to answer questions 6 and 7.</p>
         I	- Hydra
         II	- Owl
         III	- Snake
         IV	- Snail
         <div class="question"> <div class="question-number"><strong>6.</strong></div> 
-    <p>: Arrangement of the organisms in order of increasing complexity is </p>
+    <p class="question-number"> Arrangement of the organisms in order of increasing complexity is </p>
             <div class="options">
                 <div class="option" data-correct="false">A. I – II – III – IV</div>
                 <div class="option" data-correct="false">B. II – III – I – IV</div>
@@ -465,10 +395,15 @@ color: #f9f9f9;
                                    </div>
 
             </div>
-      <div id="quiz">
+        </div>
+
+            </div>
+        </div>
+      
+            <div id="quiz">
         <div class="question">
             <div class="question"> <div class="question-number"><strong>7.</strong></div>  
-            <p>:The Phylum of the organism labelled IV is </p>
+            <p class="question-number">The Phylum of the organism labelled IV is </p>
             <div class="options">
                 <div class="option" data-correct="false">A. Coelentcrata</div>
                 <div class="option" data-correct="false">B. Platyhclminthes</div>
@@ -504,12 +439,17 @@ color: #f9f9f9;
                                    </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 
-<p>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</p>
+<p class="question-number">nstruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</p>
 <div class="question"> <div class="question-number"><strong>8.</strong></div>           
-<p>: In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar?</p>
+<p class="question-number"> In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. I </div>
                     <div class="option" data-correct="true">B. II </div>
@@ -552,10 +492,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-        <div id="quiz">
+          </div>
+
+            </div>
+        </div>
+        
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>9.</strong></div>  
-                <p>: 	The oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labelled </p>
+                <p class="question-number"> 	The oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labelled </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. I </div>
                     <div class="option" data-correct="false">B. II. </div>
@@ -598,10 +543,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-        <div id="quiz">
+          </div>
+
+            </div>
+        </div>
+        
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>10.</strong></div>  
-                <p>: An example of a process that involves osmosis is the</p>
+                <p class="question-number"> An example of a process that involves osmosis is the</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. movement of digested food from ileum into blood capillaries.  </div>
                     <div class="option" data-correct="false">B. translocation of starch from leaves to all parts of a plant.  </div>
@@ -645,10 +595,15 @@ color: #f9f9f9;
                 </div>
 
             </div>>
-          <div id="quiz">
+            </div>
+
+            </div>
+        </div>
+          
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>11.</strong></div>                  
-       <p>: Growth in animals differs from that in plants because growth in </p>
+       <p class="question-number"> Growth in animals differs from that in plants because growth in </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. plants is intercalary  </div>
                     <div class="option" data-correct="false">B. animals is apical</div>
@@ -693,11 +648,16 @@ color: #f9f9f9;
                 </div>
 
             </div>
-          <div id="quiz">
+            </div>
+
+            </div>
+        </div>
+          
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>12.</strong></div>  
-                <p>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</p>
-            <p>: The illustrated structure is a part of the</p>
+                <p class="question-number">nstruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</p>
+            <p class="question-number"> The illustrated structure is a part of the</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. cervical vertebrae  </div>
                     <div class="option" data-correct="true">B. axial skeleton </div>
@@ -740,10 +700,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-          <div id="quiz">
+            </div>
+
+            </div>
+        </div>
+          
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>13.</strong></div>  
-                <p>: 	An individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected? </p>
+                <p class="question-number"> 	An individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Lumbar, eye and teeth </div>
                     <div class="option" data-correct="false">B. liar, brain and hinge join </div>
@@ -776,10 +741,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-          <div id="quiz">
+            </div>
+
+            </div>
+        </div>
+          
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>14.</strong></div>  
-          <p>: The tricuspid valve is located between the?</p>
+          <p class="question-number"> The tricuspid valve is located between the?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. left auricle and left ventricle </div>
                     <div class="option" data-correct="true">B. 	right auricle and the superior vena cava </div>
@@ -824,11 +794,16 @@ color: #f9f9f9;
                 </div>
 
             </div>
-          <div id="quiz">
+            </div>
+
+            </div>
+        </div>
+          
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>15.</strong></div>  
-                <p>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</p> 
-                <p>: 	The parts labelled I, II, III and IV respectively are</p>
+                <p class="question-number">nstruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</p> 
+                <p class="question-number"> 	The parts labelled I, II, III and IV respectively are</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. larynx, bronchus, bronchiole and trachea.</div>
                     <div class="option" data-correct="false">B. bronchus, bronchiole, trachea and larynx. </div>
@@ -871,12 +846,17 @@ color: #f9f9f9;
                 </div>
 
             </div>
-        <div id="quiz">
+          </div>
+
+            </div>
+        </div>
+        
+            <div id="quiz">
             <div class="question">
                 
                 The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.
                 <div class="question"> <div class="question-number"><strong>16.</strong></div>          
-                <p>: 	Which of the following hormones is wrongly paired with its secretory organ?</p>
+                <p class="question-number"> 	Which of the following hormones is wrongly paired with its secretory organ?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A.heart </div>
                     <div class="option" data-correct="true">B. lung </div>
@@ -919,10 +899,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-        <div id="quiz">
+          </div>
+
+            </div>
+        </div>
+        
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>17.</strong></div>  
-                <p>: Which of the following hormones is wrongly paired with its secretory organ? </p>
+                <p class="question-number"> Which of the following hormones is wrongly paired with its secretory organ? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Insulin and pancreas</div>
                     <div class="option" data-correct="false">B. Oestrogen and ovary </div>
@@ -968,10 +953,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>18.</strong></div>  
-                <p>: 	The eye defect caused by an uneven curvature of the cornea or lens or both is </p>
+                <p class="question-number"> 	The eye defect caused by an uneven curvature of the cornea or lens or both is </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. myopia </div>
                     <div class="option" data-correct="true">B. astigmatism </div>
@@ -1015,10 +1005,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>19.</strong></div>  
-                <p>: 	The androecium in a flowering plant is a collection of</p>
+                <p class="question-number"> 	The androecium in a flowering plant is a collection of</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. ovules </div>
                     <div class="option" data-correct="false">B. stamens</div>
@@ -1063,10 +1058,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>20.</strong></div>  
-                <p>: 	Placentation in fruits is referred to as the </p>
+                <p class="question-number"> 	Placentation in fruits is referred to as the </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. part of the ovary where the ovules originate and remain till maturity. </div>
                     <div class="option" data-correct="false">B. formation of a single carpel joined at the two edges of an ovule </div>
@@ -1111,10 +1111,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>21.</strong></div>  
-         <p>: 	Which of the following processes does not occur during photosynthesis? </p>
+         <p class="question-number"> 	Which of the following processes does not occur during photosynthesis? </p>
                 <div class="options">
                     <div class="option" data-correct="true">A. 	Carbon (IV) oxide is evolved  </div>
                     <div class="option" data-correct="false">B. water is split</div>
@@ -1158,10 +1163,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>22.</strong></div>  
-                <p>: Stunted growth and small yellow leaves in plants are symptoms of the deficiencies of? </p>
+                <p class="question-number"> Stunted growth and small yellow leaves in plants are symptoms of the deficiencies of? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. sulphur.</div>
                     <div class="option" data-correct="false">B.iron</div>
@@ -1206,10 +1216,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>23.</strong></div>  
-                <p>: The structure that its action could result in choking when talking and eating at the same time is</p>
+                <p class="question-number"> The structure that its action could result in choking when talking and eating at the same time is</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. epiglottis.</div>
                     <div class="option" data-correct="false">B. oesophagus </div>
@@ -1253,10 +1268,15 @@ color: #f9f9f9;
                     **D. Stomach**: The stomach is an organ where food is further broken down and digested after swallowing. It does not prevent choking during eating.
                 </div>
 
-            </div><div id="quiz">
+              </div>
+
+            </div>
+        </div></div>
+            
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>24.</strong></div>  
-                <p>: The food substance that would produce the highest amount of energy is   </p>
+                <p class="question-number"> The food substance that would produce the highest amount of energy is   </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. glucose.</div>
                     <div class="option" data-correct="true">B. fat.</div>
@@ -1301,10 +1321,15 @@ color: #f9f9f9;
                 </div>
 
             </div>iv>
-              <div id="quiz">
+              </div>
+
+            </div>
+        </div>  
+            
+            <div id="quiz">
                 <div class="question">
                     <div class="question"> <div class="question-number"><strong>25.</strong></div>  
-        <p>: Organisms that feed on dead, decaying tissues of other organisms are known as </p>
+        <p class="question-number"> Organisms that feed on dead, decaying tissues of other organisms are known as </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. parasites.</div>
                     <div class="option" data-correct="false">B. autotrophs</div>
@@ -1348,10 +1373,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>26.</strong></div>  
-         <p>: The type of nutrition in which organisms take in solid organic materials into their body is  </p>
+         <p class="question-number"> The type of nutrition in which organisms take in solid organic materials into their body is  </p>
                 <div class="options">
                     <div class="option" data-correct="true">A. holozoic.</div>
                     <div class="option" data-correct="false">B. symbiotic</div>
@@ -1396,10 +1426,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>27.</strong></div>  
-        <p>:The mouth parts of a grasshopper are adapted for</p>
+        <p class="question-number">The mouth parts of a grasshopper are adapted for</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. chewing</div>
                     <div class="option" data-correct="false">B. grinding </div>
@@ -1444,7 +1479,7 @@ color: #f9f9f9;
 
             </div>
             <div class="question"> <div class="question-number"><strong>28.</strong></div> 
-         <p>: A group of organisms belonging to different species that coexist in the same habitat and interact is referred to as</p>
+         <p class="question-number"> A group of organisms belonging to different species that coexist in the same habitat and interact is referred to as</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. population</div>
                     <div class="option" data-correct="false">B. biosphere.</div>
@@ -1489,10 +1524,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-                 <div id="quiz">
+              </div>
+
+            </div>
+        </div>     
+            
+            <div id="quiz">
                  <div class="question">
                     <div class="question"> <div class="question-number"><strong>29.</strong></div>   
-       <p>: Which of the following factors is the main problem facing xerophytes?</p>
+       <p class="question-number"> Which of the following factors is the main problem facing xerophytes?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Conservation of excess water. </div>
                     <div class="option" data-correct="false">B. Competition for sunlight  .</div>
@@ -1536,10 +1576,15 @@ color: #f9f9f9;
                 </div> 
 
             </div>
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>30.</strong></div>  
-    <p>:Fishes survive in water mainly because they possess </p>
+    <p class="question-number">Fishes survive in water mainly because they possess </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. streamlined body</div>
                     <div class="option" data-correct="false">B. scales</div>
@@ -1583,10 +1628,15 @@ color: #f9f9f9;
                 </div>
 
             </div>       
-         <div id="quiz">
+           </div>
+
+            </div>
+        </div>
+         
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>31.</strong></div>  
-                <p>: Which of the following instruments is not used in measuring abiotic factors in a habitat?</p>
+                <p class="question-number"> Which of the following instruments is not used in measuring abiotic factors in a habitat?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Thermometer   </div>
                     <div class="option" data-correct="true">B. microscope </div>
@@ -1631,10 +1681,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-                <div id="quiz">
+              </div>
+
+            </div>
+        </div>    
+            
+            <div id="quiz">
                 <div class="question">
                     <div class="question"> <div class="question-number"><strong>32.</strong></div>    
-         <p>:Which of the following soil types have a high capillarity? </p>
+         <p class="question-number">Which of the following soil types have a high capillarity? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. sand and clay </div>
                     <div class="option" data-correct="true">B. silt and clay </div>
@@ -1678,10 +1733,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-              <div id="quiz">
+              </div>
+
+            </div>
+        </div>  
+            
+            <div id="quiz">
               <div class="question">
                 <div class="question"> <div class="question-number"><strong>33.</strong></div>      
-<p>: The capturing and digestion of insects by a pitcher plant is a special form of nutrition that  is</p>
+<p class="question-number"> The capturing and digestion of insects by a pitcher plant is a special form of nutrition that  is</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. chemosynthetic </div>
                     <div class="option" data-correct="false">B. saprophytic </div>
@@ -1726,10 +1786,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-              <div id="quiz">
+              </div>
+
+            </div>
+        </div>  
+            
+            <div id="quiz">
               <div class="question">
                 <div class="question"> <div class="question-number"><strong>34.</strong></div>     
-    <p>: Which of the following organisms would be the producer in a food chain?  </p>
+    <p class="question-number"> Which of the following organisms would be the producer in a food chain?  </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. goat</div>
                     <div class="option" data-correct="true">B. maize</div>
@@ -1775,10 +1840,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-                  <div id="quiz">
+              </div>
+
+            </div>
+        </div>      
+            
+            <div id="quiz">
                   <div class="question">
                     <div class="question"> <div class="question-number"><strong>35.</strong></div>  
-<p>:The rate of decomposition of dead organisms is faster in the tropical rainforest than in other bionics because </p>
+<p class="question-number">The rate of decomposition of dead organisms is faster in the tropical rainforest than in other bionics because </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. of consistent cool temperature</div>
                     <div class="option" data-correct="false">B. of the relatively constant daylight. </div>
@@ -1822,12 +1892,17 @@ color: #f9f9f9;
                 </div>
 
             </div>
-             <div id="quiz">
+              </div>
+
+            </div>
+        </div> 
+            
+            <div id="quiz">
              <div class="question">
                   
-        <p>Instruction: The diagrams below are illustrations of organisms in a habitat. Study them and answer questions 36 and 37.</p>
+        <p class="question-number">nstruction: The diagrams below are illustrations of organisms in a habitat. Study them and answer questions 36 and 37.</p>
         <div class="question"> <div class="question-number"><strong>36.</strong></div>       
-        <p>36:	The feeding relationship between the organisms labelled III and IV in the diagrams is</p>
+        <p class="question-number">6:	The feeding relationship between the organisms labelled III and IV in the diagrams is</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. mutualism</div>
                     <div class="option" data-correct="false">B. parasitism </div>
@@ -1870,10 +1945,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-               <div id="quiz">
+              </div>
+
+            </div>
+        </div>   
+            
+            <div id="quiz">
                <div class="question">
                 <div class="question"> <div class="question-number"><strong>37.</strong></div>     
-         <p>: The producer in the diagrams is? </p>
+         <p class="question-number"> The producer in the diagrams is? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. I because it contains the least amount of energy. </div>
                     <div class="option" data-correct="true">B. I because it uses sunlight to manufacture food.</div>
@@ -1916,11 +1996,16 @@ color: #f9f9f9;
                 </div>
 
             </div>
-                 <div id="quiz">
+              </div>
+
+            </div>
+        </div>     
+            
+            <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>38.</strong></div>  
 
-         <p>:Which of the following activities is against the conservation of natural resources? </p>
+         <p class="question-number">Which of the following activities is against the conservation of natural resources? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Afforestation </div>
                     <div class="option" data-correct="true">B. Deforestation </div>
@@ -1966,7 +2051,12 @@ color: #f9f9f9;
                 </div>
 
             </div>
-                 <div id="quiz">
+              </div>
+
+            </div>
+        </div>     
+            
+            <div id="quiz">
                  <div class="question">
                     <div class="question"> <div class="question-number"><strong>39.</strong></div>  
          Use the information he low to answer questions 39 and 40.
@@ -1974,7 +2064,7 @@ color: #f9f9f9;
                     II	- making tables with plastic
                     III	- using elephant tusk for decoration
                     IV	- using firewood for cooking                         
-<p>:The act that should be encouraged for the conservation of wildlife and forests is</p>
+<p class="question-number">The act that should be encouraged for the conservation of wildlife and forests is</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. I </div>
                     <div class="option" data-correct="true">B. II </div>
@@ -2006,10 +2096,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-               <div id="quiz">
+              </div>
+
+            </div>
+        </div>   
+            
+            <div id="quiz">
                <div class="question">
                 <div class="question"> <div class="question-number"><strong>40.</strong></div>     
-<p>:In order to avoid some of the acts that would have negative effects on conservation.Government should </p>
+<p class="question-number">In order to avoid some of the acts that would have negative effects on conservation.Government should </p>
                 <div class="options">
                     <div class="option" data-correct="true">A. enact and enforce laws towards conservation of resources</div>
                     <div class="option" data-correct="false">B. promote felling of trees without planting new ones. </div>
@@ -2047,10 +2142,14 @@ color: #f9f9f9;
                       </div>
 
             </div>
-              <div id="quiz">
+              </div>
+            </div>
+        </div>  
+            
+            <div id="quiz">
               <div class="question">
                 <div class="question"> <div class="question-number"><strong>41.</strong></div>    
-<p>:Which of the following characteristics shows discontinuous variation in plants? </p>
+<p class="question-number">Which of the following characteristics shows discontinuous variation in plants? </p>
                 <div class="options">
                     <div class="option" data-correct="true">A. colour of flower</div>
                     <div class="option" data-correct="false">B. Height of plant</div>
@@ -2096,10 +2195,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
+              </div>
+
+            </div>
+        </div>
+            
             <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>42.</strong></div>        
-<p>:A Rhesus negative woman may experience stillbirth of the second child that is Rhesus positive because</p>
+<p class="question-number">A Rhesus negative woman may experience stillbirth of the second child that is Rhesus positive because</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. the woman is susceptible to diseases during pregnancy. </div>
                     <div class="option" data-correct="true">B. the blood of the foetus might clump </div>
@@ -2147,11 +2251,16 @@ color: #f9f9f9;
                 </div>
 
             </div>
-             <div id="quiz">
+              </div>
+
+            </div>
+        </div> 
+            
+            <div id="quiz">
              <div class="question">
                 <div class="question"> <div class="question-number"><strong>43.</strong></div>   
    
-         <p>:A sudden change in the genetic composition of an organism is termed ? </p>
+         <p class="question-number">A sudden change in the genetic composition of an organism is termed ? </p>
                 <div class="options">
                     <div class="option" data-correct="false">A. epistasis</div>
                     <div class="option" data-correct="false">B. linkage</div>
@@ -2196,10 +2305,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-             <div id="quiz">
+              </div>
+
+            </div>
+        </div> 
+            
+            <div id="quiz">
              <div class="question">
                 <div class="question"> <div class="question-number"><strong>30.</strong></div>  
-         <p>44: Paternity disputes could be resolved accurately through</p>
+         <p class="question-number">Paternity disputes could be resolved accurately through</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. finger print.</div>
                     <div class="option" data-correct="false">B. blood group</div>
@@ -2245,11 +2359,16 @@ color: #f9f9f9;
                 </div>
 
             </div>
+              </div>
+
+            </div>
+        </div>
+            
             <div id="quiz">
             <div class="question">
                 <div class="question"> <div class="question-number"><strong>45.</strong></div>      
-            <p>Instructcion: The illustration below is a genetic diagram. Study it and answer questions 45 to 47.</p>        
-               <p>:What is the name of the genetic diagram?</p>
+            <p class="question-number">nstructcion: The illustration below is a genetic diagram. Study it and answer questions 45 to 47.</p>        
+               <p class="question-number">What is the name of the genetic diagram?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A. Genetic cross</div>
                     <div class="option" data-correct="true">B. Punnett square</div>
@@ -2292,11 +2411,16 @@ color: #f9f9f9;
                 </div>
 
             </div>
-              <div id="quiz">
+              </div>
+
+            </div>
+        </div>  
+            
+            <div id="quiz">
               <div class="question">
                 <div class="question"> <div class="question-number"><strong>46.</strong></div>  
                
-        <p>:	What do the labels I, II, III and IV respectively represent?</p>
+        <p class="question-number">	What do the labels I, II, III and IV respectively represent?</p>
                 <div class="options">
                     <div class="option" data-correct="false">A.  EE, EE, EE and EE </div>
                     <div class="option" data-correct="false">B. Ee, Ee, EE and Ee </div>
@@ -2339,10 +2463,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-                 <div id="quiz">
+              </div>
+
+            </div>
+        </div>     
+            
+            <div id="quiz">
                  <div class="question">
                     <div class="question"> <div class="question-number"><strong>47.</strong></div>   
-<p>: The genotypic ratio of the offspring in the genetic diagram is?</p>
+<p class="question-number"> The genotypic ratio of the offspring in the genetic diagram is?</p>
                 <div class="options">
                     <div class="option" data-correct="true">A. 1:1.</div>
                     <div class="option" data-correct="false">B. 1:2:1.</div>
@@ -2385,11 +2514,15 @@ color: #f9f9f9;
                 </div>
 
             </div>
-     <div id="quiz">
+       </div>
+
+            </div>
+        </div>
+     
+            <div id="quiz">
     <div class="question">
         <div class="question"> <div class="question-number"><strong>48.</strong></div>   
-<p>:What is the probability that a pregnancy would result in a male child? <p>
-<div class="options">
+<p class="question-number">What is the probability that a pregnancy would result in a male child? <p class="question-number"><div class="options">
     <div class="option" data-correct="false">A. 1</div>
     <div class="option" data-correct="false">B. ¾ </div>
     <div class="option" data-correct="true">C. ½ </div>
@@ -2419,10 +2552,15 @@ color: #f9f9f9;
                 </div>
 
             </div></div>
- <div id="quiz">
+   </div>
+
+            </div>
+        </div>
+ 
+            <div id="quiz">
  <div class="question">
     <div class="question"> <div class="question-number"><strong>49.</strong></div>   
-<p>: A vestigial structure in humans is  </p>
+<p class="question-number"> A vestigial structure in humans is  </p>
 <div class="options">
     <div class="option" data-correct="false">A. gall bladder</div>
     <div class="option" data-correct="false">B. villus</div>
@@ -2467,10 +2605,15 @@ color: #f9f9f9;
                 </div>
 
             </div></div>
-<div id="quiz">
+  </div>
+
+            </div>
+        </div>
+
+            <div id="quiz">
  <div class="question">
     <div class="question"> <div class="question-number"><strong>50.</strong></div>   
-<p>: The following activities are associated with termites except  </p>
+<p class="question-number"> The following activities are associated with termites except  </p>
 <div class="options">
     <div class="option" data-correct="true">A. nuptial flight</div>
     <div class="option" data-correct="false">B.communication</div>
@@ -2514,7 +2657,12 @@ color: #f9f9f9;
                 </div>
 
             </div></div>
-<div id="quiz">
+  </div>
+
+            </div>
+        </div>
+
+            <div id="quiz">
               <div class="question">
                
               </div>
@@ -2523,30 +2671,130 @@ color: #f9f9f9;
           
           
               <script>
-                  var score = 0;
-                  var progress = 0;
-          
-                  $(".option").click(function() {
-                      if ($(this).hasClass("selected")) {
-                          return;
-                      }
-                      $(this).addClass("selected");
-                      $(this).siblings().removeClass("correct incorrect");
-                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-                      if ($(this).data("correct")) {
-                          score++;
-                          $("#score").text("Score: " + score);
+                    var score = 0;
+              var progress = 0;
+              var isAnimating = false;
+              
+              $(".option").click(function() {
+                  if ($(this).hasClass("selected")) {
+                      return;
+                  }
+                  $(this).addClass("selected");
+                  $(this).siblings().removeClass("correct incorrect");
+                  $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+                  if ($(this).data("correct")) {
+                      score++;
+                      $("#score").text("Score: " + score);
+                  } else {
+                      $(this).parent().siblings(".check-answer").removeClass("hidden");
+                  }
+                  // Remove the 'hidden' class from the "Check Answer" button
+                  $(this).siblings(".check-answer").removeClass("hidden");
+                  progress++;
+                  $("#progress").text("Progress: " + progress + "/50");
+              });
+              
+              function displayAnswer(that) {
+                  if (isAnimating) return;
+                  var container = $(that).siblings('.container');
+                  var answer = container.children('.answer');
+                  var htmlContent = answer.html();
+                  var i = 0;
+              
+                  // Find the index of the end of the "answer hidden" div
+                  var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+              
+                  answer.html('');
+                  answer.removeClass('hidden');
+                  container.removeClass('hidden');
+                  isAnimating = true;
+              
+                  function typeWriter() {
+                      if (i < endIndex) {
+                          if (htmlContent.charAt(i) === '<') {
+                              var tagEnd = htmlContent.indexOf('>', i) + 1;
+                              answer.append(htmlContent.slice(i, tagEnd));
+                              i = tagEnd;
+                          } else {
+                              answer.append(htmlContent.charAt(i));
+                              i++;
+                          }
+                          setTimeout(typeWriter, 40);
                       } else {
-                          $(this).parent().siblings(".check-answer").removeClass("hidden");
+                          container.children('#subject-button').removeClass('hidden');
+                          isAnimating = false;
                       }
-                      progress++;
-                      $("#progress").text("Progress: " + progress + "/50");
+                  }
+              
+                  typeWriter();
+              }
+              
+              $(".check-answer").click(function() {
+                  displayAnswer(this);
+              });
+              
+              function displayMoreContent(that) {
+                  if (isAnimating) return;
+                  var moreContent = $(that).siblings('#more-content');
+                  var htmlContent = moreContent.html();
+                  var i = 0;
+              
+                  // Find the index of the end of the "more-content hidden" div
+                  var endIndex = htmlContent.lastIndexOf('</div>') + 6;
+              
+                  moreContent.html('');
+                  moreContent.removeClass('hidden');
+                  isAnimating = true;
+              
+                  function typeWriter() {
+                      if (i < endIndex) {
+                          if (htmlContent.charAt(i) === '<') {
+                              var tagEnd = htmlContent.indexOf('>', i) + 1;
+                              moreContent.append(htmlContent.slice(i, tagEnd));
+                              i = tagEnd;
+                          } else {
+                              moreContent.append(htmlContent.charAt(i));
+                              i++;
+                          }
+                          setTimeout(typeWriter, 40);
+                      } else {
+                          isAnimating = false;
+                      }
+                  }
+              
+                  typeWriter();
+              }
+              
+              
+              $(".container").on("click", "#subject-button", function() {
+                  displayMoreContent(this);
+              });
+              
+              
+                  </script>
+                  <script>
+                      document.addEventListener('DOMContentLoaded', (event) => {
+                  const options = document.querySelectorAll('.option');
+                  options.forEach(option => {
+                      option.addEventListener('click', function() {
+                          const question = this.closest('.question');
+                          question.classList.add('answered');
+                          this.classList.add('selected');
+                          question.querySelector('.check-answer').classList.remove('hidden');
+                      });
                   });
-          
-                  $(".check-answer").click(function() {
-                      $(this).siblings(".answer").removeClass("hidden");
+              
+                  const checkAnswerButtons = document.querySelectorAll('.check-answer');
+                  checkAnswerButtons.forEach(button => {
+                      button.addEventListener('click', function() {
+                          const question = this.closest('.question');
+                          question.querySelector('.answer').classList.remove('hidden');
+                          
+                      });
                   });
-              </script>
+              });
+              
+                  </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
           <!-- button -->
