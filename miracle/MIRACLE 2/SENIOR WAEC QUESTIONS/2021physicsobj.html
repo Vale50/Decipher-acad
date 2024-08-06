@@ -3799,7 +3799,6 @@
         isAnimating = true;
 
         function typeWriter() {
-<<<<<<< HEAD
             if (i < endIndex) {
                 if (htmlContent.charAt(i) === '<') {
                     var tagEnd = htmlContent.indexOf('>', i) + 1;
@@ -3813,76 +3812,16 @@
             } else {
                 container.children('#subject-button').removeClass('hidden');
                 isAnimating = false;
-=======
-if (i < endIndex) {
-    if (htmlContent.charAt(i) === '<') {
-var tagEnd = htmlContent.indexOf('>', i) + 1;
-answer.append(htmlContent.slice(i, tagEnd));
-i = tagEnd;
-    } else {
-answer.append(htmlContent.charAt(i));
-i++;
-    }
-    setTimeout(typeWriter, 40);
-} else {
-    container.children('#subject-button').removeClass('hidden');
-    isAnimating = false;
-}
-    }
-
-    typeWriter();
-}
-
-$(".check-answer").click(function() {
-    displayAnswer(this);
-});
-
-function displayMoreContent(that) {
-    if (isAnimating) return;
-    var moreContent = $(that).siblings('#more-content');
-    var htmlContent = moreContent.html();
-    var i = 0;
-
-    // Find the index of the end of the "more-content hidden" div
-    var endIndex = htmlContent.lastIndexOf('</div>') + 6;
-
-    moreContent.html('');
-    moreContent.removeClass('hidden');
-    isAnimating = true;
-
-    function typeWriter() {
-if (i < endIndex) {
-    if (htmlContent.charAt(i) === '<') {
-var tagEnd = htmlContent.indexOf('>', i) + 1;
-moreContent.append(htmlContent.slice(i, tagEnd));
-i = tagEnd;
-    } else {
-moreContent.append(htmlContent.charAt(i));
-i++;
-    }
-    setTimeout(typeWriter, 40);
-} else {
-            isAnimating = false;
->>>>>>> 1a9a939fb85f5e08955e7a2ab8267cccb87f1ac9
             }
         }
 
         typeWriter();
-<<<<<<< HEAD
     }
 
     $(".check-answer").click(function () {
         displayAnswer(this);
-=======
-}
-
-
-$(".container").on("click", "#subject-button", function() {
-    displayMoreContent(this);
->>>>>>> 1a9a939fb85f5e08955e7a2ab8267cccb87f1ac9
     });
 
-<<<<<<< HEAD
     function displayMoreContent(that) {
         if (isAnimating) return;
         var moreContent = $(that).siblings('#more-content');
@@ -3945,33 +3884,6 @@ $(".container").on("click", "#subject-button", function() {
     });
 
 
-=======
-
-</script>
-<script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const options = document.querySelectorAll('.option');
-    options.forEach(option => {
-        option.addEventListener('click', function() {
-            const question = this.closest('.question');
-            question.classList.add('answered');
-            this.classList.add('selected');
-            question.querySelector('.check-answer').classList.remove('hidden');
-        });
-    });
-
-    const checkAnswerButtons = document.querySelectorAll('.check-answer');
-    checkAnswerButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const question = this.closest('.question');
-            question.querySelector('.answer').classList.remove('hidden');
-
-        });
-    });
-});
-
-
->>>>>>> 1a9a939fb85f5e08955e7a2ab8267cccb87f1ac9
 </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
