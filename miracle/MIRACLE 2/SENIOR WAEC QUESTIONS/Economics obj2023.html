@@ -1,0 +1,3169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+   h1{
+        color: #fff;
+        font-style: italic;
+    }
+* {box-sizing: border-box;}
+.answered {
+    background-color: #f0f0f0; /* Light grey background for answered questions */
+}
+
+.selected {
+    font-weight: bold; /* Bold font for selected option */
+}
+
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #12335b;
+}
+.header {
+ overflow: hidden;
+ background-color: #3498db;
+ padding: 10px 5px;
+ transition: 0.3s ease;
+}
+.header a {
+ float: left;
+ color: #12335b;
+ text-align: center;
+ padding: 10px;
+ text-decoration: none;
+ font-size: 17px;
+ line-height: 25px;
+ border-radius: 4px;
+}
+.header a.logo {
+ font-size: 20px;
+ font-weight: bold;
+}
+.header a:hover {
+ color: cyan;
+}
+.header-right {
+ float: right;
+}
+@media screen and (max-width: 500px) {
+ .header a {
+ float: none;
+ display: block;
+ text-align: center;
+ transition: 0.3s ease;
+ }
+ 
+ .header-right {
+ float: none;
+ }
+}
+</style>
+</head>
+<body>
+<div class="header">
+ <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+ <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+ <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+ <div class="header-right">
+ <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+ <a href="#contact">About</a>
+ <a href="#courses">Courses</a>
+ <a href="#classroom">Classrooms</a>
+ <a href="#blog">Blog</a>
+ </div>
+</div>
+</body>
+<style>
+
+
+    *  {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+/* Quiz container styles */
+/* Neumorphism effect for divs */
+.neu-div {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 8px 8px 15px #a7a7a7,
+             -8px -8px 15px #ffffff;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 600px;
+}
+
+/* Apply neumorphism effect to specific elements */
+#quiz, .question, .options {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 8px 8px 15px #a7a7a7,
+             -8px -8px 15px #ffffff;
+ padding: 20px;
+ margin: 20px auto;
+ max-width: 600px;
+}
+
+.option {
+ background-color: #e0e0e0;
+ border-radius: 10px;
+ box-shadow: 5px 5px 10px #a7a7a7,
+             -5px -5px 10px #ffffff;
+ padding: 10px;
+ margin: 10px;
+ cursor: pointer;
+ transition: 0.3s ease;
+}
+
+.option:hover {
+ box-shadow: inset 5px 5px 10px #a7a7a7,
+             inset -5px -5px 10px #ffffff;
+}
+
+.option:active {
+ box-shadow: inset 2px 2px 5px #a7a7a7,
+             inset -2px -2px 5px #ffffff;
+}
+#quiz{
+ background-color: #f9f9f9;
+ padding: 20px;
+ border-radius: 10px;
+ margin: 20px auto;
+ max-width: 600px;
+ text-align: center;
+}
+
+
+#question {
+ font-size: 18px;
+ margin-bottom: 20px;
+}
+
+
+.option {
+ border: 1px solid #ccc;
+ padding: 10px;
+ margin: 10px;
+ cursor: pointer;
+}
+
+
+#answer {
+ margin-top: 20px;
+}
+.answer{
+ border: 1px solid blue;
+ background-color: #34db95;
+ margin: 10px;
+ cursor: pointer;
+         outline: none;
+         color: #333;
+         padding: 10px 20px;
+         border-radius: 10px;
+         box-shadow: 8px 8px 15px #a7a7a7,
+                     -8px -8px 15px #ffffff;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s ease;
+}
+
+
+
+
+/* Score and progress bar styles */
+#score {
+ font-size: 16px;
+ margin-top: 20px;
+}
+
+
+#progressBar {
+ width: 100%;
+ height: 20px;
+ margin-top: 10px;
+}
+    
+     .correct { background-color: green; }
+     .incorrect { background-color: red; }
+     .hidden { display: none; }
+     /* Neumorphism effect for buttons */
+     .neu-button {
+         border: none;
+         outline: none;
+         background-color: #e0e0e0;
+         color: #333;
+         padding: 10px 20px;
+         border-radius: 10px;
+         box-shadow: 8px 8px 15px #a7a7a7,
+                     -8px -8px 15px #ffffff;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s ease;
+     }
+
+     .neu-button:hover {
+         box-shadow: inset 8px 8px 15px #a7a7a7,
+                     inset -8px -8px 15px #ffffff;
+     }
+
+     .neu-button:active {
+         box-shadow: inset 4px 4px 10px #a7a7a7,
+                     inset -4px -4px 10px #ffffff;
+     }
+     .question-number {
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+ </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>1.</strong></div>
+<p> The study of economics is mainly concerned with how to  </p>
+<div class="options">
+<div class="option" data-correct="false">A. rank individuals’ wants given the abundant resources</div>
+<div class="option" data-correct="true">B. make choice when resources are inadequate</div>
+<div class="option" data-correct="false">C. satisfy every member of all societies.</div>
+<div class="option" data-correct="false">D. produce all the goods needed by everyone.</div></div>
+<button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B. make choice when resources are inadequate
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> The correct answer is B. make choice when resources are inadequate.
+
+            Explanation:
+            Economics is fundamentally the study of how individuals, businesses, and societies make choices in the face of scarcity. Scarcity refers to the basic economic problem that resources (such as time, money, raw materials, etc.) are limited, while human wants and needs are virtually unlimited. Because of this, economics focuses on how to allocate these limited resources to meet the most pressing needs and desires.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. rank individuals’ wants given the abundant resources: This option is incorrect because it assumes that resources are abundant, which contradicts the central concept of scarcity in economics. If resources were abundant, there would be no need to rank wants or make difficult choices.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. satisfy every member of all societies: This option is incorrect because it is impossible to satisfy every member of society given the limited resources available. Economics instead studies how to make the best possible choices to maximize welfare given these constraints.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. produce all the goods needed by everyone: This option is incorrect because it assumes that it's possible to produce everything needed by everyone, which ignores the reality of limited resources. Economics involves making decisions about what goods and services to produce, how to produce them, and for whom they should be produced. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>2.</strong></div>
+            <p> Warehousing is an economic activity that falls under  </p>
+            <div class="options">
+                <div class="option" data-correct="true">A. tertiary production.</div>
+                <div class="option" data-correct="false">B. intermediate production.</div>
+                <div class="option" data-correct="false">C. secondary production.</div>
+                <div class="option" data-correct="false">D. primary production. </div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A. tertiary production
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Tertiary Production: This sector involves services that support the primary and secondary sectors and includes activities like transportation, communication, and warehousing. Warehousing is considered a part of the tertiary sector because it provides a service that supports the storage and distribution of goods.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Intermediate Production: This term is not commonly used as a separate production category in economic activity. It may refer to the stages between primary and secondary production but does not accurately describe warehousing.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Secondary Production: This sector involves manufacturing and processing, where raw materials from the primary sector are converted into finished goods. Warehousing is not part of the production process itself but is a service that aids in the distribution of goods after they have been produced.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+ D. Primary Production: This sector includes activities related to the extraction and harvesting of natural resources, such as farming, mining, and fishing. Warehousing does not fall under this category, as it does not involve the extraction or direct use of natural resources.       </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>3.</strong></div>
+            <p>Which of the following items is not classified as working capital?  </p>
+            <div class="options">
+                <div class="option" data-correct="true">A. Equipment </div>   
+                <div class="option" data-correct="false">B.	Fuel</div>
+                <div class="option" data-correct="false">C.	Money to pay wages  </div>
+                <div class="option" data-correct="false">D.	Semi-finished goods</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A. Equipment
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A. Equipment is not classified as working capital because it is a long-term asset. Working capital typically includes assets that are short-term and can be quickly converted into cash or are used in day-to-day operations, such as cash, inventory, and accounts receivable. Equipment is considered a fixed or capital asset, used over a longer period to generate revenue.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Fuel is classified as working capital because it is consumed in the day-to-day operations of a business and is part of the operating expenses. It is a short-term asset that is regularly used up in the production process or service delivery.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Money to pay wages is also classified as working capital because wages are a current liability. The money set aside for wages is part of the business's short-term obligations and is necessary for the daily operation of the business.
+
+
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Semi-finished goods are classified as working capital because they represent inventory that is in the process of being converted into finished products. Inventory is a key component of working capital as it can be converted into cash once sold.  </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+     
+        </div>
+        <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>4.</strong></div>
+            <p> An economic system is mainly concerned with  </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	handling situations of abundant resources.</div>
+                <div class="option" data-correct="false">B.	studying the relationship between ends and means.</div>
+                <div class="option" data-correct="false">C.	the establishment of economic laws</div>
+                <div class="option" data-correct="true">D.	the allocation of scarce resources between alternative ends.
+                </div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option D.	the allocation of scarce resources between alternative ends.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> An economic system primarily deals with how to allocate limited or scarce resources to meet the needs and wants of a society. Since resources are finite and human desires are infinite, an economic system must decide the most efficient way to distribute these resources among various possible uses, often referred to as alternative ends.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Handling situations of abundant resources: This is incorrect because economics primarily concerns itself with the scarcity of resources. If resources were abundant, there would be no need for an economic system to allocate them.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Studying the relationship between ends and means: While economics does involve analyzing the relationship between goals (ends) and the resources (means) available to achieve them, this is more of a general description of what economics as a field of study entails, rather than the primary concern of an economic system.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. The establishment of economic laws: This is also incorrect. While economic laws (like supply and demand) are important, the main function of an economic system is the practical application of these laws to allocate scarce resources, not just the establishment of the laws themselves. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+          <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>5.</strong></div>
+            <p> The marks obtained by 9 students in a class test are recorded below: 9, 8, 7, 5, 7, 6, 8, 9 and 7. What is the median mark?</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.	7</div>
+                <div class="option" data-correct="false">B.	7.5  </div>
+                <div class="option" data-correct="false">C.	8  </div>
+                <div class="option" data-correct="false">D.	8.5</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	7
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> To find the median of a data set, you follow these steps:
+
+            Arrange the numbers in ascending order:
+            
+            The given marks are: 9, 8, 7, 5, 7, 6, 8, 9, 7.
+            Arranged in ascending order: 5, 6, 7, 7, 7, 8, 8, 9, 9.
+            Identify the median:
+            
+            Since there are 9 numbers (an odd number), the median is the middle value, which is the 5th number in the arranged list.
+            In this case, the 5th number is 7.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option B: 7.5 - This would be the median if the total number of data points was even, where the median is the average of the two middle numbers. However, since we have 9 data points (an odd number), 7.5 is incorrect.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option C: 8 - This is not the middle value of the arranged list, so it cannot be the median.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option D: 8.5 - Like 7.5, this could only be the median if it was the average of the two middle values, which does not apply here.   </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+          </div>
+          <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>6.</strong></div>
+            <p> The demand for a factor input as a result of the demand for its output is known as </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	complementary demand.</div>
+                <div class="option" data-correct="false">B.	competitive demand</div>
+                <div class="option" data-correct="true">C.	derived demand</div>
+                <div class="option" data-correct="false">D.	market demand.</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	derived demand.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Derived Demand: This refers to the demand for a factor input (like labor, raw materials, or machinery) that arises from the demand for the output that the input helps to produce. For example, the demand for steel is derived from the demand for cars, because steel is needed to produce cars.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Complementary Demand: This refers to the demand for a good that complements another good. For example, the demand for printers may be related to the demand for ink cartridges. This is different from derived demand, where the demand for the input is directly linked to the demand for the final product.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Competitive Demand: This occurs when two or more goods serve as substitutes for each other. For example, the demand for tea might be in competition with the demand for coffee. This concept relates to goods that compete in the market rather than the demand for inputs used to produce an output.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Market Demand: This is the total demand for a product or service in the market, considering all consumers. It doesn't specifically address the demand for inputs based on the demand for outputs, but rather the overall demand in the market.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>7.</strong></div>
+            <p> If the demand for a commodity remains constant as price increases, the commodity is said to be </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	price elastic</div>
+                <div class="option" data-correct="false">B.	unit price elastic.</div>
+                <div class="option" data-correct="false">C.	price inelastic</div>
+                <div class="option" data-correct="true">D.	perfectly price inelastic</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option D.	perfectly price inelastic.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Correct Answer: D. Perfectly price inelastic
+            When the demand for a commodity remains constant despite changes in price, the commodity is said to be perfectly price inelastic. This means that the quantity demanded does not change at all, no matter how much the price increases or decreases. In economic terms, the price elasticity of demand (PED) is zero.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Price elastic:
+
+If a commodity is price elastic, it means that the quantity demanded changes significantly in response to price changes. If the price goes up, demand typically decreases, and if the price goes down, demand increases. This option is incorrect because price elasticity involves a change in demand, not a constant demand.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Unit price elastic:
+
+Unit price elasticity means that the percentage change in quantity demanded is exactly equal to the percentage change in price. For example, if the price increases by 10%, the demand decreases by 10%. This option is incorrect because, under unit price elasticity, demand would change in response to price changes.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Price inelastic:
+
+While "price inelastic" implies that demand does not change much with price changes, it does not imply that demand remains completely constant. In price inelastic demand, there is still some change, albeit small, in the quantity demanded when the price changes. This option is incorrect because it does not describe a situation where demand remains perfectly constant.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>8.</strong></div>
+            <p> When more of the tax on a product is borne by the buyer than the seller, the commodity involved has </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	elastic demand.</div>      
+                <div class="option" data-correct="true">B.	fairly inelastic demand. </div>
+                <div class="option" data-correct="false">C.	perfectly elastic demand. </div>
+                <div class="option" data-correct="false">D.	perfectly inelastic demand. </div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	fairly inelastic demand.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Fairly Inelastic Demand (Correct Answer): When the demand for a product is fairly inelastic, consumers are less sensitive to price changes. This means that even if the price of the product increases (due to a tax, for example), the quantity demanded doesn't decrease significantly. As a result, buyers end up bearing more of the tax burden because they continue to purchase the product despite the higher price.
+        </div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Elastic Demand: If a product has elastic demand, consumers are very sensitive to price changes. If the price increases (due to a tax), the quantity demanded would decrease significantly, leading to a larger portion of the tax burden being borne by the seller. This is the opposite of what happens when the buyer bears more of the tax burden.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Perfectly Elastic Demand: In a perfectly elastic demand situation, even a tiny increase in price would cause the quantity demanded to drop to zero. Here, the seller would bear the entire tax burden because the buyer would stop purchasing the product entirely if the price increases.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Perfectly Inelastic Demand: With perfectly inelastic demand, the quantity demanded remains constant regardless of price changes. Theoretically, the buyer would bear all of the tax burden because their demand doesn’t change at all with price changes. However, the term "fairly inelastic demand" in the context of the question suggests a situation where the demand is somewhat inelastic but not perfectly so, making option B more appropriate for the scenario described.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>9.</strong></div>
+            <p> A fall in the price of a normal commodity which has elastic demand will result in  </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	a fall in quantity demanded.  </div>
+                <div class="option" data-correct="false">B.	an increase in revenue. </div>
+                <div class="option" data-correct="false">C.	a fall in demand.  </div>
+                <div class="option" data-correct="true">D.	a decrease in revenue.</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option D.	a decrease in revenue.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Explanation:
+            Elastic demand means that the quantity demanded of a commodity is very sensitive to changes in its price. Specifically, when the demand is elastic, a small decrease in price leads to a relatively larger increase in the quantity demanded.
+            
+            Revenue is calculated as the price of the commodity multiplied by the quantity sold (Revenue = Price × Quantity).
+            
+            Why D. a decrease in revenue is correct:
+            When the price of a normal commodity with elastic demand falls, the quantity demanded increases significantly. However, because the price has decreased and the demand is elastic, the percentage decrease in price outweighs the percentage increase in quantity demanded. This results in a lower total revenue.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. a fall in quantity demanded: This is incorrect because with elastic demand, a fall in price leads to an increase, not a decrease, in quantity demanded.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. an increase in revenue: This is incorrect because, in the case of elastic demand, a price decrease leads to a decrease in revenue, not an increase. The increase in quantity demanded does not compensate enough for the lower price.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. a fall in demand: This is incorrect because "demand" refers to the overall relationship between price and quantity demanded. A price decrease affects the quantity demanded, not the overall demand curve, which shifts only due to changes in factors like consumer preferences, income, etc. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>10.</strong></div>
+            <p> The supply of light could be met using a candle, lantern and gas lamp. This is an example of a  </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	complementary supply. </div>
+                <div class="option" data-correct="false">B.	joint supply. </div>
+                <div class="option" data-correct="true">C.	composite supply. </div>
+                <div class="option" data-correct="false">D.	abnormal supply.</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	composite supply.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Composite Supply: This refers to a situation where different goods can be used as substitutes for each other to fulfill the same need or purpose. In this case, a candle, lantern, and gas lamp all serve the purpose of providing light, meaning they are interchangeable and meet the same need. Therefore, they form a composite supply.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Complementary Supply: This is incorrect because complementary goods are those that are used together to satisfy a particular need, like a printer and ink. In this scenario, a candle, lantern, and gas lamp are not used together but rather as substitutes for each other.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Joint Supply: This is incorrect because joint supply occurs when the production of one good automatically leads to the production of another good. For example, beef and leather are joint products. The items listed (candle, lantern, and gas lamp) are not produced together but are independent of each other.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Abnormal Supply: This is incorrect because abnormal supply refers to a situation where the supply of a product does not follow the normal supply rules (e.g., due to unnatural conditions like a crisis). The supply of light using a candle, lantern, and gas lamp does not fall into this category. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>11.</strong></div>
+            <p> Petrol and kerosene arc jointly obtained from crude oil. If the supply of petrol increases, the </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	supply of kerosene will fall.</div>
+                <div class="option" data-correct="false">B.	cost of crude oil production has increased.</div>
+                <div class="option" data-correct="true">C.	supply of kerosene will rise</div>
+                <div class="option" data-correct="false">D.	supply of kerosene will remain unchanged.</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	supply of kerosene will rise.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Option C (Correct): Petrol and kerosene are jointly produced from crude oil through a process called fractional distillation. When the supply of petrol increases, it typically means that more crude oil is being refined. Since kerosene is also obtained from the same refining process, an increase in crude oil refining to produce more petrol would naturally lead to an increase in kerosene production as well.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option A (Incorrect): The supply of kerosene will not fall if the supply of petrol increases because both are derived from the same refining process. Increasing the output of one generally increases the output of the other.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option B (Incorrect): This option talks about the cost of crude oil production. However, an increase in the supply of petrol does not necessarily indicate that the cost of crude oil production has increased. The cost is more influenced by factors such as extraction, global demand, and geopolitical events, rather than the supply of end products like petrol and kerosene.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option D (Incorrect): The supply of kerosene will not remain unchanged if the supply of petrol increases. Since both are products of the same refining process, an increase in petrol supply is likely to also increase the supply of kerosene.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+
+         <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>12.</strong></div>
+            <p> If the government stops subsidy on cocoa production, the supply curve of cocoa will </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	shift to the right</div>
+                <div class="option" data-correct="false">B.	become vertical</div>
+                <div class="option" data-correct="true">C.	shift to the left.  </div>
+                <div class="option" data-correct="false">D.	remain unchanged</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	shift to the left.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> C. shift to the left: This is the correct answer because if the government stops providing subsidies for cocoa production, the cost of production will increase for producers. As a result, some producers may reduce their production or exit the market altogether. This reduction in production leads to a decrease in the overall supply of cocoa, causing the supply curve to shift to the left.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. shift to the right: This option is incorrect because a shift to the right would indicate an increase in supply, which would occur if production costs decreased or if there were technological improvements, not if subsidies were removed.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. become vertical: This option is incorrect because a vertical supply curve suggests that the quantity supplied is completely unresponsive to price changes (perfectly inelastic supply), which is not a typical outcome of removing a subsidy.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. remain unchanged: This option is incorrect because removing a subsidy would generally affect the cost of production, leading to a change in the supply curve. The supply curve would not remain unchanged in such a scenario. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>13.</strong></div>
+            <p> When the marginal utility from the consumption of commodity X (MUX) is greater than the price of commodity X (PX), a rational consumer should </p>
+            <div class="options">
+                <div class="option" data-correct="true">A.	consume more of commodity X. </div>
+                <div class="option" data-correct="false">B.	reduce consumption of commodity X</div>
+                <div class="option" data-correct="false">C.	consume the same quantity of commodity X. </div>
+                <div class="option" data-correct="false">D.	strive to remain in disequilibrium</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	consume more of commodity X.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Option A: Consume more of commodity X.
+            This is the correct answer. When the marginal utility of a commodity (MUX) is greater than its price (PX), it means that the consumer derives more satisfaction or utility from consuming an additional unit of the commodity than what they have to pay for it. A rational consumer will continue to consume more of commodity X until the marginal utility equals the price (MUX = PX). At this point, the consumer maximizes their total utility, and the consumption becomes optimal.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option B: Reduce consumption of commodity X.
+This option is incorrect because if MUX > PX, reducing consumption would decrease the total utility. The consumer is getting more utility than the cost, so reducing consumption would not be rational.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option C: Consume the same quantity of commodity X.
+This option is incorrect because if MUX > PX, maintaining the current level of consumption means the consumer is not maximizing their utility. The consumer should consume more until MUX = PX.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option D: Strive to remain in disequilibrium.
+This option is incorrect because a rational consumer seeks to maximize utility and achieve equilibrium (MUX = PX). Deliberately staying in disequilibrium would mean not optimizing utility, which contradicts rational consumer behavior. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+   <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>14.</strong></div>
+            <p> When the demand for a commodity increases while supply remains unchanged, the equilibrium price and quantity will </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	remain constant</div>
+                <div class="option" data-correct="false">B.	decrease</div>
+                <div class="option" data-correct="true">C.	increase</div>
+                <div class="option" data-correct="false">D.	turn negative</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	increase.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Increase in Equilibrium Price and Quantity: When the demand for a commodity increases while the supply remains unchanged, consumers are willing to pay more for the same quantity of the commodity. This higher demand leads to an increase in the equilibrium price. Additionally, the higher price encourages producers to supply more of the commodity, leading to an increase in equilibrium quantity.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Remain constant: This option is incorrect because an increase in demand with unchanged supply does not lead to a constant equilibrium price and quantity. Instead, the price will rise due to higher demand, and the quantity will also increase as suppliers respond to the higher price.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Decrease: This option is incorrect because an increase in demand with a constant supply results in a higher price and quantity, not a decrease. The equilibrium price and quantity both increase as the market adjusts to the new demand levels.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Turn negative: This option is incorrect because the concept of equilibrium price and quantity turning negative does not apply in this context. Prices and quantities in a market economy are generally positive values, and an increase in demand does not cause them to turn negative.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>15.</strong></div>
+            <p> The fixing of maximum prices by government is mainly on  </p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	inferior goods.</div>
+                <div class="option" data-correct="false">B.	luxury goods</div>
+                <div class="option" data-correct="false">C.	imported capital goods.</div>
+                <div class="option" data-correct="true">D.	selected essential goods.</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option D.	selected essential goods.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Maximum prices are price ceilings set by the government to ensure that essential goods remain affordable for consumers, especially during times of economic hardship or market fluctuations. This intervention typically targets goods that are crucial for the basic needs and well-being of the population, such as food staples, fuel, and healthcare products. By setting a maximum price, the government aims to prevent price gouging and ensure accessibility.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Inferior goods: Inferior goods are those whose demand increases when consumer incomes fall. While governments may intervene in the market for these goods, the primary focus of price ceilings is generally on essential goods rather than on inferior goods specifically.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Luxury goods: Luxury goods are not typically subject to maximum price regulations because they are not considered essential for survival or basic needs. Price ceilings on luxury goods would be less common since these items are not as critical to the general population.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Imported capital goods: Capital goods are assets used in the production of other goods and services, such as machinery and equipment. These are not usually subject to price ceilings because they are not consumer goods and their prices are less likely to directly impact the affordability of essential goods and services for the general population. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+            <div class="question">
+                <div class="question-number"><strong>16.</strong></div>
+  <p> At what point on the total product curve shown below will marginal product be negative?
+</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.	P </div>
+                <div class="option" data-correct="false">B.	Q</div>
+                <div class="option" data-correct="false">C.	R</div>
+                <div class="option" data-correct="false">D.	S</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	P.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Marginal Product (MP) is the additional output produced by adding one more unit of input, holding other inputs constant. It is the slope of the Total Product (TP) curve.
+
+            When the Total Product curve is increasing at an increasing rate, the Marginal Product is positive and increasing.
+            
+            When the Total Product curve is increasing at a decreasing rate, the Marginal Product is positive but decreasing.
+            
+            When the Total Product curve reaches its maximum point (i.e., it flattens out), the Marginal Product is zero.
+            
+            When the Total Product curve starts to decline, the Marginal Product becomes negative. This is because the additional unit of input is actually causing a reduction in output.
+            
+            Option A (P) is the point where the Total Product curve starts to decline, indicating that the Marginal Product is negative. At this point, adding more units of input decreases the total output.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option B (Q) is likely the point where the Total Product curve is at its maximum or still increasing, meaning the Marginal Product is zero or positive.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option C (R) is before the point where the Total Product starts to decline. Here, the Marginal Product is still positive.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option D (S) is beyond the point where the Total Product curve starts declining. At this point, the Marginal Product would still be negative, but the question is asking for the point at which it first becomes negative.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+            <div class="question<div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>17.</strong></div>
+            <p> A small scale firm located within an industrial estate will enjoy</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	government protection and funding</div>
+                <div class="option" data-correct="false">B.	technological economics of scale</div>
+                <div class="option" data-correct="true">C.	external economics of scale</div>
+                <div class="option" data-correct="false">D.	financial economics of scale.</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	external economics of scale
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> External economics of scale refer to the cost advantages that a firm can experience due to factors outside its own operations, often related to the location or industry environment. A small-scale firm located within an industrial estate benefits from external economies of scale, such as shared infrastructure, suppliers, and skilled labor pools, which help reduce its costs.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. government protection and funding: While government protection and funding might provide some benefits, they are not a typical or specific advantage associated with the location in an industrial estate. They are not directly related to the scale of economics.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. technological economics of scale: Technological economics of scale usually refer to cost savings from advancements in technology or improvements in the production process within a firm. This is more about internal factors rather than external ones related to the firm's location.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. financial economics of scale: Financial economics of scale pertain to cost advantages related to access to financial resources, such as lower borrowing costs due to a firm’s larger size. This concept is more about financial management and less about location advantages.  </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>18.</strong></div>
+            <p> The total fixed cost curve is</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.	vertical.</div>
+                <div class="option" data-correct="false">B.	horizontal</div>
+                <div class="option" data-correct="false">C.	downward sloping</div>
+                <div class="option" data-correct="false">D.	upward sloping</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	vertical. 
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Fixed Cost Curve: Fixed costs do not change with the level of output produced. Therefore, the total fixed cost remains constant regardless of the quantity of goods or services produced.
+
+            Why A (Vertical) is Correct: A vertical line on a graph represents a situation where the cost remains constant across different levels of output. This is the case with fixed costs, which do not vary with output, hence the vertical curve.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Horizontal: A horizontal line represents a constant cost per unit of output, which does not apply to fixed costs because fixed costs are total costs that do not change with output, not cost per unit.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Downward Sloping: A downward sloping line would indicate decreasing costs with increasing output, which is not the case for fixed costs.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Upward Sloping: An upward sloping line would suggest increasing costs with increasing output, which is also not applicable to fixed costs.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+    
+         <p<div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>19.</strong></div>
+            <p> If a firm retrenches some of its factory workers, its</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	fixed cost is likely to increase</div>   
+                <div class="option" data-correct="false">B.	marginal cost may increase</div>
+                <div class="option" data-correct="true">C.	average fixed cost may increase</div>
+                <div class="option" data-correct="false">D.	variable cost will decline</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	average fixed cost may increase.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> C. Average fixed cost may increase: This is the correct answer. Average fixed cost (AFC) is calculated by dividing total fixed costs by the number of units produced. If the firm retrenches workers and consequently produces fewer units, the fixed costs are spread over a smaller number of units, leading to an increase in average fixed cost.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Fixed cost is likely to increase: This option is incorrect because retrenching factory workers would typically lead to a decrease in fixed costs, not an increase. Fixed costs are those that do not change with the level of output, such as salaries of permanent employees. When workers are retrenched, these fixed costs generally go down.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Marginal cost may increase: This option is incorrect because retrenching workers typically reduces production capacity, which may reduce output. Marginal cost is the cost of producing one additional unit of output. If production is reduced, the marginal cost of producing additional units would not be directly impacted by retrenching workers. Instead, it might become relevant if the firm needs to hire additional workers or invest in capital to increase production later.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Variable cost will decline: This option is incorrect because variable costs change with the level of production. If the firm retrenches workers, it might reduce production, which could lead to a decrease in variable costs. However, the primary effect of retrenching workers is on fixed costs, not directly on variable costs. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+           <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>20.</strong></div>
+            <p> A monopolist may enjoy abnormal profit only if its</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	marginal cost exceeds marginal, revenue</div>
+                <div class="option" data-correct="false">B.	demand curve is perfectly elastic</div>
+                <div class="option" data-correct="true">C.	price exceeds average total cost.</div>
+                <div class="option" data-correct="false">D, expenditure on advertisement increases</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	price exceeds average total cost.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Price exceeds average total cost:
+
+            For a monopolist to enjoy abnormal (or economic) profit, the price charged for the good or service must be greater than the average total cost (ATC) of producing it. This means that the revenue per unit (price) is higher than the cost per unit (ATC), leading to positive economic profit.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Marginal cost exceeds marginal revenue:
+
+If marginal cost (MC) exceeds marginal revenue (MR), the firm is not in a profit-maximizing position. In this case, the monopolist would be producing too much and would actually be reducing profits or increasing losses. Profit maximization occurs where MC equals MR.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Demand curve is perfectly elastic:
+
+A perfectly elastic demand curve (horizontal line) implies that the price remains constant regardless of the quantity sold. In such a situation, the firm is a price taker (like in perfect competition) rather than a monopolist. Monopolists typically face a downward-sloping demand curve.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Expenditure on advertisement increases:
+
+Increasing expenditure on advertising does not guarantee abnormal profit. While advertising can affect demand, the key determinant of abnormal profit is whether the price exceeds average total cost. Advertising affects demand and can influence sales, but it does not directly affect the cost structure or the relationship between price and ATC. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <<div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>21.</strong></div>
+            <p> The average revenue curve of a firm in a perfect market is the same as the</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.	supply curve of the firm.</div>
+                <div class="option" data-correct="false">B.	demand curve of the firm</div>
+                <div class="option" data-correct="false">C.	total revenue curve of the firm</div>
+                <div class="option" data-correct="false">D.	average cost curve of the firm</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	supply curve of the firm.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Why Option A is Correct:
+            Supply Curve Relationship: In a perfectly competitive market, the firm's supply curve is derived from its marginal cost (MC) curve above the average variable cost (AVC). The AR curve (which equals the price) is constant, and firms decide their output based on where the price equals their MC. Therefore, the supply curve of the firm in a perfectly competitive market coincides with the AR curve above the AVC.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Demand Curve of the Firm: In a perfectly competitive market, the demand curve faced by an individual firm is perfectly elastic (horizontal) at the market price, which is the same as the AR curve. However, the term "demand curve" generally refers to the market demand curve, not the firm's individual demand curve.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Total Revenue Curve of the Firm: The total revenue (TR) curve represents the total revenue generated from selling different quantities of output. In a perfect market, the TR curve is a straight line starting from the origin and increasing at a constant rate (since TR = Price × Quantity). While the average revenue is the total revenue divided by quantity, it does not directly represent the TR curve.
+
+
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Average Cost Curve of the Firm: The average cost (AC) curve represents the per-unit cost of production, which is unrelated to the revenue curves. The AC curve indicates how costs change with output, while the AR curve relates to revenue.
+
+</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+              <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>22.</strong></div>
+            <p> Resources are pooled for the mutual benefit of its members mainly in a</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	joint stock company</div>
+                <div class="option" data-correct="false">B.	partnership</div>
+                <div class="option" data-correct="false">C.	private company</div>
+                <div class="option" data-correct="true">D.	cooperative society</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option D.	cooperative society
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Cooperative Society:
+
+            A cooperative society is an organization where resources are pooled together by its members to benefit all members collectively. The primary aim is mutual benefit, and members often have equal voting rights regardless of their level of investment.
+            </div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Joint Stock Company:
+
+A joint stock company is a type of business entity where shares of the company's stock can be bought and sold by shareholders. The main goal is to generate profit for shareholders, not necessarily to pool resources for mutual benefit in the way a cooperative does.
+
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Partnership:
+
+A partnership is a business arrangement where two or more individuals share ownership and the responsibilities of the business. While partners do pool resources, the focus is often on profit and shared liability, rather than mutual benefit in the way a cooperative society emphasizes.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Private Company:
+
+A private company is a business entity where shares are not offered to the general public but are owned by a small group of investors. The goal is usually to generate profit and serve its shareholders, rather than focusing on pooling resources for mutual benefit as in a cooperative society.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+           <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>23.</strong></div>
+            <p> A joint stock company enjoys perpetual existence because</p>
+            <div class="options">
+                <div class="option" data-correct="false">A.	it is formed by a minimum of seven members</div>
+                <div class="option" data-correct="true">B.	it is a corporate entity</div>
+                <div class="option" data-correct="false">C.	its shares arc easily transferable</div>
+                <div class="option" data-correct="false">D.	there is a higher degree of specialization</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	it is a corporate entity
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A joint stock company enjoys perpetual existence because it is a corporate entity. This means it has a distinct legal identity separate from its shareholders. As a result, the company's existence is not affected by changes in its ownership or the death, insolvency, or resignation of its shareholders. It continues to operate indefinitely until it is formally dissolved.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. it is formed by a minimum of seven members: The minimum number of members required for forming a joint stock company does not guarantee perpetual existence. This requirement relates to the initial formation of the company but does not impact its longevity.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. its shares are easily transferable: While the ease of share transfer can affect the liquidity and trading of the company's shares, it does not directly contribute to the company's perpetual existence. Perpetual existence is a feature of its corporate status, not share transferability.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. there is a higher degree of specialization: Specialization within the company might enhance its efficiency and effectiveness, but it does not influence the company's ability to exist perpetually. Perpetual existence is a characteristic of its corporate nature, not its level of specialization. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+      <div id="quiz">
+        <div class="question">
+            <div class="question-number"><strong>24.</strong></div>
+            <p> Consumers have access to a variety of goods through the activities of the</p>
+            <div class="options">
+                <div class="option" data-correct="true">A.	advertising agencies</div>
+                <div class="option" data-correct="false">B.	wholesalers</div>
+                <div class="option" data-correct="false">C.	retailers</div>
+                <div class="option" data-correct="false">D.	mass media</div>
+            </div>
+            <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	advertising agencies
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A. Advertising agencies: These agencies are crucial in promoting and making consumers aware of various goods and services. They help in creating campaigns and advertisements that reach potential buyers, thereby providing them access to a wide range of products.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Wholesalers: Wholesalers buy goods in bulk from manufacturers and sell them to retailers or other businesses. They do not directly interact with consumers, so they are not the primary means through which consumers access a variety of goods.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Retailers: Retailers are businesses that sell goods directly to consumers. While they do provide access to goods, they are not involved in the broader promotional activities that make consumers aware of various products. Advertising agencies play a role in raising awareness about these goods.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Mass media: Mass media (such as TV, radio, newspapers) are channels through which advertising is delivered, but they do not directly provide access to goods. They are platforms for advertising agencies to promote products. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+     
+       
+      <div id="quiz">
+        <div class="question<div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>25.</strong></div>
+        <p> The rate of growth of population is</p>
+        <div class="options">
+            <div class="option" data-correct="true">A.	the difference between birth rate and death rate</div>
+            <div class="option" data-correct="false">B.	birth rate less death rate plus net migration</div>
+            <div class="option" data-correct="false">C.	initial population plus number of births and net migration</div>
+            <div class="option" data-correct="false">D.	the number of immigrants plus number of births.</div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	the difference between birth rate and death rate.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Option A is correct because the rate of population growth is calculated as the difference between the birth rate and the death rate. This measure helps to determine how quickly a population is increasing or decreasing, considering only natural changes in population (i.e., births and deaths).</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option B is incorrect because it includes net migration in the formula, which is not part of the rate of population growth based solely on birth and death rates. While net migration does affect the total population, it is not included in the basic calculation of growth rate from birth and death rates alone.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option C is incorrect because it adds the initial population and net migration to the number of births, which does not directly calculate the rate of growth. It reflects a change in population size rather than the growth rate.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option D is incorrect because it considers only the number of immigrants and births, which does not account for the death rate. This approach does not provide the rate of population growth but rather a measure of population change due to immigration and births.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+  <div <div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>26.</strong></div>
+        <p> The malthusian theory of population is best illustrated when</p>
+        <div class="options">
+            <div class="option" data-correct="false">A.	both population and food supply increase at the same rate</div>
+            <div class="option" data-correct="true">B.	population increases much faster than food supply</div>
+            <div class="option" data-correct="false">C.	the size of the population and available resources are equal</div>
+            <div class="option" data-correct="false">D.	food supply increases much faster than population growth</div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	population increases much faster than food supply
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Malthusian Theory of Population:
+            The Malthusian theory, proposed by Thomas Malthus, suggests that populations tend to grow exponentially (i.e., at a faster rate) while food supply grows at an arithmetic rate (i.e., at a slower, linear rate). This imbalance leads to overpopulation, which Malthus believed would result in famine, disease, and other forms of population control to restore balance.
+            
+            Why Option B is Correct:
+            B. population increases much faster than food supply: This option accurately represents the Malthusian theory, which posits that population growth outpaces the growth of food supply, leading to a potential crisis where resources become insufficient to support the population.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. both population and food supply increase at the same rate: This option contradicts the Malthusian theory. If population and food supply increase at the same rate, there would be no imbalance, and the theory's prediction of crisis would not occur.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. the size of the population and available resources are equal: This scenario implies a balance between population and resources, which is not in line with the Malthusian theory that predicts an imbalance due to differential growth rates.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. food supply increases much faster than population growth: This option contradicts the Malthusian theory as well, which asserts that food supply grows slower than population. If food supply increased faster, it would counteract the crisis predicted by the theory.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+
+     <p<div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>27.</strong></div>
+        <p> The dependency ratio of a country is the</p>
+        <div class="options">
+            <div class="option" data-correct="false">A.	total active population who depend on government for survival</div>
+            <div class="option" data-correct="false">B.	number of children who depend on their parents for survival</div>
+            <div class="option" data-correct="true">C.	the children and aged who rely on the active population for support.</div>
+            <div class="option" data-correct="false">D.	people who are cared for by their extended families.  </div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	the children and aged who rely on the active population for support.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> The dependency ratio is a measure used to assess the proportion of dependents (people who are not in the labor force and rely on the working-age population) to the working-age population. This ratio includes:
+
+            Children (typically under the age of 15) who rely on the working-age population for support.
+            The elderly (usually over the age of 64) who also rely on the working-age population for support.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. total active population who depend on government for survival
+
+This is not the definition of the dependency ratio. It focuses on people who depend on government assistance, rather than the broader concept of dependents in relation to the working-age population.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. number of children who depend on their parents for survival
+
+While children are part of the dependency ratio, the definition is broader. The dependency ratio includes both children and the elderly, not just children.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. people who are cared for by their extended families
+
+This option refers to a different context of support and does not specifically address the dependency ratio, which is concerned with the overall demographic structure and dependency relative to the working-age population.
+ </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+  <div id="quiz">
+       <div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>28.</strong></div>
+        <p> When job vacancies are publicized, the government is mainly trying to solve the problem of  </p>
+        <div class="options">
+            <div class="option" data-correct="true">A.	residual unemployment.</div>
+            <div class="option" data-correct="false">B.	frictional unemployment.</div>
+            <div class="option" data-correct="false">C.	technological unemployment</div>
+            <div class="option" data-correct="false">D.	cyclical unemployment</div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	residual unemployment.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Residual Unemployment: This refers to unemployment that exists even when the economy is at its natural level of employment. When job vacancies are publicized, the government is trying to address residual unemployment by informing potential job seekers of available opportunities, thereby reducing the gap between those looking for jobs and the available positions.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Frictional Unemployment: This type of unemployment occurs when people are temporarily unemployed while transitioning from one job to another. Publicizing job vacancies might help reduce frictional unemployment but is not primarily aimed at solving this type of unemployment.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Technological Unemployment: This occurs when technological advancements make certain job roles obsolete. Publicizing job vacancies does not directly address technological unemployment, which is better addressed through reskilling and education programs.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Cyclical Unemployment: This type of unemployment is related to the economic cycle and occurs during periods of economic downturn. Publicizing job vacancies alone does not address cyclical unemployment, which typically requires broader economic intervention to stimulate growth and create jobs.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+  <<div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>29.</strong></div>
+        <p> Many workers are employed in the agricultural sector of developing countries because  </p>
+        <div class="options">
+            <div class="option" data-correct="false">A.	they practice mechanized system of farming</div>
+            <div class="option" data-correct="true">B.	labour intensive method is mostly adopted</div>
+            <div class="option" data-correct="false">C. wages in the sector is high</div>
+            <div class="option" data-correct="false">D. abnormal profits are made.</div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	labour intensive method is mostly adopted.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> B. labour intensive method is mostly adopted: In many developing countries, the agricultural sector relies heavily on manual labor rather than mechanized farming due to the high costs of machinery and limited access to technology. This results in a large number of workers being employed in the sector because labor-intensive methods are used for farming.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. they practice mechanized system of farming: This is incorrect because mechanized farming is often not widespread in developing countries due to high costs and lack of infrastructure. Most developing countries rely more on traditional, manual methods rather than mechanized systems.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. wages in the sector is high: This is incorrect because wages in the agricultural sector in developing countries are typically low. The sector is known for its low-income levels and poor working conditions, which is not an attractive factor for employment compared to other sectors.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. abnormal profits are made: This is incorrect because abnormal profits are not commonly made in the agricultural sector in developing countries. The sector often faces challenges such as low productivity, poor market access, and inadequate infrastructure, which generally leads to lower profits rather than abnormal ones.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+  <div id="quiz">
+          <div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>30.</strong></div>
+        <p> Industries are sometimes located in areas which are not profitable so as to</p>
+        <div class="options">
+            <div class="option" data-correct="false">A.	encourage rural-urban migration</div>
+            <div class="option" data-correct="false">B.	be able to reap internal economics of scale</div>
+            <div class="option" data-correct="true">C.	be able to even-out development</div>
+            <div class="option" data-correct="false">D.	bring about external economics of scale.  </div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	be able to even-out development
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Industries are sometimes located in less profitable or less developed areas to promote balanced regional development and reduce disparities between urban and rural areas. This practice helps to spread economic benefits more evenly across different regions and encourage growth in areas that might otherwise remain underdeveloped.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. encourage rural-urban migration: Locating industries in less profitable areas is generally aimed at reducing migration pressures on urban areas by providing economic opportunities in rural or less developed regions, rather than encouraging it.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. be able to reap internal economics of scale: Internal economies of scale refer to cost advantages that a company can achieve as it increases production within the same location or facility. This does not directly relate to the strategic placement of industries in less profitable areas.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. bring about external economics of scale: External economies of scale occur when an industry's overall cost benefits are realized due to factors outside the individual company, such as industry-wide infrastructure improvements or skilled labor availability in a region. This option is less relevant to the strategic placement of industries in economically disadvantaged areas.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+  <div id="quiz">
+       <div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>31.</strong></div>
+        <p> One factor that may not promote industrial  development is</p>
+        <div class="options">
+            <div class="option" data-correct="true">A. 	granting old firms tax exemptions.</div>
+            <div class="option" data-correct="false">B. local firms entering into partnerships with foreign firms</div>
+            <div class="option" data-correct="false">C.	setting up industrial estates with modern amenities</div>
+            <div class="option" data-correct="false">D.	granting capital to firms at reasonable interest rates. </div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A. 	granting old firms tax exemptions.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A. Granting old firms tax exemptions: This may not promote industrial development because it can lead to complacency among older firms. They might not have the same drive to innovate or improve their operations if they are receiving tax breaks. Additionally, it could disadvantage newer firms that do not receive such exemptions, potentially stifling competition and innovation.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Local firms entering into partnerships with foreign firms: This generally promotes industrial development. Partnerships with foreign firms can lead to the exchange of technology, skills, and market access, which can enhance the growth and modernization of local industries.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Setting up industrial estates with modern amenities: This promotes industrial development by providing businesses with the necessary infrastructure and facilities to operate efficiently. Modern amenities can attract both local and foreign investment, facilitating industrial growth.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Granting capital to firms at reasonable interest rates: This is beneficial for industrial development as it makes it easier for firms to access financing for expansion, modernization, and innovation. Affordable capital can help businesses grow and become more competitive.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+ 
+  <div id="quiz">
+    <div class="question">
+        <div class="question-number"><strong>32.</strong></div>
+        <p> National income is calculated mainly to</p>
+        <div class="options">
+            <div class="option" data-correct="true">A.	determine how income is to be shared</div>
+            <div class="option" data-correct="false">B.	help firms generate more funds</div>
+            <div class="option" data-correct="false">C.	determine the level of sectoral performance</div>
+            <div class="option" data-correct="false">D.	determine aid to be received from other nations</div>
+        </div>
+        <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	determine how income is to be shared
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A. determine how income is to be shared:
+            National income calculations are crucial for understanding the overall economic health of a country and how income is distributed among different sectors and individuals. This helps in policy formulation and planning to address inequalities and ensure that resources are allocated efficiently. It provides a basis for fiscal policies and welfare programs aimed at redistributing income.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. help firms generate more funds:
+While national income data can influence economic policies that may indirectly affect firms, the primary purpose of calculating national income is not specifically to help firms generate more funds. Instead, it is more focused on the broader economic and social aspects.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. determine the level of sectoral performance:
+National income provides a broad overview of the economy rather than detailed performance metrics of individual sectors. Sectoral performance is more directly assessed through other metrics and indicators, such as sector-specific production data and performance reports.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. determine aid to be received from other nations:
+National income itself does not directly determine foreign aid. Foreign aid decisions are influenced by a variety of factors including political relations, strategic interests, and specific needs assessments rather than just national income figures.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+             
+   
+  <div id="quiz">
+    <div class="question<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>33.</strong></div>
+    <p> To overcome the problem of double counting under the expenditure approach</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	value added method is used.</div>
+        <div class="option" data-correct="true">B.	Only spending on final goods arc considered.</div>
+        <div class="option" data-correct="false">C.	proper accounting standards must be used</div>
+        <div class="option" data-correct="false">D.	spending on intermediate goods and inputs arc considered.</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	Only spending on final goods arc considered.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> In the expenditure approach to calculating Gross Domestic Product (GDP), the goal is to measure the total expenditure on final goods and services within an economy. Double counting occurs when the value of intermediate goods (those used to produce final goods) is included in the GDP calculation, leading to an inflated measure.
+
+            Why option B is correct:
+            
+            To avoid double counting, only the expenditure on final goods and services is included in the GDP calculation. Final goods are those that are purchased by the end user and are not used in the production of other goods.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Value added method is used:
+The value added method is another approach to calculating GDP and helps avoid double counting by only considering the value added at each stage of production. However, this does not directly address the expenditure approach.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Proper accounting standards must be used:
+While proper accounting standards are important for accurate financial reporting, they do not specifically resolve the issue of double counting in the expenditure approach.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Spending on intermediate goods and inputs are considered:
+Including spending on intermediate goods and inputs would lead to double counting. To accurately measure GDP using the expenditure approach, only the final goods and services are counted. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>34.</strong></div>
+    <p> The Net National Product (NNP) of a country is $50 m while the depreciation allowance is $ 10 m. The Gross National Product (GNP) is  </p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	$30 m</div>
+        <div class="option" data-correct="false">B.	$40 m</div>
+        <div class="option" data-correct="true">C.	$60 m</div>
+        <div class="option" data-correct="false">D.	$500 m.</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	$60 m
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> To find the Gross National Product (GNP), you can use the relationship between Net National Product (NNP) and Gross National Product (GNP).
+
+            The formula to find GNP from NNP is:
+            GNP
+            =
+            NNP
+            +
+            Depreciation Allowance
+            GNP=NNP+Depreciation Allowance
+            
+            In this case:
+            
+            NNP = $50 million
+            Depreciation Allowance = $10 million
+            So:
+            GNP
+            =
+            $
+            50
+             
+            million
+            +
+            $
+            10
+             
+            million
+            =
+            $
+            60
+             
+            million
+            GNP=$50million+$10million=$60million
+            
+            Thus, the correct answer is C. $60 million.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. $30 million: This option is incorrect because it is less than the NNP. Since GNP includes the depreciation allowance, it should be greater than NNP, not less.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. $40 million: This option is incorrect because adding the depreciation allowance of $10 million to the NNP of $50 million would give $60 million, not $40 million.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. $500 million: This option is incorrect as it is far too high compared to the given NNP and depreciation allowance. The GNP should be closer to the combined total of NNP and depreciation, which is $60 million. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+
+ <p<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>35.</strong></div>
+    <p> The price level and the value of money are</p>
+    <div class="options">
+        <div class="option" data-correct="true">A.	inversely related</div>
+        <div class="option" data-correct="false">B.	directly related</div>
+        <div class="option" data-correct="false">C.	not related</div>
+        <div class="option" data-correct="false">D.	positively related</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	inversely related.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Price Level and Value of Money (Inversely Related): The value of money is inversely related to the price level. As the price level rises (inflation), the value of money falls, meaning that each unit of currency buys fewer goods and services. Conversely, when the price level falls (deflation), the value of money increases, meaning that each unit of currency buys more.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Directly related: This would suggest that as the price level increases, the value of money also increases, which is incorrect. In reality, as the price level increases, the value of money decreases.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Not related: This is incorrect because there is a clear relationship between the price level and the value of money. As one changes, the other changes in the opposite direction.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Positively related: This implies that as the price level increases, the value of money also increases, which is contrary to the inverse relationship. The value of money actually decreases when the price level increases. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+   <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>36.</strong></div>
+    <p> Money is able to function more as a medium of exchange when</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	more people engage in subsistence production</div>
+        <div class="option" data-correct="false">B.	there is a fall in production</div>
+        <div class="option" data-correct="true">C.	there is specialization of labour.</div>
+        <div class="option" data-correct="false">D.	individuals and nations arc self-sufficient.</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	there is specialization of labour.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Specialization of labour means that individuals or groups focus on producing specific goods or services. This specialization increases the efficiency and productivity of production. When people specialize in what they do best, they need a mechanism to exchange their specialized products for other goods and services they need. Money functions effectively as a medium of exchange in such scenarios because it provides a common measure of value and facilitates transactions between specialized producers.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. more people engage in subsistence production: Subsistence production means producing just enough to meet one's own needs without engaging in trade. In this case, money is less needed as there is minimal exchange or trade involved.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. there is a fall in production: A fall in production generally means fewer goods and services are available. In such a scenario, the need for money as a medium of exchange may decrease since there are fewer goods to trade or buy.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. individuals and nations are self-sufficient: Self-sufficiency means that individuals or nations can produce everything they need without trading. In this case, the role of money as a medium of exchange is diminished because there is little to no need for transactions between different producers or consumers.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>37.</strong></div>
+    <p> An indication that there is inflation in a country is that</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	there is a decrease in the demand for goods and services</div>
+        <div class="option" data-correct="false">B.	there are too many goods in circulation</div>
+        <div class="option" data-correct="true">C.	the same amount of money buys lower quantity of goods</div>
+        <div class="option" data-correct="false">D.	people prefer to lend than to borrow</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	the same amount of money buys lower quantity of goods.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> C. the same amount of money buys a lower quantity of goods
+            This is the correct answer because inflation is characterized by a decrease in the purchasing power of money. When inflation occurs, the general price level of goods and services rises, meaning that each unit of currency buys fewer goods and services than it did before.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. there is a decrease in the demand for goods and services
+This option is incorrect because inflation is typically associated with an increase in demand for goods and services relative to their supply, which drives prices up. A decrease in demand is more indicative of deflation or an economic downturn.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. there are too many goods in circulation
+This option is incorrect because having too many goods in circulation usually leads to lower prices, not inflation. Inflation generally occurs when there is more money chasing a relatively stable amount of goods, not an excess of goods.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. people prefer to lend than to borrow
+This option is incorrect because inflation typically makes borrowing more attractive and lending less attractive. With inflation, the real value of money decreases, so borrowers benefit by repaying loans with money that is worth less. Lenders, on the other hand, face losses because the money they are repaid is worth less than when it was lent out. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+      <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>38.</strong></div>
+    <p> The most liquid asset among the following is</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	shares</div>
+        <div class="option" data-correct="false">B.	bonds</div>
+        <div class="option" data-correct="true">C.	cash</div>
+        <div class="option" data-correct="false">D. cheque.</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	cash.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Liquidity refers to how quickly and easily an asset can be converted into cash without significantly affecting its value.
+            Cash is the most liquid asset because it is already in its most liquid form; you don't need to convert it into something else.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Shares: While shares can be sold for cash, they are not as liquid as cash itself. The process of selling shares can take time, and their value may fluctuate.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Bonds: Bonds are debt instruments that can be sold, but they typically have a longer time to maturity and can be less liquid compared to cash.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Cheque: A cheque is a promise to pay a specific amount of cash, but it requires processing and can be subject to delays. It's not as immediately liquid as cash. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+   <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>39.</strong></div>
+    <p> Commercial banks help in economic development mainly by</p>
+    <div class="options">
+        <div class="option" data-correct="true">A.	acting as intermediaries between lenders and borrowers</div>
+        <div class="option" data-correct="false">B.	giving financial advice to the government</div>
+        <div class="option" data-correct="false">C.	acting as trustees and executors of wills</div>
+        <div class="option" data-correct="false">D.	serving as custodians of valuables</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	acting as intermediaries between lenders and borrowers.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Commercial banks play a crucial role in economic development primarily by acting as intermediaries between lenders and borrowers. They facilitate the flow of funds from individuals and institutions with surplus money (lenders) to those who need funds for various purposes such as business expansion, infrastructure projects, and personal loans (borrowers). This process supports economic growth by ensuring that capital is efficiently allocated to productive uses, promoting investment, and stimulating economic activities.
+
+        </div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Giving financial advice to the government: While commercial banks might provide financial services and advice, their primary role in economic development is not centered around advising the government but rather in facilitating the movement of capital and funding.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Acting as trustees and executors of wills: This is more of a legal and administrative function rather than a direct economic development role. Although banks might perform these functions, they are not the primary means by which they contribute to economic growth.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Serving as custodians of valuables: This role involves safeguarding assets and valuables but does not directly contribute to economic development. The core contribution of banks to economic development is through their intermediary function, not just holding valuables.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>40.</strong></div>
+    <p> Taxes levied on goods and services by governments are called </p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	direct taxes</div>
+        <div class="option" data-correct="false">B.	corporate taxes</div>
+        <div class="option" data-correct="true">C.	indirect taxes.</div>
+        <div class="option" data-correct="false">D. poll taxes</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	indirect taxes.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Indirect Taxes are taxes levied on goods and services rather than on income or profits. These taxes are typically included in the price of the goods and services, which means the consumer pays the tax indirectly through the purchase. Examples of indirect taxes include sales tax, VAT (Value Added Tax), and excise duties.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Direct Taxes:
+
+Direct taxes are taxes that are directly paid to the government by the individual or organization on whom it is levied. Examples include income tax and property tax. They are not specifically related to goods and services.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Corporate Taxes:
+
+Corporate taxes are a type of direct tax levied on the profits of corporations. While related to business operations, they are not taxes on goods and services.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Poll Taxes:
+
+Poll taxes are a fixed tax levied on individuals, usually without regard to income or wealth. They are not related to goods and services but are instead a form of head tax, which is now largely obsolete. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+ 
+<div id="quiz">
+    <div class="question<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>41.</strong></div>
+    <p> Use the diagram below to answer question 41
+
+        The curve labelled W shows the
+    </p>
+    <div class="options">
+        <div class="option" data-correct="true">A.	proportional tax</div> 
+        <div class="option" data-correct="false">B.	progressive tax. </div>
+        <div class="option" data-correct="false">C.	specific tax</div>
+        <div class="option" data-correct="false">D. regressive tax</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option 
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> </div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>42.</strong></div>
+    <p> An example of government’s recurrent expenditure is</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	the cost of building a school</div>
+        <div class="option" data-correct="true">B.	paying salaries of workers</div>
+        <div class="option" data-correct="false">C.	purchase of new vehicles</div>
+        <div class="option" data-correct="false">D.	electrification projects in rural areas</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	paying salaries of workers
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Recurrent expenditure refers to the regular and ongoing expenses that the government incurs for its day-to-day operations. This includes spending on salaries, wages, and other regular operational costs. Paying salaries of workers falls under this category as it is a recurring cost necessary for the functioning of government institutions.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. The cost of building a school: This is considered a capital expenditure, not a recurrent expenditure. Capital expenditure involves spending on infrastructure and long-term assets, which typically provide benefits over many years.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Purchase of new vehicles: Like building schools, purchasing new vehicles is a form of capital expenditure. It involves buying assets that are expected to be used for a long period.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Electrification projects in rural areas: This also falls under capital expenditure. Such projects involve significant investments in infrastructure to improve long-term development and are not part of regular operational expenses. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+
+ <p<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>43.</strong></div>
+    <p> A country is described as developing if </p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	the population is decreasing.</div>
+        <div class="option" data-correct="false">B.	there is low labour supply</div>
+        <div class="option" data-correct="false">C.	the contribution of tertiary sector to national income is high</div>
+        <div class="option" data-correct="true">D.	the income per head is low. </div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option D.	the income per head is low.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A country is often described as developing if it has a lower standard of living compared to developed countries, which includes having a low per capita income. The income per head (or per capita income) is a common indicator used to assess the economic development of a country. In developing countries, this figure is generally lower compared to developed nations.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. the population is decreasing: While a decreasing population can impact economic development, it is not a defining characteristic of a developing country. Some developing countries may have a growing population, and population trends alone do not determine development status.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. there is low labour supply: Low labour supply is not a typical indicator of a developing country. Developing countries often have high labor supply, but issues like unemployment or underemployment may exist. The concept of development is more related to economic output and living standards rather than just labor supply.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. the contribution of the tertiary sector to national income is high: Developing countries often have a lower contribution from the tertiary (service) sector compared to developed countries. A high contribution from the tertiary sector is more characteristic of developed countries, where the economy is service-oriented.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+   <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>44.</strong></div>
+    <p> Tariffs, quotas and embargoes are examples of</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	foreign exchange policies</div>
+        <div class="option" data-correct="true">B.	trade restriction policies</div>
+        <div class="option" data-correct="false">C.	fiscal policies</div>
+        <div class="option" data-correct="false">D.	monetary policies</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	trade restriction policies
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Trade restriction policies: Tariffs, quotas, and embargoes are all methods used to control or restrict trade between countries. Tariffs are taxes on imports or exports, quotas limit the quantity of goods that can be traded, and embargoes are official bans on trade with specific countries. These measures are designed to protect domestic industries from foreign competition, control the flow of goods, and influence international trade relations.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Foreign exchange policies: These involve the management of a country's currency exchange rates and reserves, which are not directly related to tariffs, quotas, or embargoes.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Fiscal policies: Fiscal policies pertain to government spending and taxation decisions aimed at influencing the economy, but they do not specifically address trade restrictions.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Monetary policies: These involve the management of the money supply and interest rates by a central bank to control inflation and stabilize the currency, which does not include trade restrictions like tariffs or quotas.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>45.</strong></div>
+    <p> Trade protection will assist economic growth in developing countries if it can</p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	eliminate importation of all commodities</div>
+        <div class="option" data-correct="false">B.	generate enough revenue through export duties</div>
+        <div class="option" data-correct="true">C.	effectively safeguard newly established firms</div>
+        <div class="option" data-correct="false">D.	allow the importation of cheaper goods people want.</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	effectively safeguard newly established firms.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> C. Effectively safeguard newly established firms:
+            Trade protection measures, such as tariffs and import quotas, can help protect new and emerging industries from foreign competition. By shielding these firms from international competition, they have a better chance to develop, grow, and become competitive. This can lead to economic growth as these firms mature and contribute to the economy.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Eliminate importation of all commodities:
+Eliminating all imports is impractical and detrimental. Imports are essential for providing goods and resources that may not be available domestically. Completely cutting off imports could lead to shortages, higher prices, and reduced consumer choice, negatively affecting economic growth.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Generate enough revenue through export duties:
+While export duties might generate revenue, they do not directly support the growth of developing countries. High export duties can discourage exports and hurt the global competitiveness of domestic products. The focus should be on protecting and nurturing domestic industries rather than imposing export restrictions.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Allow the importation of cheaper goods people want:
+Allowing the importation of cheaper goods might be beneficial for consumers due to lower prices but can harm local industries by exposing them to unfair competition. It doesn't support the protection or growth of newly established firms, which need time and support to become competitive. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+      <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>46.</strong></div>
+    <p> A government may cause a favourable change in her invisible trade account by </p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	increasing the export of her primary products</div>
+        <div class="option" data-correct="false">B.	imposing high tariff on exports</div>
+        <div class="option" data-correct="true">C.	developing tourism and other services</div>
+        <div class="option" data-correct="false">D.	encouraging people to go for medical treatment abroad</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C.	developing tourism and other services.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Developing tourism and other services (Option C) can cause a favorable change in the invisible trade account because the invisible trade account typically includes transactions related to services such as tourism, banking, insurance, and other intangible assets. By developing tourism, a country can attract foreign visitors who spend money on services, which improves the balance of payments in the invisible trade account.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Increasing the export of her primary products (Option A) affects the visible trade account, not the invisible trade account. The visible trade account deals with goods (tangible products) rather than services. So, while increasing exports of primary products can improve the visible trade balance, it does not directly impact the invisible trade account.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Imposing high tariffs on exports (Option B) is a measure that affects the visible trade account and can reduce the volume of exports. High tariffs are more likely to discourage exports, which could worsen the trade balance, rather than positively impacting the invisible trade account.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Encouraging people to go for medical treatment abroad (Option D) would actually worsen the invisible trade account. When people go abroad for medical treatment, they spend money in other countries, which is a debit entry in the invisible trade account, leading to a negative impact.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+   <div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>47.</strong></div>
+    <p> Country M enjoys absolute advantage over country N in the production of commodities X and Y, if country M </p>
+    <div class="options">
+        <div class="option" data-correct="false">A.	can produce only commodity Y cheaper than country N</div>
+        <div class="option" data-correct="true">B.	is more efficient than country N in producing both commodities X and Y</div>
+        <div class="option" data-correct="false">C.	is inefficient in the production of both commodities X and Y</div>
+        <div class="option" data-correct="false">D.	and country N arc efficient in the production of both goods</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B.	is more efficient than country N in producing both commodities X and Y.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Absolute Advantage: A country has an absolute advantage over another if it can produce more of a good or service using the same amount of resources, or if it can produce the good or service at a lower cost.
+
+            Option B is correct because it correctly describes that Country M is more efficient in producing both commodities X and Y compared to Country N. This means Country M can produce both goods with fewer resources or at a lower cost, which signifies an absolute advantage.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option A: "can produce only commodity Y cheaper than country N" - This option is incorrect because it only addresses the production of one commodity (Y) and does not cover the production of both commodities X and Y. Absolute advantage requires efficiency in the production of both commodities.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option C: "is inefficient in the production of both commodities X and Y" - This option is incorrect because inefficiency means not having an absolute advantage. Absolute advantage specifically refers to being more efficient, so this statement contradicts the concept.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Option D: "and country N are efficient in the production of both goods" - This option is incorrect because it suggests that both countries are efficient in producing both goods, which does not fit the definition of absolute advantage. Absolute advantage implies that one country (Country M) is more efficient than the other (Country N) in producing both commodities, not that both are efficient. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+<div class="question">
+    <div class="question-number"><strong>48.</strong></div>
+    <p> Which of the following is not a problem facing the Economic Community of West African  States (ECOWAS)! </p>
+    <div class="options">
+        <div class="option" data-correct="true">A.	Language barriers</div>
+        <div class="option" data-correct="false">B.	Production of the same commodities</div>
+        <div class="option" data-correct="false">C.	Poor transportation and communication</div>
+        <div class="option" data-correct="false">D.	Inadequate supply of labour</div>
+    </div>
+    <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option A.	Language barrier.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> A. Language barriers: This is not a primary issue for ECOWAS. While language differences exist among member states, the organization has mechanisms to facilitate communication, such as using official languages (English, French, and Portuguese) for meetings and documents.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Production of the same commodities: This is a problem because it can lead to competition among member states for the same markets and resources, reducing the potential for regional specialization and economic cooperation.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+C. Poor transportation and communication: This is a significant issue for ECOWAS. Inadequate infrastructure can hinder trade and economic integration among member states, affecting the efficiency of regional markets.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Inadequate supply of labour: While labour issues exist, they are not as central to ECOWAS's challenges as the other listed problems. ECOWAS focuses more on economic integration and infrastructure rather than labour supply issues. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+<div id="quiz">
+    <div id="quiz">
+ <div class="question">
+     <div class="question-number"><strong>49.</strong></div>
+     <p> Assisting members to solve temporary balance of payments problems is the reason for the establishment of the</p>
+     <div class="options">
+         <div class="option" data-correct="false">A.	World Bank</div>
+         <div class="option" data-correct="true">B. International Monetary Fund</div>
+         <div class="option" data-correct="false">C. African Development Bank</div>
+         <div class="option" data-correct="false">D. Economic Commission for Africa. </div>
+     </div>
+     <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option B. International Monetary Fund.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> International Monetary Fund (IMF): The IMF was established specifically to help member countries address temporary balance of payments problems. It provides financial assistance and advice to stabilize economies and restore economic stability. This aligns with the function described in the question.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+World Bank: While the World Bank also provides financial assistance, its primary focus is on long-term economic development and poverty reduction, rather than addressing temporary balance of payments issues.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+African Development Bank (AfDB): The AfDB’s primary mission is to promote economic and social development in African countries. It does not specialize in managing temporary balance of payments problems but rather in providing funding for development projects and initiatives within Africa.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+Economic Commission for Africa (ECA): The ECA is a regional UN organization that aims to foster economic and social development in Africa. It focuses on policy analysis and research rather than directly providing financial assistance to resolve temporary balance of payments problems. </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+ 
+ <div id="quiz">
+ <div class="question">
+     <div class="question-number"><strong>50.</strong></div>
+     <p> Which of the following is a non-renewable natural resource?</p>
+     <div class="options">
+         <div class="option" data-correct="false">A.	Cocoa </div>
+         <div class="option" data-correct="false">B. Oil palm</div>
+         <div class="option" data-correct="true">C. Coal </div>
+         <div class="option" data-correct="false">D. Rubber</div>
+     </div>
+     <button class="check-answer hidden button">Check Answer</button>
+<div class="container hidden">
+    <div class="answer hidden">The correct answer is Option C. Coal.
+        <div style="width: 25vw; height: auto;">
+            <img src="/miracle/Physics 23/Nuclear force/Nuclear force.png
+        " style="width: 100%; height: auto;"> </img>
+        </div>
+        </br>
+        </br>
+    </div>
+    <button id="subject-button" class="hidden button">More..?</button>
+    <div id="more-content" class="hidden">
+        </br>
+        <div id="subject-name" class="hidden"> Coal is a non-renewable natural resource because it takes millions of years to form and cannot be replenished on a human timescale once it is depleted. It is formed from ancient plant material that has undergone geological processes over long periods.</div></br>
+        On the other hand,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+A. Cocoa: Cocoa is a renewable resource. It comes from cocoa trees that can be replanted and cultivated over time. As long as the trees are properly managed, cocoa production can be sustained.
+</br>
+
+
+        </div></br>
+        Also,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+B. Oil palm: Similar to cocoa, oil palm is a renewable resource. Oil palm trees can be cultivated and harvested repeatedly, making it a renewable resource when managed sustainably.
+</div>
+        </br>
+        And lastly,
+        <div style="width: 25vw; height: auto;">
+            <img src="/
+" style="width: 100%; height: auto;"> </img>
+D. Rubber: Rubber is also a renewable resource. It is harvested from rubber trees, which can produce latex for many years if properly maintained. Like cocoa and oil palm, it can be replenished through cultivation.</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+
+
+              <div id="score">Score: 0</div>
+              <div id="progress">Progress: 0/50</div>
+          
+          
+              <script>
+                    var score = 0;
+var progress = 0;
+
+$(".option").click(function() {
+    if ($(this).hasClass("selected")) {
+        return;
+    }
+    $(this).addClass("selected");
+    $(this).siblings().removeClass("correct incorrect");
+    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+    if ($(this).data("correct")) {
+        score++;
+        $("#score").text("Score: " + score);
+    } else {
+        $(this).parent().siblings(".check-answer").removeClass("hidden");
+    }
+    progress++;
+    $("#progress").text("Progress: " + progress + "/50");
+});
+
+$(".check-answer").click(function() {
+    var answer = $(this).siblings('.answer');
+    var text = answer.text();
+    var i = 0;
+
+    answer.text('');
+    answer.removeClass('hidden');
+
+    function typeWriter() {
+        if (i < text.length) {
+            answer.text(answer.text() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.classList.add('answered');
+            this.classList.add('selected');
+            question.querySelector('.check-answer').classList.remove('hidden');
+        });
+    });
+
+    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+    checkAnswerButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const question = this.closest('.question');
+            question.querySelector('.answer').classList.remove('hidden');
+            this.classList.add('hidden');
+        });
+    });
+});
+
+              </script>
+          </body>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
+          <!-- button -->
+          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <style>
+          
+          
+          .footer-social-icon i {
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 38px;
+          border-radius: 50%;
+          }
+          .footer-widget ul li {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 10px;
+          }
+          .footer-widget ul li a:hover{
+          color: darkcyan;
+          }
+          .footer-widget ul li a {
+          color: lightblue;
+          text-transform: capitalize;
+          }
+          .footer-menu li {
+          display: inline-block;
+          margin-left: 50px;
+          }
+          </style>
+          </div>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+          <div class="row">
+          
+          
+          
+          
+          <!--stop -->
+          
+          
+          
+          
+          
+          
+          </div>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+          
+          
+          </div>
+          <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+          <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+          <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">courses</a></li>
+          <li><a href="#">classroom</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">blog</a></li>
+          </ul>
+          </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+          <div class="footer-widget-heading">
+      
+          </div>
+          </footer>
+          </html>
+          
+          
+          
+          
+          
+         
