@@ -3246,130 +3246,124 @@
 
     <script>
         var score = 0;
-var progress = 0;
-var isAnimating = false;
-
-$(".option").click(function() {
-if ($(this).hasClass("selected")) {
-return;
-}
-$(this).addClass("selected");
-$(this).siblings().removeClass("correct incorrect");
-$(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-if ($(this).data("correct")) {
-score++;
-$("#score").text("Score: " + score);
-} else {
-$(this).parent().siblings(".check-answer").removeClass("hidden");
-}
-// Remove the 'hidden' class from the "Check Answer" button
-$(this).siblings(".check-answer").removeClass("hidden");
-progress++;
-$("#progress").text("Progress: " + progress + "/50");
-});
-
-function displayAnswer(that) {
-if (isAnimating) return;
-var container = $(that).siblings('.container');
-var answer = container.children('.answer');
-var htmlContent = answer.html();
-var i = 0;
-
-// Find the index of the end of the "answer hidden" div
-var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
-
-answer.html('');
-answer.removeClass('hidden');
-container.removeClass('hidden');
-isAnimating = true;
-
-function typeWriter() {
-if (i < endIndex) {
-if (htmlContent.charAt(i) === '<') {
-    var tagEnd = htmlContent.indexOf('>', i) + 1;
-    answer.append(htmlContent.slice(i, tagEnd));
-    i = tagEnd;
-} else {
-    answer.append(htmlContent.charAt(i));
-    i++;
-}
-setTimeout(typeWriter, 40);
-} else {
-container.children('#subject-button').removeClass('hidden');
-isAnimating = false;
-}
-}
-
-typeWriter();
-}
-
-$(".check-answer").click(function() {
-displayAnswer(this);
-});
-
-function displayMoreContent(that) {
-if (isAnimating) return;
-var moreContent = $(that).siblings('#more-content');
-var htmlContent = moreContent.html();
-var i = 0;
-
-// Find the index of the end of the "more-content hidden" div
-var endIndex = htmlContent.lastIndexOf('</div>') + 6;
-
-moreContent.html('');
-moreContent.removeClass('hidden');
-isAnimating = true;
-
-function typeWriter() {
-if (i < endIndex) {
-if (htmlContent.charAt(i) === '<') {
-    var tagEnd = htmlContent.indexOf('>', i) + 1;
-    moreContent.append(htmlContent.slice(i, tagEnd));
-    i = tagEnd;
-} else {
-    moreContent.append(htmlContent.charAt(i));
-    i++;
-}
-setTimeout(typeWriter, 40);
-} else {
-isAnimating = false;
-}
-}
-
-typeWriter();
-}
-
-
-$(".container").on("click", "#subject-button", function() {
-displayMoreContent(this);
-});
-
-
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-const options = document.querySelectorAll('.option');
-options.forEach(option => {
-option.addEventListener('click', function() {
-const question = this.closest('.question');
-question.classList.add('answered');
-this.classList.add('selected');
-question.querySelector('.check-answer').classList.remove('hidden');
-});
-});
-
-const checkAnswerButtons = document.querySelectorAll('.check-answer');
-checkAnswerButtons.forEach(button => {
-button.addEventListener('click', function() {
-const question = this.closest('.question');
-question.querySelector('.answer').classList.remove('hidden');
-
-});
-});
-});
-
-
-  </script>
+        var progress = 0;
+        var isAnimating = false;
+    
+        $(".option").click(function() {
+            if ($(this).hasClass("selected")) {
+                return;
+            }
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("correct incorrect");
+            $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+            if ($(this).data("correct")) {
+                score++;
+                $("#score").text("Score: " + score);
+            } else {
+                $(this).parent().siblings(".check-answer").removeClass("hidden");
+            }
+            // Remove the 'hidden' class from the "Check Answer" button
+            $(this).siblings(".check-answer").removeClass("hidden");
+            progress++;
+            $("#progress").text("Progress: " + progress + "/50");
+        });
+    
+        function displayAnswer(that) {
+            if (isAnimating) return;
+            var container = $(that).siblings('.container');
+            var answer = container.children('.answer');
+            var htmlContent = answer.html();
+            var i = 0;
+    
+            // Find the index of the end of the "answer hidden" div
+            var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+    
+            answer.html('');
+            answer.removeClass('hidden');
+            container.removeClass('hidden');
+            isAnimating = true;
+    
+            function typeWriter() {
+                if (i < endIndex) {
+                    if (htmlContent.charAt(i) === '<') {
+                        var tagEnd = htmlContent.indexOf('>', i) + 1;
+                        answer.append(htmlContent.slice(i, tagEnd));
+                        i = tagEnd;
+                    } else {
+                        answer.append(htmlContent.charAt(i));
+                        i++;
+                    }
+                    setTimeout(typeWriter, 40);
+                } else {
+                    container.children('#subject-button').removeClass('hidden');
+                    isAnimating = false;
+                }
+            }
+    
+            typeWriter();
+        }
+    
+        $(".check-answer").click(function() {
+            displayAnswer(this);
+        });
+    
+        function displayMoreContent(that) {
+            if (isAnimating) return;
+            var moreContent = $(that).siblings('#more-content');
+            var selectedOption = $(that).closest('.question').find('.option.selected').text().trim().charAt(0);
+            var correctExplanation = moreContent.find('#subject-name').html();
+            var incorrectExplanation = moreContent.find('.incorrect-explanation[data-option="' + selectedOption + '"]').html();
+            var htmlContent = correctExplanation + incorrectExplanation;
+            var i = 0;
+    
+            moreContent.html('');
+            moreContent.removeClass('hidden');
+            isAnimating = true;
+    
+            function typeWriter() {
+                if (i < htmlContent.length) {
+                    if (htmlContent.charAt(i) === '<') {
+                        var tagEnd = htmlContent.indexOf('>', i) + 1;
+                        moreContent.append(htmlContent.slice(i, tagEnd));
+                        i = tagEnd;
+                    } else {
+                        moreContent.append(htmlContent.charAt(i));
+                        i++;
+                    }
+                    setTimeout(typeWriter, 40);
+                } else {
+                    isAnimating = false;
+                }
+            }
+    
+            typeWriter();
+        }
+    
+        $(".container").on("click", "#subject-button", function() {
+            displayMoreContent(this);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.question');
+                    question.classList.add('answered');
+                    this.classList.add('selected');
+                    question.querySelector('.check-answer').classList.remove('hidden');
+                });
+            });
+    
+            const checkAnswerButtons = document.querySelectorAll('.check-answer');
+            checkAnswerButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const question = this.closest('.question');
+                    question.querySelector('.answer').classList.remove('hidden');
+                });
+            });
+        });
+    </script>
     
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
