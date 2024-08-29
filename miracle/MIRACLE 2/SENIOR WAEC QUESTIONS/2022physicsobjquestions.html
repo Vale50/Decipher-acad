@@ -2,253 +2,253 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- <style>
-    h1{
-        color: #fff;
-        font-style: italic;
-    }
-* {box-sizing: border-box;}
-.answered {
-    background-color: #f0f0f0; /* Light grey background for answered questions */
-}
-
-.selected {
-    font-weight: bold; /* Bold font for selected option */
-}
-
-body {
- margin: 0;
- font-family: Arial, Helvetica, sans-serif;
- background-color: #12335b;
-}
-.header {
- overflow: hidden;
- background-color: #3498db;
- padding: 10px 5px;
- transition: 0.3s ease;
-}
-.header a {
- float: left;
- color: #12335b;
- text-align: center;
- padding: 10px;
- text-decoration: none;
- font-size: 17px;
- line-height: 25px;
- border-radius: 4px;
-}
-.header a.logo {
- font-size: 20px;
- font-weight: bold;
-}
-.header a:hover {
- color: cyan;
-}
-.header-right {
- float: right;
-}
-@media screen and (max-width: 500px) {
- .header a {
- float: none;
- display: block;
- text-align: center;
- transition: 0.3s ease;
- }
- 
- .header-right {
- float: none;
- }
-}
-#subject-button.hidden, .container {
-    border: 1px solid white;
-    background-color: #34db95;
-    margin: 10px;
-    cursor: pointer;
-    outline: none;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 15px #a7a7a7,
-                -8px -8px 15px #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-</style>
-</head>
-<body>
-<div class="header">
- <a href="#default" class="logo">DECIPHER-ACADEMY</a>
- <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
- <a href="x.com"><i class="fab fa-twitter"></i></i></a>
- <div class="header-right">
- <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
- <a href="#contact">About</a>
- <a href="#courses">Courses</a>
- <a href="#classroom">Classrooms</a>
- <a href="#blog">Blog</a>
- </div>
-</div>
-</body>
-<style>
-
-
-    *  {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-
-/* Quiz container styles */
-/* Neumorphism effect for divs */
-.neu-div {
- background-color: #e0e0e0;
- border-radius: 10px;
- box-shadow: 8px 8px 15px #a7a7a7,
-             -8px -8px 15px #ffffff;
- padding: 20px;
- margin: 20px auto;
- max-width: 600px;
-}
-
-/* Apply neumorphism effect to specific elements */
-#quiz, .question, .options {
- background-color: #e0e0e0;
- border-radius: 10px;
- box-shadow: 8px 8px 15px #a7a7a7,
-             -8px -8px 15px #ffffff;
- padding: 20px;
- margin: 20px auto;
- max-width: 600px;
-}
-.button{
-  display: inline-block;
-  border-radius: 50px;
-  padding: 9px 14px;
-  font-size: 14px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #12335b;
-  border: none;
-  box-shadow:  20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff;
-}
-
-.option {
- background-color: #e0e0e0;
- border-radius: 10px;
- box-shadow: 5px 5px 10px #a7a7a7,
-             -5px -5px 10px #ffffff;
- padding: 10px;
- margin: 10px;
- cursor: pointer;
- transition: 0.3s ease;
-}
-
-.option:hover {
- box-shadow: inset 5px 5px 10px #a7a7a7,
-             inset -5px -5px 10px #ffffff;
-}
-
-.option:active {
- box-shadow: inset 2px 2px 5px #a7a7a7,
-             inset -2px -2px 5px #ffffff;
-}
-#quiz{
- background-color: #f9f9f9;
- padding: 20px;
- border-radius: 10px;
- margin: 20px auto;
- max-width: 600px;
- text-align: center;
-}
-
-
-#question {
- font-size: 18px;
- margin-bottom: 20px;
-}
-
-
-.option {
- border: 1px solid #ccc;
- padding: 10px;
- margin: 10px;
- cursor: pointer;
-}
-
-
-#answer {
- margin-top: 20px;
-}
-.answer{
- border: 1px solid blue;
- background-color: #34db95;
- margin: 10px;
- cursor: pointer;
-         outline: none;
-         color: #333;
-         padding: 10px 20px;
-         border-radius: 10px;
-         box-shadow: 8px 8px 15px #a7a7a7,
-                     -8px -8px 15px #ffffff;
-         font-weight: bold;
-         cursor: pointer;
-         transition: 0.3s ease;
-}
-
-
-
-
-/* Score and progress bar styles */
-#score {
- font-size: 16px;
- margin-top: 20px;
-}
-
-
-#progressBar {
- width: 100%;
- height: 20px;
- margin-top: 10px;
-}
-    
-     .correct { background-color: green; }
-     .incorrect { background-color: red; }
-     .hidden { display: none; }
-     /* Neumorphism effect for buttons */
-     .neu-button {
-         border: none;
-         outline: none;
-         background-color: #e0e0e0;
-         color: #333;
-         padding: 10px 20px;
-         border-radius: 10px;
-         box-shadow: 8px 8px 15px #a7a7a7,
-                     -8px -8px 15px #ffffff;
-         font-weight: bold;
-         cursor: pointer;
-         transition: 0.3s ease;
-     }
-
-     .neu-button:hover {
-         box-shadow: inset 8px 8px 15px #a7a7a7,
-                     inset -8px -8px 15px #ffffff;
-     }
-
-     .neu-button:active {
-         box-shadow: inset 4px 4px 10px #a7a7a7,
-                     inset -4px -4px 10px #ffffff;
-     }
-     .question-number {
-            font-weight: bold;
-            font-size: 1em;
-            margin-bottom: 10px;
+    <style>
+        h1{
+            color: #fff;
+            font-style: italic;
         }
- </style>
+    * {box-sizing: border-box;}
+    .answered {
+        background-color: #f0f0f0; /* Light grey background for answered questions */
+    }
+    
+    .selected {
+        font-weight: bold; /* Bold font for selected option */
+    }
+    
+    body {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #12335b;
+    }
+    .header {
+     overflow: hidden;
+     background-color: #3498db;
+     padding: 10px 5px;
+     transition: 0.3s ease;
+    }
+    .header a {
+     float: left;
+     color: #12335b;
+     text-align: center;
+     padding: 10px;
+     text-decoration: none;
+     font-size: 17px;
+     line-height: 25px;
+     border-radius: 4px;
+    }
+    .header a.logo {
+     font-size: 20px;
+     font-weight: bold;
+    }
+    .header a:hover {
+     color: cyan;
+    }
+    .header-right {
+     float: right;
+    }
+    @media screen and (max-width: 500px) {
+     .header a {
+     float: none;
+     display: block;
+     text-align: center;
+     transition: 0.3s ease;
+     }
+     
+     .header-right {
+     float: none;
+     }
+    }
+    #subject-button.hidden, .container {
+        border: 1px solid white;
+        background-color: #34db95;
+        margin: 10px;
+        cursor: pointer;
+        outline: none;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 15px #a7a7a7,
+                    -8px -8px 15px #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="header">
+     <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+     <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+     <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+     <div class="header-right">
+     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+     <a href="#contact">About</a>
+     <a href="#courses">Courses</a>
+     <a href="#classroom">Classrooms</a>
+     <a href="#blog">Blog</a>
+     </div>
+    </div>
+    </body>
+    <style>
+    
+    
+        *  {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    }
+    
+    
+    /* Quiz container styles */
+    /* Neumorphism effect for divs */
+    .neu-div {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 8px 8px 15px #a7a7a7,
+                 -8px -8px 15px #ffffff;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 600px;
+    }
+    
+    /* Apply neumorphism effect to specific elements */
+    #quiz, .question, .options {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 8px 8px 15px #a7a7a7,
+                 -8px -8px 15px #ffffff;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 600px;
+    }
+    .button{
+      display: inline-block;
+      border-radius: 50px;
+      padding: 9px 14px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #12335b;
+      border: none;
+      box-shadow:  20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    }
+    
+    .option {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 5px 5px 10px #a7a7a7,
+                 -5px -5px 10px #ffffff;
+     padding: 10px;
+     margin: 10px;
+     cursor: pointer;
+     transition: 0.3s ease;
+    }
+    
+    .option:hover {
+     box-shadow: inset 5px 5px 10px #a7a7a7,
+                 inset -5px -5px 10px #ffffff;
+    }
+    
+    .option:active {
+     box-shadow: inset 2px 2px 5px #a7a7a7,
+                 inset -2px -2px 5px #ffffff;
+    }
+    #quiz{
+     background-color: #f9f9f9;
+     padding: 20px;
+     border-radius: 10px;
+     margin: 20px auto;
+     max-width: 600px;
+     text-align: center;
+    }
+    
+    
+    #question {
+     font-size: 18px;
+     margin-bottom: 20px;
+    }
+    
+    
+    .option {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin: 10px;
+     cursor: pointer;
+    }
+    
+    
+    #answer {
+     margin-top: 20px;
+    }
+    .answer{
+     border: 1px solid blue;
+     background-color: #34db95;
+     margin: 10px;
+     cursor: pointer;
+             outline: none;
+             color: #333;
+             padding: 10px 20px;
+             border-radius: 10px;
+             box-shadow: 8px 8px 15px #a7a7a7,
+                         -8px -8px 15px #ffffff;
+             font-weight: bold;
+             cursor: pointer;
+             transition: 0.3s ease;
+    }
+    
+    
+    
+    
+    /* Score and progress bar styles */
+    #score {
+     font-size: 16px;
+     margin-top: 20px;
+    }
+    
+    
+    #progressBar {
+     width: 100%;
+     height: 20px;
+     margin-top: 10px;
+    }
+        
+         .correct { background-color: green; }
+         .incorrect { background-color: red; }
+         .hidden { display: none; }
+         /* Neumorphism effect for buttons */
+         .neu-button {
+             border: none;
+             outline: none;
+             background-color: #e0e0e0;
+             color: #333;
+             padding: 10px 20px;
+             border-radius: 10px;
+             box-shadow: 8px 8px 15px #a7a7a7,
+                         -8px -8px 15px #ffffff;
+             font-weight: bold;
+             cursor: pointer;
+             transition: 0.3s ease;
+         }
+    
+         .neu-button:hover {
+             box-shadow: inset 8px 8px 15px #a7a7a7,
+                         inset -8px -8px 15px #ffffff;
+         }
+    
+         .neu-button:active {
+             box-shadow: inset 4px 4px 10px #a7a7a7,
+                         inset -4px -4px 10px #ffffff;
+         }
+         .question-number {
+                font-weight: bold;
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -288,35 +288,41 @@ body {
                         J=Δp.
                         Thus, the correct answer is:
                         B. Change in momentum</div></br>
-                    On the other hand,
+                    However,
+                    <div class="incorrect-explanation hidden" data-option="B">
                     <div style="width: 25vw; height: auto;">
                         <img src="/miracle/Physics 22/Change in momentum/Change in kinetic energy.png
         " style="width: 100%; height: auto;"> </img>
+    
         A. Change in Kinetic Energy
         Change in kinetic energy is related to work done on the object and is given by the work-energy theorem.
         Kinetic energy change is related to the integral of force with respect to displacement (
         𝑊 = ∫ 𝐹 𝑑 𝑥
-        W=∫Fdx), not time.</br>
-         </div></br>
-                    Also, 
+        W=∫Fdx), not time.</div>
+    </div></br>
+                    
+    But, 
+    <div class="incorrect-explanation hidden" data-option="C">
                     <div style="width: 25vw; height: auto;">
                         <img src="/miracle/Physics 22/Change in momentum/Displacement.png
         " style="width: 100%; height: auto;"> </img>
         C. Work Done
         Work done (𝑊) is the product of force and displacement (𝑊 = 𝐹 ⋅ 𝑑
          W=F⋅d).
-        It is represented by the area under a force-displacement graph, not a force-time graph.           </div>
-                    </br>
-                    And lastly,
+        It is represented by the area under a force-displacement graph, not a force-time graph.   </div>
+    </div></br>
+
+                    But,
+                    <div class="incorrect-explanation hidden" data-option="D">
                     <div style="width: 25vw; height: auto;">
                         <img src="/miracle/Physics 22/Change in momentum/First Law.png
         " style="width: 100%; height: auto;"> </img>
-                    </div>
+                
   D. Change in Internal Energy
  Change in internal energy is related to the first law of thermodynamics and involves heat transfer and work done by or on the system.
  It is not directly represented by a force-time graph.
                 </div>
-
+            </div>
             </div>
         </div>
     </div>
