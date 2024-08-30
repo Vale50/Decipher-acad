@@ -289,7 +289,7 @@
                         Thus, the correct answer is:
                         B. Change in momentum.
                     </div></br>
-                    <div class="incorrect-explanation hidden" data-option="B">
+                    <div class="incorrect-explanation hidden" data-option="A">
                     <div style="width: 25vw; height: auto;">
                         <img src="/miracle/Physics 22/Change in momentum/Change in kinetic energy.png
         " style="width: 100%; height: auto;"> </img>
@@ -297,7 +297,8 @@
         Change in kinetic energy is related to work done on the object and is given by the work-energy theorem.
         Kinetic energy change is related to the integral of force with respect to displacement (
         𝑊 = ∫ 𝐹 𝑑 𝑥
-        W=∫Fdx), not time.</div>
+        W=∫Fdx), not time.
+    </div>
     </div></br>
     <div class="incorrect-explanation hidden" data-option="C">
                     <div style="width: 25vw; height: auto;">
@@ -3359,7 +3360,6 @@ D. 10.0 Ω:** This is incorrect because it doesn't match our calculated internal
               
               <div id="score">Score: 0</div>
               <div id="progress">Progress: 0/50</div>
-          
               <script>
                 var score = 0;
                 var progress = 0;
@@ -3376,10 +3376,9 @@ D. 10.0 Ω:** This is incorrect because it doesn't match our calculated internal
                         score++;
                         $("#score").text("Score: " + score);
                     } else {
-                        $(this).parent().siblings(".check-answer").removeClass("hidden");
+                        $(this).closest('.question').find(".check-answer").removeClass("hidden");
                     }
-                    // Remove the 'hidden' class from the "Check Answer" button
-                    $(this).siblings(".check-answer").removeClass("hidden");
+                    $(this).closest('.question').find(".check-answer").removeClass("hidden");
                     progress++;
                     $("#progress").text("Progress: " + progress + "/50");
                 });
@@ -3391,7 +3390,6 @@ D. 10.0 Ω:** This is incorrect because it doesn't match our calculated internal
                     var htmlContent = answer.html();
                     var i = 0;
             
-                    // Find the index of the end of the "answer hidden" div
                     var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
             
                     answer.html('');
@@ -3480,6 +3478,7 @@ D. 10.0 Ω:** This is incorrect because it doesn't match our calculated internal
                     });
                 });
             </script>
+            
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
           <!-- button -->
