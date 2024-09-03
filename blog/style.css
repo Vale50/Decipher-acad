@@ -1,0 +1,339 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    height: 200px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide any overflow from the background image */
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the image behind the text */
+}
+
+/* Overlay with Background Image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1; /* Ensure text is above the background image */
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1rem;
+}
+
+/* Colored Boxes */
+.colored-boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+}
+
+.colored-boxes a {
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Inherit text color from .box */
+    color: white;
+}
+
+.box {
+    padding: 20px;
+    color: white;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.box i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box.animate-up {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Colored Boxes Specific Styles */
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.gray {
+    background-color: gray;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.7s ease-in-out forwards;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0055cc;
+    transform: scale(1.1);
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #003366;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #0055cc;
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-content input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.footer-content button {
+    padding: 10px 20px;
+}
+
+
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Animate Header */
+.animate-header {
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Animate Banner */
+.animate-banner {
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* Animate Boxes */
+.animate-box {
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Animate Cards */
+.animate-card {
+    animation: fadeInScale 0.7s ease-in-out forwards;
+}
+
+/* Animate Footer */
+.animate-footer {
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .colored-boxes {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+}
