@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-    background-color: #003366;
+    background-color: dodgerblue;
     color: white;
     padding: 20px;
     position: relative;
@@ -153,7 +153,7 @@ header nav a:hover {
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: black;
     color: black;
 }
 
