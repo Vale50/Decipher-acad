@@ -231,7 +231,7 @@ button {
     box-shadow: 9px 9px 16px #d1d1d1, -9px -9px 16px #ffffff; /* Neumorphism effect */
 }
 h2{
-    color: #66d9ff;
+    color: #00032e;
 }
 button::after {
     content: '';
