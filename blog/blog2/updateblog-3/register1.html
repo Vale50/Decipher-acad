@@ -199,7 +199,6 @@
         </form>
     </div>
 
-      
     <script>
         document.getElementById('myForm').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent form from submitting the default way
@@ -238,74 +237,42 @@
                 console.error('Error!', error.message); // Log error for debugging
             });
         });
-        </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const steps = document.querySelectorAll('.step');
-        let currentStep = 0;
-    
-        // Show the current step
-        function showStep(stepIndex) {
-            steps.forEach((step, index) => {
-                step.classList.toggle('active', index === stepIndex);
-            });
-        }
-    
-        // Handle next button click
-        document.querySelectorAll('.next-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                if (currentStep < steps.length - 1) {
-                    currentStep++;
-                    showStep(currentStep);
-                }
-            });
-        });
-    
-        // Handle previous button click
-        document.querySelectorAll('.prev-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                if (currentStep > 0) {
-                    currentStep--;
-                    showStep(currentStep);
-                }
-            });
-        });
-
-        // Show the first step by default
-        showStep(currentStep);
-    });
-    </script>
-    
+        document.addEventListener('DOMContentLoaded', function () {
+            const steps = document.querySelectorAll('.step');
+            let currentStep = 0;
         
-
-    <script>
-        const steps = document.querySelectorAll('.step');
-        const nextBtns = document.querySelectorAll('.next-btn');
-        const prevBtns = document.querySelectorAll('.prev-btn');
-        let currentStep = 0;
-
-        nextBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                steps[currentStep].classList.remove('active');
-                currentStep++;
-                steps[currentStep].classList.add('active');
+            // Show the current step
+            function showStep(stepIndex) {
+                steps.forEach((step, index) => {
+                    step.classList.toggle('active', index === stepIndex);
+                });
+            }
+        
+            // Handle next button click
+            document.querySelectorAll('.next-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    if (currentStep < steps.length - 1) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                });
             });
-        });
-
-        prevBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                steps[currentStep].classList.remove('active');
-                currentStep--;
-                steps[currentStep].classList.add('active');
+        
+            // Handle previous button click
+            document.querySelectorAll('.prev-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
+                });
             });
-        });
-        document.getElementById('multiStepForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            console.log('Form Data:', Object.fromEntries(formData.entries()));
-            // d the formData to your server or process it as needed
+
+            // Show the first step by default
+            showStep(currentStep);
         });
     </script>
 </body>
+
 </html>
