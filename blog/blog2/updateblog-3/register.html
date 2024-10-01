@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html, body {
+            display: grid;
+            height: 100vh;
+            width: 100%;
+            place-items: center;
+            background: #00bdef;
+        }
+        ::selection {
+            background: #ff80bf;
+        }
+        .container {
+            background: #fff;
+            max-width: 400px;
+            width: 100%;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+        }
+        .container h2 {
+            font-size: 30px;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            position: relative;
+        }
+        .container h2:before {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 33px;
+            left: 0;
+            bottom: 3px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+        }
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+        .input-box {
+            width: 100%;
+            height: 45px;
+            margin-top: 25px;
+            position: relative;
+        }
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 16px;
+            border: none;
+            background-color: transparent;
+        }
+        .underline::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #ccc;
+            left: 0;
+            bottom: 0;
+        }
+        .underline::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s ease;
+        }
+        .input-box input:focus ~ .underline::after,
+        .input-box input:valid ~ .underline::after {
+            transform: scaleX(1);
+        }
+        button {
+            background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+            font-size: 17px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            letter-spacing: 1px;
+            background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
+        }
+        .button.prev-btn {
+            float: left;
+        }
+        .button.next-btn {
+            float: right;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="multiStepForm">
+            <!-- Step 1: Parent/Guardian Information -->
+            <div class="step active">
+                <h2>Parent/Guardian Information</h2>
+                <div class="input-box underline">
+                    <input type="text" id="parentFirstName" name="parentFirstName" placeholder="First Name" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="parentLastName" name="parentLastName" placeholder="Last Name" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="email" id="parentEmail" name="parentEmail" placeholder="Email Address" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="tel" id="parentPhone" name="parentPhone" placeholder="Phone Number" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="relationship" name="relationship" placeholder="Relationship to Child" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="address" name="address" placeholder="Address" required>
+                    <div class="underline"></div>
+                </div>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <!-- Step 2: Child Information -->
+            <div class="step">
+                <h2>Child Information</h2>
+                <div class="input-box underline">
+                    <input type="text" id="childFirstName" name="childFirstName" placeholder="First Name" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="childLastName" name="childLastName" placeholder="Last Name" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="date" id="dob" name="dob" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="gradeLevel" name="gradeLevel" placeholder="Grade Level" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="preferredClassTime" name="preferredClassTime" placeholder="Preferred Class Time" required>
+                    <div class="underline"></div>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <!-- Step 3: Class Preferences -->
+            <div class="step">
+                <h2>Class Preferences</h2>
+                <div class="input-box underline">
+                    <input type="text" id="subjectOfInterest" name="subjectOfInterest" placeholder="Subject of Interest" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="classFormat" name="classFormat" placeholder="Class Format" required>
+                    <div class="underline"></div>
+                </div>
+                <div class="input-box underline">
+                    <input type="text" id="skillLevel" name="skillLevel" placeholder="Skill Level" required>
+                    <div class="underline"></div>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <form name="contact" method="POST" data-netlify="true">
+        <div class="step">
+            <h2>Class Preferences</h2>
+            <div class="input-box underline">
+                <input type="text" id="subjectOfInterest" name="subjectOfInterest" placeholder="Subject of Interest" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-box underline">
+                <input type="text" id="classFormat" name="classFormat" placeholder="Class Format" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-box underline">
+                <input type="text" id="skillLevel" name="skillLevel" placeholder="Skill Level" required>
+                <div class="underline"></div>
+            </div>
+      
+        </div>
+          <button type="submit" class="submit-btn">Send</button>
+        </p>
+      </form>
+      
+      
+
+    <script>
+        const steps = document.querySelectorAll('.step');
+        const nextBtns = document.querySelectorAll('.next-btn');
+        const prevBtns = document.querySelectorAll('.prev-btn');
+        let currentStep = 0;
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                steps[currentStep].classList.remove('active');
+                currentStep++;
+                steps[currentStep].classList.add('active');
+            });
+        });
+
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                steps[currentStep].classList.remove('active');
+                currentStep--;
+                steps[currentStep].classList.add('active');
+            });
+        });
+
+        document.getElementById('multiStepForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            console.log('Form Data:', Object.fromEntries(formData.entries()));
+            // You can now send the formData to your server or process it as needed
+        });
+    </script>
+</body>
+</html>
