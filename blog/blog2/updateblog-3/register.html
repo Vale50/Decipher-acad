@@ -242,12 +242,11 @@
                 steps[currentStep].classList.add('active');
             });
         });
-
         document.getElementById('multiStepForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
             console.log('Form Data:', Object.fromEntries(formData.entries()));
-            // You can now send the formData to your server or process it as needed
+            // d the formData to your server or process it as needed
         });
     </script>
 </body>
