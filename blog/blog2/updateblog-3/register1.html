@@ -200,6 +200,8 @@
     </div>
 
     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle form submission
         document.getElementById('myForm').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent form from submitting the default way
             
@@ -238,40 +240,41 @@
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const steps = document.querySelectorAll('.step');
-            let currentStep = 0;
-        
-            // Show the current step
-            function showStep(stepIndex) {
-                steps.forEach((step, index) => {
-                    step.classList.toggle('active', index === stepIndex);
-                });
-            }
-        
-            // Handle next button click
-            document.querySelectorAll('.next-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    if (currentStep < steps.length - 1) {
-                        currentStep++;
-                        showStep(currentStep);
-                    }
-                });
+        // Handle multi-step form navigation
+        const steps = document.querySelectorAll('.step');
+        let currentStep = 0;
+    
+        // Show the current step
+        function showStep(stepIndex) {
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index === stepIndex);
             });
-        
-            // Handle previous button click
-            document.querySelectorAll('.prev-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    if (currentStep > 0) {
-                        currentStep--;
-                        showStep(currentStep);
-                    }
-                });
+        }
+    
+        // Handle next button click
+        document.querySelectorAll('.next-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
             });
-
-            // Show the first step by default
-            showStep(currentStep);
         });
+    
+        // Handle previous button click
+        document.querySelectorAll('.prev-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+        });
+
+        // Show the first step by default
+        showStep(currentStep);
+    });
+
     </script>
 </body>
 
