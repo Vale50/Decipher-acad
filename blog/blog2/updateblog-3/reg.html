@@ -183,65 +183,65 @@
             <p class="no-spam">We don’t spam! Read our <a href="#">privacy policy</a> for more info.</p>
         </div>
     </footer>
-    <script src="">
-      document.getElementById('comment-form').addEventListener('submit', function (e) {
-    e.preventDefault();
 
-    const data = {
-        formType: 'commentForm', // Ensure this matches the expected value in doPost
-        name: document.getElementById('name').value,
-        comment: document.getElementById('comment').value
-    };
+    <script>
+        // Handle Comment Form Submission
+        document.getElementById('comment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    fetch('https://script.google.com/macros/s/AKfycbwhWAtSY76gPOMAlK6mBc5nYWGWaZBJgXk9QR8RoQqeOO30hW5vE_E57a100L_vBx_IvQ/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.result === 'success') {
-            alert('Comment submitted successfully!'); // Alert for comment form
-        }
-    })
-    .catch(error => {
-        console.error('Error!', error.message);
-    });
-});
+            const data = {
+                formType: 'commentForm', 
+                name: document.getElementById('name').value,
+                comment: document.getElementById('comment').value
+            };
 
-    // Handle Subscribe Form Submission
-    document.querySelector('.subscribe-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+            fetch('https://script.google.com/macros/s/AKfycbwhWAtSY76gPOMAlK6mBc5nYWGWaZBJgXk9QR8RoQqeOO30hW5vE_E57a100L_vBx_IvQ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.result === 'success') {
+                    alert('Comment submitted successfully!'); // Success alert for comment form
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+            });
+        });
 
-    const data = {
-        formType: 'subscribeForm', // Ensure this matches the expected value in doPost
-        firstName: document.querySelector('.subscribe-form input[placeholder="First name *"]').value,
-        lastName: document.querySelector('.subscribe-form input[placeholder="Last name *"]').value,
-        businessName: document.querySelector('.subscribe-form input[placeholder="Business Name *"]').value,
-        email: document.querySelector('.subscribe-form input[placeholder="Email Address *"]').value
-    };
+        // Handle Subscribe Form Submission
+        document.querySelector('.subscribe-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    fetch('https://script.google.com/macros/s/AKfycbwhWAtSY76gPOMAlK6mBc5nYWGWaZBJgXk9QR8RoQqeOO30hW5vE_E57a100L_vBx_IvQ/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.result === 'success') {
-            alert('Subscription successful!'); // Alert for subscription form
-        }
-    })
-    .catch(error => {
-        console.error('Error!', error.message);
-    });
-});
+            const data = {
+                formType: 'subscribeForm',
+                firstName: document.querySelector('.subscribe-form input[placeholder="First name *"]').value,
+                lastName: document.querySelector('.subscribe-form input[placeholder="Last name *"]').value,
+                businessName: document.querySelector('.subscribe-form input[placeholder="Business Name *"]').value,
+                email: document.querySelector('.subscribe-form input[placeholder="Email Address *"]').value
+            };
 
-
+            fetch('https://script.google.com/macros/s/AKfycbwhWAtSY76gPOMAlK6mBc5nYWGWaZBJgXk9QR8RoQqeOO30hW5vE_E57a100L_vBx_IvQ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.result === 'success') {
+                    alert('Subscription successful!'); // Success alert for subscription form
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+            });
+        });
     </script>
 </body>
 </html>
