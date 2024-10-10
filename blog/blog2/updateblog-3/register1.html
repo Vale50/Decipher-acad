@@ -231,18 +231,20 @@
         // Send data to Google Apps Script endpoint
         fetch('https://script.google.com/macros/s/AKfycbykHibvrZ2JEUuE82oXiIKDJ-qSkbir-nkl-Kg6KBn6t01B8SNUcCjT4-crqRSpNk0eaw/exec', {
             method: 'POST',
-            mode: 'no-cors', // This prevents CORS issues, but won't give feedback
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => {
-            alert('Form submitted successfully!'); // Feedback after submission
-        })
-        .catch(error => {
-            console.error('Error!', error.message); // Log error for debugging
-        });
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+})
+.then(response => response.json())
+.then(data => {
+    console.log('Success:', data);
+    alert('Form submitted successfully!');
+})
+.catch((error) => {
+    console.error('Error:', error);
+    alert('Error submitting the form');
+});
     });
 
     // Handle multi-step form navigation
