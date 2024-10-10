@@ -201,87 +201,86 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-    // Handle form submission
-    document.getElementById('myForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form from submitting the default way
+        // Handle form submission
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission
 
-        // Ensure all steps are displayed before collecting data
-        document.querySelectorAll('.step').forEach(step => {
-            step.classList.add('active');
+            // Ensure all steps are displayed before submission
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.add('active');
+            });
+
+            // Collect form data
+            const formData = {
+                parentFirstName: document.getElementById('parentFirstName').value,
+                parentLastName: document.getElementById('parentLastName').value,
+                parentEmail: document.getElementById('parentEmail').value,
+                parentPhone: document.getElementById('parentPhone').value,
+                relationship: document.getElementById('relationship').value,
+                address: document.getElementById('address').value,
+                childFirstName: document.getElementById('childFirstName').value,
+                childLastName: document.getElementById('childLastName').value,
+                dob: document.getElementById('dob').value,
+                gradeLevel: document.getElementById('gradeLevel').value,
+                preferredClassTime: document.getElementById('preferredClassTime').value,
+                subjectOfInterest: document.getElementById('subjectOfInterest').value,
+                classFormat: document.getElementById('classFormat').value,
+                skillLevel: document.getElementById('skillLevel').value
+            };
+
+            // Send form data to Google Apps Script endpoint
+            fetch('https://script.google.com/macros/s/AKfycbwhWAtSY76gPOMAlK6mBc5nYWGWaZBJgXk9QR8RoQqeOO30hW5vE_E57a100L_vBx_IvQ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                } else {
+                    throw new Error('Failed to submit the form.');
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+            });
         });
 
-        // Collect data from the form
-        const formData = {
-            parentFirstName: document.getElementById('parentFirstName').value,
-            parentLastName: document.getElementById('parentLastName').value,
-            parentEmail: document.getElementById('parentEmail').value,
-            parentPhone: document.getElementById('parentPhone').value,
-            relationship: document.getElementById('relationship').value,
-            address: document.getElementById('address').value,
-            childFirstName: document.getElementById('childFirstName').value,
-            childLastName: document.getElementById('childLastName').value,
-            dob: document.getElementById('dob').value,
-            gradeLevel: document.getElementById('gradeLevel').value,
-            preferredClassTime: document.getElementById('preferredClassTime').value,
-            subjectOfInterest: document.getElementById('subjectOfInterest').value,
-            classFormat: document.getElementById('classFormat').value,
-            skillLevel: document.getElementById('skillLevel').value
-        };
+        // Handle multi-step form navigation
+        const steps = document.querySelectorAll('.step');
+        let currentStep = 0;
 
-        // Send data to Google Apps Script endpoint
-        fetch('https://script.google.com/macros/s/AKfycbwhWAtSY76gPOMAlK6mBc5nYWGWaZBJgXk9QR8RoQqeOO30hW5vE_E57a100L_vBx_IvQ/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => {
-            // Handle success
-            alert('Form submitted successfully!'); // Feedback after submission
-        })
-        .catch(error => {
-            // Handle error
-            console.error('Error!', error.message); // Log error for debugging
+        function showStep(stepIndex) {
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index === stepIndex);
+            });
+        }
+
+        document.querySelectorAll('.next-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
         });
+
+        document.querySelectorAll('.prev-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+        });
+
+        // Show the first step by default
+        showStep(currentStep);
     });
-
-    // Handle multi-step form navigation
-    const steps = document.querySelectorAll('.step');
-    let currentStep = 0;
-
-    // Show the current step
-    function showStep(stepIndex) {
-        steps.forEach((step, index) => {
-            step.classList.toggle('active', index === stepIndex);
-        });
-    }
-
-    // Handle next button click
-    document.querySelectorAll('.next-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            if (currentStep < steps.length - 1) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        });
-    });
-
-    // Handle previous button click
-    document.querySelectorAll('.prev-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            if (currentStep > 0) {
-                currentStep--;
-                showStep(currentStep);
-            }
-        });
-    });
-
-    // Show the first step by default
-    showStep(currentStep);
-});
-
     </script>
 </body>
+
 
 </html>
