@@ -3,170 +3,251 @@ DOCTYPE html>
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <style>
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-body {
-  background-color: #efefef;
-}
-
-.logo{
-  margin: 40px auto;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 90px;
-  color: #121212;
-  text-align: center;
-  letter-spacing: 5px;
-  text-shadow: 0 2px 1px #747474, 
-      -1px 3px 1px #767676, 
-      -2px 5px 1px #787878, 
-      -3px 7px 1px #7a7a7a,
-      -4px 9px 1px #7f7f7f,
-      -5px 11px 1px #838383,
-      -6px 13px 1px #878787,
-      -7px 15px 1px #8a8a8a, 
-      -8px 17px 1px #8e8e8e,
-      -9px 19px 1px #949494,
-      -10px 21px 1px #989898,
-      -11px 23px 1px #9f9f9f,
-      
-}
-    h1{
-        color: #fff;
-        font-style: italic;
+h1{
+            color: #fff;
+            font-style: italic;
+        }
+    * {box-sizing: border-box;}
+    .answered {
+        background-color: #f0f0f0; /* Light grey background for answered questions */
     }
-* {box-sizing: border-box;}
-body {
- margin: 0;
- font-family: Arial, Helvetica, sans-serif;
- background-color: #12335b;
-}
-.header {
- overflow: hidden;
- background-color: #3498db;
- padding: 10px 5px;
- transition: 0.3s ease;
-}
-.header a {
- float: left;
- color: #12335b;
- text-align: center;
- padding: 10px;
- text-decoration: none;
- font-size: 17px;
- line-height: 25px;
- border-radius: 4px;
-}
-.header a.logo {
- font-size: 20px;
- font-weight: bold;
-}
-.header a:hover {
- color: cyan;
-}
-.header-right {
- float: right;
-}
-@media screen and (max-width: 500px) {
- .header a {
- float: none;
- display: block;
- text-align: center;
- transition: 0.3s ease;
- }
- 
- .header-right {
- float: none;
- }
-}
-</style>
-</head>
-<body>
-<div class="header">
- <a href="#default" class="logo">DECIPHER-ACADEMY</a>
- <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
- <a href="x.com"><i class="fab fa-twitter"></i></i></a>
- <div class="header-right">
- <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
- <a href="#contact">About</a>
- <a href="#courses">Courses</a>
- <a href="#classroom">Classrooms</a>
- <a href="#blog">Blog</a>
- </div>
-</div>
-</body>
+    
+    .selected {
+        font-weight: bold; /* Bold font for selected option */
+    }
+    
+    body {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #12335b;
+    }
+    .header {
+     overflow: hidden;
+     background-color: #3498db;
+     padding: 10px 5px;
+     transition: 0.3s ease;
+    }
+    .header a {
+     float: left;
+     color: #12335b;
+     text-align: center;
+     padding: 10px;
+     text-decoration: none;
+     font-size: 17px;
+     line-height: 25px;
+     border-radius: 4px;
+    }
+    .header a.logo {
+     font-size: 20px;
+     font-weight: bold;
+    }
+    .header a:hover {
+     color: cyan;
+    }
+    .header-right {
+     float: right;
+    }
+    @media screen and (max-width: 500px) {
+     .header a {
+     float: none;
+     display: block;
+     text-align: center;
+     transition: 0.3s ease;
+     }
+     
+     .header-right {
+     float: none;
+     }
+    }
+    #subject-button.hidden, .container {
+        border: 1px solid white;
+        background-color: #34db95;
+        margin: 10px;
+        cursor: pointer;
+        outline: none;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 15px #a7a7a7,
+                    -8px -8px 15px #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="header">
+     <a href="#default" class="logo">DECIPHER-ACADEMY</a>
+     <a href="facebook.com"><i class="fab fa-facebook-f facebook-bg"></i></a>
+     <a href="x.com"><i class="fab fa-twitter"></i></i></a>
+     <div class="header-right">
+     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+     <a href="#contact">About</a>
+     <a href="#courses">Courses</a>
+     <a href="#classroom">Classrooms</a>
+     <a href="#blog">Blog</a>
+     </div>
+    </div>
+    </body>
     <style>
-
-
-       *  {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* Quiz container styles */
-#quiz{
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: center;
-}
-
-
-#question {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-
-.option {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-
-#answer {
-    margin-top: 20px;
-}
-.answer{
-    border: 1px solid blue;
-    background-color: green;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-
-
-
-/* Score and progress bar styles */
-#score {
-    font-size: 16px;
-    margin-top: 20px;
-    color: #f9f9f9;
-  
-}
-#progress{
-    color: #f9f9f9;
-float: right;
-}
-
-
-#progressBar {
-width: 100%;
-height: 20px;
-margin-top: 10px;
-color: #f9f9f9;
-
-}
-       
-.correct { background-color: green; }
-.incorrect { background-color: red; }
-.hidden {display: none;}
+    
+    
+        *  {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    }
+    
+    
+    /* Quiz container styles */
+    /* Neumorphism effect for divs */
+    .neu-div {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 8px 8px 15px #a7a7a7,
+                 -8px -8px 15px #ffffff;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 600px;
+    }
+    
+    /* Apply neumorphism effect to specific elements */
+    #quiz, .question, .options {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 8px 8px 15px #a7a7a7,
+                 -8px -8px 15px #ffffff;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 600px;
+    }
+    .button{
+      display: inline-block;
+      border-radius: 50px;
+      padding: 9px 14px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #12335b;
+      border: none;
+      box-shadow:  20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    }
+    
+    .option {
+     background-color: #e0e0e0;
+     border-radius: 10px;
+     box-shadow: 5px 5px 10px #a7a7a7,
+                 -5px -5px 10px #ffffff;
+     padding: 10px;
+     margin: 10px;
+     cursor: pointer;
+     transition: 0.3s ease;
+    }
+    
+    .option:hover {
+     box-shadow: inset 5px 5px 10px #a7a7a7,
+                 inset -5px -5px 10px #ffffff;
+    }
+    
+    .option:active {
+     box-shadow: inset 2px 2px 5px #a7a7a7,
+                 inset -2px -2px 5px #ffffff;
+    }
+    #quiz{
+     background-color: #f9f9f9;
+     padding: 20px;
+     border-radius: 10px;
+     margin: 20px auto;
+     max-width: 600px;
+     text-align: center;
+    }
+    
+    
+    #question {
+     font-size: 18px;
+     margin-bottom: 20px;
+    }
+    
+    
+    .option {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin: 10px;
+     cursor: pointer;
+    }
+    
+    
+    #answer {
+     margin-top: 20px;
+    }
+    .answer{
+     border: 1px solid blue;
+     background-color: #34db95;
+     margin: 10px;
+     cursor: pointer;
+             outline: none;
+             color: #333;
+             padding: 10px 20px;
+             border-radius: 10px;
+             box-shadow: 8px 8px 15px #a7a7a7,
+                         -8px -8px 15px #ffffff;
+             font-weight: bold;
+             cursor: pointer;
+             transition: 0.3s ease;
+    }
+    
+    
+    
+    
+    /* Score and progress bar styles */
+    #score {
+     font-size: 16px;
+     margin-top: 20px;
+    }
+    
+    
+    #progressBar {
+     width: 100%;
+     height: 20px;
+     margin-top: 10px;
+    }
+        
+         .correct { background-color: green; }
+         .incorrect { background-color: red; }
+         .hidden { display: none; }
+         /* Neumorphism effect for buttons */
+         .neu-button {
+             border: none;
+             outline: none;
+             background-color: #e0e0e0;
+             color: #333;
+             padding: 10px 20px;
+             border-radius: 10px;
+             box-shadow: 8px 8px 15px #a7a7a7,
+                         -8px -8px 15px #ffffff;
+             font-weight: bold;
+             cursor: pointer;
+             transition: 0.3s ease;
+         }
+    
+         .neu-button:hover {
+             box-shadow: inset 8px 8px 15px #a7a7a7,
+                         inset -8px -8px 15px #ffffff;
+         }
+    
+         .neu-button:active {
+             box-shadow: inset 4px 4px 10px #a7a7a7,
+                         inset -4px -4px 10px #ffffff;
+         }
+         .question-number {
+                font-weight: bold;
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -2809,28 +2890,121 @@ Explanation:
           
               <script>
                   var score = 0;
-                  var progress = 0;
-          
-                  $(".option").click(function() {
-                      if ($(this).hasClass("selected")) {
-                          return;
-                      }
-                      $(this).addClass("selected");
-                      $(this).siblings().removeClass("correct incorrect");
-                      $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
-                      if ($(this).data("correct")) {
-                          score++;
-                          $("#score").text("Score: " + score);
-                      } else {
-                          $(this).parent().siblings(".check-answer").removeClass("hidden");
-                      }
-                      progress++;
-                      $("#progress").text("Progress: " + progress + "/50");
-                  });
-          
-                  $(".check-answer").click(function() {
-                      $(this).siblings(".answer").removeClass("hidden");
-                  });
+                var progress = 0;
+                var isAnimating = false;
+            
+                $(".option").click(function() {
+                    if ($(this).hasClass("selected")) {
+                        return;
+                    }
+                    $(this).addClass("selected");
+                    $(this).siblings().removeClass("correct incorrect");
+                    $(this).addClass($(this).data("correct") ? "correct" : "incorrect");
+                    if ($(this).data("correct")) {
+                        score++;
+                        $("#score").text("Score: " + score);
+                    } else {
+                        $(this).closest('.question').find(".check-answer").removeClass("hidden");
+                    }
+                    $(this).closest('.question').find(".check-answer").removeClass("hidden");
+                    progress++;
+                    $("#progress").text("Progress: " + progress + "/50");
+                });
+            
+                function displayAnswer(that) {
+                    if (isAnimating) return;
+                    var container = $(that).siblings('.container');
+                    var answer = container.children('.answer');
+                    var htmlContent = answer.html();
+                    var i = 0;
+            
+                    var endIndex = htmlContent.indexOf('</div>', htmlContent.indexOf('<div style')) + 6;
+            
+                    answer.html('');
+                    answer.removeClass('hidden');
+                    container.removeClass('hidden');
+                    isAnimating = true;
+            
+                    function typeWriter() {
+                        if (i < endIndex) {
+                            if (htmlContent.charAt(i) === '<') {
+                                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                                answer.append(htmlContent.slice(i, tagEnd));
+                                i = tagEnd;
+                            } else {
+                                answer.append(htmlContent.charAt(i));
+                                i++;
+                            }
+                            setTimeout(typeWriter, 40);
+                        } else {
+                            container.children('#subject-button').removeClass('hidden');
+                            isAnimating = false;
+                        }
+                    }
+            
+                    typeWriter();
+                }
+            
+                $(".check-answer").click(function() {
+                    displayAnswer(this);
+                });
+            
+                function displayMoreContent(that) {
+                    if (isAnimating) return;
+                    var moreContent = $(that).siblings('#more-content');
+                    var selectedOption = $(that).closest('.question').find('.option.selected').text().trim().charAt(0);
+                    var correctExplanation = moreContent.find('#subject-name').html();
+                    var incorrectExplanation = moreContent.find('.incorrect-explanation[data-option="' + selectedOption + '"]').html();
+                    var htmlContent = correctExplanation + incorrectExplanation;
+                    var i = 0;
+            
+                    moreContent.html('');
+                    moreContent.removeClass('hidden');
+                    isAnimating = true;
+            
+                    function typeWriter() {
+                        if (i < htmlContent.length) {
+                            if (htmlContent.charAt(i) === '<') {
+                                var tagEnd = htmlContent.indexOf('>', i) + 1;
+                                moreContent.append(htmlContent.slice(i, tagEnd));
+                                i = tagEnd;
+                            } else {
+                                moreContent.append(htmlContent.charAt(i));
+                                i++;
+                            }
+                            setTimeout(typeWriter, 40);
+                        } else {
+                            isAnimating = false;
+                        }
+                    }
+            
+                    typeWriter();
+                }
+            
+                $(".container").on("click", "#subject-button", function() {
+                    displayMoreContent(this);
+                });
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', (event) => {
+                    const options = document.querySelectorAll('.option');
+                    options.forEach(option => {
+                        option.addEventListener('click', function() {
+                            const question = this.closest('.question');
+                            question.classList.add('answered');
+                            this.classList.add('selected');
+                            question.querySelector('.check-answer').classList.remove('hidden');
+                        });
+                    });
+            
+                    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+                    checkAnswerButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const question = this.closest('.question');
+                            question.querySelector('.answer').classList.remove('hidden');
+                        });
+                    });
+                });
               </script>
           </body>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font￾awesome/6.4.2/css/all.min.css" />
