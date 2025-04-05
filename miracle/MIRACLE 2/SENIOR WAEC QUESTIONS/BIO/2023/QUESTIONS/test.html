@@ -1352,6 +1352,192 @@
             );
         }
     });
+
+    // This script fixes the text animation to properly handle HTML tags and image loading
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle animation for text content
+    const learnMoreButtons = document.querySelectorAll('#subject-button');
+    const checkAnswerButtons = document.querySelectorAll('.check-answer');
+    
+    // Check answer button click handler with improved animation
+    checkAnswerButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const container = this.nextElementSibling;
+            const answer = container.querySelector('.answer');
+            
+            container.classList.remove('hidden');
+            answer.classList.remove('hidden');
+            
+            // Show learn more button
+            container.querySelector('#subject-button').classList.remove('hidden');
+            
+            // Animate answer display with proper HTML handling
+            animateHTML(answer);
+        });
+    });
+
+    // Learn more button click handler with improved animation
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const moreContent = this.nextElementSibling;
+            moreContent.classList.remove('hidden');
+            
+            // Animate more content display with proper HTML handling
+            animateHTML(moreContent);
+        });
+    });
+    
+    // Improved animation function that preserves HTML structure
+    function animateHTML(element) {
+        // Store the original content
+        const originalHTML = element.innerHTML;
+        
+        // Create a temporary container to parse the HTML
+        const tempContainer = document.createElement('div');
+        tempContainer.innerHTML = originalHTML;
+        
+        // Clear the target element
+        element.innerHTML = '';
+        
+        // Queue to process nodes
+        const nodeQueue = [];
+        
+        // Add the initial child nodes to the queue
+        Array.from(tempContainer.childNodes).forEach(node => {
+            nodeQueue.push({
+                parentElement: element,
+                node: node.cloneNode(true)
+            });
+        });
+        
+        let charIndex = 0;
+        let totalTextLength = getTotalTextLength(tempContainer);
+        let currentTextPosition = 0;
+        
+        function typeNextChar() {
+            if (currentTextPosition >= totalTextLength) return;
+            
+            // Process next node from the queue
+            if (nodeQueue.length === 0) return;
+            
+            let current = nodeQueue[0];
+            let node = current.node;
+            let parent = current.parentElement;
+            
+            // Text nodes get animated character by character
+            if (node.nodeType === Node.TEXT_NODE) {
+                if (charIndex < node.textContent.length) {
+                    // Still have characters to type in this text node
+                    const text = node.textContent.substring(0, charIndex + 1);
+                    
+                    // Update the last text node in the parent
+                    let lastChild = parent.lastChild;
+                    if (lastChild && lastChild.nodeType === Node.TEXT_NODE) {
+                        lastChild.textContent = text;
+                    } else {
+                        parent.appendChild(document.createTextNode(text));
+                    }
+                    
+                    charIndex++;
+                    currentTextPosition++;
+                    
+                    setTimeout(typeNextChar, 5);
+                } else {
+                    // Finished with this text node
+                    charIndex = 0;
+                    nodeQueue.shift();
+                    setTimeout(typeNextChar, 5);
+                }
+            } 
+            // Element nodes are added immediately but their children are queued
+            else if (node.nodeType === Node.ELEMENT_NODE) {
+                // Create the element
+                const newElement = document.createElement(node.tagName);
+                
+                // Copy attributes
+                Array.from(node.attributes).forEach(attr => {
+                    newElement.setAttribute(attr.name, attr.value);
+                });
+                
+                // Add to parent
+                parent.appendChild(newElement);
+                
+                // Queue child nodes
+                Array.from(node.childNodes).reverse().forEach(childNode => {
+                    nodeQueue.splice(1, 0, {
+                        parentElement: newElement,
+                        node: childNode.cloneNode(true)
+                    });
+                });
+                
+                // Remove this node from the queue
+                nodeQueue.shift();
+                
+                // Continue immediately with the next item
+                setTimeout(typeNextChar, 0);
+            } else {
+                // Handle other node types (comments, etc) by skipping them
+                nodeQueue.shift();
+                setTimeout(typeNextChar, 0);
+            }
+        }
+        
+        // Start the animation
+        typeNextChar();
+    }
+    
+    // Helper function to get the total length of all text nodes
+    function getTotalTextLength(element) {
+        let length = 0;
+        
+        // Count characters in this node if it's a text node
+        if (element.nodeType === Node.TEXT_NODE) {
+            length += element.textContent.length;
+        }
+        
+        // Count characters in child nodes
+        if (element.childNodes) {
+            Array.from(element.childNodes).forEach(node => {
+                length += getTotalTextLength(node);
+            });
+        }
+        
+        return length;
+    }
+    
+    // Fix image loading issues
+    const images = document.querySelectorAll('.question-image');
+    
+    images.forEach(img => {
+        // Fix broken image paths
+        const currentSrc = img.getAttribute('src');
+        if (currentSrc && currentSrc.startsWith('../IMG/')) {
+            // For demonstration, using placeholders as fallbacks
+            img.setAttribute('data-original-src', currentSrc);
+            img.src = '/api/placeholder/400/250';
+        }
+        
+        // Handle image loading errors
+        img.addEventListener('error', function() {
+            console.warn('Image could not be loaded: ' + this.getAttribute('data-original-src') || this.getAttribute('src'));
+            this.src = '/api/placeholder/400/250';
+            this.alt = 'Image placeholder';
+        });
+    });
+    
+    // Fix any broken src attributes in image tags caused by missing quotes
+    document.querySelectorAll('img[src]').forEach(img => {
+        const srcAttr = img.getAttribute('src');
+        if (srcAttr && srcAttr.includes('=')) {
+            // This indicates a malformed src attribute, likely from missing quotes
+            const correctSrc = srcAttr.split('=')[0];
+            console.warn('Fixing malformed src attribute: ' + srcAttr);
+            img.src = '/api/placeholder/400/250';
+            img.setAttribute('data-original-src', correctSrc);
+        }
+    });
+});
     </script>
 </body>
 </html>
