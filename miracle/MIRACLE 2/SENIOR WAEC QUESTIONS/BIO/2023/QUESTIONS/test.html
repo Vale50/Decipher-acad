@@ -1353,120 +1353,127 @@
         }
     });
 
-    // This is a simpler version that should avoid conflicts with existing code
-document.addEventListener('DOMContentLoaded', function() {
-    // Replace the existing animateText function with an improved version
-    // that properly handles HTML content
-    window.animateText = function(element) {
-        if (!element) return;
+    // Add this script to fix animation and image loading issues
+$(document).ready(function() {
+    // Flag to prevent multiple animations running simultaneously
+    var isAnimating = false;
+
+    // Override the existing animateText function if it exists
+    if (typeof window.animateText === 'function') {
+        // Store the original function in case we need it
+        window.originalAnimateText = window.animateText;
+    }
+
+    // Improved animation function for check answer
+    function displayAnswer(that) {
+        if (isAnimating) return;
         
-        // Store original content and clear the element
-        const originalContent = element.innerHTML;
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = originalContent;
-        
-        // Clear the element
-        element.innerHTML = '';
-        
-        // Process the content
-        processNode(element, tempDiv);
-        
-        function processNode(targetParent, sourceParent) {
-            let textNodes = [];
-            let elementNodes = [];
-            
-            // Separate text and element nodes
-            Array.from(sourceParent.childNodes).forEach(node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    if (node.textContent.trim()) {
-                        textNodes.push(node);
-                    }
-                } else if (node.nodeType === Node.ELEMENT_NODE) {
-                    elementNodes.push(node);
+        var container = $(that).siblings('.container');
+        var answer = container.children('.answer');
+        var htmlContent = answer.html();
+        var i = 0;
+
+        // Show the elements before starting animation
+        answer.html('');
+        answer.removeClass('hidden');
+        container.removeClass('hidden');
+        isAnimating = true;
+
+        function typeWriter() {
+            if (i < htmlContent.length) {
+                if (htmlContent.charAt(i) === '<') {
+                    // We found an HTML tag, skip to the end of it
+                    var tagEnd = htmlContent.indexOf('>', i) + 1;
+                    answer.append(htmlContent.slice(i, tagEnd));
+                    i = tagEnd;
+                } else {
+                    // Add one character at a time
+                    answer.append(htmlContent.charAt(i));
+                    i++;
                 }
-            });
-            
-            // Process text nodes first with animation
-            let allText = textNodes.map(node => node.textContent).join('');
-            if (allText.trim()) {
-                const textNode = document.createTextNode('');
-                targetParent.appendChild(textNode);
-                
-                let i = 0;
-                function typeText() {
-                    if (i < allText.length) {
-                        textNode.textContent += allText.charAt(i);
-                        i++;
-                        setTimeout(typeText, 5);
-                    } else {
-                        // After text is typed, add the element nodes
-                        processElementNodes();
-                    }
-                }
-                
-                typeText();
+                setTimeout(typeWriter, 5); // Speed can be adjusted
             } else {
-                // No text to animate, proceed directly to elements
-                processElementNodes();
-            }
-            
-            function processElementNodes() {
-                // Process element nodes (non-animated, added immediately)
-                elementNodes.forEach(sourceNode => {
-                    const newNode = document.createElement(sourceNode.tagName);
-                    
-                    // Copy attributes
-                    Array.from(sourceNode.attributes).forEach(attr => {
-                        newNode.setAttribute(attr.name, attr.value);
-                    });
-                    
-                    // Fix image src if needed
-                    if (sourceNode.tagName === 'IMG') {
-                        const src = sourceNode.getAttribute('src');
-                        if (src) {
-                            if (src.includes('=')) {
-                                // Fix malformed src attribute
-                                const fixedSrc = src.split('=')[0];
-                                newNode.setAttribute('data-original-src', fixedSrc);
-                                newNode.src = '/api/placeholder/400/250';
-                            } else if (src.startsWith('../IMG/')) {
-                                // Use placeholder for missing images
-                                newNode.setAttribute('data-original-src', src);
-                                newNode.src = '/api/placeholder/400/250';
-                            }
-                        }
-                        
-                        // Add error handler
-                        newNode.addEventListener('error', function() {
-                            this.src = '/api/placeholder/400/250';
-                        });
-                    }
-                    
-                    targetParent.appendChild(newNode);
-                    
-                    // Recursively process this element's children
-                    processNode(newNode, sourceNode);
-                });
+                // Animation complete
+                container.children('#subject-button').removeClass('hidden');
+                isAnimating = false;
             }
         }
-    };
-    
-    // Fix any broken image tags that might already be in the DOM
-    document.querySelectorAll('img').forEach(img => {
-        const src = img.getAttribute('src');
-        if (src && (src.includes('=') || src.startsWith('../IMG/'))) {
-            // Save original for debugging
-            img.setAttribute('data-original-src', src);
-            // Set placeholder
-            img.src = '/api/placeholder/400/250';
+
+        typeWriter();
+    }
+
+    // Improved animation function for more content
+    function displayMoreContent(that) {
+        if (isAnimating) return;
+        
+        var moreContent = $(that).siblings('#more-content');
+        var htmlContent = moreContent.html();
+        var i = 0;
+
+        // Show the element before starting animation
+        moreContent.html('');
+        moreContent.removeClass('hidden');
+        isAnimating = true;
+
+        function typeWriter() {
+            if (i < htmlContent.length) {
+                if (htmlContent.charAt(i) === '<') {
+                    // We found an HTML tag, skip to the end of it
+                    var tagEnd = htmlContent.indexOf('>', i) + 1;
+                    moreContent.append(htmlContent.slice(i, tagEnd));
+                    i = tagEnd;
+                } else {
+                    // Add one character at a time
+                    moreContent.append(htmlContent.charAt(i));
+                    i++;
+                }
+                setTimeout(typeWriter, 5); // Speed can be adjusted
+            } else {
+                // Animation complete
+                isAnimating = false;
+            }
+        }
+
+        typeWriter();
+    }
+
+    // Override the click handlers for check answer buttons
+    $(".check-answer").off('click').on('click', function() {
+        displayAnswer(this);
+    });
+
+    // Override the click handlers for subject buttons
+    $(document).off('click', '#subject-button').on('click', '#subject-button', function() {
+        displayMoreContent(this);
+    });
+
+    // Fix broken image paths
+    $('img').each(function() {
+        var img = $(this);
+        var src = img.attr('src');
+        
+        // Handle cases where the src attribute is malformed
+        if (src && (src.includes('=') || src.startsWith('/\n'))) {
+            // Extract the correct part of the src
+            var fixedSrc = src.split('=')[0];
+            img.attr('data-original-src', src);
+            img.attr('src', '/api/placeholder/400/250');
         }
         
-        // Add error handler
-        img.addEventListener('error', function() {
-            this.src = '/api/placeholder/400/250';
+        // Handle missing images from IMG directory
+        if (src && src.startsWith('../IMG/')) {
+            img.attr('data-original-src', src);
+            img.attr('src', '/api/placeholder/400/250');
+        }
+        
+        // Add error handler for all images
+        img.on('error', function() {
+            $(this).attr('src', '/api/placeholder/400/250');
         });
     });
 });
+
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
