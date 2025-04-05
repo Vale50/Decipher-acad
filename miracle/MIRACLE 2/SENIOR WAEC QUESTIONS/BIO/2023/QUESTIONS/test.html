@@ -1353,7 +1353,120 @@
         }
     });
 
+    // This is a simpler version that should avoid conflicts with existing code
+document.addEventListener('DOMContentLoaded', function() {
+    // Replace the existing animateText function with an improved version
+    // that properly handles HTML content
+    window.animateText = function(element) {
+        if (!element) return;
+        
+        // Store original content and clear the element
+        const originalContent = element.innerHTML;
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = originalContent;
+        
+        // Clear the element
+        element.innerHTML = '';
+        
+        // Process the content
+        processNode(element, tempDiv);
+        
+        function processNode(targetParent, sourceParent) {
+            let textNodes = [];
+            let elementNodes = [];
+            
+            // Separate text and element nodes
+            Array.from(sourceParent.childNodes).forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    if (node.textContent.trim()) {
+                        textNodes.push(node);
+                    }
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    elementNodes.push(node);
+                }
+            });
+            
+            // Process text nodes first with animation
+            let allText = textNodes.map(node => node.textContent).join('');
+            if (allText.trim()) {
+                const textNode = document.createTextNode('');
+                targetParent.appendChild(textNode);
+                
+                let i = 0;
+                function typeText() {
+                    if (i < allText.length) {
+                        textNode.textContent += allText.charAt(i);
+                        i++;
+                        setTimeout(typeText, 5);
+                    } else {
+                        // After text is typed, add the element nodes
+                        processElementNodes();
+                    }
+                }
+                
+                typeText();
+            } else {
+                // No text to animate, proceed directly to elements
+                processElementNodes();
+            }
+            
+            function processElementNodes() {
+                // Process element nodes (non-animated, added immediately)
+                elementNodes.forEach(sourceNode => {
+                    const newNode = document.createElement(sourceNode.tagName);
+                    
+                    // Copy attributes
+                    Array.from(sourceNode.attributes).forEach(attr => {
+                        newNode.setAttribute(attr.name, attr.value);
+                    });
+                    
+                    // Fix image src if needed
+                    if (sourceNode.tagName === 'IMG') {
+                        const src = sourceNode.getAttribute('src');
+                        if (src) {
+                            if (src.includes('=')) {
+                                // Fix malformed src attribute
+                                const fixedSrc = src.split('=')[0];
+                                newNode.setAttribute('data-original-src', fixedSrc);
+                                newNode.src = '/api/placeholder/400/250';
+                            } else if (src.startsWith('../IMG/')) {
+                                // Use placeholder for missing images
+                                newNode.setAttribute('data-original-src', src);
+                                newNode.src = '/api/placeholder/400/250';
+                            }
+                        }
+                        
+                        // Add error handler
+                        newNode.addEventListener('error', function() {
+                            this.src = '/api/placeholder/400/250';
+                        });
+                    }
+                    
+                    targetParent.appendChild(newNode);
+                    
+                    // Recursively process this element's children
+                    processNode(newNode, sourceNode);
+                });
+            }
+        }
+    };
     
+    // Fix any broken image tags that might already be in the DOM
+    document.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && (src.includes('=') || src.startsWith('../IMG/'))) {
+            // Save original for debugging
+            img.setAttribute('data-original-src', src);
+            // Set placeholder
+            img.src = '/api/placeholder/400/250';
+        }
+        
+        // Add error handler
+        img.addEventListener('error', function() {
+            this.src = '/api/placeholder/400/250';
+        });
+    });
+});
     </script>
 </body>
 </html>
