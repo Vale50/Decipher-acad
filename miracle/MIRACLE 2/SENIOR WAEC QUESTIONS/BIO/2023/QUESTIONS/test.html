@@ -824,41 +824,54 @@
                         </div>
                     </div>
                     <button class="check-answer button hidden">Check Answer</button>
-                    <div class="container hidden">
-                        <div class="answer hidden">
-                            The correct answer is Option C: homeostasis.
-                            
-                            Homeostasis refers to the process by which organisms maintain a stable internal environment despite changes in external conditions.
-                        </div>
-                        <div id="wrong-feedback-q1-optA" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why "diuresis" is incorrect:</div>
-                            Diuresis refers to increased or excessive production of urine, which is just one specific bodily process and not the overall maintenance of internal stability.
-                        </div>
-                        <div id="wrong-feedback-q1-optB" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why "endosmosis" is incorrect:</div>
-                            Endosmosis refers to the movement of a solvent into a cell or an area of lower concentration, which is a specific physical process and not the overall regulation of an organism's internal environment.
-                        </div>
-                        <div id="wrong-feedback-q1-optD" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why "plasmolysis" is incorrect:</div>
-                            Plasmolysis refers to the process in which cells lose water in a hypertonic solution, causing the cell membrane to pull away from the cell wall. This is a specific cellular response, not the broader concept of maintaining internal balance.
-                        </div>
-                        <button id="subject-button" class="button hidden">Learn More</button>
-                        <div id="more-content" class="hidden">
-                            <div class="more-content-title">More About Homeostasis</div>
-                            
-                            Homeostasis is a fundamental concept in biology that refers to the ability of an organism to maintain stable internal conditions necessary for survival, despite changes in the external environment.
-                            
-                            Examples of homeostatic processes include:
-                            • Temperature regulation
-                            • Blood glucose regulation
-                            • Fluid and electrolyte balance
-                            • pH regulation
-                            • Blood pressure regulation
-                            
-                            Each of these processes involves sensors that detect changes, control centers that process information, and effectors that correct imbalances through negative feedback mechanisms.
-                        </div>
-                    </div>
-                </div>
+    <div class="container hidden">
+        <div class="answer hidden">
+            <strong>The correct answer is Option C: homeostasis.</strong>
+            <p>Homeostasis refers to the process by which organisms maintain a stable internal environment despite changes in external conditions.</p>
+            <div class="image-wrapper">
+                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis diagram" class="question-image">
+            </div>
+        </div>
+        <div id="wrong-feedback-q1-optA" class="wrong-feedback hidden">
+            <div class="wrong-feedback-title">Why "diuresis" is incorrect:</div>
+            <p>Diuresis refers to increased or excessive production of urine, which is just one specific bodily process and not the overall maintenance of internal stability.</p>
+            <div class="image-wrapper">
+                <img src="../IMG/NO. 1/OPTION A.png="Diuresis diagram" class="question-image">
+            </div>
+        </div>
+        <div id="wrong-feedback-q1-optB" class="wrong-feedback hidden">
+            <div class="wrong-feedback-title">Why "endosmosis" is incorrect:</div>
+            <p>Endosmosis refers to the movement of a solvent into a cell or an area of lower concentration, which is a specific physical process and not the overall regulation of an organism's internal environment.</p>
+            <div class="image-wrapper">
+                <img src="../IMG/NO. 1/OPTION B.png="Endosmosis diagram" class="question-image">
+            </div>
+        </div>
+        <div id="wrong-feedback-q1-optD" class="wrong-feedback hidden">
+            <div class="wrong-feedback-title">Why "plasmolysis" is incorrect:</div>
+            <p>Plasmolysis refers to the process in which cells lose water in a hypertonic solution, causing the cell membrane to pull away from the cell wall. This is a specific cellular response, not the broader concept of maintaining internal balance.</p>
+            <div class="image-wrapper">
+                <img src="../IMG/NO. 1/OPTION D.png" alt="Plasmolysis diagram" class="question-image">
+            </div>
+        </div>
+        <button id="subject-button" class="button hidden">Learn More</button>
+        <div id="more-content" class="hidden">
+            <h3>More About Homeostasis</h3>
+            <p>Homeostasis is a fundamental concept in biology that refers to the ability of an organism to maintain stable internal conditions necessary for survival, despite changes in the external environment.</p>
+            <div class="image-wrapper">
+                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis process diagram" class="question-image">
+            </div>
+            <p>Examples of homeostatic processes include:</p>
+            <ul>
+                <li>Temperature regulation</li>
+                <li>Blood glucose regulation</li>
+                <li>Fluid and electrolyte balance</li>
+                <li>pH regulation</li>
+                <li>Blood pressure regulation</li>
+            </ul>
+            <p>Each of these processes involves sensors that detect changes, control centers that process information, and effectors that correct imbalances through negative feedback mechanisms.</p>
+        </div>
+    </div>
+</div>
 
                 <div class="question" id="question-2">
                     <div class="question-number"><strong>2.</strong></div>
@@ -1301,6 +1314,44 @@
                 window.scrollTo(0, 0);
             });
         });
+        document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.question-image');
+        
+        images.forEach(img => {
+            // Handle image loading errors
+            img.addEventListener('error', function() {
+                this.src = '/api/placeholder/400/250'; // Fallback to placeholder
+                this.alt = 'Image could not be loaded';
+                console.warn('Image could not be loaded: ' + this.getAttribute('src'));
+            });
+            
+            // Lazy loading effect (for browsers that don't support loading="lazy")
+            if (!('loading' in HTMLImageElement.prototype)) {
+                const lazyLoad = function() {
+                    if (isInViewport(img) && img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                };
+                
+                document.addEventListener('scroll', lazyLoad);
+                window.addEventListener('resize', lazyLoad);
+                window.addEventListener('orientationchange', lazyLoad);
+                lazyLoad(); // Initial check
+            }
+        });
+        
+        // Check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    });
     </script>
 </body>
 </html>
