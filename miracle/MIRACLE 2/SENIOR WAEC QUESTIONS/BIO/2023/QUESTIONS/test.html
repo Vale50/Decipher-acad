@@ -824,54 +824,54 @@
                         </div>
                     </div>
                     <button class="check-answer button hidden">Check Answer</button>
-    <div class="container hidden">
-        <div class="answer hidden">
-            <strong>The correct answer is Option C: homeostasis.</strong>
-            <p>Homeostasis refers to the process by which organisms maintain a stable internal environment despite changes in external conditions.</p>
-            <div class="image-wrapper">
-                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis diagram" class="question-image">
-            </div>
-        </div>
-        <div id="wrong-feedback-q1-optA" class="wrong-feedback hidden">
-            <div class="wrong-feedback-title">Why "diuresis" is incorrect:</div>
-            <p>Diuresis refers to increased or excessive production of urine, which is just one specific bodily process and not the overall maintenance of internal stability.</p>
-            <div class="image-wrapper">
-                <img src="../IMG/NO. 1/OPTION A.png="Diuresis diagram" class="question-image">
-            </div>
-        </div>
-        <div id="wrong-feedback-q1-optB" class="wrong-feedback hidden">
-            <div class="wrong-feedback-title">Why "endosmosis" is incorrect:</div>
-            <p>Endosmosis refers to the movement of a solvent into a cell or an area of lower concentration, which is a specific physical process and not the overall regulation of an organism's internal environment.</p>
-            <div class="image-wrapper">
-                <img src="../IMG/NO. 1/OPTION B.png="Endosmosis diagram" class="question-image">
-            </div>
-        </div>
-        <div id="wrong-feedback-q1-optD" class="wrong-feedback hidden">
-            <div class="wrong-feedback-title">Why "plasmolysis" is incorrect:</div>
-            <p>Plasmolysis refers to the process in which cells lose water in a hypertonic solution, causing the cell membrane to pull away from the cell wall. This is a specific cellular response, not the broader concept of maintaining internal balance.</p>
-            <div class="image-wrapper">
-                <img src="../IMG/NO. 1/OPTION D.png" alt="Plasmolysis diagram" class="question-image">
-            </div>
-        </div>
-        <button id="subject-button" class="button hidden">Learn More</button>
-        <div id="more-content" class="hidden">
-            <h3>More About Homeostasis</h3>
-            <p>Homeostasis is a fundamental concept in biology that refers to the ability of an organism to maintain stable internal conditions necessary for survival, despite changes in the external environment.</p>
-            <div class="image-wrapper">
-                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis process diagram" class="question-image">
-            </div>
-            <p>Examples of homeostatic processes include:</p>
-            <ul>
-                <li>Temperature regulation</li>
-                <li>Blood glucose regulation</li>
-                <li>Fluid and electrolyte balance</li>
-                <li>pH regulation</li>
-                <li>Blood pressure regulation</li>
-            </ul>
-            <p>Each of these processes involves sensors that detect changes, control centers that process information, and effectors that correct imbalances through negative feedback mechanisms.</p>
-        </div>
-    </div>
-</div>
+                    <div class="container hidden">
+                        <div class="answer hidden">
+                            <strong>The correct answer is Option C: homeostasis.</strong>
+                            <p>Homeostasis refers to the process by which organisms maintain a stable internal environment despite changes in external conditions.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q1-optA" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "diuresis" is incorrect:</div>
+                            <p>Diuresis refers to increased or excessive production of urine, which is just one specific bodily process and not the overall maintenance of internal stability.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION A.png" alt="Diuresis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q1-optB" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "endosmosis" is incorrect:</div>
+                            <p>Endosmosis refers to the movement of a solvent into a cell or an area of lower concentration, which is a specific physical process and not the overall regulation of an organism's internal environment.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION B.png" alt="Endosmosis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q1-optD" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "plasmolysis" is incorrect:</div>
+                            <p>Plasmolysis refers to the process in which cells lose water in a hypertonic solution, causing the cell membrane to pull away from the cell wall. This is a specific cellular response, not the broader concept of maintaining internal balance.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION D.png" alt="Plasmolysis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>More About Homeostasis</h3>
+                            <p>Homeostasis is a fundamental concept in biology that refers to the ability of an organism to maintain stable internal conditions necessary for survival, despite changes in the external environment.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis process diagram" class="question-image">
+                            </div>
+                            <p>Examples of homeostatic processes include:</p>
+                            <ul>
+                                <li>Temperature regulation</li>
+                                <li>Blood glucose regulation</li>
+                                <li>Fluid and electrolyte balance</li>
+                                <li>pH regulation</li>
+                                <li>Blood pressure regulation</li>
+                            </ul>
+                            <p>Each of these processes involves sensors that detect changes, control centers that process information, and effectors that correct imbalances through negative feedback mechanisms.</p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="question" id="question-2">
                     <div class="question-number"><strong>2.</strong></div>
@@ -948,6 +948,9 @@
         </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // DOM Elements
@@ -968,8 +971,6 @@
             const timerDisplay = document.querySelector('.timer');
             const timeLeftDisplay = document.getElementById('timeLeft');
             const options = document.querySelectorAll('.option');
-            const checkAnswerButtons = document.querySelectorAll('.check-answer');
-            const learnMoreButtons = document.querySelectorAll('#subject-button');
             const resultsSection = document.getElementById('resultsSection');
             const reviewQuestionsBtn = document.getElementById('reviewQuestions');
             const reviewFailedQuestionsBtn = document.getElementById('reviewFailedQuestions');
@@ -984,6 +985,7 @@
             let totalQuestions = document.querySelectorAll('.question').length;
             let answeredQuestions = 0;
             let failedQuestions = [];
+            let isAnimating = false;
 
             // Show modal on page load
             welcomeModal.style.display = 'flex';
@@ -1156,32 +1158,88 @@
                 });
             });
 
-            // Check answer button click handler
-            checkAnswerButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const container = this.nextElementSibling;
-                    const answer = container.querySelector('.answer');
-                    
-                    container.classList.remove('hidden');
-                    answer.classList.remove('hidden');
-                    
-                    // Show learn more button
-                    container.querySelector('#subject-button').classList.remove('hidden');
-                    
-                    // Animate answer display
-                    animateText(answer);
-                });
+            // Using jQuery for the animations as in the second example
+            // This is the key part that will make sure the animations work correctly
+            
+            // Function to display answer with animation (similar to the working second example)
+            function displayAnswer(element) {
+                if (isAnimating) return;
+                
+                var container = $(element).siblings('.container');
+                var answer = container.children('.answer');
+                var htmlContent = answer.html();
+                var i = 0;
+                
+                answer.html('');
+                answer.removeClass('hidden');
+                container.removeClass('hidden');
+                isAnimating = true;
+                
+                function typeWriter() {
+                    if (i < htmlContent.length) {
+                        if (htmlContent.charAt(i) === '<') {
+                            // Skip HTML tags
+                            var tagEnd = htmlContent.indexOf('>', i) + 1;
+                            answer.append(htmlContent.slice(i, tagEnd));
+                            i = tagEnd;
+                        } else {
+                            // Add one character at a time
+                            answer.append(htmlContent.charAt(i));
+                            i++;
+                        }
+                        setTimeout(typeWriter, 5);
+                    } else {
+                        // Animation complete
+                        container.children('#subject-button').removeClass('hidden');
+                        isAnimating = false;
+                    }
+                }
+                
+                typeWriter();
+            }
+            
+            // Function to display more content with animation
+            function displayMoreContent(element) {
+                if (isAnimating) return;
+                
+                var moreContent = $(element).siblings('#more-content');
+                var htmlContent = moreContent.html();
+                var i = 0;
+                
+                moreContent.html('');
+                moreContent.removeClass('hidden');
+                isAnimating = true;
+                
+                function typeWriter() {
+                    if (i < htmlContent.length) {
+                        if (htmlContent.charAt(i) === '<') {
+                            // Skip HTML tags
+                            var tagEnd = htmlContent.indexOf('>', i) + 1;
+                            moreContent.append(htmlContent.slice(i, tagEnd));
+                            i = tagEnd;
+                        } else {
+                            // Add one character at a time
+                            moreContent.append(htmlContent.charAt(i));
+                            i++;
+                        }
+                        setTimeout(typeWriter, 5);
+                    } else {
+                        // Animation complete
+                        isAnimating = false;
+                    }
+                }
+                
+                typeWriter();
+            }
+            
+            // Bind click events using jQuery
+            $('.check-answer').on('click', function() {
+                displayAnswer(this);
             });
-
-            // Learn more button click handler
-            learnMoreButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const moreContent = this.nextElementSibling;
-                    moreContent.classList.remove('hidden');
-                    
-                    // Animate more content display
-                    animateText(moreContent);
-                });
+            
+            // Using event delegation for subject buttons
+            $(document).on('click', '#subject-button', function() {
+                displayMoreContent(this);
             });
 
             // Update progress function
@@ -1189,23 +1247,6 @@
                 progressText.textContent = `Progress: ${answeredQuestions}/${totalQuestions}`;
                 const progressPercentage = (answeredQuestions / totalQuestions) * 100;
                 progressBar.style.width = `${progressPercentage}%`;
-            }
-
-            // Animate text function
-            function animateText(element) {
-                const content = element.innerHTML;
-                element.innerHTML = '';
-                
-                let i = 0;
-                function typeWriter() {
-                    if (i < content.length) {
-                        element.innerHTML += content.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, 5); // Adjust speed as needed
-                    }
-                }
-                
-                typeWriter();
             }
 
             // End quiz function
@@ -1313,167 +1354,33 @@
                 
                 window.scrollTo(0, 0);
             });
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.question-image');
-        
-        images.forEach(img => {
-            // Handle image loading errors
-            img.addEventListener('error', function() {
-                this.src = '/api/placeholder/400/250'; // Fallback to placeholder
-                this.alt = 'Image could not be loaded';
-                console.warn('Image could not be loaded: ' + this.getAttribute('src'));
-            });
             
-            // Lazy loading effect (for browsers that don't support loading="lazy")
-            if (!('loading' in HTMLImageElement.prototype)) {
-                const lazyLoad = function() {
-                    if (isInViewport(img) && img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
-                };
+            // Fix image loading issues
+            $('img').each(function() {
+                var img = $(this);
+                var src = img.attr('src');
                 
-                document.addEventListener('scroll', lazyLoad);
-                window.addEventListener('resize', lazyLoad);
-                window.addEventListener('orientationchange', lazyLoad);
-                lazyLoad(); // Initial check
-            }
-        });
-        
-        // Check if element is in viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-    });
-
-    // Add this script to fix animation and image loading issues
-$(document).ready(function() {
-    // Flag to prevent multiple animations running simultaneously
-    var isAnimating = false;
-
-    // Override the existing animateText function if it exists
-    if (typeof window.animateText === 'function') {
-        // Store the original function in case we need it
-        window.originalAnimateText = window.animateText;
-    }
-
-    // Improved animation function for check answer
-    function displayAnswer(that) {
-        if (isAnimating) return;
-        
-        var container = $(that).siblings('.container');
-        var answer = container.children('.answer');
-        var htmlContent = answer.html();
-        var i = 0;
-
-        // Show the elements before starting animation
-        answer.html('');
-        answer.removeClass('hidden');
-        container.removeClass('hidden');
-        isAnimating = true;
-
-        function typeWriter() {
-            if (i < htmlContent.length) {
-                if (htmlContent.charAt(i) === '<') {
-                    // We found an HTML tag, skip to the end of it
-                    var tagEnd = htmlContent.indexOf('>', i) + 1;
-                    answer.append(htmlContent.slice(i, tagEnd));
-                    i = tagEnd;
-                } else {
-                    // Add one character at a time
-                    answer.append(htmlContent.charAt(i));
-                    i++;
+                // Handle cases where the src attribute is malformed or points to missing files
+                if (src) {
+                    // Fix any broken src attributes
+                    if (src.includes('=') || src.includes('\n') || src.startsWith('/\n')) {
+                        img.attr('data-original-src', src);
+                        img.attr('src', '/api/placeholder/400/250');
+                    }
+                    
+                    // Handle missing images from IMG directory by providing placeholders
+                    if (src.startsWith('../IMG/')) {
+                        img.attr('data-original-src', src);
+                        img.attr('src', '/api/placeholder/400/250');
+                    }
                 }
-                setTimeout(typeWriter, 5); // Speed can be adjusted
-            } else {
-                // Animation complete
-                container.children('#subject-button').removeClass('hidden');
-                isAnimating = false;
-            }
-        }
-
-        typeWriter();
-    }
-
-    // Improved animation function for more content
-    function displayMoreContent(that) {
-        if (isAnimating) return;
-        
-        var moreContent = $(that).siblings('#more-content');
-        var htmlContent = moreContent.html();
-        var i = 0;
-
-        // Show the element before starting animation
-        moreContent.html('');
-        moreContent.removeClass('hidden');
-        isAnimating = true;
-
-        function typeWriter() {
-            if (i < htmlContent.length) {
-                if (htmlContent.charAt(i) === '<') {
-                    // We found an HTML tag, skip to the end of it
-                    var tagEnd = htmlContent.indexOf('>', i) + 1;
-                    moreContent.append(htmlContent.slice(i, tagEnd));
-                    i = tagEnd;
-                } else {
-                    // Add one character at a time
-                    moreContent.append(htmlContent.charAt(i));
-                    i++;
-                }
-                setTimeout(typeWriter, 5); // Speed can be adjusted
-            } else {
-                // Animation complete
-                isAnimating = false;
-            }
-        }
-
-        typeWriter();
-    }
-
-    // Override the click handlers for check answer buttons
-    $(".check-answer").off('click').on('click', function() {
-        displayAnswer(this);
-    });
-
-    // Override the click handlers for subject buttons
-    $(document).off('click', '#subject-button').on('click', '#subject-button', function() {
-        displayMoreContent(this);
-    });
-
-    // Fix broken image paths
-    $('img').each(function() {
-        var img = $(this);
-        var src = img.attr('src');
-        
-        // Handle cases where the src attribute is malformed
-        if (src && (src.includes('=') || src.startsWith('/\n'))) {
-            // Extract the correct part of the src
-            var fixedSrc = src.split('=')[0];
-            img.attr('data-original-src', src);
-            img.attr('src', '/api/placeholder/400/250');
-        }
-        
-        // Handle missing images from IMG directory
-        if (src && src.startsWith('../IMG/')) {
-            img.attr('data-original-src', src);
-            img.attr('src', '/api/placeholder/400/250');
-        }
-        
-        // Add error handler for all images
-        img.on('error', function() {
-            $(this).attr('src', '/api/placeholder/400/250');
+                
+                // Add error handler for all images
+                img.on('error', function() {
+                    $(this).attr('src', '/api/placeholder/400/250');
+                });
+            });
         });
-    });
-});
-
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
