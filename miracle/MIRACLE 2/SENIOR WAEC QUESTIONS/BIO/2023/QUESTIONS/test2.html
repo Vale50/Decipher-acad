@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECIPHER-ACADEMY - Exam Practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #12335b;
+            --secondary-color: #3498db;
+            --accent-color: #34db95;
+            --text-color: #333;
+            --light-text: #fff;
+            --correct-color: #4CAF50;
+            --incorrect-color: #f44336;
+            --neutral-bg: #f9f9f9;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--primary-color);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 24px;
+            color: var(--accent-color);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--light-text);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .header-right {
+            display: flex;
+        }
+
+        .header a {
+            color: var(--light-text);
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+            margin-left: 5px;
+        }
+
+        .header a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+
+        .header a.active {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .social-icons a {
+            padding: 8px;
+            margin-left: 5px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        /* Instruction Area */
+        .instruction-area {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            color: var(--light-text);
+        }
+
+        .instruction-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .instruction-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Quiz */
+        .quiz {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .question-number {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .question-text {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .options {
+            display: grid;
+            grid-gap: 15px;
+        }
+
+        .option {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px var(--shadow-color);
+        }
+
+        .option.selected {
+            font-weight: 500;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .option.correct {
+            background-color: var(--correct-color);
+            color: white;
+            border-color: var(--correct-color);
+        }
+
+        .option.incorrect {
+            background-color: var(--incorrect-color);
+            color: white;
+            border-color: var(--incorrect-color);
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .option.selected .option-label {
+            background-color: var(--secondary-color);
+        }
+
+        .option.correct .option-label {
+            background-color: darkgreen;
+        }
+
+        .option.incorrect .option-label {
+            background-color: darkred;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s;
+            margin-top: 15px;
+            box-shadow: 0 3px 5px var(--shadow-color);
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 8px var(--shadow-color);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 3px var(--shadow-color);
+        }
+
+        .check-answer, #subject-button {
+            background-color: var(--secondary-color);
+        }
+
+        /* Explanation Container */
+        .container {
+            background-color: #f5f7fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            box-shadow: 0 3px 8px var(--shadow-color);
+        }
+
+        .answer {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        #more-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        /* Image styling */
+        .image-wrapper {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .question-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px var(--shadow-color);
+        }
+
+        /* Wrong Option Feedback */
+        .wrong-feedback {
+            background-color: #ffebee;
+            border-left: 4px solid var(--incorrect-color);
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .wrong-feedback-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #d32f2f;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none;
+        }
+
+        .answered {
+            background-color: #f0f8ff;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 10px;
+                flex-direction: column;
+            }
+
+            .logo-container {
+                margin-bottom: 10px;
+            }
+
+            .header-right {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 5px;
+            }
+
+            .header a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .quiz-container {
+                padding: 10px;
+            }
+
+            .option {
+                padding: 12px;
+            }
+
+            .question-number, .question-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <i class="fas fa-graduation-cap logo-icon"></i>
+            <a href="#" class="logo">DECIPHER-ACADEMY</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="header-right">
+            <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#courses"><i class="fas fa-book"></i> Courses</a>
+            <a href="#classroom"><i class="fas fa-chalkboard-teacher"></i> Classrooms</a>
+            <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <div class="quiz-container">
+            <!-- Instruction Area -->
+            <div class="instruction-area">
+                <div class="instruction-title">Instructions</div>
+                <div class="instruction-text">
+                    Each question is followed by four options lettered A to D. Find the correct option for each question.
+                </div>
+            </div>
+
+            <!-- Questions -->
+            <div class="quiz">
+                <div class="question" id="question-1">
+                    <div class="question-number"><strong>1.</strong></div>
+                    <div class="question-text">The ability of organisms to maintain a constant internal environment is known as</div>
+                    <div class="options">
+                        <div class="option" data-correct="false" data-option-id="q1-optA">
+                            <span class="option-label">A</span>
+                            <span>diuresis</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q1-optB">
+                            <span class="option-label">B</span>
+                            <span>endosmosis</span>
+                        </div>
+                        <div class="option" data-correct="true" data-option-id="q1-optC">
+                            <span class="option-label">C</span>
+                            <span>homeostasis</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q1-optD">
+                            <span class="option-label">D</span>
+                            <span>plasmolysis</span>
+                        </div>
+                    </div>
+                    <button class="check-answer button hidden">Check Answer</button>
+                    <div class="container hidden">
+                        <div class="answer hidden">
+                            <strong>The correct answer is Option C: homeostasis.</strong>
+                            <p>Homeostasis refers to the process by which organisms maintain a stable internal environment despite changes in external conditions.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION C.png" style="width: 100%; height: auto;" alt="Homeostasis diagram" class="question-image">
+                            </div>
+                        </div> 
+                        <div id="wrong-feedback-q1-optA" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "diuresis" is incorrect:</div>
+                            <p>Diuresis refers to increased or excessive production of urine, which is just one specific bodily process and not the overall maintenance of internal stability.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION A.png" alt="Diuresis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q1-optB" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "endosmosis" is incorrect:</div>
+                            <p>Endosmosis refers to the movement of a solvent into a cell or an area of lower concentration, which is a specific physical process and not the overall regulation of an organism's internal environment.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION B.png" alt="Endosmosis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q1-optD" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "plasmolysis" is incorrect:</div>
+                            <p>Plasmolysis refers to the process in which cells lose water in a hypertonic solution, causing the cell membrane to pull away from the cell wall. This is a specific cellular response, not the broader concept of maintaining internal balance.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION D.png" alt="Plasmolysis diagram" class="question-image">
+                            </div>
+                        </div>
+                        <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>More About Homeostasis</h3>
+                            <p>Homeostasis is a fundamental concept in biology that refers to the ability of an organism to maintain stable internal conditions necessary for survival, despite changes in the external environment.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis process diagram" class="question-image">
+                            </div>
+                            <p>Examples of homeostatic processes include:</p>
+                            <ul>
+                                <li>Temperature regulation</li>
+                                <li>Blood glucose regulation</li>
+                                <li>Fluid and electrolyte balance</li>
+                                <li>pH regulation</li>
+                                <li>Blood pressure regulation</li>
+                            </ul>
+                            <p>Each of these processes involves sensors that detect changes, control centers that process information, and effectors that correct imbalances through negative feedback mechanisms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question" id="question-2">
+                    <div class="question-number"><strong>2.</strong></div>
+                    <div class="instruction-text">
+                        <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong>
+                    </div>
+                    <div class="question-text">The likely reason why the student failed the test was that the</div>
+                    <div class="options">
+                        <div class="option" data-correct="true" data-option-id="q2-optA">
+                            <span class="option-label">A</span>
+                            <span>labels were wrong and the guidelines were not touching the structures</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q2-optB">
+                            <span class="option-label">B</span>
+                            <span>net venation shown were few, rough, not properly drawn and wrongly placed</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q2-optC">
+                            <span class="option-label">C</span>
+                            <span>leaf was too tapered at the apex, the leaf stalk was too short and the shape of leaf was wrong</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q2-optD">
+                            <span class="option-label">D</span>
+                            <span>leaf venation should have been parallel and the midrib should be thicker</span>
+                        </div>
+                    </div>
+                    <button class="check-answer button hidden">Check Answer</button>
+                    <div class="container hidden">
+                        <div class="answer hidden">
+                            <strong>The correct answer is Option A: labels were wrong and the guidelines were not touching the structures.</strong>
+                            <p>When drawing biological diagrams, it's essential that labels are accurate and that guidelines properly touch the structures they're identifying.</p>
+                        </div>
+                        <div id="wrong-feedback-q2-optB" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why Option B is incorrect:</div>
+                            <p>While proper venation is important in leaf diagrams, this is typically a secondary concern compared to correct labeling and guidelines.</p>
+                        </div>
+                        <div id="wrong-feedback-q2-optC" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why Option C is incorrect:</div>
+                            <p>Leaf shape details are important but minor inaccuracies here would rarely be the primary reason for failing a biology drawing test.</p>
+                        </div>
+                        <div id="wrong-feedback-q2-optD" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why Option D is incorrect:</div>
+                            <p>Mango leaves have net venation, not parallel venation. Parallel venation is characteristic of monocot plants like grasses, corn, and lilies, whereas mango is a dicot with net venation.</p>
+                        </div>
+                        <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Proper Biological Drawing Techniques</h3>
+                            <p>In biological drawings, several key principles should be followed:</p>
+                            <ul>
+                                <li><strong>Clear outlines:</strong> Drawings should have clear, continuous lines.</li>
+                                <li><strong>Proper proportions:</strong> The relative sizes of different parts should be accurate.</li>
+                                <li><strong>Correct labeling:</strong> Labels must be accurate and placed horizontally.</li>
+                                <li><strong>Guidelines:</strong> Straight lines that connect labels to the structures they identify.</li>
+                                <li><strong>No shading:</strong> Biological drawings typically avoid shading or coloring.</li>
+                                <li><strong>Title:</strong> A descriptive title should be included.</li>
+                                <li><strong>Magnification:</strong> The scale of the drawing should be indicated.</li>
+                            </ul>
+                            <p>Failing to follow these principles, especially regarding proper labeling and guidelines, can result in significant point deductions in assessments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let score = 0;
+            let isAnimating = false;
+
+            // Option click handler
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.question');
+                    
+                    // If already answered, do nothing
+                    if (question.classList.contains('answered')) {
+                        return;
+                    }
+                    
+                    // Mark as answered
+                    question.classList.add('answered');
+                    
+                    // Select this option
+                    this.classList.add('selected');
+                    
+                    // Check if correct
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    
+                    if (isCorrect) {
+                        this.classList.add('correct');
+                        score += 5;
+                    } else {
+                        this.classList.add('incorrect');
+                        
+                        // Show the correct answer
+                        question.querySelectorAll('.option').forEach(opt => {
+                            if (opt.getAttribute('data-correct') === 'true') {
+                                opt.classList.add('correct');
+                            }
+                        });
+                        
+                        // Show specific feedback for the wrong option
+                        const optionId = this.getAttribute('data-option-id');
+                        const feedbackElement = document.getElementById(`wrong-feedback-${optionId}`);
+                        if (feedbackElement) {
+                            feedbackElement.classList.remove('hidden');
+                        }
+                    }
+                    
+                    // Show check answer button
+                    question.querySelector('.check-answer').classList.remove('hidden');
+                });
+            });
+
+            // Function to display answer with animation
+            function displayAnswer(element) {
+                if (isAnimating) return;
+                
+                var container = $(element).siblings('.container');
+                var answer = container.children('.answer');
+                var htmlContent = answer.html();
+                var i = 0;
+                
+                answer.html('');
+                answer.removeClass('hidden');
+                container.removeClass('hidden');
+                isAnimating = true;
+                
+                function typeWriter() {
+                    if (i < htmlContent.length) {
+                        if (htmlContent.charAt(i) === '<') {
+                            // Skip HTML tags
+                            var tagEnd = htmlContent.indexOf('>', i) + 1;
+                            answer.append(htmlContent.slice(i, tagEnd));
+                            i = tagEnd;
+                        } else {
+                            // Add one character at a time
+                            answer.append(htmlContent.charAt(i));
+                            i++;
+                        }
+                        setTimeout(typeWriter, 5);
+                    } else {
+                        // Animation complete
+                        container.children('#subject-button').removeClass('hidden');
+                        isAnimating = false;
+                    }
+                }
+                
+                typeWriter();
+            }
+            
+            // Function to display more content with animation
+            function displayMoreContent(element) {
+                if (isAnimating) return;
+                
+                var moreContent = $(element).siblings('#more-content');
+                var htmlContent = moreContent.html();
+                var i = 0;
+                
+                moreContent.html('');
+                moreContent.removeClass('hidden');
+                isAnimating = true;
+                
+                function typeWriter() {
+                    if (i < htmlContent.length) {
+                        if (htmlContent.charAt(i) === '<') {
+                            // Skip HTML tags
+                            var tagEnd = htmlContent.indexOf('>', i) + 1;
+                            moreContent.append(htmlContent.slice(i, tagEnd));
+                            i = tagEnd;
+                        } else {
+                            // Add one character at a time
+                            moreContent.append(htmlContent.charAt(i));
+                            i++;
+                        }
+                        setTimeout(typeWriter, 5);
+                    } else {
+                        // Animation complete
+                        isAnimating = false;
+                    }
+                }
+                
+                typeWriter();
+            }
+            
+            // Bind click events using jQuery
+            $('.check-answer').on('click', function() {
+                displayAnswer(this);
+            });
+            
+            // Using event delegation for subject buttons
+            $(document).on('click', '#subject-button', function() {
+                displayMoreContent(this);
+            });
+        });
+    </script>
+</body>
+</html>
