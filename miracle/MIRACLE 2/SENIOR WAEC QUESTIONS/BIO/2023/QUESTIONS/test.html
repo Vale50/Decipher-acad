@@ -1369,10 +1369,10 @@
                     }
                     
                     // Handle missing images from IMG directory by providing placeholders
-                    if (src.startsWith('../IMG/')) {
-                        img.attr('data-original-src', src);
-                        img.attr('src', '/api/placeholder/400/250');
-                    }
+                    if (src.startsWith('../IMG/') && !src.includes('OPTION')) {
+    img.attr('data-original-src', src);
+    img.attr('src', '/api/placeholder/400/250');
+}
                 }
                 
                 // Add error handler for all images
