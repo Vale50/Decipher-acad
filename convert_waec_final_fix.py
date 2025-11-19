@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Complete fix for WAEC question files - addresses all issues:
-1. Correct image paths (NO. X format)
+1. Correct image paths (NO X format without period)
 2. No duplicate answer text
 3. Proper more info content extraction
 4. No typewriter animation causing vibration
@@ -269,7 +269,7 @@ def generate_question_html(q_data):
                             {answer_intro}
                             {answer_body}
                             <div class="image-wrapper">
-                                <img src="../IMG/NO. {q_num}/OPTION {correct_letter}.png" style="width: 100%; height: auto;" alt="Option {correct_letter}" class="question-image">
+                                <img src="../IMG/NO {q_num}/OPTION {correct_letter}.png" style="width: 100%; height: auto;" alt="Option {correct_letter}" class="question-image">
                             </div>
                         </div>'''
 
@@ -289,7 +289,7 @@ def generate_question_html(q_data):
                             <div class="wrong-feedback-title">Why "{opt['text'][:60]}{'...' if len(opt['text']) > 60 else ''}" is incorrect:</div>
                             <p>{explanation}</p>
                             <div class="image-wrapper">
-                                <img src="../IMG/NO. {q_num}/OPTION {opt_letter}.png" alt="Option {opt_letter}" class="question-image">
+                                <img src="../IMG/NO {q_num}/OPTION {opt_letter}.png" alt="Option {opt_letter}" class="question-image">
                             </div>
                         </div>'''
 
