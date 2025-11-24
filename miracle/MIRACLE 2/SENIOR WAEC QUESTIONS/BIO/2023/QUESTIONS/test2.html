@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DECIPHER-ACADEMY - Exam Practice</title>
+    <title>DECIPHER-ACADEMY - Physics 2023 Exam Practice</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -101,11 +101,195 @@
             padding: 20px;
         }
 
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .mode-selection {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .mode-btn {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 45%;
+            text-align: center;
+        }
+
+        .mode-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .start-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 5px;
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .start-btn:hover {
+            background-color: #2aae7a;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: none;
+            width: 250px;
+            background-color: var(--primary-color);
+            position: fixed;
+            height: calc(100% - 70px);
+            top: 70px;
+            left: -250px;
+            overflow-x: hidden;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px var(--shadow-color);
+            z-index: 900;
+            transition: 0.3s;
+        }
+
+        .dashboard.active {
+            left: 0;
+        }
+
+        .dashboard-menu {
+            list-style-type: none;
+        }
+
+        .dashboard-menu li {
+            padding: 0;
+            margin-bottom: 5px;
+        }
+
+        .dashboard-menu a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: var(--light-text);
+            display: block;
+            transition: 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        .dashboard-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .dashboard-menu a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .dashboard-toggle {
+            position: fixed;
+            left: 15px;
+            top: 90px;
+            z-index: 901;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            transition: 0.3s;
+        }
+
+        .dashboard-toggle:hover {
+            background-color: var(--secondary-color);
+        }
+
         /* Quiz Container */
         .quiz-container {
             padding: 20px;
             margin: 0 auto;
             max-width: 800px;
+            transition: margin-left 0.3s;
+        }
+
+        .dashboard.active ~ .quiz-container {
+            margin-left: 250px;
         }
 
         /* Instruction Area */
@@ -264,12 +448,17 @@
             padding: 20px;
             margin-top: 15px;
             box-shadow: 0 3px 8px var(--shadow-color);
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .answer {
             font-size: 16px;
             line-height: 1.6;
             color: var(--text-color);
+            overflow: hidden;
+            word-wrap: break-word;
         }
 
         #more-content {
@@ -280,17 +469,134 @@
             box-shadow: 0 2px 5px var(--shadow-color);
         }
 
+        /* Progress and Score */
+        .quiz-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px var(--shadow-color);
+        }
+
+        .quiz-status {
+            display: flex;
+            align-items: center;
+        }
+
+        .quiz-info-item {
+            margin-right: 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .status-icon {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+
+        .timer {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timer i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Final Results Section */
+        .results-section {
+            display: none;
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            text-align: center;
+        }
+
+        .results-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .score-display {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 20px 0;
+        }
+
+        .result-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .results-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .review-btn {
+            background-color: var(--primary-color);
+        }
+
+        .retry-btn {
+            background-color: var(--secondary-color);
+        }
+
         /* Image styling */
         .image-wrapper {
             margin: 15px 0;
             text-align: center;
+            width: 100%;
+            overflow: hidden;
         }
 
         .question-image {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 8px var(--shadow-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .wrong-feedback img, 
+        .answer img, 
+        #more-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Wrong Option Feedback */
@@ -300,12 +606,39 @@
             padding: 15px;
             margin-top: 15px;
             border-radius: 5px;
+            overflow: hidden;
+            word-wrap: break-word;
         }
 
         .wrong-feedback-title {
             font-weight: bold;
             margin-bottom: 8px;
             color: #d32f2f;
+        }
+
+        /* Timer Selection */
+        .timer-selection {
+            margin-top: 15px;
+        }
+
+        .timer-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .timer-option {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .timer-option.selected {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
 
         /* Utility Classes */
@@ -340,16 +673,70 @@
                 font-size: 14px;
             }
 
+            .dashboard {
+                width: 200px;
+            }
+
+            .dashboard.active ~ .quiz-container {
+                margin-left: 0;
+            }
+
             .quiz-container {
                 padding: 10px;
             }
 
+            .mode-selection {
+                flex-direction: column;
+            }
+
+            .mode-btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .quiz-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .quiz-status {
+                margin-bottom: 10px;
+            }
+
+            .timer {
+                margin-bottom: 10px;
+            }
+
+            .results-buttons {
+                flex-direction: column;
+            }
+
+            .wrong-feedback {
+                padding: 10px;
+                margin-top: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
             .option {
                 padding: 12px;
             }
 
             .question-number, .question-text {
                 font-size: 16px;
+            }
+
+            .header a {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .dashboard-toggle {
+                top: 80px;
             }
         }
     </style>
@@ -374,9 +761,81 @@
         </div>
     </div>
 
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 20px;">Welcome to Physics 2023 Exam Practice</h2>
+            <div class="input-group">
+                <label for="studentName">Your Name:</label>
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="studentEmail">Email (Optional):</label>
+                <input type="email" id="studentEmail" placeholder="Enter your email for more resources">
+            </div>
+            <div class="mode-selection">
+                <div class="mode-btn" id="practiceMode">Practice Mode</div>
+                <div class="mode-btn" id="testMode">Test Mode</div>
+            </div>
+            <div class="timer-selection">
+                <label>Enable Timer?</label>
+                <div class="timer-options">
+                    <div class="timer-option" data-time="none">No Timer</div>
+                    <div class="timer-option" data-time="300">5 Minutes</div>
+                    <div class="timer-option" data-time="600">10 Minutes</div>
+                    <div class="timer-option" data-time="1800">30 Minutes</div>
+                </div>
+            </div>
+            <button id="startExam" class="start-btn">Start</button>
+        </div>
+    </div>
+
+    <!-- Dashboard Menu -->
+    <div class="dashboard" id="dashboard">
+        <ul class="dashboard-menu">
+            <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-book-open"></i> Study Materials</a></li>
+            <li><a href="#"><i class="fas fa-video"></i> Video Lectures</a></li>
+            <li><a href="#"><i class="fas fa-calendar-alt"></i> Schedule Class</a></li>
+            <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+        </ul>
+    </div>
+
+    <button class="dashboard-toggle" id="dashboardToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
     <!-- Main Container -->
     <div class="main-container">
         <div class="quiz-container">
+            <!-- Quiz Information -->
+            <div class="quiz-info">
+                <div class="quiz-status">
+                    <div class="quiz-info-item">
+                        <i class="fas fa-user status-icon"></i>
+                        <span id="userName">Student</span>
+                    </div>
+                    <div class="quiz-info-item">
+                        <i class="fas fa-medal status-icon"></i>
+                        <span id="userScore">Score: 0</span>
+                    </div>
+                    <div class="quiz-info-item">
+                        <i class="fas fa-tasks status-icon"></i>
+                        <span id="progressText">Progress: 0/3</span>
+                    </div>
+                </div>
+                <div class="timer hidden">
+                    <i class="fas fa-clock"></i>
+                    <span id="timeLeft">00:00</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
             <!-- Instruction Area -->
             <div class="instruction-area">
                 <div class="instruction-title">Instructions</div>
@@ -387,135 +846,224 @@
 
             <!-- Questions -->
             <div class="quiz">
+                <!-- Question 1 -->
                 <div class="question" id="question-1">
                     <div class="question-number"><strong>1.</strong></div>
-                    <div class="question-text">The ability of organisms to maintain a constant internal environment is known as</div>
+                    <div class="question-text">The instrument used to measure relative humidity is a</div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q1-optA">
                             <span class="option-label">A</span>
-                            <span>diuresis</span>
+                            <span>Barometer</span>
                         </div>
                         <div class="option" data-correct="false" data-option-id="q1-optB">
                             <span class="option-label">B</span>
-                            <span>endosmosis</span>
+                            <span>Hydrometer</span>
                         </div>
                         <div class="option" data-correct="true" data-option-id="q1-optC">
                             <span class="option-label">C</span>
-                            <span>homeostasis</span>
+                            <span>Hygrometer</span>
                         </div>
                         <div class="option" data-correct="false" data-option-id="q1-optD">
                             <span class="option-label">D</span>
-                            <span>plasmolysis</span>
+                            <span>Manometer</span>
                         </div>
                     </div>
                     <button class="check-answer button hidden">Check Answer</button>
                     <div class="container hidden">
                         <div class="answer hidden">
-                            <strong>The correct answer is Option C: homeostasis.</strong>
-                            <p>Homeostasis refers to the process by which organisms maintain a stable internal environment despite changes in external conditions.</p>
+                            <strong>The correct answer is Option C: Hygrometer.</strong>
+                            <p>A hygrometer is an instrument used to measure the relative humidity in the atmosphere. It measures the amount of water vapor present in the air.</p>
                             <div class="image-wrapper">
-                                <img src="../IMG/NO. 1/OPTION C.png" style="width: 100%; height: auto;" alt="Homeostasis diagram" class="question-image">
+                                <img src="../IMG/NO. 1/OPTION C.png" style="width: 100%; height: auto;" alt="Hygrometer" class="question-image">
                             </div>
                         </div> 
                         <div id="wrong-feedback-q1-optA" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why "diuresis" is incorrect:</div>
-                            <p>Diuresis refers to increased or excessive production of urine, which is just one specific bodily process and not the overall maintenance of internal stability.</p>
+                            <div class="wrong-feedback-title">Why "Barometer" is incorrect:</div>
+                            <p>A barometer is used to measure atmospheric pressure, not humidity. It helps in weather forecasting and altitude measurement.</p>
                             <div class="image-wrapper">
-                                <img src="../IMG/NO. 1/OPTION A.png" alt="Diuresis diagram" class="question-image">
+                                <img src="../IMG/NO. 1/OPTION A.png" alt="Barometer" class="question-image">
                             </div>
                         </div>
                         <div id="wrong-feedback-q1-optB" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why "endosmosis" is incorrect:</div>
-                            <p>Endosmosis refers to the movement of a solvent into a cell or an area of lower concentration, which is a specific physical process and not the overall regulation of an organism's internal environment.</p>
+                            <div class="wrong-feedback-title">Why "Hydrometer" is incorrect:</div>
+                            <p>A hydrometer is used to measure the relative density or specific gravity of liquids, not humidity in the air.</p>
                             <div class="image-wrapper">
-                                <img src="../IMG/NO. 1/OPTION B.png" alt="Endosmosis diagram" class="question-image">
+                                <img src="../IMG/NO. 1/OPTION B.png" alt="Hydrometer" class="question-image">
                             </div>
                         </div>
                         <div id="wrong-feedback-q1-optD" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why "plasmolysis" is incorrect:</div>
-                            <p>Plasmolysis refers to the process in which cells lose water in a hypertonic solution, causing the cell membrane to pull away from the cell wall. This is a specific cellular response, not the broader concept of maintaining internal balance.</p>
+                            <div class="wrong-feedback-title">Why "Manometer" is incorrect:</div>
+                            <p>A manometer is used to measure the pressure of gases and liquids, particularly in closed systems, not humidity.</p>
                             <div class="image-wrapper">
-                                <img src="../IMG/NO. 1/OPTION D.png" alt="Plasmolysis diagram" class="question-image">
+                                <img src="../IMG/NO. 1/OPTION D.png" alt="Manometer" class="question-image">
                             </div>
                         </div>
                         <button id="subject-button" class="button hidden">Learn More</button>
                         <div id="more-content" class="hidden">
-                            <h3>More About Homeostasis</h3>
-                            <p>Homeostasis is a fundamental concept in biology that refers to the ability of an organism to maintain stable internal conditions necessary for survival, despite changes in the external environment.</p>
-                            <div class="image-wrapper">
-                                <img src="../IMG/NO. 1/OPTION C.png" alt="Homeostasis process diagram" class="question-image">
-                            </div>
-                            <p>Examples of homeostatic processes include:</p>
+                            <h3>More About Humidity Measurement</h3>
+                            <p>Relative humidity is the ratio of the current absolute humidity to the highest possible absolute humidity (which depends on the current air temperature). A reading of 100% relative humidity means that the air is totally saturated with water vapor and cannot hold any more.</p>
+                            <p><strong>Types of Hygrometers:</strong></p>
                             <ul>
-                                <li>Temperature regulation</li>
-                                <li>Blood glucose regulation</li>
-                                <li>Fluid and electrolyte balance</li>
-                                <li>pH regulation</li>
-                                <li>Blood pressure regulation</li>
+                                <li><strong>Psychrometer:</strong> Uses two thermometers (wet and dry bulb) to determine humidity</li>
+                                <li><strong>Hair Tension Hygrometer:</strong> Uses human or animal hair which changes length with humidity</li>
+                                <li><strong>Electronic Hygrometer:</strong> Uses electronic sensors to measure moisture content</li>
+                                <li><strong>Dew Point Hygrometer:</strong> Measures the temperature at which dew forms</li>
                             </ul>
-                            <p>Each of these processes involves sensors that detect changes, control centers that process information, and effectors that correct imbalances through negative feedback mechanisms.</p>
+                            <p>Understanding humidity is important in many fields including meteorology, agriculture, manufacturing, and building construction.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Question 2 -->
                 <div class="question" id="question-2">
                     <div class="question-number"><strong>2.</strong></div>
-                    <div class="instruction-text">
-                        <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong>
-                    </div>
-                    <div class="question-text">The likely reason why the student failed the test was that the</div>
+                    <div class="question-text">Which part of the human eye performs the same function as the diaphragm in a lens camera?</div>
                     <div class="options">
-                        <div class="option" data-correct="true" data-option-id="q2-optA">
+                        <div class="option" data-correct="false" data-option-id="q2-optA">
                             <span class="option-label">A</span>
-                            <span>labels were wrong and the guidelines were not touching the structures</span>
+                            <span>Choroid</span>
                         </div>
-                        <div class="option" data-correct="false" data-option-id="q2-optB">
+                        <div class="option" data-correct="true" data-option-id="q2-optB">
                             <span class="option-label">B</span>
-                            <span>net venation shown were few, rough, not properly drawn and wrongly placed</span>
+                            <span>Iris</span>
                         </div>
                         <div class="option" data-correct="false" data-option-id="q2-optC">
                             <span class="option-label">C</span>
-                            <span>leaf was too tapered at the apex, the leaf stalk was too short and the shape of leaf was wrong</span>
+                            <span>Cornea</span>
                         </div>
                         <div class="option" data-correct="false" data-option-id="q2-optD">
                             <span class="option-label">D</span>
-                            <span>leaf venation should have been parallel and the midrib should be thicker</span>
+                            <span>Retina</span>
                         </div>
                     </div>
                     <button class="check-answer button hidden">Check Answer</button>
                     <div class="container hidden">
                         <div class="answer hidden">
-                            <strong>The correct answer is Option A: labels were wrong and the guidelines were not touching the structures.</strong>
-                            <p>When drawing biological diagrams, it's essential that labels are accurate and that guidelines properly touch the structures they're identifying.</p>
+                            <strong>The correct answer is Option B: Iris.</strong>
+                            <p>The iris controls the amount of light entering the eye by adjusting the size of the pupil, just as a camera's diaphragm controls the amount of light reaching the film or sensor.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 2/OPTION B.png" style="width: 100%; height: auto;" alt="Iris" class="question-image">
+                            </div>
                         </div>
-                        <div id="wrong-feedback-q2-optB" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why Option B is incorrect:</div>
-                            <p>While proper venation is important in leaf diagrams, this is typically a secondary concern compared to correct labeling and guidelines.</p>
+                        <div id="wrong-feedback-q2-optA" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "Choroid" is incorrect:</div>
+                            <p>The choroid is a layer of blood vessels that provides nourishment to the eye. It does not control light entry like a camera diaphragm.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 2/OPTION A.png" alt="Choroid" class="question-image">
+                            </div>
                         </div>
                         <div id="wrong-feedback-q2-optC" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why Option C is incorrect:</div>
-                            <p>Leaf shape details are important but minor inaccuracies here would rarely be the primary reason for failing a biology drawing test.</p>
+                            <div class="wrong-feedback-title">Why "Cornea" is incorrect:</div>
+                            <p>The cornea is the transparent front part of the eye that covers the iris and pupil. It refracts light but doesn't control the amount of light entering the eye.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 2/OPTION C.png" alt="Cornea" class="question-image">
+                            </div>
                         </div>
                         <div id="wrong-feedback-q2-optD" class="wrong-feedback hidden">
-                            <div class="wrong-feedback-title">Why Option D is incorrect:</div>
-                            <p>Mango leaves have net venation, not parallel venation. Parallel venation is characteristic of monocot plants like grasses, corn, and lilies, whereas mango is a dicot with net venation.</p>
+                            <div class="wrong-feedback-title">Why "Retina" is incorrect:</div>
+                            <p>The retina is the light-sensitive layer at the back of the eye that detects light, similar to film in a camera, not the diaphragm.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 2/OPTION D.png" alt="Retina" class="question-image">
+                            </div>
                         </div>
                         <button id="subject-button" class="button hidden">Learn More</button>
                         <div id="more-content" class="hidden">
-                            <h3>Proper Biological Drawing Techniques</h3>
-                            <p>In biological drawings, several key principles should be followed:</p>
+                            <h3>Eye-Camera Analogies</h3>
+                            <p>The human eye and a camera share many similarities in how they process images:</p>
                             <ul>
-                                <li><strong>Clear outlines:</strong> Drawings should have clear, continuous lines.</li>
-                                <li><strong>Proper proportions:</strong> The relative sizes of different parts should be accurate.</li>
-                                <li><strong>Correct labeling:</strong> Labels must be accurate and placed horizontally.</li>
-                                <li><strong>Guidelines:</strong> Straight lines that connect labels to the structures they identify.</li>
-                                <li><strong>No shading:</strong> Biological drawings typically avoid shading or coloring.</li>
-                                <li><strong>Title:</strong> A descriptive title should be included.</li>
-                                <li><strong>Magnification:</strong> The scale of the drawing should be indicated.</li>
+                                <li><strong>Iris ↔ Diaphragm:</strong> Both control the amount of light entering</li>
+                                <li><strong>Pupil ↔ Aperture:</strong> The opening through which light passes</li>
+                                <li><strong>Lens ↔ Camera Lens:</strong> Both focus light onto the image-sensing surface</li>
+                                <li><strong>Retina ↔ Film/Sensor:</strong> Where the image is captured</li>
+                                <li><strong>Cornea ↔ Glass Cover:</strong> Protective transparent covering</li>
                             </ul>
-                            <p>Failing to follow these principles, especially regarding proper labeling and guidelines, can result in significant point deductions in assessments.</p>
+                            <p>In bright light, the iris contracts to make the pupil smaller, reducing light entry. In dim light, it dilates to allow more light in. This automatic adjustment is similar to how a camera's diaphragm adjusts aperture size.</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question" id="question-3">
+                    <div class="question-number"><strong>3.</strong></div>
+                    <div class="question-text">An electron moves from an energy level of -8.6 eV to another level of -3.5 eV. Determine the frequency of the absorbed radiation. [1 eV = 1.6 × 10⁻¹⁹J, h = 6.6 × 10⁻³⁴Js]</div>
+                    <div class="options">
+                        <div class="option" data-correct="true" data-option-id="q3-optA">
+                            <span class="option-label">A</span>
+                            <span>1.24 × 10¹⁵Hz</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q3-optB">
+                            <span class="option-label">B</span>
+                            <span>2.93 × 10¹⁵Hz</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q3-optC">
+                            <span class="option-label">C</span>
+                            <span>3.59 × 10¹⁶Hz</span>
+                        </div>
+                        <div class="option" data-correct="false" data-option-id="q3-optD">
+                            <span class="option-label">D</span>
+                            <span>5.39 × 10¹⁶Hz</span>
+                        </div>
+                    </div>
+                    <button class="check-answer button hidden">Check Answer</button>
+                    <div class="container hidden">
+                        <div class="answer hidden">
+                            <strong>The correct answer is Option A: 1.24 × 10¹⁵Hz.</strong>
+                            <p><strong>Solution:</strong></p>
+                            <p>Energy difference: ΔE = E₂ - E₁ = -3.5 - (-8.6) = 5.1 eV</p>
+                            <p>Converting to Joules: ΔE = 5.1 × 1.6 × 10⁻¹⁹ = 8.16 × 10⁻¹⁹ J</p>
+                            <p>Using E = hf, where f is frequency:</p>
+                            <p>f = E/h = (8.16 × 10⁻¹⁹)/(6.6 × 10⁻³⁴) = 1.24 × 10¹⁵ Hz</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 3/OPTION A.png" style="width: 100%; height: auto;" alt="Calculation" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q3-optB" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "2.93 × 10¹⁵Hz" is incorrect:</div>
+                            <p>This answer suggests an error in the calculation, possibly using the wrong energy difference or conversion factor.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 3/OPTION B.png" alt="Wrong calculation B" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q3-optC" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "3.59 × 10¹⁶Hz" is incorrect:</div>
+                            <p>This value is too high and suggests an error in the calculation, possibly missing the correct power of 10.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 3/OPTION C.png" alt="Wrong calculation C" class="question-image">
+                            </div>
+                        </div>
+                        <div id="wrong-feedback-q3-optD" class="wrong-feedback hidden">
+                            <div class="wrong-feedback-title">Why "5.39 × 10¹⁶Hz" is incorrect:</div>
+                            <p>This frequency is much too high for the given energy transition and suggests fundamental calculation errors.</p>
+                            <div class="image-wrapper">
+                                <img src="../IMG/NO. 3/OPTION D.png" alt="Wrong calculation D" class="question-image">
+                            </div>
+                        </div>
+                        <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Energy Transitions and Photon Emission</h3>
+                            <p>When an electron transitions between energy levels in an atom, it either absorbs or emits a photon. The energy of this photon is equal to the difference in energy between the two levels.</p>
+                            <p><strong>Key Concepts:</strong></p>
+                            <ul>
+                                <li><strong>Energy-Frequency Relationship:</strong> E = hf, where h is Planck's constant</li>
+                                <li><strong>Absorption:</strong> Electron moves to higher (less negative) energy level</li>
+                                <li><strong>Emission:</strong> Electron moves to lower (more negative) energy level</li>
+                                <li><strong>Energy Conservation:</strong> ΔE = hf</li>
+                            </ul>
+                            <p>In this problem, the electron moves from -8.6 eV to -3.5 eV, which is an upward transition (absorption). The energy absorbed is 5.1 eV, which corresponds to ultraviolet radiation with a frequency of 1.24 × 10¹⁵ Hz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="results-title">Quiz Completed</div>
+                <div class="score-display">0/15</div>
+                <div class="result-message">You've completed the exam!</div>
+                <div class="results-buttons">
+                    <button class="button review-btn" id="reviewQuestions">Review All Questions</button>
+                    <button class="button review-btn" id="reviewFailedQuestions">Review Failed Questions</button>
+                    <button class="button retry-btn" id="retryQuiz">Try Again</button>
                 </div>
             </div>
         </div>
@@ -526,11 +1074,154 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const welcomeModal = document.getElementById('welcomeModal');
+            const closeModalBtn = document.querySelector('.close');
+            const startBtn = document.getElementById('startExam');
+            const studentNameInput = document.getElementById('studentName');
+            const studentEmailInput = document.getElementById('studentEmail');
+            const practiceModeBtn = document.getElementById('practiceMode');
+            const testModeBtn = document.getElementById('testMode');
+            const timerOptions = document.querySelectorAll('.timer-option');
+            const dashboardToggle = document.getElementById('dashboardToggle');
+            const dashboard = document.getElementById('dashboard');
+            const userNameDisplay = document.getElementById('userName');
+            const userScoreDisplay = document.getElementById('userScore');
+            const progressText = document.getElementById('progressText');
+            const progressBar = document.getElementById('progressBar');
+            const timerDisplay = document.querySelector('.timer');
+            const timeLeftDisplay = document.getElementById('timeLeft');
+            const options = document.querySelectorAll('.option');
+            const resultsSection = document.getElementById('resultsSection');
+            const reviewQuestionsBtn = document.getElementById('reviewQuestions');
+            const reviewFailedQuestionsBtn = document.getElementById('reviewFailedQuestions');
+            const retryQuizBtn = document.getElementById('retryQuiz');
+
+            // State variables
+            let mode = '';
+            let timerEnabled = false;
+            let timerDuration = 0;
+            let timerInterval;
             let score = 0;
+            let totalQuestions = document.querySelectorAll('.question').length;
+            let answeredQuestions = 0;
+            let failedQuestions = [];
             let isAnimating = false;
 
+            // Show modal on page load
+            welcomeModal.style.display = 'flex';
+            setTimeout(() => {
+                welcomeModal.classList.add('show');
+            }, 10);
+
+            // Close modal when clicking the X
+            closeModalBtn.addEventListener('click', function() {
+                welcomeModal.classList.remove('show');
+                setTimeout(() => {
+                    welcomeModal.style.display = 'none';
+                }, 300);
+            });
+
+            // Mode selection
+            practiceModeBtn.addEventListener('click', function() {
+                mode = 'practice';
+                practiceModeBtn.style.backgroundColor = '#2aae7a';
+                testModeBtn.style.backgroundColor = '';
+            });
+
+            testModeBtn.addEventListener('click', function() {
+                mode = 'test';
+                testModeBtn.style.backgroundColor = '#2aae7a';
+                practiceModeBtn.style.backgroundColor = '';
+            });
+
+            // Timer options
+            timerOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    timerOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    const time = this.getAttribute('data-time');
+                    if (time === 'none') {
+                        timerEnabled = false;
+                    } else {
+                        timerEnabled = true;
+                        timerDuration = parseInt(time);
+                    }
+                });
+            });
+
+            // Dashboard toggle
+            dashboardToggle.addEventListener('click', function() {
+                dashboard.classList.toggle('active');
+            });
+
+            // Start exam
+            startBtn.addEventListener('click', function() {
+                const studentName = studentNameInput.value.trim();
+                if (!studentName) {
+                    alert('Please enter your name to continue.');
+                    return;
+                }
+                if (!mode) {
+                    alert('Please select a mode (Practice or Test) to continue.');
+                    return;
+                }
+
+                // Update user name display
+                userNameDisplay.textContent = studentName;
+                
+                // Hide modal
+                welcomeModal.classList.remove('show');
+                setTimeout(() => {
+                    welcomeModal.style.display = 'none';
+                }, 300);
+
+                // Configure mode
+                if (mode === 'practice') {
+                    document.querySelectorAll('.check-answer').forEach(btn => {
+                        btn.classList.remove('hidden');
+                    });
+                }
+
+                // Start timer if enabled
+                if (timerEnabled) {
+                    timerDisplay.classList.remove('hidden');
+                    startTimer(timerDuration);
+                }
+
+                // Update progress
+                updateProgress();
+            });
+
+            // Start timer function
+            function startTimer(duration) {
+                let timer = duration;
+                updateTimerDisplay(timer);
+                
+                timerInterval = setInterval(function() {
+                    timer--;
+                    updateTimerDisplay(timer);
+                    
+                    if (timer <= 0) {
+                        clearInterval(timerInterval);
+                        endQuiz();
+                    }
+                }, 1000);
+            }
+
+            // Update timer display
+            function updateTimerDisplay(timeInSeconds) {
+                const minutes = Math.floor(timeInSeconds / 60);
+                const seconds = timeInSeconds % 60;
+                timeLeftDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                // Change color when time is running out
+                if (timeInSeconds <= 60) {
+                    timeLeftDisplay.style.color = '#f44336';
+                }
+            }
+
             // Option click handler
-            const options = document.querySelectorAll('.option');
             options.forEach(option => {
                 option.addEventListener('click', function() {
                     const question = this.closest('.question');
@@ -542,6 +1233,7 @@
                     
                     // Mark as answered
                     question.classList.add('answered');
+                    answeredQuestions++;
                     
                     // Select this option
                     this.classList.add('selected');
@@ -551,9 +1243,10 @@
                     
                     if (isCorrect) {
                         this.classList.add('correct');
-                        score += 5;
+                        score += 5; // Each question is worth 5 points
                     } else {
                         this.classList.add('incorrect');
+                        failedQuestions.push(question.id);
                         
                         // Show the correct answer
                         question.querySelectorAll('.option').forEach(opt => {
@@ -570,8 +1263,19 @@
                         }
                     }
                     
-                    // Show check answer button
-                    question.querySelector('.check-answer').classList.remove('hidden');
+                    // Update score and progress
+                    userScoreDisplay.textContent = `Score: ${score}`;
+                    updateProgress();
+                    
+                    // Show check answer button in practice mode
+                    if (mode === 'practice') {
+                        question.querySelector('.check-answer').classList.remove('hidden');
+                    }
+                    
+                    // Check if quiz is complete
+                    if (answeredQuestions === totalQuestions) {
+                        endQuiz();
+                    }
                 });
             });
 
@@ -654,6 +1358,132 @@
             // Using event delegation for subject buttons
             $(document).on('click', '#subject-button', function() {
                 displayMoreContent(this);
+            });
+
+            // Update progress function
+            function updateProgress() {
+                progressText.textContent = `Progress: ${answeredQuestions}/${totalQuestions}`;
+                const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+
+            // End quiz function
+            function endQuiz() {
+                // Clear timer if running
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                }
+                
+                // Update results section
+                document.querySelector('.score-display').textContent = `${score}/${totalQuestions * 5}`;
+                
+                // Generate result message
+                let resultMessage = '';
+                const scorePercentage = (score / (totalQuestions * 5)) * 100;
+                
+                if (scorePercentage >= 80) {
+                    resultMessage = 'Excellent job! You have mastered this topic.';
+                } else if (scorePercentage >= 60) {
+                    resultMessage = 'Good job! You have a solid understanding of this topic.';
+                } else if (scorePercentage >= 40) {
+                    resultMessage = 'You passed! Keep practicing to improve your knowledge.';
+                } else {
+                    resultMessage = 'You need more practice with this topic. Try reviewing the material again.';
+                }
+                
+                document.querySelector('.result-message').textContent = resultMessage;
+                
+                // Show results section
+                resultsSection.style.display = 'block';
+            }
+
+            // Review questions button click handler
+            reviewQuestionsBtn.addEventListener('click', function() {
+                resultsSection.style.display = 'none';
+                window.scrollTo(0, 0);
+            });
+
+            // Review failed questions button click handler
+            reviewFailedQuestionsBtn.addEventListener('click', function() {
+                resultsSection.style.display = 'none';
+                
+                // Hide all questions first
+                document.querySelectorAll('.question').forEach(question => {
+                    question.style.display = 'none';
+                });
+                
+                // Show only failed questions
+                failedQuestions.forEach(questionId => {
+                    document.getElementById(questionId).style.display = 'block';
+                });
+                
+                window.scrollTo(0, 0);
+            });
+
+            // Retry quiz button click handler
+            retryQuizBtn.addEventListener('click', function() {
+                // Reset state
+                score = 0;
+                answeredQuestions = 0;
+                failedQuestions = [];
+                
+                // Reset UI
+                userScoreDisplay.textContent = 'Score: 0';
+                updateProgress();
+                
+                // Hide results section
+                resultsSection.style.display = 'none';
+                
+                // Reset questions
+                document.querySelectorAll('.question').forEach(question => {
+                    question.classList.remove('answered');
+                    question.style.display = 'block';
+                    
+                    // Reset options
+                    question.querySelectorAll('.option').forEach(option => {
+                        option.classList.remove('selected', 'correct', 'incorrect');
+                    });
+                    
+                    // Hide containers
+                    const container = question.querySelector('.container');
+                    if (container) {
+                        container.classList.add('hidden');
+                        container.querySelector('.answer').classList.add('hidden');
+                        container.querySelectorAll('.wrong-feedback').forEach(feedback => {
+                            feedback.classList.add('hidden');
+                        });
+                        container.querySelector('#more-content').classList.add('hidden');
+                        container.querySelector('#subject-button').classList.add('hidden');
+                    }
+                    
+                    // Hide check answer button in test mode
+                    if (mode === 'test') {
+                        question.querySelector('.check-answer').classList.add('hidden');
+                    }
+                });
+                
+                // Restart timer if enabled
+                if (timerEnabled) {
+                    if (timerInterval) {
+                        clearInterval(timerInterval);
+                    }
+                    startTimer(timerDuration);
+                }
+                
+                window.scrollTo(0, 0);
+            });
+            
+            // Fix image loading issues
+            $('img').each(function() {
+                var img = $(this);
+                var src = img.attr('src');
+                
+                // Add error handler for all images
+                img.on('error', function() {
+                    console.log('Image failed to load:', src);
+                    // You can replace with a placeholder if needed
+                    // $(this).attr('src', '/path/to/placeholder.png');
+                });
             });
         });
     </script>
