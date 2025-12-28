@@ -3704,52 +3704,86 @@ div[style*="width: 25vw"] {
             // Using jQuery for the animations as in the second example
             // This is the key part that will make sure the animations work correctly
             
-            // Function to display answer with animation (similar to the working second example)
+            // Function to display answer with animation - FIXED for all questions
             function displayAnswer(element) {
-                if (isAnimating) return;
+                console.log('displayAnswer called for:', $(element).closest('.question').attr('id'));
+                console.log('isAnimating:', isAnimating);
 
-                var container = $(element).siblings('.container');
+                // Reset isAnimating if it's stuck
+                if (isAnimating) {
+                    console.warn('Animation already in progress, resetting...');
+                    isAnimating = false;
+                }
+
+                var $button = $(element);
+                var container = $button.siblings('.container');
+
                 if (container.length === 0) {
-                    console.log('Container not found!');
+                    console.error('Container not found!');
                     return;
                 }
 
                 var answer = container.find('.answer').first();
+
                 if (answer.length === 0) {
-                    console.log('Answer element not found!');
+                    console.error('Answer element not found!');
                     return;
                 }
 
-                var htmlContent = answer.html();
-                if (!htmlContent || htmlContent.trim() === '') {
-                    console.log('No answer content!');
+                // Store original content if not already stored
+                var originalContent = answer.data('original-content');
+                if (!originalContent) {
+                    originalContent = answer.html();
+                    answer.data('original-content', originalContent);
+                    console.log('Stored original content, length:', originalContent.length);
+                }
+
+                if (!originalContent || originalContent.trim() === '') {
+                    console.error('No answer content!');
+                    // Still show the container
+                    container.removeClass('hidden');
+                    answer.removeClass('hidden');
                     return;
                 }
 
                 var i = 0;
-                var originalContent = htmlContent;
 
                 answer.html('');
                 answer.removeClass('hidden');
                 container.removeClass('hidden');
                 isAnimating = true;
 
+                console.log('Starting typewriter animation...');
+
                 function typeWriter() {
-                    if (i < originalContent.length) {
-                        if (originalContent.charAt(i) === '<') {
-                            // Skip HTML tags
-                            var tagEnd = originalContent.indexOf('>', i) + 1;
-                            answer.append(originalContent.slice(i, tagEnd));
-                            i = tagEnd;
+                    try {
+                        if (i < originalContent.length) {
+                            if (originalContent.charAt(i) === '<') {
+                                // Skip HTML tags
+                                var tagEnd = originalContent.indexOf('>', i) + 1;
+                                if (tagEnd > i) {
+                                    answer.append(originalContent.slice(i, tagEnd));
+                                    i = tagEnd;
+                                } else {
+                                    i++;
+                                }
+                            } else {
+                                // Add one character at a time
+                                answer.append(originalContent.charAt(i));
+                                i++;
+                            }
+                            setTimeout(typeWriter, 5);
                         } else {
-                            // Add one character at a time
-                            answer.append(originalContent.charAt(i));
-                            i++;
+                            // Animation complete
+                            console.log('Animation complete!');
+                            var subjectBtn = container.find('#subject-button');
+                            if (subjectBtn.length > 0) {
+                                subjectBtn.removeClass('hidden');
+                            }
+                            isAnimating = false;
                         }
-                        setTimeout(typeWriter, 5);
-                    } else {
-                        // Animation complete
-                        container.find('#subject-button').removeClass('hidden');
+                    } catch (error) {
+                        console.error('Error in typeWriter:', error);
                         isAnimating = false;
                     }
                 }
