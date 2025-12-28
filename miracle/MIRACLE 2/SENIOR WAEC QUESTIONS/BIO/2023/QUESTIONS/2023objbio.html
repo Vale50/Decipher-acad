@@ -3707,37 +3707,53 @@ div[style*="width: 25vw"] {
             // Function to display answer with animation (similar to the working second example)
             function displayAnswer(element) {
                 if (isAnimating) return;
-                
+
                 var container = $(element).siblings('.container');
-                var answer = container.children('.answer');
+                if (container.length === 0) {
+                    console.log('Container not found!');
+                    return;
+                }
+
+                var answer = container.find('.answer').first();
+                if (answer.length === 0) {
+                    console.log('Answer element not found!');
+                    return;
+                }
+
                 var htmlContent = answer.html();
+                if (!htmlContent || htmlContent.trim() === '') {
+                    console.log('No answer content!');
+                    return;
+                }
+
                 var i = 0;
-                
+                var originalContent = htmlContent;
+
                 answer.html('');
                 answer.removeClass('hidden');
                 container.removeClass('hidden');
                 isAnimating = true;
-                
+
                 function typeWriter() {
-                    if (i < htmlContent.length) {
-                        if (htmlContent.charAt(i) === '<') {
+                    if (i < originalContent.length) {
+                        if (originalContent.charAt(i) === '<') {
                             // Skip HTML tags
-                            var tagEnd = htmlContent.indexOf('>', i) + 1;
-                            answer.append(htmlContent.slice(i, tagEnd));
+                            var tagEnd = originalContent.indexOf('>', i) + 1;
+                            answer.append(originalContent.slice(i, tagEnd));
                             i = tagEnd;
                         } else {
                             // Add one character at a time
-                            answer.append(htmlContent.charAt(i));
+                            answer.append(originalContent.charAt(i));
                             i++;
                         }
                         setTimeout(typeWriter, 5);
                     } else {
                         // Animation complete
-                        container.children('#subject-button').removeClass('hidden');
+                        container.find('#subject-button').removeClass('hidden');
                         isAnimating = false;
                     }
                 }
-                
+
                 typeWriter();
             }
             
@@ -3775,11 +3791,12 @@ div[style*="width: 25vw"] {
                 typeWriter();
             }
             
-            // Bind click events using jQuery
-            $('.check-answer').on('click', function() {
+            // Bind click events using jQuery with event delegation (FIXED for all questions)
+            $(document).on('click', '.check-answer', function() {
+                console.log('Check answer clicked for:', $(this).closest('.question').attr('id'));
                 displayAnswer(this);
             });
-            
+
             // Using event delegation for subject buttons
             $(document).on('click', '#subject-button', function() {
                 displayMoreContent(this);
