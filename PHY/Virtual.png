@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        body {
+            background-color: #efefef;
+        }
+        .logo {
+            margin: 40px auto;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 90px;
+            color: #121212;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 1px #747474, 
+                -1px 3px 1px #767676, 
+                -2px 5px 1px #787878, 
+                -3px 7px 1px #7a7a7a,
+                -4px 9px 1px #7f7f7f,
+                -5px 11px 1px #838383,
+                -6px 13px 1px #878787,
+                -7px 15px 1px #8a8a8a, 
+                -8px 17px 1px #8e8e8e,
+                -9px 19px 1px #949494,
+                -10px 21px 1px #989898,
+                -11px 23px 1px #9f9f9f,
+        }
+        .question {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 3px solid #3498db; /* Bolder border */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for creative style */
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+        .question:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker shade on hover */
+        }
+        .answer {
+            display: none; /* Hidden by default */
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(this).next(".answer").slideToggle(); /* Toggle the visibility of the answer */
+            });
+        });
+    </script>
+</head>
+ <body>
+<div id="quest">
+<div class="question">
+    <!--Each section in the Theory must be Identified and Typed out in bold example "PAPER 2 THEORY"-->
+    <h1> PAPER 2
+        ESSAY
+        </h1>
+    <p>Instructcion:PART 1
+        Answer any five questions from this part
+        </p>
+    <p>1. 	The load-extension graph of an elastic material is illustrated below.
+        Use the graph to determine the work done in stretching the materials
+    </p>
+<div class="">
+<!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">Input Explanation here</div>
+</div>
+</div>
+<div id="quest">
+<div class="question">
+    <p>2. 	a	Name two artificial satellites
+    </p> 
+            <div class="">
+      <!--noneere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+         <p> 	b.	A geostationary  satellite moves in an orbit of radius 6300 km. Calculate the speed 		with which it moves in the orbit. [ = 22/7]
+        </p>
+            <div class="">
+          <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+   
+       <div id="quest">
+        <div class="question">
+            <p> 3.	A projectile is fired at an angle of 30<sup>0</sup> to the horizontal with velocity of 40ms-1. C
+                Calculate the velocity attained after 1s. [g = 10ms<sup>-3</sup>]
+            </p>
+
+            <div class="">
+                <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+       </div>
+      <div id="quest">
+        <div class="question">
+            <p> </p> <!--Questions appears here-->
+            <div class="">
+               <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+<p>4. 	The circuit diagram below is a simple current rectifier circuit. Use it to answer the 	question  that follow.</p>
+a. State the function of each of the parts labeled A and B
+<div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <p>5.	a.	Explain the wave-particle duality of light.
+    </p>
+<div class="">
+<!--nonehere-->
+</div>
+<button>Explanation</button>
+<div class="answer hidden">Input Explanation here</div>
+</div>
+</div>
+<div id="quest">
+<div class="question">
+    <p>b. 	A particle of wave length 4.2x10<sup>-11</sup> in travels with a momentum of 1.6 x10<sup>-23</sup>kg 		ms-2. Determine the value of the planck’s constant, h.</p> 
+            <div class="">
+      <!--noneere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+      <div id="quest">
+        <div class="question">
+         <p> 6.	State three observable phenomena where a particle behaves like waves </p>
+            <div class="">
+          <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+   
+       <div id="quest">
+        <div class="question">
+            <p> 7.	a.	State the scientific principle underlying the operation of the fibre optics </p>
+
+            <div class="">
+                <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+       </div>
+      <div id="quest">
+        <div class="question">
+            <p> b.	Explain each of the following terms as used in fibre optics
+                i. core
+                ii. cladding.
+        </p> <!--Questions appears here-->
+            <div class="">
+               <!--nonehere-->
+
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+    </div>
+    <h1> Part II
+        </h1>
+    <p>Instructcion:Answer three questions from this part
+        All questions carry equal marks.        
+        </p>
+      <div id="quest">
+        <div class="question">
+<p>8.	a.	i. 	State Hooke’s law
+    ii. 	A spring has a length of 0.20m when a mass of 0.30kg hangs on it, and a 			length 0.75m when a mass of 1.95k kg hand on it. Calculate the:
+        i.  Force constant of the spring;
+        ii. Length of the spring when it is unloaded.
+<div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>b.	i. What is diffusion?
+		ii. State two factors that affect the rate of diffusion of a substance.
+		iii. State the exact relationship between the rate of diffusion of a gas and its density 
+ <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>c.	A satellite of mass, m orbits the earth of mass, M with a velocity, v at a distance R 		from the centre of the earth. Derive the relationship between the period T, of orbit 		and R
+    <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div?
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>9 .	a.	i. Define dew point
+    ii. Explain why dew forms more quickly on the metal parts than on the rubber parts of  bicycle place in the open overnight.</p>
+<div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>	b.	i. Explain the statement, the specific heat capacity of copper is 400Jkg<sup>-1</sup>K<sup>-1</sup>
+    ii. Two metals P and Q are supplied with the same quantity of heat. If the ratio of 		the specific heat capacity of P to Q is 3:1 and their masses are in the ratio 1:2 			respectively, calculate the ratio of the temperature rise of P to Q
+<div> class=""</div>
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>	c.	i. Define coefficient of thermal conductivity of a material
+    ii.	
+    The diagram above illustrates a composite bar of iron and copper. The bar is insulated along its sides and it has a diameter of 10mm. The length and thermal 		conductivity of the iron ore 0.15m and 40 W m<sup>-1</sup>λ<sup>-1</sup>, respectively and those of copper are 0.05 m and 360 40 W m<sup>-1</sup> λ<sup>-1</sup>, respectively, If the free ends of the iron and copper are kept at 100<sup>0</sup>C and 0<sup>0</sup>C respectively, calculate the 
+    i.  Temperature 0 at the interface between the bars
+    ii. rate of heat flow along the bar.
+.</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>10.	a	i. Define each of the following terms as it relates to converging lenses:
+    ii. focal length.
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>	c.	A ray passes symmetrically through a glass prism of angle 60O and refractive index 		of 15. Calculate the angle of 
+    i. incidence
+    ii. Minimum deviation
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>11	a. 	i. What is meant by the root-mean-square value of an alternating current?
+    ii. Define impedance of an alternating current circuit
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>	b.	An electrical device rated 120 V, 60 W is operated on a 240 V, 50 Hz mains supply. 		The circuit has a capacitor connected in series with the electrical device and the 		supply.
+    Calculate the capacitance of the capacitor.
+    [ = 3.142]							
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>		ii.
+		
+    The circuit diagram above illustrate two capacitors of a capacitances C<sub>1</sub> and C<sub>2</sub>			connected in series across a 2V source.
+i.Obtain an expression for the total capacitance in terms of C<sub>2</sub>
+ii.Calculate the potential difference across each capacitor.							
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>12.	a.	i. State the principal factor that determines the relative stability of a radioactive 			nucleus.
+    ii. Arrange the following radionuclides in decreasing order of stability. Justify your 		answer 2040X, 3692W and 4295Y				
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>	b.	i. Explain the term Ionization potential.
+    ii.
+            
+    The diagram above illustrates energy levels in the hydrogen atom. E<sub>o</sub> is the energy 		of the ground state.
+    I.  When an electron makes a transition from level n=3 to level n=1, it emit a photon 		of  wavelength 1.02  x 10<sup>-7</sup>m. Calculate E0
+    II. Calculate the ionization potential of the hydrogen atom.
+</p>
+            <div class="">
+               <!--nonehere-->
+            </div>
+            <button>Explanation</button>
+            <div class="answer hidden">Input Explanation here</div>
+        </div>
+      </div>
+      <div id="quest">
+        <div class="question">
+<p>	c.	i.	Explain the statement, the work function of sodium is 2.0 eV
+	ii.	Light of wavelength 160mm is shone on the surface of a sodium metal work 			function 2.0eV. Determine whether photoelectrons will be emitted.
+		[h=6.6 x 10<sup>-34</sup>Js, e = 3.0 x 10<sup>8</sup> ms<sup>-1</sup>, 1eV = 1.6 x 10<sup>-19</sup>J]						
+</p>
+      </div>
+      </div>
+</body>
+</html>
