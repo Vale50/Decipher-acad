@@ -1,0 +1,124 @@
+SSCE IMAGE PATH ISSUES - WRITTEN OVERVIEW FOR CLEANUP WORK
+===========================================================
+
+Purpose
+-------
+This document is a single written overview to guide cleanup of image rendering issues across the SSCE pages. It explains why some images display correctly while others do not, where the highest-risk files are, what inconsistency patterns exist, and what order of work should be followed.
+
+Scope Reviewed
+--------------
+- Folder covered: SSCE/
+- HTML files reviewed: 35
+- Image references reviewed (<img src>): 2691
+
+What Is Going Wrong (Main Causes)
+----------------------------------
+1) Root-absolute image paths are overused.
+   - Many pages use paths that begin with a forward slash (for example, /miracle/... or /1.jpg).
+   - These paths only work when the deployed server root exactly matches that path structure.
+   - In local repo-based serving or different deployment roots, they break.
+
+2) Many src values are malformed by formatting characters.
+   - A large number of src attributes include leading/trailing spaces and newline characters.
+   - These values may look fine visually in the file, but the browser receives them as malformed paths.
+   - This causes inconsistent loading behavior and can trigger fallback placeholder behavior.
+
+3) Some referenced files do not exist at the expected resolved location.
+   - Several pages point to image files or folders that are not present where the HTML location expects them.
+   - This includes missing numbered images and some subject image folders/options.
+
+4) Mixed path styles in the same file.
+   - Some files combine: ../IMG/... , /miracle/... , and miracle/... formats.
+   - Mixed conventions make maintenance error-prone and result in partial rendering where some options show and others fail.
+
+5) Placeholder logic can mask true path issues.
+   - In some pages, scripts are set to replace images with placeholders after detecting unusual src formatting or load errors.
+   - This can make debugging harder because root path problems are hidden behind fallback images.
+
+High-Risk Files to Prioritize
+-----------------------------
+The following pages showed the highest concentration of missing or inconsistent image references and should be fixed first:
+
+1. SSCE/BIO/2023/QUESTIONS/2023objbio_original.html
+2. SSCE/BIO/2023/QUESTIONS/2023objbio.html
+3. SSCE/BIO/2023/QUESTIONS/bio23.html
+4. SSCE/BIO/2023/QUESTIONS/test.html
+5. SSCE/CHEM/2021/QUESTIONS/chem2021obj.html
+6. SSCE/CHEM/2021/QUESTIONS/chem21.html
+7. SSCE/PHY/2022/QUESTIONS/2022physicsobjquestions.html
+8. SSCE/PHY/2022/QUESTIONS/phy22.html
+9. SSCE/PHY/2021/QUESTIONS/2021physicsobj.html
+10. SSCE/PHY/2023/QUESTIONS/2023physicsobj.html
+11. SSCE/PHY/2023/QUESTIONS/phy23.html
+
+Common Broken Path Families Observed
+-------------------------------------
+- /miracle/MIRACLE 2/SENIOR WAEC QUESTIONS/... (frequent)
+- /miracle/FAVOUR/JUNIOR WAEC QUESTION/... (frequent in physics content)
+- /1.jpg, /2.jpg, /3.jpg, /4.jpg (repeated numbered references)
+- Some relative references to IMG subfolders that do not exist under the expected subject/year folder
+
+Why Some Questions Show Images While Others Don’t
+--------------------------------------------------
+A question will usually render its image when all of the following are true:
+- The path is relative to the current HTML file location (or server root truly matches absolute path).
+- The file exists at that resolved location.
+- The src value has no hidden newline/trailing spaces.
+- No script preemptively rewrites the image source before load.
+
+A question will fail when one or more of these fail. This is why the same page may display option A but fail on B/C/D.
+
+Consistency Problems That Cause Mix-Ups
+----------------------------------------
+- Folder names with spaces and inconsistent wording/case increase typo risk.
+- Old path conventions and new conventions are mixed in the same document.
+- Some paths appear copied from different machine environments (absolute paths tied to one folder layout).
+- Some files contain path strings that are effectively placeholders or incomplete.
+
+Recommended Cleanup Standard (Use This Everywhere)
+---------------------------------------------------
+1) Use one convention per paper file:
+   - Prefer relative paths from the HTML file to its image folder.
+
+2) Normalize all src strings:
+   - Remove leading/trailing whitespace.
+   - Remove embedded line breaks in src attributes.
+
+3) Eliminate root-absolute content paths unless deployment guarantees that exact root mapping.
+
+4) Keep naming stable:
+   - Do not create new folder/file naming variants that differ only by spacing or case.
+
+5) Keep fallback behavior simple:
+   - Placeholder image should only be used on actual load error, not as a pre-check replacement.
+
+Suggested Work Plan for the Team
+---------------------------------
+Phase 1 (Stabilize quickly)
+- Fix the top-priority files listed above.
+- Convert obvious root-absolute image paths to correct relative paths.
+- Remove malformed whitespace/newline src values.
+
+Phase 2 (Standardize subject by subject)
+- BIO first (largest problem concentration), then ENG, CHEM, PHY.
+- For each paper: enforce one image path style and verify all option images A-D.
+
+Phase 3 (Prevent recurrence)
+- Add a pre-release review checklist:
+  - No src begins with / unless intentionally mapped at deploy root.
+  - No newline/whitespace in src.
+  - Every referenced image exists in repo.
+  - Question options A-D all render in browser test pass.
+
+Definition of Done for Each File
+--------------------------------
+A file should be considered fixed when:
+- All image src values resolve correctly from that file location.
+- All referenced files exist.
+- No mixed path convention remains in that file.
+- No broken or placeholder-only src values remain.
+- Frontend renders all question and option images without unexpected placeholder substitution.
+
+Final Note
+----------
+This is intentionally written as a handoff overview for implementation work. It should be used as the working guide for the image path correction sweep across SSCE pages.
