@@ -1,0 +1,36 @@
+PHY 2021 IMAGE FOLDER MAPPING (QUESTION NUMBER -> FOLDER)
+==========================================================
+
+This mapping was derived by reading image references in:
+- SSCE/PHY/2021/QUESTIONS/phy21.html
+
+Renamed folders now follow a numbered format so each question-linked image set is identifiable.
+
+Q1  -> NO 1 - MASS
+Q2  -> NO 2 - SOLID CORE
+Q3  -> NO 3 - POLARIZATION
+Q4  -> NO 4 - TEMPERATURE
+Q5  -> NO 5 - EYE
+Q6  -> NO 6 - THERMISTOR
+Q7  -> NO 7 - ELECTRIC
+Q8  -> NO 8 - SOLID
+Q9  -> NO 9 - Quarter of wave length
+Q13 -> NO 13 - VELOCITY GRAPH
+Q14 -> NO 14 - HIGH VALUE RESISTANT
+Q18 -> NO 18 - DIFFERENT ISOTOPE OF ELEMENT
+Q19 -> NO 19 - Electric current
+Q20 -> NO 20 - Acceleration
+Q21 -> NO 21 - MOLECULE
+Q24 -> NO 24 - DIMENSION
+Q32 -> NO 32 - CLOSE TOGETHER
+Q36 -> NO 36 - VOLTAGE OF BATTERY
+Q39 -> NO 39 - PERMANENT MAGNET
+Q43 -> NO 43 - The Electron
+Q44 -> NO 44 - Measured in cm
+Q45 -> NO 45 - OVERTONE
+Q46 -> NO 46 - TRANSMITTED EQUALLY
+Q49 -> NO 49 - CROSS SECTIONAL AREAS
+
+Additional note:
+- NO 24 - DIMENSION (DUPLICATE) is a duplicate copy of the Q24 image set retained for traceability.
+- Questions without an SSCE/PHY/2021/IMG folder currently use other image locations (for example the miracle path set).
