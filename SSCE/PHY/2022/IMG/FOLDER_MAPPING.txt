@@ -1,0 +1,43 @@
+PHY 2022 IMAGE FOLDER MAPPING TABLE
+===================================
+
+Source reviewed:
+- SSCE/PHY/2022/QUESTIONS/phy22.html
+
++-------------+--------------------------------------------------------------+-----------------------------+
+| Question No | Folder Name                                                  | Note                        |
++-------------+--------------------------------------------------------------+-----------------------------+
+| 1           | NO 1 - Change in momentum                                    | Mapped from question(s)     |
+| 2           | NO 2 - Weight                                                | Mapped from question(s)     |
+| 6           | NO 6 - Velocity Time Graph                                   | Mapped from question(s)     |
+| 8           | NO 8 - 1J                                                    | Mapped from question(s)     |
+| 10          | NO 10 - Water wave                                           | Mapped from question(s)     |
+| 11          | NO 11 - Erect and of the same size as the object             | Mapped from question(s)     |
+| 13          | NO 13 - Rotation Axis                                        | Mapped from question(s)     |
+| 15          | NO 15 - F1                                                   | Mapped from question(s)     |
+| 17          | NO 17 - Direction of force                                   | Mapped from question(s)     |
+| 18          | NO 18 - L1                                                   | Mapped from question(s)     |
+| 20          | NO 20 - Paramagnetic                                         | Mapped from question(s)     |
+| 21          | NO 21 - Dr Broglie wavelength                                | Mapped from question(s)     |
+| 22          | NO 22 - Photonelecton                                        | Mapped from question(s)     |
+| 24          | NO 24 - Electric potential energy                            | Mapped from question(s)     |
+| 27          | NO 27 - Graphite Rod                                         | Mapped from question(s)     |
+| 28          | NO 28 - Dynamic impedance                                    | Mapped from question(s)     |
+| 31          | NO 31 - pn junction                                          | Mapped from question(s)     |
+| 34          | NO 34 - Energy particle emmited                              | Mapped from question(s)     |
+| 36          | NO 36 - Sound Wave                                           | Mapped from question(s)     |
+| 39          | NO 39 - They carry energy                                    | Mapped from question(s)     |
+| 41          | NO 41 - Diffusion                                            | Mapped from question(s)     |
+| 42          | NO 42 - Refracted]                                           | Mapped from question(s)     |
+| 43          | NO 43 - 1240N                                                | Mapped from question(s)     |
+| 44          | NO 44 - 999.6                                                | Mapped from question(s)     |
+| 45          | NO 45 - A                                                    | Mapped from question(s)     |
+| 46          | NO 46 - Temperature                                          | Mapped from question(s)     |
+| 47          | NO 47 - Relative Motion                                      | Mapped from question(s)     |
+| 49          | NO 49 - Archimedes principles                                | Mapped from question(s)     |
+| 50          | NO 50 - Piston No friction                                   | Mapped from question(s)     |
++-------------+--------------------------------------------------------------+-----------------------------+
+
+Important:
+- Folder names now include question number(s) to make maintenance easier.
+- If a folder maps to multiple questions (e.g. 10,26), both are listed in the folder name.

@@ -1,0 +1,37 @@
+PHY 2023 IMAGE FOLDER MAPPING TABLE
+===================================
+
+Source reviewed:
+- SSCE/PHY/2023/QUESTIONS/phy23.html
+
++-------------+--------------------------------------------------------------+-----------------------------+
+| Question No | Folder Name                                                  | Note                        |
++-------------+--------------------------------------------------------------+-----------------------------+
+| 1           | NO 1 - Manometer                                             | Mapped from question(s)     |
+| 2           | NO 2 - Lens                                                  | Mapped from question(s)     |
+| 6           | NO 6 - Frequency                                             | Mapped from question(s)     |
+| 10,26       | NO 10,26 - Gold is positively charged                        | Mapped from question(s)     |
+| 12          | NO 12 - Coil                                                 | Mapped from question(s)     |
+| 14          | NO 14 - Ferromagnet                                          | Mapped from question(s)     |
+| 19          | NO 19 - 70mph                                                | Mapped from question(s)     |
+| 22          | NO 22 - Utraviolet                                           | Mapped from question(s)     |
+| 24          | NO 24 - Maximum PE                                           | Mapped from question(s)     |
+| 25          | NO 25 - Conclusive test                                      | Mapped from question(s)     |
+| 27          | NO 27 - Dielectric                                           | Mapped from question(s)     |
+| 28          | NO 28 - Magnet induction                                     | Mapped from question(s)     |
+| 29          | NO 29 - Span                                                 | Mapped from question(s)     |
+| 31          | NO 31 - 70                                                   | Mapped from question(s)     |
+| 33          | NO 33 - Commutator                                           | Mapped from question(s)     |
+| 35          | NO 35 - Nuclear force                                        | Mapped from question(s)     |
+| 36          | NO 36 - Neutron                                              | Mapped from question(s)     |
+| 38          | NO 38 - Concave                                              | Mapped from question(s)     |
+| 41          | NO 41 - The magnitude                                        | Mapped from question(s)     |
+| 44          | NO 44 - Photon                                               | Mapped from question(s)     |
+| 45          | NO 45 - The momentum                                         | Mapped from question(s)     |
+| 46          | NO 46 - Step up transformer                                  | Mapped from question(s)     |
++-------------+--------------------------------------------------------------+-----------------------------+
+
+Important:
+- Folder names now include question number(s) to make maintenance easier.
+- If a folder maps to multiple questions (e.g. 10,26), both are listed in the folder name.
+- Folder uses the same spelling as the question file (`Utraviolet`) for path consistency.
