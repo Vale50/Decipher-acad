@@ -715,32 +715,6 @@
     margin: 0 auto;
 }
 
-.question-image-slot {
-    margin: 12px 0 18px;
-    padding: 12px 14px;
-    border: 1px dashed #b8c6d8;
-    border-radius: 8px;
-    background: #f8fbff;
-    color: #4a5b6e;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-}
-
-.question-image-slot i {
-    color: var(--secondary-color);
-    font-size: 16px;
-}
-
-.library-question-image {
-    width: 100%;
-    max-height: 320px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
 /* Alternative: If you don't have image-wrapper class, target images directly */
 .wrong-feedback img, 
 .answer img, 
@@ -990,10 +964,13 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong>
                     </div>
-                    <div class="question-text">The likely reason why the student failed the test was that the</div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&h=700&fit=crop" alt="Diagram for question 2" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Mango+Leaf+Diagram+(Q2-3)"
+                             alt="Diagram of a mango leaf drawn by a student in a Biology test"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
+                    <div class="question-text">The likely reason why the student failed the test was that the</div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q2-optA">
                             <span class="option-label">A</span>
@@ -1055,8 +1032,11 @@ div[style*="width: 25vw"] {
                         <!-- <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong> -->
                     </div>
                     <div class="question-text">Which other features of the diagram, if shown, would have earned the student more marks? The </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&h=700&fit=crop" alt="Diagram for question 3" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Mango+Leaf+Diagram+(Q2-3)"
+                             alt="Diagram of a mango leaf drawn by a student in a Biology test"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q3-optA">
@@ -1092,10 +1072,13 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</strong>
                     </div>
-                    <div class="question-text">Which group of organisms is illustrated? </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&h=700&fit=crop" alt="Diagram for question 4" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Bacterial+Forms+Diagrams+(Q4-5)"
+                             alt="Illustrations of forms in which a particular group of organisms exist"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
+                    <div class="question-text">Which group of organisms is illustrated? </div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q4-optA">
                             <span class="option-label">A</span>
@@ -1131,8 +1114,11 @@ div[style*="width: 25vw"] {
                         <!-- <strong>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</strong> -->
                     </div>
                     <div class="question-text">In which of the illustrated forms docs the organism that causes cholera exist? </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&h=700&fit=crop" alt="Diagram for question 5" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Bacterial+Forms+Diagrams+(Q4-5)"
+                             alt="Illustrations of forms in which a particular group of organisms exist"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q5-optA">
@@ -1276,10 +1262,13 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</strong>
                     </div>
-                    <div class="question-text">In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar? </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?w=1200&h=700&fit=crop" alt="Diagram for question 8" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Photosynthesis+Cell+Diagram+(Q8-9)"
+                             alt="Illustration of a cell in which photosynthesis takes place"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
+                    <div class="question-text">In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar? </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q8-optA">
                             <span class="option-label">A</span>
@@ -1315,8 +1304,11 @@ div[style*="width: 25vw"] {
                         <!-- <strong>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</strong> -->
                     </div>
                     <div class="question-text">The oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labelled </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?w=1200&h=700&fit=crop" alt="Diagram for question 9" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Photosynthesis+Cell+Diagram+(Q8-9)"
+                             alt="Illustration of a cell in which photosynthesis takes place"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q9-optA">
@@ -1464,12 +1456,15 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-12">
                     <div class="question-number"><strong>12.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Skeletal+System+Diagram+(Q12-13)"
+                             alt="Illustration of a structure in the skeletal system of humans"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="question-text"> The illustrated structure is a part of the</div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&h=700&fit=crop" alt="Diagram for question 12" class="library-question-image" loading="lazy">
-                    </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q9-optA">
                             <span class="option-label">A</span>
@@ -1508,8 +1503,11 @@ div[style*="width: 25vw"] {
                         <!-- <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong>  -->
                     </div>
                     <div class="question-text"> An individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected?</div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&h=700&fit=crop" alt="Diagram for question 13" class="library-question-image" loading="lazy">
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Skeletal+System+Diagram+(Q12-13)"
+                             alt="Illustration of a structure in the skeletal system of humans"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q9-optA">
@@ -1617,12 +1615,15 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-15">
                     <div class="question-number"><strong>15.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Gaseous+Exchange+Diagram+(Q15-16)"
+                             alt="Illustration of structures used for gaseous exchange in humans"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="question-text"> The parts labelled I, II, III and IV respectively are </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&h=700&fit=crop" alt="Diagram for question 15" class="library-question-image" loading="lazy">
-                    </div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q9-optA">
                             <span class="option-label">A</span>
@@ -1658,12 +1659,15 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-16">
                     <div class="question-number"><strong>16.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
+                        <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Mammalian+Ear+Diagram+(Q16-18)"
+                             alt="Illustration of some parts of a mammalian ear"
+                             class="question-image"
+                             style="width: 100%; max-width: 700px; height: auto;">
                     </div>
                     <div class="question-text"> Which of the following hormones is wrongly paired with its secretory organ? </div>
-                    <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&h=700&fit=crop" alt="Diagram for question 16" class="library-question-image" loading="lazy">
-                    </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q9-optA">
                             <span class="option-label">A</span>
@@ -2713,13 +2717,16 @@ div[style*="width: 25vw"] {
                 <div class="question-text">
                     <strong>Instruction:</strong> The diagrams below are illustrations of organisms in a habitat. Study them and answer questions 36 and 37.
                 </div>
+                <div class="question-diagram image-wrapper">
+                    <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Organisms+in+Habitat+Diagrams+(Q36-37)"
+                         alt="Illustrations of organisms in a habitat"
+                         class="question-image"
+                         style="width: 100%; max-width: 700px; height: auto;">
+                </div>
 
                 <!-- Actual question -->
                 <div class="question-number"><strong>36.</strong></div>
                 <div class="question-text">The feeding relationship between the organisms labelled III and IV in the diagrams is</div>
-                <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200&h=700&fit=crop" alt="Diagram for question 36" class="library-question-image" loading="lazy">
-                    </div>
 
                 <!-- Options -->
                 <div class="options">
@@ -2776,9 +2783,12 @@ div[style*="width: 25vw"] {
             <div class="question" id="question-37">
                 <div class="question-number"><strong>37.</strong></div>
                 <div class="question-text">The producer in the diagrams is?</div>
-                <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200&h=700&fit=crop" alt="Diagram for question 37" class="library-question-image" loading="lazy">
-                    </div>
+                <div class="question-diagram image-wrapper">
+                    <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Organisms+in+Habitat+Diagrams+(Q36-37)"
+                         alt="Illustrations of organisms in a habitat"
+                         class="question-image"
+                         style="width: 100%; max-width: 700px; height: auto;">
+                </div>
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q37-optA">
                         <span class="option-label">A</span>
@@ -3222,9 +3232,12 @@ div[style*="width: 25vw"] {
                     <p><strong>Instruction:</strong> The illustration below is a genetic diagram. Study it and answer questions 45 to 47.</p>
                     <p>What is the name of the genetic diagram?</p>
                 </div>
-                <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=700&fit=crop" alt="Diagram for question 45" class="library-question-image" loading="lazy">
-                    </div>
+                <div class="question-diagram image-wrapper">
+                    <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Genetic+Diagram+%2F+Punnett+Square+(Q45-47)"
+                         alt="Illustration of a genetic diagram (Punnett square)"
+                         class="question-image"
+                         style="width: 100%; max-width: 700px; height: auto;">
+                </div>
 
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q45-optA">
@@ -3277,9 +3290,12 @@ div[style*="width: 25vw"] {
             <div class="question" id="question-46">
                 <div class="question-number"><strong>46.</strong></div>
                 <div class="question-text">What do the labels I, II, III and IV respectively represent?</div>
-                <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=700&fit=crop" alt="Diagram for question 46" class="library-question-image" loading="lazy">
-                    </div>
+                <div class="question-diagram image-wrapper">
+                    <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Genetic+Diagram+%2F+Punnett+Square+(Q45-47)"
+                         alt="Illustration of a genetic diagram (Punnett square)"
+                         class="question-image"
+                         style="width: 100%; max-width: 700px; height: auto;">
+                </div>
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q46-optA">
                         <span class="option-label">A</span>
@@ -3334,9 +3350,12 @@ div[style*="width: 25vw"] {
             <div class="question" id="question-47">
                 <div class="question-number"><strong>47.</strong></div>
                 <div class="question-text">The genotypic ratio of the offspring in the genetic diagram is?</div>
-                <div class="question-image-slot">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=700&fit=crop" alt="Diagram for question 47" class="library-question-image" loading="lazy">
-                    </div>
+                <div class="question-diagram image-wrapper">
+                    <img src="https://placehold.co/800x500/e8f4f8/12335b?text=Genetic+Diagram+%2F+Punnett+Square+(Q45-47)"
+                         alt="Illustration of a genetic diagram (Punnett square)"
+                         class="question-image"
+                         style="width: 100%; max-width: 700px; height: auto;">
+                </div>
                 <div class="options">
                     <div class="option" data-correct="true" data-option-id="q47-optA">
                         <span class="option-label">A</span>
