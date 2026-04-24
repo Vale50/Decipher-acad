@@ -715,6 +715,30 @@
     margin: 0 auto;
 }
 
+/* Diagram placeholder for questions that reference a diagram/illustration */
+.question-diagram-wrapper {
+    margin: 15px 0;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    background: #f9f9f9;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-diagram-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Alternative: If you don't have image-wrapper class, target images directly */
 .wrong-feedback img, 
 .answer img, 
@@ -964,6 +988,9 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong>
                     </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 2/diagram.png" alt="Mango leaf diagram" class="question-image">
+                    </div>
                     <div class="question-text">The likely reason why the student failed the test was that the</div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q2-optA">
@@ -1025,6 +1052,9 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <!-- <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong> -->
                     </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 2/diagram.png" alt="Mango leaf diagram" class="question-image">
+                    </div>
                     <div class="question-text">Which other features of the diagram, if shown, would have earned the student more marks? The </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q3-optA">
@@ -1060,6 +1090,9 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</strong>
                     </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 4/diagram.png" alt="Bacterial forms diagram" class="question-image">
+                    </div>
                     <div class="question-text">Which group of organisms is illustrated? </div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q4-optA">
@@ -1094,6 +1127,9 @@ div[style*="width: 25vw"] {
                     <div class="question-number"><strong>5.</strong></div>
                     <div class="instruction-text">
                         <!-- <strong>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</strong> -->
+                    </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 4/diagram.png" alt="Bacterial forms diagram" class="question-image">
                     </div>
                     <div class="question-text">In which of the illustrated forms docs the organism that causes cholera exist? </div>
                     <div class="options">
@@ -1238,6 +1274,9 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</strong>
                     </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 8/diagram.png" alt="Photosynthesis cell diagram" class="question-image">
+                    </div>
                     <div class="question-text">In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar? </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q8-optA">
@@ -1272,6 +1311,9 @@ div[style*="width: 25vw"] {
                     <div class="question-number"><strong>9.</strong></div>
                     <div class="instruction-text">
                         <!-- <strong>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</strong> -->
+                    </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 8/diagram.png" alt="Photosynthesis cell diagram" class="question-image">
                     </div>
                     <div class="question-text">The oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labelled </div>
                     <div class="options">
@@ -1420,7 +1462,10 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-12">
                     <div class="question-number"><strong>12.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong>
+                    </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 12/diagram.png" alt="Skeletal system structure diagram" class="question-image">
                     </div>
                     <div class="question-text"> The illustrated structure is a part of the</div>
                     <div class="options">
@@ -1459,6 +1504,9 @@ div[style*="width: 25vw"] {
                     <div class="question-number"><strong>13.</strong></div>
                     <div class="instruction-text">
                         <!-- <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong>  -->
+                    </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 12/diagram.png" alt="Skeletal system structure diagram" class="question-image">
                     </div>
                     <div class="question-text"> An individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected?</div>
                     <div class="options">
@@ -1567,7 +1615,10 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-15">
                     <div class="question-number"><strong>15.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</strong>
+                    </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 15/diagram.png" alt="Gaseous exchange structures diagram" class="question-image">
                     </div>
                     <div class="question-text"> The parts labelled I, II, III and IV respectively are </div>
                     <div class="options">
@@ -1605,7 +1656,10 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-16">
                     <div class="question-number"><strong>16.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.</strong>
+                    </div>
+                    <div class="question-diagram-wrapper">
+                        <img src="../IMG/NO. 16/diagram.png" alt="Mammalian ear diagram" class="question-image">
                     </div>
                     <div class="question-text"> Which of the following hormones is wrongly paired with its secretory organ? </div>
                     <div class="options">
@@ -2657,6 +2711,9 @@ div[style*="width: 25vw"] {
                 <div class="question-text">
                     <strong>Instruction:</strong> The diagrams below are illustrations of organisms in a habitat. Study them and answer questions 36 and 37.
                 </div>
+                <div class="question-diagram-wrapper">
+                    <img src="../IMG/NO. 36/diagram.png" alt="Habitat organisms diagram" class="question-image">
+                </div>
 
                 <!-- Actual question -->
                 <div class="question-number"><strong>36.</strong></div>
@@ -2716,6 +2773,9 @@ div[style*="width: 25vw"] {
             <!-- begining no 37 question -->
             <div class="question" id="question-37">
                 <div class="question-number"><strong>37.</strong></div>
+                <div class="question-diagram-wrapper">
+                    <img src="../IMG/NO. 36/diagram.png" alt="Habitat organisms diagram" class="question-image">
+                </div>
                 <div class="question-text">The producer in the diagrams is?</div>
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q37-optA">
@@ -3158,6 +3218,11 @@ div[style*="width: 25vw"] {
                 <div class="question-number"><strong>45.</strong></div>
                 <div class="question-text">
                     <p><strong>Instruction:</strong> The illustration below is a genetic diagram. Study it and answer questions 45 to 47.</p>
+                </div>
+                <div class="question-diagram-wrapper">
+                    <img src="../IMG/NO. 45/diagram.png" alt="Genetic diagram (Punnett square)" class="question-image">
+                </div>
+                <div class="question-text">
                     <p>What is the name of the genetic diagram?</p>
                 </div>
 
@@ -3211,6 +3276,9 @@ div[style*="width: 25vw"] {
             <!-- begining no 46 question -->
             <div class="question" id="question-46">
                 <div class="question-number"><strong>46.</strong></div>
+                <div class="question-diagram-wrapper">
+                    <img src="../IMG/NO. 45/diagram.png" alt="Genetic diagram (Punnett square)" class="question-image">
+                </div>
                 <div class="question-text">What do the labels I, II, III and IV respectively represent?</div>
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q46-optA">
@@ -3265,6 +3333,9 @@ div[style*="width: 25vw"] {
             <!-- begining no 47 question -->
             <div class="question" id="question-47">
                 <div class="question-number"><strong>47.</strong></div>
+                <div class="question-diagram-wrapper">
+                    <img src="../IMG/NO. 45/diagram.png" alt="Genetic diagram (Punnett square)" class="question-image">
+                </div>
                 <div class="question-text">The genotypic ratio of the offspring in the genetic diagram is?</div>
                 <div class="options">
                     <div class="option" data-correct="true" data-option-id="q47-optA">
