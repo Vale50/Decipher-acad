@@ -696,6 +696,54 @@
             color: #d32f2f;
         }
 
+        /* Learn More focused comparison blocks */
+        .comparison-wrong {
+            background-color: rgba(244, 67, 54, 0.07);
+            border-left: 4px solid var(--incorrect-color);
+            padding: 14px 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 18px;
+        }
+
+        .comparison-correct {
+            background-color: rgba(76, 175, 80, 0.07);
+            border-left: 4px solid var(--correct-color);
+            padding: 14px 16px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .comparison-correct .wrong-feedback-title {
+            color: var(--correct-color);
+        }
+
+        /* Question diagram placeholder containers */
+        .question-diagram {
+            min-height: 220px;
+            background-color: #eef4fb;
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .question-diagram:not(:has(img))::after {
+            content: "Image coming soon";
+            color: var(--primary-color);
+            font-size: 15px;
+            font-style: italic;
+            opacity: 0.75;
+        }
+
+        .question-diagram img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
         /* Add this CSS to fix the image overflow issue */
 
 /* Image styling to prevent overflow */
@@ -964,6 +1012,8 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong>
                     </div>
+                    <div class="question-diagram image-wrapper">
+                    </div>
                     <div class="question-text">The likely reason why the student failed the test was that the</div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q2-optA">
@@ -1026,6 +1076,8 @@ div[style*="width: 25vw"] {
                         <!-- <strong>The diagram below is an illustration of a mango leaf drawn by a student in a Biology test. The student failed the test. Study it and answer questions 2 and 3.</strong> -->
                     </div>
                     <div class="question-text">Which other features of the diagram, if shown, would have earned the student more marks? The </div>
+                    <div class="question-diagram image-wrapper">
+                    </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q3-optA">
                             <span class="option-label">A</span>
@@ -1048,10 +1100,24 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong>The correct answer is Option B. title and magnification.</strong>
-                            
+                            <p>A complete biological drawing must include a <strong>title</strong> (identifying what is drawn) and the <strong>magnification</strong> (ratio of drawing size ÷ actual size, e.g. ×2). Both are mandatory marking criteria in WAEC Biology examinations alongside correct labels and guidelines.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Features Required in a Biological Drawing</h3>
+                            <p>A complete biological drawing must include several key elements to earn full marks in an examination:</p>
+                            <ul>
+                                <li><strong>Title:</strong> A clear, descriptive title placed at the top (e.g., "Diagram of a Mango Leaf"). This identifies what is drawn and is mandatory for full marks.</li>
+                                <li><strong>Magnification:</strong> Written as a ratio — <em>Magnification = Drawing size ÷ Actual size</em>. For example, ×2 means the drawing is twice the actual size. This must always be stated.</li>
+                                <li><strong>Labels:</strong> Accurate names of parts, written horizontally and connected to the structure by straight guidelines.</li>
+                                <li><strong>Guidelines:</strong> Straight, ruled lines (not arrows) that touch the exact structure being labelled.</li>
+                                <li><strong>Proportions:</strong> The relative sizes of different parts must be realistic.</li>
+                                <li><strong>No shading or colouring:</strong> Biological drawings use only clear outlines.</li>
+                            </ul>
+                            <p>In the mango leaf diagram, the student had already drawn the leaf and added labels. What was still missing were the <strong>title</strong> and the <strong>magnification</strong> — both of which are mandatory for a complete biological drawing in WAEC Biology examinations.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1059,6 +1125,8 @@ div[style*="width: 25vw"] {
                     <div class="question-number"><strong>4.</strong></div>
                     <div class="instruction-text">
                         <strong>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
                     </div>
                     <div class="question-text">Which group of organisms is illustrated? </div>
                     <div class="options">
@@ -1083,10 +1151,27 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong>The correct answer is Option A. bacteria.</strong>
-                            
+                            <p>The diagrams illustrate the characteristic shapes (forms) of <strong>bacteria</strong>: cocci (spherical), bacilli (rod-shaped), spirilla (spiral), and vibrio (comma-shaped). No other group — viruses, fungi, or protozoa — displays these distinct microscopic forms.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Forms (Shapes) of Bacteria</h3>
+                            <p>Bacteria exist in several distinct shapes, which is how they are identified and classified:</p>
+                            <ul>
+                                <li><strong>Cocci (singular: coccus):</strong> Spherical/round-shaped. Found as single cells, pairs (diplococci), chains (streptococci), or clusters (staphylococci).</li>
+                                <li><strong>Bacilli (singular: bacillus):</strong> Rod-shaped. Examples: <em>Mycobacterium tuberculosis</em> (causes TB), <em>Lactobacillus</em>.</li>
+                                <li><strong>Spirilla (singular: spirillum):</strong> Rigid spiral/corkscrew-shaped. Example: <em>Spirillum volutans</em>.</li>
+                                <li><strong>Vibrio:</strong> Curved, comma-shaped. Example: <em>Vibrio cholerae</em> (causes cholera).</li>
+                            </ul>
+                            <p>No other group of organisms appears in these exact forms:</p>
+                            <ul>
+                                <li><strong>Viruses:</strong> Much smaller; have capsid structures — not visible under a light microscope in these shapes.</li>
+                                <li><strong>Fungi:</strong> Have hyphae, mycelium, and spores — entirely different structures.</li>
+                                <li><strong>Protozoa:</strong> Complex unicellular eukaryotes with distinct organelles — do not appear in these bacterial forms.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -1096,6 +1181,8 @@ div[style*="width: 25vw"] {
                         <!-- <strong>Instruction: The diagrams below are illustrations of forms in which a particular group of organisms exist. Study them and answer questions 4 and 5.</strong> -->
                     </div>
                     <div class="question-text">In which of the illustrated forms docs the organism that causes cholera exist? </div>
+                    <div class="question-diagram image-wrapper">
+                    </div>
                     <div class="options">
                         <div class="option" data-correct="true" data-option-id="q5-optA">
                             <span class="option-label">A</span>
@@ -1118,10 +1205,28 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong>The correct answer is Option A. I.</strong>
-                            
+                            <p><em>Vibrio cholerae</em>, the organism that causes cholera, exists in the <strong>vibrio form</strong> — a short, curved, comma-shaped rod. This corresponds to <strong>Form I</strong> in the diagram. Cholera spreads through contaminated water and food, causing severe watery diarrhoea and dehydration.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Vibrio cholerae and Cholera</h3>
+                            <p><strong>Vibrio cholerae</strong> is the bacterium that causes <strong>cholera</strong>. It exists in the <strong>vibrio form</strong> — a short, curved rod resembling a comma shape. In the diagram, this corresponds to <strong>Form I</strong>.</p>
+                            <p>The bacterial forms compared:</p>
+                            <ul>
+                                <li><strong>Form I (Vibrio):</strong> Comma-shaped — <em>Vibrio cholerae</em> ✓</li>
+                                <li><strong>Form II (Bacillus):</strong> Rod-shaped — e.g., <em>Escherichia coli</em>, <em>Mycobacterium tuberculosis</em></li>
+                                <li><strong>Form IV (Coccus):</strong> Spherical — e.g., <em>Staphylococcus aureus</em></li>
+                                <li><strong>Form V (Spirillum):</strong> Spiral-shaped — e.g., <em>Spirillum volutans</em></li>
+                            </ul>
+                            <p>Cholera spreads through contaminated water and food (faecal-oral route). Key facts:</p>
+                            <ul>
+                                <li>Symptoms: severe watery diarrhoea ("rice-water stool"), vomiting, rapid dehydration.</li>
+                                <li>Treatment: oral rehydration salts (ORS) and antibiotics (e.g., doxycycline).</li>
+                                <li>Prevention: clean water supply, good sanitation, and proper food hygiene.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -1157,6 +1262,7 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong>The correct answer is Option C. I – IV – III – II.</strong>
+                            <p>In order of increasing complexity: <strong>Hydra (I)</strong> — simple multicellular (Coelenterata); <strong>Snail (IV)</strong> — invertebrate with organ systems (Mollusca); <strong>Snake (III)</strong> — vertebrate reptile (Reptilia); <strong>Owl (II)</strong> — most complex, a bird (Aves) with a highly developed brain and nervous system.</p>
                             
                         </div>
                         
@@ -1214,6 +1320,7 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong>The correct answer is Option C. Mollusca.</strong>
+                            <p>The snail (organism IV) belongs to <strong>Phylum Mollusca</strong>, characterised by a soft, unsegmented body, a muscular foot for locomotion, a mantle, and usually a calcium carbonate shell. Snails are not cnidarians (Coelenterata), flatworms (Platyhelminthes), or arthropods.</p>
                             
                         </div>
                         
@@ -1238,6 +1345,8 @@ div[style*="width: 25vw"] {
                     <div class="instruction-text">
                         <strong>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</strong>
                     </div>
+                    <div class="question-diagram image-wrapper">
+                    </div>
                     <div class="question-text">In which of the labelled parts would molecules of water and carbon (IV) oxide combine to form sugar? </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q8-optA">
@@ -1261,10 +1370,27 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong>The correct answer is Option B. II.</strong>
-                            
+                            <p><strong>Part II</strong> is the <strong>chloroplast</strong> — specifically its stroma — where the light-independent reactions (Calvin cycle) take place. Here, CO₂ and water are combined using ATP and NADPH (from the light-dependent reactions) to synthesise glucose (sugar).</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Photosynthesis in the Chloroplast</h3>
+                            <p>In a photosynthetic cell (mesophyll cell), <strong>Part II — the chloroplast</strong> — is the organelle where photosynthesis takes place. It has two key regions:</p>
+                            <ul>
+                                <li><strong>Grana (thylakoid membranes):</strong> Site of the <em>light-dependent reactions</em>. Light energy absorbed by chlorophyll splits water molecules, releasing oxygen and producing ATP and NADPH.</li>
+                                <li><strong>Stroma:</strong> Site of the <em>light-independent reactions (Calvin cycle)</em>. CO₂ and water combine using ATP and NADPH to synthesise glucose (sugar).</li>
+                            </ul>
+                            <p>Overall equation for photosynthesis:</p>
+                            <p><em>6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂</em></p>
+                            <p>Why the other parts are incorrect:</p>
+                            <ul>
+                                <li><strong>Part I (Cell wall):</strong> Provides structural support — not involved in photosynthesis.</li>
+                                <li><strong>Part III (Cell wall / intercellular space):</strong> Route for gas diffusion in and out of the cell — not the site of sugar synthesis.</li>
+                                <li><strong>Part IV (Nucleus):</strong> Controls cell activities by housing DNA — does not directly carry out photosynthesis.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -1274,6 +1400,8 @@ div[style*="width: 25vw"] {
                         <!-- <strong>Instruction: The diagram below is an illustration of a cell in which photosynthesis takes place. Study it and answer questions 8 and 9.</strong> -->
                     </div>
                     <div class="question-text">The oxygen gas formed in the cell diffuses out of the cytoplasm into the air spaces through the part labelled </div>
+                    <div class="question-diagram image-wrapper">
+                    </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q9-optA">
                             <span class="option-label">A</span>
@@ -1295,11 +1423,28 @@ div[style*="width: 25vw"] {
                     <button class="check-answer button hidden">Check Answer</button>
                     <div class="container hidden">
                         <div class="answer hidden">
-                            <strong> The correct answer is Option C. III.</strong>
-                            
+                            <strong>The correct answer is Option C. III.</strong>
+                        <p>Oxygen produced during photosynthesis diffuses from the chloroplast through the cytoplasm and exits the cell via <strong>Part III — the cell wall</strong> (freely permeable to gases), into the intercellular air spaces of the leaf, and ultimately out through the stomata into the atmosphere.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>How Oxygen Leaves the Photosynthetic Cell</h3>
+                            <p>During photosynthesis, oxygen is produced as a by-product of the light-dependent reactions (splitting of water). This oxygen leaves the cell through the following pathway:</p>
+                            <ol>
+                                <li>Oxygen is released from the <strong>chloroplast</strong> into the cytoplasm.</li>
+                                <li>It then diffuses across the <strong>cell wall (Part III)</strong> — which is freely permeable to gases — into the <strong>intercellular air spaces</strong> of the leaf.</li>
+                                <li>From the air spaces, oxygen diffuses out through the <strong>stomata</strong> into the surrounding atmosphere.</li>
+                            </ol>
+                            <p>The plant cell wall is composed of cellulose and is porous, making it freely permeable to gases (O₂, CO₂) and water vapour. This is why Part III is the correct route for oxygen leaving the cell.</p>
+                            <p>Why the other options are incorrect:</p>
+                            <ul>
+                                <li><strong>Part I:</strong> Not the primary route for gaseous exchange out of the cell.</li>
+                                <li><strong>Part II (Chloroplast):</strong> Produces oxygen but does not serve as the exit route — oxygen diffuses out of it into the cytoplasm first.</li>
+                                <li><strong>Part IV (Nucleus):</strong> Controls cell activities — not involved in gas diffusion.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -1390,6 +1535,7 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong> The correct answer is Option D. plants is indefinite.</strong>
+                        <p>In animals, growth stops at maturity (definite growth). In plants, meristematic tissues at shoot tips, root tips, and lateral cambium allow growth to continue throughout the plant's lifetime — called <strong>indefinite growth</strong>. This is the key difference between plant and animal growth patterns.</p>
                             
                         </div>
                         
@@ -1420,7 +1566,9 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-12">
                     <div class="question-number"><strong>12.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
                     </div>
                     <div class="question-text"> The illustrated structure is a part of the</div>
                     <div class="options">
@@ -1444,11 +1592,32 @@ div[style*="width: 25vw"] {
                     <button class="check-answer button hidden">Check Answer</button>
                     <div class="container hidden">
                         <div class="answer hidden">
-                            <strong> The correct answer is Option B. axial skeleton. </strong>
-                            
+                            <strong>The correct answer is Option B. axial skeleton.</strong>
+                        <p>The <strong>axial skeleton</strong> forms the central axis of the body, consisting of the skull, vertebral column, and rib cage. The illustrated structure belongs to this central framework. The appendicular skeleton, by contrast, comprises the bones of the limbs and their girdles.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>The Axial Skeleton</h3>
+                            <p>The human skeleton is divided into two main parts:</p>
+                            <ul>
+                                <li><strong>Axial skeleton:</strong> Forms the central axis of the body. It consists of:
+                                    <ul>
+                                        <li>The <em>skull</em> (cranium and facial bones) — protects the brain and sense organs.</li>
+                                        <li>The <em>vertebral column</em> (33 vertebrae: 7 cervical, 12 thoracic, 5 lumbar, 5 fused sacral, 4 fused coccygeal) — protects the spinal cord.</li>
+                                        <li>The <em>rib cage</em> (12 pairs of ribs and the sternum) — protects the heart and lungs.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Appendicular skeleton:</strong> Bones of the limbs and their girdles — pectoral (shoulder) girdle, pelvic girdle, arms, and legs.</li>
+                            </ul>
+                            <p>Why the other options are incorrect:</p>
+                            <ul>
+                                <li><strong>Cervical vertebrae:</strong> A specific subset of the axial skeleton (neck bones, C1–C7) — too specific; the illustrated structure could be from the skull or thoracic region.</li>
+                                <li><strong>Axis vertebrae:</strong> Only the C2 vertebra specifically — far too specific to be the general answer.</li>
+                                <li><strong>Appendicular skeleton:</strong> Consists of limb bones — not what is illustrated here.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <!-- end -->
@@ -1461,6 +1630,8 @@ div[style*="width: 25vw"] {
                         <!-- <strong>Instruction: The diagram below is an illustration of a structure in the skeletal system of humans.Study it and answer questions 12 and 13.</strong>  -->
                     </div>
                     <div class="question-text"> An individual was involved in a car accident and the illustrated structure was badly injured. Which of the following structures would most likely be affected?</div>
+                    <div class="question-diagram image-wrapper">
+                    </div>
                     <div class="options">
                         <div class="option" data-correct="false" data-option-id="q9-optA">
                             <span class="option-label">A</span>
@@ -1483,6 +1654,8 @@ div[style*="width: 25vw"] {
                     <div class="container hidden">
                         <div class="answer hidden">
                             <strong> The correct answer is Option C. Eye, cerebellum and ear. </strong>
+                        <p>The illustrated structure is the <strong>skull (cranium)</strong>. A severe injury to it would most likely affect structures housed within or adjacent to it: the <strong>eye</strong> (orbital cavity), the <strong>cerebellum</strong> (inside the cranium), and the <strong>ear</strong> (temporal bone region).</p>
+                            <p>The illustrated structure is the <strong>skull (cranium)</strong>. If badly injured, the organs housed within or adjacent to it — the <strong>eye</strong> (in the orbital cavity), the <strong>cerebellum</strong> (at the base of the brain inside the cranium), and the <strong>ear</strong> (in the temporal bone) — would most likely be affected.</p>
                             
                         </div>
                         
@@ -1567,7 +1740,9 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-15">
                     <div class="question-number"><strong>15.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of some structures used for gaseous exchange in humans. Study it and answer questions 15 and 16.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
                     </div>
                     <div class="question-text"> The parts labelled I, II, III and IV respectively are </div>
                     <div class="options">
@@ -1591,11 +1766,23 @@ div[style*="width: 25vw"] {
                     <button class="check-answer button hidden">Check Answer</button>
                     <div class="container hidden">
                         <div class="answer hidden">
-                            <strong> The correct answer is Option A. larynx, bronchus, bronchiole and trachea. </strong>
-                            
+                            <strong>The correct answer is Option A. larynx, bronchus, bronchiole and trachea.</strong>
+                        <p>As labelled in the diagram: <strong>I = Larynx</strong> (voice box), <strong>II = Bronchus</strong> (enters the lung, supported by cartilage), <strong>III = Bronchiole</strong> (small branch inside the lung, no cartilage), <strong>IV = Trachea</strong> (windpipe). The other options list the same structures in incorrect sequences.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Structures Used for Gaseous Exchange in Humans</h3>
+                            <p>The human respiratory system passes air through several key structures before reaching the lungs:</p>
+                            <ul>
+                                <li><strong>Larynx (Part I) — Voice box:</strong> Located in the throat, connects the pharynx to the trachea. Contains the vocal cords for sound production. The epiglottis (a flap in the larynx) prevents food from entering the airway during swallowing.</li>
+                                <li><strong>Bronchus (Part II):</strong> The trachea divides into the left and right bronchus, one entering each lung. Supported by C-shaped cartilage rings to keep the airway open.</li>
+                                <li><strong>Bronchiole (Part III):</strong> Smaller branches of the bronchi inside the lungs. They lack cartilage and become progressively smaller, eventually leading air to the alveoli.</li>
+                                <li><strong>Trachea (Part IV) — Windpipe:</strong> A long, cartilage-reinforced tube connecting the larynx to the bronchi. Lined with ciliated mucus membranes that trap dust and microorganisms.</li>
+                            </ul>
+                            <p>Gas exchange itself occurs in the <strong>alveoli</strong> — tiny air sacs at the ends of the bronchioles. Their thin walls, moist surface, and rich blood supply make them ideal for oxygen and CO₂ exchange by diffusion. The other options (B, C, D) list the same four structures but in incorrect sequences.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- end -->
@@ -1605,7 +1792,9 @@ div[style*="width: 25vw"] {
                  <div class="question" id="question-16">
                     <div class="question-number"><strong>16.</strong></div>
                     <div class="instruction-text">
-                        <strong>Instruction: The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.</strong> 
+                        <strong>Instruction: The diagram below is an illustration of some parts of a mammalian ear. Study it and answer questions 16 to 18.</strong>
+                    </div>
+                    <div class="question-diagram image-wrapper">
                     </div>
                     <div class="question-text"> Which of the following hormones is wrongly paired with its secretory organ? </div>
                     <div class="options">
@@ -1629,11 +1818,22 @@ div[style*="width: 25vw"] {
                     <button class="check-answer button hidden">Check Answer</button>
                     <div class="container hidden">
                         <div class="answer hidden">
-                            <strong> The correct answer is Option B. lung. </strong>
-                            
+                            <strong>The correct answer is Option B. lung.</strong>
+                        <p>The diagram illustrates parts of the <strong>mammalian ear</strong>. The <strong>lung</strong> is a respiratory organ that has no connection to the ear or its structures, making it the item that does not belong in this anatomical context.</p>
+
                         </div>
-                        
+
                         <button id="subject-button" class="button hidden">Learn More</button>
+                        <div id="more-content" class="hidden">
+                            <h3>Structures Visible in the Mammalian Ear Diagram</h3>
+                            <p>The diagram illustrates parts of the <strong>mammalian ear</strong>. The main regions of the ear are:</p>
+                            <ul>
+                                <li><strong>Outer ear:</strong> Pinna (auricle) and external auditory canal — collects and directs sound waves toward the eardrum.</li>
+                                <li><strong>Middle ear:</strong> Contains the eardrum (tympanic membrane) and three ossicles — <em>malleus (hammer), incus (anvil), stapes (stirrup)</em>. These amplify and transmit vibrations to the inner ear. Also contains the Eustachian tube connecting to the throat.</li>
+                                <li><strong>Inner ear:</strong> Contains the <em>cochlea</em> (hearing — converts vibrations to nerve impulses) and the <em>semicircular canals</em> (balance — detect head movement and orientation).</li>
+                            </ul>
+                            <p>The <strong>lung</strong> is a respiratory organ — it is not part of the ear or auditory system shown in this diagram. The heart, kidney, and sternum are all body structures visible or connected in anatomy, but the lung has no role in the structures depicted in this diagram of the mammalian ear.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- end -->
@@ -1785,6 +1985,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. stamens</strong>
+                            <p>The <strong>androecium</strong> is the collective term for all the male reproductive organs (stamens) in a flower. Each stamen consists of a filament (stalk) and an anther (which produces pollen). Filaments are only one component of a stamen, not the androecium as a whole.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 19/OPTION B.png" style="width: 100%; height: auto;" alt="Option B Image" class="question-image">
                         </div>
@@ -1844,6 +2045,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. arrangement of ovules in the ovary of a flower.</strong>
+                        <p><strong>Placentation</strong> refers to the arrangement and distribution of ovules on the placenta within the ovary of a flower. Patterns include axile, parietal, free central, and basal placentation. It describes ovule positioning, not carpel formation or a structural feature of a single ovary wall.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 20/OPTION C.png" style="width: 100%; height: auto;" alt="Option C Image" class="question-image">
                         </div>
@@ -1903,6 +2105,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. Carbon (IV) oxide is evolved.</strong>
+                        <p>During photosynthesis, <strong>CO₂ is absorbed</strong> as a raw material for the Calvin cycle — it is not evolved (released). Oxygen is evolved as a by-product of the light-dependent reactions (photolysis of water). Water splitting, oxygen evolution, and light energy absorption all do occur in photosynthesis.</p>
                         
                     </div> 
                     
@@ -1954,6 +2157,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option D. nitrogen.</strong>
+                        <p><strong>Nitrogen</strong> is essential for synthesising proteins, chlorophyll, and nucleic acids. Deficiency causes <strong>chlorosis</strong> (yellowing of leaves) and <strong>stunted growth</strong>, because the plant cannot produce adequate chlorophyll for photosynthesis or proteins for new cell growth.</p>
                     </div> 
                     
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2001,6 +2205,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. epiglottis.</strong>
+                        <p>The <strong>epiglottis</strong> is a cartilaginous flap that covers the entrance to the trachea during swallowing. When talking and eating simultaneously, it may not close properly, allowing food or liquid to enter the airway (trachea) instead of the oesophagus — causing <strong>choking</strong>.</p>
                     </div> 
                     
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2048,6 +2253,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. fat.</strong>
+                        <p><strong>Fats (lipids)</strong> yield approximately <strong>9 kcal per gram</strong> — more than double that of carbohydrates or proteins (~4 kcal/g each). Therefore, fat produces the highest amount of energy per unit mass among all food substances listed.</p>
                     </div> 
                     
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2095,6 +2301,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option D. saprophytes.</strong>
+                        <p><strong>Saprophytes</strong> (e.g., fungi, certain bacteria) feed on dead and decaying organic matter by secreting extracellular enzymes and absorbing the digested products. They are the decomposers of ecosystems. Parasites feed on living hosts; autotrophs make their own food from inorganic sources.</p>
                     </div> 
                     
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2140,6 +2347,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. holozoic.</strong>
+                        <p><strong>Holozoic nutrition</strong> involves the ingestion of solid or liquid organic food, followed by digestion, absorption, assimilation, and egestion — as practised by most animals. Symbiotic, saprophytic, and parasitic nutrition do not describe this complete ingestion-digestion-absorption sequence.</p>
                         
                     </div>
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2183,6 +2391,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. chewing.</strong>
+                        <p>Grasshoppers have <strong>mandibulate (biting and chewing) mouthparts</strong> — strong, toothed mandibles that move from side to side to tear and break down plant material. They do not suck (like mosquitoes or aphids) or use any other feeding method.</p>
                     
                     </div>
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2230,6 +2439,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option D. community.</strong>
+                        <p>A <strong>community</strong> is a group of organisms of different species that coexist in the same habitat and interact with one another. A population = all organisms of one species in an area; biosphere = all life on Earth; niche = an organism's functional role in the ecosystem.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 28/OPTION D.png" class="question-image" style="width: 100%; height: auto;" alt="Option D Image">
                         </div>
@@ -2285,6 +2495,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. Lack of adequate water.</strong>
+                        <p><strong>Xerophytes</strong> are plants adapted to survive in dry environments (deserts, arid regions). Their primary challenge is a <strong>lack of adequate water</strong>. Adaptations include thick waxy cuticles, sunken stomata, CAM photosynthesis, and deep root systems to maximise water uptake and minimise loss.</p>
                     </div> 
                     
                     <button id="subject-button" class="button hidden">Learn More</button>
@@ -2332,6 +2543,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option D. gills.</strong>
+                        <p>Fish use <strong>gills</strong> to extract dissolved oxygen from water for respiration. Gills have a large surface area, thin epithelial walls, and a rich capillary supply for efficient underwater gas exchange. A streamlined body, scales, and fins are locomotion/protection adaptations — not respiratory structures.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 30/OPTION D.png" style="width: 100%; height: auto;" alt="Option D Image" class="question-image">
                         </div>
@@ -2391,6 +2603,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. microscope.</strong>
+                        <p>A <strong>microscope</strong> views microscopic specimens — it does not measure abiotic environmental factors. Instruments for abiotic factors: <strong>thermometer</strong> (temperature), <strong>hygrometer</strong> (humidity), <strong>wind vane</strong> (wind direction), anemometer (wind speed), and rain gauge (precipitation).</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 31/OPTION B.png" style="width: 100%; height: auto;" alt="Option B Image" class="question-image">
                         </div>
@@ -2450,6 +2663,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. silt and clay.</strong>
+                        <p><strong>Capillarity</strong> is the ability of water to rise through narrow pore spaces. <strong>Silt and clay</strong> soils have very fine particles with tiny pores, giving them the <strong>highest capillarity</strong>. Sandy soils have large, coarse particles with wide pores, resulting in low capillarity and rapid drainage.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 32/OPTION B.png" style="width: 100%; height: auto;" alt="Option B Image" class="question-image">
                         </div>
@@ -2509,6 +2723,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. heterotrophic.</strong>
+                        <p>The pitcher plant captures and digests insects to supplement its nutrient intake (especially nitrogen it cannot obtain sufficiently from poor soils). Obtaining organic matter from other organisms is <strong>heterotrophic nutrition</strong>. It is not purely autotrophic, as it depends on insect prey for key nutrients.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 33/OPTION C.png" style="width: 100%; height: auto;" alt="Option C Image" class="question-image">
                         </div>
@@ -2568,6 +2783,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. maize.</strong>
+                        <p><strong>Maize</strong> (corn) is a green plant that manufactures its own food via photosynthesis, making it a <strong>producer</strong> (autotroph) at the first trophic level in the food chain. Goats, humans, and bacteria are all consumers or decomposers that obtain energy by feeding on other organisms.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 34/OPTION B.png" style="width: 100%; height: auto;" alt="Option B Image" class="question-image">
                         </div>
@@ -2628,6 +2844,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option D. of availability of moisture.</strong>
+                        <p>Tropical rainforests have consistently high temperatures and abundant <strong>moisture</strong> year-round. These conditions accelerate the metabolic activity of decomposers (bacteria and fungi), greatly speeding up the breakdown of dead organisms. Moisture is critical because decomposers require water for enzymatic digestion.</p>
                         
                     </div> 
                     
@@ -2657,6 +2874,8 @@ div[style*="width: 25vw"] {
                 <div class="question-text">
                     <strong>Instruction:</strong> The diagrams below are illustrations of organisms in a habitat. Study them and answer questions 36 and 37.
                 </div>
+                <div class="question-diagram image-wrapper">
+                    </div>
 
                 <!-- Actual question -->
                 <div class="question-number"><strong>36.</strong></div>
@@ -2689,26 +2908,25 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. predation.</strong>
+                        <p><strong>Predation</strong> is a feeding relationship where one organism (the predator) hunts, kills, and consumes another (the prey) for energy. Organisms III and IV share this direct predator–prey relationship, placing them at different trophic levels in the food chain.</p>
+                            <p><strong>Predation</strong> is a feeding relationship where one organism (the predator) hunts, kills, and consumes another organism (the prey) for energy. Organisms III and IV in the diagram have this direct predator–prey relationship, placing them at different trophic levels in the food chain.</p>
                         
                     </div>
 
-                    <!-- Learn more content 
                     <button id="subject-button" class="button hidden">Learn More</button>
                     <div id="more-content" class="hidden">
-                        <!-- Optionally, explanation text can be added here 
-                        On the other hand,
-                        <div class="image-wrapper">
-                            <img src="/4.jpg" alt="Related diagram" class="question-image">
-                        </div>
-                        Also,
-                        <div class="image-wrapper">
-                            <img src="/3.jpg" alt="Related diagram" class="question-image">
-                        </div>
-                        And lastly,
-                        <div class="image-wrapper">
-                            <img src="/2.jpg" alt="Related diagram" class="question-image">
-                        </div>
-                    </div> -->
+                        <h3>Feeding Relationships in a Habitat</h3>
+                        <p><strong>Predation</strong> is a feeding relationship in which one organism (the <em>predator</em>) hunts, kills, and eats another organism (the <em>prey</em>) to obtain energy. The two organisms belong to different trophic levels in a food chain.</p>
+                        <p>In the diagrams, organisms labelled III and IV share a predator–prey relationship — one feeds directly on the other, making this <strong>predation</strong>.</p>
+                        <p>How the other feeding relationships differ:</p>
+                        <ul>
+                            <li><strong>Mutualism:</strong> Both organisms benefit from the relationship. Neither is harmed. Example: <em>Rhizobium</em> bacteria in legume root nodules fix nitrogen that benefits the plant, while the plant supplies sugars for the bacteria.</li>
+                            <li><strong>Parasitism:</strong> The parasite benefits while the host is harmed (but usually not killed immediately). Example: tapeworm in the human intestine, or <em>Plasmodium</em> causing malaria.</li>
+                            <li><strong>Predation:</strong> The predator kills and consumes the prey for energy. Example: a frog eating an insect, a lion eating a zebra. ✓</li>
+                            <li><strong>Saprophytism:</strong> Saprophytes (e.g., fungi, certain bacteria) feed on dead and decaying organic matter by secreting enzymes externally and absorbing digested products. They do not prey on living organisms.</li>
+                        </ul>
+                        <p>Predator–prey relationships are important in maintaining the balance of populations in an ecosystem. When prey populations increase, predator populations tend to follow, and vice versa.</p>
+                    </div>
                 </div>
             </div>
             <!-- end -->
@@ -2717,6 +2935,8 @@ div[style*="width: 25vw"] {
             <div class="question" id="question-37">
                 <div class="question-number"><strong>37.</strong></div>
                 <div class="question-text">The producer in the diagrams is?</div>
+                <div class="question-diagram image-wrapper">
+                    </div>
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q37-optA">
                         <span class="option-label">A</span>
@@ -2741,6 +2961,8 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. I because it uses sunlight to manufacture food.</strong>
+                        <p><strong>Organism I</strong> is a plant (photosynthetic producer) that converts light energy into chemical energy (glucose) through photosynthesis — the starting point of the food chain. All other organisms in the habitat ultimately depend on the producer for energy.</p>
+                            <p><strong>Organism I</strong> is a plant (green/photosynthetic organism) that converts light energy into chemical energy (glucose) through photosynthesis. This makes it a <strong>producer</strong> — the starting point of the food chain. Producers do not depend on other organisms for food; all other organisms in the habitat ultimately depend on them.</p>
                         
                     </div> 
                     
@@ -2792,6 +3014,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. Deforestation.</strong>
+                        <p><strong>Deforestation</strong> — large-scale clearing of forests — destroys habitats, reduces biodiversity, causes soil erosion, and contributes to climate change. It directly opposes conservation. Afforestation, game reserves, and contour ploughing all support sustainable use and protection of natural resources.</p>
                         
                     </div> 
                     
@@ -2853,6 +3076,8 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. II</strong>
+                        <p>Act II — <strong>making tables with plastic</strong> — conserves forest resources by using a synthetic substitute instead of wood, reducing pressure on trees. The other acts (crocodile skin shoes, elephant tusk decoration, firewood use) all exploit natural resources unsustainably and should be discouraged.</p>
+                            <p>Act II — <strong>making tables with plastic</strong> — conserves forest resources by using a synthetic substitute instead of wood. This reduces pressure on trees. The other acts (crocodile skin shoes, elephant tusk decoration, firewood use) all exploit or destroy natural resources unsustainably and should be discouraged.</p>
                         
                     </div>
 
@@ -2898,6 +3123,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. enact and enforce laws towards conservation of resources.</strong>
+                        <p>The most effective government action is to <strong>enact and enforce environmental protection laws</strong> that prevent over-exploitation, illegal poaching, and deforestation. Legal frameworks backed by strict enforcement are the cornerstone of sustainable resource management and wildlife conservation.</p>
                         
                     </div> 
 
@@ -2954,6 +3180,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. colour of flower.</strong>
+                        <p><strong>Discontinuous variation</strong> produces traits in distinct, non-overlapping categories with no intermediates (e.g., flower colour is either red or white). Height, leaf size, and fruit size all show <strong>continuous variation</strong>, with a gradual range of values that follow a normal distribution in a population.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 41/OPTION A.png" style="width: 100%; height: auto;" alt="Option A Image" class="question-image">
                         </div>
@@ -3016,6 +3243,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. the blood of the foetus might clump.</strong>
+                        <p>A Rh-negative mother sensitised during her first Rh-positive pregnancy produces <strong>anti-Rh antibodies</strong>. In a subsequent Rh-positive pregnancy, these antibodies cross the placenta and attack the foetus's red blood cells, causing <strong>agglutination (clumping)</strong> and haemolysis — haemolytic disease of the newborn, potentially fatal.</p>
                     
                     </div>
 
@@ -3071,6 +3299,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. mutation.</strong>
+                        <p>A <strong>mutation</strong> is a sudden, heritable change in the DNA sequence (genetic composition) of an organism. It may be spontaneous or induced by mutagens (radiation, chemicals). Epistasis = gene-gene interaction; linkage = genes on the same chromosome; variation = broader phenotypic differences within a population.</p>
                         
                     </div>
 
@@ -3122,6 +3351,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. DNA test.</strong>
+                        <p>A <strong>DNA paternity test</strong> compares specific DNA sequences (STR profiles) between an alleged father and child, providing near-100% accuracy in determining biological parentage. Blood groups and fingerprints are less discriminating; tongue rolling is a simple trait — none are definitive enough to resolve paternity disputes accurately.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 44/OPTION C.png" style="width: 100%; height: auto;" alt="Option C Image" class="question-image">
                         </div>
@@ -3160,6 +3390,8 @@ div[style*="width: 25vw"] {
                     <p><strong>Instruction:</strong> The illustration below is a genetic diagram. Study it and answer questions 45 to 47.</p>
                     <p>What is the name of the genetic diagram?</p>
                 </div>
+                <div class="question-diagram image-wrapper">
+                    </div>
 
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q45-optA">
@@ -3185,6 +3417,8 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option B. Punnett square.</strong>
+                        <p>A <strong>Punnett square</strong> is a grid diagram used to predict the genotypic and phenotypic outcomes of a genetic cross. It was devised by British geneticist Reginald Crundall Punnett. It is a specific tool — not simply a "genetic cross" (a process) or a generic "inheritance diagram."</p>
+                            <p>A <strong>Punnett square</strong> is a grid diagram used in genetics to predict the possible genotypes and phenotypes of offspring from a cross between two parents. It was devised by British geneticist Reginald Crundall Punnett. It is a specific tool, not simply called a "genetic cross" (a process) or "inheritance diagram."</p>
                         
                     </div> 
                     
@@ -3212,6 +3446,8 @@ div[style*="width: 25vw"] {
             <div class="question" id="question-46">
                 <div class="question-number"><strong>46.</strong></div>
                 <div class="question-text">What do the labels I, II, III and IV respectively represent?</div>
+                <div class="question-diagram image-wrapper">
+                    </div>
                 <div class="options">
                     <div class="option" data-correct="false" data-option-id="q46-optA">
                         <span class="option-label">A</span>
@@ -3236,6 +3472,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. EE, EE, Ee and Ee.</strong>
+                        <p>The Punnett square shows a cross between a homozygous dominant parent (EE) and a heterozygous parent (Ee): offspring genotypes are <strong>I = EE, II = EE, III = Ee, IV = Ee</strong> — a 2EE:2Ee ratio. All offspring express the dominant phenotype but differ in genotype.</p>
                         
                     </div>
 
@@ -3266,6 +3503,8 @@ div[style*="width: 25vw"] {
             <div class="question" id="question-47">
                 <div class="question-number"><strong>47.</strong></div>
                 <div class="question-text">The genotypic ratio of the offspring in the genetic diagram is?</div>
+                <div class="question-diagram image-wrapper">
+                    </div>
                 <div class="options">
                     <div class="option" data-correct="true" data-option-id="q47-optA">
                         <span class="option-label">A</span>
@@ -3290,6 +3529,8 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. 1:1</strong>
+                        <p>From the cross EE × Ee, offspring are EE : EE : Ee : Ee = 2:2 = <strong>1:1 (EE : Ee)</strong> genotypic ratio. A 1:2:1 ratio would result from Ee × Ee; a 4:0 ratio would require one parent contributing only one allele type.</p>
+                            <p>From the cross EE × Ee, the offspring genotypes are EE : EE : Ee : Ee = 2:2 = <strong>1:1</strong> (homozygous dominant : heterozygous). This means half the offspring are EE and half are Ee. The genotypic ratio 1:2:1 would result from Ee × Ee, and 4:0 is not possible in a standard cross.</p>
                         
                     </div> 
                     
@@ -3343,6 +3584,8 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option C. ½</strong>
+                        <p>Sex is determined by sex chromosomes (XX = female, XY = male). A cross XX × XY produces XX and XY offspring in equal proportion. The probability of any pregnancy resulting in a <strong>male child (XY) is ½ (50%)</strong>, independent of previous pregnancies.</p>
+                            <p>Sex in humans is determined by sex chromosomes. Females are XX and males are XY. A cross between XX (mother) and XY (father) produces XX and XY offspring in a 1:1 ratio. The probability that any given pregnancy results in a <strong>male child (XY) is 1/2 (50%)</strong>, regardless of previous children.</p>
                         
                     </div> 
                     
@@ -3386,6 +3629,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option D. tail bone.</strong>
+                        <p>The <strong>coccyx (tail bone)</strong> is a vestigial structure — a remnant of the tail present in human evolutionary ancestors that has reduced in size and lost its original locomotory function. Vestigial structures are evidence for evolution. The gall bladder, intestinal villus, and earlobe all retain functions in modern humans.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 49/OPTION D.png" style="width: 100%; height: auto;" alt="Option D Image" class="question-image">
                         </div>
@@ -3445,6 +3689,7 @@ div[style*="width: 25vw"] {
                 <div class="container hidden">
                     <div class="answer hidden">
                         <strong>The correct answer is Option A. nuptial flight.</strong>
+                        <p><strong>Nuptial flight</strong> — the dispersal flight of winged reproductives to found new colonies — is a behaviour most characteristically associated with <strong>ants</strong>. Termites are primarily known for pheromone-based <strong>communication</strong>, <strong>searching for food</strong> (wood cellulose), and mound-building activities.</p>
                         <div class="image-wrapper">
                             <img src="../IMG/NO 50/OPTION A.png" style="width: 100%; height: auto;" alt="Option A Image" class="question-image">
                         </div>
@@ -3677,12 +3922,8 @@ div[style*="width: 25vw"] {
                             }
                         });
                         
-                        // Show specific feedback for the wrong option
-                        const optionId = this.getAttribute('data-option-id');
-                        const feedbackElement = document.getElementById(`wrong-feedback-${optionId}`);
-                        if (feedbackElement) {
-                            feedbackElement.classList.remove('hidden');
-                        }
+                        // Store selected option id so Learn More can build contextual feedback
+                        question.dataset.selectedOptionId = this.getAttribute('data-option-id');
                     }
                     
                     // Update score and progress
@@ -3732,8 +3973,13 @@ div[style*="width: 25vw"] {
                         }
                         setTimeout(typeWriter, 5);
                     } else {
-                        // Animation complete
-                        container.children('#subject-button').removeClass('hidden');
+                        // Animation complete — only show Learn More if answer was wrong
+                        var questionEl = container.closest('.question')[0];
+                        var selectedOpt = questionEl.querySelector('.option.selected');
+                        var wasCorrect = selectedOpt && selectedOpt.getAttribute('data-correct') === 'true';
+                        if (!wasCorrect) {
+                            container.children('#subject-button').removeClass('hidden');
+                        }
                         isAnimating = false;
                     }
                 }
@@ -3741,37 +3987,83 @@ div[style*="width: 25vw"] {
                 typeWriter();
             }
             
-            // Function to display more content with animation
+            // Function to display focused Learn More after a wrong answer
             function displayMoreContent(element) {
                 if (isAnimating) return;
-                
-                var moreContent = $(element).siblings('#more-content');
-                var htmlContent = moreContent.html();
+
+                var container = $(element).parent();
+                var question = container.closest('.question');
+
+                // Identify the option the user wrongly selected
+                var optionId = question[0].dataset.selectedOptionId || '';
+                var selectedOpt = optionId
+                    ? question.find('.option[data-option-id="' + optionId + '"]')
+                    : question.find('.option.selected');
+                var optionLabel = selectedOpt.find('.option-label').text().trim();
+                var optionText  = selectedOpt.find('span:not(.option-label)').first().text().trim();
+
+                // Find the correct option
+                var correctOpt   = question.find('.option[data-correct="true"]');
+                var correctLabel = correctOpt.find('.option-label').text().trim();
+                var correctText  = correctOpt.find('span:not(.option-label)').first().text().trim();
+
+                // Get the wrong-feedback body (exclude the title we build ourselves)
+                var wrongFeedbackEl = question.find('#wrong-feedback-' + optionId);
+                var wrongBodyHtml = wrongFeedbackEl.children().not('.wrong-feedback-title').map(function() {
+                    return this.outerHTML;
+                }).get().join('');
+                if (!wrongBodyHtml) {
+                    wrongBodyHtml = '<p>Option ' + optionLabel + ': <em>"' + optionText + '"</em> is not the correct answer for this question.</p>';
+                }
+
+                // Get the educational explanation of the correct answer from #more-content
+                var moreContentEl  = container.children('#more-content');
+                var correctDetailHtml = (moreContentEl.length && moreContentEl.html().trim())
+                    ? moreContentEl.html()
+                    : '<p>Option ' + correctLabel + ': <em>"' + correctText + '"</em> is the correct answer for this question.</p>';
+
+                // Build focused comparison HTML
+                var focusedHtml =
+                    '<div class="comparison-wrong">' +
+                        '<div class="wrong-feedback-title">&#10008; Why Option ' + optionLabel + ' is incorrect:</div>' +
+                        wrongBodyHtml +
+                    '</div>' +
+                    '<div class="comparison-correct">' +
+                        '<div class="wrong-feedback-title">&#10004; Why Option ' + correctLabel + ' is the correct answer:</div>' +
+                        correctDetailHtml +
+                    '</div>';
+
+                // Render into a dedicated div (created once per question)
+                var displayEl = container.children('#focused-explanation');
+                if (!displayEl.length) {
+                    container.append('<div id="focused-explanation" class="hidden"></div>');
+                    displayEl = container.children('#focused-explanation');
+                }
+
+                displayEl.html(focusedHtml);
+                var htmlContent = displayEl.html();
                 var i = 0;
-                
-                moreContent.html('');
-                moreContent.removeClass('hidden');
+
+                displayEl.html('');
+                displayEl.removeClass('hidden');
                 isAnimating = true;
-                
+
                 function typeWriter() {
                     if (i < htmlContent.length) {
                         if (htmlContent.charAt(i) === '<') {
-                            // Skip HTML tags
                             var tagEnd = htmlContent.indexOf('>', i) + 1;
-                            moreContent.append(htmlContent.slice(i, tagEnd));
+                            displayEl.append(htmlContent.slice(i, tagEnd));
                             i = tagEnd;
                         } else {
-                            // Add one character at a time
-                            moreContent.append(htmlContent.charAt(i));
+                            displayEl.append(htmlContent.charAt(i));
                             i++;
                         }
                         setTimeout(typeWriter, 5);
                     } else {
-                        // Animation complete
                         isAnimating = false;
                     }
                 }
-                
+
                 typeWriter();
             }
             
