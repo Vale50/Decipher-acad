@@ -2,7 +2,7 @@
 
 ## Leadership Lexicon
 
-`leadership-lexicon/index.html` is a definition-to-word crossword for the leadership team. Every clue is a definition, and the player enters the leadership term it describes. There are 8 categories: opening meetings, closing meetings, driving a team, motivation, feedback & coaching, decisions & strategy, conflict, and leading change. Each new puzzle gets a fresh layout. Open the file in any browser; it needs no build step or server.
+`leadership-lexicon/index.html` is a definition-to-word crossword for the leadership team. Every clue is a definition, and the player enters the leadership term it describes. There are 198 terms in 8 categories: opening meetings, closing meetings, driving a team, motivation, feedback & coaching, decisions & strategy, conflict, and leading change. Each new puzzle gets a fresh layout. Open the file in any browser; it needs no build step or server.
 
 **Play online:** https://claude.ai/artifact/JEkWagtXZMxMjQF1H1CwzV (private by default; share it with the team from the page's Share menu).
 

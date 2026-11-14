@@ -8,7 +8,7 @@
  *   answer is the letters only; the clue shows the enumeration, e.g. (7,3).
  * - `u` must contain the term exactly as written in `w` (case-insensitive) so
  *   the "Context hint" can blank it out.
- * - Keep answers to 13 letters or fewer so puzzles stay phone-sized.
+ * - Keep answers to 15 letters or fewer so puzzles stay phone-sized.
  *
  * To add a category, add a new key below; it appears in the menu automatically.
  */
@@ -26,7 +26,17 @@ window.LEXICON = {
     { w: "Kickoff", c: "The first meeting of a project, where goals, roles and expectations are set", u: "At Monday's kickoff we'll confirm who owns each workstream." },
     { w: "Facilitator", c: "The person who guides a meeting's process and keeps discussion productive without dictating outcomes", u: "As facilitator, my job is to make sure every voice is heard, not to push my view." },
     { w: "Housekeeping", c: "Brief administrative notes at the start of a session: breaks, recording, logistics", u: "A bit of housekeeping first: this session is being recorded." },
-    { w: "Preamble", c: "An introductory statement that sets context before the main business begins", u: "Without a long preamble, here is why we've called this meeting." }
+    { w: "Preamble", c: "An introductory statement that sets context before the main business begins", u: "Without a long preamble, here is why we've called this meeting." },
+    { w: "Introductions", c: "A round where attendees say who they are and their role", u: "Let's do quick introductions since we have new faces." },
+    { w: "Roll call", c: "A reading of names to confirm who is present", u: "We'll start with a quick roll call for those dialling in." },
+    { w: "Warm-up", c: "A light opening exercise that energises the group before serious work", u: "A two-minute warm-up gets everyone's camera on and voice heard." },
+    { w: "Context", c: "The background information needed to understand why an issue matters", u: "Let me give some context before we look at the figures." },
+    { w: "Expectations", c: "What participants are expected to contribute or decide during the session", u: "To set expectations: I need a yes or no from each lead by the end." },
+    { w: "Scribe", c: "The person designated to take notes during a meeting", u: "Kemi has kindly agreed to act as scribe today." },
+    { w: "Opening remarks", c: "Brief introductory words from the chair before the agenda begins", u: "In my opening remarks I want to thank the team for last quarter." },
+    { w: "Welcome", c: "To greet attendees and make them feel included at the start", u: "I'd like to welcome our two new colleagues from finance." },
+    { w: "Desired outcome", c: "The concrete result the group wants to have achieved when the meeting ends", u: "Our desired outcome is a signed-off budget, not another discussion." },
+    { w: "Attendance", c: "The record of who was present at a meeting", u: "Please note attendance in the minutes, including apologies." }
   ],
 
   "Closing a Meeting": [
@@ -42,7 +52,17 @@ window.LEXICON = {
     { w: "Owner", c: "The single person accountable for delivering an agreed action", u: "Every action needs one owner, not a committee." },
     { w: "Sign-off", c: "Formal approval that allows work to proceed", u: "We need the director's sign-off before we launch." },
     { w: "Hard stop", c: "A firm end time beyond which a meeting cannot run", u: "I have a hard stop at three, so let's prioritise the top two items." },
-    { w: "Wrap up", c: "To bring a discussion to a tidy conclusion", u: "Let's wrap up here and pick this thread up on Thursday." }
+    { w: "Wrap up", c: "To bring a discussion to a tidy conclusion", u: "Let's wrap up here and pick this thread up on Thursday." },
+    { w: "Summarise", c: "To restate the main points and decisions briefly", u: "Let me summarise what we've agreed before we leave." },
+    { w: "Closing remarks", c: "Final words from the chair that conclude a session", u: "In my closing remarks, I want to highlight the progress on hiring." },
+    { w: "Accountable", c: "Answerable for a result and its consequences", u: "You are accountable for the client report; Musa will support you." },
+    { w: "Commitments", c: "Promises made by participants to take specific actions", u: "Let's read back the commitments so nobody leaves unclear." },
+    { w: "Retrospective", c: "A meeting held after a piece of work to review what went well and what to improve", u: "In Friday's retrospective, we'll look at why the release slipped." },
+    { w: "Read back", c: "To repeat agreed actions aloud to confirm them before closing", u: "Let me read back the actions to make sure I have them right." },
+    { w: "Close out", c: "To bring an item or meeting to a definite end", u: "Let's close out this item and move to AOB." },
+    { w: "Due date", c: "The date by which an action must be completed", u: "Every action needs an owner and a due date." },
+    { w: "Plus delta", c: "A quick close-out round: what worked well and what to change next time", u: "Let's finish with a plus delta on how this meeting ran." },
+    { w: "Thank you", c: "An expression of gratitude, best made specific when closing", u: "A sincere thank you to Bisi for preparing such clear slides." }
   ],
 
   "Driving a Team": [
@@ -60,7 +80,19 @@ window.LEXICON = {
     { w: "Critical path", c: "The longest chain of dependent tasks, which sets the minimum project duration", u: "Testing sits on the critical path, so any delay there delays launch." },
     { w: "Stand-up", c: "A brief daily team meeting to share progress, plans and blockers", u: "In today's stand-up, keep it to yesterday, today and blockers." },
     { w: "Blocker", c: "An obstacle that prevents a task from moving forward", u: "Is there any blocker I can help remove for you this week?" },
-    { w: "Workstream", c: "A distinct strand of related activity within a larger programme", u: "Tunde will lead the training workstream while Ife leads procurement." }
+    { w: "Workstream", c: "A distinct strand of related activity within a larger programme", u: "Tunde will lead the training workstream while Ife leads procurement." },
+    { w: "Accountability", c: "The obligation to own outcomes and report on them", u: "Accountability means telling me early when a date is at risk." },
+    { w: "Dependency", c: "A task that cannot start or finish until another is complete", u: "The website launch has a dependency on legal approval." },
+    { w: "Capacity", c: "The total amount of work a team can realistically deliver in a period", u: "We're at full capacity this sprint; new requests wait until next week." },
+    { w: "Throughput", c: "The amount of work a team completes in a given time", u: "Our throughput doubled after we cut work in progress." },
+    { w: "Sprint", c: "A short, fixed period in which a team completes a set amount of work", u: "This sprint is focused on fixing customer-reported bugs." },
+    { w: "Benchmark", c: "A standard or point of reference against which performance is measured", u: "Industry benchmark response time is four hours; we're at six." },
+    { w: "KPI", c: "A key performance indicator: a measurable value showing progress toward a goal (abbr.)", u: "Our main KPI this quarter is customer retention." },
+    { w: "Execution", c: "The carrying out of a plan or strategy in practice", u: "Strategy is easy to write; execution is where teams win or lose." },
+    { w: "Status update", c: "A short report on progress, risks and next actions", u: "Send your status update by noon every Thursday." },
+    { w: "Handover", c: "The transfer of responsibility for work from one person or team to another", u: "Write a clear handover note before you go on leave." },
+    { w: "Priorities", c: "The tasks ranked as most important to deal with first", u: "Our priorities this week are the audit and the client renewal." },
+    { w: "Velocity", c: "A measure of how much work a team completes per sprint, used for forecasting", u: "Our velocity is stable, so the forecast for June looks realistic." }
   ],
 
   "Motivating the Team": [
@@ -76,7 +108,19 @@ window.LEXICON = {
     { w: "Stretch goal", c: "An ambitious target set beyond what seems comfortably achievable", u: "Our target is ten new partners; fifteen is the stretch goal." },
     { w: "Intrinsic", c: "Describes motivation that comes from within rather than from external rewards", u: "The best performers are driven by intrinsic motivation." },
     { w: "Rapport", c: "A relationship of mutual trust and understanding", u: "Spend the first month building rapport with your new team." },
-    { w: "Incentive", c: "Something that encourages a person to act, such as a bonus or reward", u: "The sales incentive rewards long-term clients, not just new ones." }
+    { w: "Incentive", c: "Something that encourages a person to act, such as a bonus or reward", u: "The sales incentive rewards long-term clients, not just new ones." },
+    { w: "Celebrate", c: "To publicly mark an achievement or milestone", u: "Let's celebrate the launch with a team lunch on Friday." },
+    { w: "Belonging", c: "The feeling of being accepted and valued as part of a group", u: "People do their best work when they feel a sense of belonging." },
+    { w: "Inspire", c: "To fill others with the urge or ability to do something", u: "Great leaders inspire through example, not speeches." },
+    { w: "Appreciation", c: "Recognition and gratitude for someone's qualities or effort", u: "A short note of appreciation can lift someone's whole week." },
+    { w: "Ownership", c: "Taking personal responsibility for a task and its result", u: "I love the ownership you showed in fixing that issue." },
+    { w: "Career path", c: "The sequence of roles and growth a person can follow in an organisation", u: "Let's map out a career path that gets you to team lead." },
+    { w: "Well-being", c: "A person's overall physical and mental health", u: "Your well-being matters more than any single deadline." },
+    { w: "Energise", c: "To give a team fresh enthusiasm and drive", u: "A clear win can energise the whole team." },
+    { w: "Trust", c: "Confidence in the reliability and good intent of others", u: "Trust is built in small moments, one kept promise at a time." },
+    { w: "Resilience", c: "The capacity to recover quickly from setbacks", u: "The team showed real resilience after losing the big contract." },
+    { w: "Shout-out", c: "An informal public mention praising someone's work", u: "Shout-out to Chidi for staying late to fix the payment bug." },
+    { w: "Meaningful", c: "Having real value or significance to the person doing it", u: "People stay where their work feels meaningful." }
   ],
 
   "Feedback & Coaching": [
@@ -92,7 +136,19 @@ window.LEXICON = {
     { w: "Blind spot", c: "An area of weakness that a person is unaware of", u: "Feedback from peers helped me see a blind spot in how I run meetings." },
     { w: "Open-ended", c: "Describes a question that cannot be answered with a simple yes or no", u: "Ask open-ended questions like 'What got in the way?'" },
     { w: "Upskill", c: "To teach a person additional skills for their role", u: "We'll upskill the team on the new CRM before go-live." },
-    { w: "Praise", c: "Expression of approval; best given specifically and promptly", u: "Make praise specific: name the behaviour and its impact." }
+    { w: "Praise", c: "Expression of approval; best given specifically and promptly", u: "Make praise specific: name the behaviour and its impact." },
+    { w: "Constructive", c: "Intended to help improve, rather than simply to criticise", u: "Thank you for the constructive feedback on my draft." },
+    { w: "Active listening", c: "Fully concentrating on, understanding and responding to a speaker", u: "Active listening means not planning your reply while they talk." },
+    { w: "Development plan", c: "A written plan of the skills and experiences a person will build", u: "Let's update your development plan before the next review." },
+    { w: "Peer review", c: "Evaluation of work by colleagues at a similar level", u: "The proposal goes to peer review before the director sees it." },
+    { w: "Specific", c: "Precise and clearly defined, as good feedback should be", u: "Be specific: say which slide confused the client and why." },
+    { w: "Strengths", c: "The qualities or abilities a person is especially good at", u: "Let's build your role around your strengths in analysis." },
+    { w: "Self-awareness", c: "Conscious knowledge of one's own character, feelings and impact", u: "Self-awareness is the starting point of good leadership." },
+    { w: "Probing question", c: "A question that digs deeper to uncover reasons or assumptions", u: "A good probing question is 'What makes you say that?'" },
+    { w: "Clarify", c: "To make a statement or situation clearer", u: "Can you clarify what 'done' means for this task?" },
+    { w: "Sounding board", c: "A person whose reactions are used to test ideas", u: "Thanks for being a sounding board on the restructure idea." },
+    { w: "Shadowing", c: "Learning a role by observing an experienced person at work", u: "Two weeks of shadowing will help you learn the client accounts." },
+    { w: "Reflection", c: "Careful thought about one's own experience in order to learn from it", u: "Take some time for reflection before our next session." }
   ],
 
   "Decisions & Strategy": [
@@ -108,7 +164,19 @@ window.LEXICON = {
     { w: "Root cause", c: "The fundamental reason a problem occurred", u: "Fixing the symptom won't help until we find the root cause." },
     { w: "Headwind", c: "A force or condition that slows progress", u: "Rising fuel prices are a headwind for our logistics budget." },
     { w: "Veto", c: "The right to reject a decision single-handedly", u: "Legal holds a veto on any contract above this value." },
-    { w: "Prioritise", c: "To rank tasks by importance and deal with the most important first", u: "We can't do all ten, so let's prioritise the three with most impact." }
+    { w: "Prioritise", c: "To rank tasks by importance and deal with the most important first", u: "We can't do all ten, so let's prioritise the three with most impact." },
+    { w: "Due diligence", c: "Thorough investigation carried out before a decision or agreement", u: "We'll complete due diligence before signing with the new vendor." },
+    { w: "Risk appetite", c: "The level of risk an organisation is willing to accept", u: "Our risk appetite is low for anything touching customer data." },
+    { w: "Scenario", c: "A possible sequence of future events used in planning", u: "In the worst-case scenario, we lose two key clients." },
+    { w: "Leverage", c: "To use something to maximum advantage", u: "Let's leverage our partner network to reach new markets." },
+    { w: "Bias", c: "An unfair tendency that distorts judgement", u: "Watch for confirmation bias when reviewing the data." },
+    { w: "Data-driven", c: "Describes decisions based on evidence and analysis rather than intuition", u: "We want to be data-driven, so let's pull the numbers first." },
+    { w: "Opportunity cost", c: "The value of the next-best option given up when making a choice", u: "The opportunity cost of this project is the product we won't build." },
+    { w: "Reversible", c: "Describes a decision that can easily be undone if it proves wrong", u: "This choice is reversible, so let's decide quickly and learn." },
+    { w: "SWOT", c: "A strategic analysis of strengths, weaknesses, opportunities and threats (abbr.)", u: "We'll run a SWOT analysis before the strategy offsite." },
+    { w: "Long-term", c: "Relating to a period extending well into the future", u: "Think about the long-term effect, not just this quarter." },
+    { w: "Decision rights", c: "Clear rules about who has authority to make which decisions", u: "Let's agree decision rights so approvals stop bouncing around." },
+    { w: "Alternatives", c: "Other possible courses of action to compare before deciding", u: "Before we decide, let's list at least three alternatives." }
   ],
 
   "Conflict & Hard Talks": [
@@ -124,7 +192,19 @@ window.LEXICON = {
     { w: "Hold space", c: "To be fully present with someone without judging or rushing to fix things", u: "Sometimes the best thing a leader can do is hold space and listen." },
     { w: "Assertive", c: "Confident and direct in stating needs while respecting others", u: "Be assertive about the deadline without being aggressive." },
     { w: "Neutral", c: "Not taking sides in a dispute", u: "As a neutral party, I'll summarise both positions first." },
-    { w: "Resolve", c: "To settle or find a solution to a dispute", u: "Let's resolve this between us before it goes any further." }
+    { w: "Resolve", c: "To settle or find a solution to a dispute", u: "Let's resolve this between us before it goes any further." },
+    { w: "Boundaries", c: "Limits that define acceptable behaviour between people", u: "It's healthy to set boundaries on after-hours messages." },
+    { w: "Compromise", c: "An agreement in which each side gives up something", u: "We reached a compromise: half the budget now, half in July." },
+    { w: "Defensive", c: "Reacting to criticism as if under attack", u: "Try not to get defensive; I'm raising this to help." },
+    { w: "Validate", c: "To recognise that someone's feelings are understandable", u: "I want to validate your frustration before we look for solutions." },
+    { w: "Assumption", c: "Something accepted as true without proof; a frequent hidden cause of conflict", u: "Let's test that assumption before we blame anyone." },
+    { w: "Apologise", c: "To express regret for a mistake or the harm it caused", u: "A leader who can apologise sincerely earns lasting trust." },
+    { w: "Ground truth", c: "The actual facts of a situation, as opposed to assumptions", u: "Before we argue, let's agree on the ground truth." },
+    { w: "Cool off", c: "To pause so strong emotions can settle before continuing", u: "Let's take ten minutes to cool off and then reconvene." },
+    { w: "Interests", c: "The underlying needs behind a person's stated position", u: "Focus on interests, not positions, and options appear." },
+    { w: "Win-win", c: "Describes an outcome that benefits all parties", u: "Let's look for a win-win rather than a winner and a loser." },
+    { w: "Respectful", c: "Showing regard for others' feelings and dignity", u: "We can disagree strongly and still be respectful." },
+    { w: "Tension", c: "Strain between people caused by differing views or interests", u: "There's some tension between sales and operations we need to address." }
   ],
 
   "Leading Change": [
@@ -140,6 +220,18 @@ window.LEXICON = {
     { w: "Pilot", c: "A small-scale trial run before a full launch", u: "Let's pilot the new shift pattern with one team first." },
     { w: "Momentum", c: "The forward energy that keeps a change effort progressing", u: "Celebrate each milestone to keep the momentum going." },
     { w: "Vision", c: "A clear, compelling picture of the future an organisation is working toward", u: "Paint the vision first, then explain the plan." },
-    { w: "Sponsor", c: "A senior leader who backs a change and secures its resources", u: "Our executive sponsor will open the town hall." }
+    { w: "Sponsor", c: "A senior leader who backs a change and secures its resources", u: "Our executive sponsor will open the town hall." },
+    { w: "Change agent", c: "A person who actively drives and enables change in an organisation", u: "Every manager is expected to be a change agent this year." },
+    { w: "Messaging", c: "The agreed key points and wording used to communicate a change", u: "Keep the messaging consistent across every department." },
+    { w: "Readiness", c: "The degree to which people are prepared for a change", u: "Our readiness survey shows the field team needs more training." },
+    { w: "Phased", c: "Introduced in stages rather than all at once", u: "We'll take a phased approach, one region at a time." },
+    { w: "Town hall", c: "A large meeting where leaders share news and take questions from staff", u: "The CEO will explain the restructure at Thursday's town hall." },
+    { w: "Reinforce", c: "To strengthen new behaviours so they become permanent", u: "Reinforce the new process by praising people who use it." },
+    { w: "Restructure", c: "To reorganise the roles, reporting lines or units of an organisation", u: "We will restructure the sales team around regions." },
+    { w: "Uncertainty", c: "A state of not knowing what will happen, common during change", u: "Acknowledge the uncertainty openly; silence makes it worse." },
+    { w: "Early adopters", c: "The first people to embrace a new practice, who influence others", u: "Recruit the early adopters to demo the tool to their peers." },
+    { w: "Feedback loop", c: "A process for gathering reactions and using them to adjust", u: "Build a feedback loop so we hear problems in days, not months." },
+    { w: "Go-live", c: "The moment a new system or process officially begins operating", u: "Go-live is Monday at 8 a.m.; support will be on standby." },
+    { w: "Sustain", c: "To keep a change going until it becomes the norm", u: "The hard part is not launching the change but how we sustain it." }
   ]
 };
