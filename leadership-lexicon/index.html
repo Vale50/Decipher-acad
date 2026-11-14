@@ -258,7 +258,7 @@
   const BANK = window.LEXICON || {};
   const entriesByCat = {};
   Object.keys(BANK).forEach(cat => {
-    entriesByCat[cat] = BANK[cat].map(e => prepEntry(e, cat)).filter(e => e.ans.length >= 3 && e.ans.length <= 13);
+    entriesByCat[cat] = BANK[cat].map(e => prepEntry(e, cat)).filter(e => e.ans.length >= 3 && e.ans.length <= 15);
   });
 
   function prepEntry(e, cat) {
@@ -366,7 +366,7 @@
 
   function generate(pool, target) {
     let best = null;
-    for (let a = 0; a < 80; a++) {
+    for (let a = 0; a < 250; a++) {
       const res = attempt(shuffle(pool.slice()), target);
       const crossings = res.placed.length;
       const rank = res.placed.length * 1000 - res.h * res.w;
@@ -387,9 +387,12 @@
     // Avoid repeating the same answer twice in a mixed pool
     const seen = new Set(); pool = pool.filter(e => !seen.has(e.ans) && seen.add(e.ans));
     // Use a slightly larger pool than needed so the generator has choices
-    pool = shuffle(pool).slice(0, Math.max(target + 10, Math.min(pool.length, target * 2)));
-
-    const res = generate(pool, target);
+    const full = pool;
+    let res = null;
+    for (let tries = 0; tries < 4 && (!res || res.placed.length < Math.min(target, full.length)); tries++) {
+      const r = generate(shuffle(full.slice()).slice(0, target * 3), target);
+      if (!res || r.rank > res.rank) res = r;
+    }
     const rows = res.h, cols = res.w;
     const grid = Array.from({ length: rows }, () => Array(cols).fill(null));
     const words = res.placed.map(p => ({ e: p.e, r: p.r - res.minR, c: p.c - res.minC, dir: p.dir, cells: [], solved: false, hint: false, revealedAll: false }));
